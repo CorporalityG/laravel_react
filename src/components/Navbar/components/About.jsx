@@ -28,81 +28,88 @@ const About = () => {
     return (
         <OutsideClickHandler className="outside-handler" onOutsideClick={()=> setShowAbout(false)} >
         <div className={`about-container ${showAbout? "" : "hidden"}`} onMouseOver={() => {/*console.log("over about");*/if(isLargeScreen)setShowAbout(true)}} onMouseLeave={() => {if(isLargeScreen)setShowAbout(false)}} >
-            <div className="about-section who-we-are">
-                <div className="about-section-head" onClick={() => { if(!isLargeScreen)show1()}}>
-                    <h3 className="about-section-head-text">Who we are</h3>
-                    <div className="line"></div>
+            <div className="about-section-main about-section-left">
+                <div className="about-section who-we-are">
+                    <div className="about-section-head" onClick={() => { if(!isLargeScreen)show1()}}>
+                        <h3 className="about-section-head-text">Who we are</h3>
+                        <div className="line"></div>
+                    </div>
+                    <div className="section-list">
+                        <Link to="/about-corporality" onClick={() => {setShowAbout(false);topHandler()}} className="section-list-items">
+                            <h6>About Corporality</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                        <Link to="/work-with-clients" onClick={() => {setShowAbout(false);topHandler()}}  className="section-list-items">
+                            <h6>How We Work with Clients</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                        <Link to="/inclusion-and-diversity" onClick={() => {setShowAbout(false);topHandler()}}  className="section-list-items">
+                            <h6>Inclusion and Diversity</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                        <Link to="/partnership-programmes" onClick={() => {setShowAbout(false);topHandler()}} className="section-list-items">
+                            <h6>Partner Programmes</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                        <Link to="/sustainable-growth" onClick={() => {setShowAbout(false);topHandler()}}  className="section-list-items">
+                            <h6>Sustainable Growth</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                    </div>
                 </div>
-                <div className="section-list">
-                    <Link to="/about-corporality" onClick={() => {setShowAbout(false);topHandler()}} className="section-list-items">
-                        <h6>About Corporality</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
-                    <Link to="/work-with-clients" onClick={() => {setShowAbout(false);topHandler()}}  className="section-list-items">
-                        <h6>How We Work with Clients</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
-                    <Link to="/inclusion-and-diversity" onClick={() => {setShowAbout(false);topHandler()}}  className="section-list-items">
-                        <h6>Inclusion and Diversity</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
-                    <Link to="/partnership-programmes" onClick={() => {setShowAbout(false);topHandler()}} className="section-list-items">
-                        <h6>Partner Programmes</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
-                    <Link to="/sustainable-growth" onClick={() => {setShowAbout(false);topHandler()}}  className="section-list-items">
-                        <h6>Sustainable Growth</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
+                <div className="about-section how-were-organised">
+                    <div className="about-section-head" onClick={() => { if(!isLargeScreen)show2() }}>
+                        <h3 className="about-section-head-text">How we're organised</h3>
+                        <div className="line"></div>
+                    </div>
+                    <div className="section-list">
+                        <Link to="/interactive-blueprint" onClick={() => {setShowAbout(false);topHandler()}} className="section-list-items">
+                            <h6>Interactive Blueprint</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                        <Link to="/strategy-and-consulting" onClick={() => {setShowAbout(false);topHandler()}} className="section-list-items">
+                            <h6>Strategy & Consulting</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                    </div>
+                </div>
+                <div className="about-section our-framework">
+                    <div className="about-section-head" onClick={() => { if(!isLargeScreen)show3()}}>
+                        <h3 className="about-section-head-text">Our Framework</h3>
+                        <div className="line"></div>
+                    </div>
+                    <div className="section-list">
+                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                            <h6>Why corporality Effect?</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                            <h6>What is corporality effect?</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                            <h6>Culturally Conditioned</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                            <h6>Inbound Shifting</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                            <h6>Corporality Striker</h6>
+                            <div className="diamond-line"></div>
+                        </Link>
+                    </div>
                 </div>
             </div>
-            <div className="about-section how-were-organised">
-                <div className="about-section-head" onClick={() => { if(!isLargeScreen)show2() }}>
-                    <h3 className="about-section-head-text">How we're organised</h3>
-                    <div className="line"></div>
-                </div>
-                <div className="section-list">
-                    <Link to="/interactive-blueprint" onClick={() => {setShowAbout(false);topHandler()}} className="section-list-items">
-                        <h6>Interactive Blueprint</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
-                    <Link to="/strategy-and-consulting" onClick={() => {setShowAbout(false);topHandler()}} className="section-list-items">
-                        <h6>Strategy & Consulting</h6>
-                        <div className="diamond-line"></div>
+
+            <div className="about-section-main about-section-right">
+                <div className="careers-img-menu">
+                    <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} >
+                        <img src={careersImg} alt="careers" className="careers-img" />
+                        <div className="careers-title">Gather the true experience of agile. Join us for a highly fulfilling career</div>
                     </Link>
                 </div>
-            </div>
-            <div className="about-section our-framework">
-                <div className="about-section-head" onClick={() => { if(!isLargeScreen)show3()}}>
-                    <h3 className="about-section-head-text">Our Framework</h3>
-                    <div className="line"></div>
-                </div>
-                <div className="section-list">
-                    <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
-                        <h6>Why corporality Effect?</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
-                    <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
-                        <h6>What is corporality effect?</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
-                    <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
-                        <h6>Culturally Conditioned</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
-                    <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
-                        <h6>Inbound Shifting</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
-                    <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
-                        <h6>Corporality Striker</h6>
-                        <div className="diamond-line"></div>
-                    </Link>
-                </div>
-            </div>
-            <div className="careers-img-menu">
-                <img src={careersImg} alt="careers" className="careers-img" />
-                <div className="careers-title">Gather the true experience of agile. Join us for a highly fulfilling career</div>
             </div>
         </div>
         </OutsideClickHandler>

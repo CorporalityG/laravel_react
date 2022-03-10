@@ -60,16 +60,18 @@ const Services = () => {
                             <h6>Corporate strategy</h6>
                             <div className="diamond-line"></div>
                         </Link>
-                        <Link to="/strategic-consultancy" onClick={closeOnLink} className="services-section-items">
+                        {/* <Link to="/strategic-consultancy" onClick={closeOnLink} className="services-section-items">
                             <h6>Strategic consultancy</h6>
                             <div className="diamond-line"></div>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>
 
             <div className="services-section-main services-section-right">
-                <img src={servicesImage} alt="strategic-consultancy" className="strategic-consultancy" />
+                <Link to="/strategic-consultancy" onClick={closeOnLink}>
+                    <img src={servicesImage} alt="strategic-consultancy" className="strategic-consultancy" />
+                </Link>
             </div>
         </div>
         </OutsideClickHandler>
