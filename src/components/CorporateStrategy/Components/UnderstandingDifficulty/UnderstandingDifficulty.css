@@ -1,0 +1,204 @@
+.understandingdifficulty_parent {
+  background: #f4f4f4;
+}
+
+.understanding_difficulty_main_container {
+  margin-top: 100px !important;
+  margin-bottom: 60px !important;
+  padding: 60px 0px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.understanding_difficulty_first_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.understanding_difficulty_first_text_heading,
+.understanding_difficulty_last_text_heading {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color: #3c708e;
+  margin-bottom: 20px !important;
+}
+
+.understanding_difficulty_first_text_description,
+.understanding_difficulty_last_text_description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #757575;
+}
+
+.understanding_difficulty_last_text_heading {
+  margin-left: 500px !important;
+}
+
+.understanding_difficulty_first_text_description {
+  margin-right: 600px !important;
+}
+
+.understanding_difficulty_last_text_description {
+  margin-left: 500px !important;
+}
+
+.understanding_difficulty_last_text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 500px !important;
+}
+.Background_in_Strategy {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 100px;
+}
+
+.Background_in_Strategy img {
+  margin-left: 50px !important;
+  width: 90%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .understanding_difficulty_last_text_heading {
+    margin-left: 500px !important;
+  }
+  .understanding_difficulty_last_text_description {
+    margin-left: 500px !important;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .understanding_difficulty_first_text_description {
+    margin-right: 400px !important;
+  }
+  .Background_in_Strategy {
+    top: 200px;
+  }
+
+  .understanding_difficulty_last_text_heading {
+    margin-left: 300px !important;
+  }
+  .understanding_difficulty_last_text_description {
+    margin-left: 300px !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .understanding_difficulty_first_text_description {
+    margin-right: 400px !important;
+  }
+  .Background_in_Strategy {
+    top: 200px;
+  }
+
+  .understanding_difficulty_last_text_heading {
+    margin-left: 300px !important;
+  }
+  .understanding_difficulty_last_text_description {
+    margin-left: 300px !important;
+  }
+}
+
+@media only screen and (max-width: 993px) {
+  .understanding_difficulty_last_text {
+    margin-top: 450px !important;
+  }
+
+  .understanding_difficulty_last_text_heading {
+    margin-left: 100px !important;
+  }
+  .understanding_difficulty_last_text_description {
+    margin-left: 100px !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .understanding_difficulty_last_text {
+    margin-top: 350px !important;
+  }
+
+  .understanding_difficulty_first_text_description {
+    margin-right: 100px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Background_in_Strategy {
+    margin-top: -30px !important;
+  }
+
+  .Background_in_Strategy img {
+    margin-left: 20px !important;
+  }
+
+  .understanding_difficulty_first_text_description,
+  .understanding_difficulty_last_text_description,
+  .understanding_difficulty_last_text_heading {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .understanding_difficulty_last_text {
+    margin-top: 280px !important;
+  }
+  .understanding_difficulty_first_text,
+  .understanding_difficulty_last_text {
+    padding: 0 20px !important;
+  }
+
+  .understanding_difficulty_first_text_heading,
+  .understanding_difficulty_last_text_heading {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .understanding_difficulty_first_text_description,
+  .understanding_difficulty_last_text_description {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .understanding_difficulty_main_container {
+    margin-top: -100px !important;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .understanding_difficulty_last_text {
+    margin-top: 200px !important;
+  }
+
+  .understanding_difficulty_first_text_heading,
+  .understanding_difficulty_last_text_heading {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .understanding_difficulty_first_text_description,
+  .understanding_difficulty_last_text_description {
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .Background_in_Strategy img {
+    margin-top: -10px !important;
+  }
+
+  .understanding_difficulty_main_container {
+    margin-top: -200px !important;
+  }
+}

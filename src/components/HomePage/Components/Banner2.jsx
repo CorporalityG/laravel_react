@@ -1,0 +1,138 @@
+import React from "react";
+import { API_BASE_URL, BASE_URL } from '../../../config';
+import "./Banner2.css";
+import { Link } from "react-router-dom";
+import rightArrow from "../Components/images/vector_1.png"
+
+export default function Banner2() {
+  return (
+    <div className="container">
+      <div className="homeThreeBoxes">
+        <div className="d-flex justify-content-evenly align-items-center flex-wrap py-0 dbanner">
+          <div data-aos="flip-left" className="sbox d-flex align-items-center my-3 mx-3 justify-content-evenly position-relative">
+            <div className="boxContent p-3 align-items-center position-absolute">
+              <p className="text-uppercase boxHead text-center mt-5">
+                Industry Focus
+              </p>
+              <p className="boxSubHead text-wrap text-center mt-2">
+                Creating high-quality solutions for large enterprises with complex
+                workflows
+              </p>
+              <Link to={`/article`} className="learn-more">Learn More 
+                <img src={BASE_URL + '/img/HomePage/media/right-arrow.png'} alt="Arrow" />
+              </Link>
+              {/*<div className="learn-more">
+                Learn More
+                <img src={BASE_URL + '/img/HomePage/media/right-arrow.png'} alt="Arrow" />
+              </div>*/}
+            </div>
+            <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
+              <div className="purpleD align-items-center"></div>
+              <div className="position-absolute top-50 start-50 translate-middle align-items-center dImg">
+                <img src={BASE_URL + '/img/HomePage/media/Vector.png'} alt="" className="img-fluid" />
+              </div>
+            </div>
+            <div className="box position-relative">
+              <div className="position-absolute start-50 top-0 translate-middle-x my-4">
+                <img
+                  src={BASE_URL + '/img/HomePage/media/polygon-23.png'}
+                  alt=""
+                  className="img-fluid dd1"
+                />
+              </div>
+              <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
+                <img
+                  src={BASE_URL + '/img/HomePage/media/polygon-24.png'}
+                  alt=""
+                  className="img-fluid dd1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="flip-right" className="sbox d-flex align-items-center my-3 mx-3 justify-content-evenly position-relative">
+            <div className="boxContent p-3 align-items-center position-absolute">
+              <p className="text-uppercase boxHead text-center mt-5">
+                Social Impact
+              </p>
+              <p className="text-wrap text-center mt-2">
+                Prospective plans to give back to society making a green
+                environment a reality
+              </p>
+              <div className="learn-more">
+                Learn More
+                <img src={BASE_URL + '/img/HomePage/media/right-arrow.png'} alt="Arrow" />
+              </div>
+            </div>
+            <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
+              <div className="purpleD align-items-center"></div>
+              <div className="position-absolute top-50 start-50 translate-middle align-items-center dImg">
+                <img
+                  // src={BASE_URL + '/img/HomePage/media/planet-earth 1.png"
+                  src={BASE_URL + '/img/HomePage/media/planet.png'}
+                  alt=""
+                  className="img-fluid"
+                />
+              </div>
+            </div>
+            <div className="box">
+              <div className="position-absolute start-50 top-0 translate-middle-x my-4">
+                <img
+                  src={BASE_URL + '/img/HomePage/media/polygon-23.png'}
+                  alt=""
+                  className="img-fluid dd1"
+                />
+              </div>
+              <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
+                <img
+                  src={BASE_URL + '/img/HomePage/media/polygon-24.png'}
+                  alt=""
+                  className="img-fluid dd1"
+                />
+              </div>
+            </div>
+          </div>
+          
+          <div data-aos="flip-left" className="sbox d-flex align-items-center my-3 mx-3 justify-content-evenly position-relative">
+            <div className="boxContent p-3 align-items-center position-absolute">
+              <p className="text-uppercase boxHead text-center mt-5">Agility</p>
+              <p className="text-wrap text-center mt-2">
+                Utilising agile in it’s true form to provide timely, transparent
+                and reliable outcomes
+              </p>
+              <Link to={`/about-corporality`} className="learn-more">See Our Framework  
+                <img src={BASE_URL + '/img/HomePage/media/right-arrow.png'} alt="Arrow" />
+              </Link>
+              {/*<div className="learn-more">
+                Learn More
+                <img src={BASE_URL + '/img/HomePage/media/right-arrow.png'} alt="Arrow" />
+              </div>*/}
+            </div>
+            <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
+              <div className="purpleD align-items-center"></div>
+              <div className="position-absolute top-50 start-50 translate-middle align-items-center dImg">
+                <img src={BASE_URL + '/img/HomePage/media/agile.png'} alt="" className="img-fluid" />
+              </div>
+            </div>
+            <div className="box">
+              <div className="position-absolute start-50 top-0 translate-middle-x my-4">
+                <img
+                  src={BASE_URL + '/img/HomePage/media/polygon-23.png'}
+                  alt=""
+                  className="img-fluid dd1"
+                />
+              </div>
+              <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
+                <img
+                  src={BASE_URL + '/img/HomePage/media/polygon-24.png'}
+                  alt=""
+                  className="img-fluid dd1"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

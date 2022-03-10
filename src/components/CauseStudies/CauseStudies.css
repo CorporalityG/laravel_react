@@ -1,0 +1,233 @@
+.cause-studies-container {
+  margin-top: 80px;
+}
+
+.cause-studies-container .cause-studies-left-one {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -49px top;
+}
+.cause-studies-container .cause-studies-left-one img {
+  width: 100%;
+}
+.cause-studies-container .cause-studies-left-one .white-vector {
+  position: absolute;
+  right: 1px;
+  top: 40px;
+}
+.cause-studies-container .cause-studies-left .yellow-line {
+  position: absolute;
+  left: 0;
+  top: -70px;
+  z-index: 1;
+}
+
+.cause-studies-container .cause-studies-left-two {
+  background: #33657E;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+  padding-bottom: 80px;
+  margin-right: 73px;
+}
+.cause-studies-container .cause-studies-left-two .cause-studies-icon-main {
+  width: 300px;
+  height: 300px;
+  margin-left: 50%;
+  margin-top: -350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cause-studies-container .cause-studies-left-two .cause-studies-icon-main .cause-studies-icon {
+  max-width: 100%;
+  width: auto;
+}
+.cause-studies-container .cause-studies-left-two .cause-studies-line {
+  border-bottom: 2px dashed #224F65;
+}
+.cause-studies-container .cause-studies-left-two .cause-studies-box {
+  padding: 40px 80px;
+  position: relative;
+}
+.cause-studies-container .cause-studies-left-two .cause-studies-box .title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.cause-studies-container .cause-studies-left-two .cause-studies-box .description p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: justify;
+  color: #FFFFFF;
+}
+
+.cause-studies-container .cause-studies-left-two .related-cause-studies-main {
+  padding-right: 80px;
+  padding-left:  80px;
+  margin-top: 40px;
+}
+.cause-studies-container .cause-studies-left-two .related-cause-studies-inner {
+  background: #33657E;
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.15);
+  padding: 20px 40px;
+  border-top: 2px solid #E6E6E6;
+}
+.cause-studies-container .cause-studies-left-two .related-cause-studies-main .related-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.cause-studies-container .cause-studies-left-two .related-cause-studies-main .related-list ul {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.cause-studies-container .cause-studies-left-two .related-cause-studies-main .related-list ul li {
+  background-color: #5C869B;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.cause-studies-container .cause-studies-right {
+  padding-left: 0;
+  z-index: 1;
+}
+.cause-studies-container .cause-studies-logo {
+  padding: 120px 20px;
+  text-align: center;
+}
+.cause-studies-container .cause-studies-content-container {
+  padding-right: 70px;
+}
+
+.cause-studies-container .cause-studies-main-content {
+  margin-bottom: 40px;
+}
+.cause-studies-container .cause-studies-main-content .heading {
+  margin-bottom: 25px;
+}
+.cause-studies-container .cause-studies-main-content .heading .title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #33657E;
+  margin-bottom: 25px;
+}
+.cause-studies-container .cause-studies-main-content .heading .title-line {
+  width: 80px;
+  border: 3px solid #A06DAF;
+}
+.cause-studies-container .cause-studies-main-content .content .title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #33657E;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  display: inline-block;
+  width: 100%;
+}
+.cause-studies-container .cause-studies-main-content .content p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: justify;
+  color: #232323;
+}
+
+.cause-studies-container .cause-studies-content-container .cause-studies-line {
+  border: 2px dashed #C8D2D7;
+  margin-left: -85px;
+  margin-right: -80px;
+}
+
+.cause-studies-container .glimpses-main {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.cause-studies-container .glimpses-main .title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #33657E;
+  margin-bottom: 0;
+}
+.cause-studies-container .glimpses-main p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: justify;
+  color: #232323;
+}
+.cause-studies-container .glimpses-main .glimpses-boxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.cause-studies-container .glimpses-main .glimpses-boxes .glimpses-box {
+  flex: 1;
+  padding: 25px 20px;
+}
+.cause-studies-container .glimpses-main .glimpses-boxes .glimpses-box:not(:last-child) {
+  border-right: 2px dashed #C8D2D7;
+}
+.cause-studies-container .glimpses-main .glimpses-boxes .box-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  color: #A06DAF;
+  margin-bottom: 10px;
+}
+.cause-studies-container .glimpses-main .glimpses-boxes .box-subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #33657E;
+}
+
+.cause-studies-container .cause-studies-content-boxes .content-box {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.cause-studies-container .cause-studies-content-boxes .content-box .middle-icon {
+  width: 125px;
+  position: absolute;
+  left: -148px;
+  z-index: 1;
+}
+.cause-studies-container .cause-studies-content-boxes .content-box .title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #33657E;
+  margin-bottom: 10px;
+}
+.cause-studies-container .cause-studies-content-boxes .content-box .description p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: justify;
+  color: #232323;
+}

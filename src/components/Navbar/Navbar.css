@@ -1,0 +1,297 @@
+.navbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  height: 80px;
+  background-color: #fff !important;
+  border-bottom: 1px solid #e1e2e2;
+  z-index: 1000 !important;
+}
+.navbar-container {
+  margin: 0px auto;
+  max-width: 1920px;
+  width: 100%;
+  background-color: #fff !important;
+  height: 80px;
+  /*padding: 0px 43px 0px 50px !important;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e2e2;
+  margin: 0px auto !important;
+  z-index: 1001 !important;
+}
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 55% !important;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff !important;
+  z-index: 100;
+}
+.nav-item > div {
+  color: #31647c;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0px !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-item:last-child > div {
+  min-width: 115px;
+  width: auto !important;
+  color: #31647c;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0px;
+}
+
+.nav-item:last-child {
+  padding: 10px 10px !important;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, rgb(229, 205, 96), rgb(108, 160, 188)) 1;
+}
+.nav-item {
+  margin: 0px 20px !important;
+  padding: 29px 0px !important;
+  cursor: pointer;
+  position: relative;
+}
+.nav-item:not(:last-child)::after {
+  display: none;
+  content: " ";
+  width: 12px;
+  height: 12px;
+  left: calc(50% - 6px);
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: -6px;
+  background-color: #fff;
+  border-left: 1px solid #e1e2e2;
+  border-top: 1px solid #e1e2e2;
+}
+.nav-item:not(:last-child):hover > div {
+  font-weight: 700 !important;
+}
+.contact::after{
+  content: unset !important;
+}
+.nav-item:hover::after {
+  display: block;
+}
+
+.nav-icon {
+  display: none;
+  width: 27px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  cursor: pointer;
+  z-index: 1002 !important;
+}
+.nav-icon .nav-icon-line {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  border-radius: 4px;
+  transition: 0.25s ease-in-out;
+}
+
+.nav-icon .nav-icon-line:nth-child(1) {
+  top: 1px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+.nav-icon .nav-icon-line:nth-child(2) {
+  top: 9px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+.nav-icon .nav-icon-line:nth-child(3) {
+  top: 17px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.corporality-logo {
+  width: 14.3rem;
+  height: 2.9rem;
+}
+
+.nav-icon-clicked:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(38deg);
+}
+
+.nav-icon-clicked:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.nav-icon-clicked:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-38deg);
+}
+
+.hidden {
+  opacity: 0 !important;
+  display: none !important;
+}
+
+.nav-hover-effect{
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1 !important;
+  top: 0px !important;
+}
+
+.nav-item-hover::after {
+  display: block !important;
+}
+
+.outside-handler {
+  margin: 0px !important;
+  padding: 0px !important;
+  height: 0px;
+  width: 0px;
+  display: block;
+  position: fixed;
+  top: 80px !important;
+}
+.outside-handler:hover {
+  margin: 0px !important;
+  padding: 0px !important;
+  display: block;
+}
+
+.contact-no-a {
+  letter-spacing: 1px;
+  margin: 0px !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-icon {
+    display: flex;
+  }
+  .nav-hover-effect{
+    display: none !important;
+  }
+  .navbar-container{
+    position: relative;
+    left: 0px;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .nav-items-hidden {
+    opacity: 1;
+    transform: translateX(100%);
+    visibility: visible !important;
+  }
+  .nav-items {
+    visibility: hidden;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: -300px;
+    width: 300px !important;
+    height: calc(100vh - 80px) !important;
+    justify-content: start;
+    align-items: start;
+    border-right: 1px solid #e1e2e2;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-items .nav-item {
+    width: 100%;
+    padding: 15px 0px !important;
+    border-bottom: 1px solid #e1e2e2;
+    margin: 0px !important;
+  }
+  .nav-item > div {
+    color: #31647c;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    padding-left: 15px !important;
+  }
+  .navbar-container {
+    justify-content: center !important;
+    padding: 0px !important;
+  }
+  .corporality-logo {
+    width: 195.7px;
+    height: 40px;
+  }
+  .nav-item:not(:last-child)::after {
+    background-color: #a06db0;
+    display: none;
+  }
+  .nav-item:hover > div {
+    font-weight: 700;
+  }
+
+  .outside-handler {
+    margin: 0px !important;
+    padding: 0px !important;
+    height: 0px;
+    width: 0px;
+    display: block;
+    position: unset;
+    top: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-items-hidden {
+    opacity: 1 !important;
+    top: 80px;
+    transform: translateY(0%) !important;
+  }
+  .nav-items {
+    left: 0px;
+    opacity: 0;
+    transform: translateY(calc(-50% + 20px));
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .corporality-logo {
+    /* width: 181.1px;
+        height: 37px; */
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .corporality-logo {
+    /* width: 146.8px;
+        height: 30px; */
+  }
+  .nav-icon {
+    /* width: ; */
+  }
+}

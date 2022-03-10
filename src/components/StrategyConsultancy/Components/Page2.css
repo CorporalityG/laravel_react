@@ -1,0 +1,87 @@
+.constrat-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.consultancypage-2{
+    align-items: center;
+    margin: -50px 0 !important;
+}
+
+.pag-cont{
+    margin: auto !important;
+    width: 68%;
+}
+
+.pag-cont > h2{
+    font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 37px;
+/* identical to box height, or 116% */
+
+text-transform: uppercase;
+
+color: #33657E;
+}
+
+.consultbusinessbox{
+    margin-left: 0% !important;
+}
+
+.pag-cont > p{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+
+text-align: center;
+
+color: #757575;
+
+}
+
+.consultancygradbox{
+    transform: translate(-470%,100%);
+    /* display: flex; */
+    /* position: relative;
+    left: 0%; */
+
+}
+
+.start-Box-fl{
+    /* align-items: center; */
+    margin: auto;
+}
+
+.consultdvice{
+    width: 90%;
+    margin-left: 10% !important;
+    margin-top: 15% !important;
+}
+
+.consultancybox-1{
+    position: absolute;
+    z-index: 1;
+}
+
+.consultancybox-2{
+    /* position: relative; */
+    /* transform: translate(-90px,0px); */
+    z-index: 0;
+}
+
+
+
+@media only screen and (max-width: 560px){
+
+    .pag-cont{
+        margin: auto !important;
+        width: 80%;
+    }
+    
+}

@@ -1,0 +1,288 @@
+@media only screen and (max-width: 992px) {
+    .gtm-page1 .heading{
+        font-size: 16px;
+        line-height: 24px!important;
+    }
+
+    /*.gtm-page1 .gainCompetitive{
+        font-size: 12px!important;
+        line-height: 20px!important;
+    }*/
+
+    /*.gtm-page1 .philosophySubmitButton {
+        font-size: 12px!important;
+        line-height: 20px!important;
+    }*/
+}
+
+@media only screen and (max-width: 768px) {
+    .gtm-page1 .heading{
+        font-size: 14px;
+        line-height: 20px!important;
+    }
+
+    /*.gtm-page1 .gainCompetitive{
+        font-size: 10px!important;
+        line-height: 16px!important;
+    }*/
+
+    /*.gtm-page1 .philosophySubmitButton {
+        font-size: 10px!important;
+        line-height: 16px!important;
+    }*/
+}
+
+.gtm-page1 {
+    margin-top: 80px;
+    position: relative;
+}
+
+.gtm-page1 .container {
+    height: 600px;
+    max-width: none;
+    background: url(./videos/V3.mp4) no-repeat center center/cover;
+}
+
+.gtm-page1 .myVideo {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.gtm-page1 .row {
+    /* width: 100%; */
+    position: relative;
+    height: 100%;
+}
+.gtm-page1 .row .col-lg-5 {
+    padding-left: 80px;
+}
+
+.gtm-page1 .heading {
+    color: #fff;
+}
+
+.gtm-page1 .text {
+    color: #fff;
+    text-align: left !important;
+    word-break: break-word;
+    max-width: 530px;
+}
+
+.gtm-page1 .sideSocials {
+    width: 50px;
+    margin-right: 1rem;
+}
+.gtm-page1 .sideSocials .socialIcon {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+}
+
+.gtm-page1 .marketing {
+    background: url(../images/marketing.png) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    height: 50%;
+    width: 100%;
+}
+
+.gtm-page1 .blueSquare {
+    background: url(../images/blueSquare.png) no-repeat center center/cover;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    height: 285px;
+    width: 290px;
+}
+
+.gtm-page1 .blueSquare:after {
+    content: "";
+    background: url(../images/girl.png) no-repeat center center/cover;
+    height: 296px;
+    width: 192px;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+}
+
+.gtm-page1 .blueSquare:before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 230px;
+    background: #fff;
+    /* border: 1px solid red; */
+    z-index: 1;
+    bottom: -10px;
+    left: 30%;
+    filter: blur(5px);
+}
+
+.blueFadingSquare {
+    background: url(../images/blueFadingSquare.png) no-repeat center
+        center/cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+.pinkFadingSquare {
+    background: url(../images/pinkFadingSquare.png) no-repeat center
+        center/cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 15%;
+    left: 40%;
+}
+
+.gtm-page1 .philosophySubmitButton {
+    all: unset;
+    background: linear-gradient(95.12deg, #eed979 0%, #4f8cad 83.42%);
+    position: relative;
+    z-index: 1 !important;
+    width: fit-content;
+    height: 55% !important;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    bottom: 0;
+    transition: all 0.5s;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.gtm-page1 .philosophySubmitButton:hover {
+    bottom: 3px;
+}
+
+.gtm-page1 .philosophySubmitButton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(95.12deg, #4f8cad 0%, #eed979 83.42%);
+    z-index: -1 !important;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.gtm-page1 .philosophySubmitButton:hover::after {
+    opacity: 1;
+}
+
+.sideSocials{
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+    .gtm-page1 .container2 {
+        display: static !important;
+        height: 500px;
+    }
+
+    .gtm-page1 .heading{
+        font-size: 24px
+    }
+
+    /*.gtm-page1 .desc{
+        font-size: 12px;
+    }*/
+    
+    /*.gtm-page1 .philosophySubmitButton{
+        font-size: 12px;
+    }*/
+
+    .gtm-page1 .row .col-lg-5 {
+        /* text-align: center; */
+        padding-left: 0px;
+        margin-top: auto;
+    }
+
+    .gtm-page1 .sideSocials {
+        height: 50px;
+        width: 100%;
+        margin-top: auto;
+    }
+
+    .gtm-page1 .marketing {
+        /* height: 100%; */
+        background-size: contain;
+    }
+
+    .gtm-page1 .blueSquare {
+        position: relative;
+        top: 30%;
+        width: 50%;
+        background-size: contain;
+    }
+
+    .gtm-page1 .blueSquare:after {
+        width: 80%;
+        background-size: contain;
+    }
+
+    .sideSocials{
+        width: 66.66666667%!important;
+        margin-right: auto!important;
+        margin-left: auto!important;
+        margin-bottom: 1rem;
+        justify-content: left;
+        padding-left: 0;
+    }
+
+    .blueFadingSquare {
+        display: none;
+    }
+
+    .pinkFadingSquare {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 601px) {
+    .gtm-page1 .row .col-lg-5 {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .gtm-page1 .blueSquare {
+        top: 25%;
+    }
+
+    .sideSocials{
+        width: 100%!important;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    /*.gtm-page1 .heading{
+        font-size: 14px
+    }*/
+
+    /* .gtm-page1 .desc{
+        font-size: 10px;
+    } */
+    
+    /* .gtm-page1 .philosophySubmitButton{
+        font-size: 10px;
+    } */
+}

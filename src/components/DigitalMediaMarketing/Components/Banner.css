@@ -1,0 +1,200 @@
+.DDMBannerText > h1 {
+  font-family: ‘-apple-system’, ‘BlinkMacSystemFont’, "Segoe UI", ‘Roboto’,
+    ‘Oxygen’, ‘Ubuntu’, ‘Cantarell’, "Open Sans", "Helvetica Neue", ‘sans-serif’;
+  /* position: relative; */
+  width: 610px !important;
+  height: 138px;
+  left: 104px;
+  top: 207px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 46px;
+  text-transform: uppercase;
+  color: #33657e;
+  margin-top: 38% !important;
+  margin-left: 12.5% !important;
+}
+
+.DDMBannerImage{
+  /* position: absolute; */
+  /* right: 0; */
+  margin-left: 7% !important;
+  padding-bottom: 0% !important;
+}
+
+.DDMBannerText > p {
+  margin-left: 12.5% !important;
+  /* position: absolute; */
+  width: 400px;
+  height: 24px;
+  left: 104px;
+  top: 357px;
+  font-family: ‘-apple-system’, ‘BlinkMacSystemFont’, "Segoe UI", ‘Roboto’,
+    ‘Oxygen’, ‘Ubuntu’, ‘Cantarell’, "Open Sans", "Helvetica Neue", ‘sans-serif’;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #232323;
+}
+
+.DDMBannerDiscoveryButton > button {
+  /* position: static; */
+  width: 181px;
+  height: 16px;
+  left: 17px;
+  top: 13px;
+  font-family: ‘-apple-system’, ‘BlinkMacSystemFont’, "Segoe UI", ‘Roboto’,
+    ‘Oxygen’, ‘Ubuntu’, ‘Cantarell’, "Open Sans", "Helvetica Neue", ‘sans-serif’;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  text-align: center;
+  color: #ffffff;
+
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 50px 75px !important;
+
+  /* background design */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 17px !important;
+
+  /* position: absolute; */
+  width: 215px;
+  height: 42px;
+  left: 104px;
+  top: 411px;
+  background: linear-gradient(95.12deg, #eed979 0%, #6ca0bc 83.42%);
+  border: none;
+}
+
+.DDMBannerDiscoveryButton > button:hover {
+    background: linear-gradient(-90deg, #eed979 0%, #6ca0bc 83.42%);
+}
+
+.DDMBannerSocialIcons {
+  margin-left: -1% !important;
+  margin-top: 2% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  position: absolute;
+  width: 29px;
+  height: 224px;
+  left: 31px;
+  top: 222px;
+}
+
+.DDMBannerSocialIcons > a {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px !important;
+}
+
+.DDMBannerImage {
+  /* position: absolute; */
+  width: 850px;
+  height: 648px;
+
+  /* left: 627px;
+  top: -40px; */
+}
+
+.DDMBannerRectangleBlue {
+    position: absolute;
+    margin-top: -19% !important;
+    margin-left: 46% !important;
+}
+
+.DDMBannerRectangleYellow {
+    /* position: absolute; */
+    margin-left: 68% !important;
+    margin-top: -5% !important;
+}
+
+@media only screen and (max-width: 1050px){
+  .DDMBannerText > h1{
+      width: 45%;
+      padding-bottom: 10%;
+  }
+  .DDMBannerText > p{
+    /* width: 45%; */
+    margin-top: 5% ;
+  }
+  .DDMBannerImage > img{
+    /* position: relative; */
+    /* top: 0%; */
+    margin-top: -10% !important;
+    margin-left: -10% !important;
+  }
+}
+
+@media only screen and (max-width: 1030px){
+  .DDMBannerText > h1 {
+    width: 90% ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    padding-bottom: 0% !important;
+  }
+  
+  .DDMBannerText > p {
+    /* position: absolute; */
+    display: flex ;
+    /* flex-direction: ; */
+    /* justify-content: center; */
+    margin-left: 10% !important;
+    align-items:stretch;
+    width: 100%;
+    margin-top: -4% !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #232323;
+  }
+
+.DDMBannerImage{
+  margin: 0% !important;
+}
+
+.DDMBannerImag > img{
+  width: 100%;
+  margin: 0% !important;
+  align-items: center;
+}
+}
+
+@media only screen and (max-width: 430px){
+  .DDMBannerText > h1 {
+    padding-top: 10%;
+    font-size: 25px;
+    line-height: 30px;
+    padding-bottom: 0%;
+}
+
+.DDMBannerImage > img{
+  width: 50%;
+  margin: 0% !important;
+}
+.DDMBannerText > p{
+  margin-top:  2%; ;
+}
+
+.DDMBannerImage > img{
+  width: 50%;
+  margin: 0% !important;
+  align-items: center;
+}
+}

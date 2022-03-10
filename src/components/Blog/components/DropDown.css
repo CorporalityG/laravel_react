@@ -1,0 +1,226 @@
+.customDropDown {
+  position: relative !important;
+  border: 1px solid #E1E1E1 !important;
+  max-width: none !important;
+  font-size: calc(12px + 0.1vw) !important;
+}
+
+.customDropDown:focus-within {
+  border: 1px solid #6CA0BC !important;
+}
+
+.customDropDown button {
+  padding: 10px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  font-size: 1.1em !important;
+  font-weight: 400 !important;
+  line-height: 1.172em !important;
+  width: 95% !important;
+  border-radius: 0px !important;
+  text-align: left !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.customDropDown button::after {
+  position: absolute !important;
+  top: 50% !important;
+  right: 5% !important;
+  margin-left: 5% !important;
+  max-width: 30px !important;
+  -webkit-transition: all .3s ease-in-out !important;
+  transition: all .3s ease-in-out !important;
+  -webkit-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
+}
+
+.customDropDown button:focus::after {
+  -webkit-transform: translateY(-50%) rotate(180deg) !important;
+          transform: translateY(-50%) rotate(180deg) !important;
+}
+
+.customDropDown ul {
+  padding: 0 !important;
+  max-width: 80vw;
+}
+
+.customDropDown ul li {
+  max-width: calc(80vw - 20px) !important;
+  padding: 12px 20px !important;
+  width: 294px !important;
+  text-align: left !important;
+}
+
+.customDropDown ul li:hover {
+  font-weight: 500 !important;
+  line-height: 1.5em !important;
+  color: #33657E !important;
+  background-color: #F2F2F2 !important;
+  cursor: pointer !important;
+}
+
+.customDropDown ul li a {
+  all: unset !important;
+  font-size: 0.9em !important;
+}
+
+.customDropDown .show {
+  display: -ms-grid !important;
+  display: grid !important;
+}
+
+.customDropDown .recentPostContainer {
+  width: 80vw !important;
+  max-width: 552px !important;
+  max-height: 252px !important;
+  height: calc(220px + 0.1vw) !important;
+  -ms-grid-columns: 1fr 1fr !important;
+      grid-template-columns: 1fr 1fr !important;
+  -ms-grid-rows: 1fr 1fr 1fr !important;
+      grid-template-rows: 1fr 1fr 1fr !important;
+  grid-column-gap: 2% !important;
+  grid-row-gap: 4% !important;
+  padding: 8px !important;
+}
+
+.customDropDown .recentPostContainer li {
+  color: #232323;
+  background-color: #F2F2F2 !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 2% !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-transition: all 0.1s ease-in-out !important;
+  transition: all 0.1s ease-in-out !important;
+}
+
+.customDropDown .recentPostContainer li img {
+  height: 80% !important;
+  border-radius: 50% !important;
+}
+
+.customDropDown .recentPostContainer li a {
+  font-size: 0.9em !important;
+  margin-left: 5% !important;
+  cursor: pointer !important;
+  width: 80% !important;
+  height: 90% !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.customDropDown .recentPostContainer li a p {
+  margin: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-pack: center !important;
+  -webkit-line-clamp: 2 !important;
+}
+
+.customDropDown .recentPostContainer li:hover {
+  color: #232323 !important;
+  font-weight: 400 !important;
+  background-color: #FFFFFF !important;
+  -webkit-box-shadow: 0px 16px 40px 0px #0000001A;
+          box-shadow: 0px 16px 40px 0px #0000001A;
+}
+
+@media only screen and (max-width: 768px) {
+  .customDropDown {
+    font-size: calc(12px + 0.1vw) !important;
+  }
+  .customDropDown ul {
+    max-width: 250px !important;
+  }
+  .customDropDown ul li {
+    padding: 8px 18px !important;
+    max-width: 250px !important;
+  }
+  .customDropDown .recentPostContainer {
+    max-width: none !important;
+    height: calc(200px + 0.1vw) !important;
+    font-size: calc(12px + 0.1vw) !important;
+  }
+  .customDropDown .recentPostContainer li {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .customDropDown {
+    font-size: calc(11px + 0.1vw) !important;
+  }
+  .customDropDown ul {
+    max-width: 100% !important;
+    font-size: calc(12px + 0.1vw) !important;
+  }
+  .customDropDown ul li {
+    padding: 8px 18px !important;
+    max-width: calc(100% - 36px) !important;
+  }
+  .customDropDown .recentPostContainer {
+    max-width: none !important;
+    left: 50% !important;
+    -webkit-transform: translate(calc(-50%), 39px) !important;
+            transform: translate(calc(-50%), 39px) !important;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+    -ms-grid-rows: (1fr)[6] !important;
+        grid-template-rows: repeat(6, 1fr) !important;
+    grid-row-gap: 2.1% !important;
+    grid-column-gap: 2% !important;
+    height: 330px !important;
+    max-height: none !important;
+    max-width: 350px !important;
+    font-size: calc(12px + 0.1vw) !important;
+  }
+  .customDropDown .recentPostContainer li {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .customDropDown {
+    font-size: calc(11px + 0.1vw) !important;
+  }
+  .customDropDown ul {
+    overflow-x: hidden;
+    font-size: calc(12px + 0.1vw) !important;
+  }
+  .customDropDown ul li {
+    padding: 8px 15px !important;
+    overflow: hidden;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+  }
+  .customDropDown .recentPostContainer {
+    font-size: calc(12px + 0.1vw) !important;
+    height: 300px !important;
+  }
+}
+/*# sourceMappingURL=DropDown.css.map */

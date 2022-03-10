@@ -1,0 +1,783 @@
+.bannerContainer {
+  margin-top: 80px !important;
+  margin-bottom: 30px !important;
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  color: #33657E !important;
+  font-size: 1.1vw;
+  height: 41.5vw;
+  max-height: 806px;
+  margin: 0 auto;
+}
+
+.bannerContainer video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.bannerContainer .maxContainer {
+  top: 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0% auto 0 auto;
+  z-index: 2;
+}
+
+.bannerContainer .leftBannerContainerWrapper {
+  position: absolute;
+  bottom: 0px !important;
+  left: 0;
+  height: 73.19%;
+  width: 54.7%;
+  max-width: 1031px;
+  border-radius: 0px 20px 0px 0px;
+  background-color: #FFFFFFE5;
+}
+
+.bannerContainer .leftBannerContainer {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.bannerContainer .leftIndicators {
+  /*height: 100%;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 13%;
+  -ms-flex: 13%;
+  flex: 13%;
+  z-index: 10;
+  position: absolute;
+  right: 300px;
+  bottom: 20px;
+}
+
+.bannerContainer .indicatorCircle {
+  width: 35px;
+  height: 5px;
+  border: 4px solid #C4C4C4;
+  border-radius: 5px;
+  background-color: #C4C4C4;
+  cursor: pointer;
+}
+.bannerContainer .indicatorCircle:not(:last-child) {
+  margin-right: 10px;
+}
+.bannerContainer .activeIndicatorCircle {
+  /*width: 14px !important;
+  height: 14px !important;*/
+  background-color: #6EA0BD;
+  border-color: #6EA0BD;
+}
+
+.bannerContainer .rightPartBanner {
+  /*-webkit-box-flex: 87%;
+  -ms-flex: 87%;
+  flex: 87%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0px 7% 3% 0px !important;
+  overflow: hidden !important;*/
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.bannerContainer .bannerText {
+  -webkit-box-flex: 70%;
+      -ms-flex: 70%;
+          flex: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: visibility 0s cubic-bezier(0, 1.15, 0.04, 0.88), opacity 1s cubic-bezier(0, 1.15, 0.04, 0.88), -webkit-transform 1s ease-in-out !important;
+  transition: visibility 0s cubic-bezier(0, 1.15, 0.04, 0.88), opacity 1s cubic-bezier(0, 1.15, 0.04, 0.88), -webkit-transform 1s ease-in-out !important;
+  transition: transform 1s ease-in-out, visibility 0s cubic-bezier(0, 1.15, 0.04, 0.88), opacity 1s cubic-bezier(0, 1.15, 0.04, 0.88) !important;
+  transition: transform 1s ease-in-out, visibility 0s cubic-bezier(0, 1.15, 0.04, 0.88), opacity 1s cubic-bezier(0, 1.15, 0.04, 0.88), -webkit-transform 1s ease-in-out !important;
+  overflow: hidden !important;
+  z-index: 3;
+  padding: 0px 4% 0px 0px !important;
+}
+
+.bannerContainer .bannerText-diff {
+  padding: 0px 20% 0px 0px !important;
+}
+
+.bannerContainer .bannerTextHide {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 10%;
+  z-index: 0;
+  color: #FFFFFFE5;
+}
+
+.bannerContainer .bannerHead {
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: bold;
+  margin: 0px !important;
+}
+
+.bannerContainer .bannerSubtitle {
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 15px;
+  color: #232323;
+}
+
+.bannerContainer .bannerSocialLinksContainer {
+  -webkit-box-flex: 10%;
+  -ms-flex: 10%;
+  flex: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-top: auto;
+  min-width: 40%;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  position: absolute;
+  top: 220px;
+  align-items: center;
+}
+.bannerContainer .bannerSocialLinksContainer .bannerSocialImg {
+  margin-right: 10px;
+}
+.bannerContainer .bannerSocialLinksContainer .bannerSocialImg img {
+  max-height: 200px;
+}
+.bannerContainer .bannerSocialText {
+  text-align: left;
+  color: #33657E;
+  line-height: 2.5em;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin: 0px 0px 5px 0px !important;
+}
+
+.bannerContainer .socialIconsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.bannerContainer .socialIcon {
+  height: 2.056vw !important;
+  width: 2vw !important;
+  min-height: 2.056vw !important;
+  min-width: 2.056vw !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bannerContainer .socialIcon:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.bannerContainer .socialIcon > i {
+  font-size: 1.4vw !important;
+  color: #33657E;
+}
+
+.bannerContainer .rightBannerContainer {
+  position: absolute;
+  bottom: 0px !important;
+  right: 0px;
+  width: 20%;
+  max-width: 377px;
+  height: 26.8%;
+  z-index: 1;
+  background-color: #FFFFFFE5;
+}
+
+.bannerContainer .rightBannerContainer > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.bannerContainer .rightBannerContainer > iframe {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+.bannerContainer .twoDiamonds {
+  position: absolute;
+  bottom: 0;
+  z-index: 12;
+  left: 10%;
+  height: auto;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bannerContainer .bigDiamond {
+  height: 11vw !important;
+  width: 11vw !important;
+  position: relative;
+  padding: 0px 0px 10px 0px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.bannerContainer .bigDiamond > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
+.bannerContainer .callButton {
+  height: 2.5vw;
+  width: 2.5vw;
+  margin-top: 20% !important;
+  position: relative;
+  z-index: 15 !important;
+  cursor: pointer;
+}
+
+.bannerContainer .callButton > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+  z-index: 15 !important;
+}
+
+.bannerContainer .callButton::after {
+  z-index: 10 !important;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.5vw;
+  width: 2.5vw;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-animation: pulse 1.5s infinite;
+          animation: pulse 1.5s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.bannerContainer .mobileNumber {
+  margin: 6% 0px 0px 0px !important;
+  z-index: 15 !important;
+  font-size: 0.875em !important;
+  line-height: 1.125em !important;
+  color: white;
+  font-size: 0.875em;
+}
+
+.bannerContainer .smallDiamond {
+  height: 8vw;
+  width: 8vw;
+  margin-left: -25%;
+  z-index: 0;
+}
+
+.bannerContainer .smallDiamond img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
+.bannerContainer .square-1 {
+  z-index: 13;
+  position: absolute;
+  top: 56%;
+  right: 9%;
+}
+
+.bannerContainer .square-2 {
+  z-index: 13;
+  position: absolute;
+  top: 25%;
+  right: 15%;
+}
+
+.bannerContainer .square-2-diff {
+  top: 65% !important;
+  right: 50% !important;
+}
+
+.bannerContainer .bgPartBanner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  justify-content: end;
+  display: flex;
+}
+.bannerContainer .banner-bg-image {
+  position: absolute;
+  max-height: 750px;
+  right: 0;
+}
+.bannerContainer .mainBannerImg {
+  position: relative;
+  right: 12%;
+  top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bannerContainer .mainBannerImg .ellipse {
+  position: absolute;
+  max-height: 580px;
+}
+.bannerContainer .mainBannerImg .banner-image {
+  z-index: 9;
+  max-height: 420px;
+}
+.bannerContainer .mainBannerImg .video-icon {
+  position: absolute;
+  z-index: 9;
+  top: 230px;
+  left: 25px;
+  cursor: pointer;
+}
+.bannerContainer .bannerImgs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.bannerContainer .bannerImgs img {
+  position: relative;
+}
+.bannerContainer .bannerImgs .rectangle-1 {
+  top: 25%;
+  left: 10%;
+}
+.bannerContainer .bannerImgs .rectangle-2 {
+  top: 25%;
+  left: 35%;
+}
+.bannerContainer .bannerImgs .rectangle-3 {
+  top: 10%;
+  left: 43%;
+}
+.bannerContainer .bannerImgs .rectangle-4 {
+  top: 120%;
+  left: 35%;
+}
+.bannerContainer .bannerImgs .banner-image-1 {
+  top: 100%;
+  left: 35%;
+}
+.bannerContainer .bannerImgs .banner-image-2 {
+  top: 0;
+  left: 23%;
+}
+.bannerContainer .bannerImgs .banner-image-3 {
+  top: 0;
+  left: 50%;
+}
+.bannerContainer .bannerImgs .banner-image-4 {
+  top: 70%;
+  left: 44%;
+}
+.bannerContainer .leftPartBanner {
+  max-width: 830px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 30px 34px 34px -20px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 30px 0px 0px;
+  position: relative;
+  padding: 50px 10px 50px 120px;
+  top: 180px;
+  min-height: 280px;
+}
+.bannerContainer .bannerCount {
+  position: absolute;
+  bottom: -15px;
+  z-index: 99;
+}
+.bannerContainer .phone-icon::after {
+  content: "";
+  background-color: #E2E6F1;
+  width: 100px;
+  height: 4px;
+  position: absolute;
+  top: 68px;
+  left: 90px;
+  z-index: -9;
+}
+.bannerContainer .twoDiamonds .phone-icon img {
+  cursor: pointer;
+}
+.bannerContainer .twoDiamonds .banner-count {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 96px;
+  color: #E2E6F1;
+}
+.bannerContainer .twoDiamonds .banner-count .smallBannerCount {
+  font-size: 40%;
+}
+
+
+
+@media only screen and (min-width: 1920px) {
+  .bannerContainer {
+    font-size: 16px;
+  }
+  .bannerContainer .bigDiamond {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .bannerContainer .smallDiamond {
+    max-width: 120px;
+    max-height: 120px;
+  }
+  .bannerContainer .callButton {
+    max-width: 32px;
+    max-height: 32px;
+  }
+  .bannerContainer .callButton::after {
+    max-width: 32px;
+    max-height: 32px;
+  }
+  .bannerContainer .mobileNumber {
+    margin-top: 10% !important;
+  }
+  .bannerContainer .socialIcon {
+    max-width: 43px !important;
+    max-height: 43px !important;
+    width: 43px !important;
+    height: 43px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+  }
+  .bannerContainer .socialIcon i {
+    font-size: 22.4px !important;
+  }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .bannerContainer .bannerImgs .rectangle-1 {
+    top: 20%;
+  }
+  .bannerContainer .bannerImgs .rectangle-2 {
+    top: 15%;
+  }
+  .bannerContainer .leftPartBanner {
+    top: 150px;
+  }
+  .bannerContainer .bannerSocialLinksContainer {
+    top: 200px;
+  }
+  .bannerContainer .twoDiamonds {
+    bottom: -20px;
+  }
+  .bannerContainer .banner-bg-image {
+    max-height: 700px;
+  }
+}
+
+
+@media only screen and (max-width: 1351px) {
+  .bannerContainer .leftPartBanner {
+    max-width: 780px;
+    padding-bottom: 30px;
+  }
+  .bannerContainer .bannerHead {
+    font-size: 32px;
+  }
+  .bannerContainer .mainBannerImg {
+    right: 10%;
+    top: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .bannerContainer .bannerImgs .rectangle-1 {
+    top: 10%;
+  }
+  .bannerContainer .bannerImgs .rectangle-2 {
+    top: 10%;
+  }
+  .bannerContainer .bannerImgs .rectangle-3 {
+    top: 8%;
+  }
+  .bannerContainer .leftPartBanner {
+    top: 110px;
+  }
+  .bannerContainer .bannerSocialLinksContainer {
+    top: 160px;
+  }
+  .bannerContainer .mainBannerImg .banner-image {
+    max-width: 380px;
+  }
+  .bannerContainer .mainBannerImg .video-icon {
+    top: 200px;
+    left: 35px;
+    max-width: 80px;
+  }
+  .bannerContainer .banner-bg-image {
+    max-height: 650px;
+  }
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .bannerContainer .leftPartBanner {
+    max-width: 750px;
+  }
+  .bannerContainer .mainBannerImg .banner-image {
+    max-width: 350px;
+  }
+  .bannerContainer .mainBannerImg {
+    top: 30px;
+  }
+}
+/*# sourceMappingURL=NewBanner.css.map */
+
+
+@media only screen and (max-width: 600px) {
+  .bannerContainer {
+    margin-top: 155px !important;
+    margin-bottom: 545px !important;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    color: #33657E !important;
+    font-size: 1.1vw;
+    height: 95.5vw;
+    max-height: 1006px;
+    margin: 0 auto;
+}
+.bannerContainer .twoDiamonds .banner-count {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    color: #E2E6F1;
+}
+.bannerContainer .twoDiamonds {
+    position: relative;
+    bottom: 0;
+    z-index: 12;
+    left: 10%;
+    height: auto;
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.bannerContainer .twoDiamonds {
+    bottom: -100px;
+}
+.bannerContainer .socialIcon:not(:last-child) {
+    margin-bottom: 50px;
+}
+.bannerContainer .socialIcon > i {
+    font-size: 8.4vw !important;
+    color: #33657E;
+}
+.bannerContainer .rightPartBanner {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    top: 120px;
+    left: 65px;
+}
+ .bannerContainer .leftIndicators {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 13% 1;
+    z-index: 10;
+    position: relative;
+    right: 0px;
+    bottom: 85px;
+}
+.bannerContainer .mainBannerImg .banner-image {
+    max-width: 170px;
+    top: 27px;
+    margin-top: -45px;
+}
+.bannerContainer .mainBannerImg .video-icon {
+    top: 43px;
+    left: 5px;
+    max-width: 60px;
+}
+.dbanner .boxContent > p:nth-child(2) {
+    /* background-color: red; */
+    padding: 5px 15px !important;
+    font-size: 14px !important;
+    /* margin: 15px 0px !important; */
+}
+.dbanner .littleD {
+    height: 17%;
+    width: 17%;
+    z-index: 2;
+    margin-top: -3%!important;
+}
+.dbanner .sbox:not(:last-child) .boxContent {
+    border-right: solid rgb(243 194 194 / 0%);
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+}
+.start-50 {
+    left: 50%!important;
+    margin-top: -30px;
+}
+.dbanner .purpleD {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45.12deg, #A06DAF 0%, #6CA0BC 83.42%);
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 5px 20px rgb(142 144 147 / 50%);
+    border-radius: 14px;
+    margin-top: -30px;
+}
+
+}
