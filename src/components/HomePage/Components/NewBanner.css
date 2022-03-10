@@ -552,6 +552,11 @@
   font-size: 40%;
 }
 
+.home_banner_modal iframe {
+  width: 100%;
+  height: 400px;
+}
+
 
 
 @media only screen and (min-width: 1920px) {

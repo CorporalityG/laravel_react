@@ -1,21 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { API_BASE_URL, BASE_URL } from '../../../config';
 import "./NewBanner.css"
+import Modal from 'react-bootstrap/Modal'
 
 const NewBanner = () => {
     const [indicatorId, setIndicatorId] = useState(1);
-    const [showYoutube, setShowYoutube] = useState(false);
+    /* const [showYoutube, setShowYoutube] = useState(false);
     const youtubeVid = useRef();
 
     const [showYoutube2, setShowYoutube2] = useState(false);
     const youtubeVid2 = useRef();
 
     const [showYoutube3, setShowYoutube3] = useState(false);
-    const youtubeVid3 = useRef();
+    const youtubeVid3 = useRef(); */
 
     const [bannerCount, setBannerCount] = useState(1);
 
-    const rightBannerClickHandler = () => {
+    /* const rightBannerClickHandler = () => {
         setShowYoutube(true)
         setShowYoutube2(false)
         setShowYoutube3(false)
@@ -34,13 +35,20 @@ const NewBanner = () => {
         setShowYoutube2(false)
         setShowYoutube3(true)
         youtubeVid3.current.src += "?autoplay=1"
+    } */
+
+    const [show, setShow] = useState(0);
+
+    const handleClose = () => setShow(false);
+    const handleShow = (slideId) => {
+        setShow(slideId);
     }
 
     const bannerCountFunc = (value) => {
         setBannerCount(value);
     }
     
-    useEffect(() => {
+    /* useEffect(() => {
         setInterval(() => {
             setIndicatorId(i => {
                 //console.log(i);
@@ -68,7 +76,8 @@ const NewBanner = () => {
                 }
             });
           }, 8000);
-    }, [])
+    }, []) */
+
     return (
         <div className="bannerContainer">
             <div className='bannerContainerWrapper'>
@@ -99,10 +108,20 @@ const NewBanner = () => {
                             </div>
                         </div>
 
-                        <div className="rightPartBanner" onClick={rightBannerClickHandler} data-aos="fade-up" data-aos-duration="2500">
-                            {!showYoutube && <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="" />}
-                            <iframe ref={youtubeVid} className={showYoutube ? "" : "hidden"} src="https://www.youtube.com/embed/YpymypBc9Hc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <div className="rightPartBanner" onClick={() => { handleShow(1); }} data-aos="fade-up" data-aos-duration="2500">
+                            <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="Video Thumbnail" />
+                            {/* {!showYoutube && <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="" />} */}
                         </div>
+                        
+                        <Modal show={show==1 ? show : ''} onHide={handleClose} size="lg" centered>
+                            <Modal.Header closeButton>Global Management Consulting and Marketing Company</Modal.Header>
+                            <Modal.Body closeButton>
+                                <div className="home_banner_modal">
+                                    <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                </div>   
+                            </Modal.Body>
+                        </Modal>
+                        
                     </div>
 
                     <div className={`mainPartBanner ${indicatorId===2? "" : "bannerTextHide"}`}>
@@ -129,10 +148,18 @@ const NewBanner = () => {
                             </div>
                         </div>
 
-                        <div className="rightPartBanner" onClick={rightBannerClickHandler2}>
-                            {!showYoutube2 && <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="" />}
-                            <iframe ref={youtubeVid2} className={showYoutube2 ? "" : "hidden"} src="https://www.youtube.com/embed/YpymypBc9Hc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <div className="rightPartBanner" onClick={() => { handleShow(2); }}>
+                            <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="Video Thumbnail" />
                         </div>
+
+                        <Modal show={show==2 ? show : ''} onHide={handleClose} size="lg" centered>
+                            <Modal.Header closeButton>Reimagining your boundaries</Modal.Header>
+                            <Modal.Body closeButton>
+                                <div className="home_banner_modal">
+                                    <iframe src="https://www.youtube.com/embed/M3DekVZlxsM?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                </div>   
+                            </Modal.Body>
+                        </Modal>
                     </div>
 
                     <div className={`mainPartBanner ${indicatorId===3? "" : "bannerTextHide"}`}>
@@ -159,10 +186,18 @@ const NewBanner = () => {
                             </div>
                         </div>
 
-                        <div className="rightPartBanner" onClick={rightBannerClickHandler3}>
-                            {!showYoutube3 && <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="" />}
-                            <iframe ref={youtubeVid3} className={showYoutube3 ? "" : "hidden"} src="https://www.youtube.com/embed/YpymypBc9Hc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <div className="rightPartBanner" onClick={() => { handleShow(3); }}>
+                            <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="Video Thumbnail" />
                         </div>
+
+                        <Modal show={show==3 ? show : ''} onHide={handleClose} size="lg" centered>
+                            <Modal.Header closeButton>The future of businesses is right here</Modal.Header>
+                            <Modal.Body closeButton>
+                                <div className="home_banner_modal">
+                                    <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                </div>   
+                            </Modal.Body>
+                        </Modal>
                     </div>
 
                     <div className="leftIndicators">
@@ -198,10 +233,10 @@ const NewBanner = () => {
             </div>
 
             <div className="twoDiamonds">
-                <div data-aos="fade-right" className="phone-icon" data-aos="fade-right" data-aos-duration="2800">
+                <div data-aos="fade-right" className="phone-icon" data-aos-duration="2800">
                     <img src={BASE_URL + '/img/HomePage/media/phone-icon.png'} alt="" onClick={() => window.open("tel:61283794089","_self")} />
                 </div>
-                <div data-aos="fade-right" className="banner-count" data-aos="fade-left" data-aos-duration="2800">
+                <div data-aos="fade-left" className="banner-count" data-aos-duration="2800">
                     <span className="bigBannerCount">0{bannerCount}</span>/<span className="smallBannerCount">03</span>
                 </div>
                 {/*<div data-aos="fade-right" className="bigDiamond">
@@ -215,7 +250,7 @@ const NewBanner = () => {
                     <img src={BASE_URL + '/img/HomePage/media/smallRectangle.png'} alt="" />
                 </div>*/}
             </div>
-
+            
         </div>
     )
 }
