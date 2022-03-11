@@ -109,11 +109,43 @@
     position: relative;
 }
 
-.strategic-consultancy{
+/* .strategic-consultancy{
     position: relative;
     height: 250px;
     top: 0;
     right: 35px;
+} */
+
+.services-section-right .services-img-menu {
+    background-color: #F7F7F7;
+    padding: 30px;
+    position: relative;
+    right: 30px;
+    top: 0;
+    cursor: pointer;
+    text-align: center;
+}
+.services-section-right .services-img-menu .services-img {
+    max-width: 100%;
+    margin-bottom: 25px;
+}
+.services-section-right .services-img-menu .services-img-title {
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #31647C;
+    margin-bottom: 20px;
+}
+.services-section-right .services-img-menu .services-img-btn {
+    background-color: #33657E;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 

@@ -48,7 +48,7 @@ const About = () => {
                             <div className="diamond-line"></div>
                         </Link>
                         <Link to="/partnership-programmes" onClick={() => {setShowAbout(false);topHandler()}} className="section-list-items">
-                            <h6>Partner Programmes</h6>
+                            <h6>Partnership Programmes</h6>
                             <div className="diamond-line"></div>
                         </Link>
                         <Link to="/sustainable-growth" onClick={() => {setShowAbout(false);topHandler()}}  className="section-list-items">
@@ -108,6 +108,7 @@ const About = () => {
                     <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} >
                         <img src={careersImg} alt="careers" className="careers-img" />
                         <div className="careers-title">Gather the true experience of agile. Join us for a highly fulfilling career</div>
+                        <div className="careers-btn">Careers</div>
                     </Link>
                 </div>
             </div>

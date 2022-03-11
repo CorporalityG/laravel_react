@@ -28,17 +28,17 @@
 }
 
 .insights-container-body {
-  display: -ms-grid;
+  /* display: -ms-grid;
   display: grid;
   -ms-grid-columns: 225px 225px;
       grid-template-columns: 225px 225px;
   -ms-grid-rows: 50px 50px;
       grid-template-rows: 50px 50px;
   grid-column-gap: 50px;
-  grid-row-gap: 20px;
+  grid-row-gap: 20px; */
   height: 100%;
-  width: 80%;
-  margin: auto 0 auto 0;
+  width: 100%;
+  margin: auto 80px;
 }
 
 .insights-container-body-section {
@@ -50,6 +50,7 @@
           align-items: center;
   position: relative;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .insights-container-body-section h6 {
