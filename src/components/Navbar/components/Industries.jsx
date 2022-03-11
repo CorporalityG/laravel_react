@@ -22,7 +22,7 @@ const Industries = () => {
                     <div className="diamond-line"></div>
                 </Link>
                 <Link to="/" onClick={closeOnLink} className="industries-item">
-                    <h6 className="industries-item-content">Fintech - Credit Union</h6>
+                    <h6 className="industries-item-content">Finance</h6>
                     <div className="diamond-line"></div>
                 </Link>
                 <Link to="/" onClick={closeOnLink} className="industries-item">
@@ -44,7 +44,7 @@ const Industries = () => {
                     <div className="diamond-line"></div>
                 </Link>
                 <Link to="/" onClick={closeOnLink} className="industries-item">
-                    <h6 className="industries-item-content">Cruise and Tourism</h6>
+                    <h6 className="industries-item-content">Allied Industries </h6>
                     <div className="diamond-line"></div>
                 </Link>
                 <Link to="/" onClick={closeOnLink} className="industries-item">

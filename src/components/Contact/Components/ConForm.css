@@ -166,6 +166,7 @@ margin-right: -40px !important;
   height: 42px;
   border-radius: 0%;
   border: 0px;
+  box-shadow: unset !important;
 }
 
 .footer-button:hover {
@@ -180,6 +181,7 @@ margin-right: -40px !important;
   line-height: 16px;
   text-align: center;
   color: #FFFFFF;
+  box-shadow: unset !important;
 }
 
 .know_button {
@@ -191,7 +193,7 @@ margin-right: -40px !important;
   line-height: 16px;
   transition: all 0.5s ease;
   border: 2px solid;
-  width: 150px;
+  width: auto;
   height: 40px;
   border-image: linear-gradient(95.12deg, #EED979, #83b3ce 50.42%) 1;
   line-height: 1;
@@ -250,6 +252,7 @@ margin-right: -40px !important;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
+    box-shadow: unset !important;
   }
 
   .conformreset-btn:hover{
@@ -357,6 +360,73 @@ margin-right: -40px !important;
 .callback-form form button:focus {
     outline: none;
 }
+.location-box-main {
+  background: #FAFAFA;
+  padding: 30px;
+  display: flex;
+  margin-bottom: 40px;
+}
+.location-box-main .loction-icon {
+  margin-right: 15px;
+}
+.location-box-main .loaction-address .address-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: #A06DAF;
+  margin-bottom: 10px;
+}
+.location-box-main .loaction-address {
+  width: 100%;
+}
+.location-box-main .loaction-address .address-main {
+  display: flex;
+  justify-content: space-between;
+}
+.location-box-main .loaction-address .address-main .address {
+  max-width: 70%;
+}
+.location-box-main .loaction-address p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #232323;
+  margin-bottom: 5px;
+}
+.location-box-main .loaction-address .location-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.location-box-main .loaction-address .location-phone .phone-icon {
+  position: absolute;
+  top: 38px;
+}
+.location-box-main .loaction-address .location-phone .phone-icon > img{
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+  z-index: 15 !important;
+  transform: rotate(45deg);
+}
+.location-box-main .loaction-address .location-phone .phone-icon::before {
+    z-index: 10 !important;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-animation: pulse 1.5s infinite;
+            animation: pulse 1.5s infinite;
+  }
+  .book-our-calendar {
+    margin-bottom: 80px;
+  }
+  
+
 
 @media only screen and (max-width: 560px){
   .conform-diamond {
