@@ -206,9 +206,9 @@
   .gtm-comp-6 {
     font-size: calc(10px);
   }
-  .gtm-comp-6-head h1 {
+  /* .gtm-comp-6-head h1 {
     font-size: 1.3em !important;
-  }
+  } */
 }
 
 @-webkit-keyframes comp-6 {

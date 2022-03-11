@@ -167,3 +167,17 @@
         width: 30%;
     }
 }
+
+@media only screen and (max-width: 450px) {
+    .GTMComp2a .heading {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .GTMComp2a .heading {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}

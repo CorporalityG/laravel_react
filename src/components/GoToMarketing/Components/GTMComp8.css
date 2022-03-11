@@ -396,7 +396,18 @@
   .gtm-comp8-container .main_container_strategy p {
     margin-top: 10px !important;
   }
+  .gtm-comp8-container .strategy_card_wrapper1 {
+    margin-top: 120px;
+  }
 }
+
+
+@media only screen and (max-width: 450px) {
+  .gtm-comp8-container .strategy_card_wrapper1 {
+    margin-top: 150px;
+  }
+}
+
 
 @media only screen and (max-width: 360px) {
   .gtm-comp8-container {

@@ -519,3 +519,10 @@
         margin-left: auto;
     }
 }
+
+@media only screen and (max-width: 385px) {
+    .content-inner .cf-inner .inner h2 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}

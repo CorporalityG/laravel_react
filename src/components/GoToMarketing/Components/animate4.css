@@ -1,4 +1,4 @@
-@media only screen and (max-width: 992px) {
+/* @media only screen and (max-width: 992px) {
     .GTMComp4 .animate {
         font-size: ;
         line-height: ;
@@ -7,7 +7,7 @@
         font-size: ;
         line-height: ;
     }
-}
+} */
 
 @media only screen and (max-width: 768px) {
 
@@ -257,4 +257,12 @@
 }
 .animate span:nth-of-type(76) {
     animation-delay: 2.5s;
+}
+
+
+@media only screen and (max-width: 450px) {
+    .GTMComp4 .animate {
+        font-size: 24px;
+        line-height: 32px;
+    }
 }

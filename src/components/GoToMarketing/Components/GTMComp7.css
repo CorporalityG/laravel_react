@@ -302,9 +302,9 @@
     font-size: calc(10px);
     margin: 20px 0;
   }
-  .gtm-comp7-container .comp7-left h2 {
+  /* .gtm-comp7-container .comp7-left h2 {
     font-size: 1.4em !important;
-  }
+  } */
   .gtm-comp7-container .comp7-left p {
     width: 85%;
   }

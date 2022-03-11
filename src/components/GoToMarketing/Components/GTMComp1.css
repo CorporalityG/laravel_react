@@ -286,3 +286,26 @@
         font-size: 10px;
     } */
 }
+
+@media only screen and (max-width: 360px) {
+    .gtm-page1 .row .col-lg-5 {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .gtm-page1 .heading {
+        font-size: 22px;
+    }
+
+    .gtm-page1 .text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    .gtm-page1 .heading {
+        font-size: 20px;
+    }
+}
