@@ -7,6 +7,7 @@ import Revamping from "./Components/Revamping";
 import Process from "./Components/Process";
 import MarketingAudit from "./Components/MarketingAudit";
 import KeyObject from "./Components/KeyObject";
+import BluePrintNew from "./Components/BluePrintNew";
 
 function DigitalMediaMarketing() {
   return (
@@ -15,7 +16,8 @@ function DigitalMediaMarketing() {
       <CardsChart />
 
       <Revamping />
-      <Blueprint />
+      {/* <Blueprint /> */}
+      <BluePrintNew />
       <Process />
       <MarketingAudit />
       <KeyObject />

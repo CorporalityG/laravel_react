@@ -1,7 +1,11 @@
 import React from 'react'
 import './Banner.css'
+import { useNavigate } from "react-router";
 
 export default function Banner() {
+
+	const navigate = useNavigate();
+
 	return (
 		<>
 			<div className="DDMBanner d-xl-flex  justify-content-between">
@@ -32,7 +36,7 @@ export default function Banner() {
 					<p data-aos="fade-right" data-aos-delay="400">Head to toe strategy focused Digital Media Marketing</p>
 				
 				<div className="DDMBannerDiscoveryButton" data-aos="fade-right" data-aos-delay="800">
-					<button>Book Your Discovery Session</button>
+					<button onClick={() => { navigate("/contact"); }}>Book Your Discovery Session</button>
 				</div>
 				<div className="DDMBannerSocialIcons">
 					<a href='https://www.facebook.com/CorporalityG'>

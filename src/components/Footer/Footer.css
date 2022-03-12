@@ -832,6 +832,10 @@
     width: 40px !important;
     margin: -50px 0px 20px auto !important;
   }
+
+  .footerContainer .arrow-icon-container {
+    margin-top: 0 !important;
+  }
 }
 
 @media only screen and (max-width: 576px) {

@@ -30,7 +30,7 @@
 
 .blueprint-area {
   margin-top: -220px;
-  margin-left: 5% !important;
+  margin-left: 5%;
 }
 
 /* .ml10-blueprint {
@@ -101,10 +101,10 @@
 } */
 
 .sfbp-heading {
-  width: 335px;
+  width: 375px;
   height: 44px;
   margin-top: 15% !important;
-  margin-left: 105% !important;
+  margin-left: 100% !important;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -142,4 +142,16 @@
   z-index: -5;
   transform: translate(5.2rem, -26.7rem);
   /* transform: translate(-45.5rem,1.7rem); */
+}
+
+@media only screen and (max-width: 1450px) {
+  .blueprint-area {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1351px) {
+  .sfbp-heading {
+    margin-left: 95% !important;
+  }
 }

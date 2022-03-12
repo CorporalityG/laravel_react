@@ -1,0 +1,178 @@
+.blueprint_container .blueprint_plan_content {
+  max-width: 85%;
+  margin: 50px auto;
+  text-align: center;
+}
+.blueprint_container .blueprint_plan_content h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #3c708e;
+}
+.blueprint_container .blueprint_plan_content p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #757575;
+}
+.blueprint_container .blueprint_plan_area {
+  max-width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+.blueprint_container .blueprint_plan_area .blueprint_heading {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #3c708e;
+  margin-bottom: 20px;
+}
+
+.blueprint_container .blueprint_plan_area .blueprint_img_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+  position: absolute;
+  top: 55px;
+}
+.blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_circle {
+  position: absolute;
+  top: 15px;
+  z-index: 9;
+}
+
+
+@media only screen and (max-width: 1115px) {
+  .blueprint_container .blueprint_plan_content {
+    max-width: 100%;
+  }
+  .blueprint_container .blueprint_plan_area {
+    max-width: 100%;
+  }
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_card {
+    max-width: 100%;
+  }
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_circle {
+    max-width: 40%;
+  }
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+    max-width: 30%;
+  }
+}
+
+
+@media only screen and (max-width: 991px) {
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+    top: 45px;
+  }
+  .blueprint_container .blueprint_plan_content {
+    margin-bottom: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .blueprint_container .blueprint_plan_content {
+    margin-top: 30px;
+  }
+  .blueprint_container .blueprint_plan_content h1 {
+    font-size: 26px;
+  }
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+    top: 35px;
+  }
+}
+
+
+@media only screen and (max-width: 668px) {
+  .blueprint_container .container {
+    max-width: 95%;
+  }
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_circle {
+    top: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 601px) {
+  .blueprint_container .container {
+    max-width: 100%;
+  }
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+    top: 31px;
+  }
+}
+
+
+@media only screen and (max-width: 521px) {
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_circle {
+    top: 5px;
+  }
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+    top: 25px;
+  }
+}
+
+
+@media only screen and (max-width: 481px) {
+  .blueprint_container .blueprint_plan_content h1 {
+    font-size: 24px;
+  }
+  .blueprint_container .blueprint_plan_area .blueprint_heading {
+    font-size: 20px;
+  }
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+    top: 22px;
+  }
+}
+
+
+@media only screen and (max-width: 430px) {
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+    top: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 401px) {
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+    max-width: 29%;
+  }
+  .blueprint_container .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+@media only screen and (max-width: 361px) {
+  .blueprint_container .blueprint_plan_area .blueprint_heading {
+    font-size: 18px;
+  }
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+    top: 18px;
+  }
+}
+
+
+@media only screen and (max-width: 345px) {
+  .blueprint_container .blueprint_plan_content h1 {
+    font-size: 22px;
+  }
+}
+
+
+@media only screen and (max-width: 300px) {
+  .blueprint_container .blueprint_plan_area .blueprint_img_main .blueprint_img_center {
+    top: 17px;
+  }
+}

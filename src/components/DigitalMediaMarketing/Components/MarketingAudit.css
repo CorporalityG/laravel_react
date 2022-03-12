@@ -15,7 +15,7 @@
 
 .Scope-Line{
     width: 18%;
-    padding-top: 13%;
+    padding-top: 12%;
     position: absolute;
 }
 
@@ -108,6 +108,80 @@ color: #757575;
 }
 
 
+@media only screen and (max-width: 1401px) {
+    .Scope-Line {
+        padding-top: 13%;
+    }
+}
+
+
+@media only screen and (max-width: 1351px) {
+    .Scope-Line {
+        padding-top: 14%;
+    }
+    .Scope-K-Scope {
+        width: 120%;
+    }
+    .ddm-Scope {
+        max-width: 35%;
+    }
+}
+
+
+@media only screen and (max-width: 1301px) {
+    .Scope-Line {
+        padding-top: 15%;
+    }
+}
+
+
+@media only screen and (max-width: 1251px) {
+    .Scope-Line {
+        width: 20%;
+    }
+    .Scope-K-Scope {
+        width: 125%;
+    }
+}
+
+
+@media only screen and (max-width: 1201px) {
+    .Scope-Line {
+        padding-top: 16%;
+    }
+    .Scope-Line {
+        padding-top: 17%;
+    }
+}
+
+
+@media only screen and (max-width: 1151px) {
+    .Scope-K-Scope {
+        width: 135%;
+    }
+    .ddm-audit {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1115px) {
+    .Scope-Line {
+        width: 22%;
+    }
+}
+
+
+@media only screen and (max-width: 1081px) {
+    .ddm-Scope {
+        max-width: 40%;
+    }
+    .Scope-Line {
+        width: 24%;
+    }
+}
+
+
 @media only screen and (max-width: 1050px){
     .ddm-audit{
         width: 100%;
@@ -115,74 +189,311 @@ color: #757575;
 
 
 .Scope-Line{
-    width: 25%;
-    padding-top: 23%;
+    /* width: 25%; */
+    padding-top: 18%;
     position: absolute;
 }
 
-.Scope-K-Scope{
+/* .Scope-K-Scope{
     position: relative;
     width: 80%;
     margin-top: -20% !important;
 
-}
+} */
 
 
 }
-@media only screen and (max-width: 800px){
+
+
+@media only screen and (max-width: 1001px) {
+    .Scope-Line {
+        width: 27%;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+    .ddm-Scope {
+        max-width: 60%;
+    }
+    .ddm-audi > h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    .Scope-Line {
+        padding-top: 19%;
+    }
+}
+
+
+@media only screen and (max-width: 951px) {
+    .Scope-Line {
+        width: 30%;
+    }
+}
+
+
+@media only screen and (max-width: 901px) {
+    .Scope-Line {
+        width: 32%;
+    }
+    .Scope-Line {
+        padding-top: 20%;
+    }
+}
+
+
+@media only screen and (max-width: 885px) {
+    .Scope-Line {
+        padding-top: 21%;
+    }
+}
+
+
+@media only screen and (max-width: 855px) {
+    .Scope-Line {
+        width: 33%;
+    }
+}
+
+
+@media only screen and (max-width: 841px) {
+    .Scope-Line {
+        width: 35%;
+    }
+}
+
+
+@media only screen and (max-width: 825px) {
+    .Scope-Line {
+        width: 37%;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
     .ddm-audit{
         margin: 4px !important;
         padding: 0px !important;
     }
     .Scope-Line{
-        width: 30%;
-        padding-top: 29%;
-        position: absolute;
+        padding-top: 24%;
+    }
+    .Scope-K-Scope {
+        width: 145%;
     }
 }
-@media only screen and (max-width: 430px){
 
 
-    .Scope-Line{
+@media only screen and (max-width: 767px) {
+    .ddm-Scope {
+        max-width: 80%;
+    }
+    .Scope-Line {
+        width: 39%;
+    }
+    .ddm-audi > h1 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
+
+
+@media only screen and (max-width: 741px) {
+    .Scope-Line {
+        width: 40%;
+    }
+    .Scope-Line {
+        padding-top: 25%;
+    }
+}
+
+
+@media only screen and (max-width: 721px) {
+    .Scope-Line {
+        width: 42%;
+    }
+}
+
+
+@media only screen and (max-width: 668px) {
+    .Scope-Line {
+        width: 46%;
+    }
+    .Scope-Line {
+        padding-top: 27%;
+    }
+}
+
+
+@media only screen and (max-width: 621px) {
+    .Scope-Line {
+        padding-top: 28%;
+    }
+    .Scope-Line {
         width: 50%;
-        padding-top: 50%;
-        position: absolute;
-    }
-
-    .Scope-K-Scope{
-        position: relative;
-        width: 95%;
-        margin-top: -15% !important;
-    
     }
 }
-@media only screen and (max-width: 380px){
 
 
-    .Scope-Line{
+@media only screen and (max-width: 601px) {
+    .Scope-Line {
+        padding-top: 30%;
+    }
+}
+
+
+@media only screen and (max-width: 568px) {
+    .Scope-K-Scope {
+        width: 125%;
+    }
+    .Scope-Line {
+        padding-top: 32%;
+    }
+}
+
+
+@media only screen and (max-width: 540px) {
+    .Scope-Line {
+        padding-top: 34%;
+    }
+}
+
+
+@media only screen and (max-width: 520px) {
+    .Scope-Line {
+        width: 52%;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .Scope-Line {
+        padding-top: 36%;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .Scope-Line {
+        padding-top: 38%;
+    }
+    .Scope-Line {
+        width: 55%;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .Scope-Line {
+        padding-top: 42%;
+    }
+}
+
+
+@media only screen and (max-width: 430px) {
+    .Scope-Line {
+        padding-top: 44%;
+    }
+}
+
+
+@media only screen and (max-width: 415px) {
+    .Scope-Line {
+        padding-top: 47%;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .Scope-Line {
+        width: 58%;
+    }
+}
+
+
+@media only screen and (max-width: 391px) {
+    .ddminitReasearch {
+        width: 180px;
+        height: 180px;
+    }
+    .Scope-Line {
+        padding-top: 46%;
+    }
+    .Scope-Line {
+        width: 55%;
+    }
+}
+
+
+@media only screen and (max-width: 376px) {
+    .Scope-Line {
+        width: 58%;
+    }
+    .ddm-audi > h1 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 361px) {
+    .Scope-Line {
         width: 60%;
-        padding-top: 55%;
-        position: absolute;
     }
-
-    .Scope-K-Scope{
-        position: relative;
-        width: 95%;
-        margin-top: -15% !important;
-    
+    .Scope-Line {
+        padding-top: 48%;
     }
 }
+
+
+@media only screen and (max-width: 346px) {
+    .ddm-Scope .Scope-txt {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 321px) {
+    .ddminitReasearch {
+        width: 160px;
+        height: 160px;
+    }
+    .ddminitReasearch > p {
+        font-size: 16px;
+    }
+    .Scope-Line {
+        padding-top: 45%;
+    }
+}
+
+
+@media only screen and (max-width: 300px) {
+    .Scope-Line {
+        padding-top: 48%;
+    }
+    .ddm-audi > h1 {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 290px) {
+    .Scope-Line {
+        width: 63%;
+    }
+}
+
 
 @media only screen and (max-width: 600px) {
 	.ddm-audi > h1 {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 32px;
-    line-height: 42px;
+    /* font-size: 32px;
+    line-height: 42px; */
     text-transform: uppercase;
     color: #3C708E;
-    padding-top: 70px;
 }
 
 .justify-content-center {

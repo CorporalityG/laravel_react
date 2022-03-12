@@ -11,7 +11,7 @@ const KeyObject = () => {
     })
 
     return (
-        <div className="d-xl-flex justify-content-center">
+        <div className="d-xl-flex justify-content-center key_objectives">
         <div className=" ddm-audit">
                 
                 <div data-aos="fade-right">
