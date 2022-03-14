@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router";
 import Aos from "aos";
 import "./Objectives.css";
 import D3_pie_chart_1 from "./images/D3_pie_chart_1.png";
 
 function Objectives() {
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     Aos.init();
   });
@@ -21,7 +25,7 @@ function Objectives() {
             Objectives of our customer success programmes
           </div>
           <button className="objectives_button">
-            <p className="objectivesbtn_text">Book Your Discovery Session</p>
+            <p className="objectivesbtn_text" onClick={() => { navigate("/contact"); }}>Book Your Discovery Session</p>
           </button>
           <div className="objectives_heading2">Corporate success strategy</div>
           <div className="objectives_description">

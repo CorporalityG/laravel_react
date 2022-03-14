@@ -1,8 +1,8 @@
-
 import './Page1.css'
 import React, { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
 
 
 const Page1 = () => {
@@ -15,7 +15,7 @@ const Page1 = () => {
         <>
             <div className="consult-page1" >
                 <div className="container">
-                    <img src="./img/StrategyConsultancy/hollowDia.png" alt="" className="consult-hollowDia " />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/hollowDia.png"} alt="" className="consult-hollowDia " />
                     <div className="d-md-flex align-items-center justify-content-between consult-pageContent">
                         <div className="consult-page1-content">
                             <div data-aos="fade-right" data-aos-duration="1000">
@@ -29,17 +29,16 @@ const Page1 = () => {
                             <div data-aos="fade-left">
 
 
-                            <img src="./img/StrategyConsultancy/hollow2.png" alt="" className="consult-hollow2 " />                            
+                            <img src={BASE_URL + "/img/StrategyConsultancy/hollow2.png"} alt="" className="consult-hollow2 " />                            
                             </div>
                             <div className="consult-page1-img d-sm-flex p-4">
-                                <img src="./img/StrategyConsultancy/youtubemarketing.png" alt="" className=" consultimg2" />
+                                <img src={BASE_URL + "/img/StrategyConsultancy/youtubemarketing.png"} alt="" className=" consultimg2" />
 
                                 <div className="consultyoutubebox text-center">
                                     <p className="">Subscribe Our YouTube Channel</p>
                                     <button type="button" className="btn footer-button">
                                         <div className="footer-button-text">
-
-                                            Subscribe
+                                            <a href="https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg/" target="_blank">Subscribe</a>
                                         </div>
                                     </button>
                                 </div>
@@ -50,21 +49,21 @@ const Page1 = () => {
                         <div className="consultimg3">
                         <div data-aos="fade-left">
 
-                            <img className="iluilukyah" src="./img/StrategyConsultancy/page-1.png" alt="" />
+                            <img className="iluilukyah" src={BASE_URL + "/img/StrategyConsultancy/page-1.png"} alt="" />
                         </div>
                         </div>
                     </div>
 
                     <div className="consultgrad-1">
-                        <img src="./img/StrategyConsultancy/rectcolor.png" alt="" className="" />
+                        <img src={BASE_URL + "/img/StrategyConsultancy/rectcolor.png"} alt="" className="" />
                     </div>
                 <div className="d-flex align-items-end flex-column consultancysocialmedia">
-                    <img src="./img/StrategyConsultancy/facebook.png" className=" py-1" alt="" />
-                    <img src="./img/StrategyConsultancy/twitter.png" className=" py-1" alt="" />
-                    <img src="./img/StrategyConsultancy/insta.png" className=" py-1" alt="" />
-                    <img src="./img/StrategyConsultancy/linkedIN.png" className=" py-1" alt="" />
-                    <img src="./img/StrategyConsultancy/pinterset.png" className=" py-1" alt="" />
-                    <img src="./img/StrategyConsultancy/youtube.png" className=" py-1" alt="" />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/facebook.png"} className=" py-1" alt="" />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/twitter.png"} className=" py-1" alt="" />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/insta.png"} className=" py-1" alt="" />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/linkedIN.png"} className=" py-1" alt="" />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/pinterset.png"} className=" py-1" alt="" />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/youtube.png"} className=" py-1" alt="" />
                 </div>
                 </div>
             </div>

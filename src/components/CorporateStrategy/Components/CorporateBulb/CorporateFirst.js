@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import corporatefirst_facebook from "./images/corporatefirst_facebook.png";
@@ -32,6 +33,9 @@ import team_text from "./images/team_text.png";
 import "./CorporateFirst.css";
 
 function CorporateFirst() {
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     Aos.init();
   });
@@ -93,7 +97,7 @@ function CorporateFirst() {
                 problems, one solution
               </div>
               <div className="corporatefirst_text_button">
-                <button>Book Your Discovery Session</button>
+                <button onClick={() => { navigate("/contact"); }}>Book Your Discovery Session</button>
               </div>
             </div>
           </div>

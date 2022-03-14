@@ -92,7 +92,8 @@
   background: linear-gradient(95.12deg, #6ca0bc 0%, #e5cd60 83.42%);
 }
 
-.footer-button-text {
+.footer-button-text, 
+.footer-button-text  a{
   transform: rotate(-180deg);
   padding-bottom: 4% !important;
   font-weight: 500;
@@ -100,6 +101,10 @@
   line-height: 16px;
   text-align: center;
   color: #ffffff;
+}
+.consult-page1-img .footer-button-text, 
+.consult-page1-img .footer-button-text  a {
+  padding-bottom: 0 !important;
 }
 
 .consultyoutubebox {
@@ -110,24 +115,6 @@
 
 .consultancysocialmedia {
   transform: translate(2.5%, -500px);
-}
-
-@media only screen and (max-width: 780px) {
-  .consult-page1-content > h3 {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 30px;
-    margin-top: 100px !important;
-  }
-
-  .consult-pg1-con > h3 {
-    font-size: 25px;
-    line-height: 30px;
-    margin-top: 60px;
-  }
-  .pag-cont{
-    width: 86% !important;
-  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -145,6 +132,65 @@
     width: 110%;
   }
 }
+
+@media only screen and (max-width: 991px) {
+  .consult-pageContent {
+    flex-direction: column;
+  }
+  .consult-pg1-con > h3 {
+    margin-top: 10px;
+  }
+  .consult-pg1-con > p {
+    margin-bottom: 10px !important;
+  }
+  .consult-page1-img {
+    width: 100%;
+  }
+  .consultimg3 {
+    width: 100%;
+  }
+  .consult-page1-content {
+    margin-bottom: 50px;
+  }
+  .consultancysocialmedia {
+    transform: translate(10%, -500px);
+  }
+}
+
+
+@media only screen and (max-width: 901px) {
+  .consultancysocialmedia {
+    transform: translate(8%, -500px);
+  }
+}
+
+
+@media only screen and (max-width: 855px) {
+  .consultancysocialmedia {
+    transform: translate(4%, -500px);
+  }
+}
+
+
+@media only screen and (max-width: 780px) {
+  .consult-page1-content > h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 100px !important;
+  }
+
+  .consult-pg1-con > h3 {
+    /* font-size: 25px; */
+    line-height: 30px;
+    /* margin-top: 60px; */
+  }
+  .pag-cont{
+    width: 86% !important;
+  }
+}
+
+
 @media only screen and (max-width: 780px) {
   .consultgrad-1 > img {
     transform: translate(500px, -640px);
@@ -158,6 +204,21 @@
     transform: translate(320px, -100px);
   }
 }
+
+
+@media only screen and (max-width: 767px) {
+  .consultancysocialmedia {
+    transform: translate(10%, -500px);
+  }
+  .iluilukyah {
+    width: 90%;
+  }
+  .iluilukyah.mx-5 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
 
 @media only screen and (max-width: 450px) {
   .consultancysocialmedia {

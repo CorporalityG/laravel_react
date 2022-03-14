@@ -3,7 +3,7 @@ import './Page2.css'
 import React, { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-
+import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
 
 const Page2 = () => {
 
@@ -20,7 +20,7 @@ const Page2 = () => {
 
                         <div>
 
-                            <img className="mx-5 iluilukyah" src="./img/StrategyConsultancy/page-2.png" alt="" />
+                            <img className="mx-5 iluilukyah" src={BASE_URL + "/img/StrategyConsultancy/page-2.png"} alt="" />
                         </div>
                     </div>
 
@@ -28,7 +28,7 @@ const Page2 = () => {
 
 
                         <div>
-                            <img className=" consultdvice " src="./img/StrategyConsultancy/advice.png" alt="" />
+                            <img className=" consultdvice " src={BASE_URL + "/img/StrategyConsultancy/advice.png"} alt="" />
 
                         </div>
                     </div>
@@ -39,8 +39,8 @@ const Page2 = () => {
 
             <div data-aos="fade-right" data-aos-duration="1200">
                 <div className="consultancygradbox">
-                    <img src="./img/StrategyConsultancy/page2-1.png" alt="" className="consultancybox-1" />
-                    <img src="./img/StrategyConsultancy/page-2-1.png" alt="" className="consultancybox-2" />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/page2-1.png"} alt="" className="consultancybox-1" />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/page-2-1.png"} alt="" className="consultancybox-2" />
                 </div>
             </div>
             <div data-aos="fade-down" data-aos-duration="1200">
@@ -60,13 +60,13 @@ const Page2 = () => {
 
 
                     <div className="d-flex justify-content-around flex-wrap m-5">
-                        <div className=''><img src="./img/StrategyConsultancy/box1.jpg" alt="" /></div>
-                        <div><img src="./img/StrategyConsultancy/b0x2.png" alt="" /></div>
-                        <div><img src="./img/StrategyConsultancy/box3.png" alt="" /></div>
-                        <div><img src="./img/StrategyConsultancy/box4.png" alt="" /></div>
-                        <div><img src="./img/StrategyConsultancy/box5.png" alt="" /></div>
-                        <div><img src="./img/StrategyConsultancy/box6.png" alt="" /></div>
-                        <div><img src="./img/StrategyConsultancy/box2.png" alt="" /></div>
+                        <div className=''><img src={BASE_URL + "/img/StrategyConsultancy/box1.jpg"} alt="" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/b0x2.png"} alt="" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box3.png"} alt="" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box4.png"} alt="" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box5.png"} alt="" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box6.png"} alt="" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box2.png"} alt="" /></div>
                     </div>
                     </div>
 
