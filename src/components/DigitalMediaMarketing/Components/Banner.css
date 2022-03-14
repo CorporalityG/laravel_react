@@ -122,11 +122,27 @@
     margin-top: -5% !important;
 }
 
+
+@media only screen and (max-width: 1199px) {
+  .CardsChart_maincontainer .cardschart_linevertical {
+    left: 66px;
+  }
+  .CardsChart_maincontainer .cardschart_line1, 
+  .CardsChart_maincontainer .cardschart_line2{
+    top: 107px;
+  }
+  .CardsChart_maincontainer .cardschart_line3, 
+  .CardsChart_maincontainer .cardschart_line4{
+    top: 121px;
+  }
+}
+
+
 @media only screen and (max-width: 1050px){
-  .DDMBannerText > h1{
+  /* .DDMBannerText > h1{
       width: 45%;
       padding-bottom: 10%;
-  }
+  } */
   .DDMBannerText > p{
     /* width: 45%; */
     margin-top: 5% ;
@@ -141,12 +157,15 @@
 
 @media only screen and (max-width: 1030px){
   .DDMBannerText > h1 {
-    width: 90% ;
+    /* width: 90% ;
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
     line-height: 30px;
-    padding-bottom: 0% !important;
+    padding-bottom: 0% !important; */
+    margin-bottom: 40px;
+    height: auto;
+    width: 500px !important;
   }
   
   .DDMBannerText > p {
@@ -154,7 +173,7 @@
     display: flex ;
     /* flex-direction: ; */
     /* justify-content: center; */
-    margin-left: 10% !important;
+    margin-left: 12.5% !important;
     align-items:stretch;
     width: 100%;
     margin-top: -4% !important;
@@ -176,25 +195,184 @@
 }
 }
 
+
+@media only screen and (max-width: 991px) {
+  .DDMBannerText > h1 {
+    margin-top: 120px !important;
+    width: 80% !important;
+    margin-left: 10% !important;
+    margin-right: 10%;
+  }
+  .DDMBannerText > p {
+    margin-left: 10% !important;
+    margin-top: -20px !important;
+  }
+  .DDMBannerDiscoveryButton > button {
+    margin-left: 10% !important;
+  }
+  .DDMBannerImage {
+    margin: 0 auto !important;
+    width: 100%;
+    height: auto;
+    justify-content: center !important;
+  }
+  .DDMBannerImage > img {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .DDMBannerImage > img {
+    width: 100%;
+  }
+  .DDMBannerText > h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .DDMBannerDiscoveryButton > button {
+    margin-top: 30px !important;
+  }
+  .CardsChart_uppertext_heading {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .CardsChart_div2, 
+  .CardsChart_div3, 
+  .CardsChart_div4, 
+  .CardsChart_div5, 
+  .CardsChart_div6, 
+  .CardsChart_div7, 
+  .CardsChart_div9, 
+  .CardsChart_div10, 
+  .CardsChart_div11, 
+  .CardsChart_div12, 
+  .CardsChart_div13, 
+  .CardsChart_div14, 
+  .CardsChart_div16, 
+  .CardsChart_div17, 
+  .CardsChart_div19, 
+  .CardsChart_div18, 
+  .CardsChart_div20, 
+  .CardsChart_div21, 
+  .CardsChart_div23, 
+  .CardsChart_div24, 
+  .CardsChart_div25, 
+  .CardsChart_div26, 
+  .CardsChart_div27, 
+  .CardsChart_div28 {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 641px) {
+  .DDMBannerText > h1 {
+    margin-left: 11% !important;
+  }
+  .DDMBannerText > p {
+    margin-left: 11% !important;
+  }
+  .DDMBannerDiscoveryButton > button {
+    margin-left: 11% !important;
+  }
+}
+
+
+@media only screen and (max-width: 568px) {
+  .DDMBannerSocialIcons {
+    margin-left: -3% !important;
+  }
+}
+
+
+@media only screen and (max-width: 481px) {
+  .DDMBannerText > h1 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .DDMBannerSocialIcons {
+    margin-left: -5% !important;
+  }
+}
+
+
 @media only screen and (max-width: 430px){
   .DDMBannerText > h1 {
-    padding-top: 10%;
+    /* padding-top: 10%; */
     font-size: 25px;
     line-height: 30px;
     padding-bottom: 0%;
 }
 
-.DDMBannerImage > img{
+/* .DDMBannerImage > img{
   width: 50%;
   margin: 0% !important;
-}
+} */
 .DDMBannerText > p{
   margin-top:  2%; ;
+  width: 80%;
+  height: auto;
 }
 
-.DDMBannerImage > img{
+/* .DDMBannerImage > img{
   width: 50%;
   margin: 0% !important;
   align-items: center;
+} */
 }
+
+
+@media only screen and (max-width: 415px) {
+  .DDMBannerSocialIcons {
+    width: 95%;
+    height: auto;
+    left: 30px;
+    top: unset;
+    bottom: 80px;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .DDMBanner {
+    margin-bottom: 70px;
+  }
+  .DDMBannerText > h1 {
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-right: 5%;
+  }
+  .DDMBannerText > p {
+    width: 90%;
+    margin-left: 5% !important;
+    margin-right: 5%;
+  }
+  .DDMBannerDiscoveryButton > button {
+    margin-left: 5% !important;
+  }
+}
+
+
+@media only screen and (max-width: 376px) {
+  .DDMBannerSocialIcons {
+    bottom: 95px;
+  }
+}
+
+
+@media only screen and (max-width: 376px) {
+  .DDMBannerSocialIcons {
+    bottom: 105px;
+  }
+  .DDMBannerText > h1 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .DDMBannerSocialIcons {
+    bottom: 135px;
+  }
+  .CardsChart_uppertext_heading {
+    font-size: 22px;
+    line-height: 26px;
+  }
 }

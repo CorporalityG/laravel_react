@@ -8,7 +8,7 @@ export default function Banner() {
 
 	return (
 		<>
-			<div className="DDMBanner d-xl-flex  justify-content-between">
+			<div className="DDMBanner d-lg-flex  justify-content-between">
 				
 				<div className="DDMBannerText">
 					{/* <h1>Effective Digital Media
@@ -73,4 +73,3 @@ export default function Banner() {
 		</>
 	);
 }
-

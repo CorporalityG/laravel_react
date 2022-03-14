@@ -537,20 +537,20 @@
   .CardsChart_div26,
   .CardsChart_div27,
   .CardsChart_div28 {
-    width: 80%;
+    width: 95%;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .CardsChart_uppertext_heading {
-    font-size: 24px;
-    line-height: 26px;
+    font-size: 28px;
+    line-height: 32px;
   }
 
-  .CardsChart_uppertext_description {
+  /* .CardsChart_uppertext_description {
     font-size: 14px;
     line-height: 18px;
-  }
+  } */
 
   .CardsChart_maincontainer {
     display: grid;
@@ -671,5 +671,54 @@
   .CardsChart_div28 {
     width: 90%;
     margin-left: 10px !important;
+  }
+}
+
+
+@media only screen and (max-width: 481px) {
+  .CardsChart_uppertext_heading {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+
+@media only screen and (max-width: 321px) {
+  .CardsChart_maincontainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .CardsChart_div2, 
+  .CardsChart_div3, 
+  .CardsChart_div4, 
+  .CardsChart_div5, 
+  .CardsChart_div6, 
+  .CardsChart_div7, 
+  .CardsChart_div9, 
+  .CardsChart_div10, 
+  .CardsChart_div11, 
+  .CardsChart_div12, 
+  .CardsChart_div13, 
+  .CardsChart_div14, 
+  .CardsChart_div16, 
+  .CardsChart_div17, 
+  .CardsChart_div19, 
+  .CardsChart_div18, 
+  .CardsChart_div20, 
+  .CardsChart_div21, 
+  .CardsChart_div23, 
+  .CardsChart_div24, 
+  .CardsChart_div25, 
+  .CardsChart_div26, 
+  .CardsChart_div27, 
+  .CardsChart_div28 {
+    width: 100%;
+    margin-left: 0px !important;
+  }
+  .CardsChart_div8, 
+  .CardsChart_div15, 
+  .CardsChart_div22 {
+    margin-top: 20px;
   }
 }

@@ -789,6 +789,14 @@
   }
 }
 
+
+@media only screen and (max-width: 961px) {
+  .footerContainer .footerRow {
+    justify-content: space-between !important;
+  }
+}
+
+
 @media only screen and (max-width: 756px) {
   .footerRow {
     -webkit-box-orient: vertical !important;

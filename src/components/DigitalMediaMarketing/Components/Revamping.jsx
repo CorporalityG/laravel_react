@@ -8,7 +8,7 @@ export default function Revamping() {
 
 	return (
 		<>
-			<div className="container DDMRevamping d-sm-flex px-2">
+			<div className="container DDMRevamping d-lg-flex px-2">
 
 				<div className="DDMRevampingText">
 					<h1 data-aos="fade-right" data-aos-duration="800">Thinking of creating a website

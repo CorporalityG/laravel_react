@@ -1,3 +1,19 @@
 .key_objectives {
     margin-bottom: 40px;
 }
+
+
+@media only screen and (max-width: 1199px) {
+    .key_objective_img {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 481px) {
+    .key_objective_img .m-5 {
+        margin: 1rem 0 !important;
+    }
+}

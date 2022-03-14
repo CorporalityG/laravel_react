@@ -144,6 +144,39 @@ top: 2288px; */
 
 }
 
+
+@media only screen and (max-width: 1199px) {
+  .DDMRevampingText > h1 {
+    width: 80%;
+  }
+  .DDMRevampingText > p {
+    width: 80%;
+  }
+}
+
+
+@media only screen and (max-width: 991px) {
+  .DDMRevampingText {
+    width: 100% !important;
+  }
+  .DDMRevampimgBulb {
+    width: 100%;
+    text-align: center;
+  }
+  .DDMRevampingText > h1 {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+  .DDMRevampingText > p {
+    width: 100%;
+    margin-left: 0;
+  }
+  .DDMRevampingTalkingButton > button {
+    margin-left: 0 !important;
+  }
+}
+
+
 @media only screen and (max-width: 800px){
   .DDMRevampingText > h1{
     width: 100%;
@@ -152,5 +185,25 @@ top: 2288px; */
   .DDMRevampingText > p{
     width: 100%;
     margin-right: 10%;
+  }
+}
+
+
+@media only screen and (max-width: 568px) {
+  .DDMRevampingText {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .DDMRevampingText > h1 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+
+@media only screen and (max-width: 481px) {
+  .DDMRevampingText > h1 {
+    font-size: 24px;
+    line-height: 28px;
   }
 }
