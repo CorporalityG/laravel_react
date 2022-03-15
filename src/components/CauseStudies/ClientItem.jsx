@@ -11,7 +11,7 @@ function ClientItem(props) {
     };
 
     return (
-        <div className="col-md-4">
+        <div className="col-lg-4 col-md-6">
             <div className="client-item">
                 <div className="client-item-img">
                     { props.thumbnail && <img src={props.thumbnail} alt={props.title} /> }

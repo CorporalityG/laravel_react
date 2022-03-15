@@ -41,7 +41,13 @@
     color: #232323;
 }
 .clients-banner-container .clients-banner-img {
-    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clients-banner-container .clients-banner-img img {
+    max-width: 100%;
 }
 
 .clients-list-container {
@@ -134,4 +140,53 @@
     font-size: 14px;
     color: #33657E;
     cursor: pointer;
+  }
+
+
+  @media only screen and (max-width: 1399.99px) {
+    .clients-banner-container .clients-rec-2 {
+        left: 35%;
+        top: 70px;
+    }
+    .clients-list-container .client-item .client-item-subtitle {
+        line-height: 24px;
+        min-height: 50px;
+    }
+  }
+
+
+  @media only screen and (max-width: 1280.99px) {
+    .clients-banner-container .clients-rec-1 {
+        left: 30px;
+    }
+  }
+
+
+  @media only screen and (max-width: 990.99px) {
+    .clients-banner-container .clients-rec-2 {
+        top: 20px;
+    }
+  }
+
+
+  @media only screen and (max-width: 767px) {
+    .clients-banner-container .clients-rec-2 {
+        left: 55%;
+    }
+    .clients-banner-container .clients-rec-3 {
+        left: 80%;
+    }
+    .clients-banner-container .clients-rec-4 {
+        left: 80%;
+        bottom: 35px;
+    }
+    .clients-list-container .filter-dropdown-main {
+        justify-content: end;
+    }
+    .clients-banner-container .clients-banner-content {
+        margin-bottom: 40px;
+    }
+    .clients-list-container .client-item .client-item-subtitle {
+        min-height: auto;
+    }
   }

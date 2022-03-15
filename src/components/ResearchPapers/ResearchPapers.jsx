@@ -24,7 +24,7 @@ const ResearchPapers = () => {
 									<li><Link to={`/#`}>Marketing Strategies for Hemp</Link></li>
 									<li><Link to={`/#`}>Renewable Energy Marketing</Link></li>
 									<li><Link to={`/#`}>Conceptualising the high tech market</Link></li>
-									<li><Link to={`/#`}>The difficulty of marketing for IT companies and how to over come it – a guide</Link></li>
+									<li><Link to={`/#`}>The difficulty of marketing for IT companies and how to over come it - a guide</Link></li>
 								</ul>
 							</div>
 						</div>

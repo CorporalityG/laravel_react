@@ -36,10 +36,10 @@ function Clients() {
 
             <div className="container">
                 <div className="row clients-filter-row">
-                    <div className="col-md-4">
+                    <div className="col-sm-4">
                         <div className="filter-title">Filter by:</div>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-sm-8">
                         <div className="filter-dropdown-main">
                             <div className="filter-dropdown">
                                 <button className="filter-btn filter-btn-toggle" type="button" id="industriesDropdownMenu" aria-expanded="false">Industries</button>
