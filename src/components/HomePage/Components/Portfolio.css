@@ -209,7 +209,7 @@
 }
 .portfolio-container .portfolio-left .portfolio-img-heading {
   max-width: 360px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .portfolio-container .portfolio-left .portfolio-img {
   width: 100%;
@@ -244,7 +244,7 @@
   display: flex;
 }
 .portfolio-container .portfolio-boxes .portfolio-box {
-  flex: 0 1 50%;
+  flex: 0 0 50%;
   padding: 10px 15px;
 }
 .portfolio-container .portfolio-boxes .portfolio-box:not(:last-child) {
@@ -310,7 +310,8 @@
 .portfolio-container .carousel-indicators {
   justify-content: start;
   margin-bottom: 0;
-  left: 4%;
+  left: 0;
+  margin-left: 9%;
 }
 .portfolio-container .carousel-indicators button {
   background-color: #C4C4C4;

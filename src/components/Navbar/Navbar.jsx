@@ -39,36 +39,36 @@ const Navbar = () => {
                             <span className={`nav-icon-line ${navClicked ? "nav-icon-clicked" : ""}`}></span>
                         </div>
                         <div className="container">
-                        <div className="navbar-container">
-                            <Link to="/" onClick={() => setNavClicked(false)}>
-                                <img src={logo} className="corporality-logo" alt="logo" />
-                            </Link>
-                            <About2 />
-                            <div className={`nav-items ${navClicked ? "nav-items-hidden" : ""}`} >
-                                <div className={`nav-item about ${(showAbout && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => { setShowAbout(!showAbout) }} onMouseOver={() => { if (isLargeScreen) setShowAbout(true) }} onMouseLeave={() => { if (isLargeScreen) setShowAbout(false) }} >
-                                    <div className="about-a" >ABOUT</div>
-                                </div>
-                                <About />
-                                <div className={`nav-item services ${(showServices && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => { setShowServices(!showServices) }} onMouseOver={() => { if (isLargeScreen) setShowServices(true) }} onMouseLeave={() => { if (isLargeScreen) setShowServices(false) }}>
-                                    <div className="services-a">SERVICES</div>
-                                </div>
-                                <Services />
-                                <div className={`nav-item insights ${(showInsights && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => setShowInsights(!showInsights)} onMouseOver={() => { if (isLargeScreen) setShowInsights(true)}} onMouseLeave={() => { if (isLargeScreen) setShowInsights(false)}}>
-                                    <div className="insights-a">INSIGHTS</div>
-                                </div>
-                                <Insights />
-                                <div className={`nav-item industries ${(showIndustries && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => { console.log("set industries"); setShowIndustries(!showIndustries) }} onMouseOver={() => { if (isLargeScreen) setShowIndustries(true) }} onMouseLeave={() => { if (isLargeScreen) setShowIndustries(false)}}>
-                                    <div className="industries-a">INDUSTRIES</div>
-                                </div>
-                                <Industries />
-                                <div className="nav-item contact" onClick={() => {navigate("/contact");topHandler()}}>
-                                    <div className="contact-a">CONTACT</div>
-                                </div>
-                                <div className="nav-item contact-no" onClick={() => window.open("tel:+61 2 83794089", "_self")}>
-                                    <div className="contact-no-a">+61 2 83794089</div>
+                            <div className="navbar-container">
+                                <Link to="/" onClick={() => setNavClicked(false)}>
+                                    <img src={logo} className="corporality-logo" alt="logo" />
+                                </Link>
+                                <About2 />
+                                <div className={`nav-items ${navClicked ? "nav-items-hidden" : ""}`} >
+                                    <div className={`nav-item about ${(showAbout && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => { setShowAbout(!showAbout) }} onMouseOver={() => { if (isLargeScreen) setShowAbout(true) }} onMouseLeave={() => { if (isLargeScreen) setShowAbout(false) }} >
+                                        <div className="about-a" >ABOUT</div>
+                                    </div>
+                                    <About />
+                                    <div className={`nav-item services ${(showServices && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => { setShowServices(!showServices) }} onMouseOver={() => { if (isLargeScreen) setShowServices(true) }} onMouseLeave={() => { if (isLargeScreen) setShowServices(false) }}>
+                                        <div className="services-a">SERVICES</div>
+                                    </div>
+                                    <Services />
+                                    <div className={`nav-item insights ${(showInsights && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => setShowInsights(!showInsights)} onMouseOver={() => { if (isLargeScreen) setShowInsights(true) }} onMouseLeave={() => { if (isLargeScreen) setShowInsights(false) }}>
+                                        <div className="insights-a">INSIGHTS</div>
+                                    </div>
+                                    <Insights />
+                                    {/* <div className={`nav-item industries ${(showIndustries && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => { console.log("set industries"); setShowIndustries(!showIndustries) }} onMouseOver={() => { if (isLargeScreen) setShowIndustries(true) }} onMouseLeave={() => { if (isLargeScreen) setShowIndustries(false) }}>
+                                        <div className="industries-a">INDUSTRIES</div>
+                                    </div>
+                                    <Industries /> */}
+                                    <div className="nav-item contact" onClick={() => { navigate("/contact"); topHandler() }}>
+                                        <div className="contact-a">CONTACT</div>
+                                    </div>
+                                    <div className="nav-item contact-no" onClick={() => window.open("tel:+61 2 83794089", "_self")}>
+                                        <div className="contact-no-a">+61 2 83794089</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </OutsideClickHandler>

@@ -32,6 +32,8 @@ import FastgrowFinance from "./components/CauseStudies/FastgrowFinance";
 import Liqmet from "./components/CauseStudies/Liqmet";
 import KlekServices from "./components/CauseStudies/KlekServices";
 import SKInsurance from "./components/CauseStudies/SKInsurance";
+import TechConsultants from "./components/CauseStudies/TechConsultants";
+
 import ResearchPapers from "./components/ResearchPapers/ResearchPapers";
 
 function App() {
@@ -94,6 +96,7 @@ function App() {
             <Route path="/liqmet" element={<Liqmet />} />
             <Route path="/klek-services" element={<KlekServices />} />
             <Route path="/sk-insurance" element={<SKInsurance />} />
+            <Route path="/tech-consultants" element={<TechConsultants />} />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             

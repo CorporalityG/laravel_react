@@ -438,8 +438,8 @@
 
 .footerContainer .footerRow {
   width: 100%;
-  max-width: 1920px;
-  padding: 20px 40px !important;
+  /* max-width: 1920px;
+  padding: 20px 40px !important; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,7 +448,7 @@
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-pack: distribute !important;
-      justify-content: space-around !important;
+      justify-content: space-between;
   -webkit-box-align: start !important;
       -ms-flex-align: start !important;
           align-items: flex-start !important;

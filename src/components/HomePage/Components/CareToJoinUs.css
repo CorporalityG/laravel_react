@@ -9,8 +9,8 @@
   display: flex;
   position: relative;
   justify-content: space-between;
-  padding-left: 100px;
-  padding-right: 100px;
+  /* padding-left: 100px;
+  padding-right: 100px; */
 }
 .caretojoinus-text {
   z-index: 3;
@@ -87,12 +87,13 @@
   position: relative;
   z-index: 2;
 }
-.right-image-container {
-  /*transform: rotate(45deg);
-  overflow: hidden;*/
-}
+/*.right-image-container {
+  transform: rotate(45deg);
+  overflow: hidden;
+}*/
 .caretojoinus-rightimage {
   transition: all 0.5s ease-in-out;
+  margin-right: 40px;
 }
 .right-image-container:hover > img {
   transform: scale(1.03);
@@ -100,7 +101,7 @@
 .back-image {
   position: absolute;
   top: 0;
-  right: -40px;
+  right: 0;
   z-index: -1;
 }
 

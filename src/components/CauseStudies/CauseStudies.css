@@ -18,8 +18,8 @@
 }
 .cause-studies-container .cause-studies-left .yellow-line {
   position: absolute;
-  left: 0;
-  top: -70px;
+  left: 12px;
+  top: -205px;
   z-index: 1;
 }
 
@@ -27,7 +27,7 @@
   background: #33657E;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
   padding-bottom: 80px;
-  margin-right: 73px;
+  margin-right: 69px;
 }
 .cause-studies-container .cause-studies-left-two .cause-studies-icon-main {
   width: 300px;
@@ -40,7 +40,7 @@
   justify-content: center;
 }
 .cause-studies-container .cause-studies-left-two .cause-studies-icon-main .cause-studies-icon {
-  max-width: 100%;
+  max-width: 70%;
   width: auto;
 }
 .cause-studies-container .cause-studies-left-two .cause-studies-line {
@@ -104,16 +104,19 @@
 }
 
 .cause-studies-container .cause-studies-right {
-  padding-left: 0;
+  /* padding-left: 0; */
   z-index: 1;
 }
 .cause-studies-container .cause-studies-logo {
   padding: 120px 20px;
   text-align: center;
 }
-.cause-studies-container .cause-studies-content-container {
-  padding-right: 70px;
+.cause-studies-container .cause-studies-logo img {
+  max-width: 70%;
 }
+/* .cause-studies-container .cause-studies-content-container {
+  padding-right: 70px;
+} */
 
 .cause-studies-container .cause-studies-main-content {
   margin-bottom: 40px;
@@ -154,8 +157,8 @@
 
 .cause-studies-container .cause-studies-content-container .cause-studies-line {
   border: 2px dashed #C8D2D7;
-  margin-left: -85px;
-  margin-right: -80px;
+  margin-left: -90px;
+  /* margin-right: -80px; */
 }
 
 .cause-studies-container .glimpses-main {
@@ -168,7 +171,6 @@
   font-size: 18px;
   text-transform: uppercase;
   color: #33657E;
-  margin-bottom: 0;
 }
 .cause-studies-container .glimpses-main p {
   font-style: normal;
@@ -230,4 +232,16 @@
   font-size: 18px;
   text-align: justify;
   color: #232323;
+}
+
+.cause-studies-container ul {
+  list-style-image: url("./img/cause-studies-list.png");
+}
+.cause-studies-container ul li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: justify;
+  color: #232323;
+  margin-bottom: 15px;
 }
