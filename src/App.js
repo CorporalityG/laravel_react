@@ -33,6 +33,7 @@ import Liqmet from "./components/CauseStudies/Liqmet";
 import KlekServices from "./components/CauseStudies/KlekServices";
 import SKInsurance from "./components/CauseStudies/SKInsurance";
 import TechConsultants from "./components/CauseStudies/TechConsultants";
+import Clients from "./components/CauseStudies/Clients";
 
 import ResearchPapers from "./components/ResearchPapers/ResearchPapers";
 
@@ -89,6 +90,8 @@ function App() {
             <Route path="/article" element={<IndustrialResources />} />
 
             <Route path="/research-papers" element={<ResearchPapers />} />
+
+            <Route path="/clients" element={<Clients />} />
 
             <Route path="/divine-intercession" element={<DivineIntercession />} />
             <Route path="/build-q" element={<BuildQ />} />
