@@ -43,7 +43,7 @@ function Services() {
 
   const learnMoreHandler = () => {
     switch(learn){
-      case 1: navigate("/go-to-marketing"); break;
+      case 1: navigate("/goto-market-strategy"); break;
       case 2: navigate("/digital-media-marketing"); break;
       case 3: navigate("/strategic-consultancy"); break;
       case 4: navigate("/corporate-strategy"); break;

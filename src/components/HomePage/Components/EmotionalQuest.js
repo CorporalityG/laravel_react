@@ -4,6 +4,7 @@ import eq_header from "./images/eq_header.png";
 import eq_play from "./images/eq_play.png";
 import cr from "./video/cr.mp4";
 import cancel from "./images/cancel.png";
+import { API_BASE_URL, BASE_URL } from '../../../config';
 
 function EmotionalQuest() {
   function toggle() {
@@ -24,8 +25,8 @@ function EmotionalQuest() {
           <div className="col-md-6">
             <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-offset="0">
               <div className="emotional-video">
-                {/*<video src={cr} controls={true} autoPlay={false} />*/}
-                <iframe src="https://www.youtube.com/embed/M3DekVZlxsM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <video src={BASE_URL + '/img/Our-Emotional-Quest.mp4'} controls={true} autoPlay={false} poster={BASE_URL + '/img/Our-Emotional-Quest.png'} />
+                {/* <iframe src="https://www.youtube.com/embed/M3DekVZlxsM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
               </div>
             </div>
           </div>

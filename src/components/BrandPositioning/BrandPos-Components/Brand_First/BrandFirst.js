@@ -77,17 +77,12 @@ function BrandFirst() {
             <div className="brandposition_first_textside_heading" data-aos="fade-up"
               data-aos-easing="linear"
               data-aos-duration="1000">
-              EVERY BRAND HAS A STORY AND EVERY STORY IS UNIQUE
+              EVERY BRAND HAS A STORY AND EVERY STORY IS UNIQUE.
             </div>
             <div className="brandposition_first_textside_description" data-aos="fade-down"
               data-aos-easing="linear"
               data-aos-duration="1500">
-              Big brands have one thing in common - they have a solid brand
-              positioning strategy. Businesses must invest in a strong brand
-              marketing strategy to thrive in a highly competitive market. Why?
-              The proof lies in the numbers. Companies continuously investing in
-              brand positioning strategies can see an average increase in
-              revenue between 10 and 20%.
+              Big brands have one thing in common - they have a solid brand positioning strategy. Businesses must invest in a strong brand marketing strategy to thrive in a highly competitive market. The proof lies in the numbers. Companies continuously investing in brand positioning strategies can see an <b>average increase in revenue between 10 and 20%.</b>
             </div>
           </div>
           <div className="brandposition_first_imageside">

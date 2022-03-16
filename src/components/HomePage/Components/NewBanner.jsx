@@ -120,7 +120,8 @@ const NewBanner = () => {
                             <Modal.Header closeButton>Global Management Consulting and Marketing Company</Modal.Header>
                             <Modal.Body closeButton>
                                 <div className="home_banner_modal">
-                                    <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                    <video src={BASE_URL + '/img/home-page-banner.mp4'} controls={true} autoPlay={true} />
+                                    {/* <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
                                 </div>   
                             </Modal.Body>
                         </Modal>
@@ -162,7 +163,7 @@ const NewBanner = () => {
                             <Modal.Header closeButton>Reimagining your boundaries</Modal.Header>
                             <Modal.Body closeButton>
                                 <div className="home_banner_modal">
-                                    <iframe src="https://www.youtube.com/embed/M3DekVZlxsM?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                    <video src={BASE_URL + '/img/home-page-banner.mp4'} controls={true} autoPlay={true} />
                                 </div>   
                             </Modal.Body>
                         </Modal>
@@ -203,7 +204,7 @@ const NewBanner = () => {
                             <Modal.Header closeButton>The future of businesses is right here</Modal.Header>
                             <Modal.Body closeButton>
                                 <div className="home_banner_modal">
-                                    <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                    <video src={BASE_URL + '/img/home-page-banner.mp4'} controls={true} autoPlay={true} />
                                 </div>   
                             </Modal.Body>
                         </Modal>

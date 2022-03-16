@@ -558,6 +558,9 @@
   width: 100%;
   height: 400px;
 }
+.home_banner_modal video {
+  width: 100%;
+}
 .bannerContainer .bannerBtn {
   z-index: 9;
   display: flex;

@@ -8,6 +8,7 @@ import Process from "./Components/Process";
 import MarketingAudit from "./Components/MarketingAudit";
 import KeyObject from "./Components/KeyObject";
 import BluePrintNew from "./Components/BluePrintNew";
+import Faqs from "./Components/Faqs";
 
 function DigitalMediaMarketing() {
   return (
@@ -21,6 +22,7 @@ function DigitalMediaMarketing() {
       <Process />
       <MarketingAudit />
       <KeyObject />
+      <Faqs />
     </>
   );
 }

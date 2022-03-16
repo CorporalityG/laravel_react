@@ -9,9 +9,12 @@ import d from "./images/comp-6-4.png"
 import e from "./images/comp-6-5.png"
 import f from "./images/comp-6-6.png"
 import g from "./images/comp-6-7.png"
-
+import { Link, useNavigate } from 'react-router-dom'
 
 const GTMComp6 = () => {
+
+    const navigate = useNavigate();
+
     const observer1 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -34,9 +37,9 @@ const GTMComp6 = () => {
                 {/* <h2 data-aos="fade-down" data-aos-duration="1600">Corporality has what it takes</h2> */}
                 <p data-aos="fade-down" data-aos-duration="1600">
                 Our structured and proven methodology emanates
-                 powerful Go To Marketing strategies that meet 
-                 the critical needs of your product’s positioning. 
-                 We differentiate your product in a competitive environment 
+                 powerful <span onClick={() => navigate("/goto-market-strategy")}>Go To Marketing strategies</span> that meet 
+                 the critical needs of your product's positioning. 
+                 We <b>differentiate your product in a competitive environment</b> 
                  and tailor a model that best suits the targeted segment. 
                  With us, GTM is a metamorphosis that ensures complete 
                  engagement while mapping all needs, impacts and 

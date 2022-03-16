@@ -296,7 +296,7 @@ function AllCardsNew() {
               <img src={ce} alt="" />
             </div>
             <div className="gotomarketing_side3_card5_text">
-              Execute strategies and follow-up
+              Critical feedback gathering and improvement
             </div>
           </div>
 
@@ -327,7 +327,7 @@ function AllCardsNew() {
               <img src={da} alt="" />
             </div>
             <div className="gotomarketing_side4_card1_text">
-              Collecting high-quality data to target the right people
+              Collecting high-quality data-to target the right people
             </div>
           </div>
 

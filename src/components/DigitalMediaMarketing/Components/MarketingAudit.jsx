@@ -51,7 +51,7 @@ const MarketingAudit = () => {
             <div data-aos="fade-up" data-aos-delay="200">
                     <p>
                         <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
-                        Streamline your traditional and digital marketing management processes
+                        Streamline your digital marketing marketing  processes
                     </p>
             </div>
             <div data-aos="fade-up" data-aos-delay="400">
@@ -72,7 +72,7 @@ const MarketingAudit = () => {
 
                     <p>
                         <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
-                        Cut down on unnecessary costs
+                        Improve marketing ROIs
                     </p>
             </div>
                     </div>

@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
 import "./GTMComp7.css"
 import img1 from "./images/comp7-2.png"
+import { Link, useNavigate } from 'react-router-dom'
 
 const GTMComp7 = () => {
+    const navigate = useNavigate();
+
     const observer1 = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -23,13 +26,8 @@ const GTMComp7 = () => {
             <div data-aos="fade-right" data-aos-duration="2000" className="comp7-left">
                 {/* <h2>Improved Marketing Mix</h2> */}
                 <h2 className='animate'><span>Improved</span>&nbsp;<span>Marketing</span>&nbsp;<span>Mix</span></h2>
-                <p>Corporality’s innovative digital marketing audit
-                     strategies help create visually evident changes
-                      in your current processes to bring about a fresh
-                       and impactful perspective to further augment
-                        the presence of your brand.
-                </p>
-                <div>
+                <p>Corporality's innovative <b><span onClick={() => navigate("/digital-media-marketing")}>go to marketing</span> audit strategies help create visually evident changes in your current processes</b> to bring about a fresh and impactful perspective to further augment the presence of your brand. </p>
+                <div onClick={() => navigate("/digital-media-marketing")}>
                     Explore
                 </div>
             </div>

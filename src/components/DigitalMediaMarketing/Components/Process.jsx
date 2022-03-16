@@ -37,6 +37,7 @@ export default function Process() {
 											<div className="inner inner1">
 												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Initial-Extraction.png" alt="" />
 												<h2 className="yellowSquare">Initial Extraction</h2>
+												<p>Discover your brand and redesign goals and how you’ll measure your project’s success  </p>
 											</div>
 										</div>
 									</div>
@@ -46,6 +47,7 @@ export default function Process() {
 											<div className="inner inner1">
 												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Initial-Extraction.png" alt="" />
 												<h2 className="yellowSquare">Initial Extraction</h2>
+												<p>Discover your brand and redesign goals and how you’ll measure your project’s success  </p>
 											</div>
 										</div>
 									</div>
@@ -59,6 +61,7 @@ export default function Process() {
 											<div className="inner inner1">
 												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Competitive-Analysis.png" alt="" />
 												<h2 className="yellowSquare">Competitive Analysis</h2>
+												<p>Find the competitive edge and list of competitors for each service/ product</p>
 											</div>
 										</div>
 									</div>
@@ -68,6 +71,7 @@ export default function Process() {
 											<div className="inner inner1">
 												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Competitive-Analysis.png" alt="" />
 												<h2 className="yellowSquare">Competitive Analysis</h2>
+												<p>Find the competitive edge and list of competitors for each service/ product</p>
 											</div>
 										</div>
 									</div>
@@ -81,6 +85,7 @@ export default function Process() {
 											<div className="inner inner1">
 												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/High-impact-Content.png" alt="" />
 												<h2 className="yellowSquare">High-impact Content</h2>
+												<p>Educate and sell to your customers at the same time - let’s make a powerful Content marketing Strategy with high impact and recall.</p>
 											</div>
 										</div>
 									</div>
@@ -90,6 +95,7 @@ export default function Process() {
 											<div className="inner inner1">
 												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/High-impact-Content.png" alt="" />
 												<h2 className="yellowSquare">High-impact Content</h2>
+												<p>Educate and sell to your customers at the same time - let’s make a powerful Content marketing Strategy with high impact and recall.</p>
 											</div>
 										</div>
 									</div>
@@ -103,6 +109,7 @@ export default function Process() {
 											<div className="inner inner1">
 												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Layout-and-layers.png" alt="" />
 												<h2 className="yellowSquare">Layout and layerst</h2>
+												<p>Functionality, system integration, technical, and accessibility requirements</p>
 											</div>
 										</div>
 									</div>
@@ -112,6 +119,7 @@ export default function Process() {
 											<div className="inner inner1">
 												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Layout-and-layers.png" alt="" />
 												<h2 className="yellowSquare">Layout and layers</h2>
+												<p>Functionality, system integration, technical, and accessibility requirements</p>
 											</div>
 										</div>
 									</div>
@@ -125,6 +133,7 @@ export default function Process() {
 											<div className="inner inner1">
 												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Sitemap.png" alt="" />
 												<h2 className="yellowSquare">Sitemap</h2>
+												<p>An initial site map and easy navigation setup across the website</p>
 											</div>
 										</div>
 									</div>
@@ -134,6 +143,7 @@ export default function Process() {
 											<div className="inner inner1">
 												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Sitemap.png" alt="" />
 												<h2 className="yellowSquare">Sitemap</h2>
+												<p>An initial site map and easy navigation setup across the website</p>
 											</div>
 										</div>
 									</div>

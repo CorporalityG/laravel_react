@@ -1,10 +1,13 @@
 
 import './KeyObject.css'
 import React, { useEffect } from 'react';
+import { useNavigate } from "react-router";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 const KeyObject = () => {
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         Aos.init();
@@ -19,7 +22,7 @@ const KeyObject = () => {
 
                         <div className="ddm-audi">
                             <h1>Key objectives</h1>
-                            <p>The key objective is to align all short-term and long-term business goals in order of their priority and accomplish them over the next two to three years. Create the ideal buyer persona, identify competition and describe products and services, to map out a detailed inventory encompassing your marketing assets.</p>
+                            <p>The key objective is to align all short-term and long-term business goals  in order of their priority and accomplish them over the next two to three years. Create the ideal buyer persona, identify competition and describe products and services, to map out a detailed inventory encompassing your marketing assets.</p>
                         </div>
                     </div>
 
@@ -38,7 +41,7 @@ const KeyObject = () => {
 
                                 <p>
                                     <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
-                                    Increasing the size of the audience with corporate or business level strategy
+                                    Increasing the size of the audience with corporate or business level strategy 
                                 </p>
                             </div>
                             <div data-aos="fade-up" data-aos-delay="600">
@@ -59,14 +62,14 @@ const KeyObject = () => {
 
                                 <p>
                                     <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
-                                    Generating qualified leads with effective lead generation strategy
+                                   Generating qualified leads with effective lead generation strategy 
                                 </p>
                             </div>
                             <div data-aos="fade-up" data-aos-delay="1200">
 
                                 <p>
                                     <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
-                                    Customer engagement and usage
+                                    Customer engagement and usage 
                                 </p>
                             </div>
                         </div>
@@ -83,6 +86,14 @@ const KeyObject = () => {
                 </div>
                 <div className="key_objective_img">
                     <img src="./img/DigitalMediaMarketing/objective.gif" className="img-fluid m-5" alt="" />
+                </div>
+            </div>
+
+            <div className="row">
+                <div className="col-md-12">
+                    <div className="key_objectives_btn_main">
+                        <div className="key_objectives_btn" onClick={() => navigate("/contact")}>Book a discovery session</div>
+                    </div>
                 </div>
             </div>
         </div>

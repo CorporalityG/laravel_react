@@ -65,7 +65,7 @@
     color: #fff;
 }
 
-.gtm-page1 .text {
+.gtm-page1 .text, .gtm-page1 .text a {
     color: #fff;
     text-align: left !important;
     word-break: break-word;

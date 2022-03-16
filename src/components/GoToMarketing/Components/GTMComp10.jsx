@@ -57,110 +57,125 @@ import Group960 from './images/comp-10/Group 960.png';
 import Group954_1 from './images/comp-10/Group 954 (1).png';
 import Group956_1 from './images/comp-10/Group 956 (1).png';
 import Expansion from './images/comp-10/EXPANSION.png';
+import { Link, useNavigate } from 'react-router-dom'
 
 const GTMComp10 = () => {
+    const navigate = useNavigate();
+
     return (
-        <div className="gtm-comp10">
-            <div className="gtm-comp10-main_container">
-                {/* <div className="awareness"> */}
-                    <ul className="awareness_text_upper">
-                        <li>AWARENESS</li>
-                        <li>EDUCATION</li>
-                        <li>SELECTION</li>
-                        <li>ONBOARDING</li>
-                        <li>USE/IMPACT</li>
-                        <li>GROWTH</li>
-                    </ul>
-                    <div className="awareness_image">
-                        <div className="awareness_image1" >
-                            <img src={Group940} className="awareness_img1 hvr" />
-                            <img src={Group941} className="awareness_img2 hvr" />
-                            <img src={Rectangle186} className="awareness_img3" />
-                            <img src={Rectangle184} className="awareness_img4" />
-                            <img src={Rectangle185} className="awareness_img5" />
-                            <img src={Arrow1} className="awareness_img6 anm" />
-                        </div>
-                        <div className="awareness_image2" >
-                            <img src={Group942} className="awareness_img1 hvr" />
-                            <img src={Group946} className="awareness_img2 hvr" />
-                            <img src={Group947} className="awareness_img3 hvr" />
-                            <img src={Group948} className="awareness_img4 hvr" />
-                            <img src={Group955} className="awareness_img5 hvr" />
-                            <img src={Group954} className="awareness_img6 hvr" />
-                            <img src={Group956} className="awareness_img7 hvr" />
-                            <img src={Arrow2} className="awareness_img8 anm2" />
-                            <img src={Rectangle187} className="awareness_img9" />
-                            <img src={Arrow3} className="awareness_img10 anm" />
-                            <img src={Arrow5} className="awareness_img11 anm" />
-                            <img src={Arrow4} className="awareness_img12 anm" />
-                            <img src={Arrow6} className="awareness_img13" />
-                            <img src={Rectangle188} className="awareness_img14" />
-                            <img src={Arrow9} className="awareness_img15" />
-                            <img src={Arrow10} className="awareness_img16 anm" />
-                            <img src={Rectangle189} className="awareness_img17" />
-                            <img src={Rectangle191} className="awareness_img18" />
-                            <img src={Arrow11} className="awareness_img19 anm" />
-                            <img src={Arrow12} className="awareness_img20 anm" />
-                        </div>
-                        <div className="awareness_image3" >
-                            <img src={Group949} className="awareness_img1 hvr" />
-                            <img src={Group950} className="awareness_img2 hvr" />
-                            <img src={Group951} className="awareness_img3 hvr" />
-                            <img src={Group952} className="awareness_img4 hvr" />
-                            <img src={Group953} className="awareness_img5 hvr" />
-                            <img src={Group954_1} className="awareness_img6 hvr" />
-                            <img src={Group956_1} className="awareness_img7 hvr" />
-                            <img src={Arrow7} className="awareness_img8 anm2" />
-                            <img src={Arrow8} className="awareness_img9" />
-                            <img src={Arrow13} className="awareness_img10" />
-                            <img src={Arrow14} className="awareness_img11 anm" />
-                        </div>
-                        <div className="awareness_image4">
-                            <img src={Group957} className="awareness_img1 hvr" />
-                            <img src={Group958} className="awareness_img2 hvr" />
-                            <img src={Arrow15} className="awareness_img3 anm2" />
-                            <img src={Arrow1} className="awareness_img4 anm" />
-                        </div>
-                        <div className="awareness_image5">
-                            <img src={Group958_1} className="awareness_img1 hvr" />
-                            <img src={Group959} className="awareness_img2 hvr" />
-                            <img src={Group960} className="awareness_img3 hvr" />
-                            <img src={Arrow27} className="awareness_img4 anm2" />
-                            <img src={Arrow28} className="awareness_img5 anm2" />
-                            <img src={Arrow17} className="awareness_img6 anm" />
-                            <img src={Arrow18} className="awareness_img7" />
-                        </div>
-                        <div className="awareness_image6" >
-                            <img src={Expansion} className="awareness_img1 " />
-                            <img src={Arrow19} className="awareness_img2 anm" />
-                            <img src={Arrow19} className="awareness_img3 anm" />
-                            <img src={Arrow19} className="awareness_img4 anm" />
-                            <img src={Arrow24} className="awareness_img5" />
-                            <img src={Arrow24} className="awareness_img6" />
-                            <img src={Arrow24} className="awareness_img7" />
-                            <img src={Arrow24} className="awareness_img8" />
-                            <img src={Arrow25} className="awareness_img9" />
-                            <img src={Rectangle192} className="awareness_img10" />
-                            <img src={Group959_1} className="awareness_img11 hvr" />
-                            <img src={Group960_1} className="awareness_img12 hvr" />
-                            <img src={Group961_1} className="awareness_img13 hvr" />
-                            <img src={Group962_1} className="awareness_img14 hvr" />
+        <>
+            <div className="gtm-comp10">
+                <div className="gtm-comp10-main_container">
+                    {/* <div className="awareness"> */}
+                        <ul className="awareness_text_upper">
+                            <li>AWARENESS</li>
+                            <li>EDUCATION</li>
+                            <li>SELECTION</li>
+                            <li>ONBOARDING</li>
+                            <li>USE/IMPACT</li>
+                            <li>GROWTH</li>
+                        </ul>
+                        <div className="awareness_image">
+                            <div className="awareness_image1" >
+                                <img src={Group940} className="awareness_img1 hvr" />
+                                <img src={Group941} className="awareness_img2 hvr" />
+                                <img src={Rectangle186} className="awareness_img3" />
+                                <img src={Rectangle184} className="awareness_img4" />
+                                <img src={Rectangle185} className="awareness_img5" />
+                                <img src={Arrow1} className="awareness_img6 anm" />
+                            </div>
+                            <div className="awareness_image2" >
+                                <img src={Group942} className="awareness_img1 hvr" />
+                                <img src={Group946} className="awareness_img2 hvr" />
+                                <img src={Group947} className="awareness_img3 hvr" />
+                                <img src={Group948} className="awareness_img4 hvr" />
+                                <img src={Group955} className="awareness_img5 hvr" />
+                                <img src={Group954} className="awareness_img6 hvr" />
+                                <img src={Group956} className="awareness_img7 hvr" />
+                                <img src={Arrow2} className="awareness_img8 anm2" />
+                                <img src={Rectangle187} className="awareness_img9" />
+                                <img src={Arrow3} className="awareness_img10 anm" />
+                                <img src={Arrow5} className="awareness_img11 anm" />
+                                <img src={Arrow4} className="awareness_img12 anm" />
+                                <img src={Arrow6} className="awareness_img13" />
+                                <img src={Rectangle188} className="awareness_img14" />
+                                <img src={Arrow9} className="awareness_img15" />
+                                <img src={Arrow10} className="awareness_img16 anm" />
+                                <img src={Rectangle189} className="awareness_img17" />
+                                <img src={Rectangle191} className="awareness_img18" />
+                                <img src={Arrow11} className="awareness_img19 anm" />
+                                <img src={Arrow12} className="awareness_img20 anm" />
+                            </div>
+                            <div className="awareness_image3" >
+                                <img src={Group949} className="awareness_img1 hvr" />
+                                <img src={Group950} className="awareness_img2 hvr" />
+                                <img src={Group951} className="awareness_img3 hvr" />
+                                <img src={Group952} className="awareness_img4 hvr" />
+                                <img src={Group953} className="awareness_img5 hvr" />
+                                <img src={Group954_1} className="awareness_img6 hvr" />
+                                <img src={Group956_1} className="awareness_img7 hvr" />
+                                <img src={Arrow7} className="awareness_img8 anm2" />
+                                <img src={Arrow8} className="awareness_img9" />
+                                <img src={Arrow13} className="awareness_img10" />
+                                <img src={Arrow14} className="awareness_img11 anm" />
+                            </div>
+                            <div className="awareness_image4">
+                                <img src={Group957} className="awareness_img1 hvr" />
+                                <img src={Group958} className="awareness_img2 hvr" />
+                                <img src={Arrow15} className="awareness_img3 anm2" />
+                                <img src={Arrow1} className="awareness_img4 anm" />
+                            </div>
+                            <div className="awareness_image5">
+                                <img src={Group958_1} className="awareness_img1 hvr" />
+                                <img src={Group959} className="awareness_img2 hvr" />
+                                <img src={Group960} className="awareness_img3 hvr" />
+                                <img src={Arrow27} className="awareness_img4 anm2" />
+                                <img src={Arrow28} className="awareness_img5 anm2" />
+                                <img src={Arrow17} className="awareness_img6 anm" />
+                                <img src={Arrow18} className="awareness_img7" />
+                            </div>
+                            <div className="awareness_image6" >
+                                <img src={Expansion} className="awareness_img1 " />
+                                <img src={Arrow19} className="awareness_img2 anm" />
+                                <img src={Arrow19} className="awareness_img3 anm" />
+                                <img src={Arrow19} className="awareness_img4 anm" />
+                                <img src={Arrow24} className="awareness_img5" />
+                                <img src={Arrow24} className="awareness_img6" />
+                                <img src={Arrow24} className="awareness_img7" />
+                                <img src={Arrow24} className="awareness_img8" />
+                                <img src={Arrow25} className="awareness_img9" />
+                                <img src={Rectangle192} className="awareness_img10" />
+                                <img src={Group959_1} className="awareness_img11 hvr" />
+                                <img src={Group960_1} className="awareness_img12 hvr" />
+                                <img src={Group961_1} className="awareness_img13 hvr" />
+                                <img src={Group962_1} className="awareness_img14 hvr" />
+
+                            </div>
 
                         </div>
-
+                        <ul className="awareness_text_bottom">
+                            <li className="li1">#PROSPECT</li>
+                            <li className="li2">#MQL</li>
+                            <li className="li3">#SQL</li>
+                            <li className="li4">#COMMIT</li>
+                            <li className="li5">#LIVE</li>
+                            <li className="li6">#MRR</li>
+                            <li className="li7">#LTV</li>
+                        </ul>
                     </div>
-                    <ul className="awareness_text_bottom">
-                        <li className="li1">#PROSPECT</li>
-                        <li className="li2">#MQL</li>
-                        <li className="li3">#SQL</li>
-                        <li className="li4">#COMMIT</li>
-                        <li className="li5">#LIVE</li>
-                        <li className="li6">#MRR</li>
-                        <li className="li7">#LTV</li>
-                    </ul>
+                {/* </div> */}
+            </div>
+
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="gtm-comp10-btn-main">
+                            <div className="book_btn" onClick={() => navigate("/contact")}>BOOK A DISCOVERY CALL TODAY</div>
+                        </div>
+                    </div>
                 </div>
-            {/* </div> */}
-        </div>
+            </div>
+        </>
     )
 }
 

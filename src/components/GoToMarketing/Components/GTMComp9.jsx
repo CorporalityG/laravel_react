@@ -100,9 +100,9 @@ const GTMComp9 = () => {
                 <div>
                     <div className="gtm-comp9-body-vector">
                         <div className="gtm-comp9-body-vector-img">
-                            <img src={deals} alt="" />
+                            <img src={sol} alt="" />
                         </div>
-                        <h3>Qualifying deals and crafting proposals</h3>
+                        <h3>Solutions to customer pain points</h3>
                     </div>
                     <div className="gtm-comp9-body-vector">
                         <div className="gtm-comp9-body-vector-img">
@@ -112,9 +112,9 @@ const GTMComp9 = () => {
                     </div>
                     <div className="gtm-comp9-body-vector">
                         <div className="gtm-comp9-body-vector-img">
-                            <img src={sol} alt="" />
+                            <img src={deals} alt="" />
                         </div>
-                        <h3>Solutions to customer pain points</h3>
+                        <h3>Qualifying deals and crafting proposals</h3>
                     </div>
                 </div>
             </div>

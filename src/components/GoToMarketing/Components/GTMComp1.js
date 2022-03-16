@@ -37,7 +37,7 @@ function Page1() {
 								 className="aos-init aos-animate"
 							>
 								<h1 className="heading animate two">
-									<span>step</span>
+									<span>Step</span>
 									&nbsp;
 									<span>up</span>
 									&nbsp;
@@ -48,10 +48,7 @@ function Page1() {
 							</div>
 						</div>
 						<div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-delay="1000" className="desc mt-2 mb-2 text aos-init aos-animate">
-							<p className="gainCompetitive">Gain competitive advantage, manage time effectively, achieve
-							successful product launch with innovative product development and
-							management strategy, address innovation challenges,and ensure a
-							viable path to market success with our GTM strategy.</p>
+							<p className="gainCompetitive">Gain competitive advantage, manage time effectively, achieve successful product launch with innovative <a href="https://www.bdc.ca/en/articles-tools/business-strategy-planning/innovate/product-development-5-steps-commercial-success" target="_blank">product development</a> and management strategy, address innovation challenges, and ensure a viable path to market success with our GTM strategy.</p>
 						</div>
 						<div
 							className="aos-init aos-animate"

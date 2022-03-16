@@ -1,0 +1,52 @@
+.faqs-container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.faqs-container .faq-heading {
+    color: #3c708e;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.faqs-container .faqs-list .accordion-item {
+    margin-bottom: 20px;
+}
+.faqs-container .faqs-list .accordion-button {
+    color: #33657e;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    box-shadow: unset;
+    margin-bottom: 0;
+}
+.faqs-container .faqs-list .accordion-button:not(.collapsed) {
+    border-bottom: 1px solid #d0d8dc;
+}
+.faqs-container .faqs-list .accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2333657e'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  }
+.faqs-container .faqs-list .accordion-body {
+    background-color: #e4eaed;
+    padding: 20px;
+}
+.faqs-container .faqs-list .accordion-body p:last-child {
+    margin-bottom: 0;
+}
+.faqs-container .faqs-list .accordion-body .faq-btn {
+    color: white;
+    padding: 8px 25px;
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%);
+    z-index: 1;
+    cursor: pointer;
+    font-size: 0.875em;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+.faqs-container .faqs-list .accordion-body .faq-btn:hover {
+    background: linear-gradient(95.12deg, #6CA0BC 0%, #EED979 83.42%);
+}

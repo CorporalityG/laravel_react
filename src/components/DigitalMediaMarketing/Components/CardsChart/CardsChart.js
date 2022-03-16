@@ -35,12 +35,7 @@ function CardsChart() {
             From pitch to picture perfect scenario
           </div>
           <div className="CardsChart_uppertext_description" data-aos="fade-down" data-aos-delay="300"  data-aos-duration="800">
-            The process of starting a digital media marketing with Corporality
-            Global -An innovative lead generation and marketing company in
-            Sydney, and approaching the right strategy can be highly intended to
-            your true audience. We've created this service Edition to accompany
-            founders in this journey, from getting their vision and approaching
-            potential buyers' persona naturally.
+            The process of starting a digital media marketing with Corporality Global -An innovative internet marketing company in Sydney , and approaching the right strategy can be highly intended to your true audience. We’ve  created this service Edition to accompany founders in this journey, from getting their vision and approaching potential buyers' persona naturally.
           </div>
         </div>
 
@@ -168,7 +163,7 @@ function CardsChart() {
               <img src={Action} alt="" />
             </div>
             <div className="CardsChart_div_text">
-              Off-page SEO Implementation
+              Off-page SEO Action defined
             </div>
           </div>
           <div className="CardsChart_div18">

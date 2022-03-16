@@ -81,7 +81,7 @@ const GTMComp8 = () => {
                             <div className="strategy_card">
                                 <div className="strategy_card_animation1">
                                     <img src={profit}></img>
-                                    <h1>Bussiness Models and Financial</h1>
+                                    <h1>Bussiness Model & Financials</h1>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@ const GTMComp8 = () => {
                             <div className="strategy_card">
                                 <div className="strategy_card_animation2">
                                     <img src={brandawareness}></img>
-                                    <h1>Brand Strategy and Marketing</h1>
+                                    <h1>Brand Strategy and Narratives</h1>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +156,7 @@ const GTMComp8 = () => {
                             <div className="strategy_card">
                                 <div className="strategy_card_animation1">
                                     <img src={workflow}></img>
-                                    <h1>Release Strategy and Planning</h1>
+                                    <h1>Release Strategy & Planning</h1>
                                 </div>
                             </div>
                         </div>
