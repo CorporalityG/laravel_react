@@ -1,0 +1,52 @@
+.cause-studies-container {
+    margin-top: 80px;
+}
+
+.cause-studies-container .case-study-banner {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 45px rgba(77, 82, 96, 0.15);
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    margin-bottom: 30px;
+}
+.cause-studies-container .case-study-banner .case-study-rec {
+    position: absolute;
+}
+.cause-studies-container .case-study-banner .case-study-rec-1 {
+    left: 0;
+    top: 40px;
+}
+.cause-studies-container .case-study-banner .case-study-rec-2 {
+    left: 30px;
+    top: 230px;
+}
+.cause-studies-container .case-study-banner .case-study-rec-3 {
+    right: 20px;
+    top: 30%;
+}
+.cause-studies-container .case-study-banner .heading {
+    margin-bottom: 25px;
+}
+.cause-studies-container .case-study-banner .heading h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 25px;
+}
+.cause-studies-container .case-study-banner .heading .title-line {
+    width: 80px;
+    border: 2px solid #A06DAF;
+}
+.cause-studies-container p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+    color: #232323;
+}
+.cause-studies-container .case-study-banner .case-study-logo-main img {
+    max-width: 100%;
+}
