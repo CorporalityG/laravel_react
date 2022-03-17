@@ -4,47 +4,102 @@ import Carousel from 'react-grid-carousel'
 import "./OurIniatives.css"
 
 const OurIniatives = () => {
-    return (
-        <div className="our-iniatives-container">
-            <div className="container">
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="iniatives-heading" data-aos="fade-down">Our Initiatives</div>
-                  </div>
-                </div>
-
-                <div className="iniatives-carousel" data-aos="fade-up">
-                    <Carousel cols={3} rows={1} gap={30} autoplay={8000} loop arrowLeft={<div className="iniative-carousel iniative-carousel-prev"><img src={BASE_URL + '/img/HomePage/our-iniatives/slide-prev.png'} alt="<" /></div>} arrowRight={<div className="iniative-carousel iniative-carousel-next"><img src={BASE_URL + '/img/HomePage/our-iniatives/slide-next.png'} alt=">" /></div>}>
-                      <Carousel.Item>
-                        <div className="iniatives-item" data-aos="fade-up" data-aos-duration="2200">
-                            <img src={BASE_URL + '/img/HomePage/our-iniatives/corporality-business-magazine.png'} alt="corporality-business-magazine" />
-                        </div>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <div className="iniatives-item" data-aos="fade-up" data-aos-duration="2400">
-                            <img src={BASE_URL + '/img/HomePage/our-iniatives/corporality-club.png'} alt="corporality-club" />
-                        </div>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <div className="iniatives-item" data-aos="fade-up" data-aos-duration="2600">
-                            <img src={BASE_URL + '/img/HomePage/our-iniatives/corporality-talk.png'} alt="corporality-talk" />
-                        </div>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <div className="iniatives-item">
-                            <img src={BASE_URL + '/img/HomePage/our-iniatives/tech-consultants.png'} alt="tech-consultants" />
-                        </div>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <div className="iniatives-item">
-                            <img src={BASE_URL + '/img/HomePage/our-iniatives/priya-mishra.png'} alt="priya-mishra" />
-                        </div>
-                      </Carousel.Item>
-                    </Carousel>
-                </div>
-            </div>
+  return (
+    <div className="our-iniatives-container">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="iniatives-heading" data-aos="fade-down">Our Initiatives</div>
+          </div>
         </div>
-    )
+
+        <div className="row our-iniatives-grid-row">
+          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20 p-0 our-iniatives-grid">
+            <a title="Social Impact">
+              <figure className="our-iniatives-grid-img-effect">
+                <img src={BASE_URL + '/img/HomePage/Social-Impact.png'} alt="Social Impact" className="our-iniatives-grid-img" />
+                <div className="bottom-gradient-do_more"></div>
+                <figcaption>
+                  <h2 className="our-iniatives-grid-title">Social Impact</h2>
+                  <div className="our-iniatives-grid-desc">
+                    <p>Corporality Global stands for change and revolution.</p>
+                    <p>- We provide food to an Old Age Home in Chennai</p>
+                    <p>- We plant trees in a few villages across North-Eastern India</p>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+
+          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20 our-iniatives-grid">
+            <div className="row">
+              <div className="col-md-6 p-0">
+                <a title="Corporality Magazine">
+                  <figure className="our-iniatives-grid-img-effect">
+                    <img src={BASE_URL + '/img/HomePage/Corporality-Magazine.png'} alt="Corporality Magazine" className="our-iniatives-grid-img" />
+                    <div className="bottom-gradient-do_more"></div>
+                    <figcaption>
+                      <h2 className="our-iniatives-grid-title">Corporality Magazine</h2>
+                      <div className="our-iniatives-grid-desc">
+                        <p>Corporality Magazine keeps you up to date with the latest and greatest events taking place in the business world. Subscribe to never miss any updates!</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+
+              <div className="col-md-6 p-0">
+                <a title="Corporality Talk">
+                  <figure className="our-iniatives-grid-img-effect">
+                  <img src={BASE_URL + '/img/HomePage/Corporality-Talk.png'} alt="Corporality Talk" className="our-iniatives-grid-img" />
+                    <div className="bottom-gradient-do_more"></div>
+                    <figcaption>
+                      <h2 className="our-iniatives-grid-title">Corporality Talk</h2>
+                      <div className="our-iniatives-grid-desc">
+                        <p>Corporality Talk provides a global platform for innovative ideas and revolutionary conversations. Become a member of Corporality Talk.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+
+              <div className="col-md-6 p-0">
+                <a title="Corporality Club">
+                  <figure className="our-iniatives-grid-img-effect">
+                  <img src={BASE_URL + '/img/HomePage/Corporality-Club.png'} alt="Corporality Club" className="our-iniatives-grid-img" />
+                    <div className="bottom-gradient-do_more"></div>
+                    <figcaption>
+                      <h2 className="our-iniatives-grid-title">Corporality Club</h2>
+                      <div className="our-iniatives-grid-desc">
+                        <p>Corporality Club brings a one-of-a-kind networking experience for chief executives. Become a member of Corporality Club today!</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+
+              <div className="col-md-6 p-0">
+                <a title="TechConsultants">
+                  <figure className="our-iniatives-grid-img-effect">
+                  <img src={BASE_URL + '/img/HomePage/Tech-Consultant.png'} alt="TechConsultants" className="our-iniatives-grid-img" />
+                    <div className="bottom-gradient-do_more"></div>
+                    <figcaption>
+                      <h2 className="our-iniatives-grid-title">TechConsultants</h2>
+                      <div className="our-iniatives-grid-desc">
+                        <p>TechConsultants facilitate valuable resources across the globe - our project staffing team sources exemplary candidates for suitable jobs. Contact us today.</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  )
 }
 
 export default OurIniatives
