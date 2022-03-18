@@ -23,10 +23,10 @@ function UnderstandingDifficulty() {
               Understanding corporate difficulty
             </div>
             <div className="understanding_difficulty_first_text_description">
-              Corporate level strategy problems are many - but how many have you
-              been able to really identify? If your company is showing any one
-              of these symptoms, then you must adopt a packaged customer success
-              strategy solution to mitigate them.
+            There are lots of corporate level strategy problems - 
+            but how many have you been able to identify? If your company is 
+            showing any one of these symptoms, then you must adopt a packaged customer 
+            success strategy solution to mitigate them.
             </div>
           </div>
           <div className="Background_in_Strategy">
@@ -43,14 +43,12 @@ function UnderstandingDifficulty() {
               Finding your path
             </div>
             <div className="understanding_difficulty_last_text_description">
-              What exactly is the solution? Challenge your current perceptions,
-              and break out of your frame of reference. As a market leader,
-              compare yourself to other players to stay enlightened about their
-              marketing strategies. Thereafter break it down to smaller versions
-              and get an objective of your new perspective, which is closest to
-              your vision of the corporate level strategy. Define the
-              descriptors and precisely identify your business goals based on
-              your new approach.
+            Challenge your current perceptions and break out of your frame of reference. 
+            As a market leader, compare yourself to other players to stay enlightened about their
+             marketing strategies. Break it down into smaller versions and get an objective of your 
+             new perspective, which is closest to your vision of the corporate level strategy. 
+             Define the descriptors and precisely identify your business goals based on your new approach. 
+
             </div>
           </div>
         </div>

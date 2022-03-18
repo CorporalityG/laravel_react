@@ -29,17 +29,17 @@ export default function ClientApproach() {
               data-aos-duration="2000"
               data-aos-easing="ease-in-out"
             >
-              There is never any one-size-fits-all proposition. Every customer
-              is unique as is every entity. The beauty lies in balancing sales
-              with the demand for the product or service, which takes into
-              account finance, capacity and market trends. Companies are often
-              trapped in selling excessively and experience a slump when it
-              comes to deliveries. The best way to achieve a balance is to mesh
-              sales and delivery together on a flexible interactive platform
-              that can adapt to clients’ requirements. Being an expert in
-              corporate level strategies, Corporality Global creates a
-              predicated and symbiotic internal relationship that reflects
-              externally to create brilliant customer experiences.
+             There is never any one-size-fits-all proposition.
+              Every customer is unique as is every entity. The beauty lies in balancing 
+              sales with the demand for the product or service, which takes into account 
+              finance, capacity, and market trends. Companies are often trapped in selling
+               excessively and experience a slump when it comes to deliveries.             
+
+              The best way to achieve a balance is to mesh sales and delivery together on a 
+              flexible interactive platform that can adapt to clients’ requirements. 
+              Being an expert in corporate level strategies, Corporality Global creates a 
+              predicated and symbiotic internal relationship that reflects externally
+               to create brilliant customer experiences. 	
             </p>
           </div>
           <div className={localclass.clientApproach_right}>
