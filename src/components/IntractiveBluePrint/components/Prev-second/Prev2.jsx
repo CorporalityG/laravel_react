@@ -34,9 +34,15 @@ const Prev2 = () => {
                         </div>
                     </div>
                     <div className="col-lg-6 texting-2">
-                        <p data-aos="fade-left" className='prev-2-text-1'>Strategic Master Plan</p>
-                        <p data-aos="fade-left" className='prev-2-text-2'>Corporality Global specialises <span>i</span>n creating end to end user journeys through solid planning and inspiration. We empower our clients with effective digital marketing strategies that really work. Our custom websites and applications deliver engaging brand messages and outstanding results in every pixel.</p>
+                        <p data-aos="fade-left" className='prev-2-text-1'>Strategic Master Plan with the Blue Ocean Strategy</p>
+                        <p data-aos="fade-left" className='prev-2-text-2'>Corporality Global specialises in creating end to end user journeys 
+                        through solid planning and inspiration. We empower our clients with effective strategies that really work.
+                         Our custom websites and applications deliver engaging brand messages and outstanding results in every pixel.
+                          We use the flawless Blue Ocean Strategy in the pursuit of high quality and low costs to create new market space 
+                          and achieve demand. It is based on the concept that market limits and industry structure are not set in stone and 
+                          may be recreated by industry participants' in accordance with their actions and beliefs. </p>
                     </div>
+                    
                 </div>
             </div>
         </div>

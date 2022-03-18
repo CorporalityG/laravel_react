@@ -90,13 +90,7 @@ function BPComponent5() {
                         />
                       </div>
                       <div className="col-8 col-sm-9 col-md-10 col-lg-9 col-xxl-10  bp-cp5-listbody">
-                        While true differentiators are important, compelling the
-                        target audience is vital to the success of a brand. At
-                        Corporality Global - the top digital marketing
-                        management firm in Sydney, we locate all pain points,
-                        including unfulfilled desires and focus on placing your
-                        brand where the audience needs it the most. You will be
-                        up for grabs in no time.
+                        While true differentiators are important, compelling the target audience is vital to the success of a brand. At Corporality Global, the brand marketing professionals locate all pain points, including unfulfilled desires and focus on placing your brand where the audience needs it the most. You will be up for grabs in no time.
                       </div>
                     </div>
                   </div>

@@ -26,7 +26,7 @@ const GTMComp7 = () => {
             <div data-aos="fade-right" data-aos-duration="2000" className="comp7-left">
                 {/* <h2>Improved Marketing Mix</h2> */}
                 <h2 className='animate'><span>Improved</span>&nbsp;<span>Marketing</span>&nbsp;<span>Mix</span></h2>
-                <p>Corporality's innovative <b><span onClick={() => navigate("/digital-media-marketing")}>go to marketing</span> audit strategies help create visually evident changes in your current processes</b> to bring about a fresh and impactful perspective to further augment the presence of your brand. </p>
+                <p>Corporality's innovative digital marketing <b><span onClick={() => navigate("/digital-media-marketing")}></span> audit strategies help create visually evident changes in your current processes</b> to bring about a fresh and impactful perspective to further augment the presence of your brand. </p>
                 <div onClick={() => navigate("/digital-media-marketing")}>
                     Explore
                 </div>

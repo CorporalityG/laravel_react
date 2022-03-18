@@ -33,20 +33,16 @@ export default function Continously() {
               data-aos-duration="1500"
               data-aos-delay="800"
             >
-              Continuously working towards an organisation’s relationship goals
+              Hit your organisation’s relationship goals 
+
             </h1>
             <p
               data-aos="fade-left"
               data-aos-duration="1500"
               data-aos-delay="1200"
             >
-              A long-term sustainable customer plan is better than a short-term
-              non-sustainable marketing strategy that is expensive. Choose the
-              best defence against the churn as you hire a CXO that can navigate
-              your business across complex scenarios by inculcating discipline
-              into your customer service plan. Our on-demand leadership moves
-              swiftly from concept to execution without hitting the learning
-              curve, utilising strategic and operational expertise.
+              A long-term sustainable customer plan is better than a short-term non-sustainable strategy that is expensive. Choose the best defence against the churn as you hire a CXO that can navigate your business across complex scenarios by inculcating discipline into your customer service plan. Our on-demand leadership moves swiftly from concept to execution without hitting the learning curve, utilising strategic and operational expertise. 
+
             </p>
           </div>
         </div>
