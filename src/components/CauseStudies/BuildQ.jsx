@@ -2,18 +2,19 @@ import React from "react";
 import './CaseStudy.css'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
 import { useNavigate } from "react-router";
+import RelatedCaseStudyCarousel from "./RelatedCaseStudyCarousel";
 
 const BuildQ = () => {
 
 	const navigate = useNavigate();
-    const topHandle = () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    };
+	const topHandle = () => {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	};
 
 	return (
 		<div className="cause-studies-container">
-			
+
 			<div className="case-study-banner">
 				<img src={BASE_URL + '/img/case-study-rec-1.png'} alt="case-study-rec-1" className="case-study-rec case-study-rec-1" />
 				<img src={BASE_URL + '/img/case-study-rec-2.png'} alt="case-study-rec-2" className="case-study-rec case-study-rec-2" />
@@ -65,7 +66,7 @@ const BuildQ = () => {
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
-					<div className="case-study-bottom-line"></div>
+						<div className="case-study-bottom-line"></div>
 					</div>
 				</div>
 			</div>
@@ -106,7 +107,7 @@ const BuildQ = () => {
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
-					<div className="case-study-bottom-line"></div>
+						<div className="case-study-bottom-line"></div>
 					</div>
 				</div>
 			</div>
@@ -140,7 +141,7 @@ const BuildQ = () => {
 
 							<div className="case-study-suggested-box-main">
 								<div className="case-study-suggested-top-line"></div>
-									<div className="case-study-suggested-box">
+								<div className="case-study-suggested-box">
 									<div className="case-study-suggested-title">Suggested for you</div>
 									<div className="case-study-suggested-content">
 										<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers.</p>
@@ -165,6 +166,71 @@ const BuildQ = () => {
 									<img src={BASE_URL + '/img/case-study-outcome-video-play.png'} alt="Play" />
 								</div>
 							</div>
+						</div>
+					</div>
+
+					<div className="row case-study-outcome-content-main">
+						<div className="col-md-6">
+							<div className="case-study-testimonial">
+								<img src={BASE_URL + '/img/testi-img.png'} alt="testi-img" className="case-study-testi-img" />
+								<div className="case-study-testi-content">
+									<img src={BASE_URL + '/img/testi-quote.png'} alt="testi-quote" className="case-study-testi-quote" />
+									<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers by area to find sales gaps. The company was  frequently wasting their efforts and missing out on significant possibilities that were there in front of them.</p>
+								</div>
+							</div>
+						</div>
+
+						<div className="col-md-6">
+							<div className="case-study-outcome-content">
+								<h2>The outcome</h2>
+								<p>We paid great attention to our client’s front line from the start, understanding that their input was crucial to both designing a new digital model and gaining internal support for it. The company's agents were ecstatic to embrace new technologies that could strengthen client relationships.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div className="case-study-business-level-container">
+				<div className="container">
+					<div className="row case-study-business-level-row">
+						<div className="col-md-6">
+							<div className="case-study-business-level">
+								<div className="case-study-business-level-title">Ready to take your business to the next level?</div>
+								<div className="case-study-business-level-content">
+									<span>Talk to our experts in:</span>
+									<div className="case-study-business-level-dd">Medtech</div>
+								</div>
+							</div>
+						</div>
+
+						<div className="col-md-6">
+							<div className="case-study-business-expand">
+								<p>We provide strategic consulting to businesses worldwide. Want to expand your business globally, or want to achieve great success in your respective industry? We got your back.</p>
+								<div className="case-study-business-expand-form">
+									<div className="row">
+										<div className="col-md-6 form-group">
+											<input type="text" className="form-control" placeholder="First name" />
+										</div>
+										<div className="col-md-6 form-group">
+											<input type="text" className="form-control" placeholder="Last name" />
+										</div>
+
+										<div className="col-md-12 form-group">
+											<button type="submit" className="business-expand-btn">Submit</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div className="case-study-related-container">
+				<div className="container">
+					<div className="row">
+						<div className="col-md-12">
+							<RelatedCaseStudyCarousel slug={"build-q"} />
 						</div>
 					</div>
 				</div>

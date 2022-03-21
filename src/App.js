@@ -34,6 +34,9 @@ import KlekServices from "./components/CauseStudies/KlekServices";
 import SKInsurance from "./components/CauseStudies/SKInsurance";
 import TechConsultants from "./components/CauseStudies/TechConsultants";
 import Clients from "./components/CauseStudies/Clients";
+import XDesign from "./components/CauseStudies/XDesign";
+import MeyerWest from "./components/CauseStudies/MeyerWest";
+import Lumoral from "./components/CauseStudies/Lumoral";
 
 import ResearchPapers from "./components/ResearchPapers/ResearchPapers";
 
@@ -100,6 +103,9 @@ function App() {
             <Route path="/klek-services" element={<KlekServices />} />
             <Route path="/sk-insurance" element={<SKInsurance />} />
             <Route path="/tech-consultants" element={<TechConsultants />} />
+            <Route path="/x-designs" element={<XDesign />} />
+            <Route path="/meyer-west" element={<MeyerWest />} />
+            <Route path="/lumoral" element={<Lumoral />} />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             

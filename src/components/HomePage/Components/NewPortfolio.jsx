@@ -50,7 +50,7 @@ const NewPortfolio = () => {
                                                     <div className="steps-content">
                                                         <p>One of the leading construction companies in Sydney - BuildQ Group outsourced their Digital Media Marketing to us. We devised a comprehensive digital marketing strategy..</p>
                                                     </div>
-                                                    <a href="#" className="portfolio-link">View Offering <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></a>
+                                                    <span className="portfolio-link" onClick={() => { navigate("/build-q"); topHandle(); }}>View Offering <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -83,7 +83,7 @@ const NewPortfolio = () => {
                                                     <div className="steps-content">
                                                         <p>Fastgrow Finance provides Mortgage Solutions and Loans in Sydney and is a growing name in the industry. With our comprehensive digital media..</p>
                                                     </div>
-                                                    <a href="#" className="portfolio-link">View Offering <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></a>
+                                                    <span className="portfolio-link" onClick={() => { navigate("/fastgrow-finance"); topHandle(); }}>View Offering <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -116,7 +116,7 @@ const NewPortfolio = () => {
                                                     <div className="steps-content">
                                                         <p>Divine Intercession is a team of specialists dealing with spiritual affliction and guidance. Our Interactive Blueprint plan increased their social media presence ..</p>
                                                     </div>
-                                                    <a href="#" className="portfolio-link">View Offering <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></a>
+                                                    <span className="portfolio-link" onClick={() => { navigate("/divine-intercession"); topHandle(); }}>View Offering <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,79 +149,14 @@ const NewPortfolio = () => {
                                                     <div className="steps-content">
                                                         <p>SK Insure is a leading insurance provider based out of Australia. Armed with our effective digital media marketing strategy, they are constantly expanding their digital presence..</p>
                                                     </div>
-                                                    <a href="#" className="portfolio-link">View Offering <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></a>
+                                                    <span className="portfolio-link" onClick={() => { navigate("/sk-insurance"); topHandle(); }}>View Offering <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </Carousel.Item>
-
-                            {/*<Carousel.Item>
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col-md-4 portfolio-left">
-                                            <div className="portfolio-img-heading">
-                                                <img className="portfolio-img" src={BASE_URL + '/img/HomePage/media/liqmet.png'} alt="Liqmet" />
-                                                <h2 className="portfolio-heading">Liqmet</h2>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-8 portfolio-right">
-                                            <h3 className="portfolio-title">Work that Excites us.</h3>
-                                            <div className="portfolio-content">
-                                                <p>Utilising agile in its true form to provide timely, transparent and reliable outcomes.</p>
-                                            </div>
-                                            <div className="portfolio-boxes">
-                                                <div className="portfolio-box portfolio-box-studies" style={{backgroundImage: "url("+BASE_URL+"/img/HomePage/media/identifying-the-intended-maturity.png)"}}>
-                                                    <p className="studies-subtitle">Featured cause studies</p>
-                                                    <p className="studies-title">Identifying the intended maturity</p>
-                                                    <span className="portfolio-link" onClick={() => { navigate("/liqmet"); topHandle(); }}>Explore <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
-                                                </div>
-                                                <div className="portfolio-box portfolio-box-steps">
-                                                    <p className="steps-title">Our Fearless Steps</p>
-                                                    <div className="steps-content">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor mattis faucibus ac nunc eu, sapien sollicitudin malesuada ut. Pellentesque dui, consectetur amet viverra a in urna vivamus.</p>
-                                                    </div>
-                                                    <a href="#" className="portfolio-link">View Offering <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Carousel.Item>*/}
-
-                            {/*<Carousel.Item>
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col-md-4 portfolio-left">
-                                            <div className="portfolio-img-heading">
-                                                <img className="portfolio-img" src={BASE_URL + '/img/HomePage/media/divine-intercession.png'} alt="Klek Services" />
-                                                <h2 className="portfolio-heading">Klek Services</h2>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-8 portfolio-right">
-                                            <h3 className="portfolio-title">Work that Excites us.</h3>
-                                            <div className="portfolio-content">
-                                                <p>Customer centricity meant embracing digitalisation for Klek Services that was stuck in the past.</p>
-                                            </div>
-                                            <div className="portfolio-boxes">
-                                                <div className="portfolio-box portfolio-box-studies" style={{backgroundImage: "url("+BASE_URL+"/img/HomePage/media/out-of-the-ordinary.png)"}}>
-                                                    <p className="studies-subtitle">Featured cause studies</p>
-                                                    <p className="studies-title">Out of the ordinary</p>
-                                                    <span className="portfolio-link" onClick={() => { navigate("/klek-services"); topHandle(); }}>Explore <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
-                                                </div>
-                                                <div className="portfolio-box portfolio-box-steps">
-                                                    <p className="steps-title">Our Fearless Steps</p>
-                                                    <div className="steps-content">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor mattis faucibus ac nunc eu, sapien sollicitudin malesuada ut. Pellentesque dui, consectetur amet viverra a in urna vivamus.</p>
-                                                    </div>
-                                                    <a href="#" className="portfolio-link">View Offering <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Carousel.Item>*/}
+                            
                         </Carousel>
 
                         <div className="portfolio-count" data-aos="fade-up" data-aos-duration="2200">

@@ -18,7 +18,6 @@ function ClientItem(props) {
                 </div>
                 <div className="client-item-content">
                     <div className="client-item-title">{props.title}</div>
-                    <div className="client-item-subtitle">{props.subtitle}</div>
                     <div className="client-item-btn">
                         <div onClick={() => { navigate(`/${props.slug}`); topHandler(); }} className="client-item-explore">Explore <img src={BASE_URL + '/img/right-arrow-blue.png'} alt="->" /></div>
                     </div>

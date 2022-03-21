@@ -54,52 +54,63 @@ function Clients() {
 
                 <div className="row clients-list-row">
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/Divine-Intercession-Client.png'}
-                        title={'Divine Intercession'}
-                        subtitle={'Human to Human solutions'}
-                        slug={'divine-intercession'}
-                    />
-
-                    <ClientItem 
                         thumbnail={BASE_URL + '/img/BuildQ-Client.png'}
                         title={'BuildQ Group'}
-                        subtitle={'Building a perfect digital framework'}
                         slug={'build-q'}
                     />
 
                     <ClientItem 
+                        thumbnail={BASE_URL + '/img/Divine-Intercession-Client.png'}
+                        title={'Divine Intercession'}
+                        slug={'divine-intercession'}
+                    />
+
+                    <ClientItem 
                         thumbnail={BASE_URL + '/img/Fastgrow-Client.png'}
-                        title={'Fastgrow'}
-                        subtitle={'Identifying the intended maturity'}
+                        title={'Fastgrow Finance'}
                         slug={'fastgrow-finance'}
                     />
 
                     <ClientItem 
                         thumbnail={BASE_URL + '/img/TechConsultants-Client.png'}
                         title={'Tech Consultants'}
-                        subtitle={'Out of the ordinary'}
                         slug={'tech-consultants'}
                     />
 
                     <ClientItem 
                         thumbnail={BASE_URL + '/img/SK-Insurance-Client.png'}
                         title={'SK Insurance'}
-                        subtitle={'Visionary growth strategies'}
                         slug={'sk-insurance'}
                     />
 
                     <ClientItem 
                         thumbnail={BASE_URL + '/img/Klek-Services-Client.png'}
                         title={'Klek Services'}
-                        subtitle={'Identifying the intended maturity'}
                         slug={'klek-services'}
                     />
 
                     <ClientItem 
                         thumbnail={BASE_URL + '/img/Liqmet-Client.png'}
                         title={'Liqmet'}
-                        subtitle={'Out of the ordinary'}
                         slug={'liqmet'}
+                    />
+
+                    <ClientItem 
+                        thumbnail={BASE_URL + '/img/Meyar-West-Client.png'}
+                        title={'Meyer West'}
+                        slug={'meyer-west'}
+                    />
+
+                    <ClientItem 
+                        thumbnail={BASE_URL + '/img/X-Designs-Client.png'}
+                        title={'X Designs'}
+                        slug={'x-designs'}
+                    />
+
+                    <ClientItem 
+                        thumbnail={BASE_URL + '/img/Lumoral-Client.png'}
+                        title={'Lumoral'}
+                        slug={'lumoral'}
                     />
                 </div>
             </div>

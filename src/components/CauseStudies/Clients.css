@@ -112,6 +112,9 @@
     background-color: #fff;
     margin-bottom: 60px;
   }
+  .clients-list-container .client-item .client-item-img {
+      height: 320px;
+  }
   .clients-list-container .client-item .client-item-img img {
       width: 100%;
   }
@@ -123,8 +126,8 @@
   .clients-list-container .client-item .client-item-title {
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    color: #A06DAF;
+    font-size: 22px;
+    color: #33657E;
     margin-bottom: 10px;
   }
   .clients-list-container .client-item .client-item-subtitle {

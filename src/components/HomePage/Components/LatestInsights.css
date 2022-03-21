@@ -36,22 +36,22 @@
   background-color: #fff;
   width: 100%;
   height: 325px;
-  border-radius: 10px 10px 0 0;
-  border: 1px solid #ccc;
+  /* border-radius: 10px 10px 0 0;
+  border: 1px solid #ccc; */
 }
 .blogs-container .blog-content {
   background-color: #FFF;
   box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.05);
   padding: 15px 20px;
-  border-radius: 0 0 5px 5px;
+  /* border-radius: 0 0 5px 5px; */
 }
 .blogs-container .blog-content .blog-title {
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   color: #3C708E;
-  margin-bottom: 10px;
-  min-height: 65px;
+  /* margin-bottom: 10px;
+  min-height: 65px; */
 }
 .blogs-container .blog-content .blog-title::after {
   background: #3C708E;
@@ -97,14 +97,47 @@
   margin-right: 5px;
 }
 .blogs-container .blog-btn {
-  background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
-  margin: 30px auto 0;
-  padding: 10px 20px;
+  border-image: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%);
+  border-style: solid;
+  border-width: 1px;
+  margin: 30px auto 10px;
+  padding: 8px 20px;
   font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  color: #FFFFFF;
-  max-width: 170px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #33657E;
+  max-width: 150px;
   text-align: center;
   cursor: pointer;
+  position: relative;
+  border-image-slice: 1;
+}
+
+.blogs-container .blog-item-left .blog-item-box-main {
+  display: flex;
+  background: #FFFFFF;
+  box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+.blogs-container .blog-item-left .blog-item-box-main .blog-item-box-img {
+  width: 40%;
+  object-fit: cover;
+}
+.blogs-container .blog-item-left .blog-item-box-main .blog-item-box-content {
+  width: 60%;
+  padding: 20px;
+}
+.blogs-container .blog-item-left .blog-item-box-main .blog-item-box-subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #757575;
+  margin-bottom: 10px;
+}
+.blogs-container .blog-item-left .blog-item-box-main .blog-item-box-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #3C708E;
+  text-transform: uppercase;
 }

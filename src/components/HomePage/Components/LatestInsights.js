@@ -47,7 +47,7 @@ function LatestInsights()
         <div className="row">
           {
             latestBlogs ? 
-              latestBlogs.slice(0, 2).map( (blogItem, index)=>
+              latestBlogs.slice(0, 1).map( (blogItem, index)=>
                 <div key={blogItem.id} className="col-md-6 blog-item">
                   <div data-aos="fade-down">
                     <img src={API_IMG_URL + blogItem.post_image} alt={blogItem.post_title} className="blog-img" />
@@ -55,7 +55,7 @@ function LatestInsights()
                   <div className="blog-content" data-aos="fade-up">
                     <div className="blog-title" data-aos="fade-up" data-aos-duration="2100">{blogItem.post_title}</div>
                     <div data-aos="fade-up" data-aos-duration="2200">
-                      <p><span dangerouslySetInnerHTML={{__html: truncate(blogItem.post_short_description ?? blogItem.post_description.replace(/<(.|\n)*?>/g, ''), 300)}}></span> <Link to={`/${blogItem.post_slug}`} className="blog-read-more">Read more</Link></p>
+                      <p><span dangerouslySetInnerHTML={{__html: truncate(blogItem.post_short_description ?? blogItem.post_description.replace(/<(.|\n)*?>/g, ''), 200)}}></span> <Link to={`/${blogItem.post_slug}`} className="blog-read-more">Read more</Link></p>
                     </div>
                     <div className="blog-date-comment-main" data-aos="fade-up" data-aos-duration="2300">
                       <div className="blog-date-comment">
@@ -67,18 +67,41 @@ function LatestInsights()
                         <span>(0) Comments</span>
                       </div>
                     </div>
+
+                    <div className="blog-btn" onClick={() => navigate("/blog")} data-aos="fade-up">Our Blogs</div>
                   </div>
                 </div>
               )
             : null
           }
-        </div>
 
-        <div className="row">
-          <div className="col-md-12">
-            <div className="blog-btn" onClick={() => navigate("/blog")} data-aos="fade-up">See All Insights</div>
+          <div className="col-md-6 blog-item-left">
+            <div className="blog-item-box-main">
+              <img src={BASE_URL + '/img/HomePage/MEDTECH-INDUSTRY.png'} alt="MEDTECH-INDUSTRY" className="blog-item-box-img" />
+              <div className="blog-item-box-content">
+                <div className="blog-item-box-subtitle">Latest Research Paper</div>
+                <div className="blog-item-box-title">MEDTECH INDUSTRY</div>
+              </div>
+            </div>
+
+            <div className="blog-item-box-main">
+              <img src={BASE_URL + '/img/HomePage/MEDTECH-INDUSTRY.png'} alt="MEDTECH-INDUSTRY" className="blog-item-box-img" />
+              <div className="blog-item-box-content">
+                <div className="blog-item-box-subtitle">Latest POD Cast</div>
+                <div className="blog-item-box-title">MEDTECH INDUSTRY</div>
+              </div>
+            </div>
+
+            <div className="blog-item-box-main">
+              <img src={BASE_URL + '/img/HomePage/MEDTECH-INDUSTRY.png'} alt="MEDTECH-INDUSTRY" className="blog-item-box-img" />
+              <div className="blog-item-box-content">
+                <div className="blog-item-box-subtitle">Latest Video</div>
+                <div className="blog-item-box-title">MEDTECH INDUSTRY</div>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   );
