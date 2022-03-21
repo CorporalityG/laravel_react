@@ -7,6 +7,7 @@ import BPComponent4 from "./BrandPos-Components/BP-Component-4/BP-Component-4";
 import BPComponent5 from "./BrandPos-Components/BP-Component-5/BP-Comp-5";
 import BPComp3 from "./BrandPos-Components/BP-Component-3/BPComp3";
 import BrandFirst from "./BrandPos-Components/Brand_First/BrandFirst";
+import Faqs from "./BrandPos-Components/Faqs";
 
 export default function Component1() {
   useEffect(() => {
@@ -259,6 +260,7 @@ export default function Component1() {
       </div>
       <BPComponent4 />
       <BPComponent5 />
+      <Faqs />
     </>
   );
 }

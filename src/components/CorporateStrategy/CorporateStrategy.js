@@ -7,6 +7,7 @@ import CorporateFirst from "./Components/CorporateBulb/CorporateFirst";
 import Objectives from "./Components/Objectives";
 import Parallax from "./Components/ParallaxSlide";
 import UnderstandingDifficulty from "./Components/UnderstandingDifficulty/UnderstandingDifficulty";
+import Faqs from "./Components/Faqs";
 
 function CorporateStrategy() {
   return (
@@ -17,6 +18,8 @@ function CorporateStrategy() {
       <ClientApproach />
       <Parallax />
       <Objectives />
+      <Faqs />
+
     </>
   );
 }
