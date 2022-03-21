@@ -64,7 +64,7 @@ export default function leverage() {
                       <img className="cxo-card1-img" src="./img/CxoStrategy/img/leverage/lev3.png" />
                     </div>
                     <div className="col">
-                      <p className="cxo-card1-para">Increased Agitity</p>
+                      <p className="cxo-card1-para">Fulfils Project requirements</p>
                     </div>
                   </div>
                 </div>
@@ -77,7 +77,7 @@ export default function leverage() {
                       <img className="cxo-card2-img" src="./img/CxoStrategy/img/leverage/lev4.png" />
                     </div>
                     <div className="col">
-                      <p className="cxo-card2-para">Reduced Costs</p>
+                      <p className="cxo-card2-para">Special Skills addition</p>
                     </div>
                   </div>
                 </div>

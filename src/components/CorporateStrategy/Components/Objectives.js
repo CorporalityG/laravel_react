@@ -29,14 +29,14 @@ function Objectives() {
           </button>
           <div className="objectives_heading2">Corporate success strategy</div>
           <div className="objectives_description">
-            Having a strong understanding of what the customer wants is crucial
-            for a successful corporate level marketing strategy. Corporality
-            formulates guidelines typically designed for the senior management
-            level to be filtered down to all the employees across the
-            organisation. There are crucial elements of corporate sustainability
-            branding that help customers quickly identify and remember your
-            company. With the right marketing mix, our experts cut through the
-            noise to create directives to drop a product into the market.
+          Having a strong understanding of what the customer wants is crucial for a
+           successful corporate level strategy. Corporality formulates guidelines typically
+            designed for the senior management level to be filtered down to all the employees 
+            across the organization. There are crucial elements of corporate sustainability 
+            branding that help customers quickly identify and remember your company.
+             With the right marketing mix, our experts cut through the noise to create
+              directives to drop a product into the market.
+
           </div>
         </div>
         <div

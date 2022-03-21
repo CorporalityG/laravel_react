@@ -44,13 +44,12 @@ function AllCardsNew() {
             <span>Methodology</span>
           </div>
           <div className="cards_top_description">
-            Designed and successfully used by Corporality to accelerate the rate
-            of overall company growth, businesses focused on Human to Human
-            growth (not just B2B or B2C) get the option to achieve their goals
-            faster than their competitors. It expedites revenue growth by
-            getting the functional marketing strategies of corporate culture,
-            sales & lead generation, marketing, and solutions fully aligned to
-            the management team’s visionary growth strategy for the company.
+          Designed and successfully used by Corporality to accelerate the rate of overall 
+          company growth, businesses focused on Human to Human growth (not just B2B or B2C) 
+          get the option to achieve their goals faster than their competitors. It expedites 
+          revenue growth by getting the functional marketing strategies of corporate culture, sales &
+           lead generation, and solutions fully aligned to the management team’s visionary growth strategy 
+           for the company.
           </div>
         </div>
 
