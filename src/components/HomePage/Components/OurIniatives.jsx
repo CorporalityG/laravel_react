@@ -17,7 +17,7 @@ const OurIniatives = () => {
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20 p-0 our-iniatives-grid">
             <a title="Social Impact">
               <figure className="our-iniatives-grid-img-effect">
-                <img src={BASE_URL + '/img/HomePage/Social-Impact.png'} alt="Social Impact" className="our-iniatives-grid-img" />
+                <img src={BASE_URL + '/img/HomePage/Social-Impact1.png'} alt="Social Impact" className="our-iniatives-grid-img" />
                 <div className="bottom-gradient-do_more"></div>
                 <figcaption>
                   <h2 className="our-iniatives-grid-title">Social Impact</h2>
@@ -36,7 +36,7 @@ const OurIniatives = () => {
               <div className="col-md-6 p-0">
                 <a title="Corporality Magazine">
                   <figure className="our-iniatives-grid-img-effect">
-                    <img src={BASE_URL + '/img/HomePage/Corporality-Magazine.png'} alt="Corporality Magazine" className="our-iniatives-grid-img" />
+                    <img src={BASE_URL + '/img/HomePage/Corporality-Magazine1.png'} alt="Corporality Magazine" className="our-iniatives-grid-img" />
                     <div className="bottom-gradient-do_more"></div>
                     <figcaption>
                       <h2 className="our-iniatives-grid-title">Corporality Magazine</h2>
@@ -51,7 +51,7 @@ const OurIniatives = () => {
               <div className="col-md-6 p-0">
                 <a title="Corporality Talk">
                   <figure className="our-iniatives-grid-img-effect">
-                  <img src={BASE_URL + '/img/HomePage/Corporality-Talk.png'} alt="Corporality Talk" className="our-iniatives-grid-img" />
+                  <img src={BASE_URL + '/img/HomePage/Corporality-Talk1.png'} alt="Corporality Talk" className="our-iniatives-grid-img" />
                     <div className="bottom-gradient-do_more"></div>
                     <figcaption>
                       <h2 className="our-iniatives-grid-title">Corporality Talk</h2>
@@ -66,7 +66,7 @@ const OurIniatives = () => {
               <div className="col-md-6 p-0">
                 <a title="Corporality Club">
                   <figure className="our-iniatives-grid-img-effect">
-                  <img src={BASE_URL + '/img/HomePage/Corporality-Club.png'} alt="Corporality Club" className="our-iniatives-grid-img" />
+                  <img src={BASE_URL + '/img/HomePage/Corporality-Club1.png'} alt="Corporality Club" className="our-iniatives-grid-img" />
                     <div className="bottom-gradient-do_more"></div>
                     <figcaption>
                       <h2 className="our-iniatives-grid-title">Corporality Club</h2>
@@ -81,7 +81,7 @@ const OurIniatives = () => {
               <div className="col-md-6 p-0">
                 <a title="TechConsultants">
                   <figure className="our-iniatives-grid-img-effect">
-                  <img src={BASE_URL + '/img/HomePage/Tech-Consultant.png'} alt="TechConsultants" className="our-iniatives-grid-img" />
+                  <img src={BASE_URL + '/img/HomePage/Tech-Consultant1.png'} alt="TechConsultants" className="our-iniatives-grid-img" />
                     <div className="bottom-gradient-do_more"></div>
                     <figcaption>
                       <h2 className="our-iniatives-grid-title">TechConsultants</h2>
