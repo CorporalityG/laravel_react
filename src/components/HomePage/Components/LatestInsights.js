@@ -68,7 +68,7 @@ function LatestInsights()
                       </div>
                     </div>
 
-                    <div className="blog-btn" onClick={() => navigate("/blog")} data-aos="fade-up">Our Blogs</div>
+                    <div className="blog-btn" onClick={() => navigate("/blog")} data-aos="fade-up">More Blogs</div>
                   </div>
                 </div>
               )

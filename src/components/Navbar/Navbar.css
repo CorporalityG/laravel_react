@@ -188,6 +188,25 @@
   display: block;
 }
 
+.nav-item.contact-no {
+  margin-right: 0 !important;
+}
+.nav-item.contact-no > div {
+  width: 115px;
+  color: #31647c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px !important;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(to right, rgb(229, 205, 96), rgb(108, 160, 188)) 1;
+  text-align: center;
+}
+.nav-item.contact-no::after {
+  bottom: 5px;
+}
+
 .contact-no-a {
   letter-spacing: 1px;
   margin: 0px !important;

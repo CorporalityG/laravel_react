@@ -1,0 +1,28 @@
+.say-hello-container {
+    background-color: #fff;
+    background-origin: content-box;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: fixed;
+    right: 0;
+    padding: 15px 20px;
+    box-shadow: 2px 5px 10px #ccc;
+    color: #31647c;
+}
+.say-hello-container .say-hello-section .say-hello-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.say-hello-container .say-hello-section .say-hello-item:not(:last-child) {
+    border-bottom: 1px dotted #31647c;
+    margin-bottom: 5px;
+    padding-bottom: 8px;
+}
+.say-hello-container .say-hello-section .say-hello-item .say-hello-contact-flag img {
+    max-width: 25px;
+    margin-right: 10px;
+}
+.say-hello-container .say-hello-section .say-hello-item:hover {
+    color: #A06DAF;
+}

@@ -11,6 +11,7 @@ import { NavbarContext } from './Context/NavbarContext';
 import { Link, useNavigate } from 'react-router-dom';
 import Insights from './components/Insights';
 import topHandler from '../../CommonHandler/TopHandler';
+import SayHelloContact from './components/SayHelloContact';
 
 const Navbar = () => {
     const isLargeScreen = useMediaQuery({ query: '(min-width: 1200px)' })
@@ -20,12 +21,13 @@ const Navbar = () => {
     const [showInsights, setShowInsights] = useState(false)
     const [navClicked, setNavClicked] = useState(false);
     const [showAbout2, setShowAbout2] = useState(false);
+    const [showSayHelloContact, setShowSayHelloContact] = useState(false);
     const [menuId, setMenuId] = useState(1);
     const navigate = useNavigate();
 
     const providerValue = useMemo(() =>
-        ({ isLargeScreen, showAbout, setShowAbout, showAbout2, setShowAbout2, showServices, setShowServices, showIndustries, setShowIndustries, showInsights, setShowInsights, navClicked, setNavClicked, menuId, setMenuId })
-        , [isLargeScreen, showAbout, setShowAbout, showAbout2, setShowAbout2, showServices, setShowServices, showIndustries, setShowIndustries, showInsights, setShowInsights, navClicked, setNavClicked, menuId, setMenuId])
+        ({ isLargeScreen, showAbout, setShowAbout, showAbout2, setShowAbout2, showServices, setShowServices, showIndustries, setShowIndustries, showInsights, setShowInsights, navClicked, setNavClicked, menuId, setMenuId, showSayHelloContact, setShowSayHelloContact })
+        , [isLargeScreen, showAbout, setShowAbout, showAbout2, setShowAbout2, showServices, setShowServices, showIndustries, setShowIndustries, showInsights, setShowInsights, navClicked, setNavClicked, menuId, setMenuId, showSayHelloContact, setShowSayHelloContact])
 
     return (
         <>
@@ -64,9 +66,14 @@ const Navbar = () => {
                                     <div className="nav-item contact" onClick={() => { navigate("/contact"); topHandler() }}>
                                         <div className="contact-a">CONTACT</div>
                                     </div>
-                                    <div className="nav-item contact-no" onClick={() => window.open("tel:+61 2 83794089", "_self")}>
+                                    {/* <div className="nav-item contact-no" onClick={() => window.open("tel:+61 2 83794089", "_self")}>
                                         <div className="contact-no-a">+61 2 83794089</div>
+                                    </div> */}
+
+                                    <div className={`nav-item contact-no ${(showSayHelloContact && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => { console.log("set industries"); setShowSayHelloContact(!showSayHelloContact) }} onMouseOver={() => { if (isLargeScreen) setShowSayHelloContact(true) }} onMouseLeave={() => { if (isLargeScreen) setShowSayHelloContact(false) }}>
+                                        <div className="contact-no-a">Say Hello</div>
                                     </div>
+                                    <SayHelloContact />
                                 </div>
                             </div>
                         </div>
