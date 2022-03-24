@@ -25,7 +25,7 @@ const Insights = () => {
                                 <div className="diamond-line"></div>
                             </div>
                             
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink(); window.open("https://corporality.global/club", "_blank");}}>
                                 <h6>Corporality - Club</h6>
                                 <div className="diamond-line"></div>
                             </div>
@@ -37,7 +37,7 @@ const Insights = () => {
                             </div>
 
                             
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink(); window.open("http://corporality.global/talk/", "_blank");}}>
                                 <h6>Corporality - Talk</h6>
                                 <div className="diamond-line"></div>
                             </div>

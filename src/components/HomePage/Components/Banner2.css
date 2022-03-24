@@ -34,6 +34,7 @@
   font-weight: 500;
   color: #33657e;
   font-size: 18px;
+  padding-top: 20px;
 }
 .dbanner .boxSubHead {
   color: #232323;
@@ -48,7 +49,7 @@
 .dbanner .boxContent {
   z-index: 1;
 }
-.dbanner .sbox:not(:last-child) .boxContent {
+.dbanner .sbox:not(:last-child) {
   border-right: 2px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -107,6 +108,7 @@
   padding: 5px 15px !important;
   /* font-size: 14px !important; */
   /* margin: 15px 0px !important; */
+  min-height: 83px;
 }
 
 .dbanner .learn-more {
@@ -168,11 +170,19 @@
   position: relative;
 }
 
+
+@media only screen and (max-width: 1199.99px) {
+  .dbanner .littleD {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
 @media only screen and (max-width: 992px) {
   .dbanner .sbox {
     height: 270px;
     width: 270px;
-    font-size: 8px;
   }
   .dbanner .box {
     height: 185px;
@@ -186,13 +196,34 @@
     margin: 2px 0px !important;
     padding-bottom: 0px !important;
   }
+  .dbanner .boxContent > p:nth-child(2) {
+    padding: 5px !important;
+  }
+  .dbanner .littleD {
+    margin-top: 0 !important;
+  }
+  .dbanner {
+    margin-top: 80px !important;
+  }
+}
+
+
+@media only screen and (min-width: 757px) and (max-width: 825px) {
+  .dbanner .boxContent > p:nth-child(2) {
+    min-height: 106px;
+  }
+  .dbanner .boxHead {
+    padding-top: 40px;
+  }
 }
 
 @media only screen and (max-width: 756px) {
+  .dbanner {
+    margin-top: 100px !important;
+  }
   .dbanner .sbox {
     height: 250px;
-    width: 250px;
-    font-size: 8px;
+    width: 100%;
   }
   .dbanner .box {
     height: 165px;
@@ -201,23 +232,38 @@
   .dbanner .boxContent p {
     margin-bottom: 0px !important;
   }
+  .dbanner {
+    flex-direction: column;
+  }
+  .dbanner .sbox:not(:last-child) {
+    border-right-width: 0;
+  }
+  .dbanner .sbox:not(:last-child) .boxContent {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  .dbanner .boxContent > p:nth-child(2) {
+    min-height: auto;
+  }
+  .dbanner .littleD {
+    margin-top: 10px !important;
+  }
+  .dbanner.py-0 {
+    padding-top: 20px !important;
+  }
 }
 
-@media only screen and (max-width: 576px) {
-  .dbanner .sbox {
-    height: 200px;
-    width: 200px;
-    font-size: 8px;
+
+@media only screen and (max-width: 601px) {
+  .dbanner .littleD {
+    margin-top: 40px !important;
   }
+}
+
+
+@media only screen and (max-width: 576px) {
   .dbanner .box {
     height: 145px;
     width: 145px;
-  }
-  .dbanner .boxContent p {
-    margin-bottom: 0px !important;
-  }
-  .dbanner .learn-more {
-    margin-top: 0px !important;
   }
   .dbanner .learn-more > img {
     padding: 0px 5px !important;

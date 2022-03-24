@@ -49,7 +49,7 @@ const NewBanner = () => {
     }
     
     useEffect(() => {
-        setInterval(() => {
+        /* setInterval(() => {
             setIndicatorId(i => {
                 //console.log(i);
                 if(i < 3)
@@ -75,7 +75,7 @@ const NewBanner = () => {
                     return 1;
                 }
             });
-          }, 8000);
+          }, 8000); */
     }, [])
 
     return (
@@ -129,9 +129,19 @@ const NewBanner = () => {
                     </div>
 
                     <div className={`mainPartBanner ${indicatorId===2? "" : "bannerTextHide"}`}>
-                        <div className="bgPartBanner">
-                            <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="" className="banner-bg-image" />
+                        <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="" className="banner-bg-image" />
 
+                        <div className="leftPartBanner">
+                            <div className="bannerText">
+                                <h1 className="bannerHead">Reimagining your boundaries</h1>
+                                <p className="bannerSubtitle">Expanding your reach to provide more than just marketing solutions Superior brand management company Australia</p>
+                                <div className="bannerBtn">
+                                    <a href="tel:4154267999">Book a Discovery Call</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bgPartBanner">
                             <div className="mainBannerImg">
                                 <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="" className="banner-image" />
                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="" className="video-icon" />
@@ -142,16 +152,6 @@ const NewBanner = () => {
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="" className="rectangle-2" />
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="" className="rectangle-3" />
                                 <img src={BASE_URL + 'img/HomePage/media/rectangle-4.png'} alt="" className="rectangle-4" />
-                            </div>
-                        </div>
-
-                        <div className="leftPartBanner">
-                            <div className="bannerText">
-                                <h1 className="bannerHead">Reimagining your boundaries</h1>
-                                <p className="bannerSubtitle">Expanding your reach to provide more than just marketing solutions Superior brand management company Australia</p>
-                                <div className="bannerBtn">
-                                    <a href="tel:4154267999">Book a Discovery Call</a>
-                                </div>
                             </div>
                         </div>
 
@@ -170,9 +170,19 @@ const NewBanner = () => {
                     </div>
 
                     <div className={`mainPartBanner ${indicatorId===3? "" : "bannerTextHide"}`}>
-                        <div className="bgPartBanner">
-                            <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="" className="banner-bg-image" />
+                        <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="" className="banner-bg-image" />
 
+                        <div className="leftPartBanner">
+                            <div className="bannerText">
+                                <h1 className="bannerHead">The future of businesses is right here</h1>
+                                <p className="bannerSubtitle">Implement the right marketing strategies for your business Premier marketing company Australia</p>
+                                <div className="bannerBtn">
+                                    <a href="tel:4154267999">Book a Discovery Call</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bgPartBanner">
                             <div className="mainBannerImg">
                                 <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="" className="banner-image" />
                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="" className="video-icon" />
@@ -183,16 +193,6 @@ const NewBanner = () => {
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="" className="rectangle-2" />
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="" className="rectangle-3" />
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-4.png'} alt="" className="rectangle-4" />
-                            </div>
-                        </div>
-
-                        <div className="leftPartBanner">
-                            <div className="bannerText">
-                                <h1 className="bannerHead">The future of businesses is right here</h1>
-                                <p className="bannerSubtitle">Implement the right marketing strategies for your business Premier marketing company Australia</p>
-                                <div className="bannerBtn">
-                                    <a href="tel:4154267999">Book a Discovery Call</a>
-                                </div>
                             </div>
                         </div>
 
