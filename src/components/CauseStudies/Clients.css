@@ -113,8 +113,9 @@
     margin-bottom: 60px;
   }
   .clients-list-container .client-item .client-item-img {
-      height: 320px;
-  }
+    height: 320px;
+    overflow: auto;
+}
   .clients-list-container .client-item .client-item-img img {
       width: 100%;
   }

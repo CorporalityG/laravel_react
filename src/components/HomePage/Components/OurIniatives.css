@@ -87,6 +87,7 @@
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   max-height: 660px;
+  object-fit: cover;
 }
 .our-iniatives-container .our-iniatives-grid-img-effect:hover .our-iniatives-grid-img {
   -webkit-transform: scale(1.1);
@@ -127,6 +128,8 @@
   font-weight: 700;
   font-size: 22px;
   color: #FFFFFF;
+  padding-bottom: 13px;
+  margin-top: -13px;
 }
 .our-iniatives-container .our-iniatives-grid .our-iniatives-grid-desc p {
   font-style: normal;
