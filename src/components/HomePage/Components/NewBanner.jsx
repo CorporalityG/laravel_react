@@ -49,7 +49,7 @@ const NewBanner = () => {
     }
     
     useEffect(() => {
-        /* setInterval(() => {
+        setInterval(() => {
             setIndicatorId(i => {
                 //console.log(i);
                 if(i < 3)
@@ -75,7 +75,7 @@ const NewBanner = () => {
                     return 1;
                 }
             });
-          }, 8000); */
+          }, 8000);
     }, [])
 
     return (

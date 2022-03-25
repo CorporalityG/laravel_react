@@ -38,6 +38,9 @@ import XDesign from "./components/CauseStudies/XDesign";
 import MeyerWest from "./components/CauseStudies/MeyerWest";
 import Lumoral from "./components/CauseStudies/Lumoral";
 
+import CorporalityBooksList from "./components/CorporalityBooks/CorporalityBooksList";
+import JourneyOfPerseverance from "./components/CorporalityBooks/JourneyOfPerseverance";
+
 import ResearchPapers from "./components/ResearchPapers/ResearchPapers";
 
 function App() {
@@ -106,6 +109,9 @@ function App() {
             <Route path="/x-designs" element={<XDesign />} />
             <Route path="/meyer-west" element={<MeyerWest />} />
             <Route path="/lumoral" element={<Lumoral />} />
+
+            <Route path="/corporality-books" element={<CorporalityBooksList />} />
+            <Route path="/book/journey-of-perseverance" element={<JourneyOfPerseverance />} />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             
