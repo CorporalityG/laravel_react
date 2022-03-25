@@ -20,11 +20,10 @@ const OurIniatives = () => {
                 <img src={BASE_URL + '/img/HomePage/Social-Impact1.png'} alt="Social Impact" className="our-iniatives-grid-img" />
                 <div className="bottom-gradient-do_more"></div>
                 <figcaption>
-                  <h2 className="our-iniatives-grid-title">Social Impact</h2>
+                  <h2 className="our-iniatives-grid-title">Corporality is embedding social impact into the core of its business</h2>
                   <div className="our-iniatives-grid-desc">
-                    <p>Corporality Global stands for change and revolution.</p>
-                    <p>- We provide food to an Old Age Home in Chennai</p>
-                    <p>- We plant trees in a few villages across North-Eastern India</p>
+                    <p>By partnering with social enterprises, we accelerate and contribute for a better world. Our actions include a positive humanitarian and ecological sustainability impact..</p>
+         
                   </div>
                 </figcaption>
               </figure>

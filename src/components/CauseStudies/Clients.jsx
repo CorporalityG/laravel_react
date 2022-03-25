@@ -18,7 +18,8 @@ function Clients() {
                     <div className="col-md-8">
                         <div className="clients-banner-content">
                             <h1>Client Results</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae egestas elementum porttitor tortor, sit massa urna lectus nulla. Dictum in elit justo proin sed maecenas urna viverra consectetur. Massa integer vulputate nam ultrices.</p>
+                            <p>With our digital media marketing services, our brand positioning services, and our other comprehensive business growth services, our clients experienced growth in our customer sales, established a unique brand style and image, and differentiated themselves from their competition. 
+</p>
                         </div>
                     </div>
 
@@ -54,19 +55,19 @@ function Clients() {
 
                 <div className="row clients-list-row">
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/BuildQ-Client.png'}
+                        thumbnail={BASE_URL + '/img/BuildQ-Clients.png'}
                         title={'BuildQ Group'}
                         slug={'build-q'}
                     />
 
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/Divine-Intercession-Client.png'}
+                        thumbnail={BASE_URL + '/img/Divine-Intercession-Clients.png'}
                         title={'Divine Intercession'}
                         slug={'divine-intercession'}
                     />
 
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/Fastgrow-Client.png'}
+                        thumbnail={BASE_URL + '/img/Fastgrow-Clients.png'}
                         title={'Fastgrow Finance'}
                         slug={'fastgrow-finance'}
                     />
@@ -78,19 +79,19 @@ function Clients() {
                     />
 
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/SK-Insurance-Client.png'}
+                        thumbnail={BASE_URL + '/img/SK-Insurance-Clients.png'}
                         title={'SK Insurance'}
                         slug={'sk-insurance'}
                     />
 
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/Klek-Services-Client.png'}
+                        thumbnail={BASE_URL + '/img/Klek-Services-Clients.png'}
                         title={'Klek Services'}
                         slug={'klek-services'}
                     />
 
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/Liqmet-Client.png'}
+                        thumbnail={BASE_URL + '/img/Liqmet-Clients.png'}
                         title={'Liqmet'}
                         slug={'liqmet'}
                     />
@@ -108,7 +109,7 @@ function Clients() {
                     />
 
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/Lumoral-Client.png'}
+                        thumbnail={BASE_URL + '/img/Lumoral-Clients.png'}
                         title={'Lumoral'}
                         slug={'lumoral'}
                     />
