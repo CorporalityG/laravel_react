@@ -153,3 +153,211 @@
     width: 100%;
     height: 100%;
 }
+
+.c-book-payment-modal .modal-header {
+    border-bottom-width: 0;
+    padding-top: 25px;
+    padding-right: 25px;
+}
+.c-book-payment-modal .modal-header .btn-close {
+    background-image: url('./img/payment-modal-close.png');
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+    opacity: 1;
+    box-shadow: unset;
+}
+.c-book-payment-modal .modal-body {
+    padding: 50px 60px 60px;
+    z-index: 9;
+}
+.c-book-payment-modal .c-book-payment-modal-row {
+    align-items: center;
+}
+.c-book-payment-modal .c-book-payment-content-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    position: relative;
+}
+.c-book-payment-modal .c-book-payment-content-heading::after {
+    background-color: #A06DAF;
+    bottom: 0;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    width: 80px;
+}
+.c-book-payment-modal .c-book-payment-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #232323;
+}
+.c-book-payment-modal .c-book-payment-process {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(24, 54, 69, 0.15);
+    padding: 25px 30px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+.c-book-payment-modal .c-book-payment-process-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 25px;
+}
+.c-book-payment-modal .c-book-payment-process-form .form-group {
+    margin-bottom: 25px;
+}
+.c-book-payment-modal .c-book-payment-process-form .form-control {
+    outline: 0;
+    box-shadow: unset;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #C2BDC8;
+    padding: 10px;
+    height: auto;
+}
+.c-book-payment-modal .c-book-payment-process-form .form-control::placeholder {
+    color: #C2BDC8;
+}
+.c-book-payment-modal .c-book-payment-process-form .form-check-label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    color: #757575;
+}
+.c-book-payment-modal .c-book-payment-process-form .pay-btn {
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 10px 25px;
+    outline: 0;
+    border-width: 0;
+}
+.c-book-payment-modal .c-book-payment-modal-bg {
+    position: relative;
+}
+.c-book-payment-modal .c-book-payment-modal-bg img {
+    position: absolute;
+    max-width: 100%;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-vec-1 {
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-vec-2 {
+    width: 100%;
+    bottom: 0;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-rec-1 {
+    bottom: 40px;
+    left: 50px;
+    z-index: 1;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-rec-2 {
+    bottom: 90px;
+    left: 45%;
+    z-index: 1;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-rec-3 {
+    bottom: 10px;
+    left: 35%;
+    z-index: 1;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-rec-4 {
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.c-book-download-modal .modal-header {
+    border-bottom-width: 0;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+.c-book-download-modal .modal-header .btn-close {
+    background-image: url('./img/payment-modal-close.png');
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    opacity: 1;
+    box-shadow: unset;
+}
+.c-book-download-modal .modal-body {
+    padding: 0 50px 40px;
+}
+.c-book-download-modal .c-book-download-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 30px;
+}
+.c-book-download-modal .c-book-download-modal-content .form-group {
+    margin-bottom: 25px;
+}
+.c-book-download-modal .c-book-download-modal-content .form-control {
+    outline: 0;
+    box-shadow: unset;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #C2BDC8;
+    padding: 10px;
+    height: auto;
+}
+.c-book-download-modal .c-book-download-modal-content .form-control::placeholder {
+    color: #C2BDC8;
+}
+.c-book-download-modal .c-book-download-modal-content .form-check-label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    color: #757575;
+}
+.c-book-download-modal .c-book-download-modal-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #757575;
+}
+.c-book-download-modal .c-book-download-modal-content p span {
+    color: #33657E;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.c-book-download-modal .c-book-download-modal-content .download-btn {
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 10px 25px;
+    outline: 0;
+    border-width: 0;
+    box-shadow: unset;
+}

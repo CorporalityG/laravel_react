@@ -1,7 +1,17 @@
 import React, { useState } from 'react'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import DownloadModal from './DownloadModal';
+import PaymentModal from './PaymentModal';
 
 function CorporalityBookListItem(props) {
+
+    const [show, setShow] = useState(0);
+
+    const handleClose = () => setShow(false);
+    const handleShow = (modalId) => {
+        setShow(modalId);
+    }
+
     return (
         <>
             <div className="row c-book-list-row">
@@ -38,7 +48,7 @@ function CorporalityBookListItem(props) {
                                 </div>
                                 <div className="c-book-desc c-book-btn-mian">
                                     <div className="c-book-text">{props.downloadTitle}</div>
-                                    <div className="c-book-button">{props.btnText}</div>
+                                    <div className="c-book-button" onClick={() => handleShow(props.btnType) }>{props.btnText}</div>
                                 </div>
                             </div>
                         </div>
@@ -52,6 +62,9 @@ function CorporalityBookListItem(props) {
                     </div>
                 </div>
             </div>
+
+            <PaymentModal show={show} handleClose={handleClose} />
+            <DownloadModal show={show} handleClose={handleClose} />
         </>
     )
 }

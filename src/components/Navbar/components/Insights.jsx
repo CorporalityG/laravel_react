@@ -20,7 +20,7 @@ const Insights = () => {
                 <div className="insights-container-body">
                     <div className="row">
                         <div className="col-md-3">
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink(); navigate("/corporality-books")}}>
                                 <h6>Corporality - Books</h6>
                                 <div className="diamond-line"></div>
                             </div>
