@@ -37,7 +37,7 @@ function PaymentModal(props) {
                                         </div>
 
                                         <div className="form-group">
-                                            <select id="country" name="country" className="form-control">
+                                            <select id="country" name="country" className="form-select">
                                                 <option value=''>Select Country</option>
                                                 <option value='Australia'>Australia</option>
                                                 <option value='India'>India</option>
@@ -46,8 +46,8 @@ function PaymentModal(props) {
                                         </div>
 
                                         <div className="form-group">
-                                            <div class="form-check">
-                                                <input type="checkbox" id="agree_terms_condition" name="agree_terms_condition" class="form-check-input" /><label title="" for="agree_terms_condition" class="form-check-label">I agree the terms and conditions</label>
+                                            <div className="form-check">
+                                                <input type="checkbox" id="agree_terms_condition" name="agree_terms_condition" className="form-check-input" /><label title="" htmlFor="agree_terms_condition" className="form-check-label">I agree the terms and conditions</label>
                                             </div>
                                         </div>
 

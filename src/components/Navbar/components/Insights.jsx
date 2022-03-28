@@ -72,7 +72,7 @@ const Insights = () => {
                                 <div className="diamond-line"></div>
                             </div>
                             <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
-                                <h6>POD Cast</h6>
+                                <h6>Podcast</h6>
                                 <div className="diamond-line"></div>
                             </div>
                         </div>

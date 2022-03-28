@@ -30,8 +30,8 @@ function DownloadModal(props) {
                             </div>
 
                             <div className="form-group">
-                                <div class="form-check">
-                                    <input type="checkbox" id="subscribe" name="subscribe" class="form-check-input" /><label title="" for="subscribe" class="form-check-label">Subscribe to Corporality blog</label>
+                                <div className="form-check">
+                                    <input type="checkbox" id="subscribe" name="subscribe" className="form-check-input" /><label title="" htmlFor="subscribe" className="form-check-label">Subscribe to Corporality blog</label>
                                 </div>
                             </div>
 

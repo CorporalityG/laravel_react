@@ -43,6 +43,8 @@ import JourneyOfPerseverance from "./components/CorporalityBooks/JourneyOfPersev
 
 import ResearchPapers from "./components/ResearchPapers/ResearchPapers";
 
+import WhyCorporalityEffect from "./components/WhyCorporalityEffect/WhyCorporalityEffect";
+
 function App() {
   const { user, dispatch } = useContext(Context);
   // const handleLogout = () => {
@@ -112,6 +114,8 @@ function App() {
 
             <Route path="/corporality-books" element={<CorporalityBooksList />} />
             <Route path="/book/journey-of-perseverance" element={<JourneyOfPerseverance />} />
+
+            <Route path="/why-corporality-effect" element={<WhyCorporalityEffect />} />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             
