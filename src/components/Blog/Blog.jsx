@@ -125,9 +125,9 @@ const Blog = () => {
                                 <div className="live-poll">
                                     <p className="live-poll-question">Readers, what insights would you like to gain next?</p>
                                     <div className="live-poll-options">
-                                        <span><input type="radio" id="live_poll_topic" name="live_poll" value="Whitepaper on yrending topic" /> <label htmlFor="live_poll_topic">Whitepaper on yrending topic</label></span>
-                                        <span><input type="radio" id="live_poll_webinar" name="live_poll" value="Whitepaper on yrending topic" /> <label htmlFor="live_poll_webinar">Webinar on issue I’m passionate about</label></span>
-                                        <span><input type="radio" id="live_poll_career" name="live_poll" value="Whitepaper on yrending topic" /> <label htmlFor="live_poll_career">Career advice from an experts</label></span>
+                                        <span><input type="radio" id="live_poll_topic" name="live_poll" value="Whitepaper on trending topic" /> <label htmlFor="live_poll_topic">Whitepaper on trending topic</label></span>
+                                        <span><input type="radio" id="live_poll_webinar" name="live_poll" value="Whitepaper on trending topic" /> <label htmlFor="live_poll_webinar">Webinar on issue I’m passionate about</label></span>
+                                        <span><input type="radio" id="live_poll_career" name="live_poll" value="Whitepaper on trending topic" /> <label htmlFor="live_poll_career">Career advice from an experts</label></span>
                                     </div>
 
                                     <div className="single-blog-poll-btn">Vote</div>

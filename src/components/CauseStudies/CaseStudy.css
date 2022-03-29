@@ -38,7 +38,8 @@
     box-shadow: 0px 4px 45px rgba(77, 82, 96, 0.15);
     position: relative;
     padding-top: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
+    margin-bottom: 50px;
 }
 .cause-studies-container .case-study-banner .case-study-rec {
     position: absolute;
@@ -105,7 +106,7 @@
 
 .cause-studies-container .case-study-glance-container {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 .cause-studies-container .case-study-glance-box {
     text-align: center;
@@ -125,7 +126,7 @@
 }
 
 .cause-studies-container .case-study-solution-container {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 60px;
 }
 
@@ -267,6 +268,16 @@
     margin-top: -130px;
     margin-bottom: 25px;
 }
+.cause-studies-container .case-study-outcome-container .case-study-testi-logo {
+    background: rgba(255, 255, 255, 0.2);
+    border: 4px solid #F2F2F2;
+    box-sizing: border-box;
+    box-shadow: 0px 14px 14px -10px rgba(24, 33, 48, 0.15);
+    border-radius: 10px;
+    margin-top: -90px;
+    margin-bottom: 35px;
+    padding: 25px 10px;
+}
 .cause-studies-container .case-study-outcome-container .case-study-testi-quote {
     max-width: 100%;
 }
@@ -391,9 +402,9 @@
   .cause-studies-container .case-study-related-container .related-case-study-carousel .case-study-item .case-study-item-title {
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    color: #A06DAF;
-    margin-bottom: 10px;
+    font-size: 22px;
+    color: #33657E;
+    margin-bottom: 15px;
   }
   .cause-studies-container .case-study-related-container .related-case-study-carousel .case-study-item .case-study-item-subtitle {
     font-style: normal;
@@ -408,6 +419,9 @@
     font-size: 14px;
     color: #33657E;
     cursor: pointer;
+  }
+  .cause-studies-container .case-study-related-container .related-case-study-carousel .case-study-item .case-study-item-explore img {
+      margin-left: 5px;
   }
   .cause-studies-container .case-study-related-container .related-case-study-carousel .related-case-study-arrow {
     position: absolute;
@@ -435,3 +449,58 @@
     left: initial;
     right: -50px;
   }
+
+.cause-studies-container .case-study-content-img img {
+    max-width: 100%;
+}
+
+.cause-studies-container .case-study-business-level-content {
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.cause-studies-container .case-study-business-level-content .case-study-business-level-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 10px;
+}
+.cause-studies-container .case-study-business-level-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #232323;
+}
+.cause-studies-container .case-study-business-level-content .case-study-business-level-form {
+    margin-top: 25px;
+    display: inline-block;
+}
+.cause-studies-container .case-study-business-level-content .case-study-business-level-form .form-control {
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #C2BDC8;
+    padding: 14px;
+    outline: 0;
+    box-shadow: unset;
+}
+.cause-studies-container .case-study-business-level-content .case-study-business-level-form .business-level-btn {
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 10px 45px;
+    outline: 0;
+    box-shadow: unset;
+    border-width: 0;
+    margin-top: 10px;
+}
+.cause-studies-container .case-study-business-level-content .case-study-business-level-form .business-level-btn:hover {
+    background: linear-gradient(95.12deg, #6CA0BC 0%, #EED979 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
+}
