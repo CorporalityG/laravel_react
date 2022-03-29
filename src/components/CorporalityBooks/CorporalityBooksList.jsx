@@ -16,7 +16,7 @@ function CorporalityBooksList() {
                         <div className="col-lg-7">
                             <div className="c-book-list-banner-content">
                                 <h1>Corporality books</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit. Interdum integer turpis hac condimentum nam. In libero pulvinar nisi ullamcorper commodo sagittis massa sem. Tincidunt rhoncus sed lectus sed.</p>
+                                <p>Corporality’s collection of books offers you diversified knowledge which helps enhance your outlook towards life and enables you to seize opportunities effectively. “Journey of Perseverance,” tells the story of an adamant entrepreneur. Our essential marketing reports provide an analytical sense of how marketing works in different industries.</p>
                             </div>
                         </div>
 

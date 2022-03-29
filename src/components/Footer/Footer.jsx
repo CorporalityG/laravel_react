@@ -79,31 +79,27 @@ export default function Footer() {
 
             {/* col-2 */}
             <div className="column2">
-              <h1 className="footer-heading">Our Frame Work</h1>
+              <h1 className="footer-heading">Who we are</h1>
               <hr className="line-below-footer-heading" />
-              <p className="text-links" onClick={() => { navigate("/"); topHandle(); }}>
+              <p className="text-links" onClick={() => { navigate("/about-corporality"); topHandle(); }}>
                 <img className="poligon-image" src={polygon} />
-                What is Corporality Effect?
+                About Corporality
               </p>
-              <p className="text-links" onClick={() => { navigate("/"); topHandle(); }}>
+              <p className="text-links" onClick={() => { navigate("/work-with-clients"); topHandle(); }}>
                 <img className="poligon-image" src={polygon} />
-                Why Corporality Effect?
+                How We Work with Clients
               </p>
-              <p className="text-links" onClick={() => { navigate("/"); topHandle(); }}>
+              <p className="text-links" onClick={() => { navigate("/inclusion-and-diversity"); topHandle(); }}>
                 <img className="poligon-image" src={polygon} />
-                Culturally Conditioned
+                Inclusion and Diversity
               </p>
-              <p className="text-links" onClick={() => { navigate("/"); topHandle(); }}>
+              <p className="text-links" onClick={() => { navigate("/partnership-programmes"); topHandle(); }}>
                 <img className="poligon-image" src={polygon} />
-                Corporality Striker
+                Partnership Programmes
               </p>
-              <p className="text-links" onClick={() => { navigate("/"); topHandle(); }}>
+              <p className="text-links" onClick={() => { navigate("/sustainable-growth"); topHandle(); }}>
                 <img className="poligon-image" src={polygon} />
-                Inbound Shifting
-              </p>
-              <p className="text-links" onClick={() => { navigate("/"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
-                Video Library
+                Sustainable Growth
               </p>
             </div>
 

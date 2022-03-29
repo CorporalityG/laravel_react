@@ -92,7 +92,7 @@ const NewBanner = () => {
                                 <h1 className="bannerHead" data-aos="fade-left" data-aos-duration="2700">Global Management Consulting and Marketing Company</h1>
                                 <p className="bannerSubtitle" data-aos="fade-left" data-aos-duration="3000">Identifying every opportunity to convert your potentials into ready-to-buy states Leading management consulting firm australia</p>
                                 <div className="bannerBtn">
-                                    <a href="tel:4154267999">Book a Discovery Call</a>
+                                    <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Book a Discovery Call</a>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,7 @@ const NewBanner = () => {
                                 <h1 className="bannerHead">Reimagining your boundaries</h1>
                                 <p className="bannerSubtitle">Expanding your reach to provide more than just marketing solutions Superior brand management company Australia</p>
                                 <div className="bannerBtn">
-                                    <a href="tel:4154267999">Book a Discovery Call</a>
+                                    <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Book a Discovery Call</a>
                                 </div>
                             </div>
                         </div>
@@ -177,7 +177,7 @@ const NewBanner = () => {
                                 <h1 className="bannerHead">The future of businesses is right here</h1>
                                 <p className="bannerSubtitle">Implement the right marketing strategies for your business Premier marketing company Australia</p>
                                 <div className="bannerBtn">
-                                    <a href="tel:4154267999">Book a Discovery Call</a>
+                                    <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Book a Discovery Call</a>
                                 </div>
                             </div>
                         </div>
