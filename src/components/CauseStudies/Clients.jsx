@@ -4,9 +4,12 @@ import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
 import { useNavigate } from "react-router";
 import ClientItem from './ClientItem';
 
+
+
 function Clients() {
   return (
     <>
+	
         <div className="clients-banner-container">
             <img src={BASE_URL + '/img/clients-rec-1.png'} alt="clients-rec-1" className="clients-rec clients-rec-1" />
             <img src={BASE_URL + '/img/clients-rec-2.png'} alt="clients-rec-2" className="clients-rec clients-rec-2" />
@@ -73,7 +76,7 @@ function Clients() {
                     />
 
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/TechConsultants-Client.png'}
+                        thumbnail={BASE_URL + '/img/TechConsultants-Clients.png'}
                         title={'Tech Consultants'}
                         slug={'tech-consultants'}
                     />
@@ -97,13 +100,13 @@ function Clients() {
                     />
 
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/Meyar-West-Client.png'}
+                        thumbnail={BASE_URL + '/img/Meyar-West-Clients.png'}
                         title={'Meyer West'}
                         slug={'meyer-west'}
                     />
 
                     <ClientItem 
-                        thumbnail={BASE_URL + '/img/X-Designs-Client.png'}
+                        thumbnail={BASE_URL + '/img/X-Designs-Clients.png'}
                         title={'X Designs'}
                         slug={'x-designs'}
                     />
@@ -121,3 +124,5 @@ function Clients() {
 }
 
 export default Clients
+
+
