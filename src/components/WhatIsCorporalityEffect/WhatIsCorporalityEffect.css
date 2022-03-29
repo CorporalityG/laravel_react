@@ -1,0 +1,358 @@
+.wice-banner-main {
+    margin-top: 80px;
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.wice-banner-main .wice-banner-img {
+    position: absolute;
+    right: 0;
+    top: -30px;
+    max-width: 100%;
+}
+.wice-banner-main .rec-1 {
+    position: absolute;
+    left: 15%;
+    top: 40px;
+}
+.wice-banner-main .rec-2 {
+    position: absolute;
+    right: 80px;
+    bottom: 250px;
+}
+.wice-banner-main .wice-banner-social-main {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -50%);
+}
+.wice-banner-main .wice-banner-social-main .wice-banner-social-img img {
+    max-height: 180px;
+    margin-right: 10px;
+}
+.wice-banner-main .wice-banner-social-main .wice-banner-social-icon {
+    color: #33657e;
+    cursor: pointer;
+}
+.wice-banner-main .wice-banner-social-main .wice-banner-social-icon:not(:last-child) {
+    margin-bottom: 5px;
+}
+.wice-banner-main .wice-banner-content-row {
+    background-image: url('./img/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+}
+.wice-banner-main .wice-banner-content-row .wice-banner-content {
+    max-width: 75%;
+    margin: 0 auto;
+}
+.wice-banner-main .wice-banner-content-row h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 15px;
+}
+.wice-banner-main .wice-banner-content-row p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #232323;
+    margin-bottom: 15px;
+}
+.wice-banner-main .wice-banner-content-row p:nth-child(3) {
+    background: #F5F5F5;
+    opacity: 0.6;
+    color: #A06DAF;
+    padding: 10px;
+}
+.wice-banner-main .wice-banner-content-row .wice-banner-btn-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wice-banner-main .wice-banner-content-row .wice-banner-btn {
+    background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 10px 35px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.wice-banner-main .wice-banner-content-row .wice-banner-btn:not(:last-child) {
+    margin-right: 15px;
+}
+.wice-banner-main .wice-banner-content-row .wice-banner-phone {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    text-align: left;
+    cursor: pointer;
+    width: auto;
+}
+.wice-banner-main .wice-banner-content-row .wice-banner-phone img {
+    max-height: 120px;
+}
+
+.wice-factor-section {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+.wice-factor-section .wice-factor-content-row {
+    margin-bottom: 45px;
+}
+.wice-factor-section .wice-factor-content-row .wice-factor-content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #3C708E;
+    margin-bottom: 20px;
+}
+.wice-factor-section .wice-factor-content-row .wice-factor-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #757575;
+    margin-bottom: 20px;
+}
+.wice-factor-section .wice-factor-content-row .wice-factor-content .wice-factor-btn {
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px 40px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.wice-factor-section .wice-factor-content-row .wice-factor-img {
+    text-align: center;
+}
+.wice-factor-section .wice-factor-content-row .wice-factor-img img {
+    max-width: 100%;
+}
+.wice-factor-section .wice-factor-boxes-row .wice-factor-box-col {
+    display: flex;
+}
+.wice-factor-section .wice-factor-boxes-row .wice-factor-box {
+    background: #FFFFFF;
+    box-shadow: 0px 14px 23px -10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+.wice-factor-section .wice-factor-boxes-row .factor-box-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #A06DAF;
+    margin-bottom: 10px;
+}
+.wice-factor-section .wice-factor-boxes-row .factor-box-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #757575;
+}
+
+.wice-origin-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-image: url('./img/Origin-Framework.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.wice-origin-section .wice-origin-row .wice-origin-content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #3C708E;
+    margin-bottom: 25px;
+}
+.wice-origin-section .wice-origin-row .wice-origin-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #757575;
+    margin-bottom: 20px;
+}
+.wice-origin-section .wice-origin-row .wice-origin-content p span {
+    background: linear-gradient(90.25deg, #E5CC5C 0.07%, #6CA0BC 16.43%, #33657E 28.88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.wice-origin-section .wice-origin-row .wice-que-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #A06DAF;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.wice-effective-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.wice-effective-section .wice-effective-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wice-effective-section .wice-effective-row .wice-effective-img {
+    max-width: 100%;
+}
+.wice-effective-section .wice-effective-row .wice-effective-col {
+    position: absolute;
+}
+.wice-effective-section .wice-effective-row .wice-effective-content {
+    max-width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+.wice-effective-section .wice-effective-row h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #3C708E;
+    margin-bottom: 20px;
+}
+.wice-effective-section .wice-effective-row p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #757575;
+    margin-bottom: 20px;
+}
+
+.wice-marketing-section {
+    background: #6CA0BC;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+}
+.wice-marketing-section .marketing-vector {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.wice-marketing-section .marketing-rec-1 {
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+.wice-marketing-section .marketing-rec-2 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 90px;
+}
+.wice-marketing-section .marketing-rec-3 {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.wice-marketing-section .marketing-rec-4 {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+}
+.wice-marketing-section .wice-marketing-row .wice-marketing-content {
+    max-width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+.wice-marketing-section .wice-marketing-row .wice-marketing-heading {
+    margin-bottom: 20px;
+}
+.wice-marketing-section .wice-marketing-row .wice-marketing-content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.wice-marketing-section .wice-marketing-row .wice-marketing-subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.wice-marketing-section .wice-marketing-row .wice-marketing-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+.wice-marketing-section .wice-marketing-row .wice-marketing-content .wice-marketing-btn {
+    background: linear-gradient(95.12deg, #EED979 0%, #33657E 83.42%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 12px 44px;
+    display: inline-block;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.wice-key-elements-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.wice-key-elements-section .wice-ke-title-row h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3C708E;
+    margin-bottom: 50px;
+}
+.wice-key-elements-section .wice-ke-boxes-row {
+    align-items: center;
+    justify-content: center;
+}
+.wice-key-elements-section .wice-ke-boxes-row .wice-ke-box {
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    box-sizing: border-box;
+    box-shadow: 0px 14px 25px -10px rgba(32, 35, 60, 0.15);
+    border-radius: 10px;
+    padding: 30px 30px 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.wice-key-elements-section .wice-ke-boxes-row .wice-ke-box-img img {
+    width: auto;
+    max-width: 70px;
+    margin-bottom: 30px;
+}
+.wice-key-elements-section .wice-ke-boxes-row .wice-ke-box-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #A06DAF;
+}

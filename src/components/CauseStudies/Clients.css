@@ -193,30 +193,6 @@
     .clients-list-container .client-item .client-item-subtitle {
         min-height: auto;
     }
-  }
-  
-  
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #3c708e;
-    border-radius: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
-}
-=======
     .clients-list-container .client-item .client-item-img {
         height: auto;
     }
