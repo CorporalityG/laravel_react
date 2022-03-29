@@ -107,7 +107,7 @@ export default function Footer() {
             <div className="column3">
               <h1 className="footer-heading">Our Service</h1>
               <hr size="5" className="line-below-footer-heading" />
-              <p className="text-links" onClick={() => { navigate("/go-to-marketing"); topHandle(); }}>
+              <p className="text-links" onClick={() => { navigate("/goto-market-strategy"); topHandle(); }}>
                 <img className="poligon-image" src={polygon} />
                 Go-to-Marketing
               </p>
@@ -139,7 +139,7 @@ export default function Footer() {
 
             {/* col-4 */}
             <div className="column4">
-              <h1 className="footer-heading">About Us</h1>
+              <h1 className="footer-heading">Insights</h1>
               <hr size="5" className="line-below-footer-heading" />
               <p className="text-links" onClick={() => { navigate("/about-corporality"); topHandle(); }}>
                 <img className="poligon-image" src={polygon} />

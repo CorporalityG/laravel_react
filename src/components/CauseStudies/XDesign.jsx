@@ -1,16 +1,9 @@
 import React from "react";
 import './CaseStudy.css'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
-import { useNavigate } from "react-router";
 import RelatedCaseStudyCarousel from "./RelatedCaseStudyCarousel";
 
 const XDesign = () => {
-
-	const navigate = useNavigate();
-	const topHandle = () => {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	};
 
 	return (
 		<div className="cause-studies-container">
@@ -40,34 +33,6 @@ const XDesign = () => {
 								<img src={BASE_URL + '/img/XDesign-icon.png'} alt="XDesign-icon" className="case-study-icon" />
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="case-study-challenge-container">
-				<div className="container">
-					<div className="row case-study-challenge-row">
-						<div className="col-md-6">
-							<div className="case-study-challenge-img">
-								<img src={BASE_URL + '/img/XDesign.png'} alt="XDesign" />
-							</div>
-						</div>
-
-						<div className="col-md-6">
-							<div className="case-study-challenge-content">
-								<h2>The challenge</h2>
-								<p>Xdesigns is one of the renowned creative agencies in Sydney and Brisbane. They support clients by providing branding, creative and logo design and other digital marketing and design services.</p>
-								<p>As one of the best creative agencies in Sydney and Brisbane, Xdesigns are sure to position for even further growth. However, with more projects and clients coming in, they needed some hand with capability building. </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="container">
-				<div className="row">
-					<div className="col-md-12">
-						<div className="case-study-bottom-line"></div>
 					</div>
 				</div>
 			</div>
@@ -118,6 +83,10 @@ const XDesign = () => {
 					<div className="row">
 						<div className="col-md-8">
 							<div className="case-study-solution-content">
+								<h2>The challenge</h2>
+								<p>Xdesigns is one of the renowned creative agencies in Sydney and Brisbane. They support clients by providing branding, creative and logo design and other digital marketing and design services.</p>
+								<p>As one of the best creative agencies in Sydney and Brisbane, Xdesigns are sure to position for even further growth. However, with more projects and clients coming in, they needed some hand with capability building. </p>
+
 								<img src={BASE_URL + '/img/setting-icon.png'} alt="The solution" />
 								<h2>The solution</h2>
 								<p>Corporality Global is no stranger to problems associated with growth. That is why we seek to help businesses with capability building and other management consulting services. </p>
@@ -128,30 +97,21 @@ const XDesign = () => {
 									<li>To improve the capability of existing talents, Corporality Global and Xdesigns also set out to develop employee welfare policies and procedures.</li>
 									<li>An ongoing partnership is forged to constantly evaluate systems and adjust to fill the gap as needed.</li>
 								</ul>
+
+								<img src={BASE_URL + '/img/write-icon.png'} alt="The outcome" />
+								<h2>The outcome</h2>
+								<p>Through Corporality Global and Xdesigns’ partnership, the latter was able to fill in the capabilities they needed as their business grew. </p>
+								<ul>
+									<li>Xdesigns was able to fill multiple positions to fulfill the capability gap at the soonest possible time with the help of Corporality Global.</li>
+									<li>Corporality helped the right talent for the right seat to work and coordinate with Xdesigns for employee strength alignment.</li>
+									<li>Employee retention improved with proper welfare programs in place.</li>
+								</ul>
 							</div>
 						</div>
 
 						<div className="col-md-4">
-							<div className="case-study-related-box">
-								<div className="case-study-related-title">Related cause studies</div>
-								<ul>
-									<li>BuildQ</li>
-									<li>Meyer West</li>
-									<li>X Designs</li>
-									<li>BuildQ</li>
-								</ul>
-								<div className="case-study-all" onClick={() => { navigate("/clients"); topHandle(); }}><span>View All</span> <img src={BASE_URL + '/img/right-arrow-white.png'} alt="->" /></div>
-							</div>
-
-							<div className="case-study-suggested-box-main">
-								<div className="case-study-suggested-top-line"></div>
-								<div className="case-study-suggested-box">
-									<div className="case-study-suggested-title">Suggested for you</div>
-									<div className="case-study-suggested-content">
-										<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers.</p>
-									</div>
-									<div className="case-study-suggested-btn">Go to Marketing</div>
-								</div>
+							<div className="case-study-content-img">
+								<img src={BASE_URL + '/img/XDesign.png'} alt="XDesign" />
 							</div>
 						</div>
 					</div>
@@ -161,7 +121,7 @@ const XDesign = () => {
 			<div className="case-study-outcome-container">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-10 offset-2">
+						<div className="col-md-8 offset-4">
 							<div className="case-study-outcome-video">
 								<div className="case-study-outcome-video-banner">
 									<img src={BASE_URL + '/img/case-study-outcome-video-banner.png'} alt="video-banner" />
@@ -176,7 +136,7 @@ const XDesign = () => {
 					<div className="row case-study-outcome-content-main">
 						<div className="col-md-6">
 							<div className="case-study-testimonial">
-								<img src={BASE_URL + '/img/testi-img.png'} alt="testi-img" className="case-study-testi-img" />
+								<img src={BASE_URL + '/img/XDesign-logo.png'} alt="XDesign-logo" className="case-study-testi-logo" />
 								<div className="case-study-testi-content">
 									<img src={BASE_URL + '/img/testi-quote.png'} alt="testi-quote" className="case-study-testi-quote" />
 									<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers by area to find sales gaps. The company was  frequently wasting their efforts and missing out on significant possibilities that were there in front of them.</p>
@@ -185,47 +145,20 @@ const XDesign = () => {
 						</div>
 
 						<div className="col-md-6">
-							<div className="case-study-outcome-content">
-								<h2>The outcome</h2>
-								<p>Through Corporality Global and Xdesigns’ partnership, the latter was able to fill in the capabilities they needed as their business grew. </p>
-								<ul>
-									<li>Xdesigns was able to fill multiple positions to fulfill the capability gap at the soonest possible time with the help of Corporality Global.</li>
-									<li>Corporality helped the right talent for the right seat to work and coordinate with Xdesigns for employee strength alignment.</li>
-									<li>Employee retention improved with proper welfare programs in place.</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="case-study-business-level-container">
-				<div className="container">
-					<div className="row case-study-business-level-row">
-						<div className="col-md-6">
-							<div className="case-study-business-level">
+							<div className="case-study-business-level-content">
 								<div className="case-study-business-level-title">Ready to take your business to the next level?</div>
-								<div className="case-study-business-level-content">
-									<span>Talk to our experts in:</span>
-									<div className="case-study-business-level-dd">Medtech</div>
-								</div>
-							</div>
-						</div>
-
-						<div className="col-md-6">
-							<div className="case-study-business-expand">
 								<p>We provide strategic consulting to businesses worldwide. Want to expand your business globally, or want to achieve great success in your respective industry? We got your back.</p>
-								<div className="case-study-business-expand-form">
+								<div className="case-study-business-level-form">
 									<div className="row">
 										<div className="col-md-6 form-group">
-											<input type="text" className="form-control" placeholder="First name" />
+											<input type="text" className="form-control" placeholder="Name" />
 										</div>
 										<div className="col-md-6 form-group">
-											<input type="text" className="form-control" placeholder="Last name" />
+											<input type="email" className="form-control" placeholder="Email" />
 										</div>
 
-										<div className="col-md-12 form-group">
-											<button type="submit" className="business-expand-btn">Submit</button>
+										<div className="col-md-12">
+											<button type="submit" className="business-level-btn">Submit</button>
 										</div>
 									</div>
 								</div>

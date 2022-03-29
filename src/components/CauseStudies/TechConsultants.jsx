@@ -1,17 +1,9 @@
 import React from "react";
 import './CaseStudy.css'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
-import { useNavigate } from "react-router";
 import RelatedCaseStudyCarousel from "./RelatedCaseStudyCarousel";
 
 const TechConsultants = () => {
-
-	const navigate = useNavigate();
-	const topHandle = () => {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	};
-
 	return (
 		<div className="cause-studies-container">
 
@@ -40,33 +32,6 @@ const TechConsultants = () => {
 								<img src={BASE_URL + '/img/TechConsultants-icon.png'} alt="TechConsultants-icon" className="case-study-icon" />
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="case-study-challenge-container">
-				<div className="container">
-					<div className="row case-study-challenge-row">
-						<div className="col-md-6">
-							<div className="case-study-challenge-img">
-								<img src={BASE_URL + '/img/TechConsultants.png'} alt="TechConsultants" />
-							</div>
-						</div>
-
-						<div className="col-md-6">
-							<div className="case-study-challenge-content">
-								<h2>The challenge</h2>
-								<p>Tech Consultants is one of the leading contract and permanent staffing solutions providers in Australia. However, despite its current position in the market, they still needed a lift with improving their presence online since most of their leads come from outbound efforts and other sales-heavy strategies. They knew the potential of inbound marketing and how it can help them position their brand for an even further success. Corporality Global, which is a constant partner for Tech Consultants, was more than happy to do the work and knew what exactly they needed. </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="container">
-				<div className="row">
-					<div className="col-md-12">
-						<div className="case-study-bottom-line"></div>
 					</div>
 				</div>
 			</div>
@@ -117,6 +82,9 @@ const TechConsultants = () => {
 					<div className="row">
 						<div className="col-md-8">
 							<div className="case-study-solution-content">
+								<h2>The challenge</h2>
+								<p>Tech Consultants is one of the leading contract and permanent staffing solutions providers in Australia. However, despite its current position in the market, they still needed a lift with improving their presence online since most of their leads come from outbound efforts and other sales-heavy strategies. They knew the potential of inbound marketing and how it can help them position their brand for an even further success. Corporality Global, which is a constant partner for Tech Consultants, was more than happy to do the work and knew what exactly they needed.</p>
+
 								<img src={BASE_URL + '/img/setting-icon.png'} alt="The solution" />
 								<h2>The solution</h2>
 								<p><b>Website Design and Development</b></p>
@@ -134,30 +102,16 @@ const TechConsultants = () => {
 
 								<p><b>Email Marketing</b></p>
 								<p>To drive traffic to Tech Consultants’ website, Corporality Global created social media pages and targeted blogs. Each post was well-thought of and a product of market research. They also employ the right keywords to make sure that each content reaches the right audience at the right time. </p>
+
+								<img src={BASE_URL + '/img/write-icon.png'} alt="The outcome" />
+								<h2>The outcome</h2>
+								<p>To drive traffic to Tech Consultants’ website, Corporality Global created social media pages and targeted blogs. Each post was well-thought of and a product of market research. They also employ the right keywords to make sure that each content reaches the right audience at the right time. </p>
 							</div>
 						</div>
 
 						<div className="col-md-4">
-							<div className="case-study-related-box">
-								<div className="case-study-related-title">Related cause studies</div>
-								<ul>
-									<li>BuildQ</li>
-									<li>Meyer West</li>
-									<li>X Designs</li>
-									<li>BuildQ</li>
-								</ul>
-								<div className="case-study-all" onClick={() => { navigate("/clients"); topHandle(); }}><span>View All</span> <img src={BASE_URL + '/img/right-arrow-white.png'} alt="->" /></div>
-							</div>
-
-							<div className="case-study-suggested-box-main">
-								<div className="case-study-suggested-top-line"></div>
-								<div className="case-study-suggested-box">
-									<div className="case-study-suggested-title">Suggested for you</div>
-									<div className="case-study-suggested-content">
-										<p>Meyerwest wanted to build an effective social media presence which increased the traffic and customer base for them. They opted for our Digital Media Marketing services. With content marketing and SEO, they were able to generate more lucrative content for their prospects and existing customer base.</p>
-									</div>
-									<div className="case-study-suggested-btn">Go to Marketing</div>
-								</div>
+							<div className="case-study-content-img">
+								<img src={BASE_URL + '/img/TechConsultants.png'} alt="TechConsultants" />
 							</div>
 						</div>
 					</div>
@@ -167,7 +121,7 @@ const TechConsultants = () => {
 			<div className="case-study-outcome-container">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-10 offset-2">
+						<div className="col-md-8 offset-4">
 							<div className="case-study-outcome-video">
 								<div className="case-study-outcome-video-banner">
 									<img src={BASE_URL + '/img/case-study-outcome-video-banner.png'} alt="video-banner" />
@@ -182,7 +136,7 @@ const TechConsultants = () => {
 					<div className="row case-study-outcome-content-main">
 						<div className="col-md-6">
 							<div className="case-study-testimonial">
-								<img src={BASE_URL + '/img/testi-img.png'} alt="testi-img" className="case-study-testi-img" />
+								<img src={BASE_URL + '/img/TechConsultants-logo.png'} alt="TechConsultants-logo" className="case-study-testi-logo" />
 								<div className="case-study-testi-content">
 									<img src={BASE_URL + '/img/testi-quote.png'} alt="testi-quote" className="case-study-testi-quote" />
 									<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers by area to find sales gaps. The company was  frequently wasting their efforts and missing out on significant possibilities that were there in front of them.</p>
@@ -191,42 +145,20 @@ const TechConsultants = () => {
 						</div>
 
 						<div className="col-md-6">
-							<div className="case-study-outcome-content">
-								<h2>The outcome</h2>
-								<p>To drive traffic to Tech Consultants’ website, Corporality Global created social media pages and targeted blogs. Each post was well-thought of and a product of market research. They also employ the right keywords to make sure that each content reaches the right audience at the right time. </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="case-study-business-level-container">
-				<div className="container">
-					<div className="row case-study-business-level-row">
-						<div className="col-md-6">
-							<div className="case-study-business-level">
+							<div className="case-study-business-level-content">
 								<div className="case-study-business-level-title">Ready to take your business to the next level?</div>
-								<div className="case-study-business-level-content">
-									<span>Talk to our experts in:</span>
-									<div className="case-study-business-level-dd">Medtech</div>
-								</div>
-							</div>
-						</div>
-
-						<div className="col-md-6">
-							<div className="case-study-business-expand">
 								<p>We provide strategic consulting to businesses worldwide. Want to expand your business globally, or want to achieve great success in your respective industry? We got your back.</p>
-								<div className="case-study-business-expand-form">
+								<div className="case-study-business-level-form">
 									<div className="row">
 										<div className="col-md-6 form-group">
-											<input type="text" className="form-control" placeholder="First name" />
+											<input type="text" className="form-control" placeholder="Name" />
 										</div>
 										<div className="col-md-6 form-group">
-											<input type="text" className="form-control" placeholder="Last name" />
+											<input type="email" className="form-control" placeholder="Email" />
 										</div>
 
-										<div className="col-md-12 form-group">
-											<button type="submit" className="business-expand-btn">Submit</button>
+										<div className="col-md-12">
+											<button type="submit" className="business-level-btn">Submit</button>
 										</div>
 									</div>
 								</div>

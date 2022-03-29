@@ -1,17 +1,9 @@
 import React from "react";
 import './CaseStudy.css'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
-import { useNavigate } from "react-router";
 import RelatedCaseStudyCarousel from "./RelatedCaseStudyCarousel";
 
 const MeyerWest = () => {
-
-	const navigate = useNavigate();
-	const topHandle = () => {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	};
-
 	return (
 		<div className="cause-studies-container">
 
