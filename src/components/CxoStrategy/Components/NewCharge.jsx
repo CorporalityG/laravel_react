@@ -1,6 +1,6 @@
 import React from 'react';
 import "./NewCharge.css";
-import priya from "../img/charge/lady.png"
+import priya from "../img/charge/Bring-a-CXO.png"
 import vid from "../img/charge/Rectangle 213.png"
 
 const NewCharge = () => {
