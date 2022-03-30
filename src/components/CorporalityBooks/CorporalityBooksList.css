@@ -1,0 +1,562 @@
+.c-book-list-banner-container {
+    margin-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #FFFFFF;
+    position: relative;
+}
+.c-book-list-banner-container .c-book-rec {
+    position: absolute;
+}
+.c-book-list-banner-container .c-book-rec-1 {
+    left: 0;
+    top: 40px;
+}
+.c-book-list-banner-container .c-book-rec-2 {
+    left: 80px;
+    bottom: 50px;
+}
+.c-book-list-banner-container .c-book-rec-3 {
+    right: 0;
+    top: 0;
+}
+.c-book-list-banner-container .c-book-list-banner-row {
+    align-items: center;
+}
+.c-book-list-banner-container h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 25px;
+}
+.c-book-list-banner-container p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+    color: #232323;
+}
+.c-book-list-banner-container .c-book-list-banner-img img {
+    max-width: 100%;
+}
+
+.c-book-list-container {
+    background: #FAFAFA;
+    padding-top: 90px;
+    padding-bottom: 50px;
+}
+.c-book-list-container .c-book-list-row {
+    margin-bottom: 60px;
+}
+.c-book-list-container .c-book-content-main {
+    display: flex;
+    background: #FFFFFF;
+    height: 100%;
+    width: 100%;
+}
+.c-book-list-container .c-book-content-main .c-book-img {
+    width: 35%;
+}
+.c-book-list-container .c-book-content-main .c-book-img img {
+    max-width: 100%;
+    width: 100%;
+}
+.c-book-list-container .c-book-content-main .c-book-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 65%;
+}
+.c-book-list-container .c-book-content-main .c-book-content-item {
+    display: flex;
+    align-items: first baseline;
+    position: relative;
+}
+.c-book-list-container .c-book-content-main .c-book-content-item:not(:last-child)::before {
+    background-color: #DCDCDC;
+    content: "";
+    height: 110%;
+    left: 35px;
+    position: absolute;
+    top: 30px;
+    width: 1px;
+}
+.c-book-list-container .c-book-content-main .c-book-icon {
+    margin-right: 15px;
+    position: relative;
+}
+.c-book-list-container .c-book-content-main .c-book-icon img {
+    max-width: 71px;
+    z-index: 9;
+    position: relative;
+}
+.c-book-list-container .c-book-content-main .c-book-icon::after {
+    background-color: #DCDCDC;
+    content: "";
+    height: 1px;
+    left: 50px;
+    position: absolute;
+    top: 32px;
+    width: 30px;
+}
+.c-book-list-container .c-book-content-main .c-book-desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #757575;
+}
+.c-book-list-container .c-book-content-main .c-book-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 5px;
+}
+.c-book-list-container .c-book-content-main .c-book-text {
+    font-size: 16px;
+    margin-right: 15px;
+}
+.c-book-list-container .c-book-content-main .c-book-detail-mian {
+    display: flex;
+    align-items: center;
+}
+.c-book-list-container .c-book-content-main .c-book-detail:not(:last-child) {
+    border-right: 1px solid #DCDCDC;
+    padding-right: 8px;
+    margin-right: 8px;
+}
+.c-book-list-container .c-book-content-main .c-book-btn-mian {
+    display: flex;
+    align-items: center;
+}
+.c-book-list-container .c-book-content-main .c-book-button {
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 5px 25px;
+    cursor: pointer;
+}
+.c-book-list-container .c-book-video {
+    display: flex;
+    height: 100%;
+}
+.c-book-list-container .c-book-video video {
+    max-width: 100%;
+}
+.c-book-list-container .c-book-video img {
+    width: 100%;
+    height: 100%;
+}
+
+.c-book-payment-modal .modal-header {
+    border-bottom-width: 0;
+    padding-top: 25px;
+    padding-right: 25px;
+}
+.c-book-payment-modal .modal-header .btn-close {
+    background-image: url('./img/payment-modal-close.png');
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+    opacity: 1;
+    box-shadow: unset;
+}
+.c-book-payment-modal .modal-body {
+    padding: 20px 60px 60px;
+    z-index: 9;
+}
+.c-book-payment-modal .c-book-payment-modal-row {
+    align-items: center;
+}
+.c-book-payment-modal .c-book-payment-content-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    position: relative;
+}
+.c-book-payment-modal .c-book-payment-content-heading::after {
+    background-color: #A06DAF;
+    bottom: 0;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    width: 80px;
+}
+.c-book-payment-modal .c-book-payment-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #232323;
+}
+.c-book-payment-modal .c-book-payment-process {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(24, 54, 69, 0.15);
+    padding: 25px 30px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+.c-book-payment-modal .c-book-payment-process-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 25px;
+}
+.c-book-payment-modal .c-book-payment-process-form .form-group {
+    margin-bottom: 25px;
+}
+.c-book-payment-modal .c-book-payment-process-form .form-control {
+    outline: 0;
+    box-shadow: unset;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #C2BDC8;
+    padding: 10px;
+    height: auto;
+}
+.c-book-payment-modal .c-book-payment-process-form .form-control::placeholder {
+    color: #C2BDC8;
+}
+.c-book-payment-modal .c-book-payment-process-form .form-select {
+    outline: 0;
+    box-shadow: unset;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #C2BDC8;
+    padding: 10px;
+    height: auto;
+}
+.c-book-payment-modal .c-book-payment-process-form .form-select::placeholder {
+    color: #C2BDC8;
+}
+.c-book-payment-modal .c-book-payment-process-form .form-check-label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    color: #757575;
+}
+.c-book-payment-modal .c-book-payment-process-form .pay-btn {
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 10px 25px;
+    outline: 0;
+    border-width: 0;
+}
+.c-book-payment-modal .c-book-payment-modal-bg {
+    position: relative;
+}
+.c-book-payment-modal .c-book-payment-modal-bg img {
+    position: absolute;
+    max-width: 100%;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-vec-1 {
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-vec-2 {
+    width: 100%;
+    bottom: 0;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-rec-1 {
+    bottom: 40px;
+    left: 50px;
+    z-index: 1;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-rec-2 {
+    bottom: 90px;
+    left: 45%;
+    z-index: 1;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-rec-3 {
+    bottom: 10px;
+    left: 35%;
+    z-index: 1;
+}
+.c-book-payment-modal .c-book-payment-modal-bg .pm-rec-4 {
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.c-book-download-modal .modal-header {
+    border-bottom-width: 0;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+.c-book-download-modal .modal-header .btn-close {
+    background-image: url('./img/payment-modal-close.png');
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    opacity: 1;
+    box-shadow: unset;
+}
+.c-book-download-modal .modal-body {
+    padding: 0 50px 40px;
+}
+.c-book-download-modal .c-book-download-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 30px;
+}
+.c-book-download-modal .c-book-download-modal-content .form-group {
+    margin-bottom: 25px;
+}
+.c-book-download-modal .c-book-download-modal-content .form-control {
+    outline: 0;
+    box-shadow: unset;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #C2BDC8;
+    padding: 10px;
+    height: auto;
+}
+.c-book-download-modal .c-book-download-modal-content .form-control::placeholder {
+    color: #C2BDC8;
+}
+.c-book-download-modal .c-book-download-modal-content .form-check-label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    color: #757575;
+}
+.c-book-download-modal .c-book-download-modal-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #757575;
+}
+.c-book-download-modal .c-book-download-modal-content p span {
+    color: #33657E;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.c-book-download-modal .c-book-download-modal-content .download-btn {
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 10px 25px;
+    outline: 0;
+    border-width: 0;
+    box-shadow: unset;
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1399.99px) {
+    .c-book-list-container .c-book-content-main .c-book-text {
+        margin-right: 10px;
+    }
+    .c-book-list-container .c-book-content-main .c-book-button {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .c-book-list-container .c-book-content-main .c-book-content-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .c-book-list-container .c-book-content-main .c-book-detail-mian {
+        flex-wrap: wrap;
+    }
+    .c-book-list-container .c-book-content-main .c-book-detail {
+        flex: 0 0 40%;
+        margin-bottom: 5px;
+    }
+    .c-book-list-container .c-book-content-main .c-book-detail:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 1199.99px) {
+    .c-book-list-container .c-book-list-row .col-lg-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .c-book-list-container .c-book-content-main .c-book-content-item:not(:last-child)::before {
+        height: 200%;
+    }
+    .c-book-payment-modal .modal-body {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .c-book-payment-modal .c-book-payment-process {
+        max-width: 90%;
+    }
+    .c-book-payment-modal .c-book-payment-content-heading {
+        font-size: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+    .c-book-list-banner-container .c-book-list-banner-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .c-book-list-container .c-book-content-main .c-book-content-item:not(:last-child)::before {
+        height: 150%;
+        overflow: hidden;
+    }
+    .c-book-payment-modal .c-book-payment-process {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+    .c-book-payment-modal .c-book-payment-process-form .form-group:last-child {
+        margin-bottom: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .c-book-list-container .c-book-content-main .c-book-title {
+        font-size: 14px;
+    }
+    .c-book-list-container .c-book-content-main .c-book-detail-mian {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .c-book-list-container .c-book-content-main .c-book-detail {
+        margin-bottom: 5px;
+    }
+    .c-book-list-container .c-book-content-main .c-book-detail:not(:last-child) {
+        padding-right: 0;
+        margin-right: 0;
+        border-right-width: 0;
+    }
+    .c-book-list-container .c-book-content-main .c-book-btn-mian {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .c-book-list-container .c-book-content-main .c-book-text {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .c-book-list-container .c-book-content-main .c-book-content-item {
+        padding-bottom: 20px;
+    }
+    .c-book-list-container .c-book-content-main .c-book-content-item:not(:last-child)::before {
+        height: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .c-book-payment-modal .c-book-payment-modal-row.row > * {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .c-book-list-container .c-book-content-main {
+        flex-direction: column;
+    }
+    .c-book-list-container .c-book-content-main .c-book-img {
+        width: 100%;
+    }
+    .c-book-list-container .c-book-content-main .c-book-content {
+        width: 100%;
+    }
+    .c-book-payment-modal .modal-body {
+        padding-top: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 391px) {
+    .c-book-list-banner-container h1 {
+        font-size: 28px;
+    }
+    .c-book-payment-modal .c-book-payment-content-heading {
+        font-size: 26px;
+    }
+    .c-book-download-modal .modal-body {
+        padding: 0 30px 20px;
+    }
+}
+
+
+@media only screen and (max-width: 346px) {
+    .c-book-list-banner-container h1 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .c-book-payment-modal .c-book-payment-content-heading {
+        font-size: 21px;
+    }
+    .c-book-payment-modal .c-book-payment-process {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .c-book-payment-modal .c-book-payment-process-form .form-check-label {
+        text-align: left;
+    }
+    .c-book-payment-modal .modal-header {
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    .c-book-download-modal .modal-header {
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    .c-book-download-modal .modal-body {
+        padding: 0 15px 20px;
+    }
+    .c-book-download-modal .c-book-download-heading {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .c-book-list-container .c-book-content-main .c-book-button {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .c-book-list-container .c-book-content-main .c-book-text {
+        font-size: 14px;
+    }
+}

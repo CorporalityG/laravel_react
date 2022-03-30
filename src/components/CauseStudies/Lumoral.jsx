@@ -1,17 +1,9 @@
 import React from "react";
 import './CaseStudy.css'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
-import { useNavigate } from "react-router";
 import RelatedCaseStudyCarousel from "./RelatedCaseStudyCarousel";
 
 const Lumoral = () => {
-
-	const navigate = useNavigate();
-	const topHandle = () => {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	};
-
 	return (
 		<div className="cause-studies-container">
 
@@ -40,34 +32,6 @@ const Lumoral = () => {
 								<img src={BASE_URL + '/img/Lumoral-icon.png'} alt="Lumoral-icon" className="case-study-icon" />
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="case-study-challenge-container">
-				<div className="container">
-					<div className="row case-study-challenge-row">
-						<div className="col-md-6">
-							<div className="case-study-challenge-img">
-								<img src={BASE_URL + '/img/Lumoral.png'} alt="Lumoral" />
-							</div>
-						</div>
-
-						<div className="col-md-6">
-							<div className="case-study-challenge-content">
-								<h2>The challenge</h2>
-								<p>Lumoral is a light-activated medical device that helps prevent gingivitis, periodontitis, tooth decay, and plaque formation.  It was developed by Koite Health, a fast growing health technology company based in Finland.</p>
-								<p>While Lumoral’s product is very promising and has a lot of potential to penetrate the Australian medical technology or dental market, they needed a solid strategy to launch their product and introduce it to the market. Thankfully, they approached the perfect partner - Corporality Global.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="container">
-				<div className="row">
-					<div className="col-md-12">
-						<div className="case-study-bottom-line"></div>
 					</div>
 				</div>
 			</div>
@@ -118,6 +82,10 @@ const Lumoral = () => {
 					<div className="row">
 						<div className="col-md-8">
 							<div className="case-study-solution-content">
+								<h2>The challenge</h2>
+								<p>Lumoral is a light-activated medical device that helps prevent gingivitis, periodontitis, tooth decay, and plaque formation.  It was developed by Koite Health, a fast growing health technology company based in Finland.</p>
+								<p>While Lumoral’s product is very promising and has a lot of potential to penetrate the Australian medical technology or dental market, they needed a solid strategy to launch their product and introduce it to the market. Thankfully, they approached the perfect partner - Corporality Global.</p>
+
 								<img src={BASE_URL + '/img/setting-icon.png'} alt="The solution" />
 								<h2>The solution</h2>
 								<p>Corporality Global is an international management and marketing consulting firm specializing in niche industries such as medical technology, healthcare and more. For Lumoral’s launch in Australia, Corporality Global created a go-to-market strategy (GTM strategy) to position Lumoral for success.</p>
@@ -125,30 +93,16 @@ const Lumoral = () => {
 								<p>The success of products and services in a new or existing market is driven by a solid GTM strategy. Coordinated messaging, precise product positioning, and a well-defined consumer persona are all critical to a product's or service's market success.</p>
 								<p><b>Organic marketing efforts:</b> To target customers where they are and at the right time, Corporality Global has set up various organic marketing efforts such as blogging, social media posting, and hosting webinars. The said strategies revolve around creating educational content to let the public know of some health concerns and how Lumoral can address them.</p>
 								<p><b>Targeted paid advertisements:</b> To support organic marketing efforts, Corporality Global also launched paid advertisements on Google and other social media platforms. While getting ads approved for medical devices were faced with some restrictions on social media platforms, Corporality Global’s experts were able to tweak the messaging to be concise, factual and within the guidelines of different social media platforms. </p>
+
+								<img src={BASE_URL + '/img/write-icon.png'} alt="The outcome" />
+								<h2>The outcome</h2>
+								<p>Through the various efforts launched as discussed above, Lumoral was able to convert visitors and social media subscribers into customers. They were also able to build collaborations with Australian dentists as part of their campaign. </p>
 							</div>
 						</div>
 
 						<div className="col-md-4">
-							<div className="case-study-related-box">
-								<div className="case-study-related-title">Related cause studies</div>
-								<ul>
-									<li>BuildQ</li>
-									<li>Meyer West</li>
-									<li>X Designs</li>
-									<li>BuildQ</li>
-								</ul>
-								<div className="case-study-all" onClick={() => { navigate("/clients"); topHandle(); }}><span>View All</span> <img src={BASE_URL + '/img/right-arrow-white.png'} alt="->" /></div>
-							</div>
-
-							<div className="case-study-suggested-box-main">
-								<div className="case-study-suggested-top-line"></div>
-								<div className="case-study-suggested-box">
-									<div className="case-study-suggested-title">Suggested for you</div>
-									<div className="case-study-suggested-content">
-										<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers.</p>
-									</div>
-									<div className="case-study-suggested-btn">Go to Marketing</div>
-								</div>
+							<div className="case-study-content-img">
+								<img src={BASE_URL + '/img/Lumoral.png'} alt="Lumoral" />
 							</div>
 						</div>
 					</div>
@@ -158,7 +112,7 @@ const Lumoral = () => {
 			<div className="case-study-outcome-container">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-10 offset-2">
+						<div className="col-md-8 offset-4">
 							<div className="case-study-outcome-video">
 								<div className="case-study-outcome-video-banner">
 									<img src={BASE_URL + '/img/case-study-outcome-video-banner.png'} alt="video-banner" />
@@ -173,7 +127,7 @@ const Lumoral = () => {
 					<div className="row case-study-outcome-content-main">
 						<div className="col-md-6">
 							<div className="case-study-testimonial">
-								<img src={BASE_URL + '/img/testi-img.png'} alt="testi-img" className="case-study-testi-img" />
+								<img src={BASE_URL + '/img/Lumoral-logo.png'} alt="Lumoral-logo" className="case-study-testi-logo" />
 								<div className="case-study-testi-content">
 									<img src={BASE_URL + '/img/testi-quote.png'} alt="testi-quote" className="case-study-testi-quote" />
 									<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers by area to find sales gaps. The company was  frequently wasting their efforts and missing out on significant possibilities that were there in front of them.</p>
@@ -182,42 +136,20 @@ const Lumoral = () => {
 						</div>
 
 						<div className="col-md-6">
-							<div className="case-study-outcome-content">
-								<h2>The outcome</h2>
-								<p>Through the various efforts launched as discussed above, Lumoral was able to convert visitors and social media subscribers into customers. They were also able to build collaborations with Australian dentists as part of their campaign. </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="case-study-business-level-container">
-				<div className="container">
-					<div className="row case-study-business-level-row">
-						<div className="col-md-6">
-							<div className="case-study-business-level">
+							<div className="case-study-business-level-content">
 								<div className="case-study-business-level-title">Ready to take your business to the next level?</div>
-								<div className="case-study-business-level-content">
-									<span>Talk to our experts in:</span>
-									<div className="case-study-business-level-dd">Medtech</div>
-								</div>
-							</div>
-						</div>
-
-						<div className="col-md-6">
-							<div className="case-study-business-expand">
 								<p>We provide strategic consulting to businesses worldwide. Want to expand your business globally, or want to achieve great success in your respective industry? We got your back.</p>
-								<div className="case-study-business-expand-form">
+								<div className="case-study-business-level-form">
 									<div className="row">
 										<div className="col-md-6 form-group">
-											<input type="text" className="form-control" placeholder="First name" />
+											<input type="text" className="form-control" placeholder="Name" />
 										</div>
 										<div className="col-md-6 form-group">
-											<input type="text" className="form-control" placeholder="Last name" />
+											<input type="email" className="form-control" placeholder="Email" />
 										</div>
 
-										<div className="col-md-12 form-group">
-											<button type="submit" className="business-expand-btn">Submit</button>
+										<div className="col-md-12">
+											<button type="submit" className="business-level-btn">Submit</button>
 										</div>
 									</div>
 								</div>

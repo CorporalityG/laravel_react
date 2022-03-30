@@ -5,6 +5,8 @@ import Leverage from "./Components/Leverage";
 import Differentiate from "./Components/Differentiate";
 import NewCharge from "./Components/NewCharge";
 import NewStep from "./Components/NewStep";
+import BusinessResults from "./Components/BusinessResults";
+import WhyOutsource from "./Components/WhyOutsource";
 
 function HomePage() {
   return (
@@ -15,6 +17,8 @@ function HomePage() {
       <Talent />
       <Continously />
       <Leverage />
+      <BusinessResults />
+      <WhyOutsource />
     </>
   );
 }

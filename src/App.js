@@ -38,7 +38,13 @@ import XDesign from "./components/CauseStudies/XDesign";
 import MeyerWest from "./components/CauseStudies/MeyerWest";
 import Lumoral from "./components/CauseStudies/Lumoral";
 
+import CorporalityBooksList from "./components/CorporalityBooks/CorporalityBooksList";
+import JourneyOfPerseverance from "./components/CorporalityBooks/JourneyOfPerseverance";
+
 import ResearchPapers from "./components/ResearchPapers/ResearchPapers";
+
+import WhyCorporalityEffect from "./components/WhyCorporalityEffect/WhyCorporalityEffect";
+import WhatIsCorporalityEffect from "./components/WhatIsCorporalityEffect/WhatIsCorporalityEffect";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -106,6 +112,12 @@ function App() {
             <Route path="/x-designs" element={<XDesign />} />
             <Route path="/meyer-west" element={<MeyerWest />} />
             <Route path="/lumoral" element={<Lumoral />} />
+
+            <Route path="/corporality-books" element={<CorporalityBooksList />} />
+            <Route path="/book/journey-of-perseverance" element={<JourneyOfPerseverance />} />
+
+            <Route path="/why-corporality-effect" element={<WhyCorporalityEffect />} />
+            <Route path="/what-is-corporality-effect" element={<WhatIsCorporalityEffect />} />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             

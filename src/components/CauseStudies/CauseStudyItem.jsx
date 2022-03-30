@@ -17,7 +17,6 @@ function CauseStudyItem(props) {
             </div>
             <div className="case-study-item-content">
                 <div className="case-study-item-title">{props.title}</div>
-                <div className="case-study-item-subtitle">{props.subtitle}</div>
                 <div className="case-study-item-btn">
                     <div onClick={() => { navigate(`/${props.slug}`); topHandle(); }} className="case-study-item-explore">Explore <img src={BASE_URL + '/img/right-arrow-blue.png'} alt="->" /></div>
                 </div>

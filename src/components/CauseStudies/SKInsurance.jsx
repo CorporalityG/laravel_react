@@ -1,17 +1,9 @@
 import React from "react";
 import './CaseStudy.css'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
-import { useNavigate } from "react-router";
 import RelatedCaseStudyCarousel from "./RelatedCaseStudyCarousel";
 
 const SKInsurance = () => {
-
-	const navigate = useNavigate();
-	const topHandle = () => {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	};
-
 	return (
 		<div className="cause-studies-container">
 
@@ -29,7 +21,7 @@ const SKInsurance = () => {
 									<div className="title-line"></div>
 								</div>
 								<div className="content">
-									<p>We worked with SK Insure to create a brand-new content framework that would provide a better consumer experience. </p>
+									<p>We worked with SK Insure to create a brand-new content framework that would provide a better consumer experience.</p>
 								</div>
 							</div>
 						</div>
@@ -40,33 +32,6 @@ const SKInsurance = () => {
 								<img src={BASE_URL + '/img/SK-Insurance-icon.png'} alt="SK-Insurance-icon" className="case-study-icon" />
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="case-study-challenge-container">
-				<div className="container">
-					<div className="row case-study-challenge-row">
-						<div className="col-md-6">
-							<div className="case-study-challenge-img">
-								<img src={BASE_URL + '/img/SK-Insurance.png'} alt="SK-Insurance" />
-							</div>
-						</div>
-
-						<div className="col-md-6">
-							<div className="case-study-challenge-content">
-								<h2>The challenge</h2>
-								<p>The insurance company was in a pickle. It was being challenged by digital natives who were already present on the world wide web and garnering attention and scoring better with the customer.  Unfortunately, the firm was unable to offer the seamless digital experience that customers have grown to expect due to old infrastructure. As a result, they requested Corporality Global to assist them in developing a new strategy to position them as a digital-first company.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="container">
-				<div className="row">
-					<div className="col-md-12">
-						<div className="case-study-bottom-line"></div>
 					</div>
 				</div>
 			</div>
@@ -116,34 +81,23 @@ const SKInsurance = () => {
 					<div className="row">
 						<div className="col-md-8">
 							<div className="case-study-solution-content">
+								<h2>The challenge</h2>
+								<p>The insurance company was in a pickle. It was being challenged by digital natives who were already present on the world wide web and garnering attention and scoring better with the customer.  Unfortunately, the firm was unable to offer the seamless digital experience that customers have grown to expect due to old infrastructure. As a result, they requested Corporality Global to assist them in developing a new strategy to position them as a digital-first company.</p>
+
 								<img src={BASE_URL + '/img/setting-icon.png'} alt="The solution" />
 								<h2>The solution</h2>
 								<p><b>Strategic content tailored for customers:</b> The insurance industry can be complex and hard to understand, especially for beginners. That’s why Corporality Global’s first mission was to create educational content at each stage of the funnel to improve the website user experience for both first time and returning visitors. Each content targeted a specific keyword to boost the brand’s visibility on the search engine results pages.</p>
 								<p><b>Timely and educational social media posts:</b> SK Insure also managed to re-introduce its brand online through a series of social media posts that are lighthearted and educational. Corporality Global has developed themes for each day of the posting plan to keep subscribers and prospects informed and in tune to what’s next.</p>
+
+								<img src={BASE_URL + '/img/write-icon.png'} alt="The outcome" />
+								<h2>The outcome</h2>
+								<p>SK Insure collaborated with our integrated team of designers, developers and professionals to break through the clutter of ideas and find tangible sources of agility and competitive advantage for the company. With the content strategy and development in place, SK Insure has improved its week on week views and engagement, and is sure to  skyrocket in the future.</p>
 							</div>
 						</div>
 
 						<div className="col-md-4">
-							<div className="case-study-related-box">
-								<div className="case-study-related-title">Related cause studies</div>
-								<ul>
-									<li>BuildQ</li>
-									<li>Meyer West</li>
-									<li>X Designs</li>
-									<li>BuildQ</li>
-								</ul>
-								<div className="case-study-all" onClick={() => { navigate("/clients"); topHandle(); }}><span>View All</span> <img src={BASE_URL + '/img/right-arrow-white.png'} alt="->" /></div>
-							</div>
-
-							<div className="case-study-suggested-box-main">
-								<div className="case-study-suggested-top-line"></div>
-								<div className="case-study-suggested-box">
-									<div className="case-study-suggested-title">Suggested for you</div>
-									<div className="case-study-suggested-content">
-										<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers.</p>
-									</div>
-									<div className="case-study-suggested-btn">Go to Marketing</div>
-								</div>
+							<div className="case-study-content-img">
+								<img src={BASE_URL + '/img/SK-Insurance.png'} alt="SK-Insurance" />
 							</div>
 						</div>
 					</div>
@@ -153,7 +107,7 @@ const SKInsurance = () => {
 			<div className="case-study-outcome-container">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-10 offset-2">
+						<div className="col-md-8 offset-4">
 							<div className="case-study-outcome-video">
 								<div className="case-study-outcome-video-banner">
 									<img src={BASE_URL + '/img/case-study-outcome-video-banner.png'} alt="video-banner" />
@@ -168,7 +122,7 @@ const SKInsurance = () => {
 					<div className="row case-study-outcome-content-main">
 						<div className="col-md-6">
 							<div className="case-study-testimonial">
-								<img src={BASE_URL + '/img/testi-img.png'} alt="testi-img" className="case-study-testi-img" />
+								<img src={BASE_URL + '/img/SK-Insurance-logo.png'} alt="SK-Insurance-logo" className="case-study-testi-logo" />
 								<div className="case-study-testi-content">
 									<img src={BASE_URL + '/img/testi-quote.png'} alt="testi-quote" className="case-study-testi-quote" />
 									<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers by area to find sales gaps. The company was  frequently wasting their efforts and missing out on significant possibilities that were there in front of them.</p>
@@ -177,42 +131,20 @@ const SKInsurance = () => {
 						</div>
 
 						<div className="col-md-6">
-							<div className="case-study-outcome-content">
-								<h2>The outcome</h2>
-								<p>SK Insure collaborated with our integrated team of designers, developers and professionals to break through the clutter of ideas and find tangible sources of agility and competitive advantage for the company. With the content strategy and development in place, SK Insure has improved its week on week views and engagement, and is sure to  skyrocket in the future.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="case-study-business-level-container">
-				<div className="container">
-					<div className="row case-study-business-level-row">
-						<div className="col-md-6">
-							<div className="case-study-business-level">
+							<div className="case-study-business-level-content">
 								<div className="case-study-business-level-title">Ready to take your business to the next level?</div>
-								<div className="case-study-business-level-content">
-									<span>Talk to our experts in:</span>
-									<div className="case-study-business-level-dd">Medtech</div>
-								</div>
-							</div>
-						</div>
-
-						<div className="col-md-6">
-							<div className="case-study-business-expand">
 								<p>We provide strategic consulting to businesses worldwide. Want to expand your business globally, or want to achieve great success in your respective industry? We got your back.</p>
-								<div className="case-study-business-expand-form">
+								<div className="case-study-business-level-form">
 									<div className="row">
 										<div className="col-md-6 form-group">
-											<input type="text" className="form-control" placeholder="First name" />
+											<input type="text" className="form-control" placeholder="Name" />
 										</div>
 										<div className="col-md-6 form-group">
-											<input type="text" className="form-control" placeholder="Last name" />
+											<input type="email" className="form-control" placeholder="Email" />
 										</div>
 
-										<div className="col-md-12 form-group">
-											<button type="submit" className="business-expand-btn">Submit</button>
+										<div className="col-md-12">
+											<button type="submit" className="business-level-btn">Submit</button>
 										</div>
 									</div>
 								</div>
