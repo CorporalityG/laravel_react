@@ -15,27 +15,19 @@ export default function Banner() {
 						Marketing Strategy for Small and Large Business</h1>
 					<p>Head to toe strategy focused Digital Media Marketing</p> */}
 					<h1 className="heading animate two">
-									<span>Effective</span>
+									<span>Building </span>
 									&nbsp;
 									<span>Digital</span>
 									&nbsp;
-									<span>MEdia</span>
+									<span>Foot</span>
 									&nbsp;
-									<span>Marketing</span>
-									&nbsp;
-									<span>Strategy</span>
-									&nbsp;
-									<span>for</span>
-									&nbsp;
-									<span>Small</span>
-									&nbsp;
-									<span>and</span>
-									&nbsp;
-									<span>Large</span>
-									&nbsp;
-									<span>Business</span>
+									<span>Print</span>
+									
 								</h1>
-					<p data-aos="fade-right" data-aos-delay="400">Head to toe strategy focused Digital Media Marketing</p>
+					<p data-aos="fade-right" data-aos-delay="400"><b>We got you covered for Digital Media Marketing through our Packaged solution</b><br/>
+					
+					Corporeality  is the world’s trusted Digital Media Marketing firm, partnering with clients to solve the complex challenges of consistency in creating your digital presence.
+</p>
 				
 				<div className="DDMBannerDiscoveryButton" data-aos="fade-right" data-aos-delay="800">
 					<button onClick={() => { navigate("/contact"); }}>Book Your Discovery Session</button>

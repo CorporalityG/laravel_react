@@ -77,12 +77,16 @@ function BrandFirst() {
             <div className="brandposition_first_textside_heading" data-aos="fade-up"
               data-aos-easing="linear"
               data-aos-duration="1000">
-              EVERY BRAND HAS A STORY AND EVERY STORY IS UNIQUE.
-            </div>
+              GROWING UP IS AN ADVENTURE
+                          </div>
             <div className="brandposition_first_textside_description" data-aos="fade-down"
               data-aos-easing="linear"
               data-aos-duration="1500">
-              Big brands have one thing in common - they have a solid brand positioning strategy. Businesses must invest in a strong brand marketing strategy to thrive in a highly competitive market. The proof lies in the numbers. Companies continuously investing in brand positioning strategies can see an <b>average increase in revenue between 10 and 20%.</b>
+                <b>We bring the power of Corporality Signature Product to help you grow. </b>
+                Full service Branding and Marketing Solutions for Small to Medium sized businesses
+
+Everyday, we bring our experience, knowledge and expertise to help your vision to achieve. We dig. We hunt. We work unceasingly to nurture brand positioning for our clients.
+
             </div>
           </div>
           <div className="brandposition_first_imageside">

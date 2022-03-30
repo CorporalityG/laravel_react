@@ -89,8 +89,9 @@ const NewBanner = () => {
 
                         <div className="leftPartBanner" data-aos="fade-left" data-aos-duration="2500">
                             <div data-aos="fade-right" className="bannerText">
-                                <h1 className="bannerHead" data-aos="fade-left" data-aos-duration="2700">Global Management Consulting and Marketing Company</h1>
-                                <p className="bannerSubtitle" data-aos="fade-left" data-aos-duration="3000">Identifying every opportunity to convert your potentials into ready-to-buy states Leading management consulting firm australia</p>
+                                <h1 className="bannerHead" data-aos="fade-left" data-aos-duration="2700">Global Management Consulting Company</h1>
+                                <p className="bannerSubtitle" data-aos="fade-left" data-aos-duration="3000">We are strategic management consulting firm specialised in Marketing and Sales
+</p>
                                 <div className="bannerBtn">
                                     <a href="tel:4154267999">Book a Discovery Call</a>
                                 </div>
@@ -147,10 +148,11 @@ const NewBanner = () => {
 
                         <div className="leftPartBanner">
                             <div className="bannerText">
-                                <h1 className="bannerHead">Reimagining your boundaries</h1>
-                                <p className="bannerSubtitle">Expanding your reach to provide more than just marketing solutions Superior brand management company Australia</p>
+                                <h1 className="bannerHead">Delivering Results You Can Visualize</h1>
+                                <p className="bannerSubtitle">Corporality is a strategic consulting firm that provides over 8 years of market intelligence backed by data-driven strategies to deliver measurable results.
+</p>
                                 <div className="bannerBtn">
-                                    <a href="tel:4154267999">Book a Discovery Call</a>
+                                    <a href="#">Request Call Back</a>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +162,7 @@ const NewBanner = () => {
                         </div>
 
                         <Modal show={show==2 ? show : ''} onHide={handleClose} size="lg" centered>
-                            <Modal.Header closeButton>Reimagining your boundaries</Modal.Header>
+                            <Modal.Header closeButton>Delivering Results You Can Visualize</Modal.Header>
                             <Modal.Body closeButton>
                                 <div className="home_banner_modal">
                                     <video src={BASE_URL + '/img/home-page-banner.mp4'} controls={true} autoPlay={true} />
@@ -188,10 +190,10 @@ const NewBanner = () => {
 
                         <div className="leftPartBanner">
                             <div className="bannerText">
-                                <h1 className="bannerHead">The future of businesses is right here</h1>
-                                <p className="bannerSubtitle">Implement the right marketing strategies for your business Premier marketing company Australia</p>
+                                <h1 className="bannerHead">Our focus is on creating your Impact</h1>
+                                <p className="bannerSubtitle">we communicate through omni effect, actionable insights and implement solutions with guaranteed results. Want to know how?</p>
                                 <div className="bannerBtn">
-                                    <a href="tel:4154267999">Book a Discovery Call</a>
+                                <a href="#">Request Call Back</a>
                                 </div>
                             </div>
                         </div>
@@ -201,7 +203,7 @@ const NewBanner = () => {
                         </div>
 
                         <Modal show={show==3 ? show : ''} onHide={handleClose} size="lg" centered>
-                            <Modal.Header closeButton>The future of businesses is right here</Modal.Header>
+                            <Modal.Header closeButton>Our focus is on creating your Impact</Modal.Header>
                             <Modal.Body closeButton>
                                 <div className="home_banner_modal">
                                     <video src={BASE_URL + '/img/home-page-banner.mp4'} controls={true} autoPlay={true} />

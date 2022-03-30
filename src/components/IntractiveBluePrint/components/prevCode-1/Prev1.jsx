@@ -30,8 +30,11 @@ const Prev1 = () => {
                     <div className="col-lg-6">
                         <div data-aos="fade-right" className="text-box-1">
 
-                            <p className='container-1_text'>INTERACTIVE BLUEPRINT</p>
-                            <p className='container-2_text'>100% customised plan that reduces risks and gives you an edge</p>
+                            <p className='container-1_text'>Embracing Your Innovative Idea</p>
+                            <p className='container-2_text'><b>Creating Blueprint of your business to stand out your brilliance</b><br/>
+                                
+                            Taking Mix Marketing approach and Blue ocean strategy to build your thought leader position. Standing out is a Norm.
+</p>
                             <div className="small-rect-prev-1"><img src={smallerrectCustomised} alt='' className='smaller-rect-prev-1' /></div>
                         </div>
                     </div>
