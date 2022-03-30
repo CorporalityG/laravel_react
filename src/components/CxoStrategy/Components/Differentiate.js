@@ -15,14 +15,19 @@ export default function Differentiate() {
           <div className="row position-relative">
             <div data-aos="fade-right" data-aos-duration="3000" className="col cxo-landing-page">
               <h3>OUTSOURCED CXO</h3>
-              <h1>DIFFERENTIATE YOUR BRAND EXPERIENCE</h1>
+              <h1>Delivering a better success</h1>
               <p>
+
+              United by a common purpose to deliver your vision with your team .Hire our strategist and consultants in bundle to handle your entire Marketing Department and customer service to accelerate the success you have been dreaming of
+.
+
                 Build customer loyalty through differentiated brand
                 strategies that activate a positive relationship
                 between the business and its customers.
                 Leadership is highly essential in creating
                 seamless and connected customer journeys that
                 are highly important.
+
 
               </p>
             </div>
