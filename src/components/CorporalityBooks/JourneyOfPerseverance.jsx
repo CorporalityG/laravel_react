@@ -81,9 +81,7 @@ function JourneyOfPerseverance() {
 
                         <div className="col-lg-6">
                             <div className="c-book-single-more-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit. Interdum integer turpis hac condimentum nam. In libero pulvinar nisi ullamcorper commodo sagittis massa sem. Tincidunt rhoncus sed lectus sed.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit. Interdum integer turpis hac condimentum nam. In libero pulvinar nisi ullamcorper commodo sagittis massa sem. Tincidunt rhoncus sed lectus sed.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit. Interdum integer turpis hac condimentum nam. In libero pulvinar nisi ullamcorper commodo sagittis massa sem. Tincidunt rhoncus sed lectus sed.</p>
+                                <p>Corporality’s collection of strategy literature offers you diversified marketing and business knowledge which is instrumental to an entrepreneur and his/her business’s growth. Journey of Perseverance is an account of an entrepreneur’s journey to success while our informative e-books talk about various marketing tactics that will skyrocket your revenue and increase your conversion rates. Whether it is inbound/outbound marketing, digital ecosystem or a complete maturation model for your business - our books help you gain expertise in this area. Download our e-books NOW!</p>
                             </div>
                         </div>
                     </div>

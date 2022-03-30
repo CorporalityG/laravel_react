@@ -87,7 +87,7 @@ const About = () => {
                             <h6>What is corporality effect?</h6>
                             <div className="diamond-line"></div>
                         </Link>
-                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                        <Link to="/corporality-culturally-conditioned" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
                             <h6>Culturally Conditioned</h6>
                             <div className="diamond-line"></div>
                         </Link>
