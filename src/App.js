@@ -46,6 +46,7 @@ import ResearchPapers from "./components/ResearchPapers/ResearchPapers";
 import WhyCorporalityEffect from "./components/WhyCorporalityEffect/WhyCorporalityEffect";
 import WhatIsCorporalityEffect from "./components/WhatIsCorporalityEffect/WhatIsCorporalityEffect";
 import CulturallyConditioned from "./components/CulturallyConditioned/CulturallyConditioned";
+import InboundShifting from "./components/InboundShifting/InboundShifting";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -120,6 +121,7 @@ function App() {
             <Route path="/why-corporality-effect" element={<WhyCorporalityEffect />} />
             <Route path="/what-is-corporality-effect" element={<WhatIsCorporalityEffect />} />
             <Route path="/corporality-culturally-conditioned" element={<CulturallyConditioned />} />
+            <Route path="/corporality-inbound-shiftings" element={<InboundShifting /> } />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             

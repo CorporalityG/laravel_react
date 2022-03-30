@@ -91,7 +91,7 @@ const About = () => {
                             <h6>Culturally Conditioned</h6>
                             <div className="diamond-line"></div>
                         </Link>
-                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                        <Link to="/corporality-inbound-shiftings" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
                             <h6>Inbound Shifting</h6>
                             <div className="diamond-line"></div>
                         </Link>

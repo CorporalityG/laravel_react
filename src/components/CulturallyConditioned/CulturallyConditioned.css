@@ -40,6 +40,7 @@
 }
 .cc-banner-section .cc-banner-social-main .cc-banner-social-icon {
     color: #33657e;
+    cursor: pointer;
 }
 .cc-banner-section .cc-banner-social-main .cc-banner-social-icon:not(:last-child) {
     margin-bottom: 5px;
