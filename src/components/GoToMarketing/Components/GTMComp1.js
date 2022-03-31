@@ -63,9 +63,9 @@ function Page1() {
 							<button
 								type="submit"
 								className="philosophySubmitButton d-flex align-items-center justify-content-center mt-2 px-3 py-2"
-								onClick={() => { navigate("/contact"); }}
+								onClick={() => { navigate("#"); }}
 							>
-								Book a discovery call
+								Schedule a time
 							</button>
 						</div>
 					</div>

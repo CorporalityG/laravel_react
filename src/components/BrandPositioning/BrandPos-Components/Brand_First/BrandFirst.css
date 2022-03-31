@@ -3,6 +3,15 @@
   margin-top: 80px !important;
   background: linear-gradient(255.47deg, #EEDFF2 2.24%, #E1EDF3 17.92%, #FFFFFF 48.34%);
 }
+.heading-h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #33657E;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  width: 115%;
+}
 
 .brandposition_first_socialicons {
   position: absolute;
@@ -64,6 +73,7 @@
   line-height: 24px;
   text-align: justify;
   color: #757575;
+  padding-bottom: 30px;
 }
 
 .brandposition_first_imageside {

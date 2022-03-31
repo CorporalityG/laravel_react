@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router";
 import "./CxoStrategy.css"
 
 export default function Differentiate() {
+  const navigate = useNavigate();
   useEffect(() => {
     Aos.init({ disable: "mobile" });
   });
@@ -15,11 +17,16 @@ export default function Differentiate() {
             <div data-aos="fade-right" data-aos-duration="3000" className="col cxo-landing-page">
               <h3>OUTSOURCED CXO</h3>
               <h1>Delivering a better success</h1>
+              <h4 className="heading-h4">United by a common purpose to deliver your vision with your team.</h4>
               <p>
-              United by a common purpose to deliver your vision with your team .Hire our strategist and consultants in bundle to handle your entire Marketing Department and customer service to accelerate the success you have been dreaming of
+              Hire our strategist and consultants in bundle to handle your entire Marketing Department and customer service to accelerate the success you have been dreaming of
 .
 
               </p>
+              
+              <div class="corporatefirst_text_button">
+                <button onClick={() => { navigate("#"); }}>Schedule a time</button>
+              </div>
             </div>
 
             <div className="col  cxo-landing-image-1">

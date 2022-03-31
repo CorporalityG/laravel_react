@@ -3,12 +3,21 @@
     display: flex !important;
     align-items: center !important;
 }
+.heading-h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #33657E;
+    padding-top: 5px;
+    width: 115%;
+    padding-bottom: 8px;
+}
 .text-box-1{
     position: relative !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    padding-top: 150px !important;
+    padding-top: 85px !important;
     left: -40px !important;
  
 }
@@ -38,6 +47,7 @@
     font-size: 16px !important;
     line-height: 26px !important;      
     color: #232323 !important;
+    text-align: justify;
 }
 .container-3_text {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

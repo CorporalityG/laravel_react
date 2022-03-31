@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import aos from 'aos'
+import { useNavigate } from "react-router";
 import 'aos/dist/aos.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
@@ -14,6 +15,7 @@ import smallerrectCustomised from '../prevCode-1/smaller-rectCustomised.png'
 
 
 const Prev1 = () => {
+    const navigate = useNavigate();
     useEffect(() => {
         aos.init({ duration: 3000 });
 
@@ -30,13 +32,19 @@ const Prev1 = () => {
                     <div className="col-lg-6">
                         <div data-aos="fade-right" className="text-box-1">
 
-                            <p className='container-1_text'>Embracing Your Innovative Idea</p>
-                            <p className='container-2_text'><b>Creating Blueprint of your business to stand out your brilliance</b><br/>
-                                
-                            Taking Mix Marketing approach and Blue ocean strategy to build your thought leader position. Standing out is a Norm.
+                            <p className='container-1_text'>EMBRACING INNOVATIVE IDEAS</p>
+                            <h3 className="heading-h3">Creating a blueprint of your business to make sure that you stand out from the competition.</h3>
+                            <p className='container-2_text'>                           
+Combining the two extremely effective methods of mixed market modeling and blue ocean strategy, we make sure you build a position of a “thought leader”. Standing out is a norm, and we must abide!s
 </p>
+<div className="corporatefirst_text_button">
+                <button onClick={() => { navigate("#"); }}>Schedule a time</button>
+              </div>
+
                             <div className="small-rect-prev-1"><img src={smallerrectCustomised} alt='' className='smaller-rect-prev-1' /></div>
+                 
                         </div>
+                       
                     </div>
                     <div className="col-lg-6  d-flex justify-content-center text-center flex-column ">
                         <div data-aos="fade-left" className="image-first">

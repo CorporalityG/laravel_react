@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./BrandFirst.css";
+import { useNavigate } from "react-router";
 import brandposition_background_lines from "./images/brandposition_background_lines.png";
 import brandposition_bottom_rect from "./images/brandposition_bottom_rect.png";
 import brandposition_call from "./images/brandposition_call.png";
@@ -21,7 +22,9 @@ import brandposition_twitter from "./images/brandposition_twitter.png";
 import brandposition_yt from "./images/brandposition_yt.png";
 
 function BrandFirst() {
+  const navigate = useNavigate();
   useEffect(() => {
+   
     Aos.init();
     Aos.init({ disable: "mobile" });
   });
@@ -82,12 +85,15 @@ function BrandFirst() {
             <div className="brandposition_first_textside_description" data-aos="fade-down"
               data-aos-easing="linear"
               data-aos-duration="1500">
-                <b>We bring the power of Corporality Signature Product to help you grow. </b>
+             <h3 className="heading-h3">We bring the power of Corporality Signature Product to help you grow</h3>
                 We deliver comprehensive branding and marketing solutions for small to medium-sized businesses.
 Every day, we bring our experience, knowledge, and expertise to help you achieve your vision. We dig, we hunt, we conquer. We work unceasingly to nurture brand positioning for our clients.
-
+           
 
             </div>
+            <div className="corporatefirst_text_button">
+                <button onClick={() => { navigate("#"); }}>Schedule a time</button>
+              </div>
           </div>
           <div className="brandposition_first_imageside">
             <div className="brandposition_first_backgroundline">
