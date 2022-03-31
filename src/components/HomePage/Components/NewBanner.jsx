@@ -136,7 +136,7 @@ const NewBanner = () => {
                                 <h1 className="bannerHead">Delivering Results You Can Visualize</h1>
                                 <p className="bannerSubtitle">Corporality is a strategic consulting firm that provides over 8 years of market intelligence backed by data-driven strategies to deliver measurable results.</p>
                                 <div className="bannerBtn">
-                                    <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Book a Discovery Call</a>
+                                    <a href="javascript:;">Request call back</a>
                                 </div>
                             </div>
                         </div>
@@ -177,7 +177,7 @@ const NewBanner = () => {
                                 <h1 className="bannerHead">Our focus is on creating an impact that multiplies your business</h1>
                                 <p className="bannerSubtitle">We believe in communicating through omni effect, actionable insights, and implementing solutions with guaranteed results.</p>
                                 <div className="bannerBtn">
-                                    <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Book a Discovery Call</a>
+                                    <a href="javascript:;">Ask us</a>
                                 </div>
                             </div>
                         </div>

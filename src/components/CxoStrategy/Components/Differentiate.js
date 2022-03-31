@@ -38,9 +38,9 @@ export default function Differentiate() {
 
               </p>
               
-              <div class="corporatefirst_text_button">
-                <button onClick={() => { navigate("#"); }}>Schedule a time</button>
-              </div>
+							  <div className="schedule-btn"
+								onClick={() => window.open("https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall", "_blank")}
+							  > Schedule a time </div>
             </div>
 
             <div className="col  cxo-landing-image-1">

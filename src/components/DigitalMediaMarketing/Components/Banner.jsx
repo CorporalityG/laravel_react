@@ -27,22 +27,11 @@ export default function Banner() {
 								
 									
 								</h1>
-
-					<p data-aos="fade-right" data-aos-delay="400">
-					<h3 className="heading-h3">We got you covered for Digital Media Marketing through our Packaged solutions.</h3>
-					
-					Corporality is a globally trusted Digital Media Marketing firm. We have partnered with clients all over the world to solve the complex challenges of consistency in creating your digital presence.
-</p>
-				
-				<div className="DDMBannerDiscoveryButton" data-aos="fade-right" data-aos-delay="800">
-				<button onClick={() => { navigate("#"); }}>Schedule a time</button>
-
 					<p data-aos="fade-right" data-aos-delay="400"><b>We got you covered for Digital Media Marketing through our Packaged solutions.</b><br/>
 					Corporality is a globally trusted Digital Media Marketing firm. We have partnered with clients all over the world to solve the complex challenges of consistency in creating your digital presence.</p>
 				
 				<div className="DDMBannerDiscoveryButton" data-aos="fade-right" data-aos-delay="800">
-					<button onClick={() => window.open("https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall", "_blank")}>Book Your Discovery Session</button>
-
+					<button onClick={() => window.open("https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall", "_blank")}>Schedule a time</button>
 				</div>
 				<div className="DDMBannerSocialIcons">
 					<a href='https://www.facebook.com/CorporalityG'>

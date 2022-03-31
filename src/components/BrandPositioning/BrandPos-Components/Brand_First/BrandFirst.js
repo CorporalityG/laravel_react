@@ -97,9 +97,8 @@ Every day, we bring our experience, knowledge, and expertise to help you achieve
                 Every day, we bring our experience, knowledge, and expertise to help you achieve your vision. We dig, we hunt, we conquer. We work unceasingly to nurture brand positioning for our clients.
 
             </div>
-            <div className="corporatefirst_text_button">
-                <button onClick={() => { navigate("#"); }}>Schedule a time</button>
-              </div>
+
+            <div className="schedule-btn" onClick={() => window.open("https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall", "_blank")}>Schedule a time</div>
           </div>
           <div className="brandposition_first_imageside">
             <div className="brandposition_first_backgroundline">

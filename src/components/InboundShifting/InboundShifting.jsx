@@ -1,6 +1,8 @@
 import React from 'react'
 import './InboundShifting.css'
 import { BASE_URL } from '../../config'
+import { CuriousItem } from './CuriousItem'
+import Accordion from 'react-bootstrap/Accordion'
 
 function InboundShifting() {
     return (
@@ -84,6 +86,141 @@ function InboundShifting() {
                         <div className="col-lg-6">
                             <div className="is-shifting-img">
                                 <img src={BASE_URL + '/img/InboundShifting/What-is-Inbound-Shifting.png'} alt="What is Inbound Shifting?" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="is-curious-section">
+                <div className="container">
+                    <div className="row is-curious-row">
+                        <div className="col-md-12">
+                            <div className="is-curious-content">
+                                <h2>Curious How We Do It?</h2>
+                                <p>inbound shifting is a powerful tool for many business owners and entrepreneurs. Corporality delivers premium products that can surely improve your sales performance and more.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row is-curious-boxes-row">
+                        <CuriousItem
+                            title={'Content Strategy'}
+                            content={'<p>Corporality can help you create one experience for all your customers across all platforms - an Omni effect - with a comprehensive approach in delivering content.</p>'}
+                        />
+
+                        <CuriousItem
+                            title={'Marketing Objective'}
+                            content={'<p>We deep dive and understand your business objective, find the value proposition and create insights competitive edge for your market position. Once marketing objectives are clear marketing strategy will be more aligned with your final goal.</p>'}
+                        />
+
+                        <CuriousItem
+                            title={'Brand Strategy'}
+                            content={'<p>We believe before we think about outside word we should fix inside issues and perspective. Checking and re-evaluating your brand strategy would be really great supportive act before we go ahead on digital media strategy.</p>'}
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div className="is-problems-section">
+                <div className="container">
+                    <div className="row is-problems-row">
+                        <div className="col-lg-6">
+                            <div className="is-problems-img">
+                                <img src={BASE_URL + '/img/InboundShifting/What-Problems-Do-We-Tackle.png'} alt="What Problems Do We Tackle?" />
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6">
+                            <div className="is-problems-content">
+                                <h2>What Problems Do We Tackle?</h2>
+                                <h3>We have the answers to your Inbound marketing problems.</h3>
+                                <p>“<b>Our teams are fragmented about our strategy.</b> From leadership to marketing and sales, they’re simply not delivering a unified front.”</p>
+                                <p>We can help fix your strategy with the Inbound Shifting workshop.</p>
+                                <p>“We’re not sure why our <b>customers are</b> not fully satisfied. They’re <b>happy, yet something seems to be missing from their experience</b> with us.”</p>
+                                <p>Let us help you make a better Content Strategy.</p>
+                                <p>“The company knows what Inbound is, but we can’t pull enough traffic with our strategy.”</p>
+                                <p>“We have great content, it’s comprehensive and captivating, but <b>we rank low in search engine results.</b>”</p>
+                                <p>Climb up the search rankings with our Technical SEO services.</p>
+                                <p>“<b>Managing customer satisfaction and keeping up with developing our team internally is a tedious task.</b>”</p>
+                                <p>Streamline and improve your CRM with Corporality’ efficient Automation program.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="is-work-section">
+                <div className="container">
+                    <div className="row is-work-title-row">
+                        <div className="col-md-12">
+                            <h2>How Does It Work?</h2>
+                            <p>Here is how the process looks like:</p>
+                        </div>
+                    </div>
+
+                    <div className="row is-work-accordion-row">
+                        <div className="col-md-12">
+                            <Accordion className="is-work-accordion-main">
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>
+                                        <div className="is-work-heading">
+                                            <img src={BASE_URL + '/img/InboundShifting/favicon-tm-1.png'} alt="2-Day Workshop" />
+                                            <span>2-Day Workshop</span>
+                                        </div>
+                                    </Accordion.Header>
+                                    <Accordion.Body>
+                                        <p>Discovery discussion of goals and current strategies, alignment of marketing processes and positioning, and formulation of tailor-fit strategies and best methods of execution.</p>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+
+                                <Accordion.Item eventKey="1">
+                                    <Accordion.Header>
+                                        <div className="is-work-heading">
+                                            <img src={BASE_URL + '/img/InboundShifting/favicon-tm-1.png'} alt="Monthly Execution Plan" />
+                                            <span>Monthly Execution Plan</span>
+                                        </div>
+                                    </Accordion.Header>
+                                    <Accordion.Body>
+                                        <p>We’ll make sure you’re on track with your plans.</p>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+
+                                <Accordion.Item eventKey="2">
+                                    <Accordion.Header>
+                                        <div className="is-work-heading">
+                                            <img src={BASE_URL + '/img/InboundShifting/favicon-tm-2.png'} alt="Continuous Adjustment" />
+                                            <span>Continuous Adjustment</span>
+                                        </div>
+                                    </Accordion.Header>
+                                    <Accordion.Body>
+                                        <p>We’ll help you monitor your ROI, maintain your market position, and reporting.</p>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+
+                                <Accordion.Item eventKey="3">
+                                    <Accordion.Header>
+                                        <div className="is-work-heading">
+                                            <img src={BASE_URL + '/img/InboundShifting/favicon-tm-2.png'} alt="Transition for Stability and Growth" />
+                                            <span>Transition for Stability and Growth</span>
+                                        </div>
+                                    </Accordion.Header>
+                                    <Accordion.Body>
+                                        <p>We can help you upgrade to the next best steps as you grow.</p>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="is-model-assessment-section">
+                <div className="container">
+                    <div className="row is-model-assessment-row">
+                        <div className="col-md-12">
+                            <div className="is-ma-img">
+                            <img src={BASE_URL + '/img/InboundShifting/model-assessment.png'} alt="Model Assessment" />
                             </div>
                         </div>
                     </div>

@@ -202,6 +202,21 @@
     opacity: 0;
   }
 }
+
+.brandposition_main_container .schedule-btn {
+  background: linear-gradient(95.12deg, #eed979 0%, #4f8cad 83.42%);
+  transition: all 0.5s;
+  font-size: 14px;
+  padding: 10px 15px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.brandposition_main_container .schedule-btn:hover {
+  background: linear-gradient(95.12deg, #4f8cad 0%, #eed979 83.42%);
+}
+
 @media only screen and (max-width: 1400px){
   .brandposition_companyimage {
     top: 10px;

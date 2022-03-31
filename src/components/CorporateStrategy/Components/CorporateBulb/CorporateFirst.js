@@ -93,12 +93,11 @@ function CorporateFirst() {
               DELIVERING THE SUSTAINABILITY IN BUSINESSES
               </div>
               <div className="corporatefirst_text_description">
-                <h3 className="heading-h3">Supporting the journey to operational excellence</h3>
-
+                <p><b>Supporting the journey to operational excellence</b></p>
                 Our comprehensive operational process and corporate management strategy support organized, structured reliability enhancement through automation to exceed customer satisfaction and business experience for your client.
               </div>
               <div className="corporatefirst_text_button">
-                <button onClick={() => { navigate("#"); }}>Schedule a time</button>
+                <button onClick={() => window.open("https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall", "_blank")}>Schedule a time</button>
               </div>
             </div>
           </div>

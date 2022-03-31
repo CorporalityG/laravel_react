@@ -87,7 +87,7 @@ function LatestInsights()
             <div className="blog-item-box-main">
               <img src={BASE_URL + '/img/HomePage/MEDTECH-INDUSTRY.png'} alt="MEDTECH-INDUSTRY" className="blog-item-box-img" />
               <div className="blog-item-box-content">
-                <div className="blog-item-box-subtitle">Latest POD Cast</div>
+                <div className="blog-item-box-subtitle">Latest Podcast</div>
                 <div className="blog-item-box-title">MEDTECH INDUSTRY</div>
               </div>
             </div>

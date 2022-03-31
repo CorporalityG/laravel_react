@@ -60,6 +60,22 @@
   color: #232323 !important;
 }
 
+.prev-1-Ib .schedule-btn {
+    background: linear-gradient(95.12deg, #eed979 0%, #4f8cad 83.42%);
+    transition: all 0.5s;
+    font-size: 14px;
+    padding: 10px 15px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+    left: -40px;
+    position: relative;
+}
+.prev-1-Ib .schedule-btn:hover {
+    background: linear-gradient(95.12deg, #4f8cad 0%, #eed979 83.42%);
+}
+
 .wall{
     position: absolute !important;
     top: 35% !important;

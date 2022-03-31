@@ -1,0 +1,73 @@
+.career-banner-section {
+    margin-top: 80px;
+    padding-top: 150px;
+    padding-bottom: 120px;
+    background-image: url('./img/banner.png');
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.career-banner-section .rec-1 {
+    position: absolute;
+    left: 15%;
+    top: 100px;
+}
+.career-banner-section .rec-2 {
+    position: absolute;
+    left: 35%;
+    top: 120px;
+}
+.career-banner-section .rec-3 {
+    position: absolute;
+    left: 65%;
+    top: 50px;
+}
+.career-banner-section .rec-4 {
+    position: absolute;
+    left: 65%;
+    bottom: 80px;
+}
+.career-banner-section .career-banner-social-main {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+}
+.career-banner-section .career-banner-social-main .career-banner-social-icon {
+    color: #33657e;
+    cursor: pointer;
+}
+.career-banner-section .career-banner-social-main .career-banner-social-icon:not(:last-child) {
+    margin-bottom: 5px;
+}
+.career-banner-section .career-banner-content {
+    max-width: 50%;
+    margin: 0 auto;
+}
+.career-banner-section .career-banner-content h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #33657E;
+    margin-bottom: 15px;
+}
+.career-banner-section .career-banner-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #33657E;
+}
+.career-banner-section .career-banner-phone {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    text-align: left;
+    cursor: pointer;
+    width: auto;
+}
+.career-banner-section .career-banner-phone img {
+    max-height: 120px;
+}
