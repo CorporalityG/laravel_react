@@ -15,18 +15,21 @@ export default function Banner() {
 						Marketing Strategy for Small and Large Business</h1>
 					<p>Head to toe strategy focused Digital Media Marketing</p> */}
 					<h1 className="heading animate two">
-									<span>Building </span>
+									<span>BUILDING A </span>
 									&nbsp;
-									<span>Digital</span>
+									<span>DIGITAL </span>
 									&nbsp;
-									<span>Foot</span>
+									<span>FOOTPRINT </span>
 									&nbsp;
-									<span>Print</span>
+									<span>FOR YOUR</span>
+									&nbsp;
+									<span>BUSINESS</span>
+								
 									
 								</h1>
-					<p data-aos="fade-right" data-aos-delay="400"><b>We got you covered for Digital Media Marketing through our Packaged solution</b><br/>
+					<p data-aos="fade-right" data-aos-delay="400"><b>We got you covered for Digital Media Marketing through our Packaged solutions.</b><br/>
 					
-					Corporeality  is the world’s trusted Digital Media Marketing firm, partnering with clients to solve the complex challenges of consistency in creating your digital presence.
+					Corporality is a globally trusted Digital Media Marketing firm. We have partnered with clients all over the world to solve the complex challenges of consistency in creating your digital presence.
 </p>
 				
 				<div className="DDMBannerDiscoveryButton" data-aos="fade-right" data-aos-delay="800">

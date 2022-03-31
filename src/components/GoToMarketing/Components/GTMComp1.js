@@ -37,7 +37,7 @@ function Page1() {
 								 className="aos-init aos-animate"
 							>
 								<h1 className="heading animate two">
-									<span>GOING</span>   
+									<span>AIM</span>  
 									&nbsp;
 									<span>FOR</span>
 									&nbsp;
@@ -48,7 +48,10 @@ function Page1() {
 							</div>
 						</div>
 						<div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-delay="1000" className="desc mt-2 mb-2 text aos-init aos-animate">
-							<p className="gainCompetitive">Planing for expansion and growth in new markets we got you covered Corporality’s early insights through market research, strategy planing  gives your team the confidence to take a big-bet of your initiatives to succeed the new market.
+							<p className="gainCompetitive">Planning for expansion and growth in new markets we got you covered.
+ 
+ Corporality’s early insights through market research and strategy planning enables your team to have the confidence to take a big bet on your initiatives and dominate the new market.
+ 
  <a href="https://www.bdc.ca/en/articles-tools/business-strategy-planning/innovate/product-development-5-steps-commercial-success" target="_blank">product development</a> and management strategy, address innovation challenges, and ensure a viable path to market success with our GTM strategy.</p>
 						</div>
 						<div
