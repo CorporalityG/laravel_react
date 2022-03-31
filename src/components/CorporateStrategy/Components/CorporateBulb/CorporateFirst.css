@@ -21,6 +21,15 @@
   }
 }
 
+.heading-h3{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;  
+  color: #33657E;
+  padding-top: 5px;
+  padding-bottom: 8px;
+}
+
 .bulb_glow {
   position: absolute;
   top: 5px;
@@ -172,7 +181,7 @@
 
 .corporatefirst_left_text {
   flex: 0.8;
-  margin-top: 150px !important;
+  margin-top: 85px !important;
   padding-right: 50px !important;
   /* margin-left: 10px !important; */
   /* margin-right: 150px !important; */
@@ -186,6 +195,7 @@
   text-transform: uppercase;
   color: #3c708e;
   margin-bottom: 10px !important;
+  width: 115%;
 }
 
 .corporatefirst_text_description {
@@ -196,6 +206,8 @@
   line-height: 24px;
   color: #757575;
   margin-bottom: 30px !important;
+  width: 110%;
+  text-align: justify;
 }
 
 .corporatefirst_text_button button {
