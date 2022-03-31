@@ -33,6 +33,7 @@ const Prev1 = () => {
                         <div data-aos="fade-right" className="text-box-1">
 
                             <p className='container-1_text'>EMBRACING INNOVATIVE IDEAS</p>
+
                             <h3 className="heading-h3">Creating a blueprint of your business to make sure that you stand out from the competition.</h3>
                             <p className='container-2_text'>                           
 Combining the two extremely effective methods of mixed market modeling and blue ocean strategy, we make sure you build a position of a “thought leader”. Standing out is a norm, and we must abide!s
@@ -40,6 +41,10 @@ Combining the two extremely effective methods of mixed market modeling and blue 
 <div className="corporatefirst_text_button">
                 <button onClick={() => { navigate("#"); }}>Schedule a time</button>
               </div>
+
+
+                            <p className='container-2_text'><b>Creating a blueprint of your business to make sure that you stand out from the competition. </b><br/>
+                            Combining the two extremely effective methods of mixed market modeling and blue ocean strategy, we make sure you build a position of a “thought leader”. Standing out is a norm, and we must abide!</p>
 
                             <div className="small-rect-prev-1"><img src={smallerrectCustomised} alt='' className='smaller-rect-prev-1' /></div>
                  

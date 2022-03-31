@@ -62,13 +62,13 @@ function LatestInsights()
                         <img src={BASE_URL + '/img/HomePage/blog/date-icon.png'} alt="Date" />
                         <span>{dateFormat(blogItem.created_at)}</span>
                       </div>
-                      <div className="blog-date-comment">
+                      {/* <div className="blog-date-comment">
                         <img src={BASE_URL + '/img/HomePage/blog/comment-icon.png'} alt="Comment" />
                         <span>(0) Comments</span>
-                      </div>
+                      </div> */}
                     </div>
 
-                    <div className="blog-btn" onClick={() => navigate("/blog")} data-aos="fade-up">Our Blogs</div>
+                    <div className="blog-btn" onClick={() => navigate("/blog")} data-aos="fade-up">More Blogs</div>
                   </div>
                 </div>
               )

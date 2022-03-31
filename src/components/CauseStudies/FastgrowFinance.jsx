@@ -1,17 +1,9 @@
 import React from "react";
 import './CaseStudy.css'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
-import { useNavigate } from "react-router";
 import RelatedCaseStudyCarousel from "./RelatedCaseStudyCarousel";
 
 const FastgrowFinance = () => {
-
-	const navigate = useNavigate();
-	const topHandle = () => {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	};
-
 	return (
 		<div className="cause-studies-container">
 
@@ -44,33 +36,6 @@ const FastgrowFinance = () => {
 				</div>
 			</div>
 
-			<div className="case-study-challenge-container">
-				<div className="container">
-					<div className="row case-study-challenge-row">
-						<div className="col-md-6">
-							<div className="case-study-challenge-img">
-								<img src={BASE_URL + '/img/Fastgrow-Finance.png'} alt="Fastgrow-Finance" />
-							</div>
-						</div>
-
-						<div className="col-md-6">
-							<div className="case-study-challenge-content">
-								<h2>The challenge</h2>
-								<p>Fastgrow Finance is a mortgage broking and consulting firm for clients in NSW and across Australia. To preserve category leadership, Fastgrow Finance needed to revamp its brand positioning.  The company wanted to stand out from the crowd while also underlining its particular positioning. It also required a strategy that would not only bring their brand to life, but would also appeal to their target demographic.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="container">
-				<div className="row">
-					<div className="col-md-12">
-						<div className="case-study-bottom-line"></div>
-					</div>
-				</div>
-			</div>
-
 			<div className="case-study-glance-container">
 				<div className="container">
 					<div className="row">
@@ -96,7 +61,7 @@ const FastgrowFinance = () => {
 
 						<div className="col-md-4">
 							<div className="case-study-glance-box">
-								
+
 							</div>
 						</div>
 					</div>
@@ -116,36 +81,25 @@ const FastgrowFinance = () => {
 					<div className="row">
 						<div className="col-md-8">
 							<div className="case-study-solution-content">
+								<h2>The challenge</h2>
+								<p>Fastgrow Finance is a mortgage broking and consulting firm for clients in NSW and across Australia. To preserve category leadership, Fastgrow Finance needed to revamp its brand positioning.  The company wanted to stand out from the crowd while also underlining its particular positioning. It also required a strategy that would not only bring their brand to life, but would also appeal to their target demographic.</p>
+
 								<img src={BASE_URL + '/img/setting-icon.png'} alt="The solution" />
 								<h2>The solution</h2>
 								<p>While there are several positioning strategies, not all of them complement a financial services firm. Having defined the business imperatives, Corporality Global understood the company’s business goals and formulated a positioning with a clear destination in mind.</p>
 								<p><b>Comprehensive brand research:</b> With our comprehensive brand research, we identified the company’s strengths that weren’t visualised before. </p>
 								<p><b>Crystallization workshops and focus groups</b> were held to develop a new brand template that focused on distinguishing emotional and pleasure benefits while also basing some of the values in the context that modern customers seek. Recommendations also suggested possible brand extension regions in order to maximise category dominance.</p>
 								<p><b>Complete brand strategy:</b> The brand strategy that evolved was scalable and meant to adjust to changing market scenarios. It was strengthened in a way that competitors entering the fray could not disrupt the positioning. Besides, we also targeted a particular function within the organisation to provide role-focused specialised strategies so that buyers could perceive that the company and its stakeholders were actually tuned in to their needs. </p>
+
+								<img src={BASE_URL + '/img/write-icon.png'} alt="The outcome" />
+								<h2>The outcome</h2>
+								<p>Fastgrow was able to instantly stand out from the crowd with our brand positioning strategy. The company was also able to efficiently and effectively communicate with its target audience and trigger an emotional response by pulling the right levers in the shortest amount of time.</p>
 							</div>
 						</div>
 
 						<div className="col-md-4">
-							<div className="case-study-related-box">
-								<div className="case-study-related-title">Related cause studies</div>
-								<ul>
-									<li>BuildQ</li>
-									<li>Meyer West</li>
-									<li>X Designs</li>
-									<li>BuildQ</li>
-								</ul>
-								<div className="case-study-all" onClick={() => { navigate("/clients"); topHandle(); }}><span>View All</span> <img src={BASE_URL + '/img/right-arrow-white.png'} alt="->" /></div>
-							</div>
-
-							<div className="case-study-suggested-box-main">
-								<div className="case-study-suggested-top-line"></div>
-								<div className="case-study-suggested-box">
-									<div className="case-study-suggested-title">Suggested for you</div>
-									<div className="case-study-suggested-content">
-										<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers.</p>
-									</div>
-									<div className="case-study-suggested-btn">Go to Marketing</div>
-								</div>
+							<div className="case-study-content-img">
+								<img src={BASE_URL + '/img/Fastgrow-Finance.png'} alt="Fastgrow-Finance" />
 							</div>
 						</div>
 					</div>
@@ -155,7 +109,7 @@ const FastgrowFinance = () => {
 			<div className="case-study-outcome-container">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-10 offset-2">
+						<div className="col-md-8 offset-4">
 							<div className="case-study-outcome-video">
 								<div className="case-study-outcome-video-banner">
 									<img src={BASE_URL + '/img/case-study-outcome-video-banner.png'} alt="video-banner" />
@@ -170,7 +124,7 @@ const FastgrowFinance = () => {
 					<div className="row case-study-outcome-content-main">
 						<div className="col-md-6">
 							<div className="case-study-testimonial">
-								<img src={BASE_URL + '/img/testi-img.png'} alt="testi-img" className="case-study-testi-img" />
+								<img src={BASE_URL + '/img/Fastgrow-Finance-logo.png'} alt="Fastgrow-Finance-logo" className="case-study-testi-logo" />
 								<div className="case-study-testi-content">
 									<img src={BASE_URL + '/img/testi-quote.png'} alt="testi-quote" className="case-study-testi-quote" />
 									<p>Our strategy began with a review of BuildQ's current customer base. We looked at the company's network of distribution partners, and segmented customers by area to find sales gaps. The company was  frequently wasting their efforts and missing out on significant possibilities that were there in front of them.</p>
@@ -179,42 +133,20 @@ const FastgrowFinance = () => {
 						</div>
 
 						<div className="col-md-6">
-							<div className="case-study-outcome-content">
-								<h2>The outcome</h2>
-								<p>Fastgrow was able to instantly stand out from the crowd with our brand positioning strategy. The company was also able to efficiently and effectively communicate with its target audience and trigger an emotional response by pulling the right levers in the shortest amount of time.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="case-study-business-level-container">
-				<div className="container">
-					<div className="row case-study-business-level-row">
-						<div className="col-md-6">
-							<div className="case-study-business-level">
+							<div className="case-study-business-level-content">
 								<div className="case-study-business-level-title">Ready to take your business to the next level?</div>
-								<div className="case-study-business-level-content">
-									<span>Talk to our experts in:</span>
-									<div className="case-study-business-level-dd">Medtech</div>
-								</div>
-							</div>
-						</div>
-
-						<div className="col-md-6">
-							<div className="case-study-business-expand">
 								<p>We provide strategic consulting to businesses worldwide. Want to expand your business globally, or want to achieve great success in your respective industry? We got your back.</p>
-								<div className="case-study-business-expand-form">
+								<div className="case-study-business-level-form">
 									<div className="row">
 										<div className="col-md-6 form-group">
-											<input type="text" className="form-control" placeholder="First name" />
+											<input type="text" className="form-control" placeholder="Name" />
 										</div>
 										<div className="col-md-6 form-group">
-											<input type="text" className="form-control" placeholder="Last name" />
+											<input type="email" className="form-control" placeholder="Email" />
 										</div>
 
-										<div className="col-md-12 form-group">
-											<button type="submit" className="business-expand-btn">Submit</button>
+										<div className="col-md-12">
+											<button type="submit" className="business-level-btn">Submit</button>
 										</div>
 									</div>
 								</div>

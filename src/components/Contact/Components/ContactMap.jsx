@@ -17,7 +17,7 @@ const ContactMap = () => {
                         <div className="col-md-6">
                             <div data-aos="fade-up">
                                 <div className="conmap-bookOurCalendar">
-                                    <div className="d-flex">
+                                    <div className="d-flex conmap-bookOurCalendar-inner">
                                         <div className="conmap-detail-head p-2">
                                             <h2 className="my-3">Book Our Calendar</h2>
                                             <p className="my-3">Chat with us now <br /> We are active Morning 9:AM – 6:00PM <br /> Monday to Friday Sydney time</p>

@@ -162,7 +162,7 @@
 
 .bannerContainer .bannerHead {
   text-transform: uppercase;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 44px;
   font-weight: bold;
   margin: 0px !important;
@@ -695,11 +695,182 @@
     top: 30px;
   }
 }
+
+
+@media only screen and (max-width: 1250.99px) {
+  .bannerContainer .leftPartBanner {
+    top: 80px;
+  }
+  .bannerContainer .bannerSocialLinksContainer {
+    top: 140px;
+  }
+}
+
+
+@media only screen and (max-width: 1180px) {
+  .bannerContainer .leftPartBanner {
+    max-width: 700px;
+  }
+  .bannerContainer .mainBannerImg {
+    right: 5%;
+  }
+  .bannerContainer .bannerHead {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .bannerContainer .twoDiamonds {
+    bottom: -30px;
+  }
+  .bannerContainer .rightPartBanner {
+    z-index: 9;
+  }
+  .bannerContainer .banner-bg-image {
+    max-height: 600px;
+  }
+}
+
+
+@media only screen and (max-width: 1115px) {
+  .bannerContainer .leftPartBanner {
+    top: 50px;
+  }
+  .bannerContainer .bannerSocialLinksContainer {
+    top: 100px;
+  }
+}
+
+
+@media only screen and (max-width: 1025px) {
+  .bannerContainer {
+    height: 650px;
+  }
+  .bannerContainer .leftPartBanner {
+    max-width: 100%;
+  }
+  .bannerContainer .bgPartBanner {
+    flex-direction: column;
+    align-items: center;
+    top: initial;
+  }
+  .bannerContainer .twoDiamonds {
+    left: 0;
+    bottom: 0;
+    width: 300px;
+  }
+  .bannerContainer .twoDiamonds .phone-icon img {
+    max-width: 150px;
+  }
+  .bannerContainer .phone-icon::after {
+    width: 65px;
+    top: 60px;
+  }
+  .bannerContainer .twoDiamonds .banner-count {
+    font-size: 72px;
+    margin-left: 10px;
+  }
+  .bannerContainer .leftIndicators {
+    right: 270px;
+  }
+  .bannerContainer .leftPartBanner {
+    top: 30px;
+  }
+  .bannerContainer .bannerSocialLinksContainer {
+    top: 70px;
+  }
+  .bannerContainer .banner-bg-image {
+    max-height: 700px;
+  }
+  .bannerContainer .mainBannerImg {
+    right: 2%;
+    top: 40px;
+  }
+  .bannerContainer .bannerImgs .rectangle-4 {
+    top: 100%;
+  }
+  .bannerContainer .socialIcon:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .bannerContainer .socialIcon > i {
+    font-size: 2.1vw !important;
+  }
+}
+
+
+@media only screen and (max-width: 900.99px) {
+  .bannerContainer .twoDiamonds {
+    bottom: -40px;
+  }
+  .bannerContainer .leftIndicators {
+    bottom: 0;
+  }
+  .bannerContainer .bannerImgs .rectangle-4 {
+    left: 25%;
+  }
+}
+
+
+@media only screen and (max-width: 825px) {
+  .bannerContainer .twoDiamonds {
+    bottom: -60px;
+  }
+  .bannerContainer .leftIndicators {
+    bottom: -15px;
+  }
+  .bannerContainer .bannerImgs .rectangle-4 {
+    left: 23%;
+    top: 105%;
+  }
+  .bannerContainer .mainBannerImg .banner-image {
+    max-width: 300px;
+  }
+}
+
+
+@media only screen and (max-width: 721px) {
+  .bannerContainer .bgPartBanner {
+    align-items: flex-start;
+  }
+  .bannerContainer .mainBannerImg {
+    right: 0;
+  }
+  .bannerContainer .rightPartBanner {
+    bottom: 100px;
+  }
+  .bannerContainer .leftIndicators {
+    right: 100px;
+    bottom: 0;
+  }
+  .bannerContainer .bannerImgs .rectangle-4 {
+    top: 80%;
+  }
+  .bannerContainer .twoDiamonds {
+    bottom: -85px;
+    left: 100px;
+  }
+  .bannerContainer .socialIcon > i {
+    font-size: 2.5vw !important;
+  }
+}
+
+
+@media only screen and (max-width: 640.99px) {
+  .bannerContainer .bannerHead {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .bannerContainer .leftIndicators {
+    right: 80px;
+  }
+  .bannerContainer .twoDiamonds {
+    left: 50px;
+    bottom: -90px;
+  }
+}
 /*# sourceMappingURL=NewBanner.css.map */
 
 
 @media only screen and (max-width: 600px) {
-  .bannerContainer {
+  /* .bannerContainer {
     margin-top: 155px !important;
     margin-bottom: 545px !important;
     position: relative;
@@ -768,7 +939,7 @@
     top: 43px;
     left: 5px;
     max-width: 60px;
-}
+} */
 .dbanner .boxContent > p:nth-child(2) {
     /* background-color: red; */
     padding: 5px 15px !important;
@@ -806,4 +977,104 @@
     margin-top: -30px;
 }
 
+}
+
+
+@media only screen and (max-width: 576px) {
+  .bannerContainer {
+    height: 700px;
+  }
+  .bannerContainer .leftPartBanner {
+    min-height: 325px;
+  }
+  .bannerContainer .socialIcon > i {
+    font-size: 20px !important;
+  }
+  .bannerContainer .socialIcon:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 540.99px) {
+  .bannerContainer {
+    height: 920px;
+    max-height: 920px;
+  }
+  .bannerContainer .bgPartBanner {
+    align-items: center;
+  }
+  .bannerContainer .rightPartBanner {
+    bottom: 80px;
+    right: initial;
+    left: 50%;
+    transform: translate(-50%, 0) !important;
+  }
+  .bannerContainer .twoDiamonds {
+    bottom: -80px;
+    left: 50%;
+    transform: translate(-50%, 0) !important;
+  }
+  .bannerContainer .leftIndicators {
+    bottom: 45px;
+    right: initial;
+    left: 50%;
+    transform: translate(-50%, 0) !important;
+  }
+  .bannerContainer .bannerSocialLinksContainer {
+    top: initial;
+    bottom: 0;
+  }
+  .bannerContainer .leftPartBanner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 430px) {
+  .bannerContainer {
+    height: 1000px;
+    max-height: 1000px;
+  }
+  .bannerContainer .leftPartBanner {
+    padding: 20px;
+    top: 0;
+  }
+  .bannerContainer .mainBannerImg {
+    top: 0;
+  }
+  .bannerContainer .bannerSocialLinksContainer .bannerSocialImg img {
+    max-height: 130px;
+  }
+  .bannerContainer .rightPartBanner {
+    bottom: 200px;
+  }
+  .bannerContainer .bannerImgs .rectangle-4 {
+    left: 45%;
+    top: 70%;
+  }
+  .bannerContainer .leftIndicators {
+    bottom: 160px;
+  }
+  .bannerContainer .twoDiamonds {
+    bottom: 40px;
+    transform: translate(-55%, 0) !important;
+  }
+  .bannerContainer .bannerSocialLinksContainer {
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+  }
+  .bannerContainer .bannerSocialLinksContainer .bannerSocialImg {
+    transform: rotate(90deg);
+  }
+  .bannerContainer .bannerSocialLinksContainer .bannerSocialImg img {
+    max-height: unset;
+  }
+  .bannerContainer .socialIconsContainer {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
 }

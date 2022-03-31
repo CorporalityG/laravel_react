@@ -14,7 +14,6 @@ function RelatedCaseStudyCarousel(props) {
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/Divine-Intercession-Client.png'}
                             title={'Divine Intercession'}
-                            subtitle={'Human to Human solutions'}
                             slug={'divine-intercession'}
                         />
                     </Carousel.Item>
@@ -27,7 +26,6 @@ function RelatedCaseStudyCarousel(props) {
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/BuildQ-Client.png'}
                             title={'BuildQ Group'}
-                            subtitle={'Building a perfect digital framework'}
                             slug={'build-q'}
                         />
                     </Carousel.Item>
@@ -39,8 +37,7 @@ function RelatedCaseStudyCarousel(props) {
                         <Carousel.Item>
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/Fastgrow-Client.png'}
-                            title={'Fastgrow'}
-                            subtitle={'Identifying the intended maturity'}
+                            title={'Fastgrow Finance'}
                             slug={'fastgrow-finance'}
                         />
                     </Carousel.Item>
@@ -53,7 +50,6 @@ function RelatedCaseStudyCarousel(props) {
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/TechConsultants-Client.png'}
                             title={'Tech Consultants'}
-                            subtitle={'Out of the ordinary'}
                             slug={'tech-consultants'}
                         />
                     </Carousel.Item>
@@ -66,7 +62,6 @@ function RelatedCaseStudyCarousel(props) {
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/SK-Insurance-Client.png'}
                             title={'SK Insurance'}
-                            subtitle={'Visionary growth strategies'}
                             slug={'sk-insurance'}
                         />
                     </Carousel.Item>
@@ -79,7 +74,6 @@ function RelatedCaseStudyCarousel(props) {
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/Klek-Services-Client.png'}
                             title={'Klek Services'}
-                            subtitle={'Identifying the intended maturity'}
                             slug={'klek-services'}
                         />
                     </Carousel.Item>

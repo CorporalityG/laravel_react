@@ -20,12 +20,12 @@ const Insights = () => {
                 <div className="insights-container-body">
                     <div className="row">
                         <div className="col-md-3">
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink(); navigate("/corporality-books")}}>
                                 <h6>Corporality - Books</h6>
                                 <div className="diamond-line"></div>
                             </div>
                             
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink(); window.open("https://corporality.global/club", "_blank");}}>
                                 <h6>Corporality - Club</h6>
                                 <div className="diamond-line"></div>
                             </div>
@@ -37,7 +37,7 @@ const Insights = () => {
                             </div>
 
                             
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink(); window.open("http://corporality.global/talk/", "_blank");}}>
                                 <h6>Corporality - Talk</h6>
                                 <div className="diamond-line"></div>
                             </div>
@@ -72,7 +72,7 @@ const Insights = () => {
                                 <div className="diamond-line"></div>
                             </div>
                             <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
-                                <h6>POD Cast</h6>
+                                <h6>Podcast</h6>
                                 <div className="diamond-line"></div>
                             </div>
                         </div>

@@ -92,10 +92,10 @@ const Blog = () => {
                                                 </div>
                                             : null
                                         }
-                                        <div className="blog-date-comment">
+                                        {/* <div className="blog-date-comment">
                                             <img src={BASE_URL + '/img/blogs/comment-icon.png'} alt="Comment" />
                                             <span>(0) Comments</span>
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <h1 className="single-blog-heading">{singleBlog.post_title}</h1>
@@ -125,9 +125,9 @@ const Blog = () => {
                                 <div className="live-poll">
                                     <p className="live-poll-question">Readers, what insights would you like to gain next?</p>
                                     <div className="live-poll-options">
-                                        <span><input type="radio" id="live_poll_topic" name="live_poll" value="Whitepaper on yrending topic" /> <label htmlFor="live_poll_topic">Whitepaper on yrending topic</label></span>
-                                        <span><input type="radio" id="live_poll_webinar" name="live_poll" value="Whitepaper on yrending topic" /> <label htmlFor="live_poll_webinar">Webinar on issue I’m passionate about</label></span>
-                                        <span><input type="radio" id="live_poll_career" name="live_poll" value="Whitepaper on yrending topic" /> <label htmlFor="live_poll_career">Career advice from an experts</label></span>
+                                        <span><input type="radio" id="live_poll_topic" name="live_poll" value="Whitepaper on trending topic" /> <label htmlFor="live_poll_topic">Whitepaper on trending topic</label></span>
+                                        <span><input type="radio" id="live_poll_webinar" name="live_poll" value="Whitepaper on trending topic" /> <label htmlFor="live_poll_webinar">Webinar on issue I’m passionate about</label></span>
+                                        <span><input type="radio" id="live_poll_career" name="live_poll" value="Whitepaper on trending topic" /> <label htmlFor="live_poll_career">Career advice from an experts</label></span>
                                     </div>
 
                                     <div className="single-blog-poll-btn">Vote</div>
@@ -181,7 +181,7 @@ const Blog = () => {
                                 </div>
                             </div>
 
-                            <div className="single-sidebar-box">
+                            {/* <div className="single-sidebar-box">
                                 <div className="comment-list-main">
                                     <div className="sidebar-heading">Comments</div>
                                     <div className="comment-list">
@@ -269,7 +269,7 @@ const Blog = () => {
                                         <div className="form-btn">Submit</div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

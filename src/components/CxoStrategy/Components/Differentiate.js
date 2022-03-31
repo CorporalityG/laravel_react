@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router";
 import "./CxoStrategy.css"
+import { BASE_URL } from '../../../config';
 
 export default function Differentiate() {
   const navigate = useNavigate();
@@ -19,8 +20,21 @@ export default function Differentiate() {
               <h1>Delivering a better success</h1>
               <h4 className="heading-h4">United by a common purpose to deliver your vision with your team.</h4>
               <p>
+
               Hire our strategist and consultants in bundle to handle your entire Marketing Department and customer service to accelerate the success you have been dreaming of
+
+
+              United by a common purpose to deliver your vision with your team .Hire our strategist and consultants in bundle to handle your entire Marketing Department and customer service to accelerate the success you have been dreaming of
+
 .
+
+                Build customer loyalty through differentiated brand
+                strategies that activate a positive relationship
+                between the business and its customers.
+                Leadership is highly essential in creating
+                seamless and connected customer journeys that
+                are highly important.
+
 
               </p>
               
@@ -59,7 +73,12 @@ export default function Differentiate() {
                       <img src='./img/CxoStrategy/img/differentiate/youtube.png' />
                     </a>
                   </div>
+                </div>
 
+                <div className="cxo-banner-custom-img">
+                  <img src={BASE_URL + '/img/CxoStrategy/check-icon.png'} alt="Check" className="check-icon" />
+                  <img src={BASE_URL + '/img/CxoStrategy/rec-1.png'} alt="rec-1" className="rec-1" />
+                  <img src={BASE_URL + '/img/CxoStrategy/phone-icon.png'} alt="Phone" className="phone-icon" onClick={() => window.open("tel:61283794089", "_self")} />
                 </div>
               </div>
             </div>

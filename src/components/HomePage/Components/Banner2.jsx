@@ -6,15 +6,15 @@ import rightArrow from "../Components/images/vector_1.png"
 
 export default function Banner2() {
   return (
-    <div className="container">
+    <div className="container-lg">
       <div className="homeThreeBoxes">
-        <div className="d-flex justify-content-evenly align-items-center flex-wrap py-0 dbanner">
-          <div data-aos="flip-left" className="sbox d-flex align-items-center my-3 mx-3 justify-content-evenly position-relative">
+        <div className="d-flex justify-content-center align-items-center py-0 dbanner">
+          <div data-aos="flip-left" className="sbox d-flex align-items-center my-3 px-3 justify-content-evenly position-relative">
             <div className="boxContent p-3 align-items-center position-absolute">
               <p className="text-uppercase boxHead text-center mt-5">
                 Industry Focus
               </p>
-              <p className="boxSubHead text-wrap text-center mt-2">
+              <p className="text-wrap text-center mt-2">
                 Creating high-quality solutions for large enterprises with complex
                 workflows
               </p>
@@ -50,7 +50,7 @@ export default function Banner2() {
             </div>
           </div>
 
-          <div data-aos="flip-right" className="sbox d-flex align-items-center my-3 mx-3 justify-content-evenly position-relative">
+          <div data-aos="flip-right" className="sbox d-flex align-items-center my-3 px-3 justify-content-evenly position-relative">
             <div className="boxContent p-3 align-items-center position-absolute">
               <p className="text-uppercase boxHead text-center mt-5">
                 Social Impact
@@ -93,7 +93,7 @@ export default function Banner2() {
             </div>
           </div>
           
-          <div data-aos="flip-left" className="sbox d-flex align-items-center my-3 mx-3 justify-content-evenly position-relative">
+          <div data-aos="flip-left" className="sbox d-flex align-items-center my-3 px-3 justify-content-evenly position-relative">
             <div className="boxContent p-3 align-items-center position-absolute">
               <p className="text-uppercase boxHead text-center mt-5">Agility</p>
               <p className="text-wrap text-center mt-2">

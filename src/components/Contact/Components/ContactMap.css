@@ -28,9 +28,9 @@
   color: #757575;
 }
 
-.bookcal-Image{
-  /* width: 100%; */
-}
+/*.bookcal-Image{
+   width: 100%; 
+}*/
 
 .conmap-detail-head > button{
   margin: 2% !important;
@@ -45,6 +45,45 @@
 .contact-us-map-section iframe {
   width: 100%;
   height: 600px;
+}
+
+@media only screen and (max-width: 1350.99px) {
+  .book-our-calendar .conmap-bookOurCalendar-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .book-our-calendar .conmap-bookOurCalendar-inner .conmap-detail-head {
+    text-align: center;
+  }
+  .conmap-bookOurCalendar-inner .conmap-detail-head > h2 {
+    text-align: center;
+  }
+  .book-our-calendar .conmap-bookOurCalendar-inner .bookcal-Image {
+    margin-top: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 991px) {
+  .conmap-partners {
+    text-align: center;
+  }
+  .conmap-detail-head > h2 {
+    text-align: center;
+  }
+  .contact-us-map-section iframe {
+    height: 400px;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .book-our-calendar .conmap-bookOurCalendar-inner .bookcal-Image {
+    margin-bottom: 30px;
+  }
+  .contact-us-map-section iframe {
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -76,5 +115,7 @@
   .bookcal-Image{
     width: 50%;
   }
-
+  .contact-us-map-section iframe {
+    height: 300px;
+  }
 }

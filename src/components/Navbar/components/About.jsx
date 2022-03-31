@@ -79,19 +79,19 @@ const About = () => {
                         <div className="line"></div>
                     </div>
                     <div className="section-list">
-                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                        <Link to="/why-corporality-effect" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
                             <h6>Why corporality Effect?</h6>
                             <div className="diamond-line"></div>
                         </Link>
-                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                        <Link to="/what-is-corporality-effect" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
                             <h6>What is corporality effect?</h6>
                             <div className="diamond-line"></div>
                         </Link>
-                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                        <Link to="/corporality-culturally-conditioned" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
                             <h6>Culturally Conditioned</h6>
                             <div className="diamond-line"></div>
                         </Link>
-                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                        <Link to="/corporality-inbound-shiftings" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
                             <h6>Inbound Shifting</h6>
                             <div className="diamond-line"></div>
                         </Link>

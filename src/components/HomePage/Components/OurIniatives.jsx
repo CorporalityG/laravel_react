@@ -48,7 +48,7 @@ const OurIniatives = () => {
               </div>
 
               <div className="col-md-6 p-0">
-                <a title="Corporality Talk">
+                <a href="http://corporality.global/talk/" target={`_blank`} title="Corporality Talk">
                   <figure className="our-iniatives-grid-img-effect">
                   <img src={BASE_URL + '/img/HomePage/Corporality-Talk1.png'} alt="Corporality Talk" className="our-iniatives-grid-img" />
                     <div className="bottom-gradient-do_more"></div>
@@ -63,7 +63,7 @@ const OurIniatives = () => {
               </div>
 
               <div className="col-md-6 p-0">
-                <a title="Corporality Club">
+                <a href="https://corporality.global/club" target={`_blank`} title="Corporality Club">
                   <figure className="our-iniatives-grid-img-effect">
                   <img src={BASE_URL + '/img/HomePage/Corporality-Club1.png'} alt="Corporality Club" className="our-iniatives-grid-img" />
                     <div className="bottom-gradient-do_more"></div>
@@ -78,7 +78,7 @@ const OurIniatives = () => {
               </div>
 
               <div className="col-md-6 p-0">
-                <a title="TechConsultants">
+                <a href="https://techconsultants.global/" target={`_blank`} title="TechConsultants">
                   <figure className="our-iniatives-grid-img-effect">
                   <img src={BASE_URL + '/img/HomePage/Tech-Consultant1.png'} alt="TechConsultants" className="our-iniatives-grid-img" />
                     <div className="bottom-gradient-do_more"></div>

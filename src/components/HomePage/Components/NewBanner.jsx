@@ -90,10 +90,9 @@ const NewBanner = () => {
                         <div className="leftPartBanner" data-aos="fade-left" data-aos-duration="2500">
                             <div data-aos="fade-right" className="bannerText">
                                 <h1 className="bannerHead" data-aos="fade-left" data-aos-duration="2700">Global Management Consulting Company</h1>
-                                <p className="bannerSubtitle" data-aos="fade-left" data-aos-duration="3000">We are a strategic management consulting firm specialized in Marketing and Sales
-</p>
+                                <p className="bannerSubtitle" data-aos="fade-left" data-aos-duration="3000">We are a strategic management consulting firm specialized in Marketing and Sales</p>
                                 <div className="bannerBtn">
-                                    <a href="tel:4154267999">Book a Discovery Call</a>
+                                    <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Book a Discovery Call</a>
                                 </div>
                             </div>
                         </div>
@@ -130,9 +129,19 @@ const NewBanner = () => {
                     </div>
 
                     <div className={`mainPartBanner ${indicatorId===2? "" : "bannerTextHide"}`}>
-                        <div className="bgPartBanner">
-                            <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="" className="banner-bg-image" />
+                        <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="" className="banner-bg-image" />
 
+                        <div className="leftPartBanner">
+                            <div className="bannerText">
+                                <h1 className="bannerHead">Delivering Results You Can Visualize</h1>
+                                <p className="bannerSubtitle">Corporality is a strategic consulting firm that provides over 8 years of market intelligence backed by data-driven strategies to deliver measurable results.</p>
+                                <div className="bannerBtn">
+                                    <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Book a Discovery Call</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bgPartBanner">
                             <div className="mainBannerImg">
                                 <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="" className="banner-image" />
                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="" className="video-icon" />
@@ -143,17 +152,6 @@ const NewBanner = () => {
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="" className="rectangle-2" />
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="" className="rectangle-3" />
                                 <img src={BASE_URL + 'img/HomePage/media/rectangle-4.png'} alt="" className="rectangle-4" />
-                            </div>
-                        </div>
-
-                        <div className="leftPartBanner">
-                            <div className="bannerText">
-                                <h1 className="bannerHead">Delivering Results You Can Visualize</h1>
-                                <p className="bannerSubtitle">Corporality is a strategic consulting firm that provides over 8 years of market intelligence backed by data-driven strategies to deliver measurable results.
-</p>
-                                <div className="bannerBtn">
-                                    <a href="#">Request Call Back</a>
-                                </div>
                             </div>
                         </div>
 
@@ -172,9 +170,19 @@ const NewBanner = () => {
                     </div>
 
                     <div className={`mainPartBanner ${indicatorId===3? "" : "bannerTextHide"}`}>
-                        <div className="bgPartBanner">
-                            <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="" className="banner-bg-image" />
+                        <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="" className="banner-bg-image" />
 
+                        <div className="leftPartBanner">
+                            <div className="bannerText">
+                                <h1 className="bannerHead">Our focus is on creating an impact that multiplies your business</h1>
+                                <p className="bannerSubtitle">We believe in communicating through omni effect, actionable insights, and implementing solutions with guaranteed results.</p>
+                                <div className="bannerBtn">
+                                    <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Book a Discovery Call</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bgPartBanner">
                             <div className="mainBannerImg">
                                 <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="" className="banner-image" />
                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="" className="video-icon" />
@@ -185,16 +193,6 @@ const NewBanner = () => {
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="" className="rectangle-2" />
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="" className="rectangle-3" />
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-4.png'} alt="" className="rectangle-4" />
-                            </div>
-                        </div>
-
-                        <div className="leftPartBanner">
-                            <div className="bannerText">
-                                <h1 className="bannerHead">Our focus is on creating an Impact that multiplies your business</h1>
-                                <p className="bannerSubtitle">We believe in communicating through Omni effect, actionable insights, and implementing solutions with guaranteed results. Want to know how?</p>
-                                <div className="bannerBtn">
-                                <a href="#">Request Call Back</a>
-                                </div>
                             </div>
                         </div>
 
