@@ -91,7 +91,6 @@ function CorporateFirst() {
             <div className="corporatefirst_left_text">
               <div className="corporatefirst_text_heading">
               DELIVERING THE SUSTAINABILITY IN BUSINESSES
-
               </div>
               <div className="corporatefirst_text_description">
                 <p><b>Supporting the journey to operational excellence</b></p>

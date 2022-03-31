@@ -90,7 +90,7 @@ const NewBanner = () => {
                         <div className="leftPartBanner" data-aos="fade-left" data-aos-duration="2500">
                             <div data-aos="fade-right" className="bannerText">
                                 <h1 className="bannerHead" data-aos="fade-left" data-aos-duration="2700">Global Management Consulting Company</h1>
-                                <p className="bannerSubtitle" data-aos="fade-left" data-aos-duration="3000">We are strategic management consulting firm specialised in Marketing and Sales
+                                <p className="bannerSubtitle" data-aos="fade-left" data-aos-duration="3000">We are a strategic management consulting firm specialized in Marketing and Sales
 </p>
                                 <div className="bannerBtn">
                                     <a href="tel:4154267999">Book a Discovery Call</a>
@@ -190,8 +190,8 @@ const NewBanner = () => {
 
                         <div className="leftPartBanner">
                             <div className="bannerText">
-                                <h1 className="bannerHead">Our focus is on creating your Impact</h1>
-                                <p className="bannerSubtitle">we communicate through omni effect, actionable insights and implement solutions with guaranteed results. Want to know how?</p>
+                                <h1 className="bannerHead">Our focus is on creating an Impact that multiplies your business</h1>
+                                <p className="bannerSubtitle">We believe in communicating through Omni effect, actionable insights, and implementing solutions with guaranteed results. Want to know how?</p>
                                 <div className="bannerBtn">
                                 <a href="#">Request Call Back</a>
                                 </div>
@@ -203,7 +203,7 @@ const NewBanner = () => {
                         </div>
 
                         <Modal show={show==3 ? show : ''} onHide={handleClose} size="lg" centered>
-                            <Modal.Header closeButton>Our focus is on creating your Impact</Modal.Header>
+                            <Modal.Header closeButton>Our focus is on creating an Impact that multiplies your business</Modal.Header>
                             <Modal.Body closeButton>
                                 <div className="home_banner_modal">
                                     <video src={BASE_URL + '/img/home-page-banner.mp4'} controls={true} autoPlay={true} />

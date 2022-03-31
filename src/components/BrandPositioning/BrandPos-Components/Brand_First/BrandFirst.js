@@ -83,9 +83,9 @@ function BrandFirst() {
               data-aos-easing="linear"
               data-aos-duration="1500">
                 <b>We bring the power of Corporality Signature Product to help you grow. </b>
-                Full service Branding and Marketing Solutions for Small to Medium sized businesses
+                We deliver comprehensive branding and marketing solutions for small to medium-sized businesses.
+Every day, we bring our experience, knowledge, and expertise to help you achieve your vision. We dig, we hunt, we conquer. We work unceasingly to nurture brand positioning for our clients.
 
-Everyday, we bring our experience, knowledge and expertise to help your vision to achieve. We dig. We hunt. We work unceasingly to nurture brand positioning for our clients.
 
             </div>
           </div>
