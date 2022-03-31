@@ -149,7 +149,7 @@ export default function Footer() {
                 <img className="poligon-image" src={polygon} />
                 Our Team
               </p>
-              <p className="text-links">
+              <p className="text-links" onClick={() => { navigate("/careers"); topHandle(); }}>
                 <img className="poligon-image" src={polygon} />
                 Careers
               </p>

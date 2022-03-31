@@ -56,9 +56,10 @@ function Careers() {
         <div className="container">
           <div className="row career-testimonial-row">
             <div className="col-md-12">
-              <Carousel>
+              <Carousel indicators={false} interval={null} prevIcon={<div className="related-case-study-arrow related-case-study-arrow-prev"><img src={BASE_URL + '/img/Careers/prev-arrow.png'} alt="<" /></div>} nextIcon={<div className="related-case-study-arrow related-case-study-arrow-prev"><img src={BASE_URL + '/img/Careers/next-arrow.png'} alt=">" /></div>}>
                 <Carousel.Item>
                   <TestimonialItem
+                    type={'odd'}
                     thumbnail={BASE_URL + '/img/Careers/Sanja-Mladenovic.png'}
                     name={'Sanja Mladenovic'}
                     designation={'SEO Analyst'}
@@ -68,6 +69,7 @@ function Careers() {
 
                 <Carousel.Item>
                   <TestimonialItem
+                    type={'even'}
                     thumbnail={BASE_URL + '/img/Careers/Zlatko-Filipovic.png'}
                     name={'Zlatko Filipovic'}
                     designation={'SEO Manager'}
@@ -79,6 +81,8 @@ function Careers() {
           </div>
         </div>
       </div>
+
+      <div className="career-opportunities-section"></div>
     </>
   )
 }

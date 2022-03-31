@@ -71,3 +71,78 @@
 .career-banner-section .career-banner-phone img {
     max-height: 120px;
 }
+
+.career-testimonial-section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+.career-testimonial-section .career-testimonial-row .carousel-inner {
+    max-width: 70%;
+    margin: 0 auto;
+    box-shadow: 0px 13px 40px rgba(7, 9, 14, 0.15);
+}
+.career-testimonial-section .career-testimonial-box {
+    background: #FFFFFF;
+    padding: 40px 30px;
+}
+.career-testimonial-section .career-testimonial-box .t-box-img-main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+.career-testimonial-section .career-testimonial-box .t-box-img-main .t-box-img {
+    max-height: 200px;
+    width: auto;
+    z-index: 9;
+}
+.career-testimonial-section .career-testimonial-box .t-box-img-main .rec-1 {
+    position: absolute;
+    left: 0;
+}
+.career-testimonial-section .career-testimonial-box .t-box-img-main .rec-2 {
+    position: absolute;
+    right: 10px;
+    bottom: -15px;
+    max-height: 35px;
+}
+.career-testimonial-section .career-testimonial-box .career-testimonial-box-row {
+    align-items: center;
+}
+.career-testimonial-section .career-testimonial-box .t-box-content {
+    position: relative;
+}
+.career-testimonial-section .career-testimonial-box .t-box-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #232323;
+    margin-bottom: 20px;
+}
+.career-testimonial-section .career-testimonial-box .t-box-content .t-box-name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: #33657E;
+    margin-top: 15px;
+    padding-top: 10px;
+    position: relative;
+    display: inline-block;
+}
+.career-testimonial-section .career-testimonial-box .t-box-content .t-box-name::before {
+    background-color: #A06DAF;
+    content: "";
+    width: 90px;
+    height: 3px;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.career-testimonial-section .career-testimonial-box .t-box-content .quote-top {
+    margin-bottom: 30px;
+}
+.career-testimonial-section .career-testimonial-box .t-box-content .quote-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
