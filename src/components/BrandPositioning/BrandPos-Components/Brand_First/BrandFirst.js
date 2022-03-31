@@ -78,15 +78,13 @@ function BrandFirst() {
               data-aos-easing="linear"
               data-aos-duration="1000">
               GROWING UP IS AN ADVENTURE
-                          </div>
+              </div>
             <div className="brandposition_first_textside_description" data-aos="fade-down"
               data-aos-easing="linear"
               data-aos-duration="1500">
-                <b>We bring the power of Corporality Signature Product to help you grow. </b>
-                We deliver comprehensive branding and marketing solutions for small to medium-sized businesses.
-Every day, we bring our experience, knowledge, and expertise to help you achieve your vision. We dig, we hunt, we conquer. We work unceasingly to nurture brand positioning for our clients.
-
-
+                <p><b>We bring the power of Corporality’s Signature Product to help you grow. </b></p>
+                We deliver comprehensive branding and marketing solutions for small to medium-sized businesses.<br />
+                Every day, we bring our experience, knowledge, and expertise to help you achieve your vision. We dig, we hunt, we conquer. We work unceasingly to nurture brand positioning for our clients.
             </div>
           </div>
           <div className="brandposition_first_imageside">

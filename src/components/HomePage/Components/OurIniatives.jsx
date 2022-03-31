@@ -78,7 +78,7 @@ const OurIniatives = () => {
               </div>
 
               <div className="col-md-6 p-0">
-                <a title="TechConsultants">
+                <a href="https://techconsultants.global/" target={`_blank`} title="TechConsultants">
                   <figure className="our-iniatives-grid-img-effect">
                   <img src={BASE_URL + '/img/HomePage/Tech-Consultant1.png'} alt="TechConsultants" className="our-iniatives-grid-img" />
                     <div className="bottom-gradient-do_more"></div>

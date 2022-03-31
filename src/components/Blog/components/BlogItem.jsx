@@ -38,10 +38,10 @@ function BlogItem(props)
                         <img src={BASE_URL + '/img/HomePage/blog/date-icon.png'} alt="Date" />
                       <span>{dateFormat(props.date)}</span>
                     </div>
-                    <div className="blog-date-comment">
+                    {/* <div className="blog-date-comment">
                         <img src={BASE_URL + '/img/blogs/comment-icon.png'} alt="Comment" />
                         <span>({props.comments}) Comments</span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

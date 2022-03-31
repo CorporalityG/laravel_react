@@ -30,11 +30,9 @@ const Prev1 = () => {
                     <div className="col-lg-6">
                         <div data-aos="fade-right" className="text-box-1">
 
-                            <p className='container-1_text'>Embracing Your Innovative Idea</p>
-                            <p className='container-2_text'><b>Creating Blueprint of your business to stand out your brilliance</b><br/>
-                                
-                            Taking Mix Marketing approach and Blue ocean strategy to build your thought leader position. Standing out is a Norm.
-</p>
+                            <p className='container-1_text'>EMBRACING INNOVATIVE IDEAS</p>
+                            <p className='container-2_text'><b>Creating a blueprint of your business to make sure that you stand out from the competition. </b><br/>
+                            Combining the two extremely effective methods of mixed market modeling and blue ocean strategy, we make sure you build a position of a “thought leader”. Standing out is a norm, and we must abide!</p>
                             <div className="small-rect-prev-1"><img src={smallerrectCustomised} alt='' className='smaller-rect-prev-1' /></div>
                         </div>
                     </div>

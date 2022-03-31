@@ -92,10 +92,10 @@ const Blog = () => {
                                                 </div>
                                             : null
                                         }
-                                        <div className="blog-date-comment">
+                                        {/* <div className="blog-date-comment">
                                             <img src={BASE_URL + '/img/blogs/comment-icon.png'} alt="Comment" />
                                             <span>(0) Comments</span>
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <h1 className="single-blog-heading">{singleBlog.post_title}</h1>
@@ -181,7 +181,7 @@ const Blog = () => {
                                 </div>
                             </div>
 
-                            <div className="single-sidebar-box">
+                            {/* <div className="single-sidebar-box">
                                 <div className="comment-list-main">
                                     <div className="sidebar-heading">Comments</div>
                                     <div className="comment-list">
@@ -269,7 +269,7 @@ const Blog = () => {
                                         <div className="form-btn">Submit</div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
