@@ -18,14 +18,9 @@ export default function Differentiate() {
             <div data-aos="fade-right" data-aos-duration="3000" className="col cxo-landing-page">
               <h3>OUTSOURCED CXO</h3>
               <h1>Delivering a better success</h1>
-              <h4 className="heading-h4">United by a common purpose to deliver your vision with your team.</h4>
               <p>
 
-              Hire our strategist and consultants in bundle to handle your entire Marketing Department and customer service to accelerate the success you have been dreaming of
-
-
               United by a common purpose to deliver your vision with your team .Hire our strategist and consultants in bundle to handle your entire Marketing Department and customer service to accelerate the success you have been dreaming of
-
 .
 
                 Build customer loyalty through differentiated brand

@@ -1,0 +1,138 @@
+.terms-conditions-section {
+    margin-top: 80px;
+    padding-top: 95px;
+    padding-bottom: 75px;
+    background-image: url('./img/terms-conditions-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    position: relative;
+}
+.terms-conditions-section .rec-1 {
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+.terms-conditions-section .rec-2 {
+    position: absolute;
+    left: 10px;
+    top: 250px;
+}
+.terms-conditions-section .rec-3 {
+    position: absolute;
+    left: 20%;
+    top: 0;
+}
+.terms-conditions-section .rec-4 {
+    position: absolute;
+    right: 90px;
+    top: 30px;
+}
+.terms-conditions-section .vector {
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+.terms-conditions-section .bottom-vector {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    z-index: -1;
+}
+.terms-conditions-section .terms-conditions-row {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 30px rgba(21, 19, 36, 0.25);
+    border-radius: 20px;
+    padding-bottom: 40px;
+    position: relative;
+}
+.terms-conditions-section .terms-conditions-row .terms-conditions-heading {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(47, 58, 85, 0.05);
+    border-radius: 20px 20px 0px 0px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.terms-conditions-section .terms-conditions-row .terms-conditions-heading h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: #3C708E;
+}
+.terms-conditions-section .terms-conditions-row .terms-conditions-heading .modified-label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #757575;
+    margin-right: 8px;
+}
+.terms-conditions-section .terms-conditions-row .terms-conditions-heading .modified-date {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #232323;
+}
+.terms-conditions-section .terms-conditions-tab-main .tc-tab-nav {
+    background: #FAFAFA;
+    border-radius: 0px 0px 0px 20px;
+    padding: 40px 30px;
+    border-width: 0;
+}
+.terms-conditions-section .terms-conditions-tab-main .tc-tab-nav.nav-tabs .nav-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #757575;
+    margin-bottom: 30px;
+    padding: 0;
+    border-width: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.terms-conditions-section .terms-conditions-tab-main .tc-tab-nav.nav-tabs .nav-link.active {
+    color: #3C708E;
+}
+.terms-conditions-section .terms-conditions-tab-main .tc-tab-nav.nav-tabs .nav-link:hover {
+    color: #A06DAF;
+}
+.terms-conditions-section .terms-conditions-tab-main .tc-tab-content {
+    padding: 20px 20px 20px 5px;
+}
+.terms-conditions-section .terms-conditions-tab-main .tc-tab-content h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: justify;
+    color: #33657E;
+    margin-bottom: 10px;
+}
+.terms-conditions-section .terms-conditions-tab-main .tc-tab-content h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: justify;
+    color: #A06DAF;
+    margin-bottom: 10px;
+}
+.terms-conditions-section .terms-conditions-tab-main .tc-tab-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    color: #757575;
+    margin-bottom: 15px;
+}
+.terms-conditions-section .terms-conditions-tab-main .tc-tab-content ul {
+    list-style-image: url('./img/list-icon.png');
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    color: #757575;
+    margin-bottom: 25px;
+}
+.terms-conditions-section .terms-conditions-tab-main .tc-tab-content ul li {
+    margin-bottom: 10px;
+}

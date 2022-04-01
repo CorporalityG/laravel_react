@@ -174,8 +174,8 @@ export default function Footer() {
       {/* 2nd last lower section with 3 links */}
       <div className="footerContainer">
         <div className="row1">
-          <div className="footer-text">Privacy Policy</div>
-          <div className="footer-text">Terms and Conditions</div>
+          <div className="footer-text" onClick={() => { navigate("/privacy-policy"); topHandle(); }}>Privacy Policy</div>
+          <div className="footer-text" onClick={() => { navigate("/terms-and-conditions"); topHandle(); }}>Terms and Conditions</div>
           <div className="footer-text">Sitemap</div>
         </div>
         <div className="row2">Copyright © 2022 Corporality</div>

@@ -18,7 +18,7 @@ export const TestimonialItem = (props) => {
                         <img src={`${BASE_URL}/img/Careers/quote-top.png`} alt='quote' className="quote-top" />
 
                         <span dangerouslySetInnerHTML={{ __html: props.content }}></span>
-                        <div className="t-box-name">{props.name} , {props.designation}</div>
+                        <div className="t-box-name">{`${props.name} , ${props.designation}`}</div>
 
                         <img src={`${BASE_URL}/img/Careers/quote-bottom.png`} alt='quote' className="quote-bottom" />
                     </div>
