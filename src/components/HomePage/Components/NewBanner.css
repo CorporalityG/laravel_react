@@ -1034,8 +1034,8 @@
 
 @media only screen and (max-width: 430px) {
   .bannerContainer {
-    height: 1000px;
-    max-height: 1000px;
+    height: 1100px;
+    max-height: 1100px;
   }
   .bannerContainer .leftPartBanner {
     padding: 20px;
@@ -1048,23 +1048,24 @@
     max-height: 130px;
   }
   .bannerContainer .rightPartBanner {
-    bottom: 200px;
+    bottom: 280px;
   }
   .bannerContainer .bannerImgs .rectangle-4 {
     left: 45%;
     top: 70%;
   }
   .bannerContainer .leftIndicators {
-    bottom: 160px;
+    bottom: 240px;
   }
   .bannerContainer .twoDiamonds {
-    bottom: 40px;
+    bottom: 100px;
     transform: translate(-55%, 0) !important;
   }
   .bannerContainer .bannerSocialLinksContainer {
     flex-direction: column;
     max-width: 100%;
     width: 100%;
+    bottom: -50px;
   }
   .bannerContainer .bannerSocialLinksContainer .bannerSocialImg {
     transform: rotate(90deg);
@@ -1076,5 +1077,38 @@
     flex-direction: row;
     width: 100%;
     justify-content: center;
+    margin-top: -50px;
+  }
+  .bannerContainer .socialIcon {
+    width: 20px !important;
+    margin-bottom: 0;
+  }
+  .bannerContainer .socialIcon:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 360.99px) {
+  .bannerContainer .bannerHead {
+    font-size: 22px;
+  }
+}
+
+
+@media only screen and (max-width: 280.99px) {
+  .bannerContainer .twoDiamonds {
+    width: 275px;
+  }
+  .bannerContainer .twoDiamonds .phone-icon img {
+    max-width: 130px;
+  }
+  .bannerContainer .phone-icon::after {
+    width: 60px;
+    top: 53px;
+  }
+  .bannerContainer .twoDiamonds .banner-count {
+    font-size: 60px;
   }
 }

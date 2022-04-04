@@ -44,7 +44,7 @@
 
 .c-book-list-container {
     background: #FAFAFA;
-    padding-top: 90px;
+    padding-top: 70px;
     padding-bottom: 50px;
 }
 .c-book-list-container .c-book-list-row {
@@ -375,6 +375,155 @@
     outline: 0;
     border-width: 0;
     box-shadow: unset;
+}
+
+.c-book-list-book-section {
+    background: #F4F4F4;
+    position: relative;
+    height: 667px;
+}
+.c-book-list-book-section .dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.c-book-list-book-section .book-rec {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+}
+.c-book-list-book-section .book-vector {
+    position: absolute;
+    top: 0;
+    left: 45%;
+}
+.c-book-list-book-section .book-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.c-book-list-book-section .book-1 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+}
+.c-book-list-book-section .book-front-main {
+    position: absolute;
+    top: 75px;
+    left: 200px;
+}
+.c-book-list-book-section .book-front-main .book-2 {
+    position: absolute;
+    left: 130px;
+    bottom: 0;
+}
+.c-book-list-book-section .book-front-main .book-front-content {
+    position: absolute;
+    bottom: 45px;
+    left: 125px;
+}
+.c-book-list-book-section .book-front-main .book-front-content .bf-content-item {
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin-bottom: 40px;
+}
+.c-book-list-book-section .book-front-main .book-front-content .bf-content-item:not(:last-child)::before {
+    background-color: #dcdcdc;
+    content: "";
+    height: 120%;
+    left: 35px;
+    position: absolute;
+    top: 30px;
+    width: 1px;
+}
+.c-book-list-book-section .book-front-main .bf-icon {
+    margin-right: 15px;
+    position: relative;
+}
+.c-book-list-book-section .book-front-main .bf-icon img {
+    max-width: 71px;
+    position: relative;
+    z-index: 9;
+}
+.c-book-list-book-section .book-front-main .bf-icon::after {
+    background-color: #dcdcdc;
+    content: "";
+    height: 1px;
+    left: 50px;
+    position: absolute;
+    top: 32px;
+    width: 30px;
+}
+.c-book-list-book-section .book-front-main .bf-desc {
+    width: 285px;
+}
+.c-book-list-book-section .book-front-main .bf-desc .bf-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #232323;
+}
+.c-book-list-book-section .book-front-main .bf-detail-mian {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #232323;
+}
+.c-book-list-book-section .book-front-main .bf-detail-mian .bf-detail:not(:last-child) {
+    border-right: 1px solid #DCDCDC;
+    margin-right: 9px;
+    padding-right: 9px;
+}
+.c-book-list-book-section .book-preview {
+    position: absolute;
+    right: 0;
+    top: 45px;
+}
+.c-book-list-book-section .favicon {
+    position: absolute;
+    right: 30px;
+    top: 45px;
+}
+.c-book-list-book-section .book-front-video {
+    position: absolute;
+    bottom: 35px;
+    right: 200px;
+}
+.c-book-list-book-section .book-front-video video {
+    max-height: 146px;
+}
+.c-book-list-book-section .book-front-btn {
+    position: absolute;
+    bottom: 35px;
+    left: 43%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.c-book-list-book-section .book-front-btn .bf-sample-btn {
+    background: #33657E;
+    border: 1px solid #33657E;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 14px 33px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.c-book-list-book-section .book-front-btn .bf-buy-btn {
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 14px 54px;
+    cursor: pointer;
 }
 
 

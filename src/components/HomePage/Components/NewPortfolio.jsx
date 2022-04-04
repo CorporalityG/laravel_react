@@ -21,12 +21,12 @@ const NewPortfolio = () => {
 
     return (
         <div className="portfolio-container">
-            <div className="container">
+            <div className="container-lg">
                 <div className="row">
                     <div className="col-md-12">
                         <Carousel activeIndex={index} onSelect={handleSelect} controls={false} interval={null} fade>
                             <Carousel.Item>
-                                <div className="container">
+                                <div className="container-lg">
                                     <div className="row">
                                         <div className="col-md-4 portfolio-left">
                                             <div className="portfolio-img-heading">
@@ -59,7 +59,7 @@ const NewPortfolio = () => {
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                <div className="container">
+                                <div className="container-lg">
                                     <div className="row">
                                         <div className="col-md-4 portfolio-left">
                                             <div className="portfolio-img-heading">
@@ -92,7 +92,7 @@ const NewPortfolio = () => {
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                <div className="container">
+                                <div className="container-lg">
                                     <div className="row">
                                         <div className="col-md-4 portfolio-left">
                                             <div className="portfolio-img-heading">
@@ -125,7 +125,7 @@ const NewPortfolio = () => {
                             </Carousel.Item>
 
                             <Carousel.Item>
-                                <div className="container">
+                                <div className="container-lg">
                                     <div className="row">
                                         <div className="col-md-4 portfolio-left">
                                             <div className="portfolio-img-heading">

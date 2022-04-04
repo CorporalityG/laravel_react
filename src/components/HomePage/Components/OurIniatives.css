@@ -128,8 +128,12 @@
   font-weight: 700;
   font-size: 22px;
   color: #FFFFFF;
-  padding-bottom: 13px;
-  margin-top: -13px;
+  padding-bottom: 25px;
+  margin-top: -25px;
+}
+.our-iniatives-container .our-iniatives-grid .our-iniatives-grid-img-effect:hover .our-iniatives-grid-title {
+  padding-bottom: 5px;
+  margin-top: 0;
 }
 .our-iniatives-container .our-iniatives-grid .our-iniatives-grid-desc p {
   font-style: normal;
@@ -137,4 +141,79 @@
   font-size: 16px;
   color: #FFFFFF;
   margin-bottom: 0;
+}
+
+
+@media only screen and (max-width: 1399.99px) {
+  .our-iniatives-container .our-iniatives-grid-img-effect .our-iniatives-grid-img {
+    max-height: 570px;
+  }
+}
+
+
+@media only screen and (max-width: 1199.99px) {
+  .our-iniatives-container .our-iniatives-grid-img-effect .our-iniatives-grid-img {
+    max-height: 480px;
+  }
+  .our-iniatives-container .our-iniatives-grid .our-iniatives-grid-img-effect:hover figcaption {
+    bottom: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 991px) {
+  .our-iniatives-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .our-iniatives-container .our-iniatives-grid-img-effect .our-iniatives-grid-img {
+    max-height: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+  .our-iniatives-container .our-iniatives-grid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .our-iniatives-container .iniatives-heading::after {
+    left: 46%;
+  }
+}
+
+
+@media only screen and (max-width: 400.99px) {
+  .our-iniatives-container .our-iniatives-grid .our-iniatives-grid-title {
+    font-size: 20px;
+  }
+  .our-iniatives-container .our-iniatives-grid .our-iniatives-grid-title {
+    margin-top: -23px;
+  }
+}
+
+
+@media only screen and (max-width: 360.99px) {
+  .our-iniatives-container .iniatives-heading {
+    font-size: 28px;
+  }
+  .our-iniatives-container .our-iniatives-grid .our-iniatives-grid-title {
+    margin-top: -50px;
+    padding-bottom: 55px;
+  }
+  .our-iniatives-container .iniatives-heading::after {
+    left: 42%;
+  }
+}
+
+@media only screen and (max-width: 280.99px) {
+  .our-iniatives-container .iniatives-heading {
+    font-size: 24px;
+  }
+  .our-iniatives-container .iniatives-heading::after {
+    left: 39%;
+  }
+  .our-iniatives-container .our-iniatives-grid .our-iniatives-grid-img-effect:hover figcaption {
+    max-height: 300px;
+  }
 }

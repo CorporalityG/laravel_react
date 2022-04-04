@@ -19,7 +19,7 @@ function EmotionalQuest() {
 
   return (
     <div className="emotional-quest-parent">
-      <div className="container">
+      <div className="container-lg">
         <div className="row d-flex align-items-center">
 
           <div className="col-md-6">

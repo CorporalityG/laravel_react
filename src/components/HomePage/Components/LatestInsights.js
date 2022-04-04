@@ -37,7 +37,7 @@ function LatestInsights()
   
   return (
     <div className="blogs-container">
-      <div className="container">
+      <div className="container-lg">
         <div className="row">
           <div className="col-md-12">
             <div className="blog-heading" data-aos="fade-down">Our Latest Insights</div>

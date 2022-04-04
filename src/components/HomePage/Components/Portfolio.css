@@ -387,9 +387,28 @@
   }
 }
 
+
+@media only screen and (max-width: 1399.99px) {
+  .portfolio-container .portfolio-count {
+    bottom: 60px;
+  }
+  .portfolio-container .portfolio-btn {
+    bottom: 0;
+  }
+}
+
+
 @media only screen and (max-width: 1200px) {
   .portfolioContainer .portfolioHead hr {
     height: 4px;
+  }
+  .portfolio-container .portfolio-count {
+    bottom: -40px;
+    left: 50%;
+  }
+  .portfolio-container .portfolio-btn {
+    left: initial;
+    float: right;
   }
 }
 
@@ -402,11 +421,86 @@
   }
 }
 
+
+@media only screen and (min-width: 768px) and (max-width: 815px) {
+  .portfolio-container .portfolio-count {
+    font-size: 80px;
+  }
+}
+
+
 @media only screen and (max-width: 768px) {
   .portfolioContainer .portfolioHead hr {
     height: 4px;
   }
 }
+
+
+@media only screen and (max-width: 767px) {
+  .portfolio-container .portfolio-left .portfolio-img-heading {
+    margin: 0 auto 30px;
+  }
+  .portfolio-container .carousel-indicators {
+    bottom: -25px;
+    margin-left: 3%;
+  }
+  .portfolio-container .portfolio-count {
+    left: 45%;
+  }
+}
+
+
+@media only screen and (max-width: 720.99px) {
+  .portfolio-container .portfolio-count {
+    font-size: 80px;
+  }
+  .portfolio-container .carousel-indicators {
+    bottom: -35px;
+  }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+  .portfolio-container .portfolio-count {
+    left: 70%;
+    bottom: 20px;
+  }
+  .portfolio-container .portfolio-btn {
+    margin-top: 60px;
+    bottom: -30px;
+    float: unset;
+  text-align: center;
+  }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+  .portfolio-container .row > * {
+    padding-right: calc(var(--bs-gutter-x) * .5) !important;
+    padding-left: calc(var(--bs-gutter-x) * .5) !important;
+  }
+  .portfolio-container .portfolio-boxes .portfolio-box:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .portfolio-container .carousel-indicators {
+    margin-left: 7%;
+    justify-content: center;
+    bottom: -15px;
+  }
+  .portfolio-container .portfolio-count {
+    left: 45%;
+    bottom: 40px;
+  }
+  .portfolio-container .portfolio-btn {
+    margin-top: 80px;
+    left: 10%;
+  }
+  .portfolio-container .portfolio-right .portfolio-box-studies {
+    background-position: 100% !important;
+    background-size: cover !important;
+  }
+}
+
 
 @media only screen and (max-width: 576px) {
   .portfolioContainer {
@@ -436,6 +530,29 @@
   }
   .portfolioContainer .portfolioSection .portfolioFloatingDiv:hover h4 {
     margin-top: 70% !important;
+  }
+  .portfolio-container .portfolio-count {
+    left: 40%;
+  }
+}
+
+
+@media only screen and (max-width: 346px) {
+  .portfolio-container .portfolio-right .portfolio-title {
+    font-size: 22px !important;
+  }
+  .portfolio-container .portfolio-btn {
+    left: 15%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .portfolio-container .portfolio-right .studies-title {
+    font-size: 20px;
+  }
+  .portfolio-container .portfolio-count {
+    font-size: 60px;
+    left: 48%;
   }
 }
 /*# sourceMappingURL=Portfolio.css.map */

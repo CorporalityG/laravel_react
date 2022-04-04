@@ -63,7 +63,7 @@ function Services() {
       <div className="container-fluid px-0">
         <div className="main_services_container">
           <div className="services_heading" data-aos="fade-down">Services</div>
-          <div className="button_container container" data-aos="fade-up" data-aos-duration="2100">
+          <div className="button_container container-lg" data-aos="fade-up" data-aos-duration="2100">
             <div className="button_list">
               <div
                 className="button_main button_active"

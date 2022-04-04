@@ -6,7 +6,7 @@ import "./OurIniatives.css"
 const OurIniatives = () => {
   return (
     <div className="our-iniatives-container">
-      <div className="container">
+      <div className="container-lg">
         <div className="row">
           <div className="col-md-12">
             <div className="iniatives-heading" data-aos="fade-down">Our Initiatives</div>
@@ -14,7 +14,7 @@ const OurIniatives = () => {
         </div>
 
         <div className="row our-iniatives-grid-row">
-          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20 p-0 our-iniatives-grid">
+          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-xs-20 p-0 our-iniatives-grid">
             <a title="Social Impact">
               <figure className="our-iniatives-grid-img-effect">
                 <img src={BASE_URL + '/img/HomePage/Social-Impact1.png'} alt="Social Impact" className="our-iniatives-grid-img" />
@@ -30,9 +30,9 @@ const OurIniatives = () => {
             </a>
           </div>
 
-          <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-xs-20 our-iniatives-grid">
+          <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-xs-20 our-iniatives-grid">
             <div className="row">
-              <div className="col-md-6 p-0">
+              <div className="col-sm-6 p-0">
                 <a title="Corporality Magazine">
                   <figure className="our-iniatives-grid-img-effect">
                     <img src={BASE_URL + '/img/HomePage/Corporality-Magazine1.png'} alt="Corporality Magazine" className="our-iniatives-grid-img" />
@@ -47,7 +47,7 @@ const OurIniatives = () => {
                 </a>
               </div>
 
-              <div className="col-md-6 p-0">
+              <div className="col-sm-6 p-0">
                 <a href="http://corporality.global/talk/" target={`_blank`} title="Corporality Talk">
                   <figure className="our-iniatives-grid-img-effect">
                   <img src={BASE_URL + '/img/HomePage/Corporality-Talk1.png'} alt="Corporality Talk" className="our-iniatives-grid-img" />
@@ -62,7 +62,7 @@ const OurIniatives = () => {
                 </a>
               </div>
 
-              <div className="col-md-6 p-0">
+              <div className="col-sm-6 p-0">
                 <a href="https://corporality.global/club" target={`_blank`} title="Corporality Club">
                   <figure className="our-iniatives-grid-img-effect">
                   <img src={BASE_URL + '/img/HomePage/Corporality-Club1.png'} alt="Corporality Club" className="our-iniatives-grid-img" />
@@ -77,7 +77,7 @@ const OurIniatives = () => {
                 </a>
               </div>
 
-              <div className="col-md-6 p-0">
+              <div className="col-sm-6 p-0">
                 <a href="https://techconsultants.global/" target={`_blank`} title="TechConsultants">
                   <figure className="our-iniatives-grid-img-effect">
                   <img src={BASE_URL + '/img/HomePage/Tech-Consultant1.png'} alt="TechConsultants" className="our-iniatives-grid-img" />

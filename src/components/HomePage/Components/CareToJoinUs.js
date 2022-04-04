@@ -22,7 +22,7 @@ function CareToJoinUs() {
       <div className="left-wall">
         <img src={BASE_URL + '/img/HomePage/care-to-join-us/wall.png'} alt="wall" />
       </div>
-      <div className="container careto-joinus-container">
+      <div className="container-lg careto-joinus-container">
         <div className="row">
           <div className="col-md-12">
             <div className="caretojoinus-main">
