@@ -13,7 +13,7 @@
 .cause-studies-container p {
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     text-align: justify;
     color: #232323;
 }
@@ -27,7 +27,7 @@
 .cause-studies-container ul li {
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     text-align: justify;
     color: #232323;
     margin-bottom: 15px;
@@ -120,7 +120,7 @@
 .cause-studies-container .case-study-glance-box .case-study-glance-box-title {
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     color: #33657E;
 }
@@ -469,7 +469,7 @@
 .cause-studies-container .case-study-business-level-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     text-align: justify;
     color: #232323;
 }

@@ -33,6 +33,7 @@
 .faqs-digital-media-container .faqs-digital-media-list .accordion-body {
     background-color: #e4eaed;
     padding: 20px;
+    font-size: 14px;
 }
 .faqs-digital-media-container .faqs-digital-media-list .accordion-body p:last-child {
     margin-bottom: 0;

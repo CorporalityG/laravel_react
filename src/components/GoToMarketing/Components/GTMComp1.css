@@ -1,3 +1,7 @@
+.gtm-page1 .gainCompetitive {
+    font-size: 14px;
+}
+
 @media only screen and (max-width: 992px) {
     .gtm-page1 .heading{
         font-size: 16px;

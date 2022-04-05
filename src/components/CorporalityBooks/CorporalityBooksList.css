@@ -34,7 +34,7 @@
 .c-book-list-banner-container p {
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
     color: #232323;
 }
@@ -462,7 +462,7 @@
 .c-book-list-book-section .book-front-main .bf-desc .bf-title {
     font-style: normal;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 14px;
     color: #232323;
 }
 .c-book-list-book-section .book-front-main .bf-detail-mian {
@@ -470,7 +470,7 @@
     align-items: center;
     font-style: normal;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 14px;
     color: #232323;
 }
 .c-book-list-book-section .book-front-main .bf-detail-mian .bf-detail:not(:last-child) {
@@ -482,6 +482,7 @@
     position: absolute;
     right: 0;
     top: 45px;
+    max-width: 100%;
 }
 .c-book-list-book-section .favicon {
     position: absolute;
@@ -491,7 +492,7 @@
 .c-book-list-book-section .book-front-video {
     position: absolute;
     bottom: 35px;
-    right: 200px;
+    right: 12%;
 }
 .c-book-list-book-section .book-front-video video {
     max-height: 146px;
@@ -510,7 +511,7 @@
     box-sizing: border-box;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF;
     padding: 14px 33px;
     margin-right: 15px;
@@ -520,10 +521,23 @@
     background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     color: #FFFFFF;
     padding: 14px 54px;
     cursor: pointer;
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1420px) {
+    .c-book-list-book-section .book-front-btn {
+        left: 40%;
+    }
+    .c-book-list-book-section .book-preview {
+        max-height: 350px;
+    }
+    .c-book-list-book-section .book-front-main {
+        left: 150px;
+    }
 }
 
 

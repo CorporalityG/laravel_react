@@ -66,8 +66,8 @@
 }
 .single-blog-page .single-blog-description p {
   color: #534b53;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 24px;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -137,7 +137,7 @@
 .single-blog-page .single-sidebar-box .live-poll-question {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
   color: #31647C;
   margin-bottom: 20px;
 }
@@ -147,7 +147,7 @@
 .single-blog-page .single-sidebar-box .live-poll-options span {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
   color: #31647C;
   width: 100%;
   display: inline-block;
@@ -185,7 +185,7 @@
   background-color: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
-  padding: 8px 10px;
+  padding: 8px 7px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
