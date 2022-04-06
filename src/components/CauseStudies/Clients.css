@@ -170,6 +170,9 @@
     .clients-banner-container .clients-rec-2 {
         top: 20px;
     }
+    .clients-list-container {
+        margin-bottom: 30px;
+    }
   }
 
 
@@ -193,9 +196,6 @@
     .clients-list-container .client-item .client-item-subtitle {
         min-height: auto;
     }
-    .clients-list-container .client-item .client-item-img {
-        height: auto;
-    }
 }
 
 
@@ -214,8 +214,8 @@
     .clients-banner-container .clients-banner-content h1 {
         font-size: 28px;
     }
-    .clients-banner-container .clients-banner-content p {
-        font-size: 20px;
+    .clients-list-container .client-item .client-item-img {
+        height: 250px;
     }
 }
 
@@ -228,5 +228,11 @@
     .clients-list-container .filter-dropdown-main .filter-dropdown:not(:last-child) {
         margin-right: 0;
         margin-bottom: 15px;
+    }
+    .clients-list-container .client-item .client-item-img {
+        height: 200px;
+    }
+    .clients-list-container .client-item .client-item-title {
+        font-size: 20px;
     }
 }

@@ -6,7 +6,7 @@ import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
 function RelatedCaseStudyCarousel(props) {
     return (
         <div className="related-case-study-carousel">
-            <Carousel cols={3} rows={1} gap={15} arrowLeft={<div className="related-case-study-arrow related-case-study-arrow-prev"><img src={BASE_URL + '/img/case-study-arrow-prev.png'} alt="<-" /></div>} arrowRight={<div className="related-case-study-arrow related-case-study-arrow-next"><img src={BASE_URL + '/img/case-study-arrow-next.png'} alt="->" /></div>} responsiveLayout={[{ breakpoint: 991, cols: 1, rows: 1, gap: 10, loop: true, }]}>
+            <Carousel cols={3} rows={1} gap={15} arrowLeft={<div className="related-case-study-arrow related-case-study-arrow-prev"><img src={BASE_URL + '/img/case-study-arrow-prev.png'} alt="<-" /></div>} arrowRight={<div className="related-case-study-arrow related-case-study-arrow-next"><img src={BASE_URL + '/img/case-study-arrow-next.png'} alt="->" /></div>} responsiveLayout={[{ breakpoint: 825, cols: 2, rows: 1 }]}>
 
                 {
                     props.slug != 'divine-intercession' ?
