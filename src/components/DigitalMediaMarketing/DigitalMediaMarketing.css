@@ -15,12 +15,37 @@
 .dmm-banner-section .dmm-banner-main .rec-1 {
     position: absolute;
     right: 40px;
-    top: 150px;
+    top: 100px;
+    animation: rotateRec1 5s linear infinite;
+}
+@keyframes rotateRec1 {
+    8.33%{transform: translate(25px, 15px);}
+    16.66%{transform: translate(40px, 40px);}
+    24.99%{transform: translate(40px, 65px);}
+    33.33%{transform: translate(25px, 85px);}
+    41.66%{transform: translate(0, 100px);}
+    49.99%{transform: translate(-25px, 100px);}
+    58.33%{transform: translate(-50px, 85px);}
+    66.66%{transform: translate(-65px,65px);}
+    74.99%{transform: translate(-65px,40px);}
+    83.33%{transform: translate(-50px,15px);}
+    91.66%{transform: translate(-25px,0);}
+    100%{transform: translate(0, 0);}
 }
 .dmm-banner-section .dmm-banner-main .rec-2 {
     position: absolute;
     left: 0;
-    bottom: 35px;
+    bottom: 70px;
+    animation: rotateRec2 5s linear infinite;
+}
+@keyframes rotateRec2 {
+    0%,
+    100% {
+        transform: rotateX(8.75deg) rotateY(35deg);
+    }
+    50% {
+    transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+    }
 }
 .dmm-banner-section .dmm-banner-content-main {
     padding-top: 120px;
@@ -58,12 +83,14 @@
 }
 
 .dmm-banner-section .social-section {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     left: 30px;
     bottom: 50%;
     transform: translate(0, 50%);
+}
+.dmm-banner-section .social-section .social-row {
+    display: flex;
+    flex-direction: column;
 }
 .dmm-banner-section .social-section a {
     color: #33657e;
@@ -252,9 +279,35 @@
 }
 .dmm-goals-section .marketing-goals-arrow {
     position: absolute;
-    left: 55%;
+    /* left: 55%;
     transform: translate(-55%, 0);
-    bottom: 125px;
+    bottom: 125px; */
+    animation: x-motion 3s ease-in-out 0s infinite alternate;
+}
+@keyframes x-motion {
+    0% {
+      left: 0;
+      bottom: 40px;
+      transform: translate(-50%, -25%);
+    }
+    25% {
+        bottom: 30px;
+        transform: translate(-40%, -20%);
+    }
+    50% {
+        bottom: 50px;
+        transform: translate(-30%, -15%);
+    }
+    75% {
+        bottom: 60px;
+        transform: translate(-40%, -10%);
+    }
+    100% {
+      left: calc(100% - 100px);
+      bottom: 55px;
+      transform: translate(-60%, -5%);
+
+    }
 }
 .dmm-goals-section .dmm-goals-row {
     align-items: center;

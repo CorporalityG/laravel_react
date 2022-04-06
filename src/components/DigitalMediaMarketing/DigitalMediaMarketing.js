@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './DigitalMediaMarketing.css'
 import { BASE_URL } from '../../config'
 import { MarketingStrategyItem } from "./Components/MarketingStrategyItem";
@@ -8,8 +8,15 @@ import { WhattoExpectItem } from "./Components/WhattoExpectItem";
 import Carousel from 'react-bootstrap/Carousel'
 import { useNavigate } from "react-router"
 import { ClientWorkItem } from "./Components/ClientWorkItem";
+import AOS from "aos";
 
 function DigitalMediaMarketing() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
 
   const [showFaq, setShowFaq] = useState(false);
 
@@ -37,7 +44,7 @@ function DigitalMediaMarketing() {
           <div className="row dmm-banner-row">
             <div className="col-lg-6">
               <div className="dmm-banner-main">
-                <img src={`${BASE_URL}/img/DigitalMediaMarketing/banner.png`} alt="Digital Media Marketing" className="dmm-banner" />
+                <img src={`${BASE_URL}/img/DigitalMediaMarketing/banner.png`} alt="Digital Media Marketing" className="dmm-banner" data-aos="fade-right" />
 
                 <img src={`${BASE_URL}/img/DigitalMediaMarketing/rec-1.png`} alt="Rec 1" className="rec-1" />
                 <img src={`${BASE_URL}/img/DigitalMediaMarketing/rec-2.png`} alt="Rec 2" className="rec-2" />
@@ -46,22 +53,28 @@ function DigitalMediaMarketing() {
 
             <div className="col-lg-6">
               <div className="dmm-banner-content-main">
-                <h1>BUILDING A DIGITAL FOOTPRINT FOR YOUR BUSINESS</h1>
-                <p><b>We got you covered for Digital Media Marketing through our Packaged solutions.</b></p>
-                <p>Corporality is a globally trusted Digital Media Marketing firm. We have partnered with clients all over the world to solve the complex challenges of consistency in creating your digital presence.</p>
-                <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank" className="dmm-banner-btn">Schedule a time</a>
+                <div data-aos="fade-up">
+                  <h1>BUILDING A DIGITAL FOOTPRINT FOR YOUR BUSINESS</h1>
+                </div>
+                <div className="dmm-banner-content" data-aos="fade-up" data-aos-delay="300">
+                  <p><b>We got you covered for Digital Media Marketing through our Packaged solutions.</b></p>
+                  <p>Corporality is a globally trusted Digital Media Marketing firm. We have partnered with clients all over the world to solve the complex challenges of consistency in creating your digital presence.</p>
+                </div>
+                <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank" className="dmm-banner-btn" data-aos="fade-up" data-aos-delay="500">Schedule a time</a>
               </div>
             </div>
           </div>
         </div>
 
         <div className="social-section">
-          <a href='https://www.facebook.com/CorporalityG' target="_blank"><i className="fa fa-facebook-f"></i></a>
-          <a href='https://twitter.com/corporalityg' target="_blank"><i className="fa fa-twitter"></i></a>
-          <a href='https://www.instagram.com/corporalityg/' target="_blank"><i className="fa fa-instagram"></i></a>
-          <a href='https://www.linkedin.com/company/corporality/' target="_blank"><i className="fa fa-linkedin"></i></a>
-          <a href='https://in.pinterest.com/CorporalityG/' target="_blank"><i className="fa fa-pinterest"></i></a>
-          <a href='https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg' target="_blank"><i className="fa fa-youtube-play"></i></a>
+          <div className="social-row" data-aos="fade-right" data-aos-delay="400">
+            <a href='https://www.facebook.com/CorporalityG' target="_blank"><i className="fa fa-facebook-f"></i></a>
+            <a href='https://twitter.com/corporalityg' target="_blank"><i className="fa fa-twitter"></i></a>
+            <a href='https://www.instagram.com/corporalityg/' target="_blank"><i className="fa fa-instagram"></i></a>
+            <a href='https://www.linkedin.com/company/corporality/' target="_blank"><i className="fa fa-linkedin"></i></a>
+            <a href='https://in.pinterest.com/CorporalityG/' target="_blank"><i className="fa fa-pinterest"></i></a>
+            <a href='https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg' target="_blank"><i className="fa fa-youtube-play"></i></a>
+          </div>
         </div>
       </div>
 
@@ -70,8 +83,12 @@ function DigitalMediaMarketing() {
           <div className="row dmm-s-title-row">
             <div className="col-lg-12">
               <div className="dmm-s-title-content">
-                <h2>Digital Media Marketing Strategy</h2>
-                <p>Working on Multi-touch Attribution (MTA) & Conversion optimisation</p>
+                <div data-aos="fade-up">
+                  <h2>Digital Media Marketing Strategy</h2>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                  <p>Working on Multi-touch Attribution (MTA) & Conversion optimisation</p>
+                </div>
               </div>
             </div>
           </div>
