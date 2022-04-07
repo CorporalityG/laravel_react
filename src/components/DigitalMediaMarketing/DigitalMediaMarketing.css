@@ -649,6 +649,17 @@
     border: 1px solid #E2D5D5;
     box-sizing: border-box;
     box-shadow: 30px 34px 34px -20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.dmm-work-section .dmm-work-right .dmm-work-box-steps::before {
+    background: #6CA0BC;
+    box-shadow: 30px 34px 34px rgba(0, 0, 0, 0.1);
+    content: "";
+    width: 5px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 5px;
 }
 .dmm-work-section .dmm-work-right .steps-title {
     font-style: normal;
@@ -835,46 +846,43 @@
 }
 
 .dmm-quote-section {
-    background: #6CA0BC;
-    padding-top: 75px;
-    padding-bottom: 75px;
     position: relative;
-}
-.dmm-quote-section .quote-vector {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-}
-.dmm-quote-section .quote-rec-1 {
-    position: absolute;
-    bottom: 0;
-    right: 18%;
-}
-.dmm-quote-section .quote-rec-2 {
-    position: absolute;
-    top: 15%;
-    right: 5%;
 }
 .dmm-quote-section .dmm-quote-row {
     align-items: center;
+    background: #6CA0BC;
+    padding: 75px 20px;
+    border-radius: 16px;
+    box-shadow: 0 2.125rem 1.5rem 0 rgb(31 33 41 / 50%);
+    margin-bottom: -40px;
 }
 .dmm-quote-section .dmm-quote-title {
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
+    line-height: 36px;
     color: #FFFFFF;
+    margin-bottom: 1rem;
 }
-.dmm-quote-section .dmm-quote-btn {
-    text-align: center;
+.dmm-quote-section .form-control {
+    padding: 30px 20px;
+    outline: 0;
+    box-shadow: unset;
+    border: 2px solid #e1e2e2;
+    border-radius: 10px;
+    font-size: 16px;
 }
-.dmm-quote-section .dmm-quote-btn .quote-btn {
+.dmm-quote-section .quote-btn {
     background: linear-gradient(95.12deg, #4F8CAD 0%, #EED979 100%);
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
     color: #FFFFFF;
-    padding: 10px 20px;
-    display: inline-block;
+    padding: 20px 20px;
     cursor: pointer;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    width: 100%;
 }

@@ -454,6 +454,7 @@
           align-items: flex-start !important;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-top: 70px;
 }
 
 .footerContainer .column1 {

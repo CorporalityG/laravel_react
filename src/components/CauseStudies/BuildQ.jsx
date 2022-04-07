@@ -112,7 +112,7 @@ const BuildQ = () => {
 			<div className="case-study-outcome-container">
 				<div className="container-lg">
 					<div className="row">
-						<div className="col-md-8 offset-4">
+						<div className="col-md-8 offset-md-4">
 							<div className="case-study-outcome-video">
 								<div className="case-study-outcome-video-banner">
 									<img src={BASE_URL + '/img/case-study-outcome-video-banner.png'} alt="video-banner" />
@@ -141,10 +141,10 @@ const BuildQ = () => {
 								<p>We provide strategic consulting to businesses worldwide. Want to expand your business globally, or want to achieve great success in your respective industry? We got your back.</p>
 								<div className="case-study-business-level-form">
 									<div className="row">
-										<div className="col-md-6 form-group">
+										<div className="col-sm-6 form-group">
 											<input type="text" className="form-control" placeholder="Name" />
 										</div>
-										<div className="col-md-6 form-group">
+										<div className="col-sm-6 form-group">
 											<input type="email" className="form-control" placeholder="Email" />
 										</div>
 

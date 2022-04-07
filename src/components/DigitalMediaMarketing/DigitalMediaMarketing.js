@@ -125,17 +125,17 @@ function DigitalMediaMarketing() {
         <div className="container-lg">
           <div className="row dmm-key-objectives-row">
             <div className="col-lg-6">
-              <div className="dmm-ko-img">
+              <div className="dmm-ko-img" data-aos="fade-up-right">
                 <img src={`${BASE_URL}/img/DigitalMediaMarketing/key-objectives.png`} alt="Key objectives" />
               </div>
             </div>
 
             <div className="col-lg-6">
               <div className="dmm-ko-content">
-                <div className="dmm-ko-subtitle">Key objectives</div>
-                <h2>Be on the Top of people mind & Attract More Traffic to Your Website</h2>
-                <p>Corporality keeps you ahead of the curve with digital marketing trends. Our strategy has us leading the pack amongst our competitors with our ability to analyse, change and innovate.Augmenting company visibility Increasing the size of the audience with corporate level strategy to transform your digital Presence.</p>
-                <ul>
+                <div className="dmm-ko-subtitle" data-aos="fade-up-left">Key objectives</div>
+                <h2 data-aos="fade-up">Be on the Top of people mind & Attract More Traffic to Your Website</h2>
+                <p data-aos="fade-up" data-aos-delay="300">Corporality keeps you ahead of the curve with digital marketing trends. Our strategy has us leading the pack amongst our competitors with our ability to analyse, change and innovate.Augmenting company visibility Increasing the size of the audience with corporate level strategy to transform your digital Presence.</p>
+                <ul data-aos="fade-up" data-aos-delay="500">
                   <li><img src={`${BASE_URL}/img/DigitalMediaMarketing/list-icon.png`} alt="-" />Augmenting company visibility</li>
                   <li><img src={`${BASE_URL}/img/DigitalMediaMarketing/list-icon.png`} alt="-" />Increasing the size of the audience with corporate or business level strategy</li>
                   <li><img src={`${BASE_URL}/img/DigitalMediaMarketing/list-icon.png`} alt="-" />Differentiating you from competition</li>
@@ -154,7 +154,7 @@ function DigitalMediaMarketing() {
           <div className="row dmm-goals-row">
             <div className="col-lg-6">
               <div className="dmm-goals-content">
-                <p>A detailed marketing audit under your belt helps you provide marching orders that are strategically aligned towards your marketing goals.</p>
+                <p data-aos="fade-up">A detailed marketing audit under your belt helps you provide marching orders that are strategically aligned towards your marketing goals.</p>
                 <div className="row dmm-gc-boxes-row">
                   <MarketingGoalsItem
                     title={`70%`}
@@ -170,7 +170,7 @@ function DigitalMediaMarketing() {
             </div>
 
             <div className="col-lg-6">
-              <div className="dmm-goals-img">
+              <div className="dmm-goals-img" data-aos="fade-up-left">
                 <img src={`${BASE_URL}/img/DigitalMediaMarketing/marketing-goals.png`} alt="marketing-goals" />
               </div>
             </div>
@@ -183,12 +183,12 @@ function DigitalMediaMarketing() {
 
       <div className="dmm-faqs-section">
         <div className="container-lg">
-          <div className="row dmm-faqs-title-row">
+          <div className="row dmm-faqs-title-row" data-aos="zoom-in">
             <div className="col-lg-12">
               <div className="dmm-ft-content">
-                <div className="dmm-ft-subtitle">Have a Questions</div>
-                <h2>Check our Frequently asked Questions</h2>
-                <div className="dmm-ft-btn" onClick={handelToggleFaq}>Show <i className={`fa ${showFaq ? "fa-angle-up" : "fa-angle-down"}`}></i></div>
+                <div className="dmm-ft-subtitle" data-aos="zoom-in-up" data-aos-delay="100">Have a Questions</div>
+                <h2 data-aos="zoom-in-down" data-aos-delay="200">Check our Frequently asked Questions</h2>
+                <div className="dmm-ft-btn" onClick={handelToggleFaq} data-aos="zoom-in-right"  data-aos-delay="300">Show <i className={`fa ${showFaq ? "fa-angle-up" : "fa-angle-down"}`}></i></div>
               </div>
             </div>
           </div>
@@ -238,9 +238,9 @@ function DigitalMediaMarketing() {
           <div className="row dmm-expect-row">
             <div className="col-lg-5 offset-lg-1">
               <div className="dmm-expect-content">
-                <div className="dmm-ec-subtitle">What to Expect</div>
-                <h2>Digital Media Marketing for digital presence</h2>
-                <p>This is high demand product where you will be receiving a packaged solution to implement your Inbound Marketing strategy</p>
+                <div className="dmm-ec-subtitle" data-aos="zoom-in-down">What to Expect</div>
+                <h2 data-aos="zoom-in-up">Digital Media Marketing for digital presence</h2>
+                <p data-aos="fade-up">This is high demand product where you will be receiving a packaged solution to implement your Inbound Marketing strategy</p>
 
                 <div className="dmm-expect-items">
                   <WhattoExpectItem
@@ -277,7 +277,7 @@ function DigitalMediaMarketing() {
             </div>
 
             <div className="col-lg-6 pr-0">
-              <div className="dmm-expect-img">
+              <div className="dmm-expect-img" data-aos="fade-up-left">
                 <img src={`${BASE_URL}/img/DigitalMediaMarketing/What-to-Expect-banner.png`} alt="What to Expect" />
               </div>
             </div>
@@ -290,15 +290,15 @@ function DigitalMediaMarketing() {
           <div className="row dmm-ps-title-row">
             <div className="col-lg-12">
               <div className="dmm-ps-title-content">
-                <h2>From pitch to picture perfect scenario</h2>
-                <p>The process of starting a digital media marketing with Corporality Global -An innovative internet marketing company in Sydney, and approaching the right strategy can be highly intended to your true audience. We’ve  created this service Edition to accompany founders in this journey, from getting their vision and approaching potential buyers' persona naturally.</p>
+                <h2 data-aos="flip-left">From pitch to picture perfect scenario</h2>
+                <p data-aos="flip-right" data-aos-delay="200">The process of starting a digital media marketing with Corporality Global -An innovative internet marketing company in Sydney, and approaching the right strategy can be highly intended to your true audience. We’ve  created this service Edition to accompany founders in this journey, from getting their vision and approaching potential buyers' persona naturally.</p>
               </div>
             </div>
           </div>
 
           <div className="row dmm-ps-img-row">
             <div className="col-lg-12">
-              <div className="dmm-ps-img">
+              <div className="dmm-ps-img" data-aos="zoom-in-down" data-aos-delay="300">
                 <img src={`${BASE_URL}/img/DigitalMediaMarketing/perfect-scenario-banner.png`} alt="perfect scenario" />
               </div>
             </div>
@@ -324,7 +324,7 @@ function DigitalMediaMarketing() {
                   />
                 </Carousel.Item>
 
-                <Carousel.Item>
+                <Carousel.Item data-aos="zoom-in">
                   <ClientWorkItem
                     thumbnail={`${BASE_URL}/img/DigitalMediaMarketing/Fastgrow-Finance.png`}
                     title={`Fastgrow Finance`}
@@ -337,7 +337,7 @@ function DigitalMediaMarketing() {
                   />
                 </Carousel.Item>
 
-                <Carousel.Item>
+                <Carousel.Item data-aos="zoom-in">
                   <ClientWorkItem
                     thumbnail={`${BASE_URL}/img/DigitalMediaMarketing/divine-intercession.png`}
                     title={`Divine Intercession`}
@@ -350,7 +350,7 @@ function DigitalMediaMarketing() {
                   />
                 </Carousel.Item>
 
-                <Carousel.Item>
+                <Carousel.Item data-aos="zoom-in">
                   <ClientWorkItem
                     thumbnail={`${BASE_URL}/img/DigitalMediaMarketing/SK-Insurance.png`}
                     title={`SK Insurance`}
@@ -365,11 +365,11 @@ function DigitalMediaMarketing() {
 
               </Carousel>
 
-              <div className="dmm-work-count">
+              <div className="dmm-work-count" data-aos="fade-up" data-aos-delay="400">
                 <span className="big-count">0{index + 1}</span>/<span className="small-count">{totalSlide}</span>
               </div>
 
-              <div className="dmm-work-btn"><span className="dmm-work-view-all" onClick={() => { navigate("/clients"); topHandle(); }}>View All Clients</span></div>
+              <div className="dmm-work-btn" data-aos="fade-up" data-aos-delay="500"><span className="dmm-work-view-all" onClick={() => { navigate("/clients"); topHandle(); }}>View All Clients</span></div>
             </div>
           </div>
         </div>
@@ -379,14 +379,14 @@ function DigitalMediaMarketing() {
         <div className="container-lg">
           <div className="row">
             <div className="col-md-12">
-              <div className="dmm-insights-heading">Our Initiatives</div>
+              <div className="dmm-insights-heading" data-aos="zoom-out-up">Our Initiatives</div>
             </div>
           </div>
 
           <div className="row dmm-insights-grid-row">
             <div className="col-lg-6 col-md-12 col-sm-12 mb-xs-20 p-0 dmm-insights-grid">
               <a onClick={() => { navigate("/blog"); topHandle(); }} title="Latest Blog">
-                <figure className="dmm-insights-grid-img-effect">
+                <figure className="dmm-insights-grid-img-effect" data-aos="fade-right">
                   <img src={`${BASE_URL}/img/DigitalMediaMarketing/Latest-Blog.png`} alt="Latest Blog" className="dmm-insights-grid-img" />
                   <div className="bottom-gradient-do_more"></div>
                   <figcaption>
@@ -401,7 +401,7 @@ function DigitalMediaMarketing() {
               <div className="row">
                 <div className="col-sm-6 p-0">
                   <a title="Corporality Magazine">
-                    <figure className="dmm-insights-grid-img-effect">
+                    <figure className="dmm-insights-grid-img-effect" data-aos="fade-down-right">
                       <img src={`${BASE_URL}/img/DigitalMediaMarketing/Corporality-Magazine.png`} alt="Corporality Magazine" className="dmm-insights-grid-img" />
                       <div className="bottom-gradient-do_more"></div>
                       <figcaption>
@@ -414,7 +414,7 @@ function DigitalMediaMarketing() {
 
                 <div className="col-sm-6 p-0">
                   <a href="http://corporality.global/talk/" target={`_blank`} title="Corporality Talk">
-                    <figure className="dmm-insights-grid-img-effect">
+                    <figure className="dmm-insights-grid-img-effect" data-aos="fade-down-left">
                       <img src={`${BASE_URL}/img/DigitalMediaMarketing/Corporality-Talk.png`} alt="Corporality Talk" className="dmm-insights-grid-img" />
                       <div className="bottom-gradient-do_more"></div>
                       <figcaption>
@@ -427,7 +427,7 @@ function DigitalMediaMarketing() {
 
                 <div className="col-sm-6 p-0">
                   <a href="https://corporality.global/club" target={`_blank`} title="Corporality Club">
-                    <figure className="dmm-insights-grid-img-effect">
+                    <figure className="dmm-insights-grid-img-effect" data-aos="fade-up-right">
                       <img src={`${BASE_URL}/img/DigitalMediaMarketing/Corporality-Club.png`} alt="Corporality Club" className="dmm-insights-grid-img" />
                       <div className="bottom-gradient-do_more"></div>
                       <figcaption>
@@ -440,7 +440,7 @@ function DigitalMediaMarketing() {
 
                 <div className="col-sm-6 p-0">
                   <a href="https://techconsultants.global/" target={`_blank`} title="TechConsultants">
-                    <figure className="dmm-insights-grid-img-effect">
+                    <figure className="dmm-insights-grid-img-effect" data-aos="fade-up-left">
                       <img src={`${BASE_URL}/img/DigitalMediaMarketing/Tech-Consultant.png`} alt="TechConsultants" className="dmm-insights-grid-img" />
                       <div className="bottom-gradient-do_more"></div>
                       <figcaption>
@@ -457,19 +457,25 @@ function DigitalMediaMarketing() {
       </div>
 
       <div className="dmm-quote-section">
-        <img src={`${BASE_URL}/img/DigitalMediaMarketing/quote-vector.png`} alt="Vector" className="quote-vector" />
-        <img src={`${BASE_URL}/img/DigitalMediaMarketing/quote-rec-1.png`} alt="quote-rec-1" className="quote-rec-1" />
-        <img src={`${BASE_URL}/img/DigitalMediaMarketing/quote-rec-2.png`} alt="quote-rec-2" className="quote-rec-2" />
-
         <div className="container-lg">
-          <div className="row dmm-quote-row">
-            <div className="col-lg-8">
-              <div className="dmm-quote-title">Let's transform your Digital footprint for your business.</div>
-            </div>
+          <div className="row">
+            <div className="col-lg-10 offset-lg-1">
+              <div className="row dmm-quote-row" data-aos="flip-up">
+                <div className="col-lg-6">
+                  <div className="dmm-quote-title">Let's transform your Digital footprint for your business.</div>
+                </div>
 
-            <div className="col-lg-4">
-              <div className="dmm-quote-btn">
-                <div className="quote-btn" onClick={() => { navigate("/contact"); topHandle(); }}>Ask for Quote</div>
+                <div className="col-lg-6">
+                  <div className="row">
+                    <div className="col-lg-6 form-group">
+                      <input type={`email`} name="email" id="email" className="form-control" placeholder="Email Address" />
+                    </div>
+
+                    <div className="col-lg-6 form-group">
+                      <input type={`submit`} name="btnQuote" id="btnQuote" value={`Ask for Quote`} className="quote-btn" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

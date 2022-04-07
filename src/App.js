@@ -51,6 +51,8 @@ import Careers from "./components/Careers/Careers";
 import TermsConditions from "./components/TermsConditions/TermsConditions";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 
+import AccountBasedMarketing from "./components/AccountBasedMarketing/AccountBasedMarketing";
+
 function App() {
   const { user, dispatch } = useContext(Context);
   // const handleLogout = () => {
@@ -129,6 +131,8 @@ function App() {
             <Route path="/careers" element={<Careers /> } />
             <Route path="/terms-and-conditions" element={<TermsConditions /> } />
             <Route path="/privacy-policy" element={<PrivacyPolicy /> } />
+
+            <Route path="/account-based-marketing" element={<AccountBasedMarketing /> } />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             

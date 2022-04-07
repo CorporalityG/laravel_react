@@ -87,8 +87,9 @@
     font-weight: 400;
     font-size: 16px;
     padding: 15px 10px !important;
-    margin: 0px !important;
+    margin: 0px 0 -10px !important;
     color: #31647C;
+    min-height: 70px;
 }
 .services-section-items:hover h6{
     font-weight: 600;

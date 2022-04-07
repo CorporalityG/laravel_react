@@ -14,21 +14,21 @@ export const ClientWorkItem = (props) => {
         <div className="container-lg">
             <div className="row">
                 <div className="col-md-4 dmm-work-left">
-                    <div className="dmm-work-img-heading">
+                    <div className="dmm-work-img-heading" data-aos="zoom-in-right">
                         {props.thumbnail && <img src={props.thumbnail} alt={props.title} className="dmm-work-img" />}
                         <h2 className="dmm-work-heading">{props.title}</h2>
                     </div>
                 </div>
                 <div className="col-md-8 dmm-work-right">
-                    <h3 className="dmm-work-title">Work that Excites us.</h3>
-                    <div className="dmm-work-content" dangerouslySetInnerHTML={{ __html: props.content }}></div>
+                    <h3 className="dmm-work-title" data-aos="zoom-in-down">Work that Excites us.</h3>
+                    <div className="dmm-work-content" dangerouslySetInnerHTML={{ __html: props.content }} data-aos="zoom-in-down"></div>
                     <div className="dmm-work-boxes">
-                        <div className="dmm-work-box dmm-work-box-studies" style={{ backgroundImage: "url("+props.featuredImg+")" }}>
+                        <div className="dmm-work-box dmm-work-box-studies" style={{ backgroundImage: "url("+props.featuredImg+")" }} data-aos="fade-up" data-aos-delay="150">
                             <p className="studies-subtitle">Featured cause studies</p>
                             <p className="studies-title">{props.featuredTitle}</p>
                             <span className="dmm-work-link" onClick={() => { navigate(`/${props.slug}`); topHandle(); }}>Explore <img src={`${BASE_URL}/img/DigitalMediaMarketing/right-arrow-blue.png`} alt="->" /></span>
                         </div>
-                        <div className="dmm-work-box dmm-work-box-steps">
+                        <div className="dmm-work-box dmm-work-box-steps" data-aos="fade-up" data-aos-delay="300">
                             <p className="steps-title">{props.offeringTitle}</p>
                             <div className="steps-content" dangerouslySetInnerHTML={{ __html: props.offerinContent }}>
                             </div>
