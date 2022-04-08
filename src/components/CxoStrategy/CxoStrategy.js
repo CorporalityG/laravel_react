@@ -7,6 +7,7 @@ import NewCharge from "./Components/NewCharge";
 import NewStep from "./Components/NewStep";
 import BusinessResults from "./Components/BusinessResults";
 import WhyOutsource from "./Components/WhyOutsource";
+import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 
 function HomePage() {
   return (
@@ -19,6 +20,7 @@ function HomePage() {
       <Leverage />
       <BusinessResults />
       <WhyOutsource />
+      <ServicesAskQuote />
     </>
   );
 }

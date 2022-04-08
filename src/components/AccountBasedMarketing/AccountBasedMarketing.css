@@ -6,18 +6,59 @@
 }
 .abm-banner-section .abm-b-rec-1 {
     position: absolute;
-    top: 30px;
+    top: 50px;
     left: 45%;
+    animation-name: stretchBannerRec1;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+@keyframes stretchBannerRec1 {
+    0% {
+      transform: scale(.3);
+    }
+    100% {
+      transform: scale(1.5);
+    }
 }
 .abm-banner-section .abm-b-rec-2 {
     position: absolute;
     left: 40px;
     bottom: 70px;
+    animation: rotateBannerRec2 5s linear infinite;
+}
+@keyframes rotateBannerRec2 {
+    0%,
+    100% {
+        transform: rotateX(8.75deg) rotateY(35deg);
+    }
+    50% {
+    transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+    }
 }
 .abm-banner-section .abm-b-rec-3 {
     position: absolute;
     left: 40%;
-    bottom: 120px;
+    bottom: 150px;
+    animation: rotateBannerRec3 5s linear infinite;
+}
+@keyframes rotateBannerRec3 {
+    8.33%{transform: translate(25px, 15px);}
+    16.66%{transform: translate(40px, 40px);}
+    24.99%{transform: translate(40px, 65px);}
+    33.33%{transform: translate(25px, 85px);}
+    41.66%{transform: translate(0, 100px);}
+    49.99%{transform: translate(-25px, 100px);}
+    58.33%{transform: translate(-50px, 85px);}
+    66.66%{transform: translate(-65px,65px);}
+    74.99%{transform: translate(-65px,40px);}
+    83.33%{transform: translate(-50px,15px);}
+    91.66%{transform: translate(-25px,0);}
+    100%{transform: translate(0, 0);}
 }
 .abm-banner-section .abm-b-rec-dots {
     position: absolute;
@@ -79,6 +120,8 @@
 }
 .abm-banner-section .abm-banner {
     text-align: right;
+    position: relative;
+    z-index: 9;
 }
 .abm-banner-section .abm-banner img {
     max-width: 100%;
@@ -94,21 +137,57 @@
 }
 .abm-know-section .abm-k-rec-1 {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 20px;
+    top: 20px;
     max-height: 115px;
+    animation-name: stretchknowRec1;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+@keyframes stretchknowRec1 {
+    0% {
+      transform: scale(.3);
+    }
+    100% {
+      transform: scale(1.2);
+    }
 }
 .abm-know-section .abm-k-rec-2 {
     position: absolute;
     left: 30px;
     bottom: 70px;
     max-height: 80px;
+    animation: rotateknowRec2 5s linear infinite;
+}
+@keyframes rotateknowRec2 {
+    0%,
+    100% {
+        transform: rotateX(8.75deg) rotateY(35deg);
+    }
+    50% {
+    transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+    }
 }
 .abm-know-section .abm-k-rec-3 {
     position: absolute;
     left: 10px;
     bottom: 10px;
     max-height: 70px;
+    animation: rotateknowRec3 5s linear infinite;
+}
+@keyframes rotateknowRec3 {
+    0%,
+    100% {
+        transform: rotateX(8.75deg) rotateY(35deg);
+    }
+    50% {
+    transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+    }
 }
 .abm-know-section .abm-kt-content h2 {
     font-style: normal;
@@ -215,8 +294,45 @@
 .abm-define-solve-section .abm-define-solve-row {
     align-items: center;
 }
-.abm-define-solve-section .abm-ds-banner img {
+.abm-define-solve-section .abm-ds-banner {
+    position: relative;
+}
+.abm-define-solve-section .abm-ds-banner .abm-dsb-img {
     max-width: 100%;
+}
+.abm-define-solve-section .abm-dsb-content {
+    position: absolute;
+    left: 270px;
+    top: 135px;
+    width: 100%;
+}
+.abm-define-solve-section .abm-dsb-item {
+    display: flex;
+    align-items: first baseline;
+    margin-bottom: 10px;
+}
+.abm-define-solve-section .abm-dsb-item .dsb-item-title {
+    width: 110px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #232323;
+    margin-right: 5px;
+}
+.abm-define-solve-section .abm-dsb-item .dsb-item-img {
+    width: 105px;
+    margin-right: 5px;
+}
+.abm-define-solve-section .abm-dsb-item .dsb-item-img img {
+    max-width: 100%;
+}
+.abm-define-solve-section .abm-dsb-item .dsb-item-subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #757575;
+    max-width: 350px;
 }
 .abm-define-solve-section .abm-ds-content h2 {
     font-style: normal;
@@ -235,6 +351,7 @@
 }
 .abm-define-solve-section .abm-ds-content ul {
     padding-left: 10px;
+    list-style: none;
 }
 .abm-define-solve-section .abm-ds-content ul li {
     font-style: normal;
@@ -626,51 +743,4 @@
     font-size: 14px;
     color: #FFFFFF;
     margin-bottom: 0;
-}
-
-.abm-quote-section {
-    background: #6CA0BC;
-    padding-top: 75px;
-    padding-bottom: 75px;
-    position: relative;
-}
-.abm-quote-section .quote-vector {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-}
-.abm-quote-section .quote-rec-1 {
-    position: absolute;
-    top: 30px;
-    right: 55px;
-}
-.abm-quote-section .quote-rec-2 {
-    position: absolute;
-    bottom: 0;
-    right: 15%;
-}
-.abm-quote-section .abm-quote-row {
-    align-items: center;
-}
-.abm-quote-section .abm-quote-title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    color: #FFFFFF;
-}
-.abm-quote-section .abm-quote-btn-main {
-    text-align: center;
-}
-.abm-quote-section .abm-quote-btn-main .abm-quote-btn {
-    background: linear-gradient(95.12deg, #EED979 0%, #4F8CAD 83.42%);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 13px 19px;
-    display: inline-block;
-    cursor: pointer;
 }

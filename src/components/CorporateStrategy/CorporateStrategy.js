@@ -8,6 +8,7 @@ import Objectives from "./Components/Objectives";
 import Parallax from "./Components/ParallaxSlide";
 import UnderstandingDifficulty from "./Components/UnderstandingDifficulty/UnderstandingDifficulty";
 import Faqs from "./Components/Faqs";
+import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
 
 function CorporateStrategy() {
   return (
@@ -19,7 +20,7 @@ function CorporateStrategy() {
       <Parallax />
       <Objectives />
       <Faqs />
-
+      <ServicesAskQuote />
     </>
   );
 }

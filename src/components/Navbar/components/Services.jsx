@@ -52,7 +52,7 @@ const Services = () => {
                         </Link>
 
                         <Link to="/corporate-strategy" onClick={closeOnLink} className="services-section-items">
-                            <h6>Outsourced COO (Current Corporate strategy)</h6>
+                            <h6>Outsourced COO</h6>
                             <div className="diamond-line"></div>
                         </Link>
                     </div>

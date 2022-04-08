@@ -1,0 +1,41 @@
+.services-quote-section {
+    position: relative;
+}
+.services-quote-section .services-quote-row {
+    align-items: center;
+    background: #6CA0BC;
+    padding: 75px 20px;
+    border-radius: 16px;
+    box-shadow: 0 2.125rem 1.5rem 0 rgb(31 33 41 / 50%);
+    margin-bottom: -40px;
+}
+.services-quote-section .services-quote-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+.services-quote-section .form-control {
+    padding: 30px 20px;
+    outline: 0;
+    box-shadow: unset;
+    border: 2px solid #e1e2e2;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.services-quote-section .quote-btn {
+    background: linear-gradient(95.12deg, #4F8CAD 0%, #EED979 100%);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    width: 100%;
+}

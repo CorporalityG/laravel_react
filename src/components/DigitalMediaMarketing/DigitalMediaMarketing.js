@@ -9,6 +9,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import { useNavigate } from "react-router"
 import { ClientWorkItem } from "./Components/ClientWorkItem";
 import AOS from "aos";
+import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
 
 function DigitalMediaMarketing() {
 
@@ -456,31 +457,7 @@ function DigitalMediaMarketing() {
         </div>
       </div>
 
-      <div className="dmm-quote-section">
-        <div className="container-lg">
-          <div className="row">
-            <div className="col-lg-10 offset-lg-1">
-              <div className="row dmm-quote-row" data-aos="flip-up">
-                <div className="col-lg-6">
-                  <div className="dmm-quote-title">Let's transform your Digital footprint for your business.</div>
-                </div>
-
-                <div className="col-lg-6">
-                  <div className="row">
-                    <div className="col-lg-6 form-group">
-                      <input type={`email`} name="email" id="email" className="form-control" placeholder="Email Address" />
-                    </div>
-
-                    <div className="col-lg-6 form-group">
-                      <input type={`submit`} name="btnQuote" id="btnQuote" value={`Ask for Quote`} className="quote-btn" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ServicesAskQuote />
     </>
   );
 }

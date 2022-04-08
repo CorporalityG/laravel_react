@@ -1,12 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './AccountBasedMarketing.css'
 import { BASE_URL } from '../../config'
 import { LogoItem } from './LogoItem'
 import { ClientWorkItem } from "./ClientWorkItem";
 import Carousel from 'react-bootstrap/Carousel'
 import { useNavigate } from "react-router"
+import { DefineSolveBannerItem } from './DefineSolveBannerItem';
+import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
+import AOS from "aos";
 
 function AccountBasedMarketing() {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000,
+        });
+    }, []);
 
     const totalSlide = '04';
     const [index, setIndex] = useState(0);
@@ -28,25 +37,29 @@ function AccountBasedMarketing() {
                 <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-2.png`} alt="Rec 2" className="abm-b-rec-2" />
                 <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-3.png`} alt="Rec 3" className="abm-b-rec-3" />
 
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-dots.png`} alt="Rec Dot" className="abm-b-rec-dots" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-vector.png`} alt="Vector" className="abm-b-vector" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-vector-1.png`} alt="Vector 1" className="abm-b-vector-1" />
+                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-dots.png`} alt="Rec Dot" className="abm-b-rec-dots" data-aos="fade-left" data-aos-delay="300" />
+                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-vector.png`} alt="Vector" className="abm-b-vector" data-aos="fade-left" data-aos-delay="400" />
+                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-vector-1.png`} alt="Vector 1" className="abm-b-vector-1" data-aos="fade-left" data-aos-delay="500" />
 
                 <div className="container-lg">
                     <div className="row abm-banner-row">
                         <div className="col-lg-6">
                             <div className="abm-banner-content">
-                                <h1>Account Based Marketing</h1>
-                                <div className="abm-banner-subtitle">Focusing growth strategy for high value clients</div>
-                                <p>Partnership focused in collaboration of both Marketing and sales team to create personalized buying experiences for a mutually-identified set of high-value accounts in conjunction with Inbound Marketing</p>
-                                <div className="abm-banner-btn">
+                                <div data-aos="fade-up">
+                                    <h1>Account Based Marketing</h1>
+                                </div>
+                                <div className="abm-banner-subtitle" data-aos="fade-up" data-aos-delay="300">Focusing growth strategy for high value clients</div>
+                                <div data-aos="fade-up" data-aos-delay="300">
+                                    <p>Partnership focused in collaboration of both Marketing and sales team to create personalized buying experiences for a mutually-identified set of high-value accounts in conjunction with Inbound Marketing</p>
+                                </div>
+                                <div className="abm-banner-btn" data-aos="fade-up" data-aos-delay="500">
                                     <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Schedule a time</a>
                                 </div>
                             </div>
                         </div>
 
                         <div className="col-lg-6">
-                            <div className="abm-banner">
+                            <div className="abm-banner" data-aos="fade-left">
                                 <img src={`${BASE_URL}/img/AccountBasedMarketing/banner.png`} alt="Account Based Marketing" className="abm-banner-img" />
                             </div>
                         </div>
@@ -62,7 +75,7 @@ function AccountBasedMarketing() {
                 <div className="container-lg">
                     <div className="row abm-know-title-row">
                         <div className="col-lg-12">
-                            <div className="abm-kt-content">
+                            <div className="abm-kt-content" data-aos="zoom-in">
                                 <h2>Did you know?</h2>
                             </div>
                         </div>
@@ -72,7 +85,7 @@ function AccountBasedMarketing() {
                         <div className="col-lg-6">
                             <div className="row abm-k-boxes-row">
                                 <div className="col-md-6 abm-k-box-col">
-                                    <div className="abm-k-box">
+                                    <div className="abm-k-box" data-aos="fade-up" data-aos-delay="300">
                                         <div className="k-box-img">
                                             <img src={`${BASE_URL}/img/AccountBasedMarketing/rating.png`} alt="Rating on Google" className="k-box-img" />
                                             <img src={`${BASE_URL}/img/AccountBasedMarketing/rating-star.png`} alt="Star" className="k-box-star" />
@@ -82,7 +95,7 @@ function AccountBasedMarketing() {
                                 </div>
 
                                 <div className="col-md-6 abm-k-box-col">
-                                    <div className="abm-k-box">
+                                    <div className="abm-k-box" data-aos="fade-up" data-aos-delay="400">
                                         <div className="k-box-img">
                                             <img src={`${BASE_URL}/img/AccountBasedMarketing/growth.png`} alt="Growth on LinkedIn" className="k-box-img" />
                                         </div>
@@ -93,7 +106,7 @@ function AccountBasedMarketing() {
                         </div>
 
                         <div className="col-lg-6">
-                            <div className="abm-know-title">Trusted by 100+ Businessess Accross Industry Vertical, wordwide since 2014</div>
+                            <div className="abm-know-title" data-aos="fade-up" data-aos-delay="500">Trusted by 100+ Businessess Accross Industry Vertical, wordwide since 2014</div>
                         </div>
                     </div>
                 </div>
@@ -131,23 +144,27 @@ function AccountBasedMarketing() {
                 <div className="container-lg">
                     <div className="row abm-blueprints-row">
                         <div className="col-lg-12 abm-blueprints-col">
-                            <img src={`${BASE_URL}/img/AccountBasedMarketing/blueprints-impact-businesses.png`} alt="blueprints businesses" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/blueprints-impact-businesses.png`} alt="blueprints businesses" data-aos="zoom-in-down" />
                         </div>
                     </div>
                 </div>
             </div>
 
             <div className="abm-high-level-section">
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-vector.png`} alt="vector" className="abm-hl-vector" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-ellipse.png`} alt="ellipse" className="abm-hl-ellipse" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-rec.png`} alt="rec" className="abm-hl-rec" />
+                <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-vector.png`} alt="vector" className="abm-hl-vector" data-aos="fade-up-left" />
+                <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-ellipse.png`} alt="ellipse" className="abm-hl-ellipse" data-aos="fade-up-left" data-aos-delay="300" />
+                <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-rec.png`} alt="rec" className="abm-hl-rec" data-aos="fade-up-left" data-aos-delay="500" />
 
                 <div className="container-lg">
                     <div className="row abm-high-level-row">
                         <div className="col-lg-12 abm-high-level-col">
                             <div className="abm-hl-content">
-                                <h2>Working on your high-level vision and turning them into highly-targeted and efficient resources allocated for your high-value clients</h2>
-                                <p>The breath and depth of your expertise allows us to create a tailor-made strategy for account-based marketing. Our approach is to create your ideal customer profile designed not only to increase the leads but also increase user retention, engagement and eventually loyalty.</p>
+                                <div data-aos="fade-up">
+                                    <h2>Working on your high-level vision and turning them into highly-targeted and efficient resources allocated for your high-value clients</h2>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="300">
+                                    <p>The breath and depth of your expertise allows us to create a tailor-made strategy for account-based marketing. Our approach is to create your ideal customer profile designed not only to increase the leads but also increase user retention, engagement and eventually loyalty.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -157,24 +174,72 @@ function AccountBasedMarketing() {
             <div className="abm-define-solve-section">
                 <div className="container-fluid">
                     <div className="row abm-define-solve-row">
-                        <div className="col-lg-6">
+                        <div className="col-lg-7">
                             <div className="abm-ds-banner">
-                                <img src={`${BASE_URL}/img/AccountBasedMarketing/Define-to-solve-banner.png`} alt="Define to solve" />
+                                <img src={`${BASE_URL}/img/AccountBasedMarketing/Define-to-solve-banner.png`} alt="Define to solve" className="abm-dsb-img" data-aos="fade-down-right" />
+
+                                <div className="abm-dsb-content" data-aos="fade-up" data-aos-delay="300">
+                                    <DefineSolveBannerItem
+                                        title={`Target Prospects`}
+                                        subtitle={`Named accounts, target prospects`}
+                                    />
+
+                                    <DefineSolveBannerItem
+                                        title={`ISQLs/Nurture`}
+                                        subtitle={`Identification of needs and pain points`}
+                                    />
+
+                                    <DefineSolveBannerItem
+                                        title={`SALs`}
+                                        subtitle={`Early Identification of project requirements and issues`}
+                                    />
+
+                                    <DefineSolveBannerItem
+                                        title={`EAQs`}
+                                        subtitle={`Opportunities to participate in the evaluation or build business case`}
+                                    />
+
+                                    <DefineSolveBannerItem
+                                        title={`Champions`}
+                                        subtitle={`Help you get a seat at the evaluation table`}
+                                    />
+
+                                    <DefineSolveBannerItem
+                                        title={`Expand`}
+                                        subtitle={`Activity and collateral to grow advocacy and expand the base of champions`}
+                                    />
+
+                                    <DefineSolveBannerItem
+                                        title={`Advocate`}
+                                        subtitle={`Enable champions to recommend your section`}
+                                    />
+
+                                    <DefineSolveBannerItem
+                                        title={`Purchase`}
+                                        subtitle={`Create a customer by creating business and identifying white spaces.`}
+                                    />
+                                </div>
                             </div>
                         </div>
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-5">
                             <div className="abm-ds-content">
-                                <h2>Define to solve</h2>
-                                <p>Benefits to this solution</p>
-                                <ul>
-                                    <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Business’s relevancy Vs high-value accounts</li>
-                                    <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Customer experiences consistency.</li>
-                                    <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Marketing and Sales alignment.</li>
-                                    <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Process oriented sales cycle.</li>
-                                    <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Measurable Growth and ROI.</li>
-                                    <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Business expansion through targeted account relationships.</li>
-                                </ul>
+                                <div data-aos="fade-up">
+                                    <h2>Define to solve</h2>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="300">
+                                    <p>Benefits to this solution</p>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="500">
+                                    <ul>
+                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Business’s relevancy Vs high-value accounts</li>
+                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Customer experiences consistency.</li>
+                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Marketing and Sales alignment.</li>
+                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Process oriented sales cycle.</li>
+                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Measurable Growth and ROI.</li>
+                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Business expansion through targeted account relationships.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -186,8 +251,12 @@ function AccountBasedMarketing() {
                     <div className="row abm-connect-convert-row">
                         <div className="col-lg-6">
                             <div className="abm-cc-content">
-                                <h2>Connect & Convert</h2>
-                                <p>Clients connects to your story when you bring emotions, thrill and EQ which resonates with them.</p>
+                                <div data-aos="zoom-in">
+                                    <h2>Connect & Convert</h2>
+                                </div>
+                                <div data-aos="zoom-in-up" data-aos-delay="500">
+                                    <p>Clients connects to your story when you bring emotions, thrill and EQ which resonates with them.</p>
+                                </div>
                             </div>
                         </div>
 
@@ -369,25 +438,7 @@ function AccountBasedMarketing() {
                 </div>
             </div>
 
-            <div className="abm-quote-section">
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/quote-vector.png`} alt="quote-vector" className="quote-vector" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/quote-rec-1.png`} alt="quote-rec-1" className="quote-rec-1" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/quote-rec-2.png`} alt="quote-rec-2" className="quote-rec-2" />
-
-                <div className="container-lg">
-                    <div className="row abm-quote-row">
-                        <div className="col-lg-8">
-                            <div className="abm-quote-title">Let's transform your Digital footprint for your business.</div>
-                        </div>
-
-                        <div className="col-lg-4">
-                            <div className="abm-quote-btn-main">
-                                <div className="abm-quote-btn" onClick={() => { navigate("/contact"); topHandle(); }}>Ask for Quote</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ServicesAskQuote />
         </>
     )
 }

@@ -13,6 +13,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import GTMVectorComp from "./Components/GTMVectorComp";
 import { useMediaQuery } from "react-responsive";
 import Faqs from "./Components/Faqs";
+import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
 
 export default function GoToMarketing() {
     const showVector = useMediaQuery({ query: "(max-width: 1200px)" });
@@ -30,6 +31,7 @@ export default function GoToMarketing() {
             <GTMComp9 />
             <GTMComp10 />
             <Faqs />
+            <ServicesAskQuote />
         </div>
     )
 }
