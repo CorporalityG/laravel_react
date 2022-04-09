@@ -4,6 +4,8 @@ import { BASE_URL } from '../../config'
 import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
 import AOS from "aos";
 import WriteToUsModal from "./components/WriteToUsModal";
+import ServicesClients from "../ServicesClients/ServicesClients";
+import ServicesInsights from "../ServicesInsights/ServicesInsights";
 
 function IntractiveBluePrint() {
 
@@ -186,6 +188,31 @@ function IntractiveBluePrint() {
           </div>
         </div>
       </div>
+
+      <div className="ibp-strategy-solutions-section">
+          <img src={`${BASE_URL}/img/IntractiveBluePrint/ss-ellipse.png`} alt="ss-ellipse" className="ss-ellipse" data-aos="fade-right" data-aos-delay="500" />
+          <img src={`${BASE_URL}/img/IntractiveBluePrint/ss-vector.png`} alt="ss-vector" className="ss-vector" data-aos="fade-right" data-aos-delay="300" />
+          <img src={`${BASE_URL}/img/IntractiveBluePrint/ss-rec.png`} alt="ss-rec" className="ss-rec" data-aos="fade-right" data-aos-delay="400" />
+
+        <div className="container-lg">
+          <div className="row ibp-strategy-solutions-row">
+            <div className="col-lg-12">
+              <div className="ibp-ss-content">
+                <div data-aos="fade-up">
+                  <h2>Creating the strategy solutions that makes your customer to imagine the possibility & need of your product or service</h2>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                  <p>Subscribe to our insights to know what is happening in R&D market </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ServicesClients />
+
+      <ServicesInsights />
 
       <ServicesAskQuote />
     </>

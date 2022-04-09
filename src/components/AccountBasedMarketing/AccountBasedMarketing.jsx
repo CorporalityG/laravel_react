@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import './AccountBasedMarketing.css'
 import { BASE_URL } from '../../config'
 import { LogoItem } from './LogoItem'
-import { ClientWorkItem } from "./ClientWorkItem";
-import Carousel from 'react-bootstrap/Carousel'
-import { useNavigate } from "react-router"
 import { DefineSolveBannerItem } from './DefineSolveBannerItem';
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
+import CarouselGrid from 'react-grid-carousel'
+import ServicesClients from '../ServicesClients/ServicesClients';
+import ServicesInsights from '../ServicesInsights/ServicesInsights'
 
 function AccountBasedMarketing() {
 
@@ -16,19 +16,6 @@ function AccountBasedMarketing() {
             duration: 2000,
         });
     }, []);
-
-    const totalSlide = '04';
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
-
-    const navigate = useNavigate();
-    const topHandle = () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    };
 
     return (
         <>
@@ -116,25 +103,79 @@ function AccountBasedMarketing() {
                 <div className="container-lg">
                     <div className="row abm-logo-row">
                         <div className="col-lg-12 abm-logo-col">
-                            <LogoItem
-                                logo={`${BASE_URL}/img/AccountBasedMarketing/klek-services-logo.png`}
-                                title={`Klek Services`}
-                            />
+                            <div className="abm-logo-carousel" data-aos="fade-up">
+                                <CarouselGrid cols={4} rows={1} gap={30}>
+                                    <CarouselGrid.Item>
+                                        <LogoItem
+                                            logo={`${BASE_URL}/img/AccountBasedMarketing/klek-services-logo.png`}
+                                            title={`Klek Services`}
+                                        />
+                                    </CarouselGrid.Item>
 
-                            <LogoItem
-                                logo={`${BASE_URL}/img/AccountBasedMarketing/divine-logo.png`}
-                                title={`Divine`}
-                            />
+                                    <CarouselGrid.Item>
+                                        <LogoItem
+                                            logo={`${BASE_URL}/img/AccountBasedMarketing/divine-intercession-logo.png`}
+                                            title={`Divine Intercession`}
+                                        />
+                                    </CarouselGrid.Item>
 
-                            <LogoItem
-                                logo={`${BASE_URL}/img/AccountBasedMarketing/build-q-logo.png`}
-                                title={`Build Q`}
-                            />
+                                    <CarouselGrid.Item>
+                                        <LogoItem
+                                            logo={`${BASE_URL}/img/AccountBasedMarketing/build-q-logo.png`}
+                                            title={`Build Q`}
+                                        />
+                                    </CarouselGrid.Item>
 
-                            <LogoItem
-                                logo={`${BASE_URL}/img/AccountBasedMarketing/fastgrow-finance-logo.png`}
-                                title={`Fastgrow Finance`}
-                            />
+                                    <CarouselGrid.Item>
+                                        <LogoItem
+                                            logo={`${BASE_URL}/img/AccountBasedMarketing/fastgrow-finance-logo.png`}
+                                            title={`Fastgrow Finance`}
+                                        />
+                                    </CarouselGrid.Item>
+
+                                    <CarouselGrid.Item>
+                                        <LogoItem
+                                            logo={`${BASE_URL}/img/AccountBasedMarketing/tech-consultants-logo.png`}
+                                            title={`Tech Consultants`}
+                                        />
+                                    </CarouselGrid.Item>
+
+                                    <CarouselGrid.Item>
+                                        <LogoItem
+                                            logo={`${BASE_URL}/img/AccountBasedMarketing/meyer-west-ip-logo.png`}
+                                            title={`Meyer West IP`}
+                                        />
+                                    </CarouselGrid.Item>
+
+                                    <CarouselGrid.Item>
+                                        <LogoItem
+                                            logo={`${BASE_URL}/img/AccountBasedMarketing/x-designs-logo.png`}
+                                            title={`XDesigns`}
+                                        />
+                                    </CarouselGrid.Item>
+
+                                    <CarouselGrid.Item>
+                                        <LogoItem
+                                            logo={`${BASE_URL}/img/AccountBasedMarketing/lumoral-logo.png`}
+                                            title={`Lumoral`}
+                                        />
+                                    </CarouselGrid.Item>
+
+                                    <CarouselGrid.Item>
+                                        <LogoItem
+                                            logo={`${BASE_URL}/img/AccountBasedMarketing/liqmet-logo.png`}
+                                            title={`Liqmet`}
+                                        />
+                                    </CarouselGrid.Item>
+
+                                    <CarouselGrid.Item>
+                                        <LogoItem
+                                            logo={`${BASE_URL}/img/AccountBasedMarketing/sk-insure-logo.png`}
+                                            title={`SK Insure`}
+                                        />
+                                    </CarouselGrid.Item>
+                                </CarouselGrid>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -262,9 +303,9 @@ function AccountBasedMarketing() {
 
                         <div className="col-lg-6">
                             <div className="abm-cc-banner">
-                                <img src={`${BASE_URL}/img/AccountBasedMarketing/Connect-Convert-banner.png`} alt="Connect & Convert" className="cc-banner" />
-                                <img src={`${BASE_URL}/img/AccountBasedMarketing/cc-rec.png`} alt="cc-rec" className="cc-rec" />
-                                <img src={`${BASE_URL}/img/AccountBasedMarketing/cc-vector.png`} alt="cc-vector" className="cc-vector" />
+                                <img src={`${BASE_URL}/img/AccountBasedMarketing/Connect-Convert-banner.png`} alt="Connect & Convert" className="cc-banner" data-aos="zoom-out" />
+                                <img src={`${BASE_URL}/img/AccountBasedMarketing/cc-rec.png`} alt="cc-rec" className="cc-rec" data-aos="zoom-in-left" data-aos-delay="300" />
+                                <img src={`${BASE_URL}/img/AccountBasedMarketing/cc-vector.png`} alt="cc-vector" className="cc-vector" data-aos="zoom-in-up" data-aos-delay="500" />
                             </div>
                         </div>
                     </div>
@@ -272,171 +313,29 @@ function AccountBasedMarketing() {
             </div>
 
             <div className="abm-design-define-section">
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-ellipse.png`} alt="dd-ellipse" className="dd-ellipse" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-vector.png`} alt="dd-vector" className="dd-vector" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-rec.png`} alt="dd-rec" className="dd-rec" />
+                <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-ellipse.png`} alt="dd-ellipse" className="dd-ellipse" data-aos="fade-right" data-aos-delay="500" />
+                <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-vector.png`} alt="dd-vector" className="dd-vector" data-aos="fade-right" data-aos-delay="300" />
+                <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-rec.png`} alt="dd-rec" className="dd-rec" data-aos="fade-right" data-aos-delay="400" />
 
                 <div className="container-lg">
                     <div className="row abm-design-define-row">
                         <div className="col-lg-12">
                             <div className="abm-dd-content">
-                                <h2>Design and define the solutions that makes your customer go from 'ignorance' to 'Want'</h2>
-                                <p>Subscribe to our Quarterly reports or white papers</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="abm-work-section">
-                <div className="container-lg">
-                    <div className="row abm-work-row">
-                        <div className="col-lg-12">
-                            <Carousel activeIndex={index} onSelect={handleSelect} controls={false} interval={null} fade>
-                                <Carousel.Item>
-                                    <ClientWorkItem
-                                        thumbnail={`${BASE_URL}/img/AccountBasedMarketing/build-q.png`}
-                                        title={`Build Q`}
-                                        slug={`build-q`}
-                                        content={`<p>Prospective plans to give back to society making a green environment a reality.</p>`}
-                                        featuredImg={`${BASE_URL}/img/AccountBasedMarketing/building-a-perfect-digital-framework.png`}
-                                        featuredTitle={`Building a perfect digital framework`}
-                                        offeringTitle={`BuildQ - Digital Media Marketing`}
-                                        offerinContent={`<p>One of the leading construction companies in Sydney - BuildQ Group outsourced their Digital Media Marketing to us. We devised a comprehensive digital marketing strategy.</p>`}
-                                    />
-                                </Carousel.Item>
-
-                                <Carousel.Item>
-                                    <ClientWorkItem
-                                        thumbnail={`${BASE_URL}/img/AccountBasedMarketing/Fastgrow-Finance.png`}
-                                        title={`Fastgrow Finance`}
-                                        slug={`fastgrow-finance`}
-                                        content={`<p>Fastgrow was able to instantly stand out from the crowd with our brand positioning strategy.</p>`}
-                                        featuredImg={`${BASE_URL}/img/AccountBasedMarketing/out-of-the-ordinary.png`}
-                                        featuredTitle={`Human to Human solutions`}
-                                        offeringTitle={`Divine - Interactive Blueprint`}
-                                        offerinContent={`<p>Divine Intercession is a team of specialists dealing with spiritual affliction and guidance. Our Interactive Blueprint plan increased their social media presence ..</p>`}
-                                    />
-                                </Carousel.Item>
-
-                                <Carousel.Item>
-                                    <ClientWorkItem
-                                        thumbnail={`${BASE_URL}/img/AccountBasedMarketing/divine-intercession.png`}
-                                        title={`Divine Intercession`}
-                                        slug={`divine-intercession`}
-                                        content={`<p>Creating evangelist since 2014, helping our visionary customers to achieve their extraordinary goal</p>`}
-                                        featuredImg={`${BASE_URL}/img/AccountBasedMarketing/human-to-human-solutions.png`}
-                                        featuredTitle={`Out of the ordinary`}
-                                        offeringTitle={`Fastgrow - Digital Media Marketing`}
-                                        offerinContent={`<p>Fastgrow Finance provides Mortgage Solutions and Loans in Sydney and is a growing name in the industry. With our comprehensive digital media..</p>`}
-                                    />
-                                </Carousel.Item>
-
-                                <Carousel.Item>
-                                    <ClientWorkItem
-                                        thumbnail={`${BASE_URL}/img/AccountBasedMarketing/SK-Insurance.png`}
-                                        title={`SK Insurance`}
-                                        slug={`sk-insurance`}
-                                        content={``}
-                                        featuredImg={`${BASE_URL}/img/AccountBasedMarketing/visionary-growth-strategies.png`}
-                                        featuredTitle={`Visionary growth strategies`}
-                                        offeringTitle={`SK Insure - Digital Media Marketing`}
-                                        offerinContent={`<p>SK Insure is a leading insurance provider based out of Australia. Armed with our effective digital media marketing strategy, they are constantly expanding their digital presence.</p>`}
-                                    />
-                                </Carousel.Item>
-
-                            </Carousel>
-
-                            <div className="abm-work-count">
-                                <span className="big-count">0{index + 1}</span>/<span className="small-count">{totalSlide}</span>
-                            </div>
-
-                            <div className="abm-work-btn"><span className="abm-work-view-all" onClick={() => { navigate("/clients"); topHandle(); }}>View All Clients</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="abm-insights-section">
-                <div className="container-lg">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="abm-insights-heading">Our Initiatives</div>
-                        </div>
-                    </div>
-
-                    <div className="row abm-insights-grid-row">
-                        <div className="col-lg-6 col-md-12 col-sm-12 mb-xs-20 p-0 abm-insights-grid">
-                            <a onClick={() => { navigate("/blog"); topHandle(); }} title="Latest Blog">
-                                <figure className="abm-insights-grid-img-effect">
-                                    <img src={`${BASE_URL}/img/AccountBasedMarketing/Latest-Blog.png`} alt="Latest Blog" className="abm-insights-grid-img" />
-                                    <div className="bottom-gradient-do_more"></div>
-                                    <figcaption>
-                                        <h2 className="abm-insights-grid-title">Latest Blog</h2>
-                                        <div className="abm-insights-grid-desc"></div>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-
-                        <div className="col-lg-6 col-md-12 col-sm-12 mb-xs-20 abm-insights-grid">
-                            <div className="row">
-                                <div className="col-sm-6 p-0">
-                                    <a title="Corporality Magazine">
-                                        <figure className="abm-insights-grid-img-effect">
-                                            <img src={`${BASE_URL}/img/AccountBasedMarketing/Corporality-Magazine.png`} alt="Corporality Magazine" className="abm-insights-grid-img" />
-                                            <div className="bottom-gradient-do_more"></div>
-                                            <figcaption>
-                                                <h2 className="abm-insights-grid-title">Corporality Magazine</h2>
-                                                <div className="abm-insights-grid-desc"></div>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
+                                <div data-aos="fade-up">
+                                    <h2>Design and define the solutions that makes your customer go from 'ignorance' to 'Want'</h2>
                                 </div>
-
-                                <div className="col-sm-6 p-0">
-                                    <a href="http://corporality.global/talk/" target={`_blank`} title="Corporality Talk">
-                                        <figure className="abm-insights-grid-img-effect">
-                                            <img src={`${BASE_URL}/img/AccountBasedMarketing/Corporality-Talk.png`} alt="Corporality Talk" className="abm-insights-grid-img" />
-                                            <div className="bottom-gradient-do_more"></div>
-                                            <figcaption>
-                                                <h2 className="abm-insights-grid-title">Corporality Talk</h2>
-                                                <div className="abm-insights-grid-desc"></div>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div className="col-sm-6 p-0">
-                                    <a href="https://corporality.global/club" target={`_blank`} title="Corporality Club">
-                                        <figure className="abm-insights-grid-img-effect">
-                                            <img src={`${BASE_URL}/img/AccountBasedMarketing/Corporality-Club.png`} alt="Corporality Club" className="abm-insights-grid-img" />
-                                            <div className="bottom-gradient-do_more"></div>
-                                            <figcaption>
-                                                <h2 className="abm-insights-grid-title">Corporality Club</h2>
-                                                <div className="abm-insights-grid-desc"></div>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
-                                </div>
-
-                                <div className="col-sm-6 p-0">
-                                    <a href="https://techconsultants.global/" target={`_blank`} title="TechConsultants">
-                                        <figure className="abm-insights-grid-img-effect">
-                                            <img src={`${BASE_URL}/img/AccountBasedMarketing/Tech-Consultant.png`} alt="TechConsultants" className="abm-insights-grid-img" />
-                                            <div className="bottom-gradient-do_more"></div>
-                                            <figcaption>
-                                                <h2 className="abm-insights-grid-title">TechConsultants</h2>
-                                                <div className="abm-insights-grid-desc"></div>
-                                            </figcaption>
-                                        </figure>
-                                    </a>
+                                <div data-aos="fade-up" data-aos-delay="300">
+                                    <p>Subscribe to our Quarterly reports or white papers</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <ServicesClients />
+
+            <ServicesInsights />
 
             <ServicesAskQuote />
         </>

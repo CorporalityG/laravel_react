@@ -1,10 +1,9 @@
 import React from "react";
 import './CaseStudy.css'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { BASE_URL } from '../../config';
 import RelatedCaseStudyCarousel from "./RelatedCaseStudyCarousel";
 
 const BuildQ = () => {
-
 	return (
 		<div className="cause-studies-container">
 

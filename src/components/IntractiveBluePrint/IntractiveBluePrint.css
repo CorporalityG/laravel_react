@@ -559,3 +559,49 @@
     }
 }
 /* Innovate & Educate end */
+
+
+/* strategy solutions start */
+.ibp-strategy-solutions-section {
+    background: #F6F9FB;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+.ibp-strategy-solutions-section .ss-ellipse {
+    position: absolute;
+    left: 90px;
+    top: 30%;
+}
+.ibp-strategy-solutions-section .ss-vector {
+    position: absolute;
+    left: 150px;
+    top: 30%;
+    z-index: 1;
+}
+.ibp-strategy-solutions-section .ss-rec {
+    position: absolute;
+    left: 160px;
+    top: 50%;
+}
+.ibp-strategy-solutions-section .ibp-ss-content {
+    max-width: 70%;
+    margin: 0 auto;
+}
+.ibp-strategy-solutions-section .ibp-ss-content h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    color: #3C708E;
+    margin-bottom: 20px;
+}
+.ibp-strategy-solutions-section .ibp-ss-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #757575;
+    margin-bottom: 10px;
+}
+/* strategy solutions end*/

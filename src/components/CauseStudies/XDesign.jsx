@@ -1,6 +1,6 @@
 import React from "react";
 import './CaseStudy.css'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { BASE_URL } from '../../config';
 import RelatedCaseStudyCarousel from "./RelatedCaseStudyCarousel";
 
 const XDesign = () => {
@@ -13,7 +13,7 @@ const XDesign = () => {
 				<img src={BASE_URL + '/img/case-study-rec-2.png'} alt="case-study-rec-2" className="case-study-rec case-study-rec-2" />
 				<img src={BASE_URL + '/img/case-study-rec-3.png'} alt="case-study-rec-3" className="case-study-rec case-study-rec-3" />
 
-				<div className="container">
+				<div className="container-lg">
 					<div className="row">
 						<div className="col-md-8">
 							<div className="case-study-banner-content">
@@ -38,7 +38,7 @@ const XDesign = () => {
 			</div>
 
 			<div className="case-study-glance-container">
-				<div className="container">
+				<div className="container-lg">
 					<div className="row">
 						<div className="col-md-12">
 							<h2>At a glance</h2>
@@ -70,7 +70,7 @@ const XDesign = () => {
 				</div>
 			</div>
 
-			<div className="container">
+			<div className="container-lg">
 				<div className="row">
 					<div className="col-md-12">
 						<div className="case-study-bottom-line"></div>
@@ -79,7 +79,7 @@ const XDesign = () => {
 			</div>
 
 			<div className="case-study-solution-container">
-				<div className="container">
+				<div className="container-lg">
 					<div className="row">
 						<div className="col-md-8">
 							<div className="case-study-solution-content">
@@ -119,9 +119,9 @@ const XDesign = () => {
 			</div>
 
 			<div className="case-study-outcome-container">
-				<div className="container">
+				<div className="container-lg">
 					<div className="row">
-						<div className="col-md-8 offset-4">
+						<div className="col-md-8 offset-md-4">
 							<div className="case-study-outcome-video">
 								<div className="case-study-outcome-video-banner">
 									<img src={BASE_URL + '/img/case-study-outcome-video-banner.png'} alt="video-banner" />
@@ -150,10 +150,10 @@ const XDesign = () => {
 								<p>We provide strategic consulting to businesses worldwide. Want to expand your business globally, or want to achieve great success in your respective industry? We got your back.</p>
 								<div className="case-study-business-level-form">
 									<div className="row">
-										<div className="col-md-6 form-group">
+										<div className="col-sm-6 form-group">
 											<input type="text" className="form-control" placeholder="Name" />
 										</div>
-										<div className="col-md-6 form-group">
+										<div className="col-sm-6 form-group">
 											<input type="email" className="form-control" placeholder="Email" />
 										</div>
 
@@ -169,7 +169,7 @@ const XDesign = () => {
 			</div>
 
 			<div className="case-study-related-container">
-				<div className="container">
+				<div className="container-lg">
 					<div className="row">
 						<div className="col-md-12">
 							<RelatedCaseStudyCarousel />

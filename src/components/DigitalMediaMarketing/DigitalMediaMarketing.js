@@ -5,11 +5,10 @@ import { MarketingStrategyItem } from "./Components/MarketingStrategyItem";
 import { MarketingGoalsItem } from "./Components/MarketingGoalsItem";
 import Accordion from 'react-bootstrap/Accordion'
 import { WhattoExpectItem } from "./Components/WhattoExpectItem";
-import Carousel from 'react-bootstrap/Carousel'
-import { useNavigate } from "react-router"
-import { ClientWorkItem } from "./Components/ClientWorkItem";
 import AOS from "aos";
 import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
+import ServicesClients from "../ServicesClients/ServicesClients";
+import ServicesInsights from "../ServicesInsights/ServicesInsights";
 
 function DigitalMediaMarketing() {
 
@@ -24,19 +23,6 @@ function DigitalMediaMarketing() {
   const handelToggleFaq = () => {
     setShowFaq(!showFaq)
   }
-
-  const totalSlide = '04';
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
-  const navigate = useNavigate();
-  const topHandle = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  };
 
   return (
     <>
@@ -307,155 +293,9 @@ function DigitalMediaMarketing() {
         </div>
       </div>
 
-      <div className="dmm-work-section">
-        <div className="container-lg">
-          <div className="row dmm-work-row">
-            <div className="col-lg-12">
-              <Carousel activeIndex={index} onSelect={handleSelect} controls={false} interval={null} fade>
-                <Carousel.Item>
-                  <ClientWorkItem
-                    thumbnail={`${BASE_URL}/img/DigitalMediaMarketing/build-q.png`}
-                    title={`Build Q`}
-                    slug={`build-q`}
-                    content={`<p>Prospective plans to give back to society making a green environment a reality.</p>`}
-                    featuredImg={`${BASE_URL}/img/DigitalMediaMarketing/building-a-perfect-digital-framework.png`}
-                    featuredTitle={`Building a perfect digital framework`}
-                    offeringTitle={`BuildQ - Digital Media Marketing`}
-                    offerinContent={`<p>One of the leading construction companies in Sydney - BuildQ Group outsourced their Digital Media Marketing to us. We devised a comprehensive digital marketing strategy.</p>`}
-                  />
-                </Carousel.Item>
+      <ServicesClients />
 
-                <Carousel.Item data-aos="zoom-in">
-                  <ClientWorkItem
-                    thumbnail={`${BASE_URL}/img/DigitalMediaMarketing/Fastgrow-Finance.png`}
-                    title={`Fastgrow Finance`}
-                    slug={`fastgrow-finance`}
-                    content={`<p>Fastgrow was able to instantly stand out from the crowd with our brand positioning strategy.</p>`}
-                    featuredImg={`${BASE_URL}/img/DigitalMediaMarketing/out-of-the-ordinary.png`}
-                    featuredTitle={`Human to Human solutions`}
-                    offeringTitle={`Divine - Interactive Blueprint`}
-                    offerinContent={`<p>Divine Intercession is a team of specialists dealing with spiritual affliction and guidance. Our Interactive Blueprint plan increased their social media presence ..</p>`}
-                  />
-                </Carousel.Item>
-
-                <Carousel.Item data-aos="zoom-in">
-                  <ClientWorkItem
-                    thumbnail={`${BASE_URL}/img/DigitalMediaMarketing/divine-intercession.png`}
-                    title={`Divine Intercession`}
-                    slug={`divine-intercession`}
-                    content={`<p>Creating evangelist since 2014, helping our visionary customers to achieve their extraordinary goal</p>`}
-                    featuredImg={`${BASE_URL}/img/DigitalMediaMarketing/human-to-human-solutions.png`}
-                    featuredTitle={`Out of the ordinary`}
-                    offeringTitle={`Fastgrow - Digital Media Marketing`}
-                    offerinContent={`<p>Fastgrow Finance provides Mortgage Solutions and Loans in Sydney and is a growing name in the industry. With our comprehensive digital media..</p>`}
-                  />
-                </Carousel.Item>
-
-                <Carousel.Item data-aos="zoom-in">
-                  <ClientWorkItem
-                    thumbnail={`${BASE_URL}/img/DigitalMediaMarketing/SK-Insurance.png`}
-                    title={`SK Insurance`}
-                    slug={`sk-insurance`}
-                    content={``}
-                    featuredImg={`${BASE_URL}/img/DigitalMediaMarketing/visionary-growth-strategies.png`}
-                    featuredTitle={`Visionary growth strategies`}
-                    offeringTitle={`SK Insure - Digital Media Marketing`}
-                    offerinContent={`<p>SK Insure is a leading insurance provider based out of Australia. Armed with our effective digital media marketing strategy, they are constantly expanding their digital presence.</p>`}
-                  />
-                </Carousel.Item>
-
-              </Carousel>
-
-              <div className="dmm-work-count" data-aos="fade-up" data-aos-delay="400">
-                <span className="big-count">0{index + 1}</span>/<span className="small-count">{totalSlide}</span>
-              </div>
-
-              <div className="dmm-work-btn" data-aos="fade-up" data-aos-delay="500"><span className="dmm-work-view-all" onClick={() => { navigate("/clients"); topHandle(); }}>View All Clients</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="dmm-insights-section">
-        <div className="container-lg">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="dmm-insights-heading" data-aos="zoom-out-up">Our Initiatives</div>
-            </div>
-          </div>
-
-          <div className="row dmm-insights-grid-row">
-            <div className="col-lg-6 col-md-12 col-sm-12 mb-xs-20 p-0 dmm-insights-grid">
-              <a onClick={() => { navigate("/blog"); topHandle(); }} title="Latest Blog">
-                <figure className="dmm-insights-grid-img-effect" data-aos="fade-right">
-                  <img src={`${BASE_URL}/img/DigitalMediaMarketing/Latest-Blog.png`} alt="Latest Blog" className="dmm-insights-grid-img" />
-                  <div className="bottom-gradient-do_more"></div>
-                  <figcaption>
-                    <h2 className="dmm-insights-grid-title">Latest Blog</h2>
-                    <div className="dmm-insights-grid-desc"></div>
-                  </figcaption>
-                </figure>
-              </a>
-            </div>
-
-            <div className="col-lg-6 col-md-12 col-sm-12 mb-xs-20 dmm-insights-grid">
-              <div className="row">
-                <div className="col-sm-6 p-0">
-                  <a title="Corporality Magazine">
-                    <figure className="dmm-insights-grid-img-effect" data-aos="fade-down-right">
-                      <img src={`${BASE_URL}/img/DigitalMediaMarketing/Corporality-Magazine.png`} alt="Corporality Magazine" className="dmm-insights-grid-img" />
-                      <div className="bottom-gradient-do_more"></div>
-                      <figcaption>
-                        <h2 className="dmm-insights-grid-title">Corporality Magazine</h2>
-                        <div className="dmm-insights-grid-desc"></div>
-                      </figcaption>
-                    </figure>
-                  </a>
-                </div>
-
-                <div className="col-sm-6 p-0">
-                  <a href="http://corporality.global/talk/" target={`_blank`} title="Corporality Talk">
-                    <figure className="dmm-insights-grid-img-effect" data-aos="fade-down-left">
-                      <img src={`${BASE_URL}/img/DigitalMediaMarketing/Corporality-Talk.png`} alt="Corporality Talk" className="dmm-insights-grid-img" />
-                      <div className="bottom-gradient-do_more"></div>
-                      <figcaption>
-                        <h2 className="dmm-insights-grid-title">Corporality Talk</h2>
-                        <div className="dmm-insights-grid-desc"></div>
-                      </figcaption>
-                    </figure>
-                  </a>
-                </div>
-
-                <div className="col-sm-6 p-0">
-                  <a href="https://corporality.global/club" target={`_blank`} title="Corporality Club">
-                    <figure className="dmm-insights-grid-img-effect" data-aos="fade-up-right">
-                      <img src={`${BASE_URL}/img/DigitalMediaMarketing/Corporality-Club.png`} alt="Corporality Club" className="dmm-insights-grid-img" />
-                      <div className="bottom-gradient-do_more"></div>
-                      <figcaption>
-                        <h2 className="dmm-insights-grid-title">Corporality Club</h2>
-                        <div className="dmm-insights-grid-desc"></div>
-                      </figcaption>
-                    </figure>
-                  </a>
-                </div>
-
-                <div className="col-sm-6 p-0">
-                  <a href="https://techconsultants.global/" target={`_blank`} title="TechConsultants">
-                    <figure className="dmm-insights-grid-img-effect" data-aos="fade-up-left">
-                      <img src={`${BASE_URL}/img/DigitalMediaMarketing/Tech-Consultant.png`} alt="TechConsultants" className="dmm-insights-grid-img" />
-                      <div className="bottom-gradient-do_more"></div>
-                      <figcaption>
-                        <h2 className="dmm-insights-grid-title">TechConsultants</h2>
-                        <div className="dmm-insights-grid-desc"></div>
-                      </figcaption>
-                    </figure>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ServicesInsights />
 
       <ServicesAskQuote />
     </>

@@ -1,10 +1,7 @@
 import React from 'react'
 import './Clients.css'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
-import { useNavigate } from "react-router";
+import { BASE_URL } from '../../config';
 import ClientItem from './ClientItem';
-
-
 
 function Clients() {
   return (
@@ -21,8 +18,7 @@ function Clients() {
                     <div className="col-md-8">
                         <div className="clients-banner-content">
                             <h1>Client Results</h1>
-                            <p>With our digital media marketing services, our brand positioning services, and our other comprehensive business growth services, our clients experienced growth in our customer sales, established a unique brand style and image, and differentiated themselves from their competition. 
-</p>
+                            <p>With our digital media marketing services, our brand positioning services, and our other comprehensive business growth services, our clients experienced growth in our customer sales, established a unique brand style and image, and differentiated themselves from their competition.</p>
                         </div>
                     </div>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from 'react-grid-carousel'
 import CauseStudyItem from './CauseStudyItem';
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { BASE_URL } from '../../config';
 
 function RelatedCaseStudyCarousel(props) {
     return (
