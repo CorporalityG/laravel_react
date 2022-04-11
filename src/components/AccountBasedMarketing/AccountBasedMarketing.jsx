@@ -182,10 +182,25 @@ function AccountBasedMarketing() {
             </div>
 
             <div className="abm-blueprints-section">
-                <div className="container-lg">
+                <div className="container-fulid">
                     <div className="row abm-blueprints-row">
                         <div className="col-lg-12 abm-blueprints-col">
-                            <img src={`${BASE_URL}/img/AccountBasedMarketing/blueprints-impact-businesses.png`} alt="blueprints businesses" data-aos="zoom-in-down" />
+                            <div className="abm-blueprints-content">
+                                <div className="abm-blueprints_img">
+                                    <img src={`${BASE_URL}/img/AccountBasedMarketing/blueprints-impact-businesses-bg.jpg`} alt="blueprints businesses" />
+                                </div>
+                                <div className="abm-blueprints_text">
+                                    <div className="abm-blueprints_upper_box">
+                                    </div>
+                                    <div className="abm-blueprints_middle_box" >
+                                        <h1 className="abm-blueprints_title">“We create fortified, <span className="abm-blueprints_zoom-in">i</span>nteractive blueprints that impact businesses”</h1>
+                                    </div>
+                                    <div className="abm-blueprints_lower_box">
+                                        <h3 className="anm-blueprints-name">Priya Mishra</h3>
+                                        <p>CEO, Corporality Global</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
