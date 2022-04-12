@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Aos from "aos";
 import "./BrandPositioningNew.css";
 import { BASE_URL } from '../../config'
@@ -6,6 +6,7 @@ import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
 import { ProcessItem } from "./ProcessItem";
 import ServicesClients from "../ServicesClients/ServicesClients";
 import ServicesInsights from "../ServicesInsights/ServicesInsights";
+import Accordion from 'react-bootstrap/Accordion'
 
 export default function BrandPositioning() {
 
@@ -14,6 +15,12 @@ export default function BrandPositioning() {
       duration: 2000,
     });
   });
+
+  const [showFaq, setShowFaq] = useState(false);
+
+  const handelToggleFaq = () => {
+    setShowFaq(!showFaq)
+  }
 
   return (
     <>
@@ -194,11 +201,188 @@ export default function BrandPositioning() {
         </div>
       </div>
 
+      <div className="bp-faqs-section">
+        <div className="container-lg">
+          <div className="row bp-faqs-title-row" data-aos="zoom-in">
+            <div className="col-lg-12">
+              <div className="bp-ft-content">
+                <div className="bp-ft-subtitle" data-aos="zoom-in-up" data-aos-delay="100">Have a Questions</div>
+                <h2 data-aos="zoom-in-down" data-aos-delay="200">Check our Frequently asked Questions</h2>
+                <div className="bp-ft-btn" onClick={handelToggleFaq} data-aos="zoom-in-right" data-aos-delay="300">Show <i className={`fa ${showFaq ? "fa-angle-up" : "fa-angle-down"}`}></i></div>
+              </div>
+            </div>
+          </div>
+
+          <div className={`row bp-faqs-list-row ${showFaq ? "" : "hide"}`}>
+            <div className="col-lg-12">
+              <div className="bp-faqs-list">
+                <Accordion>
+                  <Accordion.Item eventKey="0">
+                    <Accordion.Header>Why do you need a Product Strategy for brand positioning?</Accordion.Header>
+                    <Accordion.Body>
+                      <p>Corporality Focus is to define the market segments that are most attractive to pursue for your specific Product. Our Process is to implement the Product in desired markets. We need to start with market research, the market problems of these segments can be identified and scored. Product portfolio inventories your current market position if it is not a brand new product, and coverage across problems you have addressed through your value proposition evaluation is key to define the product success. The launch of the product will be pursued by following the market intent and demand.</p>
+                    </Accordion.Body>
+                  </Accordion.Item>
+
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>What are the Fundamentals of PRODUCT DEVELOPMENT</Accordion.Header>
+                    <Accordion.Body>
+                      <p>We help Product based strategy and explore different scenarios to work on a go no go scenario.</p>
+                      <p>Our process starts with the definition of hypothesis, product problem solving ability, and how customers can leverage our brand positioning strategy to solve their market problems. Run the survey to find market fit and demand situation and at the last to prepare brand narrative and packaging of product to make it market-ready.</p>
+                    </Accordion.Body>
+                  </Accordion.Item>
+
+                  <Accordion.Item eventKey="2">
+                    <Accordion.Header>How do we map Product Launch, Go To Market and brand positioning?</Accordion.Header>
+                    <Accordion.Body>
+                      <p>At this stage we work on product strategy to reach a potential market. Rollout and product management process and eventually it’s the start of selling. Establish a compelling message, brand story, launch plans. We will not just ensure all stakeholders are ready to engage in the successful launch of the product but also evaluate the distribution model to service the demand.</p>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bp-indomitable-section">
+        <div className="container-lg">
+          <div className="row bp-indomitable-title-row">
+            <div className="col-lg-12">
+              <div className="bp-i-title-content" data-aos="zoom-in-down">
+                <h2>Indomitable brand positioning strategies</h2>
+              </div>
+            </div>
+          </div>
+
+          <div className="row bp-indomitable-content-row">
+            <div className="col-lg-10 offset-lg-1">
+              <Accordion className="bp-indomitable-accordion-main">
+                <Accordion.Item eventKey="0" data-aos="fade-up">
+                  <Accordion.Header>
+                    <div className="bp-ia-heading">
+                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-favicon-tm-1.png`} alt="Defining Icon" />
+                      <span>Defining the true differentiators</span>
+                    </div>
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <div className="bp-ia-content">
+                      <div className="row">
+                        <div className="col-md-2">
+                          <img src={`${BASE_URL}/img/BrandPositioning/defining-banner.png`} alt="Defining" className="bp-ia-banner" />
+                        </div>
+                        <div className="col-md-10">
+                          <div className="bp-ia-content">
+                            <p>Marketing and communication must be executed in a way that will stir consumer interest. Differentiate yourself completely from the competition - stand out of the crowd!</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="1" data-aos="fade-up">
+                  <Accordion.Header>
+                    <div className="bp-ia-heading">
+                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-favicon-tm-2.png`} alt="Perception Icon" />
+                      <span>Perception Management Strategy</span>
+                    </div>
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <div className="bp-ia-content">
+                      <div className="row">
+                        <div className="col-md-2">
+                          <img src={`${BASE_URL}/img/BrandPositioning/defining-banner.png`} alt="Perception" className="bp-ia-banner" />
+                        </div>
+                        <div className="col-md-10">
+                          <div className="bp-ia-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="2" data-aos="fade-up">
+                  <Accordion.Header>
+                    <div className="bp-ia-heading">
+                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-favicon-tm-3.png`} alt="Brand positioning map Icon" />
+                      <span>Brand positioning map</span>
+                    </div>
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <div className="bp-ia-content">
+                      <div className="row">
+                        <div className="col-md-2">
+                          <img src={`${BASE_URL}/img/BrandPositioning/defining-banner.png`} alt="Brand positioning map" className="bp-ia-banner" />
+                        </div>
+                        <div className="col-md-10">
+                          <div className="bp-ia-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="3" data-aos="fade-up">
+                  <Accordion.Header>
+                    <div className="bp-ia-heading">
+                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-favicon-tm-4.png`} alt="Maintain Relevance Icon" />
+                      <span>Maintain Relevance</span>
+                    </div>
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <div className="bp-ia-content">
+                      <div className="row">
+                        <div className="col-md-2">
+                          <img src={`${BASE_URL}/img/BrandPositioning/defining-banner.png`} alt="Maintain Relevance" className="bp-ia-banner" />
+                        </div>
+                        <div className="col-md-10">
+                          <div className="bp-ia-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="4" data-aos="fade-up">
+                  <Accordion.Header>
+                    <div className="bp-ia-heading">
+                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-favicon-tm-3.png`} alt="Earn a reputation Icon" />
+                      <span>Earn a reputation</span>
+                    </div>
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <div className="bp-ia-content">
+                      <div className="row">
+                        <div className="col-md-2">
+                          <img src={`${BASE_URL}/img/BrandPositioning/defining-banner.png`} alt="Earn a reputation" className="bp-ia-banner" />
+                        </div>
+                        <div className="col-md-10">
+                          <div className="bp-ia-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="bp-articulating-yourself-section">
         <div className="container-fluid px-0">
           <div className="row bp-ay-row">
             <div className="col-lg-12">
-              <img src={`${BASE_URL}/img/BrandPositioning/articulating-yourself-banner.png`} alt="Brand Positioning" className="bp-ay-banner" data-aos="zoom-out-down" />
+              <img src={`${BASE_URL}/img/BrandPositioning/articulating-yourself-banner.png`} alt="Brand Positioning" className="bp-ay-banner" data-aos="zoom-in-down" />
             </div>
           </div>
         </div>

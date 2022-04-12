@@ -9,7 +9,7 @@ export const ServicesAskQuote = () => {
                     <div className="col-lg-10 offset-lg-1">
                         <div className="row services-quote-row" data-aos="flip-up" data-aos-delay="500">
                             <div className="col-lg-6">
-                                <div className="services-quote-title">Let's transform your Digital footprint for your business.</div>
+                                <div className="services-quote-title">Let's Transform Your Digital Footprint For Your Business.</div>
                             </div>
 
                             <div className="col-lg-6">
