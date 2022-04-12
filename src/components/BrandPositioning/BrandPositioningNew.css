@@ -435,10 +435,7 @@
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
-    /* border-image-source: linear-gradient(to right, rgb(229, 205, 96), rgb(108, 160, 188));
-    border-image-slice: 1; */
-    background-image: linear-gradient(white, white), 
-                    linear-gradient(to right, rgb(229, 205, 96), rgb(108, 160, 188));
+    background-image: linear-gradient(white, white), linear-gradient(to right, rgb(229, 205, 96), rgb(108, 160, 188));
     background-origin: border-box;
     background-clip: content-box, border-box;
     padding: 0;
@@ -557,6 +554,32 @@
 .bp-indomitable-section {
     padding-top: 90px;
     padding-bottom: 90px;
+    position: relative;
+}
+.bp-indomitable-section .bp-i-rec-1 {
+    position: absolute;
+    top: 140px;
+    left: 0;
+}
+.bp-indomitable-section .bp-i-rec-1 img {
+    max-height: 220px;
+}
+.bp-indomitable-section .bp-i-rec-2 {
+    position: absolute;
+    top: 140px;
+    left: 0;
+}
+.bp-indomitable-section .bp-i-rec-2 img {
+    max-height: 220px;
+}
+.bp-indomitable-section .bp-i-vector {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.bp-indomitable-section .bp-i-vector img {
+    max-height: 180px;
 }
 .bp-indomitable-section .bp-i-title-content {
     margin-bottom: 35px;

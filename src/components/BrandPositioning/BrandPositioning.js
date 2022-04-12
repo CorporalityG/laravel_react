@@ -246,6 +246,16 @@ export default function BrandPositioning() {
       </div>
 
       <div className="bp-indomitable-section">
+        <div className="bp-i-rec-1" data-aos="fade-right">
+          <img src={`${BASE_URL}/img/BrandPositioning/indomitable-rec-1.png`} alt="Rec 1" />
+        </div>
+        <div className="bp-i-rec-2" data-aos="fade-right">
+          <img src={`${BASE_URL}/img/BrandPositioning/indomitable-rec-2.png`} alt="Rec 2" />
+        </div>
+        <div className="bp-i-vector" data-aos="fade-left">
+          <img src={`${BASE_URL}/img/BrandPositioning/indomitable-vector.png`} alt="Vector" />
+        </div>
+
         <div className="container-lg">
           <div className="row bp-indomitable-title-row">
             <div className="col-lg-12">
@@ -257,7 +267,7 @@ export default function BrandPositioning() {
 
           <div className="row bp-indomitable-content-row">
             <div className="col-lg-10 offset-lg-1">
-              <Accordion className="bp-indomitable-accordion-main">
+              <Accordion className="bp-indomitable-accordion-main" data-aos="fade-up">
                 <Accordion.Item eventKey="0" data-aos="fade-up">
                   <Accordion.Header>
                     <div className="bp-ia-heading">
