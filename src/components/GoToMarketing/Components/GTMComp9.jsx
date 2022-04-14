@@ -50,15 +50,15 @@ const GTMComp9 = () => {
 
             <div ref={containerRef} className="gtm-comp9-head">
                 <h1 ref={headRef} data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" className="animate">
-                    <span>WINNING</span>&nbsp;
-                    <span>PRE</span>&nbsp;
-                    <span>SALES</span>&nbsp;
-                    <span>PROCESS</span>&nbsp;
-                    <span>THAT</span>&nbsp;
-                    <span>IMPACT</span>&nbsp;
-                    <span>YOUR</span>&nbsp;
-                    <span>PRODUCT</span>&nbsp;
-                    <span>SALES</span>&nbsp;
+                    <span>Winning</span>&nbsp;
+                    <span>Pre</span>&nbsp;
+                    <span>Sales</span>&nbsp;
+                    <span>Process</span>&nbsp;
+                    <span>That</span>&nbsp;
+                    <span>Impact</span>&nbsp;
+                    <span>Your</span>&nbsp;
+                    <span>Product</span>&nbsp;
+                    <span>Sales</span>&nbsp;
                 </h1>
                 {/* <h2>
                     Winning Pre Sales Processes that impact your Product sales

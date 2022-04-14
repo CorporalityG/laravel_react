@@ -30,7 +30,7 @@ right: 0;
     line-height: 40px;
 /* identical to box height, or 125% */
 
-    text-transform: uppercase;
+    text-transform: none;
 
     color: #33657E;
 } 

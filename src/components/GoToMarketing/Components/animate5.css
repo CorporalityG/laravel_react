@@ -15,11 +15,11 @@
 
 @media only screen and (max-width: 768px) {
     .GTMComp5Container .animate {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 20px;
     }
     .GTMComp5Container .animate2 {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 20px;
     }
     .GTMComp5text{
@@ -28,7 +28,7 @@
     }
 }
 .GTMComp5text{
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;  
 }
 .GTMComp5Container .animate {
@@ -40,7 +40,7 @@
     font-weight: bold;
     font-size: 32px;
     line-height: 42px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3c708e;
 }
 .animate span {
@@ -56,7 +56,7 @@
     font-weight: bold;
     font-size: 32px;
     line-height: 42px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3c708e;
 }
 .animate2 span {

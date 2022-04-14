@@ -16,7 +16,7 @@ export default function BPComp3() {
             className="fw-bold fs-3 py-3 text-center bpcp3Heading"
             style={{ color: "#33657E" }}
           >
-            THE PROCESS
+            The Process
           </p>
         </div>
         <div className="position-absolute top-50 start-50 translate-middle bpcp3BackLogo">

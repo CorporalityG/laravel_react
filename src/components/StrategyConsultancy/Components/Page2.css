@@ -22,7 +22,7 @@ font-size: 32px;
 line-height: 37px;
 /* identical to box height, or 116% */
 
-text-transform: uppercase;
+text-transform: none;
 
 color: #33657E;
 }
@@ -35,7 +35,7 @@ color: #33657E;
     font-family: Roboto;
 font-style: normal;
 font-weight: normal;
-font-size: 14px;
+font-size: 16px;
 line-height: 22px;
 /* or 150% */
 

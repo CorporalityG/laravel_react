@@ -22,7 +22,7 @@
 }
 
 .gtm-comp8-container .main_container_strategy div p {
-  font-size: 14px !important;
+  font-size: 16px !important;
   line-height: 24px !important;
   width: 90%;
   max-width: 970px;
@@ -39,7 +39,7 @@
   font-weight: bold;
   font-size: 32px;
   line-height: 44px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #3C708E;
 }
 
@@ -90,7 +90,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 44px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #A06DAF;
   margin-left: 12px;
   margin-top: 90px;
@@ -260,7 +260,7 @@
 }
 
 .gtm-comp8-container #collecting {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .gtm-comp8-container .strategy_line23 {

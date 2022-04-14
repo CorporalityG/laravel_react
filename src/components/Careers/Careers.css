@@ -49,14 +49,14 @@
     font-weight: 700;
     font-size: 34px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 15px;
 }
 .career-banner-section .career-banner-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     color: #33657E;
 }
@@ -115,7 +115,7 @@
 .career-testimonial-section .career-testimonial-box .t-box-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #232323;
     margin-bottom: 20px;
 }
@@ -176,7 +176,7 @@
 .career-opportunities-section .career-opportunities-row .co-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #232323;
     margin-bottom: 15px;
 }
@@ -184,7 +184,7 @@
     background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%);
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
     text-align: center;
     color: #FFFFFF;
@@ -206,7 +206,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3C708E;
     padding-bottom: 20px;
     margin-bottom: 30px;
@@ -274,7 +274,7 @@
 .career-current-openings-section .career-current-openings-row .career-co-box .co-box-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #757575;
 }
 .career-current-openings-section .career-current-openings-row .career-co-box:hover {
@@ -302,7 +302,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3C708E;
     padding-bottom: 25px;
     margin-bottom: 35px;
@@ -327,7 +327,7 @@
 .career-internship-requirements-section .career-internship-requirements-row .career-ir-content ul li {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #757575;
     margin-bottom: 20px;
     display: flex;

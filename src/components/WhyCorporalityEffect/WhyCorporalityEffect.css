@@ -54,14 +54,14 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 15px;
 }
 .wce-banner-main .wce-banner-content-row p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     color: #232323;
     margin-bottom: 15px;
@@ -75,7 +75,7 @@
     background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     color: #FFFFFF;
     padding: 13px 50px;
     display: inline-block;
@@ -121,7 +121,7 @@
 .wce-commitment-section .wce-commitment-box .wce-box-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     color: #232323;
 }
@@ -173,7 +173,7 @@
 .wce-business-section .wce-business-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 15px;
@@ -194,7 +194,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3C708E;
     margin-bottom: 10px;
 }
@@ -232,7 +232,7 @@
 .wce-right-section .wce-right-boxes-row .wce-right-box-subtitle {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #232323;
 }
 
@@ -249,14 +249,14 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 15px;
 }
 .wce-work-section .wce-work-title-row p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #232323;
     margin-bottom: 15px;
 }
@@ -264,7 +264,7 @@
     background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     color: #FFFFFF;
     padding: 10px 30px;
     margin-top: 15px;
@@ -316,7 +316,7 @@
 .wce-work-section .wce-work-accordion-main .accordion-body p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     color: #757575;
 }
@@ -333,7 +333,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3C708E;
     margin-bottom: 10px;
 }
@@ -367,7 +367,7 @@
 .wce-key-elements-section .wce-key-elements-boxes-row .wce-keb-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     color: #232323;
 }

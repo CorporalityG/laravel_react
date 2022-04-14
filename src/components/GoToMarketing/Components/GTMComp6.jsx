@@ -33,7 +33,7 @@ const GTMComp6 = () => {
     return (
         <div className="gtm-comp-6">
             <div className="gtm-comp-6-head">
-                <h1 className='animate'><span>CORPORALITY</span>&nbsp;<span>HAS</span>&nbsp;<span>WHAT</span>&nbsp;<span>IT</span>&nbsp;<span>TAKES</span></h1>
+                <h1 className='animate'><span>Corporality</span>&nbsp;<span>Has</span>&nbsp;<span>What</span>&nbsp;<span>It</span>&nbsp;<span>Takes</span></h1>
                 {/* <h2 data-aos="fade-down" data-aos-duration="1600">Corporality has what it takes</h2> */}
                 <p data-aos="fade-down" data-aos-duration="1600">
                 Our structured and proven methodology emanates

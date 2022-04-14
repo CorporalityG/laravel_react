@@ -11,7 +11,7 @@ export default function Banner2() {
         <div className="d-flex justify-content-center align-items-center py-0 dbanner">
           <div data-aos="flip-left" className="sbox d-flex align-items-center my-3 px-3 justify-content-evenly position-relative">
             <div className="boxContent p-3 align-items-center position-absolute">
-              <p className="text-uppercase boxHead text-center mt-5">
+              <p className=" boxHead text-center mt-5">
                 Industry Focus
               </p>
               <p className="text-wrap text-center mt-2">
@@ -52,7 +52,7 @@ export default function Banner2() {
 
           <div data-aos="flip-right" className="sbox d-flex align-items-center my-3 px-3 justify-content-evenly position-relative">
             <div className="boxContent p-3 align-items-center position-absolute">
-              <p className="text-uppercase boxHead text-center mt-5">
+              <p className=" boxHead text-center mt-5">
                 Social Impact
               </p>
               <p className="text-wrap text-center mt-2">
@@ -95,7 +95,7 @@ export default function Banner2() {
           
           <div data-aos="flip-left" className="sbox d-flex align-items-center my-3 px-3 justify-content-evenly position-relative">
             <div className="boxContent p-3 align-items-center position-absolute">
-              <p className="text-uppercase boxHead text-center mt-5">Agility</p>
+              <p className=" boxHead text-center mt-5">Agility</p>
               <p className="text-wrap text-center mt-2">
                 Utilising agile in it’s true form to provide timely, transparent
                 and reliable outcomes

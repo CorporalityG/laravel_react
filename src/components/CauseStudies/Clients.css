@@ -30,14 +30,14 @@
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 20px;
 }
 .clients-banner-container .clients-banner-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #232323;
 }
 .clients-banner-container .clients-banner-img {
@@ -65,7 +65,7 @@
 .clients-list-container .clients-filter-row .filter-title {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #9DA6AA;
 }
 .clients-list-container .filter-dropdown-main {
@@ -81,7 +81,7 @@
     background-color: transparent;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.05em;
     color: #31647C;
     display: flex;
@@ -141,7 +141,7 @@
   .clients-list-container .client-item .client-item-explore {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #33657E;
     cursor: pointer;
   }

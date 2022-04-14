@@ -21,7 +21,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   /* or 171% */
 
@@ -177,7 +177,7 @@ margin-right: -40px !important;
   transform: rotate(-180deg);
   padding-bottom: 4% !important;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   text-align: center;
   color: #FFFFFF;
@@ -189,7 +189,7 @@ margin-right: -40px !important;
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   transition: all 0.5s ease;
   border: 2px solid;
@@ -389,7 +389,7 @@ margin-right: -40px !important;
 .location-box-main .loaction-address p {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   color: #232323;
   margin-bottom: 5px;
 }

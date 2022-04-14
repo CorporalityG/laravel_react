@@ -17,7 +17,7 @@
   font-weight: bold;
   font-size: 32px;
   line-height: 44px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #33657e;
   /* margin-left: -10%;  */
 }
@@ -29,7 +29,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #757575;
   /* margin-left: -10%;  */
@@ -129,7 +129,7 @@
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
   color: #ffffff;
   transform: scale(1.2);
 }
@@ -308,7 +308,7 @@
 }
 @media screen and (max-width: 425px) {
   .clientApproach_left h1 {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 

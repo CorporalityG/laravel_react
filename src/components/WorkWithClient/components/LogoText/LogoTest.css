@@ -22,7 +22,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
   font-style: normal !important;
   font-weight: normal !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   line-height: 24px !important;
 
   text-align: center !important;
@@ -32,7 +32,7 @@
 
 @media(max-width:991.9124px){
   .Partner-program-1-text{
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 22px !important;
   }
   .Partner-program-2-text{

@@ -26,13 +26,13 @@
     font-weight: bold;
     font-size: 22px;
     color: #FFFFFF;
-    text-transform: uppercase;
+    text-transform: none;
 }
 .clients-work-section .clients-work-right .clients-work-title {
     font-style: normal;
     font-weight: bold;
     font-size: 34px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
 }
 .clients-work-section .clients-work-right .clients-work-content {
@@ -79,7 +79,7 @@
 .clients-work-section .clients-work-right .clients-work-link {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: #33657E;
     cursor: pointer;
 }
@@ -116,7 +116,7 @@
 .clients-work-section .clients-work-right .steps-content p {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     color: #232323;
 }

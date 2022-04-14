@@ -44,7 +44,7 @@
   height: 42px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   color: white;
   margin-top: 3%;
@@ -60,7 +60,7 @@
   font-weight: bold;
   font-size: 30px;
   line-height: 37px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #33657e;
 }
 .BP-CP5-heading {
@@ -82,7 +82,7 @@
 .bp-cp5-listbody {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   text-align: justify;
   color: #757575;
@@ -212,7 +212,7 @@
   }
   .endbutton {
     width: 19%;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
     color: white;
     margin-top: 3%;
@@ -261,7 +261,7 @@
   }
   .BP-CP5-h1,
   .bp-cp5-bodyspan {
-    font-size: 14px;
+    font-size: 16px;
   }
   .bp-cp5-listbody {
     font-size: 10px;
@@ -327,7 +327,7 @@
   }
   .BP-CP5-h1,
   .bp-cp5-bodyspan {
-    font-size: 14px;
+    font-size: 16px;
   }
   .bp-cp5-listbody {
     font-size: 10px;

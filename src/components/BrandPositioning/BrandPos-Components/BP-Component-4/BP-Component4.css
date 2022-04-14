@@ -107,10 +107,10 @@
     padding-right: 10%;
   }
   .BP-c4-h {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 120%;
     margin-bottom: 3%;
-    text-transform: uppercase;
+    text-transform: none;
     width: 80%;
   }
   .BP-c4-d {
@@ -135,10 +135,10 @@
     padding-right: 6%;
   }
   .BP-c4-h {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 120%;
     margin-bottom: 2%;
-    text-transform: uppercase;
+    text-transform: none;
     width: 90%;
   }
   .BP-c4-d {
@@ -166,7 +166,7 @@
     font-size: 13px;
     line-height: 120%;
     margin-bottom: 2%;
-    text-transform: uppercase;
+    text-transform: none;
     width: 90%;
   }
   .BP-c4-d {
@@ -191,10 +191,10 @@
     padding-right: 6%;
   }
   .BP-c4-h {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 120%;
     margin-bottom: 2%;
-    text-transform: uppercase;
+    text-transform: none;
     width: 90%;
   }
   .BP-c4-d {
@@ -222,7 +222,7 @@
     font-size: 13px;
     line-height: 100%;
     margin-bottom: 2%;
-    text-transform: uppercase;
+    text-transform: none;
     width: 90%;
   }
   .BP-c4-d {

@@ -31,7 +31,7 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 28px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #3c708e;
 }
 .sacc3Heading2 {
@@ -46,7 +46,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #757575;
 }
@@ -91,7 +91,7 @@
     line-height: 22px;
   }
   .sacc3Heading2 {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
   }
   .sacc3Para {
@@ -102,7 +102,7 @@
 
 @media(max-width:768px){
   .sacc3Heading1 {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
   }
   .sacc3Heading2 {
@@ -117,7 +117,7 @@
 
 @media only screen and (max-width: 575px) {
   .sacc3Heading1 {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
   }
   .sacc3Heading2 {

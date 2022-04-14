@@ -13,7 +13,7 @@
   font-size: 32px;
   line-height: 42px;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
   margin-right: -650px !important;
   background-image: url(./backgroundimage.png);
   background-clip: text;
@@ -41,7 +41,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   text-align: center;
   color: #757575;
@@ -73,7 +73,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   text-decoration: none;
   color: #757575;
@@ -116,7 +116,7 @@ a {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 14px;
   text-decoration: none;
   color: #757575;
@@ -130,7 +130,7 @@ a {
     margin-right: 0px !important;
   }
   .Global-text-1 {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 25px !important;
   }
 

@@ -61,7 +61,7 @@ margin-top: 45%;
     line-height: 42px;
     /* or 131% */
     
-    text-transform: uppercase;
+    text-transform: none;
     
     color: #3C708E;
     
@@ -71,7 +71,7 @@ margin-top: 45%;
     font-family: Roboto;
 font-style: normal;
 font-weight: 500;
-font-size: 14px;
+font-size: 16px;
 line-height: 24px;
 /* or 162% */
 
@@ -82,7 +82,7 @@ color: #757575;
 
 .ddm-audit-strategies p, 
 .ddm-audit p {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
@@ -504,7 +504,7 @@ color: #757575;
     font-weight: bold;
     /* font-size: 32px;
     line-height: 42px; */
-    text-transform: uppercase;
+    text-transform: none;
     color: #3C708E;
 }
 

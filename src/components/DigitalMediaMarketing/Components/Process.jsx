@@ -17,7 +17,7 @@ export default function Process() {
 						<div className="row justify-content-center mt-5">
 							<div className="col-12">
 								<div className="heading mx-auto aos-init aos-animate aos-init aos-animate">
-									THE PROCESS
+								The Process
 								</div>
 							</div>
 							<div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-delay="100" className="col-lg-7 col-md-8 col-10 aos-init aos-animate text">

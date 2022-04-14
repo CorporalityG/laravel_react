@@ -54,7 +54,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #FFFFFF;
   margin-bottom: 10px;
 }
@@ -82,7 +82,7 @@
   font-weight: bold;
   font-size: 22px;
   line-height: 28px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #FFFFFF;
   margin-bottom: 20px;
 }
@@ -128,7 +128,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #33657E;
   margin-bottom: 25px;
 }
@@ -140,7 +140,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #33657E;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -169,7 +169,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #33657E;
 }
 .cause-studies-container .glimpses-main p {
@@ -222,7 +222,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #33657E;
   margin-bottom: 10px;
 }

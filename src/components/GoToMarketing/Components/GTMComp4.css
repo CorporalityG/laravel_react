@@ -1,6 +1,6 @@
 @media only screen and (max-width: 992px) {
     .content-inner .cf-inner .inner h2 {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 22px;
     }
     .GTMComp4 .philosophySubmitButton {
@@ -84,7 +84,7 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
     text-align: center;
     color: #757575;
@@ -188,7 +188,7 @@
     position: relative;
     z-index: 1 !important;
     width: 15% !important;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
     height: 4% !important;
     color: #fff;
@@ -377,7 +377,7 @@
 .content-inner .content-front li {
     display: inline-block;
     color: #3c708e;
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 10px;
     letter-spacing: 2px;
     margin: 0 4px;
@@ -444,7 +444,7 @@
     padding: 15px 30px;
     margin-top: 14px;
     font-size: 11px;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 2px;
 }
 

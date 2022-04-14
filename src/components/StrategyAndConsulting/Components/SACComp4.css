@@ -13,7 +13,7 @@
   font-weight: bold;
   font-size: 32px;
   line-height: 42px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #33657e;
   text-align: center;
   width: 70%;
@@ -22,7 +22,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   text-align: center;
   color: #757575;
@@ -75,7 +75,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   text-align: center;
   color: #757575;
@@ -84,7 +84,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #757575;
 }
 .sacc4Top {
@@ -261,7 +261,7 @@
     line-height: 22px !important;
   }
   .sacc4Para1{
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 }
 

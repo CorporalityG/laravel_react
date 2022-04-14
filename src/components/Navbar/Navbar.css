@@ -39,7 +39,7 @@
   color: #31647c;
   text-decoration: none !important;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0px !important;
   transition: all 0.2s ease-in-out;
 }
@@ -50,7 +50,7 @@
   color: #31647c;
   text-decoration: none !important;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0px;
 }
 
@@ -196,7 +196,7 @@
   color: #31647c;
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px !important;
   border-width: 1px;
   border-style: solid;
@@ -253,7 +253,7 @@
   .nav-item > div {
     color: #31647c;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: lowercase;
     text-transform: capitalize;
     padding-left: 15px !important;

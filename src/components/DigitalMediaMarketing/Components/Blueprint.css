@@ -14,7 +14,7 @@
   font-weight: bold;
   font-size: 32px;
   line-height: 44px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #3c708e;
 }
 
@@ -113,7 +113,7 @@
   /* identical to box height, or 200% */
 
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
 
   color: #3c708e;
 }

@@ -7,7 +7,7 @@
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: none;
     margin-bottom: 30px;
 }
 .faqs-container .faqs-list .accordion-item {

@@ -16,28 +16,28 @@ function GTMComp5() {
                 <div className="heading text-center mb-3">
                     <div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" className="aos-init aos-animate">
                         <h1 className="animate two">
-                            <span>BUILDING</span>
+                            <span>Building</span>
                             &nbsp;
-                            <span>WINNING</span>
+                            <span>Winning</span>
                             &nbsp;
-                            <span>STRATEGIES</span>
+                            <span>Strategies</span>
                             &nbsp;
-                            <span>WHILE</span>
+                            <span>While</span>
                             &nbsp;
-                            <span>CAREFULLY</span>
+                            <span>Carefully</span>
                         </h1>
                         <h1 className="animate2 two">
-                            <span>BALANCING</span>
+                            <span>Balancing</span>
                             &nbsp;
-                            <span>CUSTOMER</span>
+                            <span>Customer</span>
                             &nbsp;
-                            <span>NEEDS</span>
+                            <span>Needs</span>
                             &nbsp;
-                            <span>AND</span>
+                            <span>And</span>
                             &nbsp;
-                            <span>COST</span>
+                            <span>Cost</span>
                             &nbsp;
-                            <span>CONTROLS</span>
+                            <span>Controls</span>
                         </h1>
                     </div>
                 </div>

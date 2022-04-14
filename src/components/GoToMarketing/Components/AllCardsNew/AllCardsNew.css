@@ -1,6 +1,6 @@
 @media only screen and (max-width: 992px) {
     .gotomarketing_cards_top_heading_text {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 22px;
     }
     .gotomarketing_side1_card1_text,
@@ -111,7 +111,7 @@
     font-size: 32px;
     line-height: 44px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3c708e;
     margin-bottom: 20px !important;
 }

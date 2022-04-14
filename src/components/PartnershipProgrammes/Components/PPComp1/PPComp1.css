@@ -5,7 +5,7 @@
 .ppcText {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 150%;
   color: #232323;
   width: 80%;
@@ -39,7 +39,7 @@
     line-height: 40px;
     
 
-    text-transform: uppercase;
+    text-transform: none;
 
     color: #33657E;
 } */
@@ -60,7 +60,7 @@
   font-weight: bold;
   font-size: 32px;
   line-height: 40px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #33657e;
 
 }
@@ -171,13 +171,13 @@
   }
   .ppcText {
     text-align: justify !important;
-    font-size: 14px;
+    font-size: 16px;
     width: 75%;
     margin-bottom: 3%;
   }
   .ppcHeading {
     text-align: center !important;
-    font-size: 14px;
+    font-size: 16px;
     line-height: normal;
   }
   .ppc1MainImg {

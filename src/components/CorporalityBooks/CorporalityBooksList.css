@@ -27,7 +27,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 25px;
 }
@@ -105,14 +105,14 @@
 .c-book-list-container .c-book-content-main .c-book-desc {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #757575;
 }
 .c-book-list-container .c-book-content-main .c-book-title {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 5px;
 }
@@ -178,7 +178,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 15px;
     padding-bottom: 15px;
@@ -211,7 +211,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 25px;
 }
@@ -226,7 +226,7 @@
     box-sizing: border-box;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #C2BDC8;
     padding: 10px;
     height: auto;
@@ -241,7 +241,7 @@
     box-sizing: border-box;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #C2BDC8;
     padding: 10px;
     height: auto;
@@ -252,7 +252,7 @@
 .c-book-payment-modal .c-book-payment-process-form .form-check-label {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     color: #757575;
 }
@@ -260,7 +260,7 @@
     background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #FFFFFF;
     padding: 10px 25px;
     outline: 0;
@@ -323,7 +323,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 30px;
 }
@@ -338,7 +338,7 @@
     box-sizing: border-box;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #C2BDC8;
     padding: 10px;
     height: auto;
@@ -349,7 +349,7 @@
 .c-book-download-modal .c-book-download-modal-content .form-check-label {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     color: #757575;
 }
@@ -369,7 +369,7 @@
     background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #FFFFFF;
     padding: 10px 25px;
     outline: 0;
@@ -462,7 +462,7 @@
 .c-book-list-book-section .book-front-main .bf-desc .bf-title {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #232323;
 }
 .c-book-list-book-section .book-front-main .bf-detail-mian {
@@ -470,7 +470,7 @@
     align-items: center;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #232323;
 }
 .c-book-list-book-section .book-front-main .bf-detail-mian .bf-detail:not(:last-child) {
@@ -511,7 +511,7 @@
     box-sizing: border-box;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #FFFFFF;
     padding: 14px 33px;
     margin-right: 15px;
@@ -521,7 +521,7 @@
     background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #FFFFFF;
     padding: 14px 54px;
     cursor: pointer;
@@ -757,7 +757,7 @@
 
 @media only screen and (max-width: 767px) {
     .c-book-list-container .c-book-content-main .c-book-title {
-        font-size: 14px;
+        font-size: 16px;
     }
     .c-book-list-container .c-book-content-main .c-book-detail-mian {
         flex-direction: column;
@@ -982,7 +982,7 @@
         padding-right: 15px;
     }
     .c-book-list-container .c-book-content-main .c-book-text {
-        font-size: 14px;
+        font-size: 16px;
     }
     .c-book-list-book-section .book-front-main .book-front-content {
         bottom: -55px;

@@ -6,6 +6,7 @@ import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
 import { ProcessItem } from "./ProcessItem";
 import ServicesClients from "../ServicesClients/ServicesClients";
 import ServicesInsights from "../ServicesInsights/ServicesInsights";
+import AllCardsNew from "./AllCardsNew/AllCardsNew";
 import Accordion from 'react-bootstrap/Accordion'
 
 export default function BrandPositioning() {
@@ -35,7 +36,7 @@ export default function BrandPositioning() {
             <div className="col-lg-6">
               <div className="bp-banner-content">
                 <div data-aos="fade-up">
-                  <h1>GROWING UP IS AN ADVENTURE</h1>
+                  <h1>Growing Up Is An Adventure</h1>
                 </div>
                 <div className="bp-banner-subtitle" data-aos="fade-up" data-aos-delay="300">We bring the power of Corporality Signature Product to help you grow</div>
                 <div data-aos="fade-up" data-aos-delay="300">
@@ -94,7 +95,7 @@ export default function BrandPositioning() {
             <div className="col-lg-12">
               <div className="bp-p-title-content">
                 <div data-aos="fade-up">
-                  <h2>THE PROCESS</h2>
+                  <h2>The Process</h2>
                 </div>
               </div>
             </div>
@@ -139,7 +140,7 @@ export default function BrandPositioning() {
           </div>
         </div>
       </div>
-
+      {/*
       <div className="bp-brand-section">
         <div className="container-fluid">
           <div className="row bp-brand-row">
@@ -149,7 +150,7 @@ export default function BrandPositioning() {
           </div>
         </div>
       </div>
-
+  */}
       <div className="bp-know-section">
         <div className="container-lg">
           <div className="row bp-know-row">
@@ -388,14 +389,17 @@ export default function BrandPositioning() {
         </div>
       </div>
 
-      <div className="bp-articulating-yourself-section">
-        <div className="container-fluid px-0">
-          <div className="row bp-ay-row">
-            <div className="col-lg-12">
-              <img src={`${BASE_URL}/img/BrandPositioning/articulating-yourself-banner.png`} alt="Brand Positioning" className="bp-ay-banner" data-aos="zoom-in-down" />
-            </div>
-          </div>
+      <div className="bp-articulating-yourself-section  text-center mx-auto d-flex flex-column align-items-center justify-content-center">
+        <div className="container">
+        <div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" className="aos-init aos-animate">
+          <h1 className="animate two">
+            <span>Articulating</span>&nbsp;<span>Yourself</span>&nbsp;<span>- Vreating</span><br></br>
+            <span>Magic</span>&nbsp;<span>From</span>&nbsp;<span>The</span>&nbsp;<span>Basics</span>
+          </h1>
         </div>
+        <div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-delay="1000" className="mb-5 mt-2 text aos-init aos-animate">An effective brand positioning and marketing strategy is all about taking the most effective steps towards becoming clear, differentiated and meaningful. Corporality Global evaluates your current branding orientation in combination with market analytics to help you articulate yourself. You need a roadmap that clearly presents who you are - what you do-why you matter, making positioning. not just beneficial but sustainable as well. We then tie the positioning to an already existing idea of your company with the target audience and shift truth to your audience's advantage. </div>
+        </div>
+        <AllCardsNew />
       </div>
 
       <ServicesClients />

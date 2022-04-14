@@ -39,7 +39,7 @@
 .dbanner .boxSubHead {
   color: #232323;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
 }
 .dbanner .sbox {
   height: 350px;
@@ -106,7 +106,7 @@
 .dbanner .boxContent > p:nth-child(2) {
   /* background-color: red; */
   padding: 5px 15px !important;
-  /* font-size: 14px !important; */
+  /* font-size: 16px !important; */
   /* margin: 15px 0px !important; */
   min-height: 83px;
 }
@@ -114,7 +114,7 @@
 .dbanner .learn-more {
   color: #232323;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   margin: 10px auto;
   text-align: center;
   cursor: pointer;

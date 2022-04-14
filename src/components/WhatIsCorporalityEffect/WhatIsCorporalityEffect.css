@@ -56,14 +56,14 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 15px;
 }
 .wice-banner-main .wice-banner-content-row p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     color: #232323;
     margin-bottom: 15px;
@@ -83,7 +83,7 @@
     background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     color: #FFFFFF;
     padding: 10px 35px;
     margin-top: 30px;
@@ -115,14 +115,14 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3C708E;
     margin-bottom: 20px;
 }
 .wice-factor-section .wice-factor-content-row .wice-factor-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #757575;
     margin-bottom: 20px;
 }
@@ -130,7 +130,7 @@
     background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%);
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     color: #FFFFFF;
     padding: 10px 40px;
@@ -163,7 +163,7 @@
 .wice-factor-section .wice-factor-boxes-row .factor-box-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #757575;
 }
 
@@ -178,14 +178,14 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3C708E;
     margin-bottom: 25px;
 }
 .wice-origin-section .wice-origin-row .wice-origin-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #757575;
     margin-bottom: 20px;
 }
@@ -230,14 +230,14 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3C708E;
     margin-bottom: 20px;
 }
 .wice-effective-section .wice-effective-row p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #757575;
     margin-bottom: 20px;
 }
@@ -301,7 +301,7 @@
 .wice-marketing-section .wice-marketing-row .wice-marketing-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 15px;
@@ -310,7 +310,7 @@
     background: linear-gradient(95.12deg, #EED979 0%, #33657E 83.42%);
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #FFFFFF;
     padding: 12px 44px;
     display: inline-block;
@@ -327,7 +327,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
     color: #3C708E;
     margin-bottom: 50px;
 }

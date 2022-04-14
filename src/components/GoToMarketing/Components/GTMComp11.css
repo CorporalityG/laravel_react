@@ -40,7 +40,7 @@
 }
 
 .gtm-comp11-row-section h4 {
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: bold;
   font-size: 1.2em;
   color: #A06DAF;
@@ -51,7 +51,7 @@
 
 .gtm-comp11-row-section h3 {
   display: block;
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: bold;
   font-size: 1.1em;
   color: #A06DAF;
@@ -61,7 +61,7 @@
 .gtm-comp11-row-section h5 {
   display: block;
   width: 50%;
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 0.7em;
   color: #33657E;
   text-align: left;

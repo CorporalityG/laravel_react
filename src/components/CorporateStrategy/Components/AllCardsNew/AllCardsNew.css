@@ -74,7 +74,7 @@
   font-size: 32px;
   line-height: 44px;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
   color: #3c708e;
   margin-bottom: 20px !important;
 }
@@ -83,7 +83,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   text-align: center;
   color: #757575;
@@ -948,7 +948,7 @@
 
 @media only screen and (max-width: 425px) {
   .cards_top_heading span {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 20x !important;
   }
 

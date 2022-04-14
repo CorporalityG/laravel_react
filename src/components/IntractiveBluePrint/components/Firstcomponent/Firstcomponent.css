@@ -11,7 +11,7 @@
   line-height: 42px;
 
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
 
   color: #3C708E;
   padding-right: 300px !important;
@@ -23,7 +23,7 @@
     ‘Ubuntu’, ‘Cantarell’, 'Open Sans', 'Helvetica Neue', ‘sans-serif’;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   padding-right: 300px !important;
   padding-left: 300px !important;
@@ -98,7 +98,7 @@
     ‘Ubuntu’, ‘Cantarell’, 'Open Sans', 'Helvetica Neue', ‘sans-serif’;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
 
 
@@ -186,7 +186,7 @@
   }
 
   .cards_text_iB_description {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 20px;
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -255,7 +255,7 @@
   }
 
   .interactive_card_heading {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 }

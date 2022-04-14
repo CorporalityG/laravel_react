@@ -21,7 +21,7 @@
   line-height: 42px;
 
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
   color: #3c708e;
 }
 
@@ -29,7 +29,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
 
   text-align: center;
@@ -58,7 +58,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   text-align: center;
   text-align: center;
@@ -79,7 +79,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   text-align: center;
 }
@@ -172,7 +172,7 @@
     line-height: 20px;
   }
   .cont-5-text-2-Innovation {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
   }
 }

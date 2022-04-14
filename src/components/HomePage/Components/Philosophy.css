@@ -140,7 +140,7 @@
 .philosophyContainer .philosophyBody .philosophyForm h3 {
   font-size: 1.5em;
   line-height: 1.758em;
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: 700;
   margin: 0% 0% 2% 0% !important;
 }

@@ -34,7 +34,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   color: #ffffff;
   margin-bottom: 20px !important;
@@ -55,7 +55,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   text-align: center;
   color: #ffffff;
@@ -286,7 +286,7 @@
   }
 
   .caretojoinus_description {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
   }
 
@@ -371,7 +371,7 @@
 
 @media only screen and (max-width: 401px) {
   .caretojoinus_heading {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 

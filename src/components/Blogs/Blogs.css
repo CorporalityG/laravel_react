@@ -32,7 +32,7 @@
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #A06DAF;
     margin-bottom: 10px;
 }
@@ -40,14 +40,14 @@
     font-style: normal;
     font-weight: bold;
     font-size: 34px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 15px;
 }
 .blogs-page .latest-blog .latest-blog-item p {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     color: #232323;
     margin-bottom: 35px;
@@ -219,7 +219,7 @@
 .blogs-page .blog-list-container .blog-item .blog-content p {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   text-align: justify;
   color: #757575;
   margin-bottom: 20px;
@@ -235,7 +235,7 @@
 .blogs-page .blog-list-container .blog-item .blog-content .blog-date-comment-main .blog-date-comment {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #BFBFBF;
   display: flex;
   align-items: center;
@@ -332,14 +332,14 @@
 .blogs-page .blog-poll-youtube .live-poll-question {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: #31647C;
     margin-bottom: 20px;
 }
 .blogs-page .blog-poll-youtube .live-poll-options span {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: #31647C;
     width: 100%;
     display: inline-block;

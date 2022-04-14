@@ -8,7 +8,7 @@
     font-weight: bold;
     font-size: 34px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     position: relative;
     padding-bottom: 15px;
@@ -95,7 +95,7 @@
 .services-insights-section .services-insights-grid .services-insights-grid-desc p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #FFFFFF;
     margin-bottom: 0;
 }

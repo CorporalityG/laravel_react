@@ -37,13 +37,13 @@ function Page1() {
 								 className="aos-init aos-animate"
 							>
 								<h1 className="heading animate two">
-									<span>AIM</span>  
+									<span>Aim</span>  
 									&nbsp;
-									<span>FOR</span>
+									<span>For</span>
 									&nbsp;
-									<span>GLOBAL</span>
+									<span>Global</span>
 									&nbsp;
-									<span>GROWTH</span>
+									<span>Growth</span>
 								</h1>
 							</div>
 						</div>

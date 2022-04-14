@@ -15,7 +15,7 @@
   line-height: 44px;
   /* or 137% */
 
-  text-transform: uppercase;
+  text-transform: none;
 
   color: #33657e;
 }
@@ -44,7 +44,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   /* identical to box height, or 114% */
   text-align: center;
@@ -60,7 +60,7 @@
   line-height: 44px;
   /* identical to box height, or 137% */
 
-  text-transform: uppercase;
+  text-transform: none;
 
   color: #33657e;
 }
@@ -70,7 +70,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   /* or 162% */
 
@@ -165,7 +165,7 @@
 @media only screen and (max-width: 425px) {
   .objectives_heading,
   .objectives_heading2 {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 

@@ -36,7 +36,7 @@
   font-size: 34px;
   line-height: 34px;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
   color: #33657e;
   margin-bottom: 50px !important;
 }
@@ -123,7 +123,7 @@
   font-weight: bold;
   font-size: 26px;
   line-height: 40px;
-  text-transform: uppercase;
+  text-transform: none;
   color: #ffffff;
 }
 
@@ -261,7 +261,7 @@
   }
 
   .right_content_info_points {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 }
@@ -313,7 +313,7 @@
   }
 
   .services_heading {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .services_heading:after {
@@ -343,7 +343,7 @@
   }
 
   .bottom_button_text {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .bottom_button_circle img {

@@ -6,14 +6,14 @@
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 20px;
 }
 .cause-studies-container p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     color: #232323;
 }
@@ -27,7 +27,7 @@
 .cause-studies-container ul li {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     color: #232323;
     margin-bottom: 15px;
@@ -67,7 +67,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 25px;
 }
@@ -140,7 +140,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #FFFFFF;
     margin-bottom: 30px;
 }
@@ -301,7 +301,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 30px;
 }
@@ -416,7 +416,7 @@
   .cause-studies-container .case-study-related-container .related-case-study-carousel .case-study-item .case-study-item-explore {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     color: #33657E;
     cursor: pointer;
   }
@@ -464,14 +464,14 @@
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    text-transform: uppercase;
+    text-transform: none;
     color: #33657E;
     margin-bottom: 10px;
 }
 .cause-studies-container .case-study-business-level-content p {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     color: #232323;
 }

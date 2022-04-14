@@ -362,7 +362,7 @@
 
 .footerContainer .nav_drop_down_option {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   color: #31647c;
   padding-top: 15px !important;
@@ -623,7 +623,7 @@
 .footerContainer .text-links {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   color: #33657e;
   cursor: pointer;
@@ -750,14 +750,14 @@
 .footerContainer .footer-text {
   color: #33657E !important;
   width: auto !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   padding: 0px 2% !important;
   font-weight: 400;
 }
 
 .footerContainer .row2 {
   margin-top: 15px !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   color: #33657E !important;
   font-weight: 400;
   display: -webkit-box;

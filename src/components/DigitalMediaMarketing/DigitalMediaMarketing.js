@@ -41,7 +41,7 @@ function DigitalMediaMarketing() {
             <div className="col-lg-6">
               <div className="dmm-banner-content-main">
                 <div data-aos="fade-up">
-                  <h1>BUILDING A DIGITAL FOOTPRINT FOR YOUR BUSINESS</h1>
+                  <h1>Building A Digital Footprint For Your Business</h1>
                 </div>
                 <div className="dmm-banner-content" data-aos="fade-up" data-aos-delay="300">
                   <p><b>We got you covered for Digital Media Marketing through our Packaged solutions.</b></p>

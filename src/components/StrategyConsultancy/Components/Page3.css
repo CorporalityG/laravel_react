@@ -76,7 +76,7 @@
   line-height: 37px;
   /* or 132% */
 
-  text-transform: uppercase;
+  text-transform: none;
 
   color: #33657e;
 }
@@ -85,7 +85,7 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   /* or 150% */
 
