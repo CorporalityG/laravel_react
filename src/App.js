@@ -52,6 +52,7 @@ import TermsConditions from "./components/TermsConditions/TermsConditions";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 
 import AccountBasedMarketing from "./components/AccountBasedMarketing/AccountBasedMarketing";
+import OutsourcedCMO from "./components/OutsourcedCMO/OutsourcedCMO";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -133,6 +134,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy /> } />
 
             <Route path="/account-based-marketing" element={<AccountBasedMarketing /> } />
+            <Route path="/outsourced-cmo" element={<OutsourcedCMO /> } />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             

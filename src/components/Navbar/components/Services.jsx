@@ -46,7 +46,7 @@ const Services = () => {
                             <div className="diamond-line"></div>
                         </Link>
 
-                        <Link to="/" onClick={closeOnLink} className="services-section-items">
+                        <Link to="/outsourced-cmo" onClick={closeOnLink} className="services-section-items">
                             <h6>Outsourced CMO</h6>
                             <div className="diamond-line"></div>
                         </Link>

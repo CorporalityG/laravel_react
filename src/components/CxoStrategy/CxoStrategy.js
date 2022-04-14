@@ -44,7 +44,7 @@ function CxoStrategy() {
                 <div data-aos="fade-up">
                   <h1>Delivering a Better success</h1>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="300">
+                <div className="cxo-banner-desc" data-aos="fade-up" data-aos-delay="300">
                   <p>United by a common purpose to deliver your vision with your team .Hire our strategist and consultants in bundle to handle your entire Marketing Department and customer service to accelerate the success you have been dreaming of . Build customer loyalty through differentiated brand strategies that activate a positive relationship between the business and its customers. Leadership is highly essential in creating seamless and connected customer journeys that are highly important.</p>
                 </div>
                 <div className="cxo-banner-btn" data-aos="fade-up" data-aos-delay="500">
@@ -176,9 +176,10 @@ function CxoStrategy() {
 
             <div className="col-lg-6 cxo-ec-col">
               <div className="cxo-expect-content" data-aos="fade-up" data-aos-delay="300">
-                <p>Guiding business to  hit organisational relationship goals is our job. A long-term sustainable customer plan is better than a short-term non-sustainable strategy that is expensive. Choose the best diffence against the churn as you hire a CXO that can navigate your business across complex scenarios by inculcating discipline into your customer service plan. Our on-demand leadership moves swiftly from concept to execution without hitting the learning curve, utilising strategic and operational expertise.</p>
+                <p>Guiding business to  hit organisational relationship goals is our job. A long-term sustainable customer plan is better than a short-term non-sustainable strategy that is expensive. Choose the best diffence against the churn as you hire a CXO that can navigate your business across complex scenarios by inculcating discipline into your customer service plan. </p>
+                <p>Our on-demand leadership moves swiftly from concept to execution without hitting the learning curve, utilising strategic and operational expertise.</p>
               </div>
-              <div class="leadership_button aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">View All Team</div>
+              <div class="cxo-expect-btn" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Explore More</div>
             </div>
           </div>
         </div>
