@@ -149,29 +149,31 @@ function CorporateStrategy() {
           <div className="row coo-expect-content-row">
             <div className="col-lg-6 coo-ec-col">
               <div className="coo-es-items">
-                <div className="coo-es-item">
+                <div className="coo-es-item coo-es-item-1" data-aos="zoom-in">
                   <img src={`${BASE_URL}/img/OutsourcedCOO/expect-setting-2.png`} alt="Product and sales Equilibrium" />
-                  <div className="es-item-title">Product and sales Equilibrium</div>
+                  <div className="es-item-title" data-aos="zoom-in">Product and sales Equilibrium</div>
                 </div>
 
-                <div className="coo-es-item">
+                <div className="coo-es-item coo-es-item-2" data-aos="zoom-in">
                   <img src={`${BASE_URL}/img/OutsourcedCOO/expect-setting-2.png`} alt="Lead Genration and trading" />
-                  <div className="es-item-title">Lead Genration and trading</div>
+                  <div className="es-item-title" data-aos="zoom-in">Lead Genration and trading</div>
                 </div>
 
-                <div className="coo-es-item">
+                <div className="coo-es-item coo-es-item-3" data-aos="zoom-out-up">
                   <img src={`${BASE_URL}/img/OutsourcedCOO/expect-setting-1.png`} alt="Corporality strategy solutions" />
-                  <div className="es-item-title">Corporality strategy solutions</div>
+                  <div className="es-item-heading">
+                    <div className="es-item-h-title" data-aos="zoom-out-down">Corporality strategy solutions</div>
+                  </div>
                 </div>
 
-                <div className="coo-es-item">
+                <div className="coo-es-item coo-es-item-4" data-aos="zoom-in">
                   <img src={`${BASE_URL}/img/OutsourcedCOO/expect-setting-2.png`} alt="Capability Testing" />
-                  <div className="es-item-title">Capability Testing</div>
+                  <div className="es-item-title" data-aos="zoom-in">Capability Testing</div>
                 </div>
 
-                <div className="coo-es-item">
+                <div className="coo-es-item coo-es-item-5" data-aos="zoom-in">
                   <img src={`${BASE_URL}/img/OutsourcedCOO/expect-setting-2.png`} alt="Budgeting" />
-                  <div className="es-item-title">Budgeting</div>
+                  <div className="es-item-title" data-aos="zoom-in">Budgeting</div>
                 </div>
               </div>
             </div>

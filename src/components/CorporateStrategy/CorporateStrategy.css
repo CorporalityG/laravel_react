@@ -259,6 +259,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 .coo-expect-section .coo-es-items .coo-es-item {
     display: flex;
@@ -273,6 +274,62 @@
     font-size: 14px;
     text-align: center;
     color: #6CA0BC;
+}
+.coo-expect-section .coo-es-items .coo-es-item-3 .es-item-heading {
+    background: linear-gradient(139.61deg, #EED979 -3.08%, #6CA0BC 104.27%);
+    border-radius: 100%;
+    padding: 35px 20px;
+    border: 10px solid #fff;
+    position: absolute
+}
+.coo-expect-section .coo-es-items .coo-es-item-3 .es-item-heading .es-item-h-title {
+    max-width: 95px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.coo-expect-section .coo-es-items .coo-es-item-1 {
+    position: absolute;
+    top: -70px;
+    left: -5px;
+}
+.coo-expect-section .coo-es-items .coo-es-item-2 {
+    position: absolute;
+    top: -40px;
+    right: -25px;
+}
+.coo-expect-section .coo-es-items .coo-es-item-3 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.coo-expect-section .coo-es-items .coo-es-item-4 {
+    position: absolute;
+    bottom: -40px;
+    left: -25px;
+}
+.coo-expect-section .coo-es-items .coo-es-item-5 {
+    position: absolute;
+    bottom: -60px;
+    right: -15px;
+}
+.coo-expect-section .coo-es-items .coo-es-item img {
+    animation: rotateGear 8s linear infinite forwards;
+    animation-delay: 1500ms;
+}
+.coo-expect-section .coo-es-items .coo-es-item.coo-es-item-3 img {
+    animation: rotateGear 10s linear infinite reverse;
+    animation-delay: 1500ms;
+}
+@keyframes rotateGear {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
 }
 .coo-expect-section .coo-expect-content p {
     font-style: normal;
@@ -301,7 +358,7 @@
     margin-bottom: 10px;
 }
 .coo-why-hire-section .coo-wh-title-content .coo-wh-title-desc {
-    max-width: 75%;
+    max-width: 65%;
 }
 .coo-why-hire-section .coo-wh-title-content p {
     font-style: normal;
