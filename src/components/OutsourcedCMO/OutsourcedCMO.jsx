@@ -86,7 +86,7 @@ function OutsourcedCMO() {
                                     <h2>Helping your Customer lifecycle, ensuring positive CX</h2>
                                 </div>
                                 <div className="cmo-lc-title-desc" data-aos="fade-up" data-aos-delay="300">
-                                    <p>Our chief experience officer (CXO) ensures your brands and companies practicing a customer-centric strategy.  Hire us to increase customer and employee grasp, designing and delivering positive CX, prioritizing your client's viewpoint in delivery processes and tracking key performance indicators</p>
+                                    <p>Our chief experience officer (CmO) ensures your brands and companies practicing a customer-centric strategy.  Hire us to increase customer and employee grasp, designing and delivering positive CX, prioritizing your client's viewpoint in delivery processes and tracking key performance indicators</p>
                                 </div>
                             </div>
                         </div>
@@ -148,14 +148,14 @@ function OutsourcedCMO() {
                     </div>
 
                     <div className="row cmo-expect-content-row">
-                        <div className="col-lg-6 cxo-ec-col">
+                        <div className="col-lg-6 cmo-ec-col">
                             <div className="cmo-expect-banner">
                                 <div className='cmo-expect-bg' data-aos="zoom-in-up" data-aos-duration="1500"></div>
                                 <img src={`${BASE_URL}/img/OutsourcedCMO/expect-banner.png`} alt="What to expect?" data-aos="zoom-in-up" />
                             </div>
                         </div>
 
-                        <div className="col-lg-6 cxo-ec-col">
+                        <div className="col-lg-6 cmo-ec-col">
                             <div className="cmo-expect-content" data-aos="fade-up" data-aos-delay="300">
                                 <ul>
                                     <li>Develop and execute marketing campaigns. A CMO’s primary responsibility is to create and implement regular marketing campaigns. Once the marketing campaign goes public, they oversee the data that comes in and tweak it accordingly.</li>

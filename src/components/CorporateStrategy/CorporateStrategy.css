@@ -1,0 +1,464 @@
+/* Banner section start */
+.coo-banner-section {
+    margin-top: 80px;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    position: relative;
+    background: linear-gradient(103.75deg, rgba(160, 109, 175, .1) -0.43%, rgba(108, 160, 188, .1) 73.47%);
+}
+.coo-banner-section .coo-banner-top {
+    background-color: #fff;
+    height: 100px;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.coo-banner-section .coo-banner-middle {
+    background: linear-gradient(90deg, #A06DAF 34.47%, #6CA0BC 110.64%);
+    height: 100%;
+    width: 465px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.coo-banner-section .coo-banner-bottom {
+    background: linear-gradient(90deg, #A06DAF 34.47%, #6CA0BC 110.64%);
+    height: 80px;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.coo-banner-section .banner-path {
+    position: absolute;
+    bottom: 50px;
+    left: 38%;
+    z-index: -2;
+}
+.coo-banner-section .banner-setting-big {
+    position: absolute;
+    left: 44%;
+    bottom: 60px;
+    z-index: -1;
+    max-width: 100%;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    animation-timing-function: linear;
+    animation-delay: 1500ms;
+    animation-name: BannerSettingBig;
+}
+@keyframes BannerSettingBig {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.coo-banner-section .banner-setting-small {
+    position: absolute;
+    left: 42%;
+    bottom: 20px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+    animation-timing-function: linear;
+    animation-delay: 1500ms;
+    animation-name: BannerSettingSmall;
+}
+@keyframes BannerSettingSmall {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+.coo-banner-section .coo-banner-row {
+    align-items: center;
+}
+.coo-banner-section .coo-banner-content h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    text-transform: capitalize;
+    color: #33657E;
+    margin-bottom: 15px;
+}
+.coo-banner-section .coo-banner-content .coo-banner-subtitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #232323;
+    margin-bottom: 20px;
+}
+.coo-banner-section .coo-banner-content .coo-banner-desc {
+    max-width: 80%;
+}
+.coo-banner-section .coo-banner-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #232323;
+    margin-bottom: 10px;
+}
+.coo-banner-section .coo-banner-content .coo-banner-btn {
+    margin-top: 35px;
+}
+.coo-banner-section .coo-banner-content .coo-banner-btn a {
+    background: linear-gradient(95.12deg, #E2C53F 0%, #6CA0BC 83.42%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    text-transform: none;
+    color: #FFFFFF;
+    padding: 10px 17px;
+    display: inline-block;
+}
+.coo-banner-section .coo-banner {
+    position: relative;
+}
+.coo-banner-section .coo-banner-video {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.coo-banner-section .coo-banner-video video {
+    height: 100%;
+    max-width: 90%;
+    object-fit: cover;
+}
+
+.coo-banner-section .coo-social-section {
+    position: absolute;
+    left: 30px;
+    bottom: 50%;
+    transform: translate(0, 50%);
+}
+.coo-banner-section .coo-social-section .coo-social-row {
+    display: flex;
+    flex-direction: column;
+}
+.coo-banner-section .coo-social-section a {
+    color: #33657e;
+    margin-bottom: 10px;
+}
+.coo-banner-section .coo-social-section a i {
+    font-size: 18px;
+}
+.coo-banner-section .coo-social-section a:hover {
+    color: #862995;
+}
+/* Banner section end */
+
+
+/* level-strategy start */
+.coo-level-strategy-section {
+    background-color: #F5F5F5;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.coo-level-strategy-section .coo-ls-content {
+    max-width: 50%;
+}
+.coo-level-strategy-section .coo-ls-content h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    text-transform: capitalize;
+    color: #3C708E;
+    margin-bottom: 15px;
+}
+.coo-level-strategy-section .coo-ls-content p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color: #757575;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+.coo-level-strategy-section .coo-ls-banner {
+    text-align: center;
+    margin-top: -90px;
+}
+.coo-level-strategy-section .coo-ls-banner img {
+    max-width: 100%;
+}
+.coo-level-strategy-section .coo-ls-finding {
+    position: relative;
+    left: 100%;
+    transform: translate(-100%, 0);
+    margin-top: -10px;
+}
+/* level-strategy end */
+
+
+/* methodology-process start */
+.coo-methodology-process-section {
+    padding-top: 65px;
+    padding-bottom: 50px;
+}
+.coo-methodology-process-section .coo-mp-content {
+    max-width: 70%;
+    margin: 0 auto 50px;
+}
+.coo-methodology-process-section .coo-mp-content h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    color: #3C708E;
+    margin-bottom: 15px;
+}
+.coo-methodology-process-section .coo-mp-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #757575;
+    margin-bottom: 15px;
+}
+.coo-methodology-process-section .coo-mp-banner {
+    text-align: center;
+}
+.coo-methodology-process-section .coo-mp-banner img {
+    max-width: 100%;
+}
+/* methodology-process end */
+
+
+/* expect start */
+.coo-expect-section {
+    background-color: #F8F8F8;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url('./img/expect-banner-bg.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.coo-expect-section .coo-expect-title {
+    margin-bottom: 40px;
+}
+.coo-expect-section .coo-expect-title h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    text-transform: capitalize;
+    color: #3C708E;
+    margin-bottom: 10px;
+}
+.coo-expect-section .coo-expect-title p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #757575;
+    margin-bottom: 10px;
+}
+.coo-expect-section .coo-es-items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.coo-expect-section .coo-es-items .coo-es-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coo-expect-section .coo-es-items .es-item-title {
+    position: absolute;
+    max-width: 90px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #6CA0BC;
+}
+.coo-expect-section .coo-expect-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #757575;
+    margin-bottom: 10px;
+}
+/* expect end */
+
+
+/* why hire start */
+.coo-why-hire-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.coo-why-hire-section .coo-wh-title-content {
+    margin-bottom: 40px;
+}
+.coo-why-hire-section .coo-wh-title-content h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    text-transform: capitalize;
+    color: #3C708E;
+    margin-bottom: 10px;
+}
+.coo-why-hire-section .coo-wh-title-content .coo-wh-title-desc {
+    max-width: 75%;
+}
+.coo-why-hire-section .coo-wh-title-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #757575;
+}
+.coo-why-hire-section .coo-wh-boxes-row {
+    align-items: center;
+}
+.coo-why-hire-section .coo-wh-boxes-row .coo-wh-box-col {
+    display: flex;
+}
+.coo-why-hire-section .wh-box-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 20px;
+    background: #FFFFFF;
+    border-radius: 70px 10px;
+    cursor: pointer;
+}
+.coo-why-hire-section .wh-box-item:hover {
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+}
+.coo-why-hire-section .wh-box-item img {
+    max-height: 40px;
+    margin-right: 20px;
+}
+.coo-why-hire-section .wh-box-item .wh-box-item-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
+    color: #3C708E;
+}
+/* why hire end */
+
+
+/* success-strategy start */
+.coo-success-strategy-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.coo-success-strategy-section .coo-ss-row {
+    align-items: center;
+}
+.coo-success-strategy-section .coo-ss-content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: capitalize;
+    color: #33657E;
+    margin-bottom: 15px;
+}
+.coo-success-strategy-section .coo-ss-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #757575;
+}
+.coo-success-strategy-section .coo-ss-banner {
+    text-align: center;
+}
+.coo-success-strategy-section .coo-ss-banner img {
+    max-width: 100%;
+}
+/* success-strategy end */
+
+
+/* faqs start */
+.coo-faqs-section {
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+.coo-faqs-section .coo-faqs-title-row {
+    background: rgba(108, 160, 188, .1);
+    border-radius: 10px 10px 5px 5px;
+    border-bottom: 5px solid #6CA0BC;
+    padding: 35px 40px;
+}
+.coo-faqs-section .coo-ft-content .coo-ft-subtitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: none;
+    color: #3C708E;
+    margin-bottom: 15px;
+}
+.coo-faqs-section .coo-ft-content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: none;
+    color: #232323;
+    margin-bottom: 20px;
+}
+.coo-faqs-section .coo-ft-content .coo-ft-btn {
+    background: #FFFFFF;
+    border: 2px solid #6CA0BC;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 80px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6CA0BC;
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    max-width: 130px;
+    margin-bottom: -58px;
+}
+.coo-faqs-section .coo-ft-content .coo-ft-btn .fa {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6B9EB9;
+}
+.coo-faqs-section .coo-faqs-list-row.hide {
+    display: none;
+}
+.coo-faqs-section .coo-faqs-list-row {
+    margin-top: 40px;
+    background: rgba(108, 160, 188, .3);
+    border-radius: 10px;
+    border: 1px solid #6CA0BC;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.coo-faqs-section .coo-faqs-list .accordion-item {
+    margin-bottom: 20px;
+}
+.coo-faqs-section .coo-faqs-list .accordion-button {
+    color: #33657e;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    box-shadow: unset;
+    margin-bottom: 0;
+}
+.coo-faqs-section .coo-faqs-list .accordion-button:not(.collapsed) {
+    border-bottom: 1px solid #d0d8dc;
+}
+.coo-faqs-section .coo-faqs-list .accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2333657e'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+.coo-faqs-section .coo-faqs-list .accordion-body {
+    background-color: #e4eaed;
+    padding: 20px;
+}
+.coo-faqs-section .coo-faqs-list .accordion-body p:last-child {
+    margin-bottom: 0;
+}
+/* faqs end */
