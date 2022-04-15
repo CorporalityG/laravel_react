@@ -307,7 +307,7 @@
   font-weight: normal;
   font-size: 18px;
   color: #FFFFFF;
-  max-width: 150px;
+  display: inline-block;
   text-align: center;
   cursor: pointer;
 }

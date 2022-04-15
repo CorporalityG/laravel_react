@@ -48,6 +48,7 @@
 
 .dbanner .boxContent {
   z-index: 1;
+  text-align: center;
 }
 .dbanner .sbox:not(:last-child) {
   border-right: 2px solid rgba(0, 0, 0, 0.2);
@@ -122,9 +123,8 @@
   border-image-slice: 1;
   border-width: 2px;
   border-style: solid;
-  width: 180px;
   padding: 5px 10px;
-  display: block;
+  display: inline-block;
 }
 
 .dbanner .learn-more > img {

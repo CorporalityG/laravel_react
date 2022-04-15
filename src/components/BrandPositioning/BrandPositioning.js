@@ -272,7 +272,7 @@ export default function BrandPositioning() {
                 <Accordion.Item eventKey="0" data-aos="fade-up">
                   <Accordion.Header>
                     <div className="bp-ia-heading">
-                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-favicon-tm-1.png`} alt="Defining Icon" />
+                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-differentiators.png`} alt="Defining Icon" />
                       <span>Defining the true differentiators</span>
                     </div>
                   </Accordion.Header>
@@ -295,7 +295,7 @@ export default function BrandPositioning() {
                 <Accordion.Item eventKey="1" data-aos="fade-up">
                   <Accordion.Header>
                     <div className="bp-ia-heading">
-                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-favicon-tm-2.png`} alt="Perception Icon" />
+                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-perception.png`} alt="Perception Icon" />
                       <span>Perception Management Strategy</span>
                     </div>
                   </Accordion.Header>
@@ -318,7 +318,7 @@ export default function BrandPositioning() {
                 <Accordion.Item eventKey="2" data-aos="fade-up">
                   <Accordion.Header>
                     <div className="bp-ia-heading">
-                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-favicon-tm-3.png`} alt="Brand positioning map Icon" />
+                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-brand.png`} alt="Brand positioning map Icon" />
                       <span>Brand positioning map</span>
                     </div>
                   </Accordion.Header>
@@ -341,7 +341,7 @@ export default function BrandPositioning() {
                 <Accordion.Item eventKey="3" data-aos="fade-up">
                   <Accordion.Header>
                     <div className="bp-ia-heading">
-                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-favicon-tm-4.png`} alt="Maintain Relevance Icon" />
+                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-maintain.png`} alt="Maintain Relevance Icon" />
                       <span>Maintain Relevance</span>
                     </div>
                   </Accordion.Header>
@@ -364,7 +364,7 @@ export default function BrandPositioning() {
                 <Accordion.Item eventKey="4" data-aos="fade-up">
                   <Accordion.Header>
                     <div className="bp-ia-heading">
-                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-favicon-tm-3.png`} alt="Earn a reputation Icon" />
+                      <img src={`${BASE_URL}/img/BrandPositioning/indomitable-earn.png`} alt="Earn a reputation Icon" />
                       <span>Earn a reputation</span>
                     </div>
                   </Accordion.Header>

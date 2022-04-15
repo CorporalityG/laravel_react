@@ -79,9 +79,15 @@ function CorporateStrategy() {
       <div className="coo-level-strategy-section">
         <div className="container-lg">
           <div className="row coo-ls-row">
-            <div className="col-lg-12 coo-ls-col">
+            <div className="col-lg-6 coo-ls-col">
+              <div className="coo-ls-banner">
+                <img src={`${BASE_URL}/img/OutsourcedCOO/strategic-issues.png`} alt="Strategic Issues" data-aos="zoom-in-up" />
+              </div>
+            </div>
+
+            <div className="col-lg-6 coo-ls-col">
               <div className="coo-ls-content coo-ls-difficulty">
-                <div data-aos="fade-up">
+                <div data-aos="fade-up" data-aos-delay="100">
                   <h2>Understanding corporate difficulty</h2>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300">
@@ -89,12 +95,8 @@ function CorporateStrategy() {
                 </div>
               </div>
 
-              <div className="coo-ls-banner">
-                <img src={`${BASE_URL}/img/OutsourcedCOO/Understanding-corporate-difficulty.png`} alt="Understanding corporate difficulty" data-aos="zoom-in-up" />
-              </div>
-
               <div className="coo-ls-content coo-ls-finding">
-                <div data-aos="fade-up">
+                <div data-aos="fade-up" data-aos-delay="100">
                   <h2>Finding your path</h2>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300">
@@ -133,19 +135,6 @@ function CorporateStrategy() {
 
       <div className="coo-expect-section">
         <div className="container-lg">
-          <div className="row coo-expect-title-row">
-            <div className="col-lg-12">
-              <div className="coo-expect-title">
-                <div data-aos="fade-up">
-                  <h2>What to expect?</h2>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="300">
-                  <p>Pushing forward businesses to nail the experience stages for their clients</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div className="row coo-expect-content-row">
             <div className="col-lg-6 coo-ec-col">
               <div className="coo-es-items">
@@ -179,6 +168,15 @@ function CorporateStrategy() {
             </div>
 
             <div className="col-lg-6 coo-ec-col">
+              <div className="coo-expect-title">
+                <div data-aos="fade-up">
+                  <h2>What to expect?</h2>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                  <p>Pushing forward businesses to nail the experience stages for their clients</p>
+                </div>
+              </div>
+              
               <div className="coo-expect-content" data-aos="fade-up" data-aos-delay="300">
                 <p>The beauty lies in balancing sales with the demand for the product or service, which takes into account finance, capacity, and market trends. Companies are often trapped in selling excessively and experience a slump when it comes to deliveries. They are not Market Ready or want to trade exit the business but not able to Value it . The best way to achieve a balance is to mesh sales and delivery together on a flexible interactive platform that can adapt to clients’ requirements. Being an expert in corporate level strategies, Corporality Global creates a predicated and symbiotic internal relationship that reflects externally to create brilliant customer experiences.</p>
               </div>

@@ -506,6 +506,12 @@
 .ibp-innovate-educate-section .ibp-innovate-educate-row {
     align-items: center;
 }
+.ibp-innovate-educate-section .ibp-ie-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .ibp-innovate-educate-section .ibp-ie-content h2 {
     font-style: normal;
     font-weight: 700;
@@ -520,6 +526,7 @@
     font-size: 16px;
     color: #757575;
     max-width: 50%;
+    margin: 0 auto;
 }
 .ibp-innovate-educate-section .ibp-ie-banner {
     display: flex;

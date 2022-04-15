@@ -7,14 +7,14 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
 import Carousel from 'react-grid-carousel'
 import BlogItem from './components/BlogItem';
-import Tabs from 'react-bootstrap/Tabs'
+// import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
-import TabContainer from 'react-bootstrap/TabContainer'
-import TabContent from 'react-bootstrap/TabContent'
-import TabPane from 'react-bootstrap/TabPane'
+// import TabContainer from 'react-bootstrap/TabContainer'
+// import TabContent from 'react-bootstrap/TabContent'
+// import TabPane from 'react-bootstrap/TabPane'
 import Nav from 'react-bootstrap/Nav'
-import MetaTags from 'react-meta-tags';
-import RelatedPost from './components/RelatedPost'
+// import MetaTags from 'react-meta-tags';
+// import RelatedPost from './components/RelatedPost'
 
 function dateFormat(date)
 {

@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import 'bootstrap/dist/js/bootstrap.min.js'
 import "./Blogs.css"
 import BlogItem from "./components/BlogItem";
-import axios from "axios";
+// import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 
 function truncate(text, size)

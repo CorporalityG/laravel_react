@@ -8,6 +8,7 @@ import ServicesInsights from '../ServicesInsights/ServicesInsights';
 import { ApproachItem } from './ApproachItem';
 import Accordion from 'react-bootstrap/Accordion'
 import { useNavigate } from 'react-router-dom'
+import WriteToUsModal from "./WriteToUsModal";
 
 export default function GoToMarketing() {
 
@@ -25,10 +26,17 @@ export default function GoToMarketing() {
 
     const navigate = useNavigate();
 
+    const [showModal, setShowModal] = useState(0);
+
+    const handleCloseModal = () => setShowModal(false);
+    const handleShowModal = (modalId) => {
+        setShowModal(modalId);
+    }
+
     return (
         <>
             <div className="gtm-banner-section">
-                <img src={`${BASE_URL}/img/GoToMarketing/banner.png`} alt="GO-TO Marketing" className="gtm-banner" data-aos="zoom-in" />
+                <img src={`${BASE_URL}/img/GoToMarketing/banner.png`} alt="GO-TO Marketing" className="gtm-banner" data-aos="zoom-in" data-aos-anchor="#gtm-anchor" />
                 <img src={`${BASE_URL}/img/GoToMarketing/banner-rec.png`} alt="Rect" className="gtm-banner-rec" data-aos="zoom-in" />
 
                 <div className="container-lg">
@@ -235,6 +243,79 @@ export default function GoToMarketing() {
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="gtm-expand-section">
+                <div className="container-lg">
+                    <div className="row gtm-expand-content-row">
+                        <div className="col-lg-6 gtm-expand-content-col">
+                            <div className="gtm-ec-banner">
+                                <img src={`${BASE_URL}/img/GoToMarketing/expand-banner.png`} alt="Working with Innovators only" className="ec-b-img" data-aos="fade-right" />
+                                <img src={`${BASE_URL}/img/GoToMarketing/expand-rec.png`} alt="expand-rec" className="ec-b-rec" data-aos="fade-right" data-aos-delay="300" />
+
+                                <img src={`${BASE_URL}/img/GoToMarketing/expand-vector.png`} alt="expand-vector" className="ec-b-vec" data-aos="fade-right" data-aos-delay="500" />
+                                <img src={`${BASE_URL}/img/GoToMarketing/expand-rec-1.png`} alt="expand-rec-1" className="ec-b-rec-2" data-aos="zoom-in" />
+
+                                <img src={`${BASE_URL}/img/GoToMarketing/expand-ellipse.png`} alt="expand-ellipse" className="ec-b-ellipse" data-aos="fade-up" data-aos-delay="300" />
+                                <img src={`${BASE_URL}/img/GoToMarketing/expand-vec.png`} alt="expand-vec" className="ec-b-vec-1" data-aos="fade-up" data-aos-delay="400" />
+                                <img src={`${BASE_URL}/img/GoToMarketing/expand-rect.png`} alt="expand-rect" className="ec-b-rec-1" data-aos="fade-up" data-aos-delay="500" />
+
+                                <div className="ec-b-write-box" data-aos="zoom-in-left" data-aos-delay="500">
+                                    <div className="bw-box-title">To share your pain point</div>
+                                    <div className="bw-box-title">To know how we can help</div>
+                                    <div className="bw-box-btn" onClick={() => handleShowModal('write')}>Write to us</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 gtm-expand-content-col">
+                            <div className="gtm-ec-desc">
+                                <div data-aos="fade-up">
+                                    <h2>Going ‘A’ new market to expand? </h2>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="300">
+                                    <p>We help new products or services to establish new market </p>
+                                </div>
+                                <ul data-aos="fade-up" data-aos-delay="500">
+                                    <li>We can help you to Market research and segmentation</li>
+                                    <li>We can help you with voice of consumer and competitors market share identificaiton</li>
+                                    <li>Work with your Product/service design team to localize the communication to reach end-users</li>
+                                    <li>We can help you to  Product Launch</li>
+                                    <li>Analyse the success and growth to imoprove ongoing market demand</li>
+                                    <li>Working with your team to service the demand generation, distribution model</li>
+                                    <li>Finally Customer experience and serviceability</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <WriteToUsModal show={showModal} handleCloseModal={handleCloseModal} />
+            </div>
+
+            <div className="gtm-product-strategy-section">
+                <div className="container-lg">
+                    <div className="row gtm-ps-row">
+                        <div className="col-lg-12">
+                            <div className="gtm-ps-content">
+                                <div data-aos="fade-up">
+                                    <h2>Product Strategy</h2>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="300">
+                                    <p>A product planning to launch, your strategy can make or break the product perception. Pitching your product perception to your Buyer’s Persona is critical to the success of your Idea and close to a sale in a persuasive way. More importantly scaling your client portfolio is all dependent upon perception - would you agree?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="gtm-ps-banner">
+                                <img src={`${BASE_URL}/img/GoToMarketing/Product-Strategy.png`} alt="Product Strategy" data-aos="zoom-in-up" />
                             </div>
                         </div>
                     </div>
