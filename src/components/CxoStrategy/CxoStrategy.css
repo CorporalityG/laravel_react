@@ -213,6 +213,15 @@
     color: #33657E;
     margin-bottom: 10px;
 }
+.cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-2 .lc-box-title {
+    color: #E5CC5C;
+}
+.cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-3 .lc-box-title {
+    color: #A06DAF;
+}
+.cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-4 .lc-box-title {
+    color: #6CA0BC;
+}
 .cxo-lifecycle-section .cxo-lc-box .lc-box-icon {
     display: flex;
     align-items: center;

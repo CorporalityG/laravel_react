@@ -1,0 +1,230 @@
+/* banner start */
+.mma-banner-section {
+    margin-top: 80px;
+    position: relative;
+}
+.mma-banner-section .mma-banner-row {
+    align-items: center;
+}
+.mma-banner-section .mma-b-content {
+    max-width: 90%;
+}
+.mma-banner-section .mma-b-content .mma-b-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #A06DAF;
+    margin-bottom: 15px;
+}
+.mma-banner-section .mma-b-content h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: #33657E;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.mma-banner-section .mma-b-content .mma-b-subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #232323;
+    margin-bottom: 15px;
+}
+.mma-banner-section .mma-b-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #232323;
+    margin-bottom: 10px;
+}
+.mma-banner-section .mma-b-img-main {
+    text-align: right;
+    margin-top: -3px;
+}
+.mma-banner-section .mma-b-img-main .mma-b-img {
+    max-width: 100%;
+}
+.mma-banner-section .cmo-b-form {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+.mma-banner-section .cmo-b-form .cmo-b-form-control {
+    background: #FFFFFF;
+    border: 1px solid #BFCCD1;
+    box-sizing: border-box;
+    border-radius: 60px;
+    padding: 15px 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #BFCCD1;
+    outline: 0;
+    max-width: 300px;
+}
+.mma-banner-section .cmo-b-form .cmo-b-form-control::placeholder {
+    color: #BFCCD1;
+}
+.mma-banner-section .cmo-b-form .cmo-b-form-control::-moz-placeholder {
+    color: #BFCCD1;
+}
+.mma-banner-section .cmo-b-form .cmo-b-form-control::-webkit-input-placeholder {
+    color: #BFCCD1;
+}
+.mma-banner-section .cmo-b-form .cmo-b-btn {
+    background: linear-gradient(95.12deg, #E2C53F 0%, #6CA0BC 83.42%);
+    border-radius: 60px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 15px 25px;
+    outline: 0;
+    border: 1px solid #BFCCD1;
+    box-sizing: border-box;
+    margin-left: -50px;
+}
+.mma-banner-section .mma-banner-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.mma-banner-section .mma-b-close-1 {
+    position: absolute;
+    top: 20px;
+    left: 51%;
+    animation-name: revolveBannerClose;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.mma-banner-section .mma-b-close-2 {
+    position: absolute;
+    bottom: 100px;
+    left: 53%;
+    animation-name: revolveBannerClose;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.mma-banner-section .mma-b-close-3 {
+    position: absolute;
+    bottom: 30px;
+    right: 30%;
+    animation-name: revolveBannerClose;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes revolveBannerClose {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+.mma-banner-section .mma-b-circle-s {
+    position: absolute;
+    top: 50px;
+    left: 49%;
+    animation-name: stretchBCircleSmall;
+    animation-duration: 2s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 1000ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+@keyframes stretchBCircleSmall {
+    0% {
+      transform: scale(.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+.mma-banner-section .mma-b-circle-b {
+    position: absolute;
+    bottom: 20px;
+    right: 30%;
+    animation-name: stretchBCircleBig;
+    animation-duration: 2.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 1000ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+@keyframes stretchBCircleBig {
+    0% {
+      transform: scale(.3);
+    }
+    100% {
+      transform: scale(.9);
+    }
+}
+.mma-banner-section .mma-b-dot {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+}
+.mma-banner-section .mma-b-circle {
+    position: absolute;
+    left: 55%;
+    bottom: 40%;
+    animation: rotateBannerCircle 5s linear infinite;
+}
+@keyframes rotateBannerCircle {
+    8.33%{transform: translate(25px, 15px);}
+    16.66%{transform: translate(40px, 40px);}
+    24.99%{transform: translate(40px, 65px);}
+    33.33%{transform: translate(25px, 85px);}
+    41.66%{transform: translate(0, 100px);}
+    49.99%{transform: translate(-25px, 100px);}
+    58.33%{transform: translate(-50px, 85px);}
+    66.66%{transform: translate(-65px,65px);}
+    74.99%{transform: translate(-65px,40px);}
+    83.33%{transform: translate(-50px,15px);}
+    91.66%{transform: translate(-25px,0);}
+    100%{transform: translate(0, 0);}
+}
+.mma-banner-section .mma-b-rec {
+    position: absolute;
+    left: 55%;
+    bottom: 40px;
+    animation: rotateBannerRec 5s linear infinite;
+}
+@keyframes rotateBannerRec {
+    0%,
+    100% {
+        transform: rotateX(8.75deg) rotateY(35deg);
+    }
+    50% {
+    transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+    }
+}
+
+.mma-banner-section .mma-social-section {
+    position: absolute;
+    left: 30px;
+    bottom: 50%;
+    transform: translate(0, 50%);
+}
+.mma-banner-section .mma-social-section .mma-social-row {
+    display: flex;
+    flex-direction: column;
+}
+.mma-banner-section .mma-social-section a {
+    color: #33657e;
+    margin-bottom: 10px;
+}
+.mma-banner-section .mma-social-section a i {
+    font-size: 18px;
+}
+.mma-banner-section .mma-social-section a:hover {
+    color: #862995;
+}
+/* banner end */

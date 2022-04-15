@@ -81,10 +81,10 @@ function CxoStrategy() {
             <div className="col-lg-6">
               <div className="cxo-lc-content">
                 <div data-aos="fade-up">
-                  <h2>Helping your Customer lifecycle, ensuring positive CX</h2>
+                  <h2>The fifth role of the CXO - Guide</h2>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="300">
-                  <p>Our chief experience officer (CXO) ensures your brands and companies practicing a customer-centric strategy.  Hire us to increase customer and employee grasp, designing and delivering positive CX, prioritizing your client's viewpoint in delivery processes and tracking key performance indicators.</p>
+                  <p>All of the roles we spoke about integrate into a singular role, that is one of a guide and a mentor. A CXO captains the company ship on the experiential front and helps envision products/services and optimizers that can engage customers and make more sales. Our outsourced CXO doesn’t only engage customers but takes the company in a direction where becoming a customer brings a priceless experience along with it. These experiential revolutions brought about by this highly experienced official incorporates experience staging into various aspects of the business and enhances the value proposition greatly.</p>
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@ function CxoStrategy() {
 
                 <div className="row">
                   <div className="col-md-6 cxo-lc-box-col">
-                    <div className="cxo-lc-box">
+                    <div className="cxo-lc-box cxo-lc-box-1">
                       <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" />
                       <div className="lc-box-content">
                         <div className="lc-box-title" data-aos="fade-up">The Common Denominator</div>
@@ -107,7 +107,7 @@ function CxoStrategy() {
                   </div>
 
                   <div className="col-md-6 cxo-lc-box-col">
-                    <div className="cxo-lc-box">
+                    <div className="cxo-lc-box cxo-lc-box-2">
                       <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" />
                       <div className="lc-box-content">
                         <div className="lc-box-title" data-aos="fade-up">The guardian</div>
@@ -119,7 +119,7 @@ function CxoStrategy() {
                   </div>
 
                   <div className="col-md-6 cxo-lc-box-col">
-                    <div className="cxo-lc-box">
+                    <div className="cxo-lc-box cxo-lc-box-3">
                       <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" />
                       <div className="lc-box-content">
                         <div className="lc-box-title" data-aos="fade-up">Growth Facilitator</div>
@@ -132,7 +132,7 @@ function CxoStrategy() {
                   </div>
 
                   <div className="col-md-6 cxo-lc-box-col">
-                    <div className="cxo-lc-box">
+                    <div className="cxo-lc-box cxo-lc-box-4">
                       <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" />
                       <div className="lc-box-content">
                         <div className="lc-box-title" data-aos="fade-up">Inventor</div>

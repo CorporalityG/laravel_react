@@ -34,6 +34,7 @@
     font-size: 34px;
     text-transform: none;
     color: #33657E;
+    text-transform: capitalize;
 }
 .clients-work-section .clients-work-right .clients-work-content {
     margin-bottom: 30px;
@@ -75,6 +76,7 @@
     font-weight: bold;
     font-size: 22px;
     color: #33657E;
+    text-transform: capitalize;
 }
 .clients-work-section .clients-work-right .clients-work-link {
     font-style: normal;

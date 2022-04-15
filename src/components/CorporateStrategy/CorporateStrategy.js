@@ -135,39 +135,8 @@ function CorporateStrategy() {
 
       <div className="coo-expect-section">
         <div className="container-lg">
-          <div className="row coo-expect-content-row">
-            <div className="col-lg-6 coo-ec-col">
-              <div className="coo-es-items">
-                <div className="coo-es-item coo-es-item-1" data-aos="zoom-in">
-                  <img src={`${BASE_URL}/img/OutsourcedCOO/expect-setting-2.png`} alt="Product and sales Equilibrium" />
-                  <div className="es-item-title" data-aos="zoom-in">Product and sales Equilibrium</div>
-                </div>
-
-                <div className="coo-es-item coo-es-item-2" data-aos="zoom-in">
-                  <img src={`${BASE_URL}/img/OutsourcedCOO/expect-setting-2.png`} alt="Lead Genration and trading" />
-                  <div className="es-item-title" data-aos="zoom-in">Lead Genration and trading</div>
-                </div>
-
-                <div className="coo-es-item coo-es-item-3" data-aos="zoom-out-up">
-                  <img src={`${BASE_URL}/img/OutsourcedCOO/expect-setting-1.png`} alt="Corporality strategy solutions" />
-                  <div className="es-item-heading">
-                    <div className="es-item-h-title" data-aos="zoom-out-down">Corporality strategy solutions</div>
-                  </div>
-                </div>
-
-                <div className="coo-es-item coo-es-item-4" data-aos="zoom-in">
-                  <img src={`${BASE_URL}/img/OutsourcedCOO/expect-setting-2.png`} alt="Capability Testing" />
-                  <div className="es-item-title" data-aos="zoom-in">Capability Testing</div>
-                </div>
-
-                <div className="coo-es-item coo-es-item-5" data-aos="zoom-in">
-                  <img src={`${BASE_URL}/img/OutsourcedCOO/expect-setting-2.png`} alt="Budgeting" />
-                  <div className="es-item-title" data-aos="zoom-in">Budgeting</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-6 coo-ec-col">
+          <div className="row coo-expect-title-row">
+            <div className="col-lg-12">
               <div className="coo-expect-title">
                 <div data-aos="fade-up">
                   <h2>What to expect?</h2>
@@ -176,7 +145,53 @@ function CorporateStrategy() {
                   <p>Pushing forward businesses to nail the experience stages for their clients</p>
                 </div>
               </div>
-              
+            </div>
+          </div>
+
+          <div className="row coo-expect-content-row">
+            <div className="col-lg-6 coo-ec-col">
+              <div className="coo-es-items">
+                <div className="coo-es-item coo-es-item-top" data-aos="zoom-in">
+                  <div className="es-item-icon">
+                    <img src={`${BASE_URL}/img/OutsourcedCOO/Product-and-sales-icon.png`} alt="Product and sales Equilibrium" />
+                  </div>
+                  <div className="es-item-title">Product and sales Equilibrium</div>
+                </div>
+
+                <div className="coo-es-item-middle">
+                  <div className="coo-es-item coo-es-item-right" data-aos="zoom-in">
+                    <div className="es-item-icon">
+                      <img src={`${BASE_URL}/img/OutsourcedCOO/lead-icon.png`} alt="Lead Genration and trading" />
+                    </div>
+                    <div className="es-item-title">Lead Genration and trading</div>
+                  </div>
+
+                  <div className="coo-es-item-3" data-aos="zoom-in">
+                    <div className="es-item-heading">
+                      <div className="es-item-h-border">
+                        <div className="es-item-h-title" data-aos="zoom-in">Corporality strategy solutions</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="coo-es-item coo-es-item-left" data-aos="zoom-in">
+                    <div className="es-item-icon">
+                      <img src={`${BASE_URL}/img/OutsourcedCOO/Capability-icon.png`} alt="Capability Testing" />
+                    </div>
+                    <div className="es-item-title">Capability Testing</div>
+                  </div>
+                </div>
+
+                <div className="coo-es-item coo-es-item-bottom" data-aos="zoom-in">
+                  <div className="es-item-icon">
+                    <img src={`${BASE_URL}/img/OutsourcedCOO/Budgeting-icon.png`} alt="Budgeting" />
+                  </div>
+                  <div className="es-item-title">Budgeting</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-6 coo-ec-col">
               <div className="coo-expect-content" data-aos="fade-up" data-aos-delay="300">
                 <p>The beauty lies in balancing sales with the demand for the product or service, which takes into account finance, capacity, and market trends. Companies are often trapped in selling excessively and experience a slump when it comes to deliveries. They are not Market Ready or want to trade exit the business but not able to Value it . The best way to achieve a balance is to mesh sales and delivery together on a flexible interactive platform that can adapt to clients’ requirements. Being an expert in corporate level strategies, Corporality Global creates a predicated and symbiotic internal relationship that reflects externally to create brilliant customer experiences.</p>
               </div>

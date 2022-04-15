@@ -362,6 +362,7 @@
     text-transform: none;
     color: #3C708E;
     margin-bottom: 50px;
+    text-transform: capitalize;
 }
 .bp-know-section .bp-know-content .bp-kc-subtitle {
     font-style: normal;
@@ -487,6 +488,7 @@
     text-transform: none;
     color: #232323;
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 .bp-faqs-section .bp-ft-content .bp-ft-btn {
     background: #FFFFFF;
@@ -592,7 +594,7 @@
     color: #33657E;
     text-align: center;
     margin-bottom: 10px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .bp-indomitable-section .bp-indomitable-accordion-main {
     background: #FFFFFF;
