@@ -161,14 +161,14 @@ export default function BrandPositioning() {
                 </div>
                 <div className="bp-kc-subtitle" data-aos="fade-up" data-aos-delay="300">Did you know?</div>
                 <div className="row bp-k-boxes-row">
-                  <div className="col-md-4 bp-k-box-col">
+                  <div className="col-lg-4 col-sm-4 pl-lg-0 bp-k-box-col">
                     <div className="bp-k-box" data-aos="fade-up" data-aos-delay="500">
                       <img src={`${BASE_URL}/img/BrandPositioning/know-85-per.png`} alt="Organizations" />
                       <div className="bp-k-box-title">Organizations have brand guidelines</div>
                     </div>
                   </div>
 
-                  <div className="col-md-4 bp-k-box-col" data-aos="fade-up" data-aos-delay="550">
+                  <div className="col-lg-4 col-sm-4 bp-k-box-col" data-aos="fade-up" data-aos-delay="550">
                     <div className="bp-k-box">
                       <img src={`${BASE_URL}/img/BrandPositioning/know-30-per.png`} alt="consistently" />
                       <div className="bp-k-box-title">Only are consistently enforced</div>
@@ -181,21 +181,8 @@ export default function BrandPositioning() {
             <div className="col-lg-6 bp-know-col">
               <div className="bp-know-banner">
                 <div className="bp-kb-img" data-aos="zoom-in">
-                  <img src={`${BASE_URL}/img/BrandPositioning/Brand-Creation-Brand-Position-target.png`} alt="Brand Creation/ Brand Position target" />
+                  <img src={`${BASE_URL}/img/BrandPositioning/Brand-Creation-banner.png`} alt="Brand Creation/ Brand Position target" />
                 </div>
-
-                <div className="bp-kb-title-box">
-                  <div className="bp-kb-title" data-aos="fade-right">Defining Attributes</div>
-                  <div className="bp-kb-title" data-aos="fade-left">Value proposition</div>
-                  <div className="bp-kb-title" data-aos="fade-bottom">Perception strategy</div>
-                  <div className="bp-kb-title" data-aos="zoom-in" data-aos-delay="300">
-                    <div className="bp-kb-heading">Brand Creation/ Brand Position target</div>
-                  </div>
-                  <div className="bp-kb-title" data-aos="fade-up">Building uniqueness, methodology and framework</div>
-                  <div className="bp-kb-title" data-aos="fade-right">How you want to be perceived?</div>
-                  <div className="bp-kb-title" data-aos="fade-left">what success it brings to you</div>
-                </div>
-
               </div>
             </div>
           </div>
@@ -279,10 +266,10 @@ export default function BrandPositioning() {
                   <Accordion.Body>
                     <div className="bp-ia-content">
                       <div className="row">
-                        <div className="col-md-2">
+                        <div className="col-md-2 col-sm-3">
                           <img src={`${BASE_URL}/img/BrandPositioning/defining-banner.png`} alt="Defining" className="bp-ia-banner" />
                         </div>
-                        <div className="col-md-10">
+                        <div className="col-md-10 col-sm-9">
                           <div className="bp-ia-content">
                             <p>Marketing and communication must be executed in a way that will stir consumer interest. Differentiate yourself completely from the competition - stand out of the crowd!</p>
                           </div>
@@ -302,12 +289,12 @@ export default function BrandPositioning() {
                   <Accordion.Body>
                     <div className="bp-ia-content">
                       <div className="row">
-                        <div className="col-md-2">
-                          <img src={`${BASE_URL}/img/BrandPositioning/defining-banner.png`} alt="Perception" className="bp-ia-banner" />
+                        <div className="col-md-2 col-sm-3">
+                          <img src={`${BASE_URL}/img/BrandPositioning/indomitable-perception-banner.png`} alt="Perception" className="bp-ia-banner" />
                         </div>
-                        <div className="col-md-10">
+                        <div className="col-md-10 col-sm-9">
                           <div className="bp-ia-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                            <p>Perception management is the process of making a good first impression last over a period of time by delivering a good product/service and a good customer experience.</p>
                           </div>
                         </div>
                       </div>
@@ -325,12 +312,12 @@ export default function BrandPositioning() {
                   <Accordion.Body>
                     <div className="bp-ia-content">
                       <div className="row">
-                        <div className="col-md-2">
-                          <img src={`${BASE_URL}/img/BrandPositioning/defining-banner.png`} alt="Brand positioning map" className="bp-ia-banner" />
+                        <div className="col-md-2 col-sm-3">
+                          <img src={`${BASE_URL}/img/BrandPositioning/indomitable-brand-banner.png`} alt="Brand positioning map" className="bp-ia-banner" />
                         </div>
-                        <div className="col-md-10">
+                        <div className="col-md-10 col-sm-9">
                           <div className="bp-ia-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                            <p>Brand mapping is an extremely efficient way of mapping differentiators between you and the competition.</p>
                           </div>
                         </div>
                       </div>
@@ -348,12 +335,12 @@ export default function BrandPositioning() {
                   <Accordion.Body>
                     <div className="bp-ia-content">
                       <div className="row">
-                        <div className="col-md-2">
-                          <img src={`${BASE_URL}/img/BrandPositioning/defining-banner.png`} alt="Maintain Relevance" className="bp-ia-banner" />
+                        <div className="col-md-2 col-sm-3">
+                          <img src={`${BASE_URL}/img/BrandPositioning/indomitable-maintain-banner.png`} alt="Maintain Relevance" className="bp-ia-banner" />
                         </div>
-                        <div className="col-md-10">
+                        <div className="col-md-10 col-sm-9">
                           <div className="bp-ia-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                            <p>While true differentiators are important, compelling the target audience is vital to the success of a brand. At Corporality Global, the brand marketing professionals locate all pain points, including unfulfilled desires and focus on placing your brand where the audience needs it the most. You will be up for grabs in no time.</p>
                           </div>
                         </div>
                       </div>
@@ -371,12 +358,12 @@ export default function BrandPositioning() {
                   <Accordion.Body>
                     <div className="bp-ia-content">
                       <div className="row">
-                        <div className="col-md-2">
-                          <img src={`${BASE_URL}/img/BrandPositioning/defining-banner.png`} alt="Earn a reputation" className="bp-ia-banner" />
+                        <div className="col-md-2 col-sm-3">
+                          <img src={`${BASE_URL}/img/BrandPositioning/indomitable-earn-banner.png`} alt="Earn a reputation" className="bp-ia-banner" />
                         </div>
-                        <div className="col-md-10">
+                        <div className="col-md-10 col-sm-9">
                           <div className="bp-ia-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                            <p>Fulfilling expectations over and over again gives you a reputation of being a committed performer. We add intricate innovations to your brand positioning strategy that will create a winner’s attitude among users.</p>
                           </div>
                         </div>
                       </div>
@@ -393,7 +380,7 @@ export default function BrandPositioning() {
         <div className="container">
         <div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" className="aos-init aos-animate">
           <h1 className="animate two">
-            <span>Articulating</span>&nbsp;<span>Yourself</span>&nbsp;<span>- Vreating</span><br></br>
+            <span>Articulating</span>&nbsp;<span>Yourself</span>&nbsp;<span>- Creating</span><br></br>
             <span>Magic</span>&nbsp;<span>From</span>&nbsp;<span>The</span>&nbsp;<span>Basics</span>
           </h1>
         </div>

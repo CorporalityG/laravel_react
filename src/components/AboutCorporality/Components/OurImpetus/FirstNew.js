@@ -35,10 +35,10 @@ function FirstNew() {
             <div className="impetus_text_box2">
               <img src={text_rectangle} alt="" />
             </div>
-            <div className="ourimpetus_textside_heading">OUR IMPETUS</div>
+            <div className="ourimpetus_textside_heading">Our Impetus</div>
             <div className="ourimpetus_textside_description">
-              TO DELIVER THE BEST IN DIGITAL MARKETING AND SALES SOLUTIONS USING
-              INNOVATION AND INTUITION TO CRAFT BUSINESS BRILLIANCE
+            To Deliver The Best In Digital Marketing And Sales Solutions Using
+              Innovation And Intuition To Craft Business Brilliance
             </div>
             <div className="ourimpetus_textside_smalltext">
               We create long-lasting values while helping you embrace change in

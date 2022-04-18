@@ -716,7 +716,7 @@
     .gotomarketing_all_cards_parent {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 0.3fr 1fr 0.3fr 1fr 0.3fr 1fr 0.3fr 1fr 0.3fr 1fr;
+        grid-template-rows: 0.3fr 1fr 0.3fr 1fr 0.3fr 1fr 0.3fr 1fr 0.3fr 0fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }

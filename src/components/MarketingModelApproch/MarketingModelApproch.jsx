@@ -5,6 +5,7 @@ import Aos from "aos";
 import ServicesClients from '../ServicesClients/ServicesClients';
 import ServicesInsights from '../ServicesInsights/ServicesInsights';
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
+import { MarketingApproachStep } from './MarketingApproachStep';
 
 function MarketingModelApproch() {
 
@@ -66,6 +67,107 @@ function MarketingModelApproch() {
                         <a href='https://www.linkedin.com/company/corporality/' target="_blank"><i className="fa fa-linkedin"></i></a>
                         <a href='https://in.pinterest.com/CorporalityG/' target="_blank"><i className="fa fa-pinterest"></i></a>
                         <a href='https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg' target="_blank"><i className="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div className="mma-models-section">
+                <div className="container-lg">
+                    <div className="row mma-models-title-row">
+                        <div className="col-lg-12">
+                            <div className="mma-models-title">
+                                <div data-aos="fade-up">
+                                    <h2>Why Marketing Models?</h2>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="300">
+                                    <p>Intended Maturation Model to optimize your full business.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row mma-models-content-row">
+                        <div className="col-lg-6 mma-ec-col">
+                            <div className="mma-models-banner">
+                                <div className='mma-models-bg' data-aos="zoom-in-up" data-aos-duration="1500"></div>
+                                <img src={`${BASE_URL}/img/MarketingModelApproch/Why-Marketing-Models-banner.png`} alt="Why Marketing Models?" data-aos="zoom-in-up" />
+                                <div className="mma-eb-title" data-aos="fade-up">Source:Gartner (February 2020)</div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 mma-ec-col">
+                            <div className="mma-models-content" data-aos="fade-up" data-aos-delay="300">
+                                <p>Our prosperity business model holds the key understanding of what drives business success in the most complex and challenging business environment. Most measurement solutions stop at a certain level due to limitation of it's ability at granularity dissection and actionable nodes. Corporality prefer to go deeper and now provides maturation model to complete the required solution: Intended Maturation Mix Models.</p>
+                                <p>By connecting strategic and tactical, customer and business lenses, with actionable items to reach the true potential. </p>
+                            </div>
+                            <div class="mma-models-btn" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Explore More</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="mma-marketing-approach-section">
+                <div className="container-lg">
+                    <div className="row mma-ma-title-row">
+                        <div className="col-lg-10">
+                            <div className="mma-ma-title">
+                                <div data-aos="fade-up">
+                                    <h2>We work with 100+ customers to help their marketing approach.</h2>
+                                </div>
+                                <div data-aos="fade-up" data-aos-delay="300">
+                                    <p>Corporality Global initiates a continued discovery process that helps you succeed in today's marketplace. Gain a grasp of the fundamental principles through an innovation marketing strategy programme that offers fresh means to future-proofing your business.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row mma-ma-steps-row">
+                        <div className="mma-ma-border"></div>
+                        <div className="col-lg-10 mma-ma-steps-col mma-ma-steps-col-1">
+                            <MarketingApproachStep
+                                bgIcon={`${BASE_URL}/img/MarketingModelApproch/step-polygon-1.png`}
+                                number={`01`}
+                                title={`Intended Maturation Model`}
+                            />
+
+                            <MarketingApproachStep
+                                bgIcon={`${BASE_URL}/img/MarketingModelApproch/step-polygon-2.png`}
+                                number={`02`}
+                                title={`Matrix and Tools`}
+                            />
+
+                            <MarketingApproachStep
+                                bgIcon={`${BASE_URL}/img/MarketingModelApproch/step-polygon-3.png`}
+                                number={`03`}
+                                title={`Capability and serviceability analysis`}
+                            />
+                        </div>
+
+                        <div className="col-lg-12 mma-ma-steps-col mma-ma-steps-col-2">
+                            <MarketingApproachStep
+                                bgIcon={`${BASE_URL}/img/MarketingModelApproch/step-polygon-4.png`}
+                                number={`04`}
+                                title={`Market Penetration`}
+                            />
+
+                            <MarketingApproachStep
+                                bgIcon={`${BASE_URL}/img/MarketingModelApproch/step-polygon-3.png`}
+                                number={`05`}
+                                title={`Product Line Expansion`}
+                            />
+
+                            <MarketingApproachStep
+                                bgIcon={`${BASE_URL}/img/MarketingModelApproch/step-polygon-1.png`}
+                                number={`06`}
+                                title={`Acquisition`}
+                            />
+
+                            <MarketingApproachStep
+                                bgIcon={`${BASE_URL}/img/MarketingModelApproch/step-polygon-2.png`}
+                                number={`07`}
+                                title={`Partnering`}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

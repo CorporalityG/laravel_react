@@ -82,11 +82,11 @@ const Insights = () => {
                                 <h6>CEO Insights </h6>
                                 <div className="diamond-line"></div>
                             </div>
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/cxo-strategy")}}>
                                 <h6>CXO Insights</h6>
                                 <div className="diamond-line"></div>
                             </div>
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/outsourced-cmo")}}>
                                 <h6>CMO Insights</h6>
                                 <div className="diamond-line"></div>
                             </div>

@@ -99,3 +99,33 @@
     color: #FFFFFF;
     margin-bottom: 0;
 }
+
+
+/* responsive start */
+@media only screen and (max-width: 1399.99px) {
+    .services-insights-section .services-insights-grid-img-effect .services-insights-grid-img {
+        max-height: 570px;
+    }
+}
+
+
+@media only screen and (max-width: 1199.99px) {
+    .services-insights-section .services-insights-grid-img-effect .services-insights-grid-img {
+        max-height: 480px;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .services-insights-section .services-insights-grid-img-effect .services-insights-grid-img {
+        max-height: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .services-insights-section .row > * {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+}

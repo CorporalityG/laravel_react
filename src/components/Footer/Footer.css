@@ -778,7 +778,7 @@
 
 @media only screen and (max-width: 1200px) {
   .footerRow {
-    padding: 20px 40px !important;
+    padding: 60px 40px 20px !important;
     -webkit-box-pack: justify !important;
         -ms-flex-pack: justify !important;
             justify-content: space-between !important;

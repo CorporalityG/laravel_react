@@ -13,13 +13,13 @@ export const ClientWorkItem = (props) => {
     return (
         <div className="container-lg">
             <div className="row">
-                <div className="col-md-4 clients-work-left">
+                <div className="col-lg-4 clients-work-left">
                     <div className="clients-work-img-heading" data-aos="zoom-in-right">
                         {props.thumbnail && <img src={props.thumbnail} alt={props.title} className="clients-work-img" />}
                         <h2 className="clients-work-heading">{props.title}</h2>
                     </div>
                 </div>
-                <div className="col-md-8 clients-work-right">
+                <div className="col-lg-8 clients-work-right">
                     <h3 className="clients-work-title" data-aos="zoom-in-down">Work that Excites us.</h3>
                     <div className="clients-work-content" dangerouslySetInnerHTML={{ __html: props.content }} data-aos="zoom-in-down"></div>
                     <div className="clients-work-boxes">

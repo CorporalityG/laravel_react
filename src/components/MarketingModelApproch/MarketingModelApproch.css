@@ -93,7 +93,7 @@
 }
 .mma-banner-section .mma-banner-bg {
     position: absolute;
-    bottom: 0;
+    bottom: -7px;
     left: 0;
 }
 .mma-banner-section .mma-b-close-1 {
@@ -153,7 +153,7 @@
     animation-duration: 2.5s; 
     animation-timing-function: ease-out; 
     animation-delay: 1000ms;
-    animation-direction: alternate;
+    animation-direction: revert-layer;
     animation-iteration-count: infinite;
     animation-fill-mode: none;
     animation-play-state: running;
@@ -170,6 +170,18 @@
     position: absolute;
     left: 50%;
     top: 45%;
+    animation: nudgeBannerDot 5s linear infinite alternate;
+}
+@keyframes nudgeBannerDot {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50px, 0);
+    }
+    80% {
+        transform: translate(-50px, 0);
+    }
 }
 .mma-banner-section .mma-b-circle {
     position: absolute;
@@ -228,3 +240,226 @@
     color: #862995;
 }
 /* banner end */
+
+
+/* models start */
+.mma-models-section {
+    background-color: #F8F8F8;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-image: url('./img/Why-Marketing-Models-bg.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mma-models-section .mma-models-title {
+    margin-bottom: 40px;
+}
+.mma-models-section .mma-models-title h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    text-transform: capitalize;
+    color: #3C708E;
+    margin-bottom: 10px;
+}
+.mma-models-section .mma-models-title p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #757575;
+    margin-bottom: 10px;
+}
+.mma-models-section .mma-models-content-row {
+    align-items: center;
+}
+.mma-models-section .mma-models-banner {
+    text-align: center;
+    position: relative;
+}
+.mma-models-section .mma-models-banner .mma-models-bg {
+    background: linear-gradient(107.68deg, #6CA0BC 9.62%, #A06DAF 85.16%);
+    border-radius: 20px;
+    height: 75%;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+}
+.mma-models-section .mma-models-banner img {
+    max-width: 100%;
+    position: relative;
+}
+.mma-models-section .mma-models-banner .mma-eb-title {
+    position: relative;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    text-align: left;
+    left: 15%;
+}
+.mma-models-section .mma-models-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #757575;
+    margin-bottom: 10px;
+}
+.mma-models-section .mma-models-btn {
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 30px;
+}
+/* models end */
+
+
+/* marketing-approach start */
+.mma-marketing-approach-section {
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+.mma-marketing-approach-section .mma-ma-title {
+    margin-bottom: 40px;
+}
+.mma-marketing-approach-section .mma-ma-title h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    text-transform: capitalize;
+    color: #3C708E;
+    margin-bottom: 15px;
+}
+.mma-marketing-approach-section .mma-ma-title p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #757575;
+    margin-bottom: 10px;
+}
+.mma-marketing-approach-section .mma-ma-steps-row {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mma-marketing-approach-section .mma-ma-steps-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mma-marketing-approach-section .mma-ma-step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.mma-marketing-approach-section .mma-ma-step:not(:first-child) {
+    margin-left: 45px;
+}
+.mma-marketing-approach-section .mma-ma-step:not(:last-child) {
+    margin-right: 45px;
+}
+.mma-marketing-approach-section .mma-ma-step .ma-step-hexagon-img {
+    width: 224px;
+    height: 250px;
+}
+.mma-marketing-approach-section .mma-ma-step .ma-step-hexagon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+    filter: drop-shadow(0px 0px 24px rgba(19, 34, 47, 0.15));
+    transition: all 0.5s;
+}
+.mma-marketing-approach-section .mma-ma-step .ma-step-number {
+    position: absolute;
+    top: -35px;
+    right: -15px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    color: #F3F3F3;
+    z-index: -1;
+}
+.mma-marketing-approach-section .mma-ma-steps-col-2 .mma-ma-step .ma-step-number {
+    top: initial;
+    bottom: -45px;
+}
+.mma-marketing-approach-section .mma-ma-step .ma-step-title {
+    position: absolute;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #232323;
+    max-width: 70%;
+}
+.mma-marketing-approach-section .mma-ma-border {
+    border: 5px solid #ECF5EB;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 100%;
+    height: 218px;
+    position: absolute;
+}
+.mma-marketing-approach-section .mma-ma-step:hover .ma-step-title {
+    color: #fff;
+}
+.mma-marketing-approach-section .mma-ma-step:hover .ma-step-number {
+    color: #A06DAF;
+}
+.mma-marketing-approach-section .mma-ma-step:hover .ma-step-hexagon {
+    fill: #A06DAF;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-02:hover .ma-step-number {
+    color: #E5CC5C;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-02:hover .ma-step-hexagon {
+    fill: #E5CC5C;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-03:hover .ma-step-number {
+    color: #6CA0BC;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-03:hover .ma-step-hexagon {
+    fill: #6CA0BC;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-04:hover .ma-step-number {
+    color: #33657E;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-04:hover .ma-step-hexagon {
+    fill: #33657E;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-05:hover .ma-step-number {
+    color: #6CA0BC;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-05:hover .ma-step-hexagon {
+    fill: #6CA0BC;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-06:hover .ma-step-number {
+    color: #A06DAF;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-06:hover .ma-step-hexagon {
+    fill: #A06DAF;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-07:hover .ma-step-number {
+    color: #E5CC5C;
+}
+.mma-marketing-approach-section .mma-ma-step.ma-step-07:hover .ma-step-hexagon {
+    fill: #E5CC5C;
+}
+/* marketing-approach end */

@@ -28,6 +28,7 @@
   line-height: 40px;
   color: #ffffff;
   margin-bottom: 10px !important;
+  text-transform: capitalize;
 }
 
 .caretojoinus_description {

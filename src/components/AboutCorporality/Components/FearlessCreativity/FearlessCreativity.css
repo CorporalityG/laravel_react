@@ -23,6 +23,7 @@
   text-transform: none;
   color: #3c708e;
   margin-bottom: 20px !important;
+  text-transform: capitalize;
 }
 
 .fearless_content_1,
