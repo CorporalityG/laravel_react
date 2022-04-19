@@ -220,6 +220,10 @@
     .clients-work-section .carousel-indicators {
         margin-bottom: -40px;
     }
+    .clients-work-section .clients-work-count::before {
+        width: 80px;
+        left: -90px;
+    }
 }
 
 
@@ -290,6 +294,13 @@
     }
     .clients-work-section .clients-work-btn {
         left: 30%;
+    }
+}
+
+
+@media only screen and (max-width: 384.99px) {
+    .clients-work-section .clients-work-btn {
+        left: 27%;
     }
 }
 

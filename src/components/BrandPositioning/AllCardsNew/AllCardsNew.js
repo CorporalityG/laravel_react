@@ -34,7 +34,7 @@ function AllCardsNew() {
   });
   return (
     <>
-      <div className="container gotomarketing_cards_container">
+      <div className="container-lg gotomarketing_cards_container">
         <div className="gotomarketing_all_cards_parent ">
           <div className="gotomarketing_line_vertical">
             <img src={line_vertical} alt="" />

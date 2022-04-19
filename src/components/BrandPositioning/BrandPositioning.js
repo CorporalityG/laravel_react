@@ -377,7 +377,7 @@ export default function BrandPositioning() {
       </div>
 
       <div className="bp-articulating-yourself-section  text-center mx-auto d-flex flex-column align-items-center justify-content-center">
-        <div className="container">
+        <div className="container-lg">
         <div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" className="aos-init aos-animate">
           <h1 className="animate two">
             <span>Articulating</span>&nbsp;<span>Yourself</span>&nbsp;<span>- Creating</span><br></br>

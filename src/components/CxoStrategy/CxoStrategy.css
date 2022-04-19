@@ -8,7 +8,7 @@
 }
 .cxo-banner-section .cxo-banner-top {
     background-color: #fff;
-    height: 100px;
+    height: 250px;
     width: 25%;
     position: absolute;
     top: 0;
@@ -25,7 +25,7 @@
 }
 .cxo-banner-section .cxo-banner-bottom {
     background: linear-gradient(90deg, #A06DAF 34.47%, #6CA0BC 110.64%);
-    height: 80px;
+    height: 150px;
     width: 50%;
     position: absolute;
     right: 0;
@@ -370,6 +370,7 @@
     font-size: 18px;
     text-align: center;
     color: #3C708E;
+    line-height: 1;
 }
 /* leverage model end */
 
@@ -397,7 +398,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #232323;
     margin-bottom: 20px;
 }
@@ -461,3 +462,395 @@
     margin-bottom: 0;
 }
 /* faqs end */
+
+
+
+/* responsive */
+@media only screen and (max-width: 1300.99px) {
+    .cxo-banner-section .cxo-banner-middle {
+        width: 400px;
+    }
+    .cxo-expect-section .cxo-expect-banner {
+        text-align: right;
+    }
+    .cxo-leverage-model-section .cxo-lm-title-content .cxo-lm-title-desc {
+        max-width: 75%;
+    }
+}
+
+
+@media only screen and (max-width: 1280.99px) {
+    .cxo-banner-section .cxo-banner-bottom {
+        height: 180px;
+    }
+    .cxo-leverage-model-section .cxo-lm-title-content .cxo-lm-title-desc {
+        max-width: 85%;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199.99px) {
+    .cxo-lifecycle-section .cxo-lc-boxes {
+        max-width: 100%;
+    }
+    .cxo-lifecycle-section .cxo-lc-content {
+        max-width: 95%;
+    }
+    .cxo-expect-section .cxo-expect-banner img {
+        max-width: 95%;
+    }
+    .cxo-leverage-model-section .lm-box-item img {
+        margin-right: 10px;
+    }
+    .cxo-leverage-model-section .lm-box-item .lm-box-item-title {
+        font-size: 16px;
+    }
+    .cxo-banner-section .cxo-banner-video video {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1080.99px) {
+    .cxo-banner-section .cxo-banner-middle {
+        width: 350px;
+    }
+    .cxo-banner-section .cxo-banner-bottom {
+        height: 200px;
+    }
+}
+
+
+@media only screen and (max-width: 1000.99px) {
+    .cxo-banner-section .cxo-banner-content .cxo-banner-desc {
+        max-width: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 990.99px) {
+    .cxo-banner-section {
+        padding-top: 50px;
+    }
+    .cxo-banner-section .cxo-banner-content {
+        margin-bottom: 50px;
+    }
+    .cxo-banner-section .cxo-banner-content .cxo-banner-desc {
+        max-width: 100%;
+    }
+    .cxo-banner-section .cxo-banner-video video {
+        max-width: 80%;
+    }
+    .cxo-banner-section .banner-path {
+        left: 2%;
+    }
+    .cxo-banner-section .banner-setting-big {
+        left: 10%;
+    }
+    .cxo-banner-section .banner-setting-small {
+        left: 5%;
+    }
+    .cxo-banner-section .cxo-banner-bottom {
+        width: 80%;
+    }
+    .cxo-banner-section .cxo-banner-middle {
+        left: 20%;
+        height: 58%;
+        top: initial;
+        bottom: 0;
+        width: 40%;
+    }
+    .cxo-banner-section .cxo-banner-top {
+        display: none;
+    }
+    .cxo-banner-section .cxo-social-section {
+        bottom: 40%;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-1 {
+        left: 60px;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-2 {
+        right: 60px;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-3 {
+        left: 60px;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-4 {
+        right: 60px;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-3 .lc-box-icon {
+        margin-left: 20px;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-3 .lc-box-icon img:first-child {
+        margin-right: -25px;
+    }
+    .cxo-lifecycle-section .cxo-lc-content {
+        margin-bottom: 30px;
+    }
+    .cxo-expect-section .cxo-expect-banner {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .cxo-expect-section .cxo-expect-banner .cxo-expect-bg {
+        width: 50%;
+        left: 20%;
+    }
+    .cxo-expect-section .cxo-expect-banner .cxo-eb-title {
+        left: 25%;
+    }
+    .cxo-leverage-model-section .lm-box-item {
+        margin-bottom: 15px;
+    }
+    .cxo-faqs-section .cxo-faqs-title-row {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .cxo-faqs-section .cxo-faqs-list-row {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+
+@media only screen and (max-width: 900.99px) {
+    .cxo-banner-section .cxo-banner-middle {
+        height: 55%;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-1 {
+        left: 30px;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-2 {
+        right: 30px;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-3 {
+        left: 30px;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-4 {
+        right: 30px;
+    }
+    .cxo-expect-section .cxo-expect-banner .cxo-expect-bg {
+        left: 15%;
+        width: 55%;
+    }
+    .cxo-expect-section {
+        background-size: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 825.99px) {
+    .cxo-banner-section .cxo-banner-middle {
+        height: 52%;
+    }
+    .cxo-banner-section .cxo-social-section {
+        bottom: 30%;
+    }
+    .cxo-leverage-model-section .cxo-lm-title-content .cxo-lm-title-desc {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 768.99px) {
+    .cxo-expect-section .cxo-expect-banner .cxo-expect-bg {
+        left: 10%;
+        width: 65%;
+    }
+    .cxo-expect-section .cxo-expect-banner .cxo-eb-title {
+        left: 16%;
+    }
+}
+
+
+@media only screen and (max-width: 766.99px) {
+    .cxo-lifecycle-section .cxo-lc-boxes {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 720.99px) {
+    .cxo-banner-section .cxo-banner-middle {
+        height: 50%;
+    }
+    .cxo-banner-section .cxo-banner-video {
+        margin-top: 30px;
+    }
+    .cxo-expect-section .cxo-expect-banner .cxo-expect-bg {
+        left: 5%;
+        width: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 655.99px) {
+    .cxo-banner-section .cxo-banner-middle {
+        height: 47%;
+    }
+    .cxo-expect-section .cxo-expect-banner .cxo-expect-bg {
+        left: 0;
+    }
+    .cxo-expect-section .cxo-expect-banner .cxo-eb-title {
+        left: 10%;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .cxo-banner-section .row > *, 
+    .cxo-lifecycle-section .row > *, 
+    .cxo-expect-section .row > *, 
+    .cxo-leverage-model-section .row > *, 
+    .cxo-faqs-section .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .cxo-banner-section .cxo-social-section {
+        left: 20px;
+    }
+    .cxo-faqs-section .cxo-faqs-title-row {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .cxo-expect-section .cxo-expect-banner {
+        text-align: right;
+    }
+    .cxo-expect-section .cxo-expect-banner .cxo-expect-bg {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .cxo-banner-section .cxo-banner-middle {
+        height: 43%;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-1 {
+        left: 0;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-2 {
+        right: 0;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-3 {
+        left: 0;
+    }
+    .cxo-lifecycle-section .cxo-lc-box.cxo-lc-box-4 {
+        right: 0;
+    }
+    .cxo-lifecycle-section .cxo-lc-box .lifecycle-bg {
+        width: 70%;
+    }
+    .cxo-lifecycle-section .cxo-lc-boxes .lifecycle-favicon {
+        height: 250px;
+        transform: translate(-50%, -55%);
+    }
+    .cxo-lifecycle-section .cxo-lc-box .lc-box-title {
+        margin-bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 500.99px) {
+    .cxo-banner-section .cxo-social-section {
+        left: 30%;
+        bottom: 40px;
+    }
+    .cxo-banner-section .cxo-social-section .cxo-social-row {
+        flex-direction: row;
+    }
+    .cxo-banner-section .cxo-social-section a {
+        margin-bottom: 0;
+        margin-right: 15px;
+        color: #fff;
+    }
+    .cxo-banner-section .cxo-banner-middle {
+        height: 38%;
+    }
+}
+
+
+@media only screen and (max-width: 449.99px) {
+    .cxo-lifecycle-section .cxo-lc-boxes .lifecycle-favicon {
+        position: relative;
+        height: 200px;
+        transform: translate(-50%, 0%);
+    }
+    .cxo-faqs-section .cxo-faqs-list .accordion-body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .cxo-faqs-section .cxo-faqs-list .accordion-button {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 414.99px) {
+    .cxo-banner-section .cxo-banner-middle {
+        height: 33%;
+    }
+    .cxo-lifecycle-section .cxo-lc-box .lifecycle-bg {
+        width: 80%;
+    }
+    .cxo-lifecycle-section .cxo-lc-box .lc-box-title {
+        margin-bottom: 20px;
+    }
+    .cxo-banner-section .cxo-banner-content h1 {
+        font-size: 24px;
+    }
+    .cxo-lifecycle-section .cxo-lc-content h2 {
+        font-size: 24px;
+    }
+    .cxo-leverage-model-section .cxo-lm-title-content h2 {
+        font-size: 24px;
+    }
+    .cxo-leverage-model-section .lm-box-item {
+        justify-content: start;
+    }
+    .cxo-leverage-model-section .lm-box-item .lm-box-item-title {
+        text-align: left;
+    }
+}
+
+
+@media only screen and (max-width: 384.99px) {
+    .cxo-banner-section .cxo-banner-bottom {
+        height: 120px;
+    }
+}
+
+
+@media only screen and (max-width: 360.99px) {
+    .cxo-banner-section .cxo-banner-middle {
+        height: 30%;
+    }
+    .cxo-lifecycle-section .cxo-lc-box .lifecycle-bg {
+        width: 100%;
+    }
+    .cxo-leverage-model-section .cxo-lm-title-content h2 {
+        font-size: 22px;
+    }
+    .cxo-banner-section .cxo-banner-content h1 {
+        font-size: 22px;
+    }
+    .cxo-faqs-section .cxo-faqs-list .accordion-button {
+        font-size: 18px;
+    }
+    .cxo-faqs-section .cxo-ft-content h2 {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .cxo-banner-section .cxo-banner-middle {
+        height: 27%;
+    }
+    .cxo-lifecycle-section .cxo-lc-box .lifecycle-bg {
+        width: 120%;
+    }
+    .cxo-leverage-model-section .lm-box-item .lm-box-item-title {
+        font-size: 16px;
+    }
+}

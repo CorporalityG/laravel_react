@@ -37,7 +37,7 @@ function CxoStrategy() {
           <img src={`${BASE_URL}/img/CxoStrategy/banner-setting-small.png`} alt="Setting Small" data-aos="zoom-in-up" />
         </div>
 
-        <div className="container-fluid px-0">
+        <div className="container-fluid px-lg-0">
           <div className="row cxo-banner-row">
             <div className="col-lg-5 offset-lg-1">
               <div className="cxo-banner-content">
@@ -94,9 +94,9 @@ function CxoStrategy() {
                 <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-favicon.png`} alt="lifecycle-favicon" className="lifecycle-favicon" data-aos="zoom-in-down" />
 
                 <div className="row">
-                  <div className="col-md-6 cxo-lc-box-col">
+                  <div className="col-sm-6 cxo-lc-box-col">
                     <div className="cxo-lc-box cxo-lc-box-1">
-                      <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" />
+                      <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" className="lifecycle-bg" />
                       <div className="lc-box-content">
                         <div className="lc-box-title" data-aos="fade-up">The Common Denominator</div>
                         <div className="lc-box-icon" data-aos="fade-up">
@@ -106,9 +106,9 @@ function CxoStrategy() {
                     </div>
                   </div>
 
-                  <div className="col-md-6 cxo-lc-box-col">
+                  <div className="col-sm-6 cxo-lc-box-col">
                     <div className="cxo-lc-box cxo-lc-box-2">
-                      <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" />
+                      <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" className="lifecycle-bg" />
                       <div className="lc-box-content">
                         <div className="lc-box-title" data-aos="fade-up">The guardian</div>
                         <div className="lc-box-icon" data-aos="fade-up">
@@ -118,9 +118,9 @@ function CxoStrategy() {
                     </div>
                   </div>
 
-                  <div className="col-md-6 cxo-lc-box-col">
+                  <div className="col-sm-6 cxo-lc-box-col">
                     <div className="cxo-lc-box cxo-lc-box-3">
-                      <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" />
+                      <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" className="lifecycle-bg" />
                       <div className="lc-box-content">
                         <div className="lc-box-title" data-aos="fade-up">Growth Facilitator</div>
                         <div className="lc-box-icon" data-aos="fade-up">
@@ -131,9 +131,9 @@ function CxoStrategy() {
                     </div>
                   </div>
 
-                  <div className="col-md-6 cxo-lc-box-col">
+                  <div className="col-sm-6 cxo-lc-box-col">
                     <div className="cxo-lc-box cxo-lc-box-4">
-                      <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" />
+                      <img src={`${BASE_URL}/img/CxoStrategy/lifecycle-bg.png`} alt="lifecycle-bg" data-aos="zoom-in-up" className="lifecycle-bg" />
                       <div className="lc-box-content">
                         <div className="lc-box-title" data-aos="fade-up">Inventor</div>
                         <div className="lc-box-icon" data-aos="fade-up">
@@ -191,7 +191,7 @@ function CxoStrategy() {
             <div className="col-lg-12">
               <div className="cxo-lm-title-content">
                 <div data-aos="fade-up">
-                  <h2>Leverage the on-demand model</h2>
+                  <h2>Leverage the on-Demand model</h2>
                 </div>
                 <div className="cxo-lm-title-desc" data-aos="fade-up" data-aos-delay="300">
                   <p>Experience significant risk mitigation, organisational transformation and turnaround management with our executive CXO leadership that drives company growth through customer experience in a market that runs at warp-speed.</p>

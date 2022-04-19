@@ -61,7 +61,7 @@
     .gotomarketing_side5_card3_text,
     .gotomarketing_side6_card1_text,
     .gotomarketing_side6_card2_text {
-        font-size: 18px !important;
+        font-size: 15px !important;
         line-height: 16px;
     }
 }
@@ -152,7 +152,7 @@
 .gotomarketing_line_horizontal_4,
 .gotomarketing_line_horizontal_5,
 .gotomarketing_line_horizontal_6 {
-    top: 44px;
+    top: 41px;
     left: 0;
     z-index: -1;
 }
@@ -633,8 +633,8 @@
 .gotomarketing_side6_card2_text {
     text-align: center;
     margin-top: 5px !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -666,38 +666,45 @@
 
 @media only screen and (max-width: 1400px) {
     .gotomarketing_line_vertical {
-        left: 150px;
+        left: 120px;
     }
 }
+
+@media only screen and (max-width: 1350.99px) {
+    .gotomarketing_line_vertical {
+        left: 105px;
+    }
+}
+
 @media only screen and (max-width: 1300px) {
     .gotomarketing_line_vertical {
-        left: 140px;
+        left: 105px;
     }
 }
 @media only screen and (max-width: 1200px) {
     .gotomarketing_line_vertical {
-        left: 130px;
+        left: 105px;
     }
 }
 
 @media only screen and (max-width: 1170px) {
     .gotomarketing_line_vertical {
         top: 95px;
-        left: 127px;
+        left: 90px;
         z-index: -1;
     }
 
     .gotomarketing_line_horizontal_1,
     .gotomarketing_line_horizontal_3,
     .gotomarketing_line_horizontal_4 {
-        top: 73px;
+        top: 41px;
         left: 0;
         z-index: -1;
     }
 
     .gotomarketing_line_vertical {
         top: 95px;
-        left: 132px;
+        left: 90px;
         z-index: -1;
     }
 
@@ -709,6 +716,11 @@
     .gotomarketing_line_horizontal_6 img {
         width: 900px;
         height: 2px;
+    }
+
+    .gotomarketing_line_horizontal_3, 
+    .gotomarketing_line_horizontal_4 {
+        top: 68px;
     }
 }
 
@@ -807,6 +819,13 @@
         grid-area: 8 / 5 / 9 / 6;
     }
 
+    .gotomarketing_image_side_4_card7 {
+        grid-area: 9 / 1 / 10 / 1;
+    }
+    .gotomarketing_image_side_4_card6 {
+        grid-area: 9 / 2 / 10 / 2;
+    }
+
     .gotomarketing_cards_text_side_5 {
         grid-area: 9 / 1 / 10 / 6;
     }
@@ -854,13 +873,100 @@
     }
 
     .gotomarketing_line_horizontal_2 {
-        top: 70px;
+        top: 41px;
+    }
+    .gotomarketing_line_horizontal_3, .gotomarketing_line_horizontal_4 {
+        top: 41px;
+    }
+    .gotomarketing_line_vertical {
+        left: 50%;
+        top: 50px;
     }
 }
 
+
+@media only screen and (max-width: 900.99px) {
+    .gotomarketing_all_cards_parent {
+        padding-left: 20px !important;
+    }
+    .gotomarketing_cards_text_side_1, .gotomarketing_cards_text_side_2, .gotomarketing_cards_text_side_3, .gotomarketing_cards_text_side_4, .gotomarketing_cards_text_side_5, .gotomarketing_cards_text_side_6 {
+        margin-right: 20px !important;
+    }
+    .gotomarketing_image_side_1_card1 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_1_card2 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_1_card3 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_1_card4 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_1_card5 {
+        width: 90%;
+    }
+
+    .gotomarketing_image_side_2_card1 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_2_card2 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_2_card3 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_2_card4 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_2_card5 {
+        width: 90%;
+    }
+
+    .gotomarketing_image_side_3_card1 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_3_card2 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_3_card3 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_3_card4 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_3_card5 {
+        width: 90%;
+    }
+
+    .gotomarketing_image_side_4_card1 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_4_card2 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_4_card3 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_4_card4 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_4_card5 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_4_card6 {
+        width: 90%;
+    }
+    .gotomarketing_image_side_4_card7 {
+        width: 90%;
+    }
+}
+
+
 @media only screen and (max-width: 956px) {
     .gotomarketing_line_vertical {
-        left: 105px;
+        left: 50%;
     }
 }
 
@@ -878,15 +984,147 @@
 
 @media only screen and (max-width: 768px) {
     .gotomarketing_line_vertical {
-        left: 90px;
+        left: 50%;
     }
     .gotomarketing_cards_top_heading_text {
         font-size: 18px;
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 667.99px) {
     .gotomarketing_all_cards_parent {
+        padding-left: 0px !important;
+    }
+    .gotomarketing_cards_text_side_1, .gotomarketing_cards_text_side_2, .gotomarketing_cards_text_side_3, .gotomarketing_cards_text_side_4, .gotomarketing_cards_text_side_5, .gotomarketing_cards_text_side_6 {
+        margin-right: 0px !important;
+    }
+    .gotomarketing_side1_card1_text, .gotomarketing_side1_card2_text, .gotomarketing_side1_card3_text, .gotomarketing_side1_card4_text, .gotomarketing_side1_card5_text, .gotomarketing_side2_card1_text, .gotomarketing_side2_card2_text, .gotomarketing_side2_card3_text, .gotomarketing_side2_card4_text, .gotomarketing_side2_card5_text, .gotomarketing_side3_card1_text, .gotomarketing_side3_card2_text, .gotomarketing_side3_card3_text, .gotomarketing_side3_card4_text, .gotomarketing_side3_card5_text, .gotomarketing_side4_card1_text, .gotomarketing_side4_card2_text, .gotomarketing_side4_card3_text, .gotomarketing_side4_card4_text, .gotomarketing_side5_card1_text, .gotomarketing_side5_card2_text, .gotomarketing_side5_card3_text, .gotomarketing_side6_card1_text, .gotomarketing_side6_card2_text {
+        font-size: 14px !important;
+        line-height: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+    .gotomarketing_all_cards_parent {
+        max-width: 75%;
+        margin: 0 auto 40px;
+    }
+    .gotomarketing_line_vertical {
+        display: none;
+    }
+    
+    .gotomarketing_cards_text_side_1 {
+        grid-area: 1 / 1 / 2 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_1_card1 {
+        grid-area: 2 / 1 / 3 / 3;
+        width: 100%;
+    }
+    .gotomarketing_image_side_1_card2 {
+        grid-area: 2 / 4 / 3 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_1_card3 {
+        grid-area: 3 / 1 / 4 / 3;
+        width: 100%;
+    }
+    .gotomarketing_image_side_1_card4 {
+        grid-area: 3 / 4 / 4 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_1_card5 {
+        grid-area: 4 / 1 / 5 / 3;
+        width: 100%;
+    }
+
+    .gotomarketing_cards_text_side_2 {
+        grid-area: 7 / 1 / 4 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_2_card1 {
+        grid-area: 6 / 1 / 7 / 3;
+        width: 100%;
+    }
+    .gotomarketing_image_side_2_card2 {
+        grid-area: 6 / 4 / 7 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_2_card3 {
+        grid-area: 7 / 1 / 8 / 3;
+        width: 100%;
+    }
+    .gotomarketing_image_side_2_card4 {
+        grid-area: 7 / 4 / 8 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_2_card5 {
+        grid-area: 8 / 1 / 9 / 3;
+        width: 100%;
+    }
+
+    .gotomarketing_cards_text_side_3 {
+        grid-area: 9 / 1 / 10 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_3_card1 {
+        grid-area: 10 / 1 / 11 / 3;
+        width: 100%;
+    }
+    .gotomarketing_image_side_3_card2 {
+        grid-area: 10 / 4 / 11 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_3_card3 {
+        grid-area: 11 / 1 / 12 / 3;
+        width: 100%;
+    }
+    .gotomarketing_image_side_3_card4 {
+        grid-area: 11 / 4 / 12 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_3_card5 {
+        grid-area: 12 / 1 / 13 / 3;
+        width: 100%;
+    }
+
+    .gotomarketing_cards_text_side_4 {
+        grid-area: 13 / 1 / 14 / 6;
+    }
+    .gotomarketing_image_side_4_card1 {
+        grid-area: 14 / 1 / 15 / 3;
+        width: 100%;
+    }
+    .gotomarketing_image_side_4_card2 {
+        grid-area: 14 / 4 / 15 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_4_card3 {
+        grid-area: 15 / 1 / 16 / 3;
+        width: 100%;
+    }
+    .gotomarketing_image_side_4_card4 {
+        grid-area: 15 / 4 / 16 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_4_card5 {
+        grid-area: 16 / 1 / 17 / 3;
+        width: 100%;
+    }
+    .gotomarketing_image_side_4_card6 {
+        grid-area: 16 / 4 / 17 / 6;
+        width: 100%;
+    }
+    .gotomarketing_image_side_4_card7 {
+        grid-area: 17 / 1 / 18 / 3;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* .gotomarketing_all_cards_parent {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(18, 1fr);
@@ -982,5 +1220,121 @@
     }
     .gotomarketing_image_side_5_card4 {
         grid-area: 18 / 2 / 19 / 3;
+    } */
+}
+
+
+@media only screen and (max-width: 480.99px) {
+    .gotomarketing_all_cards_parent {
+        max-width: 100%;
+    }
+    .bp-articulating-yourself-section h1 {
+        font-size: calc(1.275rem + 1.5vw);
+    }
+}
+
+
+@media only screen and (max-width: 449.99px) {
+    .bp-articulating-yourself-section h1 {
+        font-size: calc(1.175rem + 1.5vw);
+    }
+}
+
+
+@media only screen and (max-width: 414.99px) {
+    .bp-articulating-yourself-section h1 {
+        font-size: calc(1.075rem + 1.5vw);
+    }
+}
+
+
+@media only screen and (max-width: 375.99px) {
+    .bp-articulating-yourself-section h1 {
+        font-size: calc(1rem + 1.5vw);
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .gotomarketing_cards_text_side_1 {
+        grid-area: 1 / 1 / 2 / 6;
+    }
+    .gotomarketing_image_side_1_card1 {
+        grid-area: 2 / 1 / 3 / 6;
+    }
+    .gotomarketing_image_side_1_card2 {
+        grid-area: 3 / 1 / 3 / 6;
+    }
+    .gotomarketing_image_side_1_card3 {
+        grid-area: 4 / 1 / 4 / 6;
+    }
+    .gotomarketing_image_side_1_card4 {
+        grid-area: 5 / 1 / 5 / 6;
+    }
+    .gotomarketing_image_side_1_card5 {
+        grid-area: 6 / 1 / 6 / 6;
+    }
+
+    .gotomarketing_cards_text_side_2 {
+        grid-area: 7 / 1 / 7 / 6;
+    }
+    .gotomarketing_image_side_2_card1 {
+        grid-area: 8 / 1 / 8 / 6;
+    }
+    .gotomarketing_image_side_2_card2 {
+        grid-area: 9 / 1 / 9 / 6;
+    }
+    .gotomarketing_image_side_2_card3 {
+        grid-area: 10 / 1 / 10 / 6;
+    }
+    .gotomarketing_image_side_2_card4 {
+        grid-area: 11 / 1 / 11 / 6;
+    }
+    .gotomarketing_image_side_2_card5 {
+        grid-area: 12 / 1 / 12 / 6;
+    }
+
+    .gotomarketing_cards_text_side_3 {
+        grid-area: 13 / 1 / 13 / 6;
+    }
+    .gotomarketing_image_side_3_card1 {
+        grid-area: 14 / 1 / 14 / 6;
+    }
+    .gotomarketing_image_side_3_card2 {
+        grid-area: 15 / 1 / 15 / 6;
+    }
+    .gotomarketing_image_side_3_card3 {
+        grid-area: 16 / 1 / 16 / 6;
+    }
+    .gotomarketing_image_side_3_card4 {
+        grid-area: 17 / 1 / 17 / 6;
+    }
+    .gotomarketing_image_side_3_card5 {
+        grid-area: 18 / 1 / 18 / 6;
+    }
+
+    .gotomarketing_cards_text_side_4 {
+        grid-area: 19 / 1 / 19 / 6;
+    }
+    .gotomarketing_image_side_4_card1 {
+        grid-area: 20 / 1 / 20 / 6;
+    }
+    .gotomarketing_image_side_4_card2 {
+        grid-area: 21 / 1 / 21 / 6;
+    }
+    .gotomarketing_image_side_4_card3 {
+        grid-area: 22 / 1 / 22 / 6;
+    }
+    .gotomarketing_image_side_4_card4 {
+        grid-area: 23 / 1 / 23 / 6;
+    }
+    .gotomarketing_image_side_4_card5 {
+        grid-area: 24 / 1 / 24 / 6;
+    }
+    .gotomarketing_image_side_4_card7 {
+        grid-area: 25 / 1 / 25 / 6;
+    }
+    .gotomarketing_image_side_4_card6 {
+        grid-area: 26 / 1 / 26 / 6;
     }
 }
