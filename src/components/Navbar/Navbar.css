@@ -300,18 +300,18 @@
 }
 
 @media only screen and (max-width: 576px) {
-  .corporality-logo {
-    /* width: 181.1px;
-        height: 37px; */
-  }
+  /* .corporality-logo {
+    width: 181.1px;
+        height: 37px;
+  } */
 }
 
 @media only screen and (max-width: 360px) {
-  .corporality-logo {
-    /* width: 146.8px;
-        height: 30px; */
-  }
-  .nav-icon {
-    /* width: ; */
-  }
+  /* .corporality-logo {
+    width: 146.8px;
+        height: 30px;
+  } */
+  /* .nav-icon {
+    width: ;
+  } */
 }

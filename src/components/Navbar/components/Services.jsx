@@ -86,7 +86,7 @@ const Services = () => {
                     <div className="services-img-menu">
                         <Link to="/marketing-model-approch" onClick={closeOnLink}>
                             <div className="services-img-contemt">
-                                <div className="services-img-title">We achieve business growth for our clients through:</div>
+                                <div className="services-img-title">We achieve business growth for our clients through</div>
                                 <ul>
                                     <li>Marketing optimization</li>
                                     <li>Marketing Model & Implementation</li>

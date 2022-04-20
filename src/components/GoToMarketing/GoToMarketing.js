@@ -36,16 +36,15 @@ export default function GoToMarketing() {
     return (
         <>
             <div className="gtm-banner-section">
-                <img src={`${BASE_URL}/img/GoToMarketing/banner.png`} alt="GO-TO Marketing" className="gtm-banner" data-aos="zoom-in" data-aos-anchor="#gtm-anchor" />
                 <img src={`${BASE_URL}/img/GoToMarketing/banner-rec.png`} alt="Rect" className="gtm-banner-rec" data-aos="zoom-in" />
 
                 <div className="container-lg">
                     <div className="row gtm-banner-row">
                         <div className="col-lg-6 offset-lg-6">
                             <div className="gtm-banner-content">
-                                <div className="gtm-b-heading" data-aos="fade-up">GO-TO Marketing</div>
+                                <div className="gtm-b-heading" data-aos="fade-up">Go-To Marketing</div>
                                 <div data-aos="fade-up" data-aos-delay="150">
-                                    <h1>AIM FOR GLOBAL GROWTH</h1>
+                                    <h1>Aim For Global Growth</h1>
                                 </div>
                                 <div className="gtm-b-subtitle" data-aos="fade-up" data-aos-delay="300">Planning for expansion and growth in new markets we got you covered.</div>
                                 <div className="gtm-banner-desc" data-aos="fade-up" data-aos-delay="500">
@@ -58,6 +57,8 @@ export default function GoToMarketing() {
                         </div>
                     </div>
                 </div>
+
+                <img src={`${BASE_URL}/img/GoToMarketing/banner.png`} alt="GO-TO Marketing" className="gtm-banner" data-aos="zoom-in" data-aos-anchor="#gtm-anchor" />
             </div>
 
             <div className="gtm-approach-section">
@@ -66,7 +67,7 @@ export default function GoToMarketing() {
                         <ApproachItem
                             number={`01`}
                             title={`Market Research`}
-                            content={`<p>Identification stage for market to be segmented<p>`}
+                            content={`<p>Identification stage for market to be segmented</p>`}
                         />
 
                         <ApproachItem
@@ -83,7 +84,7 @@ export default function GoToMarketing() {
                                 `}
                         />
 
-                        <div className="col-lg-4 gtm-a-col">
+                        <div className="col-lg-4 gtm-a-col gtm-a-col-middle">
                             <div className="gtm-a-item-middle">
                                 <img src={`${BASE_URL}/img/GoToMarketing/Our-Approach-banner.png`} alt="GO-TO Marketing" className="gtm-banner" data-aos="zoom-in" />
                                 <div className="a-item-title-middle" data-aos="zoom-out-up">Our Approach to Go-To-Market Positioning</div>
@@ -93,13 +94,13 @@ export default function GoToMarketing() {
                         <ApproachItem
                             number={`03`}
                             title={`Product Launch`}
-                            content={`<p>Creating the impact to last<p>`}
+                            content={`<p>Creating the impact to last</p>`}
                         />
 
                         <ApproachItem
                             number={`04`}
                             title={`Bench Marking`}
-                            content={`<p>Evaluation to asure the growth<p>`}
+                            content={`<p>Evaluation to asure the growth</p>`}
                         />
                     </div>
                 </div>
@@ -111,7 +112,7 @@ export default function GoToMarketing() {
                         <div className="col-lg-12">
                             <div className="gtm-fw-content">
                                 <div data-aos="fade-up">
-                                    <h2>FINDING NEW WAYS TO BRINGING PRODUCTS AND SERVICES TO THE MARKET </h2>
+                                    <h2>Finding New Ways To Bringing Products And Services To The Market</h2>
                                 </div>
                                 <div className="gtm-fw-desc" data-aos="fade-up" data-aos-delay="500">
                                     <p>A solid Go To Marketing (GTM) strategy drives the success of products and services in a new or an existing market. Coordinated messaging, precise product positioning and a clearly defined customer persona are all instrumental in the market progress of a product or service. Our effective go to marketing strategy also lays the foundation for developing newer products and services while keeping all business units aligned with the plan.</p>

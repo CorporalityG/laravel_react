@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import './About.css'
 import careersImg from '../assets/careers.png';
 import OutsideClickHandler from 'react-outside-click-wrapper';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { NavbarContext } from '../Context/NavbarContext';
 import topHandler from "../../../CommonHandler/TopHandler"
 // import {withRouter} from 'react-router';
@@ -10,7 +10,6 @@ import topHandler from "../../../CommonHandler/TopHandler"
 
 const About = () => {
     const {setShowAbout, showAbout, setShowAbout2, setMenuId, isLargeScreen} = useContext(NavbarContext);
-    const navigate = useNavigate();
 
     const show1 = () => {
         setMenuId(1);

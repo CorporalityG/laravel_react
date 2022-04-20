@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import './SayHelloContact.css'
 import OutsideClickHandler from 'react-outside-click-wrapper';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { NavbarContext } from '../Context/NavbarContext';
 import topHandler from '../../../CommonHandler/TopHandler';
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
+import { BASE_URL } from '../../../config';
 
 function SayHelloContact() {
 

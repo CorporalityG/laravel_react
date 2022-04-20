@@ -141,8 +141,7 @@
     margin-bottom: 15px;
 }
 .services-section-right .services-img-menu ul {
-    list-style: none;
-    padding-left: 0;
+    padding-left: 15px;
 }
 .services-section-right .services-img-menu ul li {
     font-style: normal;
@@ -210,5 +209,31 @@
     }
     .strategic-consultancy{
         display: none;
+    }
+    .services-container .services-section-left {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 30px;
+        background-color: #fff;
+        padding-top: 15px;
+        position: relative;
+    }
+    .services-section-items {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .services-container .services-section-head .line {
+        width: 40px;
+    }
+    .services-container .services-section-right {
+        width: 95%;
+        margin: 0 auto 20px;
+    }
+    .services-section-right .services-img-menu {
+        right: initial;
+    }
+    .services-section-right .services-img-menu .services-img {
+        max-width: 100px;
     }
 }

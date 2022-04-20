@@ -37,7 +37,7 @@ function CorporateStrategy() {
           <img src={`${BASE_URL}/img/OutsourcedCOO/banner-setting-small.png`} alt="Setting Small" data-aos="zoom-in-up" />
         </div>
 
-        <div className="container-fluid px-0">
+        <div className="container-fluid px-lg-0">
           <div className="row coo-banner-row">
             <div className="col-lg-5 offset-lg-1">
               <div className="coo-banner-content">

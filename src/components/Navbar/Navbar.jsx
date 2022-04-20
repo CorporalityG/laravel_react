@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import './Navbar.css';
 import logo from './assets/logo.png';
 import About from './components/About';
 import Services from './components/Services';
-import Industries from './components/Industries';
+// import Industries from './components/Industries';
 import About2 from './components/About2';
 import { useMediaQuery } from 'react-responsive';
 import OutsideClickHandler from 'react-outside-click-wrapper';

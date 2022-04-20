@@ -26,3 +26,21 @@
 .say-hello-container .say-hello-section .say-hello-item:hover {
     color: #A06DAF;
 }
+
+
+/* responsive start */
+@media only screen and (max-width: 1200px) {
+    .nav-item.contact-no > div {
+        margin-left: 15px !important;
+    }
+    .say-hello-container {
+        right: initial;
+        transform: translateX(0);
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .nav-item.contact-no::after {
+        bottom: -6px;
+    }
+}

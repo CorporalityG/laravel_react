@@ -8,7 +8,7 @@
 }
 .cmo-banner-section .cmo-banner-top {
     background-color: #fff;
-    height: 100px;
+    height: 250px;
     width: 25%;
     position: absolute;
     top: 0;
@@ -25,7 +25,7 @@
 }
 .cmo-banner-section .cmo-banner-bottom {
     background: linear-gradient(90deg, #A06DAF 34.47%, #6CA0BC 110.64%);
-    height: 80px;
+    height: 150px;
     width: 50%;
     position: absolute;
     right: 0;
@@ -418,7 +418,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #232323;
     margin-bottom: 20px;
 }
@@ -482,3 +482,450 @@
     margin-bottom: 0;
 }
 /* faqs end */
+
+
+
+/* responsive */
+@media only screen and (min-width: 992px) and (max-width: 1399.99px) {
+    .cmo-lifecycle-section .cmo-lc-title-content {
+        max-width: 80%;
+    }
+    .cmo-lifecycle-section .cmo-lc-step {
+        max-width: 330px;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-1 {
+        left: 0;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-2 {
+        right: 0;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-3 {
+        right: 0;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-4 {
+        right: 0;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-5 {
+        left: 0;
+    }
+    .cmo-why-hire-section .wh-box-item {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .cmo-why-hire-section .wh-box-item .wh-box-item-title {
+        font-size: 16px;
+    }
+    .cmo-why-hire-section .wh-box-item img {
+        margin-right: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 1300.99px) {
+    .cmo-banner-section .cmo-banner-middle {
+        width: 400px;
+    }
+    .cmo-why-hire-section .cmo-wh-title-content .cmo-wh-title-desc {
+        max-width: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 1280.99px) {
+    .cmo-banner-section .cmo-banner-content .cmo-banner-desc {
+        max-width: 90%;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199.99px) {
+    .cmo-lifecycle-section .cmo-lc-step {
+        max-width: 300px;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-1 {
+        left: -60px;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-2 {
+        right: -50px;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-3 {
+        right: -50px;
+        top: 58%;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-4 {
+        right: -50px;
+        bottom: -70px;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-5 {
+        left: -60px;
+    }
+    .cmo-expect-section .cmo-expect-banner .cmo-expect-bg {
+        width: 90%;
+        left: -30px;
+    }
+    .cmo-why-hire-section .cmo-wh-boxes-row .cmo-wh-box-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .cmo-why-hire-section .wh-box-item .wh-box-item-title {
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-width: 1199.99px) {
+    .cmo-lifecycle-section .cmo-lc-title-content {
+        max-width: 95%;
+    }
+}
+
+
+@media only screen and (max-width: 1115.99px) {
+    .cmo-banner-section .cmo-banner-bottom {
+        height: 170px;
+    }
+    .cmo-banner-section .cmo-banner-content .cmo-banner-desc {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1080.99px) {
+    .cmo-lifecycle-section .cmo-lc-step {
+        max-width: 250px;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-1 {
+        left: 0;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-2 {
+        right: 0;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-3 {
+        right: 0;
+        top: 60%;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-4 {
+        right: 0;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-5 {
+        left: 0;
+    }
+    .cmo-lifecycle-section .cmo-lc-step .lc-step-desc {
+        font-size: 14px;
+    }
+    .cmo-lifecycle-section .cmo-lc-step .lc-step-title {
+        margin-bottom: 5px;
+    }
+    .cmo-banner-section .cmo-banner-content h1 {
+        font-size: 24px;
+    }
+    .cmo-banner-section .cmo-banner-content .cmo-banner-subtitle {
+        font-size: 17px;
+    }
+    .cmo-banner-section .cmo-banner-content p {
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 990.99px) {
+    .cmo-banner-section {
+        padding-top: 50px;
+    }
+    .cmo-banner-section .cmo-banner-content {
+        margin-bottom: 50px;
+    }
+    .cmo-banner-section .cmo-banner-content .cmo-banner-desc {
+        max-width: 100%;
+    }
+    .cmo-banner-section .cmo-banner-video video {
+        max-width: 80%;
+    }
+    .cmo-banner-section .banner-path {
+        left: 2%;
+    }
+    .cmo-banner-section .banner-setting-big {
+        left: 10%;
+    }
+    .cmo-banner-section .banner-setting-small {
+        left: 5%;
+    }
+    .cmo-banner-section .cmo-banner-bottom {
+        width: 80%;
+    }
+    .cmo-banner-section .cmo-banner-middle {
+        left: 20%;
+        height: 58%;
+        top: initial;
+        bottom: 0;
+        width: 40%;
+    }
+    .cmo-banner-section .cmo-banner-top {
+        display: none;
+    }
+    .cmo-banner-section .cmo-social-section {
+        bottom: 40%;
+    }
+    .cmo-lifecycle-section .cmo-lc-title-content {
+        max-width: 100%;
+    }
+    .cmo-lifecycle-section .cmo-lc-steps-content {
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+    .cmo-lifecycle-section .cmo-lc-steps-content .cmo-lc-steps-banner {
+        margin-bottom: 15px;
+        height: auto;
+    }
+    .cmo-lifecycle-section .cmo-lc-step {
+        position: relative;
+        max-width: 400px;
+        margin-bottom: 10px;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-1 {
+        left: 0;
+        top: initial;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-2 {
+        left: 0;
+        right: initial;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-3 {
+        left: 0;
+        right: initial;
+        top: initial;
+        transform: translate(0, 0);
+    }
+    .cmo-lifecycle-section .cmo-lc-step-4 {
+        left: 0;
+        right: initial;
+    }
+    .cmo-lifecycle-section .cmo-lc-step-5 {
+        left: 0;
+    }
+    .cmo-expect-section {
+        background-size: 100%;
+    }
+    .cmo-expect-section .cmo-expect-banner {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .cmo-expect-section .cmo-expect-banner .cmo-expect-bg {
+        width: 50%;
+        left: 20%;
+    }
+    .cmo-expect-section .cmo-expect-content {
+        margin-top: 40px;
+    }
+    .cmo-why-hire-section .cmo-wh-title-content .cmo-wh-title-desc {
+        max-width: 100%;
+    }
+    .cmo-why-hire-section .wh-box-item {
+        margin-bottom: 15px;
+    }
+    .cmo-faqs-section .cmo-faqs-title-row {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .cmo-faqs-section .cmo-faqs-list-row {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+
+@media only screen and (max-width: 915.99px) {
+    .cmo-expect-section .cmo-expect-banner .cmo-expect-bg {
+        left: 15%;
+        width: 55%;
+    }
+}
+
+
+@media only screen and (max-width: 825px) {
+    .cmo-banner-section .cmo-banner-middle {
+        height: 55%;
+    }
+    .cmo-banner-section .cmo-social-section {
+        bottom: 30%;
+    }
+}
+
+
+@media only screen and (max-width: 768.99px) {
+    .cmo-expect-section .cmo-expect-banner .cmo-expect-bg {
+        left: 10%;
+        width: 65%;
+    }
+    .cmo-banner-section .cmo-banner-middle {
+        height: 53%;
+    }
+}
+
+
+@media only screen and (max-width: 721.99px) {
+    .cmo-banner-section .cmo-banner-middle {
+        height: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+    .cmo-expect-section .cmo-expect-banner .cmo-expect-bg {
+        left: 5%;
+        width: 75%;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .cmo-banner-section .row > *, 
+    .cmo-lifecycle-section .row > *, 
+    .cmo-expect-section .row > *, 
+    .cmo-why-hire-section .row > *, 
+    .cmo-faqs-section .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .cmo-banner-section .cmo-social-section {
+        left: 20px;
+    }
+    .cmo-faqs-section .cmo-faqs-title-row {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .cmo-expect-section .cmo-expect-banner {
+        text-align: right;
+    }
+    .cmo-expect-section .cmo-expect-banner .cmo-expect-bg {
+        width: 90%;
+        left: 0;
+    }
+    .cmo-banner-section .cmo-banner-middle {
+        height: 47%;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .cmo-banner-section .cmo-banner-middle {
+        height: 43%;
+    }
+    .cmo-banner-section .cmo-social-section {
+        bottom: 28%;
+    }
+}
+
+
+@media only screen and (max-width: 520.99px) {
+    .cmo-expect-section .cmo-expect-banner img {
+        max-width: 95%;
+    }
+    .cmo-banner-section .cmo-social-section {
+        left: 30%;
+        bottom: 40px;
+    }
+    .cmo-banner-section .cmo-social-section .cmo-social-row {
+        flex-direction: row;
+    }
+    .cmo-banner-section .cmo-social-section a {
+        margin-bottom: 0;
+        margin-right: 15px;
+        color: #fff;
+    }
+}
+
+
+@media only screen and (max-width: 480.99px) {
+    .cmo-banner-section .cmo-banner-content h1 {
+        font-size: 24px;
+    }
+    .cmo-banner-section .cmo-banner-content .cmo-banner-subtitle {
+        font-size: 17px;
+    }
+    .cmo-banner-section .cmo-banner-content p {
+        font-size: 16px;
+    }
+    .cmo-lifecycle-section .cmo-lc-title-content h2 {
+        font-size: 24px;
+    }
+    .cmo-lifecycle-section .cmo-lc-title-content p {
+        font-size: 16px;
+    }
+    .cmo-expect-section .cmo-expect-title h2 {
+        font-size: 26px;
+    }
+    .cmo-expect-section .cmo-expect-content ul li {
+        font-size: 16px;
+    }
+    .cmo-why-hire-section .cmo-wh-title-content h2 {
+        font-size: 24px;
+    }
+    .cmo-why-hire-section .cmo-wh-title-content p {
+        font-size: 16px;
+    }
+    .cmo-faqs-section .cmo-faqs-list .accordion-button {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .cmo-faqs-section .cmo-faqs-list .accordion-body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 449.99px) {
+    .cmo-banner-section .cmo-banner-middle {
+        height: 40%;
+    }
+    .cmo-why-hire-section .wh-box-item {
+        justify-content: start;
+    }
+}
+
+
+@media only screen and (max-width: 414.99px) {
+    .cmo-banner-section .cmo-banner-middle {
+        height: 37%;
+    }
+}
+
+
+@media only screen and (max-width: 414.99px) {
+    .cmo-banner-section .cmo-banner-middle {
+        height: 34%;
+    }
+}
+
+
+@media only screen and (max-width: 345.99px) {
+    .cmo-banner-section .cmo-banner-middle {
+        height: 31%;
+    }
+    .cmo-banner-section .cmo-banner-content h1 {
+        font-size: 22px;
+    }
+    .cmo-lifecycle-section .cmo-lc-title-content h2 {
+        font-size: 22px;
+    }
+    .cmo-why-hire-section .cmo-wh-title-content h2 {
+        font-size: 22px;
+    }
+    .cmo-why-hire-section .wh-box-item .wh-box-item-title {
+        font-size: 16px;
+    }
+    .cmo-faqs-section .cmo-ft-content h2 {
+        font-size: 20px;
+    }
+    .cmo-faqs-section .cmo-faqs-list .accordion-button {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .cmo-banner-section .cmo-banner-middle {
+        height: 28%;
+    }
+}
