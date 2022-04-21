@@ -8,18 +8,18 @@ function WriteToUsModal(props) {
 
     return (
         <>
-            <Modal show={show == 'write' ? show : ''} onHide={handleCloseModal} className="gtm-write-us-modal">
+            <Modal show={show === 'write' ? show : ''} onHide={handleCloseModal} className="gtm-write-us-modal">
                 <Modal.Header closeButton></Modal.Header>
                 <Modal.Body>
-                    <div className="container-fluid pl-0">
+                    <div className="container-fluid pl-sm-0">
                         <div className="row gtm-wu-modal-row">
-                            <div className="col-lg-5 pr-0">
+                            <div className="col-sm-5 pr-0">
                                 <div className="gtm-wu-banner">
                                     <img src={`${BASE_URL}/img/GoToMarketing/write-to-us-banner.png`} alt="Write to us" />
                                 </div>
                             </div>
 
-                            <div className="col-lg-7 pl-0">
+                            <div className="col-sm-7 pl-0">
                                 <div className="gtm-wu-content">
                                     <div className="gtm-wu-heading">Write to us</div>
                                     <div className="gtm-wu-form">

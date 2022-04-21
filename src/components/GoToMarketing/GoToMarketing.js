@@ -209,7 +209,7 @@ export default function GoToMarketing() {
                                             <p>All well-established plans are useless with poor execution. With our Go To Marketing strategy, we will help you optimize your sales channels, price and packages, and allocate resources to ensure seamless implementation of the plan.</p>
 
                                             <div className="row faq-box-row">
-                                                <div className="col-md-5">
+                                                <div className="col-lg-5 col-md-6">
                                                     <div className="faq-box-main">
                                                         <div className="faq-box-img">
                                                             <img src={`${BASE_URL}/img/GoToMarketing/product-launch-and-relaunch.png`} alt="launch and relaunch" />
@@ -223,7 +223,7 @@ export default function GoToMarketing() {
                                                     </div>
                                                 </div>
 
-                                                <div className="col-md-5">
+                                                <div className="col-lg-5 col-md-6">
                                                     <div className="faq-box-main">
                                                         <div className="faq-box-img">
                                                             <img src={`${BASE_URL}/img/GoToMarketing/Business-growth.png`} alt="Business Growth" />

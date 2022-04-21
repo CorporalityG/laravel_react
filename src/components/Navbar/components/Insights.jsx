@@ -31,7 +31,7 @@ const Insights = () => {
                             </div>
 
                             
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink(); window.open("https://corporality.global/businessmagazine", "_blank");}}>
                                 <h6>Corporality - Magazine</h6>
                                 <div className="diamond-line"></div>
                             </div>
@@ -52,21 +52,21 @@ const Insights = () => {
                                 <h6>Service Insights</h6>
                                 <div className="diamond-line"></div>
                             </div>
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/article")}}>
+                            {/* <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/article")}}>
                                 <h6>Industrial Resources</h6>
                                 <div className="diamond-line"></div>
-                            </div>
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink(); navigate("/research-papers")}}>
+                            </div> */}
+                            {/* <div className="insights-container-body-section" onClick={() => {closeOnLink(); navigate("/research-papers")}}>
                                 <h6>Research Papers</h6>
                                 <div className="diamond-line"></div>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="col-md-3">
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            {/* <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
                                 <h6>Download Resources</h6>
                                 <div className="diamond-line"></div>
-                            </div>
+                            </div> */}
                             <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
                                 <h6>Video Library</h6>
                                 <div className="diamond-line"></div>

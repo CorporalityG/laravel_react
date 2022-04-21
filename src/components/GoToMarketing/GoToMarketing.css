@@ -584,6 +584,7 @@
     font-size: 32px;
     color: #3C708E;
     margin-bottom: 25px;
+    text-transform: capitalize;
 }
 .gtm-write-us-modal .gtm-wu-form .form-group {
     margin-bottom: 25px;
@@ -889,7 +890,7 @@
         max-width: 100%;
     }
     .gtm-expand-section .gtm-ec-banner {
-        margin-bottom: 40px;
+        margin-bottom: 70px;
     }
     .gtm-expand-section .gtm-ec-banner .ec-b-img {
         top: 0;
@@ -919,5 +920,324 @@
         bottom: initial;
         top: 20px;
         left: calc(10% + 40px);
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-write-box {
+        bottom: -50px;
+        right: 15%;
+    }
+}
+
+
+@media only screen and (max-width: 900.99px) {
+    .gtm-expand-section .gtm-ec-banner .ec-b-write-box {
+        right: 10%;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-vec {
+        left: 13%;
+    }
+}
+
+
+@media only screen and (max-width: 800.99px) {
+    .gtm-expand-section .gtm-ec-banner .ec-b-rec {
+        left: 20%;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-vec {
+        left: 6%;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-ellipse {
+        left: 5%;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-vec-1 {
+        left: calc(5% + 35px);
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-rec-1 {
+        left: calc(5% + 40px);
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-write-box {
+        right: 4%;
+    }
+}
+
+
+@media only screen and (max-width: 766.99px) {
+    .gtm-faqs-section .gtm-faqs-list .faq-box-row .col-md-6:not(:last-child) .faq-box-main {
+        margin-bottom: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+    .gtm-expand-section .gtm-ec-banner {
+        text-align: right;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-img {
+        left: initial;
+        transform: translate(0, 0);
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-rec {
+        left: 30%;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-vec {
+        left: 12%;
+        bottom: 0;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-rec-2 {
+        top: -70px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-write-box {
+        right: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 620.99px) {
+    .gtm-finding-ways-section .gtm-fw-content h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .gtm-banner-section .row > *, 
+    .gtm-finding-ways-section .row > *, 
+    .gtm-faqs-section .row > *, 
+    .gtm-expand-section .row > *, 
+    .gtm-product-strategy-section .row > *, 
+    .gtm-write-us-modal .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .gtm-faqs-section .gtm-faqs-title-row {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-rec {
+        top: 0;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-vec {
+        left: 8%;
+        bottom: -25px;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .gtm-write-us-modal .gtm-wu-modal-row {
+        flex-direction: column-reverse;
+    }
+    .gtm-write-us-modal .modal-body {
+        padding-left: 1rem;
+    }
+    .gtm-write-us-modal .gtm-wu-banner {
+        margin-left: -1.7rem;
+    }
+}
+
+
+@media only screen and (max-width: 500.99px) {
+    .gtm-banner-section .gtm-banner-content h1 {
+        font-size: 32px;
+    }
+    .gtm-finding-ways-section .gtm-fw-content h2 {
+        font-size: 24px;
+    }
+    .gtm-faqs-section .gtm-faqs-list .accordion-button {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-write-box {
+        position: relative;
+        right: initial;
+    }
+    .gtm-expand-section .gtm-ec-desc {
+        margin-top: 20px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-rec {
+        top: -50px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-vec {
+        bottom: initial;
+        top: 180px;
+    }
+}
+
+
+@media only screen and (max-width: 449.99px) {
+    .gtm-expand-section .gtm-ec-banner .ec-b-rec {
+        max-height: 280px;
+        top: -30px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-vec {
+        max-height: 70px;
+    }
+}
+
+
+@media only screen and (max-width: 414.99px) {
+    .gtm-faqs-section .gtm-faqs-list .faq-box-main .faq-box-img {
+        margin-right: 25px;
+    }
+    .gtm-faqs-section .gtm-faqs-list .faq-box-main {
+        padding: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 390.99px) {
+    .gtm-banner-section .gtm-banner-content h1 {
+        font-size: 28px;
+    }
+    .gtm-banner-section {
+        padding-top: 50px;
+    }
+    .gtm-banner-section .gtm-banner-rec {
+        right: 20%;
+        top: 20px;
+    }
+    .gtm-finding-ways-section .gtm-fw-content h2 {
+        font-size: 22px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-rec {
+        max-height: 230px;
+        top: -15px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-vec {
+        top: 150px;
+    }
+    .gtm-expand-section .gtm-ec-desc h2 {
+        font-size: 20px;
+    }
+    .gtm-expand-section .gtm-ec-desc ul li {
+        font-size: 15px;
+    }
+    .gtm-faqs-section .gtm-faqs-list .faq-box-main .faq-box-title {
+        font-size: 15px;
+    }
+    .gtm-faqs-section .gtm-faqs-list .faq-box-main .faq-box-img {
+        margin-right: 15px;
+    }
+    .gtm-faqs-section .gtm-faqs-list .accordion-body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .gtm-approach-section .gtm-a-item-middle .gtm-banner {
+        height: auto;
+    }
+}
+
+
+@media only screen and (max-width: 360.99px) {
+    .gtm-banner-section .gtm-banner-content h1 {
+        font-size: 24px;
+    }
+    .gtm-banner-section .gtm-banner-content .gtm-b-subtitle {
+        font-size: 17px;
+    }
+    .gtm-approach-section .gtm-a-item-middle .a-item-title-middle {
+        max-width: 70%;
+    }
+    .gtm-finding-ways-section .gtm-fw-content h2 {
+        font-size: 20px;
+    }
+    .gtm-faqs-section .gtm-faqs-list .accordion-button {
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .gtm-approach-section .gtm-a-item-middle .a-item-title-middle {
+        max-width: 80%;
+        font-size: 20px;
+    }
+    .gtm-finding-ways-section .gtm-fw-content h2 {
+        font-size: 18px;
+    }
+    .gtm-faqs-section .gtm-ft-content h2 {
+        font-size: 20px;
+    }
+    .gtm-faqs-section .gtm-faqs-list .faq-box-main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .gtm-faqs-section .gtm-faqs-list .faq-box-main .faq-box-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .gtm-faqs-section .gtm-faqs-list .faq-box-main .faq-box-title {
+        margin-top: 0;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-write-box {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .gtm-product-strategy-section .gtm-ps-content h2 {
+        font-size: 28px;
+    }
+    .gtm-product-strategy-section .gtm-ps-content p {
+        font-size: 15px;
+    }
+    .gtm-write-us-modal .modal-body {
+        padding-left: .3rem;
+        padding-right: .3rem;
+    }
+    .gtm-write-us-modal .gtm-wu-banner {
+        margin-left: -1rem;
+    }
+    .gtm-write-us-modal .gtm-wu-heading {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 290.99px) {
+    .gtm-banner-section .gtm-banner-content h1 {
+        font-size: 22px;
+    }
+    .gtm-approach-section .gtm-a-item-middle .a-item-title-middle {
+        font-size: 18px;
+    }
+    .gtm-faqs-section .gtm-faqs-title-row {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .gtm-faqs-section .gtm-ft-content h2 {
+        font-size: 19px;
+    }
+    .gtm-faqs-section .gtm-faqs-list .faq-box-main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .gtm-faqs-section .gtm-faqs-list .accordion-body .faq-btn {
+        padding: 12px 20px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-rec {
+        max-height: 180px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-vec {
+        max-height: 50px;
+        top: 110px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-ellipse {
+        top: -80px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-vec-1 {
+        top: -80px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-rec-1 {
+        top: -60px;
+    }
+    .gtm-expand-section .gtm-ec-banner .ec-b-write-box {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .gtm-expand-section .gtm-ec-banner .bw-box-title {
+        font-size: 17px;
+    }
+    .gtm-expand-section .gtm-ec-desc ul {
+        padding-left: 20px;
     }
 }

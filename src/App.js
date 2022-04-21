@@ -54,6 +54,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import AccountBasedMarketing from "./components/AccountBasedMarketing/AccountBasedMarketing";
 import OutsourcedCMO from "./components/OutsourcedCMO/OutsourcedCMO";
 import MarketingModelApproch from "./components/MarketingModelApproch/MarketingModelApproch";
+import Blogs2 from "./components/Blogs/Blogs2";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -137,6 +138,8 @@ function App() {
             <Route path="/account-based-marketing" element={<AccountBasedMarketing /> } />
             <Route path="/outsourced-cmo" element={<OutsourcedCMO /> } />
             <Route path="/marketing-model-approch" element={<MarketingModelApproch/> } />
+
+            <Route path="/blog-2" element={<Blogs2 /> } />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             
