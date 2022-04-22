@@ -1,6 +1,6 @@
 import React from 'react'
 import './WhyCorporalityEffect.css'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { BASE_URL } from '../../config';
 import { useNavigate } from "react-router";
 import { RightForYouItem } from './RightForYouItem';
 import { CommitmentItem } from './CommitmentItem';

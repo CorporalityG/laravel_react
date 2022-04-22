@@ -154,7 +154,7 @@
       transform: scale(.3);
     }
     100% {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
 }
 .abm-know-section .abm-k-rec-2 {
@@ -193,7 +193,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 25px;
 }
@@ -220,6 +220,7 @@
     font-weight: 500;
     font-size: 26px;
     color: #232323;
+    text-transform: capitalize;
 }
 
 .abm-logo-section {
@@ -310,6 +311,7 @@
 }
 .abm-blueprints-section .abm-blueprints_lower_box {
     margin-top: -10px;
+    text-align: center;
 }
 .abm-blueprints-section .abm-blueprints_middle_box {
     height: 100px;
@@ -334,9 +336,6 @@
     padding-top: 200px;
 }
 .abm-blueprints-section .abm-blueprints_text h3 {
-    width: 122px;
-    height: 28px;
-    margin: auto;
     padding-top: 20px;
     font-style: normal;
     font-weight: normal;
@@ -346,11 +345,6 @@
     transition: all 2s ease;
 }
 .abm-blueprints-section .abm-blueprints_text p {
-    margin: auto;
-    margin-top: 25px;
-    padding-left: 10px;
-    width: 164px;
-    height: 14px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -390,7 +384,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 15px;
 }
@@ -453,7 +447,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 15px;
 }
@@ -483,7 +477,7 @@
 }
 
 .abm-connect-convert-section {
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 80px;
 }
 .abm-connect-convert-section .abm-connect-convert-row {
@@ -549,13 +543,15 @@
 .abm-design-define-section .abm-dd-content {
     max-width: 75%;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 .abm-design-define-section .abm-dd-content h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 20px;
 }
@@ -566,4 +562,533 @@
     text-align: center;
     color: #757575;
     margin-bottom: 10px;
+}
+
+
+/* responsive start */
+@media only screen and (max-width: 1400.99px) {
+    .abm-high-level-section .abm-hl-vector {
+        right: 40px;
+    }
+    .abm-high-level-section .abm-hl-ellipse {
+        right: 100px;
+    }
+    .abm-high-level-section .abm-hl-rec {
+        right: 40px;
+    }
+    .abm-define-solve-section .abm-dsb-item .dsb-item-img {
+        width: 50px;
+    }
+    .abm-design-define-section .dd-ellipse {
+        left: 50px;
+    }
+    .abm-design-define-section .dd-vector {
+        left: 110px;
+    }
+    .abm-design-define-section .dd-rec {
+        left: 120px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1300.99px) {
+    .abm-define-solve-section .abm-dsb-content {
+        top: 60px;
+    }
+    .abm-define-solve-section .abm-dsb-item .dsb-item-subtitle {
+        font-size: 15px;
+        max-width: 300px;
+    }
+}
+
+
+@media only screen and (max-width: 1199.99px) {
+    .abm-connect-convert-section .abm-cc-content p {
+        max-width: 80%;
+    }
+    .abm-high-level-section .abm-hl-content {
+        max-width: 90%;
+    }
+    .abm-define-solve-section .abm-dsb-content {
+        left: 150px;
+    }
+}
+
+
+@media only screen and (max-width: 1024.99px) {
+    .abm-define-solve-section .abm-dsb-content {
+        top: 0;
+        left: 80px;
+    }
+}
+
+
+@media only screen and (max-width: 990.99px) {
+    .abm-banner-section {
+        padding-top: 50px;
+    }
+    .abm-banner-section .abm-banner {
+        text-align: center;
+    }
+    .abm-banner-section .abm-b-vector-1 {
+        right: 18%;
+    }
+    .abm-banner-section .abm-b-rec-dots {
+        top: 36%;
+        right: 10%;
+    }
+    .abm-banner-section .abm-b-vector {
+        right: 40%;
+    }
+    .abm-banner-section .abm-b-rec-1 {
+        left: initial;
+        right: 25%;
+    }
+    .abm-banner-section .abm-b-rec-3 {
+        animation: rotateBannerRec3 5s linear infinite;
+    }
+    @keyframes rotateBannerRec3 {
+        0%,
+        100% {
+            transform: rotateX(8.75deg) rotateY(35deg);
+        }
+        50% {
+        transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+        }
+    }
+    .abm-banner-section .abm-b-rec-3 {
+        left: initial;
+        right: 5%;
+    }
+    .abm-banner-section .abm-banner-content {
+        margin-bottom: 30px;
+    }
+    .abm-know-section .abm-know-title {
+        margin-top: 40px;
+    }
+    .abm-know-section .abm-k-rec-2 {
+        left: initial;
+        bottom: initial;
+        right: 100px;
+        top: 100px;
+    }
+    .abm-know-section .abm-k-rec-3 {
+        left: initial;
+        bottom: initial;
+        right: 170px;
+        top: 170px;
+    }
+    .abm-high-level-section .abm-hl-content {
+        max-width: 100%;
+    }
+    .abm-high-level-section .abm-hl-vector {
+        bottom: initial;
+        top: 0;
+    }
+    .abm-high-level-section .abm-hl-ellipse {
+        bottom: initial;
+        top: 0;
+    }
+    .abm-high-level-section .abm-hl-rec {
+        bottom: initial;
+        top: 30px;
+    }
+    .abm-define-solve-section .abm-dsb-item .dsb-item-title {
+        width: auto;
+    }
+    .abm-define-solve-section .abm-dsb-item .dsb-item-img {
+        margin-left: 5px;
+    }
+    .abm-define-solve-section .abm-dsb-item .dsb-item-subtitle {
+        max-width: 100%;
+    }
+    .abm-define-solve-section .abm-dsb-content {
+        top: 150px;
+    }
+    .abm-define-solve-section .abm-ds-banner {
+        margin-bottom: 30px;
+    }
+    .abm-connect-convert-section .abm-cc-banner {
+        margin-top: 30px;
+        justify-content: center;
+    }
+    .abm-connect-convert-section .abm-cc-banner .cc-rec {
+        right: 10%;
+    }
+    .abm-connect-convert-section .abm-cc-banner .cc-vector {
+        right: 10%;
+    }
+    .abm-design-define-section .abm-dd-content {
+        max-width: 100%;
+    }
+    .abm-design-define-section .dd-ellipse {
+        left: 10px;
+        max-height: 70px;
+    }
+    .abm-design-define-section .dd-vector {
+        left: 50px;
+        max-height: 55px;
+    }
+    .abm-design-define-section .dd-rec {
+        left: 55px;
+        top: 45%;
+        max-height: 50px;
+    }
+    .abm-connect-convert-section .abm-cc-content p {
+        max-width: 100%;
+    }
+    .abm-logo-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .abm-blueprints-section {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+
+
+@media only screen and (max-width: 926.99px) {
+    .abm-blueprints-section .abm-blueprints_title {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 812.99px) {
+    .abm-banner-section .abm-b-vector {
+        right: 45%;
+    }
+    .abm-high-level-section .abm-hl-content h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 768.99px) {
+    .abm-define-solve-section .abm-dsb-content {
+        left: 0;
+    }
+    .abm-design-define-section .dd-ellipse {
+        top: initial;
+        bottom: 40px;
+    }
+    .abm-design-define-section .dd-vector {
+        top: initial;
+        bottom: 55px;
+    }
+    .abm-design-define-section .dd-rec {
+        top: initial;
+        bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 766.99px) {
+    .abm-blueprints-section .abm-blueprints_text {
+        display: none;
+    }
+    .abm-blueprints-section .abm-blueprints-content {
+        overflow: unset;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    .abm-blueprints-section .abm-blueprints_img {
+        height: auto;
+        max-height: 100%;
+        position: relative;
+    }
+}
+
+
+@media only screen and (max-width: 740.99px) {
+    .abm-banner-section .abm-b-rec-dots {
+        right: 4%;
+    }
+    .abm-banner-section .abm-b-rec-1 {
+        right: 10%;
+    }
+    .abm-high-level-section .abm-hl-content h2 {
+        font-size: 24px;
+    }
+    .abm-design-define-section .abm-dd-content h2 {
+        font-size: 28px;
+    }
+    .abm-connect-convert-section .abm-cc-banner .cc-rec {
+        right: 4%;
+    }
+    .abm-connect-convert-section .abm-cc-banner .cc-vector {
+        right: 4%;
+    }
+    .abm-define-solve-section .abm-dsb-content {
+        top: 100px;
+    }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+    .abm-define-solve-section .abm-dsb-content {
+        top: 70px;
+    }
+    .abm-banner-section .abm-banner {
+        text-align: left;
+    }
+    .abm-banner-section .abm-b-vector-1 {
+        right: 8%;
+    }
+    .abm-banner-section .abm-b-rec-2 {
+        bottom: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .abm-banner-section .row > *, 
+    .abm-know-section .row > *, 
+    .abm-logo-section .row > *, 
+    .abm-blueprints-section .row > *, 
+    .abm-high-level-section .row > *, 
+    .abm-define-solve-section .row > *, 
+    .abm-connect-convert-section .row > *, 
+    .abm-design-define-section .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .abm-banner-section .abm-banner img {
+        max-height: 350px;
+    }
+    .abm-banner-section .abm-b-rec-dots {
+        max-height: 400px;
+        top: 40%;
+    }
+    .abm-banner-section .abm-b-vector {
+        max-height: 80px;
+        bottom: 50px;
+        right: 50%;
+    }
+    .abm-know-section .abm-k-rec-3 {
+        right: 50px;
+    }
+    .abm-high-level-section .abm-hl-content h2 {
+        font-size: 22px;
+    }
+    .abm-connect-convert-section .abm-cc-banner {
+        justify-content: start
+    }
+    .abm-design-define-section .abm-dd-content h2 {
+        font-size: 24px;
+    }
+    .abm-define-solve-section .abm-dsb-content {
+        top: 0;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .abm-know-section .abm-k-box {
+        margin-bottom: 30px;
+    }
+    .abm-banner-section .abm-b-rec-1 {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 500.99px) {
+    .abm-banner-section .abm-banner img {
+        max-height: 300px;
+    }
+    .abm-banner-section .abm-b-rec-dots {
+        max-height: 350px;
+        right: 2%;
+        top: 44%;
+    }
+    .abm-banner-section .abm-b-rec-3 {
+        bottom: 100px;
+    }
+    .abm-know-section .abm-know-title {
+        font-size: 24px;
+    }
+    .abm-define-solve-section .abm-ds-banner {
+        margin-bottom: 90px;
+    }
+    .abm-design-define-section .abm-dd-content h2 {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 480.99px) {
+    .abm-banner-section .abm-b-rec-1 {
+        top: 10px;
+        animation: rotateBannerRec1 5s linear infinite;
+        max-height: 30px;
+    }
+    @keyframes rotateBannerRec1 {
+        0%,
+        100% {
+            transform: rotateX(8.75deg) rotateY(35deg);
+        }
+        50% {
+        transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+        }
+    }
+    .abm-define-solve-section .abm-ds-banner {
+        margin-bottom: 150px;
+    }
+    .abm-connect-convert-section .abm-cc-banner .cc-banner {
+        max-height: 200px;
+    }
+    .abm-connect-convert-section .abm-cc-banner .cc-rec {
+        max-height: 300px;
+    }
+    .abm-connect-convert-section .abm-cc-content {
+        margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 428.99px) {
+    .abm-define-solve-section .abm-dsb-content {
+        position: relative;
+        top: 20px;
+    }
+    .abm-define-solve-section .abm-dsb-item {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    .abm-define-solve-section .abm-dsb-item .dsb-item-img {
+        display: none;
+        height: 0;
+    }
+    .abm-define-solve-section .abm-dsb-item .dsb-item-title {
+        text-align: left;
+    }
+    .abm-define-solve-section .abm-ds-banner {
+        margin-bottom: 70px;
+    }
+    .abm-design-define-section .abm-dd-content h2 {
+        font-size: 20px;
+    }
+    .abm-high-level-section .abm-hl-content h2 {
+        font-size: 20px;
+    }
+    .abm-know-section .abm-know-title {
+        font-size: 22px;
+    }
+    .abm-banner-section .abm-banner-content h1 {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 400.99px) {
+    .abm-banner-section .abm-banner img {
+        max-height: 250px;
+    }
+    .abm-banner-section .abm-b-rec-dots {
+        max-height: 300px;
+        top: 50%;
+    }
+    .abm-connect-convert-section .abm-cc-banner .cc-rec {
+        right: 0;
+    }
+    .abm-connect-convert-section .abm-cc-banner .cc-vector {
+        right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 390.99px) {
+    .abm-banner-section .abm-banner-content h1 {
+        font-size: 24px;
+    }
+    .abm-banner-section .abm-banner-content .abm-banner-subtitle {
+        font-size: 17px;
+    }
+    .abm-banner-section .abm-banner-content {
+        margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 360.99px) {
+    .abm-connect-convert-section .abm-cc-banner .cc-banner {
+        max-height: 180px;
+    }
+    .abm-connect-convert-section .abm-cc-banner .cc-rec {
+        max-height: 280px;
+    }
+    .abm-high-level-section .abm-hl-content h2 {
+        font-size: 18px;
+    }
+    .abm-know-section .abm-k-rec-1 {
+        top: 50px;
+    }
+    .abm-know-section .abm-k-rec-2 {
+        top: 180px;
+        right: 40px;
+    }
+    .abm-know-section .abm-k-rec-3 {
+        top: 280px;
+    }
+}
+
+
+@media only screen and (max-width: 345.99px) {
+    .abm-banner-section .abm-b-rec-dots {
+        max-height: 250px;
+        top: 56%;
+    }
+    .abm-banner-section .abm-b-rec-3 {
+        bottom: 50px;
+    }
+    .abm-know-section .abm-k-rec-1 {
+        max-height: 80px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .abm-connect-convert-section .abm-cc-banner .cc-banner {
+        max-height: 150px;
+    }
+    .abm-connect-convert-section .abm-cc-banner .cc-rec {
+        max-height: 250px;
+    }
+    .abm-connect-convert-section .abm-cc-content h2 {
+        font-size: 26px;
+    }
+    .abm-know-section .abm-know-title {
+        font-size: 20px;
+    }
+    .abm-know-section .abm-k-rec-1 {
+        top: 70px;
+    }
+    .abm-banner-section .abm-banner img {
+        max-height: 200px;
+    }
+    .abm-banner-section .abm-b-rec-dots {
+        max-height: 230px;
+        top: 57%;
+    }
+    .abm-banner-section .abm-banner-content h1 {
+        font-size: 20px;
+    }
+    .abm-design-define-section .abm-dd-content h2 {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .abm-banner-section .abm-b-rec-dots {
+        top: 60%;
+    }
+    .abm-know-section .abm-know-title {
+        font-size: 18px;
+    }
 }

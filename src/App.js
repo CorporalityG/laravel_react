@@ -55,6 +55,7 @@ import AccountBasedMarketing from "./components/AccountBasedMarketing/AccountBas
 import OutsourcedCMO from "./components/OutsourcedCMO/OutsourcedCMO";
 import MarketingModelApproch from "./components/MarketingModelApproch/MarketingModelApproch";
 import Blogs2 from "./components/Blogs/Blogs2";
+import OurTeam from "./components/OurTeam/OurTeam";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -140,6 +141,7 @@ function App() {
             <Route path="/marketing-model-approch" element={<MarketingModelApproch/> } />
 
             <Route path="/blog-2" element={<Blogs2 /> } />
+            <Route path="/our-team" element={<OurTeam /> } />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             

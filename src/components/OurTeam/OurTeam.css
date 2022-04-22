@@ -1,0 +1,392 @@
+/* banner start */
+.ot-banner-section {
+    margin-top: 80px;
+    padding-top: 70px;
+    padding-bottom: 130px;
+    position: relative;
+}
+.ot-banner-section .ot-banner-content {
+    background: #FFFFFF;
+    box-shadow: 30px 34px 34px -20px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 30px 0px 0px;
+    padding: 55px;
+    max-width: 65%;
+    margin: 0 auto;
+    text-align: center;
+}
+.ot-banner-section .ot-banner-content h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #33657E;
+    margin-bottom: 15px;
+}
+.ot-banner-section .ot-banner-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #232323;
+    margin-bottom: 10px;
+}
+.ot-banner-section .ot-banner-content .ot-banner-btn {
+    background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
+    padding: 13px 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 30px;
+    display: inline-block;
+}
+.ot-banner-section .ot-banner-img {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    max-width: 100%;
+}
+.ot-banner-section .ot-banner-vector {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+.ot-banner-section .ot-banner-rec-1 {
+    position: absolute;
+    left: 160px;
+    top: 100px;
+    animation-name: stretchBannerRec1;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+@keyframes stretchBannerRec1 {
+    0% {
+      transform: scale(.3);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+}
+.ot-banner-section .ot-banner-rec-2 {
+    position: absolute;
+    right: 30%;
+    top: 30px;
+    animation: rotateBannerRec2 5s linear infinite;
+}
+@keyframes rotateBannerRec2 {
+    0%,
+    100% {
+        transform: rotateX(8.75deg) rotateY(35deg);
+    }
+    50% {
+    transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+    }
+}
+.ot-banner-section .ot-banner-rec-3 {
+    position: absolute;
+    left: 300px;
+    bottom: 130px;
+    animation-name: stretchBannerRec3;
+    animation-duration: 2.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 1000ms;
+    animation-direction: revert-layer;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+@keyframes stretchBannerRec3 {
+    0% {
+      transform: scale(.3);
+    }
+    100% {
+      transform: scale(.9);
+    }
+}
+.ot-banner-section .ot-banner-rec-4 {
+    position: absolute;
+    right: 180px;
+    top: 32%;
+    animation: nudgeBannerRec4 5s linear infinite alternate;
+}
+
+@keyframes nudgeBannerRec4 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50px, 0);
+    }
+    80% {
+        transform: translate(-50px, 0);
+    }
+}
+
+.ot-banner-section .social-section {
+    position: absolute;
+    left: 3px;
+    bottom: 50%;
+    transform: translate(0, 50%);
+}
+.ot-banner-section .social-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ot-banner-section .social-img img {
+    max-width: 100%;
+    margin-right: 10px;
+}
+.ot-banner-section .social-section .social-row {
+    display: flex;
+    flex-direction: column;
+}
+.ot-banner-section .social-section a {
+    color: #33657e;
+    margin-bottom: 10px;
+}
+.ot-banner-section .social-section a i {
+    font-size: 18px;
+}
+.ot-banner-section .social-section a:hover {
+    color: #862995;
+}
+/* banner end */
+
+
+/* leadership start */
+.ot-leadership-section {
+    padding-bottom: 20px;
+}
+.ot-leadership-section .ot-l-row {
+    padding-top: 50px;
+    background-color: #fff;
+    position: relative;
+}
+.ot-leadership-section .ot-l-title-content {
+    max-width: 75%;
+    margin: 0 auto 50px;
+}
+.ot-leadership-section .ot-l-title-content h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: #3C708E;
+    margin-bottom: 15px;
+}
+.ot-leadership-section .ot-l-title-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #232323;
+    margin-bottom: 10px;
+}
+.ot-leadership-section .ot-l-members {
+    max-width: 75%;
+    margin: 0 auto;
+}
+.ot-leadership-section .ot-l-member-col {
+    display: flex;
+}
+.ot-leadership-section .ot-l-member {
+    background-color: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    box-shadow: 0px 13px 15px rgba(10, 11, 19, 0.1);
+    border-radius: 15px;
+    padding: 10px 20px 60px;
+    text-align: center;
+    margin-top: 60px;
+}
+.ot-leadership-section .ot-l-member .l-member-img {
+    position: relative;
+    max-width: 240px;
+    margin: -55px auto 15px;
+}
+.ot-leadership-section .ot-l-member .l-member-img .l-member-avtar {
+    max-height: 100%;
+}
+.ot-leadership-section .ot-l-member .l-member-img .l-member-rec-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rotateLMRec1 5s linear infinite;
+}
+@keyframes rotateLMRec1 {
+    0%,
+    100% {
+        transform: rotateX(8.75deg) rotateY(35deg);
+    }
+    50% {
+    transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+    }
+}
+.ot-leadership-section .ot-l-member .l-member-img .l-member-rec-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation-name: stretchLMRec2;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@keyframes stretchLMRec2 {
+    0% {
+      transform: scale(.3);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+}
+.ot-leadership-section .ot-l-member-col:nth-child(even) .ot-l-member .l-member-img .l-member-rec-1, 
+.ot-leadership-section .ot-l-member-col:nth-child(even) .ot-l-member .l-member-img .l-member-rec-2 {
+    right: 0;
+    left: initial;
+}
+.ot-leadership-section .ot-l-member .l-member-name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #3C708E;
+    margin-bottom: 5px;
+}
+.ot-leadership-section .ot-l-member .l-member-designation {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #A06DB0;
+    margin-bottom: 15px;
+}
+.ot-leadership-section .ot-l-member .l-member-bio {
+    min-height: 130px;
+}
+.ot-leadership-section .ot-l-member .l-member-bio p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #232323;
+    margin-bottom: 10px;
+}
+.ot-leadership-section .ot-l-member .l-member-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.ot-leadership-section .ot-l-member .l-member-social a:not(:last-child) {
+    margin-right: 25px;
+}
+/* leadership end */
+
+
+/* team members start */
+.ot-team-members-section {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+.ot-team-members-section .ot-tm-content {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.ot-team-members-section .ot-tm-content .pm-avtar {
+    max-width: 100%;
+}
+.ot-team-members-section .ot-tm-content .pm-name {
+    position: absolute;
+    z-index: -1;
+    max-width: 100%;
+}
+.ot-team-members-section .ot-tm-row {
+    margin-top: -170px;
+}
+.ot-team-members-section .ot-tm-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #A06DB0;
+    position: relative;
+    max-width: 145px;
+    margin-left: 8.5%;
+}
+.ot-team-members-section .ot-tm-title::before {
+    border: 1px dashed rgba(160, 109, 176, 0.5);
+    content: "";
+    height: 1px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 250%;
+}
+.ot-team-members-section .ot-tm-title::after {
+    border: 1px dashed rgba(160, 109, 176, 0.5);
+    content: "";
+    height: 150px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 1px;
+}
+.ot-team-members-section .ot-tm-list .bghjHX {
+    margin: 0;
+}
+.ot-team-members-section .ot-tm-list .bVoXXg:first-child .ot-tm-member {
+    margin-left: 10px;
+}
+.ot-team-members-section .ot-tm-list .bVoXXg:last-child .ot-tm-member {
+    margin-right: 10px;
+}
+.ot-team-members-section .ot-tm-member {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ot-team-members-section .ot-tm-member .tm-avtar-main img {
+    max-height: 185px;
+}
+.ot-team-members-section .ot-tm-member .tm-content {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(19, 30, 35, 0.15);
+    border-radius: 10px;
+    padding: calc(185px / 2) 10px 25px;
+    margin-top: calc(-185px / 2);
+}
+.ot-team-members-section .ot-tm-member .tm-name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #A06DB0;
+    margin-bottom: 10px;
+}
+.ot-team-members-section .ot-tm-member .tm-designation {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: rgba(160, 109, 176, 0.5);
+}
+/* team members end */

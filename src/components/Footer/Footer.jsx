@@ -4,6 +4,7 @@ import upArrow from "./img/upArrow.png";
 import polygon from "./img/polygon.png";
 import logo from "./img/logo.png";
 import { useNavigate } from "react-router";
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -141,22 +142,22 @@ export default function Footer() {
             <div className="column4">
               <h1 className="footer-heading">Insights</h1>
               <hr size="5" className="line-below-footer-heading" />
-              <p className="text-links" onClick={() => { navigate("/about-corporality"); topHandle(); }}>
+              <Link to="/about-corporality" onClick={() => { topHandle() }} className="text-links">
                 <img className="poligon-image" src={polygon} />
                 Corporality Citizenship
-              </p>
-              <p className="text-links">
+              </Link>
+              <Link to="/our-team" onClick={() => { topHandle() }} className="text-links">
                 <img className="poligon-image" src={polygon} />
                 Our Team
-              </p>
-              <p className="text-links" onClick={() => { navigate("/careers"); topHandle(); }}>
+              </Link>
+              <Link to="/careers" onClick={() => { topHandle() }} className="text-links">
                 <img className="poligon-image" src={polygon} />
                 Careers
-              </p>
-              <p className="text-links" onClick={() => { navigate("/blog"); topHandle(); }}>
+              </Link>
+              <Link to="/blog" onClick={() => { topHandle() }} className="text-links">
                 <img className="poligon-image" src={polygon} />
                 Insights
-              </p>
+              </Link>
             </div>
 
             {/* col-5 */}

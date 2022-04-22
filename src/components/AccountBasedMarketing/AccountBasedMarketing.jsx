@@ -71,7 +71,7 @@ function AccountBasedMarketing() {
                     <div className="row abm-know-content-row">
                         <div className="col-lg-6">
                             <div className="row abm-k-boxes-row">
-                                <div className="col-md-6 abm-k-box-col">
+                                <div className="col-lg-5 col-md-3 col-sm-4 abm-k-box-col">
                                     <div className="abm-k-box" data-aos="fade-up" data-aos-delay="300">
                                         <div className="k-box-img">
                                             <img src={`${BASE_URL}/img/AccountBasedMarketing/rating.png`} alt="Rating on Google" className="k-box-img" />
@@ -81,7 +81,7 @@ function AccountBasedMarketing() {
                                     </div>
                                 </div>
 
-                                <div className="col-md-6 abm-k-box-col">
+                                <div className="col-lg-5 col-md-3 col-sm-4 abm-k-box-col">
                                     <div className="abm-k-box" data-aos="fade-up" data-aos-delay="400">
                                         <div className="k-box-img">
                                             <img src={`${BASE_URL}/img/AccountBasedMarketing/growth.png`} alt="Growth on LinkedIn" className="k-box-img" />
@@ -103,8 +103,8 @@ function AccountBasedMarketing() {
                 <div className="container-lg">
                     <div className="row abm-logo-row">
                         <div className="col-lg-12 abm-logo-col">
-                            <div className="abm-logo-carousel" data-aos="fade-up">
-                                <CarouselGrid cols={4} rows={1} gap={30}>
+                            <div className="abm-logo-carousel" data-aos="flip-up">
+                                <CarouselGrid cols={4} rows={1} gap={30} responsiveLayout={[{breakpoint: 767, cols: 1, gap: 0, loop: true, autoplay: 2000}]}>
                                     <CarouselGrid.Item>
                                         <LogoItem
                                             logo={`${BASE_URL}/img/AccountBasedMarketing/klek-services-logo.png`}
@@ -216,7 +216,7 @@ function AccountBasedMarketing() {
                         <div className="col-lg-12 abm-high-level-col">
                             <div className="abm-hl-content">
                                 <div data-aos="fade-up">
-                                    <h2>Working on your high-level vision and turning them into highly-targeted and efficient resources allocated for your high-value clients</h2>
+                                    <h2>Working on your high-Level vision and turning them into highly-Targeted and efficient resources allocated for your high-Value clients</h2>
                                 </div>
                                 <div data-aos="fade-up" data-aos-delay="300">
                                     <p>The breath and depth of your expertise allows us to create a tailor-made strategy for account-based marketing. Our approach is to create your ideal customer profile designed not only to increase the leads but also increase user retention, engagement and eventually loyalty.</p>
