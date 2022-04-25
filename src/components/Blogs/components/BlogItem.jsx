@@ -1,4 +1,4 @@
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
+import { BASE_URL } from '../../../config';
 import React from 'react';
 import "./BlogCard.css";
 import { Link } from 'react-router-dom';

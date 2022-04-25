@@ -1,5 +1,5 @@
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import Aos from 'aos';
 // import 'aos/dist/aos.css';
 import "bootstrap/dist/css/bootstrap.min.css"

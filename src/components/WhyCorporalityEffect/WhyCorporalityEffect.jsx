@@ -1,7 +1,7 @@
 import React from 'react'
 import './WhyCorporalityEffect.css'
 import { BASE_URL } from '../../config';
-import { useNavigate } from "react-router";
+import { Link } from 'react-router-dom';
 import { RightForYouItem } from './RightForYouItem';
 import { CommitmentItem } from './CommitmentItem';
 import Accordion from 'react-bootstrap/Accordion'
@@ -9,7 +9,6 @@ import { KeyElementItem } from './KeyElementItem';
 
 function WhyCorporalityEffect() {
 
-    const navigate = useNavigate();
     const topHandle = () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -50,14 +49,14 @@ function WhyCorporalityEffect() {
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wce-banner-content-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <h1>Why Corporality Effect?</h1>
                             <p>The world is going through uncertain economic times. Businesses are forced to make tough decisions when it comes to marketing spend. Leaving your sales team to figure out the market and other teams work independently without direction isn’t going to assist your growth vision.</p>
                             <p>This is not the time to slow your digital marketing effort, and it is definitely not the time to move without any strategic planning and discipline in place.</p>
                             <p>The Corporality Effect program is designed to assist you with a modern digital sales and marketing framework. It focuses on your brand position with the sustainable content strategy you desire. It is your absolute duty to help your customer make his buying decision easier by staying relevant.</p>
-                            <div className="wce-banner-btn" onClick={() => { navigate("/contact"); topHandle(); }}>Request For Quote</div>
+                            <Link className="wce-banner-btn" to="/contact" onClick={() => { topHandle() }} >Request For Quote</Link>
                         </div>
 
                         <div className="wce-banner-phone">
@@ -68,9 +67,9 @@ function WhyCorporalityEffect() {
             </div>
 
             <div className="wce-commitment-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wce-commitment-title-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <div className="wce-commitment-title">
                                 <img src={BASE_URL + '/img/WhyCorporalityEffect/commitment-title.png'} alt="Commitment" />
                             </div>
@@ -103,9 +102,9 @@ function WhyCorporalityEffect() {
                 <img src={BASE_URL + '/img/WhyCorporalityEffect/business-rec-3.png'} alt="Rec 3" className="business-rec-3" />
                 <img src={BASE_URL + '/img/WhyCorporalityEffect/business-rec-4.png'} alt="Rec 4" className="business-rec-4" />
 
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wce-business-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <h2>Does my business need The Corporality Effect?</h2>
                             <div className="wce-business-content">
                                 <p>Today, 70% of consumers are convinced of purchasing a product even before making a direct inquiry to the business serving it.</p>
@@ -119,9 +118,9 @@ function WhyCorporalityEffect() {
             </div>
 
             <div className="wce-right-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wce-right-title-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <h2>Is this right for you?</h2>
                             <h3>Maybe you’ve found yourself in these situations…</h3>
                         </div>
@@ -150,17 +149,17 @@ function WhyCorporalityEffect() {
             </div>
 
             <div className="wce-work-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wce-work-title-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <h2>How Does It Work?</h2>
                             <p>Corporality Effect begins with a 2-day Workshop, which your leadership, sales, marketing, and related teams will participate in. Over the course of 52 weeks, you can work with our mentoring and development teams to work on the following:</p>
-                            <div className="wce-work-btn">Corporality Culture</div>
+                            <Link className="wce-work-btn" to="/" onClick={() => { topHandle() }} >Corporality Culture</Link>
                         </div>
                     </div>
 
                     <div className="row wce-work-accordion-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <Accordion className="wce-work-accordion-main">
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>
@@ -240,9 +239,9 @@ function WhyCorporalityEffect() {
             </div>
 
             <div className="wce-key-elements-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wce-key-elements-title-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <h2>5 Key Elements of the Framework</h2>
                             <p>Here is how the process looks like</p>
                         </div>

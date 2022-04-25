@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Caretojoinus.css";
-import right_image from "./images/right_image.png";
+// import right_image from "./images/right_image.png";
 import right_image2 from "./images/right_image2.png";
 import bottom from "./images/bottom.png";
 import top from "./images/top.png";

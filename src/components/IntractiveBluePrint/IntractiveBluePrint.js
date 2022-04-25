@@ -32,7 +32,7 @@ function IntractiveBluePrint() {
           <div className="row ibp-banner-row">
             <div className="col-lg-7">
               <div className="ibp-banner-content">
-                <div className="ibp-banner-title" data-aos="fade-up">INTERACTIVE BLUEPRINT</div>
+                <div className="ibp-banner-title" data-aos="fade-up">Interactive Blueprint</div>
                 <div data-aos="fade-up">
                   <h1>Embracing Your Innovative Ideas</h1>
                 </div>
@@ -77,7 +77,7 @@ function IntractiveBluePrint() {
           <div className="row ibp-know-content-row">
             <div className="col-lg-6">
               <div className="row ibp-k-boxes-row">
-                <div className="col-md-4 ibp-k-box-col">
+                <div className="col-lg-5 col-md-3 col-sm-4 ibp-k-box-col">
                   <div className="ibp-k-box" data-aos="fade-up" data-aos-delay="300">
                     <div className="k-box-img">
                       <img src={`${BASE_URL}/img/IntractiveBluePrint/know-90-perct.png`} alt="Innovation fails" className="k-box-img" />
@@ -86,7 +86,7 @@ function IntractiveBluePrint() {
                   </div>
                 </div>
 
-                <div className="col-md-4 ibp-k-box-col">
+                <div className="col-lg-5 col-md-3 col-sm-4 ibp-k-box-col">
                   <div className="ibp-k-box" data-aos="fade-up" data-aos-delay="400">
                     <div className="k-box-img">
                       <img src={`${BASE_URL}/img/IntractiveBluePrint/know-10-perct.png`} alt="Only sees light of the day" className="k-box-img" />

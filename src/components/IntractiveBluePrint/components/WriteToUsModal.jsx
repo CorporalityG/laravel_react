@@ -11,15 +11,15 @@ function WriteToUsModal(props) {
             <Modal show={show == 'write' ? show : ''} onHide={handleClose} className="ibp-write-us-modal">
                 <Modal.Header closeButton></Modal.Header>
                 <Modal.Body>
-                    <div className="container-fluid pl-0">
+                    <div className="container-fluid  pl-sm-0">
                         <div className="row ibp-wu-modal-row">
-                            <div className="col-lg-5 pr-0">
+                            <div className="col-sm-5 pr-0">
                                 <div className="ibp-wu-banner">
                                     <img src={`${BASE_URL}/img/IntractiveBluePrint/write-to-us-banner.png`} alt="working-rec-1" />
                                 </div>
                             </div>
 
-                            <div className="col-lg-7 pl-0">
+                            <div className="col-sm-7 pl-0">
                                 <div className="ibp-wu-content">
                                     <div className="ibp-wu-heading">Write to us</div>
                                     <div className="ibp-wu-form">

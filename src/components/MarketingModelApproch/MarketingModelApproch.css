@@ -90,6 +90,7 @@
     border: 1px solid #BFCCD1;
     box-sizing: border-box;
     margin-left: -50px;
+    flex: 1 0 auto;
 }
 .mma-banner-section .mma-banner-bg {
     position: absolute;
@@ -330,7 +331,8 @@
     padding-bottom: 100px;
 }
 .mma-marketing-approach-section .mma-ma-title {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    max-width: 80%;
 }
 .mma-marketing-approach-section .mma-ma-title h2 {
     font-style: normal;
@@ -356,7 +358,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 .mma-marketing-approach-section .mma-ma-step {
     position: relative;
@@ -463,3 +464,435 @@
     fill: #E5CC5C;
 }
 /* marketing-approach end */
+
+
+/* responsive start */
+@media only screen and (max-width: 1399.99px) {
+    .mma-marketing-approach-section .mma-ma-title {
+        max-width: 100%;
+    }
+    .mma-marketing-approach-section .mma-ma-border {
+        width: 110%;
+        max-width: 110%;
+    }
+}
+
+
+@media only screen and (max-width: 1260.99px) {
+    .mma-marketing-approach-section .mma-ma-border {
+        max-width: 106%;
+    }
+    .mma-marketing-approach-section .mma-ma-step:not(:last-child) {
+        margin-right: 40px;
+    }
+    .mma-marketing-approach-section .mma-ma-step:not(:first-child) {
+        margin-left: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 1200.99px) {
+    .mma-banner-section .mma-b-content {
+        max-width: 95%;
+    }
+    .mma-marketing-approach-section .mma-ma-border {
+        max-width: 100%;
+    }
+    .mma-marketing-approach-section .mma-ma-step:not(:last-child) {
+        margin-right: 30px;
+    }
+    .mma-marketing-approach-section .mma-ma-step:not(:first-child) {
+        margin-left: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 1199.99px) {
+    .mma-marketing-approach-section .mma-ma-border {
+        max-width: 120%;
+        width: 120%;
+    }
+    .mma-models-section .mma-models-banner .mma-models-bg {
+        width: 90%;
+        left: -30px;
+    }
+    .mma-models-section .mma-models-banner .mma-eb-title {
+        left: 5%;
+    }
+}
+
+
+@media only screen and (max-width: 1115.99px) {
+    .mma-banner-section .mma-b-content {
+        max-width: 100%;
+    }
+    .mma-marketing-approach-section .mma-ma-step .ma-step-hexagon-img {
+        width: 200px;
+        height: 225px;
+    }
+    .mma-marketing-approach-section .mma-ma-border {
+        width: 110%;
+    }
+    .mma-marketing-approach-section .mma-ma-step .ma-step-title {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 1086.99px) {
+    .mma-banner-section .mma-banner-row {
+        align-items: flex-start;
+    }
+    .mma-banner-section .mma-b-content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .mma-banner-section .mma-b-content h1 {
+        font-size: 26px;
+    }
+}
+
+
+@media only screen and (max-width: 1024.99px) {
+    .mma-marketing-approach-section .mma-ma-border {
+        width: 100%;
+    }
+    .mma-marketing-approach-section .mma-ma-step:not(:last-child) {
+        margin-right: 20px;
+    }
+    .mma-marketing-approach-section .mma-ma-step:not(:first-child) {
+        margin-left: 20px;
+    }
+    .mma-models-section .mma-models-banner .mma-models-bg {
+        left: -15px;
+    }
+}
+
+
+
+@media only screen and (max-width: 991.99px) {
+    .mma-banner-section .cmo-b-form .cmo-b-btn {
+        flex: 0 0 auto;
+    }
+    .mma-banner-section .mma-b-circle-s {
+        left: initial;
+        right: 50px;
+        top: 30px;
+    }
+    .mma-banner-section .mma-social-section {
+        bottom: 40%;
+    }
+    .mma-banner-section .mma-b-close-2 {
+        left: 28%;
+    }
+    .mma-banner-section .mma-b-close-3 {
+        right: 50%;
+    }
+    .mma-banner-section .mma-b-circle-b {
+        right: 50%;
+    }
+    .mma-banner-section .mma-b-circle {
+        left: 20%;
+    }
+    .mma-banner-section .mma-b-rec {
+        left: 25%;
+    }
+    .mma-banner-section .mma-b-dot {
+        left: 25%;
+    }
+    .mma-models-section {
+        background-size: 100%;
+    }
+    .mma-models-section .mma-models-banner {
+        max-width: 50%;
+        margin: 0 auto 40px;
+    }
+    .mma-models-section .mma-models-banner .mma-models-bg {
+        left: -25px;
+    }
+    .mma-marketing-approach-section .mma-ma-steps-col {
+        flex-direction: column;
+    }
+    .mma-marketing-approach-section .mma-ma-step:not(:last-child) {
+        margin-right: 0;
+    }
+    .mma-marketing-approach-section .mma-ma-step:not(:first-child) {
+        margin-left: 0;
+    }
+    .mma-marketing-approach-section .mma-ma-step {
+        margin-top: 40px;
+    }
+    .mma-marketing-approach-section .mma-ma-title {
+        margin-bottom: 30px;
+    }
+    .mma-marketing-approach-section .mma-ma-step .ma-step-number {
+        top: -50px;
+    }
+    .mma-marketing-approach-section .mma-ma-steps-col-2 .mma-ma-step .ma-step-number {
+        top: -50px;
+        bottom: initial;
+    }
+    .mma-marketing-approach-section .mma-ma-border {
+        width: 0;
+        height: 90%;
+        max-width: 0;
+        padding: 0;
+    }
+}
+
+
+@media only screen and (max-width: 840.99px) {
+    .mma-banner-section .mma-b-dot {
+        left: 15%;
+    }
+    .mma-banner-section .mma-b-circle {
+        left: 10%;
+        bottom: 20%;
+    }
+    .mma-banner-section .mma-b-circle-b {
+        right: initial;
+        left: 18%;
+    }
+    .mma-banner-section .mma-b-rec {
+        left: 15%;
+    }
+    .mma-banner-section .mma-b-close-2 {
+        left: 15%;
+    }
+    .mma-banner-section .mma-b-close-3 {
+        right: 60%;
+    }
+    @keyframes stretchBCircleBig {
+        0% {
+          transform: scale(.1);
+        }
+        100% {
+          transform: scale(.6);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768.99px) {
+    .mma-banner-section .mma-social-section {
+        left: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 740.99px) {
+    .mma-banner-section .mma-b-img-main .mma-b-img {
+        max-width: 90%;
+    }
+    .mma-models-section .mma-models-banner {
+        max-width: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 640.99px) {
+    .mma-banner-section .mma-b-circle {
+        animation: rotateBannerCircle 5s linear infinite;
+    }
+    @keyframes rotateBannerCircle {
+        0%, 100% {
+            transform: translate(0, 0);
+        }
+        50% {
+            transform: translate(0, 50px);
+        }
+        80% {
+            transform: translate(0, -50px);
+        }
+    }
+    .mma-banner-section .mma-b-circle {
+        left: 5%;
+        bottom: 10%;
+    }
+    .mma-banner-section .mma-b-circle-b {
+        left: 15%;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .mma-banner-section .row > *, 
+    .mma-models-section .row > *, 
+    .mma-marketing-approach-section .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .mma-banner-section .mma-b-dot {
+        animation-name: none;
+        top: 50%;
+    }
+    .mma-banner-section .mma-social-section {
+        bottom: 30%;
+    }
+    .mma-marketing-approach-section .mma-ma-border {
+        padding: 0 !important;
+    }
+    .mma-banner-section .mma-b-close-2 {
+        left: 10%;
+    }
+    .mma-banner-section .mma-b-rec {
+        left: 10%;
+    }
+    .mma-banner-section .mma-b-circle-b {
+        left: 10%;
+    }
+    .mma-banner-section .mma-b-circle-s {
+        right: 20px;
+    }
+    .mma-banner-section .mma-b-close-1 {
+        left: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 500.99px) {
+    .mma-banner-section .mma-b-circle-s {
+        top: 0;
+        right: 0;
+    }
+    @keyframes stretchBCircleSmall {
+        0% {
+        transform: scale(.1);
+        }
+        100% {
+        transform: scale(.7);
+        }
+    }
+    .mma-banner-section .mma-b-close-1 {
+        left: 80%;
+    }
+    .mma-banner-section .mma-b-dot {
+        top: 55%;
+    }
+    .mma-banner-section .mma-b-circle-b {
+        left: 8%;
+        bottom: 0;
+    }
+    .mma-banner-section .mma-social-section {
+        bottom: 20%;
+    }
+}
+
+
+@media only screen and (max-width: 480.99px) {
+    .mma-marketing-approach-section .mma-ma-title h2 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 449.99px) {
+    .mma-banner-section .mma-b-dot {
+        top: 60%;
+        left: 10%;
+    }
+}
+
+
+@media only screen and (max-width: 428.99px) {
+    .mma-marketing-approach-section .mma-ma-title h2 {
+        font-size: 22px;
+    }
+    .mma-banner-section .cmo-b-form .cmo-b-btn {
+        margin-left: -70px;
+    }
+    .mma-models-section .mma-models-banner .mma-models-bg {
+        width: 95%;
+    }
+}
+
+
+@media only screen and (max-width: 414.99px) {
+    .mma-banner-section .mma-b-img-main .mma-b-img {
+        max-width: 80%;
+    }
+    .mma-banner-section .mma-b-content h1 {
+        font-size: 22px;
+    }
+    .mma-banner-section .mma-b-dot {
+        top: 65%;
+        left: 15%;
+    }
+    .mma-banner-section .cmo-b-form {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+    .mma-banner-section .cmo-b-form .cmo-b-form-control {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .mma-banner-section .cmo-b-form .cmo-b-btn {
+        margin-left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 390.99px) {
+    .mma-banner-section .mma-b-circle-b {
+        bottom: -30px;
+    }
+    .mma-models-section .mma-models-title h2 {
+        font-size: 24px;
+    }
+    .mma-models-section .mma-models-banner .mma-models-bg {
+        width: 100%;
+        height: 85%;
+    }
+    .mma-marketing-approach-section .mma-ma-title h2 {
+        font-size: 20px;
+    }
+    .mma-banner-section .mma-b-content .mma-b-subtitle {
+        font-size: 16px;
+    }
+    .mma-models-section .mma-models-banner {
+        max-width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 360.99px) {
+    .mma-banner-section .mma-b-dot {
+        top: 73%;
+    }
+    .mma-banner-section .mma-social-section {
+        bottom: 10%;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .mma-models-section .mma-models-banner .mma-eb-title {
+        left: 0;
+    }
+    .mma-banner-section .mma-b-content .mma-b-title {
+        font-size: 16px;
+    }
+    .mma-banner-section .mma-b-content h1 {
+        font-size: 20px;
+    }
+    .mma-models-section .mma-models-title h2 {
+        font-size: 20px;
+    }
+    .mma-models-section .mma-models-title p {
+        font-size: 15px;
+    }
+    .mma-models-section .mma-models-banner .mma-models-bg {
+        left: -15px;
+    }
+    .mma-models-section .mma-models-content p {
+        font-size: 16px;
+    }
+    .mma-marketing-approach-section .mma-ma-title h2 {
+        font-size: 18px;
+    }
+    .mma-marketing-approach-section .mma-ma-title p {
+        font-size: 15px;
+    }
+}

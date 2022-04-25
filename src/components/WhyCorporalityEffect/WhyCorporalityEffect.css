@@ -169,6 +169,7 @@
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 30px;
+    text-transform: capitalize;
 }
 .wce-business-section .wce-business-content p {
     font-style: normal;
@@ -194,7 +195,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 10px;
 }
@@ -333,7 +334,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 10px;
 }
@@ -370,4 +371,243 @@
     font-size: 16px;
     line-height: 22px;
     color: #232323;
+}
+
+
+/* responsive start */
+@media only screen and (max-width: 1400.99px) {
+    .wce-banner-main .wce-banner-content-row {
+        padding-right: 30px;
+        padding-left: 30px;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    .wce-business-section .wce-business-row {
+        max-width: 85%;
+    }
+    .wce-work-section .wce-work-title-row {
+        max-width: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 1280.99px) {
+    .wce-business-section .wce-business-row {
+        max-width: 100%;
+    }
+    .wce-work-section .wce-work-title-row {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1220.99px) {
+    .wce-banner-main .wce-banner-content-row {
+        max-width: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .wce-banner-main {
+        padding-top: 40px;
+    }
+    .wce-banner-main .wce-banner-content-row {
+        max-width: 95%;
+    }
+    .wce-banner-main .rec-2 {
+        top: 5px;
+    }
+    .wce-banner-main .wce-banner-social-main {
+        top: initial;
+        bottom: 0;
+        z-index: 1;
+    }
+    .wce-commitment-section .wce-commitment-box {
+        margin-bottom: 30px;
+    }
+    .wce-right-section .wce-right-boxes-row .wce-right-box {
+        width: 80%;
+        margin: 0 auto 40px;
+    }
+    .wce-work-section .wce-work-accordion-main {
+        flex-direction: column;
+    }
+    .wce-work-section .wce-work-accordion-main .accordion-item {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .wce-work-section .wce-work-accordion-main .accordion-item:nth-child(2n) {
+        margin-left: 0;
+    }
+    .wce-work-section .wce-work-accordion-main .accordion-body {
+        padding: 20px;
+    }
+    .wce-banner-main .wce-banner-content-row .wce-banner-phone {
+        left: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 720.99px) {
+    .wce-banner-main .wce-banner-social-main {
+        transform: translate(0, -100%);
+    }
+    .wce-banner-main .wce-banner-content-row .wce-banner-phone {
+        left: initial;
+        right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+    .wce-business-section .wce-business-row h2 {
+        font-size: 28px;
+    }
+    .wce-right-section .wce-right-boxes-row .wce-right-box {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .wce-banner-main .row > *, 
+    .wce-commitment-section .row > *, 
+    .wce-business-section .row > *, 
+    .wce-right-section .row > *, 
+    .wce-work-section .row > *, 
+    .wce-key-elements-section .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .wce-banner-main .wce-banner-content-row {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .wce-commitment-section .wce-commitment-title-row .wce-commitment-title img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .wce-business-section .wce-business-row h2 {
+        font-size: 24px;
+    }
+    .wce-key-elements-section .wce-key-elements-title-row h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 540.99px) {
+    .wce-work-section .wce-work-accordion-main .accordion-item .wce-work-heading img {
+        max-width: 80px;
+        margin-right: 5px;
+    }
+    .wce-work-section .wce-work-accordion-main .accordion-item .wce-work-heading {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 500.99px) {
+    .wce-banner-main .wce-banner-content-row .wce-banner-btn {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .wce-banner-main .wce-banner-content-row .wce-banner-phone img {
+        max-height: 80px;
+    }
+    .wce-commitment-section .wce-commitment-box {
+        padding: 30px 15px;
+    }
+    .wce-right-section .wce-right-boxes-row .wce-right-box {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .wce-key-elements-section .wce-key-elements-title-row h2 {
+        font-size: 24px;
+    }
+    .wce-key-elements-section .wce-key-elements-boxes-row .wce-key-elements-box {
+        padding: 20px 15px;
+    }
+}
+
+
+@media only screen and (max-width: 449.99px) {
+    .wce-banner-main .wce-banner-content-row h1 {
+        font-size: 24px;
+    }
+    .wce-banner-main .wce-banner-content-row p {
+        font-size: 15px;
+    }
+    .wce-banner-main .wce-banner-content-row .wce-banner-btn {
+        font-size: 14px;
+    }
+    .wce-banner-main .wce-banner-content-row .wce-banner-btn {
+        padding: 8px 20px;
+    }
+    .wce-work-section .wce-work-accordion-main .accordion-item .wce-work-heading img {
+        max-width: 50px;
+    }
+    .wce-work-section .wce-work-accordion-main .accordion-item .wce-work-heading {
+        font-size: 18px;
+    }
+    .wce-work-section .wce-work-accordion-main .accordion-item .accordion-button {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .wce-key-elements-section .wce-key-elements-title-row h2 {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 375.99px) {
+    .wce-banner-main .wce-banner-content-row h1 {
+        font-size: 22px;
+    }
+    .wce-banner-main .wce-banner-content-row .wce-banner-phone img {
+        margin-right: -15px;
+    }
+}
+
+
+@media only screen and (max-width: 345.99px) {
+    .wce-commitment-section .wce-commitment-box .wce-box-tittle {
+        font-size: 18px;
+    }
+    .wce-right-section .wce-right-title-row h2 {
+        font-size: 24px;
+    }
+    .wce-right-section .wce-right-boxes-row .wce-right-box-title {
+        font-size: 18px;
+    }
+    .wce-work-section .wce-work-title-row h2 {
+        font-size: 24px;
+    }
+    .wce-key-elements-section .wce-key-elements-boxes-row .wce-keb-title {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .wce-banner-main .wce-banner-content-row h1 {
+        font-size: 20px;
+    }
+    .wce-banner-main .wce-banner-content-row .wce-banner-btn {
+        float: right;
+    }
+    .wce-banner-main .wce-banner-content-row .wce-banner-phone {
+        bottom: -40px;
+    }
+    .wce-business-section .wce-business-row h2 {
+        font-size: 20px;
+    }
+    .wce-work-section .wce-work-accordion-main .accordion-item .wce-work-heading {
+        font-size: 16px;
+    }
 }

@@ -100,7 +100,7 @@ function MarketingModelApproch() {
                                 <p>Our prosperity business model holds the key understanding of what drives business success in the most complex and challenging business environment. Most measurement solutions stop at a certain level due to limitation of it's ability at granularity dissection and actionable nodes. Corporality prefer to go deeper and now provides maturation model to complete the required solution: Intended Maturation Mix Models.</p>
                                 <p>By connecting strategic and tactical, customer and business lenses, with actionable items to reach the true potential. </p>
                             </div>
-                            <div class="mma-models-btn" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Explore More</div>
+                            <div className="mma-models-btn" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Explore More</div>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ function MarketingModelApproch() {
             <div className="mma-marketing-approach-section">
                 <div className="container-lg">
                     <div className="row mma-ma-title-row">
-                        <div className="col-lg-10">
+                        <div className="col-lg-12">
                             <div className="mma-ma-title">
                                 <div data-aos="fade-up">
                                     <h2>We work with 100+ customers to help their marketing approach.</h2>

@@ -2,7 +2,7 @@ import React from 'react'
 
 export const RightForYouItem = (props) => {
     return (
-        <div className="col-md-4 wce-right-box-col">
+        <div className="col-lg-4 wce-right-box-col">
             <div className="wce-right-box">
                 <div className="wce-right-box-img">
                     {props.thumbnail && <img src={props.thumbnail} alt={props.title} />}

@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState, Fragment, useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import BlogTop from './components/BlogTop'
 import "./Blog.css"
 import Aos from 'aos';
-import axios from 'axios';
-import { Link, useNavigate, useParams } from 'react-router-dom'
+// import axios from 'axios';
+import { useNavigate, useParams } from 'react-router-dom'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
 import Carousel from 'react-grid-carousel'
 import BlogItem from './components/BlogItem';

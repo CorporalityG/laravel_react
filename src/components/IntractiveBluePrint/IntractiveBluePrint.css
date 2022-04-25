@@ -203,7 +203,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 25px;
 }
@@ -229,6 +229,7 @@
     font-size: 26px;
     color: #232323;
     max-width: 80%;
+    text-transform: capitalize;
 }
 /* know section end */
 
@@ -249,7 +250,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 25px;
 }
@@ -365,7 +366,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 15px;
 }
@@ -592,16 +593,17 @@
     top: 50%;
 }
 .ibp-strategy-solutions-section .ibp-ss-content {
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto;
 }
 .ibp-strategy-solutions-section .ibp-ss-content h2 {
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;
     color: #3C708E;
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 .ibp-strategy-solutions-section .ibp-ss-content p {
     font-style: normal;
@@ -612,3 +614,612 @@
     margin-bottom: 10px;
 }
 /* strategy solutions end*/
+
+
+/* responsive start */
+@media only screen and (max-width: 1450.99px) {
+    .ibp-working-section .ibp-wc-banner .wc-b-rec {
+        left: -20px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec {
+        left: -20px;
+    }
+}
+
+
+@media only screen and (max-width: 1400.99px) {
+    .ibp-banner-section .ibp-banner {
+        justify-content: center;
+    }
+    .ibp-banner-section .ibp-banner .ibp-banner-img {
+        max-height: 450px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-rec-dots {
+        max-height: 450px;
+        right: -10px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-vector-1 {
+        max-height: 100px;
+        left: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 1399.99px) {
+    .ibp-banner-section .ibp-banner-content h1 {
+        font-size: 36px
+    }
+    .ibp-banner-section .ibp-banner-content .ibp-banner-desc {
+        max-width: 90%;
+    }
+    .ibp-banner-section .ibp-banner .ibp-banner-img {
+        max-height: 400px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-rec-dots {
+        max-height: 400px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-img {
+        left: 0;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-rec {
+        left: -80px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec {
+        left: -85px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-ellipse {
+        left: 30%;
+        bottom: -180px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec-1 {
+        bottom: -175px;
+        left: calc(30% + 35px);
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-rec-1 {
+        bottom: -185px;
+        left: calc(30% + 45px);
+    }
+    .ibp-innovate-educate-section .ibp-ie-content p {
+        max-width: 60%;
+    }
+}
+
+
+@media only screen and (max-width: 1280.99px) {
+    .ibp-working-section .ibp-wc-banner .wc-b-rec {
+        left: -60px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec {
+        left: -65px;
+    }
+}
+
+
+@media only screen and (max-width: 1200.99px) {
+    .ibp-working-section .ibp-wc-banner {
+        text-align: center;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-img {
+        max-height: 280px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-rec {
+        left: 0;
+        max-height: 400px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec {
+        left: -20px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-write-box {
+        bottom: -180px;
+    }
+    .ibp-strategy-solutions-section .ss-ellipse {
+        left: 50px;
+    }
+    .ibp-strategy-solutions-section .ss-vector {
+        left: 110px;
+    }
+    .ibp-strategy-solutions-section .ss-rec {
+        left: 120px;
+    }
+}
+
+
+@media only screen and (max-width: 1150.99px) {
+    .ibp-strategy-solutions-section .ss-ellipse {
+        left: 50px;
+        max-height: 80px;
+    }
+    .ibp-strategy-solutions-section .ss-vector {
+        left: 95px;
+        max-height: 50px;
+    }
+    .ibp-strategy-solutions-section .ss-rec {
+        left: 105px;
+        max-height: 50px;
+        top: 45%;
+    }
+    .ibp-strategy-solutions-section .ibp-ss-content {
+        max-width: 90%;
+        z-index: 1;
+        position: relative;
+    }
+    .ibp-strategy-solutions-section .ibp-ss-content h2 {
+        font-size: 28px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-content p {
+        max-width: 70%;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-rec {
+        left: -60px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec {
+        left: -80px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-ellipse {
+        left: 15%;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec-1 {
+        left: calc(15% + 35px);
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-rec-1 {
+        left: calc(15% + 45px);
+    }
+    .ibp-banner-section .ibp-banner-content h1 {
+        font-size: 28px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-rec-dots {
+        right: -50px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-vector-1 {
+        left: -50px;
+        bottom: 65px;
+    }
+    .ibp-working-section .ibp-wt-content {
+        max-width: 100%;
+    }
+    .ibp-know-section .ibp-know-title {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1024.99px) {
+    .ibp-banner-section .ibp-banner .ibp-b-rec-dots {
+        right: -30px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-vector-1 {
+        left: -30px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-img {
+        max-height: 250px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-rec {
+        max-height: 350px;
+        left: -30px;
+        top: 20px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec {
+        left: -40px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-write-box {
+        bottom: -230px;
+    }
+}
+
+
+@media only screen and (max-width: 990.99px) {
+    .ibp-banner-section {
+        padding-top: 40px;
+    }
+    .ibp-banner-section .ibp-b-rec-1 {
+        left: initial;
+        right: 50px;
+        top: 30px;
+    }
+    .ibp-banner-section .ibp-banner {
+        max-width: 430px;
+        margin: 0 auto;
+    }
+    .ibp-banner-section .ibp-banner-content .ibp-banner-desc {
+        max-width: 100%;
+    }
+    .ibp-know-section .ibp-k-box {
+        margin-bottom: 30px;
+    }
+    .ibp-know-section .ibp-k-rec-2 {
+        left: initial;
+        right: 100px;
+        bottom: initial;
+        top: 100px;
+    }
+    .ibp-know-section .ibp-k-rec-3 {
+        left: initial;
+        right: 160px;
+        bottom: initial;
+        top: 160px;
+    }
+    .ibp-working-section .ibp-wt-content .ibp-wt-desc {
+        max-width: 100%;
+    }
+    .ibp-working-section .ibp-wc-banner {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-write-box {
+        bottom: -180px;
+        right: -100px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec {
+        left: -60px;
+    }
+    .ibp-working-section .ibp-wc-desc {
+        margin-top: 250px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-content p {
+        max-width: 100%;
+        text-align: center;
+    }
+    .ibp-innovate-educate-section .ibp-ie-content {
+        margin-bottom: 70px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    .ibp-strategy-solutions-section .ibp-ss-content {
+        max-width: 100%;
+    }
+    .ibp-strategy-solutions-section .ss-ellipse {
+        left: 20px;
+        top: initial;
+        bottom: 30px;
+        max-height: 50px;
+    }
+    .ibp-strategy-solutions-section .ss-vector {
+        max-height: 30px;
+        left: 50px;
+        top: initial;
+        bottom: 50px;
+    }
+    .ibp-strategy-solutions-section .ss-rec {
+        max-height: 30px;
+        left: 60px;
+        top: initial;
+        bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 850.99px) {
+    .ibp-working-section .ibp-wt-content h2 {
+        font-size: 28px;
+    }
+    .ibp-strategy-solutions-section .ibp-ss-content h2 {
+        font-size: 26px;
+    }
+}
+
+
+@media only screen and (max-width: 700.99px) {
+    .ibp-working-section .ibp-wc-banner .wc-b-write-box {
+        padding: 25px 20px;
+        right: -50px;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .ibp-banner-section .row > *, 
+    .ibp-know-section .row > *, 
+    .ibp-working-section .row > *, 
+    .ibp-innovate-educate-section .row > *, 
+    .ibp-strategy-solutions-section .row > *, 
+    .ibp-write-us-modal .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .ibp-banner-section .ibp-b-rec-2 {
+        left: initial;
+        right: 20%;
+    }
+    .ibp-know-section .ibp-k-rec-3 {
+        right: 50px;
+    }
+    .ibp-know-section .ibp-k-rec-1 {
+        max-height: 90px;
+    }
+    .ibp-know-section .ibp-k-rec-2 {
+        top: 80px;
+    }
+    .ibp-know-section .ibp-know-title {
+        font-size: 24px;
+    }
+    .ibp-working-section .ibp-wt-content h2 {
+        font-size: 24px;
+    }
+    .ibp-working-section .ibp-wc-banner {
+        max-width: 450px;
+    }
+    .ibp-strategy-solutions-section .ibp-ss-content h2 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .ibp-write-us-modal .ibp-wu-modal-row {
+        flex-direction: column-reverse;
+    }
+    .ibp-write-us-modal .modal-body {
+        padding-left: 1rem;
+    }
+    .ibp-write-us-modal .ibp-wu-banner {
+        margin-left: -1.7rem;
+    }
+}
+
+
+@media only screen and (max-width: 540.99px) {
+    .ibp-banner-section .ibp-b-rec-1 {
+        animation: rotateBannerRec1 5s linear infinite;
+        top: 10px;
+        right: 10px;
+    }
+    @keyframes rotateBannerRec1 {
+        0%,
+        100% {
+            transform: rotateX(8.75deg) rotateY(35deg);
+        }
+        50% {
+        transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+        }
+    }
+    .ibp-know-section .ibp-k-rec-1 {
+        animation: rotateKnowRec1 5s linear infinite;
+        max-height: 70px;
+    }
+    @keyframes rotateKnowRec1 {
+        0%,
+        100% {
+            transform: rotateX(8.75deg) rotateY(35deg);
+        }
+        50% {
+        transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+        }
+    }
+    .ibp-know-section .ibp-k-rec-2 {
+        right: 20px;
+        top: 100px;
+    }
+    .ibp-know-section .ibp-k-rec-3 {
+        right: 30px;
+        top: 180px;
+    }
+    .ibp-working-section .ibp-wc-banner {
+        max-width: 400px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-img {
+        max-height: 200px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-rec {
+        max-height: 300px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec {
+        bottom: -120px;
+        left: -30px;
+        max-height: 90px;
+    }
+}
+
+
+@media only screen and (max-width: 500.99px) {
+    .ibp-banner-section .ibp-banner-content h1 {
+        font-size: 24px;
+    }
+    .ibp-banner-section .ibp-banner-content .ibp-banner-subtitle {
+        font-size: 16px;
+    }
+    .ibp-know-section .ibp-know-title {
+        font-size: 22px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-write-box {
+        position: relative;
+        right: initial;
+    }
+    .ibp-working-section .ibp-wc-banner {
+        text-align: right;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-rec {
+        left: 0;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec {
+        bottom: initial;
+        top: 55%;
+        left: 0;
+    }
+    .ibp-working-section .ibp-wc-desc h2 {
+        font-size: 28px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner {
+        max-width: 400px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner .ie-vector {
+        left: calc(15% + 280px);
+        top: 220px;
+        max-height: 50px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner .ie-banner {
+        max-height: 350px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner .ie-rec {
+        max-height: 300px;
+    }
+    .ibp-strategy-solutions-section .ibp-ss-content h2 {
+        font-size: 20px;
+    }
+    .ibp-banner-section .ibp-banner {
+        max-width: 400px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-banner-img {
+        max-height: 350px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-rec-dots {
+        max-height: 350px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-rec-dots {
+        right: -10px;
+    }
+    .ibp-working-section .ibp-wt-content h2 {
+        font-size: 22px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-vector-1 {
+        bottom: 25px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-vector-1 {
+        left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 390.99px) {
+    .ibp-banner-section .ibp-banner-content .ibp-banner-title {
+        font-size: 16px;
+    }
+    .ibp-banner-section .ibp-banner-content h1 {
+        font-size: 22px;
+    }
+    .ibp-banner-section .ibp-banner {
+        max-width: 90%;
+        margin-top: 30px;
+    }
+    .ibp-banner-section .ibp-b-rec-2 {
+        top: 50%;
+        right: 10%;
+    }
+    .ibp-banner-section .ibp-banner .ibp-banner-img {
+        max-height: 300px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-rec-dots {
+        max-height: 300px;
+    }
+    .ibp-know-section .ibp-kt-content h2 {
+        font-size: 28px;
+    }
+    .ibp-know-section .ibp-k-box {
+        text-align: left;
+    }
+    .ibp-know-section .ibp-know-title {
+        font-size: 20px;
+    }
+    .ibp-working-section .ibp-wc-desc h2 {
+        font-size: 24px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner {
+        max-width: 90%;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner .ie-vector {
+        top: initial;
+        bottom: -40px;
+        left: initial;
+        right: 4%;
+    }
+}
+
+
+@media only screen and (max-width: 360.99px) {
+    .ibp-banner-section .ibp-banner .ibp-banner-img {
+        max-height: 250px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-rec-dots {
+        max-height: 250px;
+        right: 0;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-vector-1 {
+        max-height: 70px;
+    }
+}
+
+
+@media only screen and (max-width: 345.99px) {
+    .ibp-innovate-educate-section .ibp-ie-banner {
+        max-width: 100%;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner .ie-banner {
+        max-height: 300px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner .ie-rec {
+        max-height: 280px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-content h2 {
+        font-size: 28px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-img {
+        max-height: 180px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-rec {
+        top: 0;
+    }
+    .ibp-working-section .ibp-wt-content h2 {
+        font-size: 20px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-rec-dots {
+        right: -10px;
+    }
+    .ibp-working-section .ibp-wc-desc h2 {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .ibp-write-us-modal .modal-body {
+        padding-left: .3rem;
+        padding-right: .3rem;
+    }
+    .ibp-write-us-modal .ibp-wu-banner {
+        margin-left: -1rem;
+    }
+    .ibp-write-us-modal .ibp-wu-heading {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .ibp-banner-section .ibp-banner {
+        max-width: 100%;
+    }
+    .ibp-banner-section .ibp-banner .ibp-banner-img {
+        max-height: 200px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-rec-dots {
+        max-height: 200px;
+        right: 10px;
+    }
+    .ibp-banner-section .ibp-banner .ibp-b-vector-1 {
+        bottom: 10px;
+    }
+    .ibp-know-section .ibp-kt-content h2 {
+        font-size: 22px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-rec {
+        max-height: 260px;
+        top: 15px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-vec {
+        top: 64%;
+    }
+    .ibp-innovate-educate-section .ibp-ie-content h2 {
+        font-size: 24px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner .ie-banner {
+        max-height: 250px;
+    }
+    .ibp-innovate-educate-section .ibp-ie-banner .ie-rec {
+        max-height: 230px;
+    }
+    .ibp-working-section .ibp-wc-banner .wc-b-write-box {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
