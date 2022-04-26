@@ -1,20 +1,20 @@
-.blog-item {
+.blog2 .blog-item {
     overflow: hidden;
     margin-bottom: 30px;
 }
-.blog-item img {
+.blog2 .blog-item img {
     max-width: 100%;
     width: 100%;
     height: 160px;
     transition: transform 1s ease-in-out;
     transform-origin: center center;
 }
-.blog-item img:hover {
+.blog2 .blog-item img:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-.blog-item .blog-item-category {
+.blog2 .blog-item .blog-item-category {
     color: #31647c;
     font-size: 16px;
     display: inline-block;
@@ -24,7 +24,7 @@
     text-transform: uppercase;
     width: 100%;
 }
-.blog-item .blog-item-title {
+.blog2 .blog-item .blog-item-title {
     color: rgb(31, 31, 31);
     font-size: 16px;
     font-weight: 700;

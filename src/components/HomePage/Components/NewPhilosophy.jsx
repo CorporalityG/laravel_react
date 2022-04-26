@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { API_BASE_URL, BASE_URL } from '../../../config';
+import { BASE_URL } from '../../../config';
 import "./Philosophy.css";
 
 const NewPhilosophy = () => {

@@ -1,10 +1,10 @@
-import React, { createRef, useEffect, useRef, useState } from "react";
-import { API_BASE_URL, BASE_URL } from '../../../config';
+import React, { useEffect, useState } from "react";
+import { BASE_URL } from '../../../config';
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Services.css";
-import ellipse_1 from "./images/ellipse_1.png";
-import vector_1 from "./images/vector_1.png";
+// import ellipse_1 from "./images/ellipse_1.png";
+// import vector_1 from "./images/vector_1.png";
 import { useNavigate } from "react-router";
 
 function Services() {

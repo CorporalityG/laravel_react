@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { CKEditor } from 'ckeditor4-react';
 import "./write.css";
 import "bootstrap/dist/css/bootstrap.min.css";

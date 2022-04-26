@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="row footerRow">
             {/* col-1 */}
             <div className="column1">
-              <img className="company-logo-footer" src={logo} />
+              <img className="company-logo-footer" src={logo} alt="logo" />
               {/* share animation start */}
               <div className="foot-c">
                 <nav className="menu">
@@ -83,23 +83,23 @@ export default function Footer() {
               <h1 className="footer-heading">Who we are</h1>
               <hr className="line-below-footer-heading" />
               <p className="text-links" onClick={() => { navigate("/about-corporality"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 About Corporality
               </p>
               <p className="text-links" onClick={() => { navigate("/work-with-clients"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 How We Work with Clients
               </p>
               <p className="text-links" onClick={() => { navigate("/inclusion-and-diversity"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Inclusion and Diversity
               </p>
               <p className="text-links" onClick={() => { navigate("/partnership-programmes"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Partnership Programmes
               </p>
               <p className="text-links" onClick={() => { navigate("/sustainable-growth"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Sustainable Growth
               </p>
             </div>
@@ -109,31 +109,31 @@ export default function Footer() {
               <h1 className="footer-heading">Our Service</h1>
               <hr size="5" className="line-below-footer-heading" />
               <p className="text-links" onClick={() => { navigate("/goto-market-strategy"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Go-to-Marketing
               </p>
               <p className="text-links" onClick={() => { navigate("/digital-media-marketing"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Digital Media Marketing
               </p>
               <p className="text-links" onClick={() => { navigate("/strategic-consultancy"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Strategic Consulting
               </p>
               <p className="text-links" onClick={() => { navigate("/corporate-strategy"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Corporate Level Strategy
               </p>
               <p className="text-links" onClick={() => { navigate("/sustainable-growth"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Product Strategy
               </p>
               <p className="text-links" onClick={() => { navigate("/brand-positioning"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Brand Positioning
               </p>
               <p className="text-links" onClick={() => { navigate("/cxo-strategy"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Outsourced CXO
               </p>
             </div>
@@ -143,19 +143,19 @@ export default function Footer() {
               <h1 className="footer-heading">Insights</h1>
               <hr size="5" className="line-below-footer-heading" />
               <Link to="/about-corporality" onClick={() => { topHandle() }} className="text-links">
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Corporality Citizenship
               </Link>
               <Link to="/our-team" onClick={() => { topHandle() }} className="text-links">
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Our Team
               </Link>
               <Link to="/careers" onClick={() => { topHandle() }} className="text-links">
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Careers
               </Link>
               <Link to="/blog" onClick={() => { topHandle() }} className="text-links">
-                <img className="poligon-image" src={polygon} />
+                <img className="poligon-image" src={polygon} alt="*" />
                 Insights
               </Link>
             </div>
@@ -163,7 +163,7 @@ export default function Footer() {
             {/* col-5 */}
             <div className="arrow-icon-container">
               <div onClick={topHandle} className="arrow-icon-wrapper d-flex justify-content-center align-items-center">
-                <img src={upArrow} />
+                <img src={upArrow} alt="Up" />
               </div>
             </div>
           </div>

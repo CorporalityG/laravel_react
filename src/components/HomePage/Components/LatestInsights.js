@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./LatestInsights.css";
-import { right } from "@popperjs/core";
+// import { right } from "@popperjs/core";
 import { useNavigate, Link } from "react-router-dom";
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
 

@@ -26,6 +26,7 @@
     position: absolute;
     top: 45%;
     transform: translate(0, -50%);
+    z-index: 1;
 }
 .wice-banner-main .wice-banner-social-main .wice-banner-social-img img {
     max-height: 180px;
@@ -56,7 +57,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: none;
+    text-transform: capitalize;
     color: #33657E;
     margin-bottom: 15px;
 }
@@ -115,7 +116,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 20px;
 }
@@ -170,15 +171,15 @@
 .wice-origin-section {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-image: url('./img/Origin-Framework.png');
-    background-size: 100%;
+    background-image: linear-gradient(89.31deg, rgba(255, 255, 255, 0) 0%, rgba(254, 248, 248, 0.932292) 60.36%), url('./img/Origin-Framework.png');
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .wice-origin-section .wice-origin-row .wice-origin-content h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 25px;
 }
@@ -230,7 +231,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 20px;
 }
@@ -289,6 +290,7 @@
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 0;
+    text-transform: capitalize;
 }
 .wice-marketing-section .wice-marketing-row .wice-marketing-subtitle {
     font-style: normal;
@@ -327,7 +329,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 50px;
 }
@@ -355,4 +357,315 @@
     font-weight: 700;
     font-size: 20px;
     color: #A06DAF;
+}
+
+
+/* responsive start */
+@media only screen and (max-width: 1399.99px) {
+    .wice-key-elements-section .wice-ke-boxes-row .wice-ke-box {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 1280.99px) {
+    .wice-banner-main .rec-2 {
+        right: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 1150.99px) {
+    .wice-banner-main .wice-banner-content-row {
+        padding-top: 30px;
+        padding-bottom: 90px;
+    }
+    .wice-banner-main .wice-banner-content-row .wice-banner-phone {
+        bottom: 30px;
+    }
+    .wice-effective-section .wice-effective-row .wice-effective-img {
+        height: 450px;
+    }
+    .wice-effective-section .wice-effective-row .wice-effective-content {
+        max-width: 80%;
+    }
+    .wice-marketing-section .wice-marketing-row .wice-marketing-content {
+        max-width: 100%;
+    }
+    .wice-key-elements-section .wice-ke-boxes-row {
+        align-items: initial;
+    }
+    .wice-key-elements-section .wice-ke-boxes-row .wice-ke-box-col {
+        display: flex;
+    }
+    .wice-key-elements-section .wice-ke-boxes-row .wice-ke-box {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1080.99px) {
+    .wice-banner-main .rec-2 {
+        bottom: 0;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .wice-banner-main {
+        padding-top: 40px;
+    }
+    .wice-banner-main .wice-banner-img {
+        top: -50px;
+    }
+    .wice-banner-main .rec-1 {
+        top: 10px;
+    }
+    .wice-banner-main .wice-banner-content-row .wice-banner-content {
+        max-width: 100%;
+    }
+    .wice-banner-main .wice-banner-content-row .wice-banner-phone {
+        left: initial;
+        right: 0;
+    }
+    .wice-banner-main .wice-banner-social-main {
+        top: initial;
+        bottom: 30px;
+        transform: translate(0, 0);
+    }
+    .wice-factor-section .wice-factor-content-row .wice-factor-content {
+        margin-bottom: 50px;
+    }
+    .wice-origin-section {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .wice-origin-section .wice-origin-row {
+        background-color: rgba(254, 248, 248, 0.7);
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 768.99px) {
+    .wice-marketing-section .wice-marketing-row .wice-marketing-content h2 {
+        font-size: 28px;
+    }
+    .wice-key-elements-section .wice-ke-title-row h2 {
+        font-size: 28px;
+    }
+    .wice-origin-section .wice-origin-row .wice-origin-content h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 766.99px) {
+    .wice-factor-section .wice-factor-boxes-row .wice-factor-box {
+        margin-bottom: 40px;
+    }
+    .wice-effective-section .wice-effective-row .wice-effective-img {
+        height: 500px;
+    }
+    .wice-key-elements-section .wice-ke-boxes-row .wice-ke-box {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .wice-key-elements-section .wice-ke-boxes-row .wice-ke-box-title {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 700.99px) {
+    .wice-key-elements-section .wice-ke-title-row h2 {
+        font-size: 24px;
+    }
+    .wice-marketing-section .wice-marketing-row .wice-marketing-content h2 {
+        font-size: 24px;
+    }
+    .wice-marketing-section .wice-marketing-row .wice-marketing-subtitle {
+        font-size: 22px;
+    }
+    .wice-origin-section .wice-origin-row .wice-origin-content h2 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+    .wice-banner-main .wice-banner-content-row .wice-banner-phone img {
+        max-height: 90px;
+    }
+}
+
+
+@media only screen and (max-width: 620.99px) {
+    .wice-banner-main .wice-banner-content-row .wice-banner-phone {
+        bottom: 0;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .wice-banner-main .row > *, 
+    .wice-factor-section .row > *, 
+    .wice-origin-section .row > *, 
+    .wice-effective-section .row > *, 
+    .wice-marketing-section .row > *, 
+    .wice-key-elements-section .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .wice-banner-main .wice-banner-social-main .wice-banner-social-img {
+        display: none;
+    }
+    .wice-banner-main .wice-banner-social-main {
+        left: 15px;
+    }
+    .wice-banner-main .rec-2 {
+        right: 50%;
+        transform: translate(50%, 0);
+        bottom: 10px;
+    }
+    .wice-effective-section .wice-effective-row .wice-effective-img {
+        display: none;
+    }
+    .wice-effective-section .wice-effective-row .wice-effective-col {
+        position: relative;
+    }
+    .wice-effective-section .wice-effective-row .wice-effective-content {
+        background: #F4F8FB;
+        box-shadow: 0px 9px 32px rgba(0, 0, 0, 0.1);
+        border-radius: 40px;
+        max-width: 95%;
+        padding: 40px 20px;
+    }
+    .wice-marketing-section .wice-marketing-row .wice-marketing-content h2 {
+        font-size: 22px;
+    }
+    .wice-marketing-section .wice-marketing-row .wice-marketing-subtitle {
+        font-size: 20px;
+    }
+    .wice-key-elements-section .wice-ke-title-row h2 {
+        font-size: 22px;
+    }
+    .wice-banner-main .wice-banner-content-row .wice-banner-phone {
+        bottom: -30px;
+    }
+}
+
+
+@media only screen and (max-width: 485.99px) {
+    .wice-banner-main .wice-banner-content-row h1 {
+        font-size: 28px;
+    }
+    .wice-banner-main .wice-banner-content-row .wice-banner-btn-main {
+        flex-direction: column;
+    }
+    .wice-banner-main .wice-banner-content-row .wice-banner-btn:not(:last-child) {
+        margin-right: 0;
+    }
+    .wice-banner-main .wice-banner-content-row .wice-banner-btn {
+        margin-top: 15px;
+    }
+    .wice-factor-section .wice-factor-content-row .wice-factor-content h2 {
+        font-size: 28px;
+    }
+    .wice-marketing-section .wice-marketing-row .wice-marketing-content h2 {
+        font-size: 20px;
+    }
+    .wice-marketing-section .wice-marketing-row .wice-marketing-subtitle {
+        font-size: 18px;
+    }
+    .wice-effective-section .wice-effective-row h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 430.99px) {
+    .wice-banner-main .wice-banner-content-row h1 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 390.99px) {
+    .wice-banner-main .wice-banner-content-row h1 {
+        font-size: 22px;
+    }
+    .wice-banner-main .wice-banner-content-row p {
+        font-size: 15px;
+    }
+    .wice-banner-main .wice-banner-content-row .wice-banner-btn {
+        font-size: 15px;
+    }
+    .wice-factor-section .wice-factor-content-row .wice-factor-content h2 {
+        font-size: 24px;
+    }
+    .wice-origin-section .wice-origin-row .wice-origin-content h2 {
+        font-size: 22px;
+    }
+    .wice-effective-section .wice-effective-row h2 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 360.99px) {
+    .wice-banner-main .wice-banner-content-row {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 345.99px) {
+    .wice-key-elements-section .wice-ke-title-row h2 {
+        font-size: 20px;
+    }
+    .wice-marketing-section .wice-marketing-row .wice-marketing-content h2 {
+        font-size: 18px;
+    }
+    .wice-marketing-section .wice-marketing-row .wice-marketing-subtitle {
+        font-size: 16px;
+    }
+    .wice-marketing-section .wice-marketing-row .wice-marketing-content p {
+        font-size: 15px;
+    }
+    .wice-effective-section .wice-effective-row h2 {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .wice-key-elements-section .wice-ke-title-row h2 {
+        font-size: 18px;
+    }
+    .wice-effective-section .wice-effective-row h2 {
+        font-size: 20px;
+    }
+    .wice-origin-section .wice-origin-row .wice-origin-content h2 {
+        font-size: 20px;
+    }
+    .wice-factor-section .wice-factor-boxes-row .factor-box-title {
+        font-size: 16px;
+    }
+    .wice-factor-section .wice-factor-boxes-row .wice-factor-box {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .wice-factor-section .wice-factor-content-row .wice-factor-content h2 {
+        font-size: 20px;
+    }
+    .wice-factor-section .wice-factor-content-row .wice-factor-content p {
+        font-size: 15px;
+    }
+    .wice-banner-main .wice-banner-content-row h1 {
+        font-size: 20px;
+    }
 }

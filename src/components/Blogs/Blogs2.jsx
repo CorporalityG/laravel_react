@@ -9,7 +9,7 @@ import { BlogItem } from './BlogItem'
 
 function Blogs2() {
     return (
-        <>
+        <div className="blog2">
             <div className="blog2-latest-section">
                 <div className="container-lg">
                     <div className="row latest-blog-row">
@@ -516,7 +516,7 @@ function Blogs2() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

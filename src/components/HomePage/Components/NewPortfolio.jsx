@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { API_BASE_URL, BASE_URL } from '../../../config';
+import React, { useState } from 'react'
+import { BASE_URL } from '../../../config';
 import "./Portfolio.css"
 import Carousel from 'react-bootstrap/Carousel'
 import { useNavigate } from "react-router";

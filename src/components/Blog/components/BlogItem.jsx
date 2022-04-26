@@ -1,4 +1,4 @@
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
+import { BASE_URL } from '../../../config';
 import React from 'react';
 import "./BlogItem.css";
 import { Link } from 'react-router-dom';
@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 function dateFormat(date)
 {
     var dateObj = new Date(date).toDateString();
-    var date = dateObj.split(" ");
+    var date1 = dateObj.split(" ");
     // console.log(date);
     /*date.forEach((e, i) => {
         date[i] = date[i].toUpperCase();
     })*/
-    return date[1] + ' ' + date[2] + ', ' + date[3];
+    return date1[1] + ' ' + date1[2] + ', ' + date1[3];
 }
 
 function BlogItem(props)

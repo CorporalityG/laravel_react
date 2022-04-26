@@ -3,7 +3,7 @@ import BlogTop from './components/BlogTop'
 import "./Blog.css"
 import Aos from 'aos';
 // import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
 import Carousel from 'react-grid-carousel'
 import BlogItem from './components/BlogItem';
@@ -27,7 +27,6 @@ function dateFormat(date)
 
 const Blog = () => {
 
-    const navigate = useNavigate();
     const params = useParams();
     const [singleBlog, setSingleBlog] = useState([]);
 

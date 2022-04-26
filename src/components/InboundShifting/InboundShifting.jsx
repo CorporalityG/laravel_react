@@ -40,9 +40,9 @@ function InboundShifting() {
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-lg">
                     <div className="row is-banner-content-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <div className="is-banner-content">
                                 <h1>Ride on to success with your commitment.</h1>
                                 <p>Did you notice that the market is more dynamic than ever? Competitors are becoming more effective and harder to track. Corporality is your inbound marketing partner that can help bring your business to a whole new level.</p>
@@ -59,11 +59,11 @@ function InboundShifting() {
             </div>
 
             <div className="is-commitment-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row is-commitment-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <div className="is-commitment-content">
-                                <h2>Choose the Path to Corporality Effect with a 6-month commitment</h2>
+                                <h2>Choose the Path to Corporality Effect with a 6-Month commitment</h2>
                                 <p>Commitment. It’s a word we dedicate for you for signing up with Corporality Effect. See why it’s effective:</p>
                             </div>
                         </div>
@@ -72,7 +72,7 @@ function InboundShifting() {
             </div>
 
             <div className="is-shifting-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row is-shifting-row">
                         <div className="col-lg-6">
                             <div className="is-shifting-content">
@@ -93,9 +93,9 @@ function InboundShifting() {
             </div>
 
             <div className="is-curious-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row is-curious-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <div className="is-curious-content">
                                 <h2>Curious How We Do It?</h2>
                                 <p>inbound shifting is a powerful tool for many business owners and entrepreneurs. Corporality delivers premium products that can surely improve your sales performance and more.</p>
@@ -123,7 +123,7 @@ function InboundShifting() {
             </div>
 
             <div className="is-problems-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row is-problems-row">
                         <div className="col-lg-6">
                             <div className="is-problems-img">
@@ -151,16 +151,16 @@ function InboundShifting() {
             </div>
 
             <div className="is-work-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row is-work-title-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <h2>How Does It Work?</h2>
                             <p>Here is how the process looks like:</p>
                         </div>
                     </div>
 
                     <div className="row is-work-accordion-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <Accordion className="is-work-accordion-main">
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>
@@ -216,9 +216,9 @@ function InboundShifting() {
             </div>
 
             <div className="is-model-assessment-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row is-model-assessment-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <div className="is-ma-img">
                             <img src={BASE_URL + '/img/InboundShifting/model-assessment.png'} alt="Model Assessment" />
                             </div>

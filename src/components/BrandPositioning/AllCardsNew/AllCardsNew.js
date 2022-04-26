@@ -24,9 +24,9 @@ import da from "./images/4-1.png";
 import db from "./images/4-2.png";
 import dc from "./images/4-3.png";
 import dd from "./images/4-4.png";
-import ea from "./images/5-1.png";
-import eb from "./images/5-2.png";
-import ec from "./images/5-3.png";
+// import ea from "./images/5-1.png";
+// import eb from "./images/5-2.png";
+// import ec from "./images/5-3.png";
 
 function AllCardsNew() {
   useEffect(() => {

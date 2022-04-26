@@ -36,7 +36,7 @@ const Inclusion = () => {
                             <img alt='' className='smallrect-Id' src={smallrect} />
                             <img alt='' className='backimg-Id' src={Back} />
                             <div className="banner_right_inner-Id" >
-                                <img className='main-prev1-Id' src={Main} />
+                                <img className='main-prev1-Id' src={Main} alt="" />
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import { API_BASE_URL, BASE_URL } from '../../../config';
+import { BASE_URL } from '../../../config';
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./CareToJoinUs.css";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 
 function CareToJoinUs() {

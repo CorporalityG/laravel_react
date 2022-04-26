@@ -1,13 +1,12 @@
 import React from 'react'
 import './WhatIsCorporalityEffect.css'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
-import { useNavigate } from "react-router";
+import { BASE_URL } from '../../config';
+import { Link } from 'react-router-dom';
 import { FactorDrivingConclusionItem } from './FactorDrivingConclusionItem';
 import { KeyElementItem } from './KeyElementItem';
 
 function WhatIsCorporalityEffect() {
 
-    const navigate = useNavigate();
     const topHandle = () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -47,9 +46,9 @@ function WhatIsCorporalityEffect() {
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wice-banner-content-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <div className="wice-banner-content">
                                 <h1>What is Corporality Effect?</h1>
                                 <p>Corporality Effect is a dimension-changing business vision which, when embraced fully, will transform you into one of the most influential people in your industry. Before beginning your journey, you must be obsessed with understanding the shifting market and emerging marketing strategies while searching for the answer to one question “How is your market trend?”</p>
@@ -57,8 +56,8 @@ function WhatIsCorporalityEffect() {
                                 <p>Any marketing move should create visible gains to make it a sound investment. With Corporality Effect, you can reshape your business to a perfect competitive fit.</p>
 
                                 <div className="wice-banner-btn-main">
-                                    <div className="wice-banner-btn" onClick={() => { navigate("/"); topHandle(); }}>Why Corporality</div>
-                                    <div className="wice-banner-btn" onClick={() => { navigate("/"); topHandle(); }}>Training Request</div>
+                                    <Link className="wice-banner-btn" to="/" onClick={() => { topHandle() }} >Why Corporality</Link>
+                                    <Link className="wice-banner-btn" to="/" onClick={() => { topHandle() }} >Training Request</Link>
                                 </div>
                             </div>
                         </div>
@@ -71,13 +70,13 @@ function WhatIsCorporalityEffect() {
             </div>
 
             <div className="wice-factor-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wice-factor-content-row">
                         <div className="col-lg-6">
                             <div className="wice-factor-content">
                                 <h2>Factor driving conclusion</h2>
                                 <p>Over the last decade, we have seen the dramatic shift in marketing across all industries and how buyers make their purchasing decisions. Book your 15 min discovery session</p>
-                                <div className="wice-factor-btn">Explore</div>
+                                <Link className="wice-factor-btn" to="/">Explore</Link>
                                 <p>Now, it is not a secret that everyone heads to the internet to educate themselves before making a purchase. Market leaders stumbled onto the need to shift and started working on Inbound Shifting.</p>
                                 <p><b>They realised that marketing is going to make a swift shift towards Digital Media Marketing. Through their futuristic approach, they pivoted aggressively towards it.</b></p>
                                 <p>Consumers tend to be 70% convinced on purchasing a product even before making a direct inquiry. Their buying decision heightens when they are impressed by a company’s technological advancements.</p>
@@ -106,7 +105,7 @@ function WhatIsCorporalityEffect() {
             </div>
 
             <div className="wice-origin-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wice-origin-row">
                         <div className="col-lg-6 offset-lg-6">
                             <div className="wice-origin-content">
@@ -127,11 +126,11 @@ function WhatIsCorporalityEffect() {
             </div>
 
             <div className="wice-effective-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wice-effective-row">
                         <img src={BASE_URL + '/img/WhatIsCorporalityEffect/effective-bg.png'} alt="Why is this effective?" className="wice-effective-img" />
 
-                        <div className="col-md-12 wice-effective-col">
+                        <div className="col-lg-12 wice-effective-col">
                             <div className="wice-effective-content">
                                 <h2>Why is this effective?</h2>
                                 <p>We want to set the mood for you as we go along improving your marketing strategies, whether you have a team or are a solopreneur. The overall business model, goals, and vision need to be identified. Cooperative team members shall form part of an employer’s priorities to turn vision into success.</p>
@@ -151,9 +150,9 @@ function WhatIsCorporalityEffect() {
                 <img src={BASE_URL + '/img/WhatIsCorporalityEffect/marketing-rec-3.png'} alt="marketing-rec-3" className="marketing-rec-3" />
                 <img src={BASE_URL + '/img/WhatIsCorporalityEffect/marketing-rec-4.png'} alt="marketing-rec-4" className="marketing-rec-4" />
 
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wice-marketing-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <div className="wice-marketing-content">
                                 <div className="wice-marketing-heading">
                                     <h2>Wondering how to maximise your profitability?</h2>
@@ -162,7 +161,7 @@ function WhatIsCorporalityEffect() {
                                 <div className="wice-marketing-subtitle">Increasing sales is one thing…</div>
                                 <p>Is your business stagnant or struggling? Gauge your brand’s strategy with this in-depth analysis program that can reveal the path to advancing your business to the next level with effective basic marketing practices.</p>
                                 <p>What to know more why you should explore more about CORPORALITY EFFECT FRAMEWORK?</p>
-                                <div className="wice-marketing-btn">Explore</div>
+                                <Link className="wice-marketing-btn" to="/">Explore</Link>
                             </div>
                         </div>
                     </div>
@@ -170,9 +169,9 @@ function WhatIsCorporalityEffect() {
             </div>
 
             <div className="wice-key-elements-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row wice-ke-title-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <h2>5 Key Elements of Corporality Effect Framework</h2>
                         </div>
                     </div>

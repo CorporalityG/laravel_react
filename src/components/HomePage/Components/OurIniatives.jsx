@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { API_BASE_URL, BASE_URL } from '../../../config';
-import Carousel from 'react-grid-carousel'
+import React from 'react'
+import { BASE_URL } from '../../../config';
 import "./OurIniatives.css"
 
 const OurIniatives = () => {
@@ -33,7 +32,7 @@ const OurIniatives = () => {
           <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-xs-20 our-iniatives-grid">
             <div className="row">
               <div className="col-sm-6 p-0">
-                <a title="Corporality Magazine">
+                <a href="https://corporality.global/businessmagazine/" target={`_blank`} title="Corporality Magazine">
                   <figure className="our-iniatives-grid-img-effect">
                     <img src={BASE_URL + '/img/HomePage/Corporality-Magazine1.png'} alt="Corporality Magazine" className="our-iniatives-grid-img" />
                     <div className="bottom-gradient-do_more"></div>

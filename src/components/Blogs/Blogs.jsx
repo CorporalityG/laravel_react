@@ -43,9 +43,9 @@ function Blogs() {
 
     async function getData(pageLink='', search_keyword='')
     {
-        const categorySlug = params.category_slug!=undefined ? "&category=" + params.category_slug : '';
+        const categorySlug = params.category_slug!==undefined ? "&category=" + params.category_slug : '';
         // console.log(categorySlug);
-        const apiLink = ( pageLink=='' ? 
+        const apiLink = ( pageLink==='' ? 
                             API_BASE_URL + "/posts?search_keyword=" + search_keyword + categorySlug : 
                             pageLink + "&search_keyword=" + search_keyword + categorySlug
                         );
@@ -191,15 +191,15 @@ function Blogs() {
                                 {
                                     paginationLinks.map( (link, index, {length, lastIndex = length - 1}) => {
                                         linkLabel = `${link.label}`;
-                                        if( index==0 )
+                                        if( index===0 )
                                         {
                                             linkLabel = <i className="fa fa-angle-left"></i>;
                                         }
-                                        else if( index==lastIndex )
+                                        else if( index===lastIndex )
                                         {
                                             linkLabel = <i className="fa fa-angle-right"></i>;
                                         }
-                                        return <div key={index} className={`pagination-number${(index==0) ? ' pagination-arrow pagination-prev' : ''} ${(index==lastIndex) ? ' pagination-arrow pagination-next' : ''} ${(link.active==true) ? 'pagination-active' : ''}`} onClick={()=>paginate(link.url)}>{linkLabel}</div>
+                                        return <div key={index} className={`pagination-number${(index===0) ? ' pagination-arrow pagination-prev' : ''} ${(index===lastIndex) ? ' pagination-arrow pagination-next' : ''} ${(link.active===true) ? 'pagination-active' : ''}`} onClick={()=>paginate(link.url)}>{linkLabel}</div>
                                     }
                                     )
                                 }

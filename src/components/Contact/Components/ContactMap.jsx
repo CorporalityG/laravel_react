@@ -56,12 +56,12 @@ const ContactMap = () => {
                     <div className="row">
                         <div className="col-md-6">
                             <div data-aos="fade-right">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.995019646924!2d151.20904221506777!3d-33.86401922624178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae6a1fa4f413%3A0xc20e25be8bd53228!2sCouriers%20To%20India%20-%20Sydney!5e0!3m2!1sen!2sin!4v1637267826696!5m2!1sen!2sin" frameBorder="0" style={{ border: 0 }} allowFullScreen="" aria-hidden="false" tabindex="0"></iframe>
+                                <iframe title="Sydney, NSW, Australia" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.995019646924!2d151.20904221506777!3d-33.86401922624178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae6a1fa4f413%3A0xc20e25be8bd53228!2sCouriers%20To%20India%20-%20Sydney!5e0!3m2!1sen!2sin!4v1637267826696!5m2!1sen!2sin" frameBorder="0" style={{ border: 0 }} allowFullScreen="" aria-hidden="false" tabindex="0"></iframe>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div data-aos="fade-left">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.246863245163!2d-117.86188038493646!3d34.01187378061693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c32bbc64a92157%3A0x6de2cd2642a475b8!2s340%20S%20Lemon%20Ave%2C%20Walnut%2C%20CA%2091789%2C%20USA!5e0!3m2!1sen!2sin!4v1646999769721!5m2!1sen!2sin" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
+                                <iframe title="CA, USA" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.246863245163!2d-117.86188038493646!3d34.01187378061693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c32bbc64a92157%3A0x6de2cd2642a475b8!2s340%20S%20Lemon%20Ave%2C%20Walnut%2C%20CA%2091789%2C%20USA!5e0!3m2!1sen!2sin!4v1646999769721!5m2!1sen!2sin" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>

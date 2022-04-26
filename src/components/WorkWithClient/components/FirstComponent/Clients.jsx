@@ -39,7 +39,7 @@ const Clients = () => {
                             <img alt='' className='smallrect-Clients' src={smallrectClients} />
                             <img alt='' className='backimg-Clients' src={BackClients} />
                             <div className="banner_right_inner-Clients" >
-                                <img className='main-prev1-Clients' src={MainClients} />
+                                <img className='main-prev1-Clients' src={MainClients} alt="" />
                             </div>
                         </div>
                     </div>

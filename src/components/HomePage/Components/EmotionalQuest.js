@@ -1,13 +1,13 @@
 import React from "react";
 import "./EmotionalQuest.css";
-import eq_header from "./images/eq_header.png";
-import eq_play from "./images/eq_play.png";
-import cr from "./video/cr.mp4";
-import cancel from "./images/cancel.png";
-import { API_BASE_URL, BASE_URL } from '../../../config';
+// import eq_header from "./images/eq_header.png";
+// import eq_play from "./images/eq_play.png";
+// import cr from "./video/cr.mp4";
+// import cancel from "./images/cancel.png";
+import { BASE_URL } from '../../../config';
 
 function EmotionalQuest() {
-  function toggle() {
+  /* function toggle() {
     var trailer = document.querySelector(".video_container");
     trailer.classList.toggle("active");
 
@@ -15,7 +15,7 @@ function EmotionalQuest() {
     // trailer.classList.toggle("active");
     // video.pause();
     // video.currentTime = 0;
-  }
+  } */
 
   return (
     <div className="emotional-quest-parent">

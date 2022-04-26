@@ -1,6 +1,6 @@
 import React from 'react'
 import Modal from 'react-bootstrap/Modal'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { BASE_URL } from '../../config';
 
 function PaymentModal(props) {
 
@@ -8,7 +8,7 @@ function PaymentModal(props) {
 
     return (
         <>
-            <Modal size="xl" show={show == 'payment' ? show : ''} onHide={handleClose} className="c-book-payment-modal">
+            <Modal size="xl" show={show === 'payment' ? show : ''} onHide={handleClose} className="c-book-payment-modal">
                 <Modal.Header closeButton></Modal.Header>
                 <Modal.Body>
                     <div className="container-fluid">

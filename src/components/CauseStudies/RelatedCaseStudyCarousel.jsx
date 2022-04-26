@@ -9,7 +9,7 @@ function RelatedCaseStudyCarousel(props) {
             <Carousel cols={3} rows={1} gap={15} arrowLeft={<div className="related-case-study-arrow related-case-study-arrow-prev"><img src={BASE_URL + '/img/case-study-arrow-prev.png'} alt="<-" /></div>} arrowRight={<div className="related-case-study-arrow related-case-study-arrow-next"><img src={BASE_URL + '/img/case-study-arrow-next.png'} alt="->" /></div>} responsiveLayout={[{ breakpoint: 825, cols: 2, rows: 1 }]}>
 
                 {
-                    props.slug != 'divine-intercession' ?
+                    props.slug !== 'divine-intercession' ?
                     <Carousel.Item>
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/Divine-Intercession-Client.png'}
@@ -21,7 +21,7 @@ function RelatedCaseStudyCarousel(props) {
                 }
 
                 {
-                    props.slug != 'build-q' ?
+                    props.slug !== 'build-q' ?
                     <Carousel.Item>
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/BuildQ-Client.png'}
@@ -33,7 +33,7 @@ function RelatedCaseStudyCarousel(props) {
                 }
 
                 {
-                    props.slug != 'fastgrow-finance' ?
+                    props.slug !== 'fastgrow-finance' ?
                         <Carousel.Item>
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/Fastgrow-Client.png'}
@@ -45,7 +45,7 @@ function RelatedCaseStudyCarousel(props) {
                 }
 
                 {
-                    props.slug != 'tech-consultants' ?
+                    props.slug !== 'tech-consultants' ?
                     <Carousel.Item>
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/TechConsultants-Client.png'}
@@ -57,7 +57,7 @@ function RelatedCaseStudyCarousel(props) {
                 }
 
                 {
-                    props.slug != 'sk-insurance' ?
+                    props.slug !== 'sk-insurance' ?
                     <Carousel.Item>
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/SK-Insurance-Client.png'}
@@ -69,7 +69,7 @@ function RelatedCaseStudyCarousel(props) {
                 }
 
                 {
-                    props.slug != 'klek-services' ?
+                    props.slug !== 'klek-services' ?
                     <Carousel.Item>
                         <CauseStudyItem
                             thumbnail={BASE_URL + '/img/Klek-Services-Client.png'}

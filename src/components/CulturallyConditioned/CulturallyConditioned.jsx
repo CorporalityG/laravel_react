@@ -41,9 +41,9 @@ function CulturallyConditioned() {
                     </div>
                 </div>
 
-                <div className="container">
+                <div className="container-lg">
                     <div className="row cc-banner-content-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <div className="cc-banner-content">
                                 <h1>Fragmented leadership and core teams result in wobbly Marketing Strategie</h1>
                                 <p>Our transformative Culturally-Conditioned framework is designed to establish participation and excitement around accountability. It taps all relevant stakeholders to align with your vision for your Marketing objective and Sales outline.</p>
@@ -59,7 +59,7 @@ function CulturallyConditioned() {
             </div>
 
             <div className="cc-work-mind-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row cc-wm-row">
                         <div className="col-lg-6">
                             <div className="cc-wm-content">
@@ -80,7 +80,7 @@ function CulturallyConditioned() {
             </div>
 
             <div className="cc-major-problem-section">
-                <div className="container-fluid px-0">
+                <div className="container-fluid px-lg-0">
                     <div className="row cc-mp-row">
                         <div className="col-lg-6">
                             <div className="cc-mp-img">
@@ -100,9 +100,9 @@ function CulturallyConditioned() {
             </div>
 
             <div className="cc-top-elements-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row cc-te-content-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <div className="cc-te-content">
                                 <div className="cc-te-title">
                                     <h2>What are the top elements of the framework?</h2>
@@ -115,7 +115,7 @@ function CulturallyConditioned() {
                     </div>
 
                     <div className="row cc-te-boxes-row">
-                        <div className="col-md-12 cc-te-boxes-col">
+                        <div className="col-lg-12 cc-te-boxes-col">
                             <TopElementItem
                                 id={1}
                                 title={'Predatory Marketing'}
@@ -155,9 +155,9 @@ function CulturallyConditioned() {
             </div>
 
             <div className="cc-work-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row cc-work-title-row">
-                        <div className="col-md-12">
+                        <div className="col-lg-12">
                             <div className="cc-work-heading">
                                 <h2>How Does It Work?</h2>
                                 <p>Corporality Effect begins with a 2-day Workshop, which your leadership, sales, marketing, and related teams will participate in. Over the course of 52 weeks, you can work with our mentoring and development teams to work on the following:</p>
@@ -247,7 +247,7 @@ function CulturallyConditioned() {
             </div>
 
             <div className="cc-process-section">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row cc-process-title-row">
                         <div className="col-md-12">
                             <div className="cc-process-title-content">

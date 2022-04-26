@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { API_BASE_URL, BASE_URL } from '../../../config';
 import "./NewBanner.css"
 import Modal from 'react-bootstrap/Modal'

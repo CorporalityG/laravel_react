@@ -7,7 +7,7 @@ function DownloadModal(props) {
 
     return (
         <>
-            <Modal size="md" show={show == 'download' ? show : ''} onHide={handleClose} className="c-book-download-modal">
+            <Modal size="md" show={show === 'download' ? show : ''} onHide={handleClose} className="c-book-download-modal">
                 <Modal.Header closeButton></Modal.Header>
                 <Modal.Body>
                     <div className="c-book-download-modal-content">

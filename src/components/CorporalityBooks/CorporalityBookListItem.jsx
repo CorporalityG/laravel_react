@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { BASE_URL } from '../../config';
 import DownloadModal from './DownloadModal';
 import PaymentModal from './PaymentModal';
 

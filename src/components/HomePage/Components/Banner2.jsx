@@ -1,8 +1,8 @@
 import React from "react";
-import { API_BASE_URL, BASE_URL } from '../../../config';
+import { BASE_URL } from '../../../config';
 import "./Banner2.css";
 import { Link } from "react-router-dom";
-import rightArrow from "../Components/images/vector_1.png"
+// import rightArrow from "../Components/images/vector_1.png"
 
 export default function Banner2() {
   return (

@@ -8,6 +8,7 @@ export const TopElementItem = (props) => {
             <OverlayTrigger
                 key={props.id}
                 placement={'top'}
+                trigger={['hover', 'click']}
                 overlay={
                     <Tooltip id={`tooltip-${props.id}`} className="top-elements-box-content">
                         <span dangerouslySetInnerHTML={{ __html: props.content }}></span>

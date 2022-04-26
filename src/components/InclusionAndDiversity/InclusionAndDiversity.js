@@ -1,4 +1,4 @@
-import React , {useEffect} from 'react'
+import React from 'react'
 import Inclusion from './components/Incl/Inclusion';
 import OurFaith from './components/OurFaith/OurFaith';
 import Hover from './components/HoverInclusion/Hover';

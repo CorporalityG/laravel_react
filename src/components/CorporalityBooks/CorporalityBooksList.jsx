@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './CorporalityBooksList.css'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { BASE_URL } from '../../config';
 import CorporalityBookListItem from './CorporalityBookListItem';
 import PaymentModal from './PaymentModal';
 

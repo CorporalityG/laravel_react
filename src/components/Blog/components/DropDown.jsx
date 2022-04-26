@@ -50,7 +50,7 @@ const DropDown = ({initial, list, className, loading}) => {
                 loading ?
                 null
                 :
-                    <ul className={`dropdown-menu${initial=="Recent Post"? " recentPostContainer" : ""}`} aria-labelledby="dropdownMenuButton2">
+                    <ul className={`dropdown-menu${initial==="Recent Post"? " recentPostContainer" : ""}`} aria-labelledby="dropdownMenuButton2">
                         {
                             list.map( (item, i) => (
                                 <li key={i} >

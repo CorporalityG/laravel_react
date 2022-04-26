@@ -2,7 +2,7 @@ import './Page1.css'
 import React, { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
+import { BASE_URL } from '../../../config';
 
 
 const Page1 = () => {

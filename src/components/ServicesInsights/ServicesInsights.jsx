@@ -1,11 +1,10 @@
 import React from 'react'
 import './ServicesInsights.css'
 import { BASE_URL } from '../../config'
-import { useNavigate } from "react-router"
+import { Link } from 'react-router-dom';
 
 function ServicesInsights() {
 
-    const navigate = useNavigate();
     const topHandle = () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -23,7 +22,7 @@ function ServicesInsights() {
 
                     <div className="row services-insights-grid-row">
                         <div className="col-lg-6 col-md-12 col-sm-12 mb-xs-20 p-0 services-insights-grid">
-                            <a onClick={() => { navigate("/blog"); topHandle(); }} title="Latest Blog">
+                            <Link to="/blog" onClick={() => { topHandle() }} title="Latest Blog" >
                                 <figure className="services-insights-grid-img-effect" data-aos="fade-right">
                                     <img src={`${BASE_URL}/img/ServicesInsights/Latest-Blog.png`} alt="Latest Blog" className="services-insights-grid-img" />
                                     <div className="bottom-gradient-do_more"></div>
@@ -32,13 +31,13 @@ function ServicesInsights() {
                                         <div className="services-insights-grid-desc"></div>
                                     </figcaption>
                                 </figure>
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="col-lg-6 col-md-12 col-sm-12 mb-xs-20 services-insights-grid">
                             <div className="row">
                                 <div className="col-sm-6 p-0">
-                                    <a title="Corporality Magazine">
+                                    <a href="https://corporality.global/businessmagazine/" target={`_blank`} title="Corporality Magazine">
                                         <figure className="services-insights-grid-img-effect" data-aos="fade-down-right">
                                             <img src={`${BASE_URL}/img/ServicesInsights/Corporality-Magazine.png`} alt="Corporality Magazine" className="services-insights-grid-img" />
                                             <div className="bottom-gradient-do_more"></div>

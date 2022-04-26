@@ -1,12 +1,9 @@
 import React from 'react'
 import './Faqs.css'
-import { Link, useNavigate } from 'react-router-dom'
 import Accordion from 'react-bootstrap/Accordion'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
+import { BASE_URL } from '../../../config';
 
 function Faqs() {
-
-    const navigate = useNavigate();
 
     return (
         <div className="faqs-container">

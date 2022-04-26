@@ -2,11 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import 'bootstrap/dist/js/bootstrap.min.js'
 import "./BlogTop.css"
 import DropDown from "./DropDown";
-import { useEffect, useRef, useState, useContext } from "react"
-import axios from "axios"
+import { useEffect, useRef, useState } from "react"
+// import axios from "axios"
 import { useNavigate } from "react-router-dom"
-import { Context } from "../../../context/Context";
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
+// import { Context } from "../../../context/Context";
+import { API_BASE_URL } from '../../../config';
 
 import blogTopLeft from "../img/blog-top-left.png"
 import searchIcon from "../img/search-icon.png"
@@ -22,7 +22,7 @@ function BlogTop() {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
     const searchRef = useRef();
-    const { user, dispatch } = useContext(Context);
+    // const { user, dispatch } = useContext(Context);
     // console.log(user);
     // console.log(dispatch);
 

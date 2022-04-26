@@ -33,6 +33,7 @@
     position: absolute;
     top: 40%;
     transform: translate(0, -50%);
+    z-index: 1;
 }
 .is-banner-section .is-banner-social-main .is-banner-social-img img {
     max-height: 180px;
@@ -63,7 +64,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #33657E;
     margin-bottom: 15px;
 }
@@ -111,7 +112,7 @@
     text-align: center;
 }
 .is-commitment-section .is-commitment-row .is-commitment-content {
-    max-width: 75%;
+    max-width: 85%;
     margin: 0 auto;
 }
 .is-commitment-section .is-commitment-row .is-commitment-content h2 {
@@ -120,6 +121,7 @@
     font-size: 32px;
     color: #33657E;
     margin-bottom: 15px;
+    text-transform: capitalize;
 }
 .is-commitment-section .is-commitment-row .is-commitment-content p {
     font-style: normal;
@@ -136,7 +138,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 20px;
 }
@@ -170,7 +172,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: none;
+    text-transform: capitalize;
     color: #33657E;
     margin-bottom: 15px;
 }
@@ -217,7 +219,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #3C708E;
     margin-bottom: 15px;
 }
@@ -248,7 +250,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-    text-transform: none;
+    text-transform: capitalize;
     color: #33657E;
     margin-bottom: 15px;
 }
@@ -319,4 +321,328 @@
 }
 .is-model-assessment-section .is-model-assessment-row .is-ma-img img {
     max-width: 100%;
+}
+
+
+/* responsive start */
+@media only screen and (max-width: 1450.99px) {
+    .is-banner-section .rec-1 {
+        top: 30px;
+        left: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 1399.99px) {
+    .is-banner-section .is-banner-content-row .is-banner-content {
+        max-width: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 1240.99px) {
+    .is-banner-section .rec-2 {
+        bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 1199.99px) {
+    .is-banner-section .is-banner-content-row .is-banner-content {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .is-commitment-section .is-commitment-row .is-commitment-content {
+        max-width: 100%;
+    }
+    .is-curious-section .is-curious-boxes-row .is-curious-box {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .is-work-section .is-work-accordion-main .accordion-item .is-work-heading img {
+        max-height: 50px;
+        margin-right: 5px;
+    }
+    .is-work-section .is-work-accordion-main .accordion-item .accordion-button {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .is-work-section .is-work-accordion-main .accordion-item:nth-child(2n+1) {
+        margin-right: 10px;
+    }
+    .is-work-section .is-work-accordion-main .accordion-item:nth-child(2n) {
+        margin-left: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 1024.99px) {
+    .is-banner-section .is-banner-social-main {
+        top: initial;
+        bottom: 50px;
+        transform: translate(0, 0);
+    }
+    .is-banner-section .is-banner-content-row .is-banner-phone {
+        left: initial;
+        right: 10px;
+        bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .is-banner-section {
+        padding-top: 40px;
+    }
+    .is-banner-section .rec-1 {
+        top: 5px;
+    }
+    .is-banner-section .is-banner-img {
+        top: -50px;
+    }
+    .is-banner-section .is-banner-content-row {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .is-banner-section .is-banner-content-row .is-banner-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .is-commitment-section .is-commitment-row {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .is-shifting-section .is-shifting-row .is-shifting-img {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .is-curious-section .is-curious-row .is-curious-content {
+        max-width: 100%;
+    }
+    .is-problems-section .is-problems-row .is-problems-img {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .is-work-section .is-work-accordion-main .accordion-item {
+        flex-basis: 100%;
+    }
+    .is-work-section .is-work-accordion-main .accordion-item:nth-child(2n+1) {
+        margin-right: 0;
+    }
+    .is-work-section .is-work-accordion-main .accordion-item:nth-child(2n) {
+        margin-left: 0;
+    }
+    .is-curious-section .is-curious-boxes-row .is-curious-box {
+        margin-bottom: 40px;
+    }
+    .is-banner-section .rec-2 {
+        right: 28%;
+        transform: translate(28%, 0);
+    }
+    .is-banner-section .is-banner-content-row .is-banner-phone {
+        bottom: -70px;
+    }
+}
+
+
+@media only screen and (max-width: 768.99px) {
+    .is-banner-section .is-banner-content-row h1 {
+        font-size: 28px;
+    }
+    .is-commitment-section .is-commitment-row .is-commitment-content h2 {
+        font-size: 28px;
+    }
+    .is-shifting-section .is-shifting-row .is-shifting-content h2 {
+        font-size: 28px;
+    }
+    .is-curious-section .is-curious-row .is-curious-content h2 {
+        font-size: 28px;
+    }
+    .is-problems-section .is-problems-row .is-problems-content h2 {
+        font-size: 28px;
+    }
+    .is-work-section .is-work-title-row h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+    .is-banner-section .is-banner-content-row h1 {
+        font-size: 24px;
+    }
+    .is-banner-section .is-banner-content-row .is-banner-phone {
+        right: 0;
+    }
+    .is-commitment-section .is-commitment-row .is-commitment-content h2 {
+        font-size: 24px;
+    }
+    .is-shifting-section .is-shifting-row .is-shifting-content h2 {
+        font-size: 24px;
+    }
+    .is-curious-section .is-curious-row .is-curious-content h2 {
+        font-size: 24px;
+    }
+    .is-problems-section .is-problems-row .is-problems-content h2 {
+        font-size: 24px;
+    }
+    .is-work-section .is-work-title-row h2 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .is-banner-section .row > *, 
+    .is-commitment-section .row > *, 
+    .is-shifting-section .row > *, 
+    .is-curious-section .row > *, 
+    .is-problems-section .row > *, 
+    .is-work-section .row > *, 
+    .is-model-assessment-section .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .is-banner-section .is-banner-content-row h1 {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 520.99px) {
+    .is-banner-section .is-banner-content-row h1 {
+        font-size: 20px;
+    }
+    .is-banner-section .is-banner-content-row p {
+        font-size: 15px;
+    }
+    .is-banner-section .is-banner-content-row .is-banner-btn {
+        font-size: 15px;
+    }
+    .is-banner-section .is-banner-content-row .is-banner-phone img {
+        max-width: 100px;
+    }
+    .is-banner-section .is-banner-content-row {
+        box-shadow: unset;
+        padding-bottom: 70px;
+    }
+    .is-commitment-section .is-commitment-row .is-commitment-content h2 {
+        font-size: 22px;
+    }
+    .is-work-section .is-work-accordion-main .accordion-item .is-work-heading {
+        font-size: 20px;
+    }
+    .is-work-section .is-work-accordion-main .accordion-body {
+        padding: 10px 15px;
+    }
+}
+
+
+@media only screen and (max-width: 449.99px) {
+    .is-commitment-section .is-commitment-row .is-commitment-content h2 {
+        font-size: 20px;
+    }
+    .is-commitment-section .is-commitment-row .is-commitment-content p {
+        font-size: 15px;
+    }
+    .is-banner-section .is-banner-content-row .is-banner-phone {
+        right: -20px;
+        bottom: -50px;
+    }
+    .is-banner-section .is-banner-social-main .is-banner-social-img {
+        display: none;
+    }
+    .is-banner-section .is-banner-social-main {
+        left: 15px;
+    }
+    .is-banner-section .is-banner-content-row {
+        background-size: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 390.99px) {
+    .is-commitment-section .is-commitment-row .is-commitment-content h2 {
+        font-size: 18px;
+    }
+    .is-shifting-section .is-shifting-row .is-shifting-content h2 {
+        font-size: 22px;
+    }
+    .is-curious-section .is-curious-row .is-curious-content h2 {
+        font-size: 22px;
+    }
+    .is-curious-section .is-curious-row .is-curious-content p {
+        font-size: 15px;
+    }
+    .is-curious-section .is-curious-boxes-row .is-curious-box .c-box-title {
+        font-size: 18px;
+    }
+    .is-curious-section .is-curious-boxes-row .is-curious-box .c-box-content p {
+        font-size: 15px;
+    }
+    .is-problems-section .is-problems-row .is-problems-content h2 {
+        font-size: 22px;
+    }
+    .is-problems-section .is-problems-row .is-problems-content p {
+        font-size: 15px;
+    }
+    .is-work-section .is-work-title-row h2 {
+        font-size: 22px;
+    }
+    .is-work-section .is-work-title-row p {
+        font-size: 16px;
+    }
+    .is-work-section .is-work-accordion-main .accordion-item .is-work-heading img {
+        max-height: 30px;
+    }
+    .is-work-section .is-work-accordion-main .accordion-item .is-work-heading {
+        font-size: 18px;
+    }
+    .is-commitment-section .is-commitment-row {
+        padding: 25px 10px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .is-work-section .is-work-accordion-main .accordion-item .is-work-heading {
+        font-size: 16px;
+    }
+    .is-problems-section .is-problems-row .is-problems-content h2 {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .is-banner-section .is-banner-content-row h1 {
+        font-size: 18px;
+    }
+    .is-banner-section .is-banner-content-row .is-banner-btn {
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .is-shifting-section .is-shifting-row .is-shifting-content h2 {
+        font-size: 20px;
+    }
+    .is-shifting-section .is-shifting-row .is-shifting-content p {
+        font-size: 15px;
+    }
+    .is-curious-section .is-curious-row .is-curious-content h2 {
+        font-size: 18px;
+    }
+    .is-problems-section .is-problems-row .is-problems-content h2 {
+        font-size: 18px;
+    }
+    .is-banner-section .is-banner-social-main {
+        bottom: 10px;
+    }
 }

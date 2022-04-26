@@ -39,7 +39,7 @@ const SACComp1 = () => {
                             <img alt='' className='SACC1_smallrect' src={smallrectStrategy} />
                             <img alt='' className='SACC1_backimg' src={backimgStrategy} />
                             <div className="SACC1_banner_right_inner" >
-                                <img className='SACC1_main-prev1' src={mainStrategy} />
+                                <img className='SACC1_main-prev1' src={mainStrategy} alt="" />
                             </div>
 
                         </div>

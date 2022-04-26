@@ -5,7 +5,7 @@ import EmotionalQuest from "./Components/EmotionalQuest";
 import LatestInsights from "./Components/LatestInsights";
 import NewBanner from "./Components/NewBanner.jsx";
 import Banner2 from "./Components/Banner2.jsx";
-import NewPhilosophy from "./Components/NewPhilosophy.jsx";
+// import NewPhilosophy from "./Components/NewPhilosophy.jsx";
 import NewPortfolio from "./Components/NewPortfolio";
 import CareToJoinUs from "./Components/CareToJoinUs";
 import OurIniatives from "./Components/OurIniatives.jsx";

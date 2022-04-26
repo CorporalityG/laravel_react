@@ -8,7 +8,7 @@ function WriteToUsModal(props) {
 
     return (
         <>
-            <Modal show={show == 'write' ? show : ''} onHide={handleClose} className="ibp-write-us-modal">
+            <Modal show={show === 'write' ? show : ''} onHide={handleClose} className="ibp-write-us-modal">
                 <Modal.Header closeButton></Modal.Header>
                 <Modal.Body>
                     <div className="container-fluid  pl-sm-0">
