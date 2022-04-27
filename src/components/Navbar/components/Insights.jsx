@@ -48,7 +48,7 @@ const Insights = () => {
                                 <h6>Blogs</h6>
                                 <div className="diamond-line"></div>
                             </div>
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/service-insights")}}>
                                 <h6>Service Insights</h6>
                                 <div className="diamond-line"></div>
                             </div>

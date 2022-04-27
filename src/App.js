@@ -56,6 +56,7 @@ import OutsourcedCMO from "./components/OutsourcedCMO/OutsourcedCMO";
 import MarketingModelApproch from "./components/MarketingModelApproch/MarketingModelApproch";
 import Blogs2 from "./components/Blogs/Blogs2";
 import OurTeam from "./components/OurTeam/OurTeam";
+import ServiceInsights from "./components/ServiceInsights/ServiceInsights";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -142,6 +143,7 @@ function App() {
 
             <Route path="/blog-2" element={<Blogs2 /> } />
             <Route path="/our-team" element={<OurTeam /> } />
+            <Route path="/service-insights" element={<ServiceInsights /> } />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             
