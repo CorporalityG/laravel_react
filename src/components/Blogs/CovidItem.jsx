@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export const CovidItem = (props) => {
     return (
-        <div className='row blog2-covid-item-row'>
+        <div className='row blog2-covid-item-row' key={`/${props.uniqueKey}`}>
             <div className="col-lg-6">
                 <div className="covid-item-banner">
                     <Link to={`/${props.slug}`}>

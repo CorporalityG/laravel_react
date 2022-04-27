@@ -1,69 +1,115 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Blogs2.css'
 import { Link } from 'react-router-dom'
-import { BASE_URL } from '../../config'
+import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config'
 import { PopularVideoItem } from './PopularVideoItem'
 import { NewsItem } from './NewsItem'
 import { CovidItem } from './CovidItem'
 import { BlogItem } from './BlogItem'
 
+function truncate(text, size) {
+    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+}
+
 function Blogs2() {
+
+    const [latestBlog, setLatestBlog] = useState([]);
+    const [latestBlog2, setLatestBlog2] = useState([]);
+    const [corporateStrategyBlog, setCorporateStrategyBlog] = useState([]);
+    const [digitalMediaMarketingBlog, setDigitalMediaMarketingBlog] = useState([]);
+    const [leadGenAndSalesStrategyBlog, setLeadGenAndSalesStrategyBlog] = useState([]);
+
+    useEffect(() => {
+        // console.log('cat ', params);
+        getLatestBlog();
+        getLatestBlog2();
+        getCorporateStrategyBlog()
+        getDigitalMediaMarketingBlog()
+        getLeadGenAndSalesStrategyBlog()
+    }, []);
+
+    async function getLatestBlog() {
+        let result = await fetch(API_BASE_URL + "/latest-blog");
+        result = await result.json();
+        setLatestBlog(result);
+    }
+
+    async function getLatestBlog2() {
+        let result = await fetch(API_BASE_URL + "/latest-blog-2");
+        result = await result.json();
+        setLatestBlog2(result);
+    }
+
+    async function getCorporateStrategyBlog() {
+        let result = await fetch(API_BASE_URL + "/corporate-strategy-blog");
+        result = await result.json();
+        setCorporateStrategyBlog(result.data);
+    }
+
+    async function getDigitalMediaMarketingBlog() {
+        let result = await fetch(API_BASE_URL + "/digital-media-marketing-blog");
+        result = await result.json();
+        setDigitalMediaMarketingBlog(result.data);
+    }
+
+    async function getLeadGenAndSalesStrategyBlog() {
+        let result = await fetch(API_BASE_URL + "/lead-gen-and-sales-strategy-blog");
+        result = await result.json();
+        setLeadGenAndSalesStrategyBlog(result.data);
+    }
+
     return (
         <div className="blog2">
+
             <div className="blog2-latest-section">
                 <div className="container-lg">
-                    <div className="row latest-blog-row">
-                        <div className="col-lg-6 px-0 latest-blog-col">
-                            <div className="blog-content-first">
-                                <Link to="/category/blog" className="category">Event Category</Link>
-                                <h3 className="title-first">
-                                    <Link to="/3d-in-medical-care-corporality-global">3D in Medical Care | Corporality Global</Link>
-                                </h3>
-                                <p>Any entity with a length and breadth is a two-dimensional (2D) object. When you add depth to the measurement, it becomes three-dimensional - 3D - just like our world.</p>
+                    {
+                        latestBlog ?
+                            <div className="row latest-blog-row">
+                                <div className="col-lg-6 px-0 latest-blog-col">
+                                    <div className="blog-content-first">
+                                        {
+                                            latestBlog.categories ?
+                                                <Link to={`/category/${latestBlog.categories[0].category_slug}`} className="category">
+                                                    {latestBlog.categories[0].category_name}
+                                                </Link>
+                                                : null
+                                        }
+                                        <h3 className="title-first">
+                                            <Link to={`/${latestBlog.post_slug}`}>{latestBlog.post_title}</Link>
+                                        </h3>
+                                        <p><span dangerouslySetInnerHTML={{ __html: truncate(latestBlog.post_short_description ?? latestBlog.post_description, 175) }}></span></p>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 pl-lg-0">
+                                    <div className="blog-banner-first">
+                                        <Link to={`/${latestBlog.post_slug}`}>
+                                            {latestBlog.post_image && <img src={API_IMG_URL + latestBlog.post_image} alt={latestBlog.post_title} className="latest-blog-img" />}
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-lg-6 pl-lg-0">
-                            <div className="blog-banner-first">
-                                <Link to="/3d-in-medical-care-corporality-global">
-                                    <img src={`${BASE_URL}/img/Blogs2/3d-in-medical-care-corporality-global.jpg`} alt="3D in Medical Care" />
-                                </Link>
+                            : null
+                    }
+
+                    {
+                        latestBlog2 ?
+                            <div className="row latest-blog-boxes-row">
+                                {
+                                    latestBlog2.map((item, index) =>
+                                        <BlogItem
+                                            uniqueKey={`${item.id + index}`}
+                                            thumbnail={`${API_IMG_URL + item.post_image}`}
+                                            title={`${item.post_title}`}
+                                            slug={`${item.post_slug}`}
+                                            category={item.categories !== undefined ? item.categories[0].category_name : null}
+                                            catSlug={item.categories !== undefined ? item.categories[0].category_slug : null}
+                                        />
+                                    )
+                                }
                             </div>
-                        </div>
-                    </div>
-
-                    <div className="row latest-blog-boxes-row">
-                        <BlogItem
-                            thumbnail={`${BASE_URL}/img/Blogs2/smartphones-can-do-medical-check-ups-in-the-future-corporality-global.jpg`}
-                            title={`Smartphones Can Do Medical Check-Ups in the Future | Corporality Global`}
-                            slug={`smartphones-can-do-medical-check-ups-in-the-future-corporality-global`}
-                            category={`Blogs`}
-                            catSlug={`blog`}
-                        />
-
-                        <BlogItem
-                            thumbnail={`${BASE_URL}/img/Blogs2/health-worker-robots-precision-drug-test-tracking.png`}
-                            title={`Health Worker Robots | Precision Drug Test Tracking`}
-                            slug={`health-worker-robots-precision-drug-test-tracking`}
-                            category={`Blogs`}
-                            catSlug={`blog`}
-                        />
-
-                        <BlogItem
-                            thumbnail={`${BASE_URL}/img/Blogs2/top-6-applications-of-artificial-intelligence-in-medicine.png`}
-                            title={`Top 6 Applications of Artificial Intelligence in Medicine`}
-                            slug={`top-6-applications-of-artificial-intelligence-in-medicine`}
-                            category={`Blogs`}
-                            catSlug={`blog`}
-                        />
-
-                        <BlogItem
-                            thumbnail={`${BASE_URL}/img/Blogs2/cop26-and-its-implications-corporality-global.jpg`}
-                            title={`COP26 AND ITS IMPLICATIONS | Corporality Global`}
-                            slug={`cop26-and-its-implications-corporality-global`}
-                            category={`Blogs`}
-                            catSlug={`blog`}
-                        />
-                    </div>
+                            : null
+                    }
                 </div>
             </div>
 
@@ -77,78 +123,72 @@ function Blogs2() {
                         </div>
                     </div>
 
-                    <div className="row blog2-cs-title-row">
-                        <div className="col-lg-6">
-                            <div className="cs-banner-first">
-                                <Link to="/what-leaders-must-know-about-branding-and-the-vampire-effect-corporality-global">
-                                    <img src={`${BASE_URL}/img/Blogs2/what-leaders-must-know-about-branding-and-the-vampire-effect-corporality-global.jpg`} alt="What leaders must know about branding and the Vampire Effect" />
-                                </Link>
+                    {
+                        corporateStrategyBlog ?
+                            <div className="row blog2-cs-title-row">
+                                {
+                                    corporateStrategyBlog.slice(0, 1).map((item, index) =>
+                                        <>
+                                            <div className="col-lg-6" key={`${item.id}-first`}>
+                                                <div className="cs-banner-first">
+                                                    <Link to={`/${item.post_slug}`}>
+                                                        {item.post_image && <img src={API_IMG_URL + item.post_image} alt={item.post_title} className="latest-blog-img" />}
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 cs-content-first-col">
+                                                <div className="cs-content-first">
+                                                    <Link to="/category/corporate-strategy" className="category">Corporate Strategy</Link>
+                                                    <h3 className="title-first">
+                                                        <Link to={`/${item.post_slug}`}>{`${item.post_title}`}</Link>
+                                                    </h3>
+                                                    <p><span dangerouslySetInnerHTML={{ __html: truncate(item.post_short_description ?? item.post_description, 175) }}></span></p>
+                                                </div>
+                                            </div>
+                                        </>
+                                    )
+                                }
                             </div>
-                        </div>
-                        <div className="col-lg-6 cs-content-first-col">
-                            <div className="cs-content-first">
-                                <Link to="/category/corporate-strategy" className="category">Corporate Strategy</Link>
-                                <h3 className="title-first">
-                                    <Link to="/what-leaders-must-know-about-branding-and-the-vampire-effect-corporality-global">What leaders must know about branding and the Vampire Effect | Corporality Global</Link>
-                                </h3>
-                                <p>Any entity with a length and breadth is a two-dimensional (2D) object. When you add depth to the measurement, it becomes three-dimensional - 3D - just like our world.</p>
-                            </div>
-                        </div>
-                    </div>
+                            : null
+                    }
 
-                    <div className="row cs-blog-boxes-row">
-                        <BlogItem
-                            thumbnail={`${BASE_URL}/img/Blogs2/impact-of-diversity-equity-and-inclusion-in-sales-strategies.jpg`}
-                            title={`Impact of Diversity, Equity and Inclusion in Sales Strategies`}
-                            slug={`impact-of-diversity-equity-and-inclusion-in-sales-strategiesl`}
-                            category={`Corporate Strategy`}
-                            catSlug={`corporate-strategy`}
-                        />
+                    {
+                        corporateStrategyBlog ?
+                            <div className="row cs-blog-boxes-row">
+                                {
+                                    corporateStrategyBlog.slice(1, 4).map((item, index) =>
+                                        <BlogItem
+                                            uniqueKey={`${index + item.id}`}
+                                            thumbnail={`${API_IMG_URL + item.post_image}`}
+                                            title={`${item.post_title}`}
+                                            slug={`${item.post_slug}`}
+                                            category={`Corporate Strategy`}
+                                            catSlug={`corporate-strategy`}
+                                        />
+                                    )
+                                }
 
-                        <BlogItem
-                            thumbnail={`${BASE_URL}/img/Blogs2/5-ways-you-can-boost-your-companys-entrepreneurial-vision-corporality-global.png`}
-                            title={`5 Ways You Can Boost Your Company's Entrepreneurial Vision | Corporality Global`}
-                            slug={`5-ways-you-can-boost-your-companys-entrepreneurial-vision-corporality-global`}
-                            category={`Corporate Strategy`}
-                            catSlug={`corporate-strategy`}
-                        />
-
-                        <BlogItem
-                            thumbnail={`${BASE_URL}/img/Blogs2/two-sides-of-a-belt-and-road-global-economy.jpg`}
-                            title={`Two Sides of a Belt-and-Road Global Economy`}
-                            slug={`two-sides-of-a-belt-and-road-global-economy`}
-                            category={`Corporate Strategy`}
-                            catSlug={`corporate-strategy`}
-                        />
-
-                        <div className="col-lg-3 latest-blog-box-col cs-blog-col-box">
-                            <div className="row cs-blog-col-row">
-                                <div className="col-lg-4">
-                                    <Link to="/theres-a-marketer-in-everyone-can-you-believe-it">
-                                        <img src={`${BASE_URL}/img/Blogs2/theres-a-marketer-in-everyone-can-you-believe-it.jpg`} alt="There's a Marketer In Everyone. Can You Believe It?" />
-                                    </Link>
-                                </div>
-                                <div className="col-lg-8">
-                                    <div className="cs-blog-col-title">
-                                        <Link to="/theres-a-marketer-in-everyone-can-you-believe-it">There's a Marketer In Everyone. Can You Believe It?</Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="row">
-                                <div className="col-lg-4">
-                                    <Link to="/monitor-your-web-page-while-sitting-back-on-vacation-how-interestingly-reliable-seo-tools-can-be">
-                                        <img src={`${BASE_URL}/img/Blogs2/monitor-your-web-page-while-sitting-back-on-vacation-how-interestingly-reliable-seo-tools-can-be.jpg`} alt="There's a Marketer In Everyone. Can You Believe It?" />
-                                    </Link>
-                                </div>
-                                <div className="col-lg-8">
-                                    <div className="cs-blog-col-title">
-                                        <Link to="/monitor-your-web-page-while-sitting-back-on-vacation-how-interestingly-reliable-seo-tools-can-be">Monitor Your Web Page While Sitting Back on Vacation: How Interestingly Reliable SEO Tools Can Be?</Link>
-                                    </div>
+                                <div className="col-lg-3 latest-blog-box-col cs-blog-col-box">
+                                    {
+                                        corporateStrategyBlog.slice(4, 6).map((item, index) =>
+                                            <div className="row cs-blog-col-row" key={`${item.id + index}-${index}`}>
+                                                <div className="col-lg-4">
+                                                    <Link to={`/${item.post_slug}`}>
+                                                        {item.post_image && <img src={API_IMG_URL + item.post_image} alt={item.post_title} className="latest-blog-img" />}
+                                                    </Link>
+                                                </div>
+                                                <div className="col-lg-8">
+                                                    <div className="cs-blog-col-title">
+                                                        <Link to={`/${item.post_slug}`}>{item.post_title}</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    }
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                            : null
+                    }
                 </div>
             </div>
 
@@ -199,9 +239,9 @@ function Blogs2() {
                         <div className="col-lg-6 cs-content-first-col">
                             <div className="v-content-first">
                                 <h3 className="v-title-first">
-                                    <Link to="/">What is Lorem Ipsum?</Link>
+                                    <Link to="/about-corporality">About</Link>
                                 </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <p>To Deliver The Best In Digital Marketing And Sales Solutions Using Innovation And Intuition To Craft Business Brilliance</p>
                             </div>
                         </div>
                     </div>
@@ -239,49 +279,41 @@ function Blogs2() {
                     <div className="row blog2-np-row">
                         <div className='col-lg-9'>
                             <div className="blog2-heading">
-                                <Link to="/">The Forum in the news <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
+                                <Link to="/category/digital-media-marketing">Digital Media Marketing <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
                             </div>
 
-                            <div className='row blog2-news-row'>
-                                <NewsItem
-                                    title={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
-                                    slug={``}
-                                    website={`www.lorem.com`}
-                                    date={`Apr 5, 2022`}
-                                />
-
-                                <NewsItem
-                                    title={`Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`}
-                                    slug={``}
-                                    website={`www.ipsum.com`}
-                                    date={`Apr 5, 2022`}
-                                />
-
-                                <NewsItem
-                                    title={`Lorem Ipsum when an unknown printer took a galley of type and scramble`}
-                                    slug={``}
-                                    website={`www.loremipsum.com`}
-                                    date={`Apr 4, 2022`}
-                                />
-
-                                <NewsItem
-                                    title={`Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature`}
-                                    slug={``}
-                                    website={`www.loremliterature.com`}
-                                    date={`Apr 4, 2022`}
-                                />
-                            </div>
+                            {
+                                digitalMediaMarketingBlog ?
+                                    <div className='row blog2-news-row'>
+                                        {
+                                            digitalMediaMarketingBlog.map((item, index) =>
+                                                <NewsItem
+                                                    uniqueKey={`${index + item.id + index}-${index}`}
+                                                    title={`${item.post_title}`}
+                                                    slug={`${item.post_slug}`}
+                                                    website={`Digital Media Marketing`}
+                                                    date={`${item.created_at}`}
+                                                />
+                                            )
+                                        }
+                                    </div>
+                                    : null
+                            }
                         </div>
 
                         <div className='col-lg-3'>
                             <div className="blog2-heading">
-                                <Link to="/">Press release <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
+                                <Link to="/blog">Latest Blog <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
                             </div>
 
-                            <div className='press-item'>
-                                <Link to={`/`}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Link>
-                                <div className='posted-date'>Posted <span className='date'>8 hours ago</span></div>
-                            </div>
+                            {
+                                latestBlog ?
+                                    <div className='press-item'>
+                                        <Link to={`/${latestBlog.post_slug}`}>{latestBlog.post_title}</Link>
+                                        <div className='posted-date'>Posted <span className='date'>{latestBlog.timeAgo}</span></div>
+                                    </div>
+                                    : null
+                            }
                         </div>
                     </div>
                 </div>
@@ -292,32 +324,26 @@ function Blogs2() {
                     <div className="row blog2-ce-row">
                         <div className='col-lg-6'>
                             <div className="blog2-heading">
-                                <Link to="/">Coronavirus (COVID-19) <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
+                                <Link to="/category/lead-gen-and-sales-strategy">Lead Gen and Sales Strategy <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
                             </div>
-
-                            <CovidItem
-                                thumbnail={`${BASE_URL}/img/Blogs2/3d-in-medical-care-corporality-global.jpg`}
-                                title={`Lorem Ipsum is simply dummy text of the`}
-                                slug={``}
-                                category={`COVID-19`}
-                                catSlug={``}
-                            />
-
-                            <CovidItem
-                                thumbnail={`${BASE_URL}/img/Blogs2/3d-in-medical-care-corporality-global.jpg`}
-                                title={`Lorem Ipsum has been the industry's standard`}
-                                slug={``}
-                                category={`Global Health`}
-                                catSlug={``}
-                            />
-
-                            <CovidItem
-                                thumbnail={`${BASE_URL}/img/Blogs2/3d-in-medical-care-corporality-global.jpg`}
-                                title={`Lorem Ipsum is simply dummy text of the printing and typesetting`}
-                                slug={``}
-                                category={`COVID-19`}
-                                catSlug={``}
-                            />
+                            {
+                                leadGenAndSalesStrategyBlog ?
+                                    <>
+                                        {
+                                            leadGenAndSalesStrategyBlog.map((item, index) =>
+                                                <CovidItem
+                                                    uniqueKey={`${item.id + index}-c`}
+                                                    thumbnail={`${API_IMG_URL + item.post_image}`}
+                                                    title={`${item.post_title}`}
+                                                    slug={`${item.post_slug}`}
+                                                    category={`Lead Gen and Sales Strategy`}
+                                                    catSlug={`lead-gen-and-sales-strategy`}
+                                                />
+                                            )
+                                        }
+                                    </>
+                                    : null
+                            }
                         </div>
 
                         <div className='col-lg-3'>
@@ -345,7 +371,7 @@ function Blogs2() {
                                 </div>
                             </div>
 
-                            <div className="blog2-ce-boxes">
+                            {/* <div className="blog2-ce-boxes">
                                 <div className='ce-box-title'>Lorem Ipsum</div>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                 <Link to="/">Explore Lorem Ipsum</Link>
@@ -355,13 +381,13 @@ function Blogs2() {
                                 <div className='ce-box-title'>Ipsum</div>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
                                 <Link to="/">Explore Ipsum</Link>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="blog2-jobs-skills-section">
+            {/* <div className="blog2-jobs-skills-section">
                 <div className="container-lg">
                     <div className="row blog2-js-row">
                         <div className='col-lg-12'>
@@ -437,9 +463,9 @@ function Blogs2() {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="blog2-our-impact-section">
+            {/* <div className="blog2-our-impact-section">
                 <div className="container-lg">
                     <div className="row blog2-oi-row">
                         <div className='col-lg-12'>
@@ -515,7 +541,7 @@ function Blogs2() {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

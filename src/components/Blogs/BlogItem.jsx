@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const BlogItem = (props) => {
     return (
         <div className="col-lg-3 blog-item-col">
-            <div className="blog-item">
+            <div className="blog-item" key={`/${props.uniqueKey}`}>
                 {
                     props.thumbnail ?
                         <Link to={`/${props.slug}`}>

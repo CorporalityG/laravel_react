@@ -89,7 +89,9 @@ class PostController extends Controller
     {
         if( $request->is('api/*') )
         {
-            return Post::latest()->first();
+            $post = Post::with(['categories'])->latest()->first();
+            $post->timeAgo = $post->created_at->diffForHumans();
+            return $post;
         }
     }
 
@@ -350,6 +352,75 @@ class PostController extends Controller
 
             $results = $qry->paginate(12);
             
+            return $results;
+        }
+    }
+
+
+    public function latestBlog2(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            return Post::with(['categories'])->skip(1)->take(4)->get();
+        }
+    }
+
+
+    public function CorporateStrategyBlog(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $qry = Post::latest();
+
+            $category = Category::with('posts:id')->where('category_slug', 'corporate-strategy')->first();
+
+            if( !empty($category) )
+            {
+                $posts = array_column($category->posts->toArray(), 'id');
+                $qry->whereIn('id', $posts);
+            }
+
+            $results = $qry->paginate(6);
+            return $results;
+        }
+    }
+
+
+    public function DigitalMediaMarketingBlog(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $qry = Post::latest();
+
+            $category = Category::with('posts:id')->where('category_slug', 'digital-media-marketing')->first();
+
+            if( !empty($category) )
+            {
+                $posts = array_column($category->posts->toArray(), 'id');
+                $qry->whereIn('id', $posts);
+            }
+
+            $results = $qry->paginate(4);
+            return $results;
+        }
+    }
+
+
+    public function LeadGenAndSalesStrategyBlog(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $qry = Post::latest();
+
+            $category = Category::with('posts:id')->where('category_slug', 'lead-gen-and-sales-strategy')->first();
+
+            if( !empty($category) )
+            {
+                $posts = array_column($category->posts->toArray(), 'id');
+                $qry->whereIn('id', $posts);
+            }
+
+            $results = $qry->paginate(3);
             return $results;
         }
     }
