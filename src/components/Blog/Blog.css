@@ -71,6 +71,17 @@
   text-align: justify;
   text-justify: inter-word;
 }
+.single-blog-page .single-blog-description ul {
+  margin-bottom: 30px;
+}
+.single-blog-page .single-blog-description ul li {
+  color: #534b53;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 10px;
+}
 .single-blog-page .single-blog-description h3 {
   color: #534b53;
   margin-top: 10px;

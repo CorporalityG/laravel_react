@@ -121,7 +121,7 @@ function OurTeam() {
                         <div className="col-lg-12">
                             <div className="ot-tm-title">Team Members</div>
                             <div className="ot-tm-list">
-                                <CarouselGrid cols={5} rows={1} gap={25} autoplay={4000} loop hideArrow={true}>
+                                <CarouselGrid cols={5} rows={1} gap={25} autoplay={4000} loop hideArrow={true} responsiveLayout={[{breakpoint: 1199, cols: 4}, {breakpoint: 887, cols: 3}]}>
                                     <CarouselGrid.Item>
                                         <TeamMember
                                             avtar={`${BASE_URL}/img/OurTeam/Saravanan.png`}

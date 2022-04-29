@@ -166,6 +166,7 @@
   line-height: 44px;
   font-weight: bold;
   margin: 0px !important;
+  text-transform: capitalize;
 }
 
 .bannerContainer .bannerSubtitle {

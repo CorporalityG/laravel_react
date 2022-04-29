@@ -117,7 +117,7 @@
   display: flex;
   background: #FFFFFF;
   box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .blogs-container .blog-item-left .blog-item-box-main .blog-item-box-img {
   width: 40%;
@@ -125,7 +125,7 @@
 }
 .blogs-container .blog-item-left .blog-item-box-main .blog-item-box-content {
   width: 60%;
-  padding: 20px;
+  padding: 35px 20px;
 }
 .blogs-container .blog-item-left .blog-item-box-main .blog-item-box-subtitle {
   font-style: normal;

@@ -14,12 +14,12 @@ function Careers() {
         <img src={`${BASE_URL}/img/Careers/rec-3.png`} alt="Rec 3" className="rec-3" />
         <img src={`${BASE_URL}/img/Careers/rec-4.png`} alt="Rec 4" className="rec-4" />
 
-        <div className="container">
+        <div className="container-lg">
           <div className="row career-banner-content-row">
-            <div className="col-md-12">
+            <div className="col-lg-12">
               <div className="career-banner-content">
                 <h1>Let’s create magic through inspiring communication</h1>
-                <p>We are passionate about evolving knowledge and technology, and always hungry to get better.What’s your passion? We look forward to working with you.</p>
+                <p>We are passionate about evolving knowledge and technology, and always hungry to get better. What’s your passion? We look forward to working with you.</p>
               </div>
             </div>
           </div>
@@ -54,10 +54,10 @@ function Careers() {
       </div>
 
       <div className="career-testimonial-section">
-        <div className="container">
+        <div className="container-lg">
           <div className="row career-testimonial-row">
-            <div className="col-md-12">
-              <Carousel indicators={false} interval={null} prevIcon={<div className="related-case-study-arrow related-case-study-arrow-prev"><img src={`${BASE_URL}/img/Careers/prev-arrow.png`} alt="<" /></div>} nextIcon={<div className="related-case-study-arrow related-case-study-arrow-prev"><img src={`${BASE_URL}/img/Careers/next-arrow.png`} alt=">" /></div>}>
+            <div className="col-lg-12">
+              <Carousel indicators={false} interval={null} prevIcon={<div className="career-t-arrow career-t-arrow-prev"><img src={`${BASE_URL}/img/Careers/prev-arrow.png`} alt="<" /></div>} nextIcon={<div className="career-t-arrow career-t-arrow-next"><img src={`${BASE_URL}/img/Careers/next-arrow.png`} alt=">" /></div>}>
                 <Carousel.Item>
                   <TestimonialItem
                     type={'odd'}
@@ -84,7 +84,7 @@ function Careers() {
       </div>
 
       <div className="career-opportunities-section">
-        <div className="container">
+        <div className="container-lg">
           <div className="row career-opportunities-row">
             <div className="col-lg-6">
               <div className="co-content">
@@ -98,11 +98,11 @@ function Careers() {
       </div>
 
       <div className="career-current-openings-section">
-        <div className="container">
+        <div className="container-lg">
           <div className="row career-co-title-row">
-            <div className="col-md-12">
+            <div className="col-lg-12">
               <div className="career-co-title-content">
-                <h2>CURRENT OPENINGS</h2>
+                <h2>Current Openings</h2>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ function Careers() {
       <div className="career-internship-requirements-section">
         <img src={`${BASE_URL}/img/Careers/ir-rec.png`} alt="Rec" className="ir-rec" />
 
-        <div className="container">
+        <div className="container-lg">
           <div className="row career-internship-requirements-row">
             <div className="col-lg-6">
               <div className="career-ir-content">

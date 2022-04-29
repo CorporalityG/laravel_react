@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const LeadershipMember = (props) => {
     return (
-        <div className="col-lg-6 ot-l-member-col" data-aos="flip-left">
+        <div className="col-md-6 ot-l-member-col" data-aos="flip-left">
             <div className="ot-l-member">
                 <div className="l-member-img">
                     {props.thumbnail && <img src={props.thumbnail} alt={props.name} className="l-member-avtar" />}

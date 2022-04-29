@@ -390,3 +390,243 @@
     color: rgba(160, 109, 176, 0.5);
 }
 /* team members end */
+
+
+/* responsive start */
+@media only screen and (max-width: 1450.99px) {
+    .ot-banner-section .ot-banner-rec-3 {
+        left: 230px;
+    }
+}
+
+
+@media only screen and (max-width: 1399.99px) {
+    .ot-team-members-section .ot-tm-title {
+        margin-left: 6.5%;
+    }
+}
+
+
+@media only screen and (max-width: 1230.99px) {
+    .ot-banner-section .social-img img {
+        max-height: 200px;
+    }
+    .ot-banner-section .ot-banner-rec-3 {
+        left: 130px;
+    }
+    .ot-banner-section .ot-banner-content {
+        max-width: 85%;
+    }
+    .ot-banner-section .ot-banner-rec-1 {
+        left: 60px;
+        top: 30px;
+    }
+    .ot-banner-section .ot-banner-rec-4 {
+        right: 100px;
+    }
+    .ot-leadership-section .ot-l-title-content {
+        max-width: 85%;
+    }
+    .ot-leadership-section .ot-l-members {
+        max-width: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 1199.99px) {
+    .ot-team-members-section .ot-tm-title {
+        margin-left: 9%;
+    }
+    .ot-team-members-section .ot-tm-content {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1080.99px) {
+    .ot-banner-section .ot-banner-content {
+        max-width: 100%;
+    }
+    .ot-banner-section .ot-banner-rec-3 {
+        bottom: 80px;
+    }
+    .ot-banner-section .ot-banner-rec-4 {
+        top: initial;
+        bottom: 60px;
+    }
+    .ot-banner-section .ot-banner-img {
+        top: -25px;
+    }
+    .ot-leadership-section .ot-l-title-content {
+        max-width: 100%;
+    }
+    .ot-leadership-section .ot-l-members {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .ot-banner-section .social-section {
+        bottom: 0;
+        transform: translate(0, 0);
+    }
+    .ot-banner-section .ot-banner-rec-3 {
+        bottom: 50px;
+        left: 200px;
+    }
+    .ot-team-members-section .ot-tm-title {
+        margin-left: 9.5%;
+    }
+    .ot-team-members-section .ot-tm-content {
+        max-width: 95%;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .ot-team-members-section .ot-tm-title {
+        margin-left: 8%;
+    }
+}
+
+
+@media only screen and (max-width: 887.99px) {
+    .ot-team-members-section .ot-tm-title {
+        margin-left: 16%;
+    }
+    .ot-banner-section .ot-banner-vector {
+        width: 70%;
+    }
+    .ot-banner-section .ot-banner-rec-3 {
+        left: 45%;
+    }
+}
+
+
+@media only screen and (max-width: 768.99px) {
+    .ot-team-members-section .ot-tm-title {
+        margin-left: 13.5%;
+    }
+    .ot-banner-section .ot-banner-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 766.99px) {
+    .ot-leadership-section .ot-l-member-col:not(:last-child) {
+        margin-bottom: 50px;
+    }
+    .ot-team-members-section .ot-tm-content .pm-avtar {
+        max-width: 50%;
+    }
+    .ot-team-members-section .ot-tm-title {
+        margin-left: 3%;
+    }
+    .ot-team-members-section .ot-tm-row {
+        margin-top: -100px;
+    }
+    .ot-team-members-section .ot-tm-content {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+    .ot-banner-section .ot-banner-content h1 {
+        font-size: 28px;
+    }
+    .ot-banner-section .ot-banner-content p {
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 620.99px) {
+    .ot-banner-section .ot-banner-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .ot-banner-section .row > *, 
+    .ot-leadership-section .row > *, 
+    .ot-team-members-section .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .ot-team-members-section .ot-tm-row {
+        margin-top: -50px;
+    }
+    .ot-banner-section .ot-banner-content h1 {
+        font-size: 24px;
+    }
+    .ot-banner-section .ot-banner-rec-1 {
+        top: 0;
+    }
+    .ot-banner-section .ot-banner-rec-2 {
+        top: 0;
+    }
+    .ot-banner-section {
+        padding-top: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 520.99px) {
+    .ot-banner-section .ot-banner-content h1 {
+        font-size: 22px;
+    }
+    .ot-banner-section .ot-banner-vector {
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 390.99px) {
+    .ot-banner-section .ot-banner-content h1 {
+        font-size: 20px;
+    }
+    .ot-banner-section .ot-banner-content {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .ot-banner-section .social-img img {
+        display: none;
+    }
+    .ot-banner-section .social-section {
+        left: 15px;
+    }
+    .ot-banner-section .ot-banner-rec-3 {
+        left: 35%;
+    }
+    .ot-leadership-section .ot-l-title-content h2 {
+        font-size: 28px;
+    }
+    .ot-leadership-section .ot-l-title-content p {
+        font-size: 16px;
+    }
+    .ot-leadership-section .ot-l-member {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .ot-team-members-section .ot-tm-row {
+        margin-top: 0;
+    }
+    .ot-banner-section .ot-banner-rec-2 {
+        right: 10px;
+    }
+    .ot-banner-section .ot-banner-rec-1 {
+        left: 30px;
+    }
+    .ot-banner-section .ot-banner-content {
+        padding-top: 25px;
+    }
+    .ot-leadership-section .ot-l-member .l-member-bio p {
+        font-size: 16px;
+    }
+}

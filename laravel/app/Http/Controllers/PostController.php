@@ -40,7 +40,7 @@ class PostController extends Controller
                 }
             }
 
-            $results = $qry->paginate(6);
+            $results = $qry->with(['categories'])->paginate(6);
             return $results;
         }
 
@@ -361,7 +361,7 @@ class PostController extends Controller
     {
         if( $request->is('api/*') )
         {
-            return Post::with(['categories'])->skip(1)->take(4)->get();
+            return Post::with(['categories'])->skip(1)->take(4)->orderBy('created_at', 'DESC')->get();
         }
     }
 

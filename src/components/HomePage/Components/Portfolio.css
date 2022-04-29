@@ -230,7 +230,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 34px;
-  text-transform: none;
+  text-transform: capitalize;
   color: #33657E;
 }
 .portfolio-container .portfolio-right .portfolio-content {
@@ -267,12 +267,14 @@
   font-weight: 500;
   font-size: 18px;
   color: #33657E;
+  text-transform: capitalize;
 }
 .portfolio-container .portfolio-right .studies-title {
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
   color: #33657E;
+  text-transform: capitalize;
 }
 .portfolio-container .portfolio-right .portfolio-link {
   font-style: normal;

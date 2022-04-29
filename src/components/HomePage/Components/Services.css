@@ -286,7 +286,7 @@
   font-weight: bold;
   font-size: 34px;
   line-height: 44px;
-  text-transform: none;
+  text-transform: capitalize;
   color: #33657E;
   margin-bottom: 25px;
 }

@@ -8,6 +8,7 @@ import { CaseStudiesItem } from './CaseStudiesItem';
 import { WhatWeThinkItemLeft } from './WhatWeThinkItemLeft';
 import { WhatWeThinkItemRight } from './WhatWeThinkItemRight';
 import { NewsItem } from './NewsItem';
+import { LeadershipMember } from './LeadershipMember';
 
 function ServiceInsights() {
 
@@ -499,6 +500,22 @@ function ServiceInsights() {
                         </div>
                     </div>
 
+                    <div className='row si-ol-members-row'>
+                        <LeadershipMember
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/leadership-priya.png`}
+                            name={`Priya Mishra`}
+                            designation={`CEO`}
+                            linkedin={``}
+                        />
+
+                        <LeadershipMember
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/leadership-jaish.png`}
+                            name={`JAISH`}
+                            designation={`COO`}
+                            linkedin={``}
+                        />
+                    </div>
+
                     <div className='row'>
                         <div className='col-lg-12 text-center'>
                             <Link to="/contact" className="si-front-back-link">
@@ -510,6 +527,44 @@ function ServiceInsights() {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className='si-subscribe-section'>
+                <div className="block-left-background"></div>
+                <div className='container-lg'>
+                    <div className="row ribbon-row">
+                        <div className="container-left">
+                            <div className="block-extension"></div>
+                            <div className="block-content">
+                                <div className="row">
+                                    <div className="col-xs-12">
+                                        <div className="col-xs-12 container-title">
+                                            <span className="module-title cta-text">Stay in the know with our newsletter</span>
+                                        </div>
+
+                                        <div className="col-xs-12 container-date">
+                                            <span className="content-date tertiary-title"></span>
+                                        </div>
+
+                                        <div className="col-xs-12 container-button">
+                                            <a href="/" target="_blank" rel="noopener">
+                                                <div className="btn-subscribe">Subscribe</div>
+                                                <div className="behind"></div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="container-right">
+                            <div className="triangle"></div>
+                            <div className="block-extension"></div>
+                        </div>
+                    </div>
+                </div>
+                <div className="block-right-background"></div>
             </div>
         </div>
     )
