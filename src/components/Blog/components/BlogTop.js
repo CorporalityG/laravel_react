@@ -63,7 +63,7 @@ function BlogTop() {
             <img src={image4} alt="image4" className="blog-top-image4" />
             <img src={image3} alt="image3" className="blog-top-image3" />
 
-            <div className="container">
+            <div className="container-lg">
                 <div className="blogSubscription">
                     <h3>Subscribe to Business Insight?</h3>
                     <input type="email" placeholder="Email Address" />
@@ -79,7 +79,7 @@ function BlogTop() {
             </div>
 
             <div className="blogMarketWrapper">
-                <div className="container">
+                <div className="container-lg">
                     <div className="blogMarket">
                         <img src={blogTopLeft} alt="" />
                         <div>
@@ -90,7 +90,7 @@ function BlogTop() {
                 </div>
             </div>
 
-            <div className="container">
+            <div className="container-lg">
                 <div id="blogCustomizer" className="blogCustomizer">
                     <DropDown className="blogDropDown" initial="Recent Post" loading={loading} list={[...recentPosts]} />
 

@@ -29,6 +29,7 @@
     font-size: 16px;
     font-weight: 700;
     width: 100%;
+    display: inline-block;
 }
 
 .blog2-heading {
@@ -101,6 +102,7 @@
 }
 .blog2-latest-section .blog-content-first p {
     color: #fff;
+    margin-bottom: 0;
 }
 .blog2-latest-section .blog-content-first {
     max-width: 85%;
@@ -560,4 +562,202 @@
 .blog2-our-impact-section {
     padding-top: 40px;
     padding-bottom: 60px;
+}
+
+
+/* responsive start */
+@media only screen and (min-width: 992px) and (max-width: 1399.99px) {
+    .blog2 .container-lg {
+        max-width: 100%;
+    }
+    .blog2-corporate-strategy-section .title-first a {
+        font-size: 22px;
+    }
+    .blog2-covid-explore-section .covid-item-title {
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1080.99px) {
+    .blog2 .blog-item .blog-item-title {
+        font-size: 15px;
+    }
+    .blog2-covid-explore-section .covid-item-category {
+        font-size: 14px;
+    }
+    .blog2-covid-explore-section .covid-item-title {
+        font-size: 14px;
+    }
+    .blog2-covid-explore-section .blog2-ce-subscribe .blog2-subscribe-title {
+        font-size: 16px;
+    }
+    .blog2-corporate-strategy-section .cs-content-first {
+        padding-left: 0;
+    }
+    .blog2-covid-explore-section .blog2-ce-subscribe p {
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .blog2-latest-section .latest-blog-col {
+        background-color: transparent;
+    }
+    .blog2-latest-section .blog-content-first {
+        max-width: 100%;
+        background-color: #32363E;
+        padding: 30px 20px;
+    }
+    .blog2 .blog-item img {
+        height: 240px;
+    }
+    .blog2-corporate-strategy-section .cs-blog-col-box img {
+        height: 130px;
+    }
+    .blog2-corporate-strategy-section .cs-content-first-col {
+        border-width: 0;
+    }
+    .blog2-corporate-strategy-section .cs-content-first {
+        padding: 15px 0;
+        border-color: #31647c;
+        border-style: solid;
+        border-width: 1px 0 1px 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .blog2-corporate-strategy-section .cs-content-first p {
+        margin-bottom: 0;
+    }
+    .blog2-podcasts-section .blog2-p-col {
+        background: transparent;
+    }
+    .blog2-podcasts-section .blog2-p-about {
+        background-color: #32363E;
+        margin-top: 10px;
+    }
+    .blog2-video-section .v-content-first {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+    .blog2-corporate-strategy-section .blog2-cs-title-row {
+        margin-bottom: 0;
+    }
+}
+
+
+@media only screen and (max-width: 767.99px) {
+    .blog2 .blog-item img {
+        height: 175px;
+    }
+    .blog2-corporate-strategy-section .cs-blog-col-box img {
+        height: 100px;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .blog2 .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .blog2 .blog-item img {
+        height: auto;
+    }
+    .blog2-corporate-strategy-section .cs-blog-col-box img {
+        height: auto;
+    }
+    .blog2-corporate-strategy-section .cs-blog-col-title a {
+        margin-top: 10px;
+        display: inline-block;
+    }
+    .blog2-covid-explore-section .covid-item-banner img {
+        width: 100%;
+    }
+    .blog2-covid-explore-section .covid-item-content {
+        margin-top: 10px;
+    }
+    .blog2-covid-explore-section .covid-item-category {
+        margin-bottom: 0;
+    }
+}
+
+
+@media only screen and (max-width: 520.99px) {
+    .blog2-corporate-strategy-section .title-first a {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 449.99px) {
+    .blog2-corporate-strategy-section .title-first a {
+        font-size: 20px;
+    }
+    .blog2-covid-explore-section .covid-item-category {
+        font-size: 15px;
+    }
+    .blog2-covid-explore-section .covid-item-title {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 414.99px) {
+    .blog2-latest-section .blog-content-first {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .blog2-latest-section .title-first {
+        font-size: 22px;
+    }
+    .blog2-latest-section .blog-content-first p {
+        font-size: 15px;
+    }
+    .blog2 .blog-item .blog-item-category {
+        font-size: 15px;
+    }
+    .blog2 .blog-item .blog-item-title {
+        font-size: 15px;
+    }
+    .blog2-heading a {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 360.99px) {
+    .blog2-covid-explore-section .blog2-heading a {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .blog2-covid-explore-section .blog2-heading a {
+        font-size: 18px;
+    }
+    .blog2-covid-explore-section .blog2-heading svg {
+        height: 14px;
+        margin-left: 5px;
+    }
+    .blog2-news-press-section .blog2-heading a {
+        font-size: 19px;
+    }
+    .blog2-news-press-section .blog2-heading svg {
+        height: 14px;
+        margin-left: 5px;
+    }
+    .blog2-corporate-strategy-section .title-first a {
+        font-size: 18px;
+    }
+    .blog2-latest-section .title-first {
+        font-size: 21px;
+    }
 }

@@ -7,6 +7,7 @@ import ServicesClients from "../ServicesClients/ServicesClients";
 import ServicesInsights from "../ServicesInsights/ServicesInsights";
 import Accordion from 'react-bootstrap/Accordion'
 import { WhyHireItem } from "./WhyHireItem";
+import { MethodologyProcessItem } from "./MethodologyProcessItem";
 
 function CorporateStrategy() {
 
@@ -123,10 +124,169 @@ function CorporateStrategy() {
             </div>
           </div>
 
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="coo-mp-banner">
-                <img src={`${BASE_URL}/img/OutsourcedCOO/Our-Methodology-and-Process.png`} alt="Our Methodology and Process" data-aos="zoom-in-up" />
+          <div className="row coo-mp-items-row" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">
+            <div className="col-lg-3 coo-mp-items-col">
+              <div className="coo-mp-item-heading" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">Audit and Diagnostic</div>
+            </div>
+            <div className="col-lg-1 coo-mp-items-col">
+              <div className="coo-mp-ih-dot" data-aos="zoom-in" data-aos-duration="2200" data-aos-delay="200"></div>
+            </div>
+            <div className="col-lg-8 coo-mp-items-col">
+              <div className="coo-mp-items">
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/positioning.png`}
+                  title={`Position`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/readiness.png`}
+                  title={`Readiness`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/timeline.png`}
+                  title={`Timeline`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/matrix-and-tracking.png`}
+                  title={`Matrix and Tracking`}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="row coo-mp-items-row" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">
+            <div className="col-lg-3 coo-mp-items-col">
+              <div className="coo-mp-item-heading" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">Vision Remapping</div>
+            </div>
+            <div className="col-lg-1 coo-mp-items-col">
+              <div className="coo-mp-ih-dot" data-aos="zoom-in" data-aos-duration="2200" data-aos-delay="200"></div>
+            </div>
+            <div className="col-lg-8 coo-mp-items-col">
+              <div className="coo-mp-items">
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/corporate-vision.png`}
+                  title={`Corporate Vision`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/marketing-objective.png`}
+                  title={`Marketing Objective`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/outcome-model.png`}
+                  title={`Outcome model`}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="row coo-mp-items-row" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">
+            <div className="col-lg-3 coo-mp-items-col">
+              <div className="coo-mp-item-heading" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">Strategizing and Planning</div>
+            </div>
+            <div className="col-lg-1 coo-mp-items-col">
+              <div className="coo-mp-ih-dot" data-aos="zoom-in" data-aos-duration="2200" data-aos-delay="200"></div>
+            </div>
+            <div className="col-lg-8 coo-mp-items-col">
+              <div className="coo-mp-items">
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/scoping.png`}
+                  title={`Scoping`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/budgeting.png`}
+                  title={`Budgeting`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/strategizing.png`}
+                  title={`Strategizing`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/task-planning.png`}
+                  title={`Task Planning`}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="row coo-mp-items-row" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">
+            <div className="col-lg-3 coo-mp-items-col">
+              <div className="coo-mp-item-heading" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">Task Force and Execution</div>
+            </div>
+            <div className="col-lg-1 coo-mp-items-col">
+              <div className="coo-mp-ih-dot" data-aos="zoom-in" data-aos-duration="2200" data-aos-delay="200"></div>
+            </div>
+            <div className="col-lg-8 coo-mp-items-col">
+              <div className="coo-mp-items">
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/tech-stack.png`}
+                  title={`Tech Stack`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/Scheduling.png`}
+                  title={`scheduling`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/implementation.png`}
+                  title={`Implementation`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/segmentation-and-matrix.png`}
+                  title={`Segmentation and Matrix`}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="row coo-mp-items-row" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">
+            <div className="col-lg-3 coo-mp-items-col">
+              <div className="coo-mp-item-heading" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">Asset Building</div>
+            </div>
+            <div className="col-lg-1 coo-mp-items-col">
+              <div className="coo-mp-ih-dot" data-aos="zoom-in" data-aos-duration="2200" data-aos-delay="200"></div>
+            </div>
+            <div className="col-lg-8 coo-mp-items-col">
+              <div className="coo-mp-items">
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/knowledge-based.png`}
+                  title={`Knowledge based`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/system-preparation.png`}
+                  title={`System Preparation`}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="row coo-mp-items-row" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">
+            <div className="col-lg-3 coo-mp-items-col">
+              <div className="coo-mp-item-heading" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="100">Plan Ahead</div>
+            </div>
+            <div className="col-lg-1 coo-mp-items-col">
+              <div className="coo-mp-ih-dot" data-aos="zoom-in" data-aos-duration="2200" data-aos-delay="200"></div>
+            </div>
+            <div className="col-lg-8 coo-mp-items-col">
+              <div className="coo-mp-items">
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/future-beyond-52-weeks.png`}
+                  title={`Future beyond 52 weeks`}
+                />
+
+                <MethodologyProcessItem
+                  icon={`${BASE_URL}/img/OutsourcedCOO/end-goal-setting.png`}
+                  title={`End goal setting`}
+                />
               </div>
             </div>
           </div>

@@ -73,11 +73,11 @@ const Blog = () => {
                 <img src={BASE_URL + '/img/blogs/single-blog-left-2.png'} alt="single-blog-left-2" className="single-blog-left-2" />
                 <img src={BASE_URL + '/img/blogs/single-blog-right.png'} alt="single-blog-right" className="single-blog-right" />
 
-                <div className="container">
+                <div className="container-lg">
                     <div className="row">
                         {
                             singleBlog ?
-                                <div className="col-md-8">
+                                <div className="col-lg-8">
                                     <div className="single-blog-img">
                                         { singleBlog.post_image && <img src={API_IMG_URL + singleBlog.post_image} alt={singleBlog.post_title} /> }
                                     </div>
@@ -104,7 +104,7 @@ const Blog = () => {
                             : null
                         }
 
-                        <div className="col-md-4">
+                        <div className="col-lg-4">
                             <div className="single-sidebar-box">
                                 <img src={BASE_URL + '/img/blogs/3D-in-Medical-Care-Music-single.png'} alt="3D-in-Medical-Care-Music" />
                             </div>
@@ -276,7 +276,7 @@ const Blog = () => {
 
             {/*<RelatedPost />*/}
             <div className="related-post-main">
-                <div className="container">
+                <div className="container-lg">
                     <div className="row">
                         <div className="col-md-12">
                             <div className="related-post-carousel" data-aos="fade-up">

@@ -190,6 +190,10 @@
   .our-iniatives-container .our-iniatives-grid .our-iniatives-grid-title {
     margin-top: -23px;
   }
+  .our-iniatives-container .our-iniatives-grid:first-child .our-iniatives-grid-img-effect figcaption {
+    left: 10px;
+    right: 10px;
+  }
 }
 
 

@@ -80,8 +80,6 @@ function App() {
 
             <Route path="/write" element={user ? <Write /> : <Register />} />
 
-            <Route path="/blog" element={<Blogs />}/>
-
             <Route path="/brand-positioning" element={<BrandPositioning />} />
 
             <Route path="/contact" element={<Contact />} />
@@ -141,7 +139,7 @@ function App() {
             <Route path="/outsourced-cmo" element={<OutsourcedCMO /> } />
             <Route path="/marketing-model-approch" element={<MarketingModelApproch/> } />
 
-            <Route path="/blog-2" element={<Blogs2 /> } />
+            <Route path="/blog" element={<Blogs2 /> } />
             <Route path="/our-team" element={<OurTeam /> } />
             <Route path="/service-insights" element={<ServiceInsights /> } />
 

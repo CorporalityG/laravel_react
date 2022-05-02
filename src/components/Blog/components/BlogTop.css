@@ -33,6 +33,7 @@
   color: #31647C;
   font-size: 1.375em;
   font-weight: 500;
+  text-transform: capitalize;
 }
 
 .blogTopContainer .blogSubscription input[type="email"] {
@@ -174,6 +175,7 @@
   font-weight: 500;
   line-height: 1.75em;
   color: #232323;
+  text-transform: capitalize;
 }
 
 .blogTopContainer .blogMarket div div {
@@ -225,9 +227,9 @@
   margin-right: 20px;
 }
 
-.blogTopContainer .blogCustomizer .blogDropDown:first-child {
-  /*margin-left: 20px;*/
-}
+/* .blogTopContainer .blogCustomizer .blogDropDown:first-child {
+  margin-left: 20px;
+} */
 
 .blogTopContainer .blogCustomizer .blogDropDown:last-child {
   margin-left: auto;
@@ -315,6 +317,30 @@
   }
 }
 
+
+@media only screen and (max-width: 1199.99px) {
+  .blogTopContainer .blogSubscription .subscribeButton {
+    margin-top: 10px;
+  }
+  .blogTopContainer .blogMarket div div {
+    max-width: 100%;
+    width: 150px;
+  }
+}
+
+
+@media only screen and (max-width: 1115.99px) {
+  .blogTopContainer .blogSubscription input[type="email"] {
+    width: 30%;
+  }
+  .blogTopContainer .blogSubscription select {
+    width: 30%;
+  }
+  .blogTopContainer .blogSubscription .subscribeButton {
+    width: 23%;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   .blogTopContainer {
     font-size: calc(12px + 0.1vw);
@@ -328,10 +354,23 @@
     min-width: 120px;
   }
   .blogTopContainer .blogSubscription select {
-    min-width: 244px;
+    min-width: 40%;
   }
   .blogTopContainer .blogSubscription input {
     min-width: 244px;
+  }
+  .blogTopContainer .blogSubscription input[type="email"] {
+    width: 40%;
+  }
+  .blogTopContainer .blogSubscription .subscribeButton {
+    width: 20%;
+    margin-top: 0;
+  }
+  .blogTopContainer .blog-top-image4 {
+    top: 10px;
+  }
+  .blogTopContainer .blog-top-image5 {
+    top: 20px;
   }
 }
 

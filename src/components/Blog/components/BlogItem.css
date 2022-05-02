@@ -58,3 +58,54 @@
   left: initial;
   right: -6%;
 }
+
+
+/* responsive start */
+@media only screen and (max-width: 1115.99px) {
+    .single-blog-page .related-post-main .blog-item .blog-img {
+        height: 145px;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .single-blog-page .related-post-main .blog-item .blog-content .blog-title, 
+    .single-blog-page .related-post-main .blog-item .blog-content .blog-title a {
+        min-height: 72px;
+    }
+    .single-blog-page .related-post-main .related-post-arrow-prev {
+        left: 0;
+    }
+    .single-blog-page .related-post-main .related-post-arrow {
+        top: initial;
+        bottom: -85px;
+        height: 90px;
+    }
+    .single-blog-page .related-post-main {
+        margin-bottom: 120px;
+    }
+    .single-blog-page .related-post-main .related-post-arrow-next {
+        right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 855.99px) {
+    .blogTopContainer .blogSubscription select {
+        min-width: 35%;
+    }
+    .single-blog-page .related-post-main .blog-item .blog-content .blog-title, 
+    .single-blog-page .related-post-main .blog-item .blog-content .blog-title a {
+        font-size: 15px;
+    }
+    .blogTopContainer .blogCustomizer .blogDropDown:last-child {
+        margin-right: 0;
+    }
+}
+
+
+@media only screen and (max-width: 855.99px) {
+    .blogTopContainer .blogMarket div div {
+        width: 155px;
+    }
+}

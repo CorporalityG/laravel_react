@@ -217,6 +217,73 @@
 .coo-methodology-process-section .coo-mp-banner img {
     max-width: 100%;
 }
+.coo-methodology-process-section .coo-mp-items-row {
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+.coo-methodology-process-section .coo-mp-items-row::before {
+    content: "";
+    position: absolute;
+    background-color: #69bfba;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    left: 29%;
+}
+.coo-methodology-process-section .coo-mp-items-row::after {
+    content: "";
+    position: absolute;
+    background-color: #69bfba;
+    width: 2px;
+    height: calc(100% + 50px);
+    left: calc(29% + 9.5px);
+    top: calc(50% + 10px);
+}
+.coo-methodology-process-section .coo-mp-items-row:last-child::after {
+    width: 0;
+    height: 0;
+}
+.coo-methodology-process-section .coo-mp-item-heading {
+    color: #a06cae;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coo-methodology-process-section .coo-mp-items {
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+}
+.coo-methodology-process-section .coo-mp-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 16px 40px rgba(10,16,22,.1);
+    cursor: pointer;
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.coo-methodology-process-section .coo-mp-item img {
+    max-width: 100%;
+    max-height: 64px;
+    margin-bottom: 15px;
+}
+.coo-methodology-process-section .coo-mp-item .mp-item-title {
+    color: #a06cae;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: capitalize;
+}
 /* methodology-process end */
 
 
@@ -731,6 +798,20 @@
     .coo-why-hire-section .coo-wh-title-content .coo-wh-title-desc {
         max-width: 100%;
     }
+    .coo-methodology-process-section .coo-mp-item-heading {
+        margin-bottom: 60px;
+    }
+    .coo-methodology-process-section .coo-mp-items-row::before {
+        top: 40px;
+        left: calc(50% - 9.5px);
+    }
+    .coo-methodology-process-section .coo-mp-items-row::after, 
+    .coo-methodology-process-section .coo-mp-items-row:last-child:after {
+        top: 50px;
+        left: 10px;
+        width: calc(100% - 20px);
+        height: 2px;
+    }
 }
 
 
@@ -747,6 +828,13 @@
 @media only screen and (max-width: 740.99px) {
     .coo-banner-section .coo-banner-middle {
         height: 52%;
+    }
+}
+
+
+@media only screen and (max-width: 720.99px) {
+    .coo-methodology-process-section .coo-mp-items {
+        grid-column-gap: 20px;
     }
 }
 
@@ -796,6 +884,17 @@
     .coo-why-hire-section .wh-box-item img {
         margin-right: 10px;
     }
+    .coo-methodology-process-section .coo-mp-items {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .coo-methodology-process-section .coo-mp-item .mp-item-title {
+        font-size: 14px;
+    }
 }
 
 
@@ -844,6 +943,13 @@
     }
     .coo-faqs-section .coo-faqs-list .accordion-button {
         font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 480.99px) {
+    .coo-methodology-process-section .coo-mp-items {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -968,6 +1074,16 @@
     }
     .coo-banner-section .coo-banner-content .coo-banner-btn {
         margin-top: 25px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .coo-methodology-process-section .coo-mp-items {
+        grid-template-columns: 1fr;
+    }
+    .coo-methodology-process-section .coo-mp-item-heading {
+        font-size: 18px;
     }
 }
 

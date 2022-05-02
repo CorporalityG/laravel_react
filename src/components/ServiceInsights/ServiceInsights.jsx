@@ -79,7 +79,7 @@ function ServiceInsights() {
                             <img src={`${BASE_URL}/img/ServiceInsights/priya_mam.png`} alt="" />
                         </div>
                         <div className='col-lg-9 col-sm-8 si-a-content'>
-                            <div className='si-a-c-subtitle'>Accenture at Lorem</div>
+                            <div className='si-a-c-subtitle'>Coporlaioty at Lorem</div>
                             <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
                             <span>
                                 <Link to="/" className="si-link">Watch Now <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="" /></Link>
@@ -132,7 +132,7 @@ function ServiceInsights() {
                             <div className='si-b-title'>Connecting partners—blockchain for supply chain</div>
                         </div>
                         <div className='col-lg-5'>
-                            <p>Accenture & Microsoft create a scalable solution</p>
+                            <p>Coporlaioty & Microsoft create a scalable solution</p>
                         </div>
                         <div className='col-lg-2 si-link-col'>
                             <Link to="/" className="si-link">Read More <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="" /></Link>
