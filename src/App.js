@@ -23,7 +23,7 @@ import Contact from "./components/Contact/Contact";
 import DigitalMediaMarketing from "./components/DigitalMediaMarketing/DigitalMediaMarketing";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-import Blog from "./components/Blog/Blog.jsx";
+// import Blog from "./components/Blog/Blog.jsx";
 import Write from "./components/Write/Write";
 import IndustrialResources from "./components/IndustrialResources/IndustrialResources";
 import DivineIntercession from "./components/CauseStudies/DivineIntercession";
@@ -57,6 +57,7 @@ import MarketingModelApproch from "./components/MarketingModelApproch/MarketingM
 import Blogs2 from "./components/Blogs/Blogs2";
 import OurTeam from "./components/OurTeam/OurTeam";
 import ServiceInsights from "./components/ServiceInsights/ServiceInsights";
+import Single from "./components/Blog/Single";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -147,7 +148,7 @@ function App() {
             
             {/*<Route path="/articles/:article_name" element={<Blog />}/>*/}
  
-            <Route path="/:post_slug" exact element={<Blog />}/>
+            <Route path="/:post_slug" exact element={<Single />}/>
 
             <Route path="/category/:category_slug" element={<Blogs />}/>
             

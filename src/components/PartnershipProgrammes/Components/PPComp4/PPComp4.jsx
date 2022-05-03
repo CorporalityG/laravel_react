@@ -21,7 +21,7 @@ export default function PPComp4() {
                 <img data-aos="flip-left" data-aos-duration="1000" className="ppc4PartnerItem1" src={partner1} alt="" />
                 <img data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000" className="ppc4PartnerItem2" src={partner2} alt="" />
                 <img data-aos="flip-left" data-aos-delay="600" data-aos-duration="1000" className="ppc4PartnerItem3" src={partner3} alt="" />
-                <img data-aos="flip-left" data-aos-delay="900" data-aos-duration="1000" className="ppc4PartnerItem4" src={partner4} alt="" />
+                {/* <img data-aos="flip-left" data-aos-delay="900" data-aos-duration="1000" className="ppc4PartnerItem4" src={partner4} alt="" /> */}
                 <img data-aos="flip-left" data-aos-delay="1200" data-aos-duration="1000"className="ppc4PartnerItem5" src={partner5} alt="" />
             </div>
         </div>       

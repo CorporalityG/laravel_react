@@ -29,3 +29,4 @@ Route::get('/posts', [PostController::class, 'index']);
 Route::get('/single-blog/{slug}', [PostController::class, 'getBlog']);
 Route::get('/related-posts/{slug}/', [PostController::class, 'getRelatedPosts']);
 Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/related-posts-2/{slug}/', [PostController::class, 'getRelatedPosts2']);

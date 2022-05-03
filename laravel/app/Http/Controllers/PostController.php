@@ -329,7 +329,7 @@ class PostController extends Controller
         if( $request->is('api/*') )
         {
             // return $request->slug;
-            return Post::where('post_slug', $request->slug)->first();
+            return Post::with(['categories'])->where('post_slug', $request->slug)->first();
         }
     }
 
@@ -422,6 +422,26 @@ class PostController extends Controller
 
             $results = $qry->paginate(3);
             return $results;
+        }
+    }
+
+    public function getRelatedPosts2(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $post = array();
+            if( !empty($request->slug) )
+            {
+                $post = Post::where('post_slug', '=', $request->slug)->first();
+            }
+            $relatedPost = Post::whereHas('categories', function ($q) use ($post) {
+                return $q->whereIn('category_slug', $post->categories->pluck('category_slug')); 
+            })
+            ->latest()->take(6)
+            ->where('post_slug', '!=', $request->slug) // So you won't fetch same post
+            ->get();
+
+            return $relatedPost;
         }
     }
 }
