@@ -5,9 +5,9 @@ export const RecentBlogItem = (props) => {
     return (
         <div className="sb-recent-blog-item">
             {
-                props.category ?
+               /* props.category ?
                     <Link to={`/category/${props.catSlug}`} className="sb-recent-blog-category">{props.category}</Link>
-                    : null
+                    : null*/
             }
 
             {

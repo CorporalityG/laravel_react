@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\ArticleCategory;
+use App\Models\ArticleTag;
 // use App\Models\CategoryArticle;
+use App\Models\TagArticle;
 use Illuminate\Http\Request;
 use App\Http\Requests\ArticleValidateRequest; // use validation
 use Illuminate\Support\Str;
@@ -39,6 +41,16 @@ class ArticleController extends Controller
                     
                     return $article_categories;
                 })
+                ->addColumn('tag', function($article) {
+                    $article_tags = array();
+                    if( !empty($article->tags) ):
+                        foreach( $article->tags as $tag ):
+                            array_push($article_tags, ' '.$tag->tag_name);
+                        endforeach;
+                    endif;
+                    
+                    return $article_tags;
+                })
                 ->addColumn('created_at', function($article) {
                     return $article->getCreatedAt($article->created_at);
                 })
@@ -51,7 +63,7 @@ class ArticleController extends Controller
 
                     return $actionBtn;
                 })
-                ->rawColumns(['category', 'created_at', 'action'])
+                ->rawColumns(['category','tag', 'created_at', 'action'])
                 ->make(true);
         }
         else {
@@ -67,8 +79,9 @@ class ArticleController extends Controller
     public function create()
     {
         $categories = $this->categories();
+        $tags = $this->tags();
 
-        return view('articles.create-edit', compact('categories'));
+        return view('articles.create-edit', compact('categories','tags'));
     }
 
     /**
@@ -133,17 +146,26 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         $article = Article::with('categories:id')->findOrFail($article->id);
-        
+
         $article_categories_id = array();
+        $article_tags_id = array();
         if( !empty($article->categories) ):
             foreach( $article->categories as $category ):
                 array_push($article_categories_id, $category->id);
             endforeach;
         endif;
 
-        $categories = $this->categories();
+        dd($article->tags[0]->description);
+        if( !empty($article->tags) ):
+            foreach( $article->tags as $tag ):
+                array_push($article_tags_id, $tag->id);
+            endforeach;
+        endif;
 
-        return view('articles.create-edit', compact('article', 'article_categories_id', 'categories'));
+        $categories = $this->categories();
+        $tags = $this->tags();
+
+        return view('articles.create-edit', compact('article', 'article_categories_id','article_tags_id', 'categories', 'tags'));
     }
 
     /**
@@ -202,6 +224,7 @@ class ArticleController extends Controller
     */
     private function StoreUpdate($request, $id='')
     {
+        //print_r($request);
         if( !empty($id) )
         {
             $RS_Save = Article::findOrFail($id);
@@ -220,6 +243,7 @@ class ArticleController extends Controller
         $RS_Save->user_id = Auth::user()->id;
         $RS_Save->article_title = $article_title;
         $RS_Save->article_slug = $article_slug;
+        $RS_Save->article_subtitle = $request->article_subtitle;
         $RS_Save->article_short_description = $request->article_short_description;
         $RS_Save->article_description = $request->article_description;
         $RS_Save->meta_title = $request->meta_title;
@@ -237,6 +261,38 @@ class ArticleController extends Controller
         $result = $RS_Save->save();
 
         $RS_Save->categories()->sync($request->categories_id);
+        
+        //dd($request->description);
+        if( !empty($RS_Save->id) )
+        {
+            if( !empty($request->description) )
+            {
+                foreach( $request->description as $Key=>$Val ):
+
+                    $RS_TagArt = TagArticle::where([
+                                        ['article_id', $RS_Save->id],
+                                        ['tag_id', $Key],
+                                    ])
+                                    ->first();
+
+                    if( !empty($RS_TagArt) )
+                    {
+                        $RS_TagArt_Save = TagArticle::findOrFail($RS_TagArt->id);
+                    }
+                    else
+                    {
+                        $RS_TagArt_Save = new TagArticle();
+                    }
+
+                    $RS_TagArt_Save->article_id = $RS_Save->id;
+                    $RS_TagArt_Save->tag_id = $Key;
+                    $RS_TagArt_Save->description = $Val;
+
+                    $RS_TagArt_Save->save();
+                endforeach;
+            }
+        }
+        
 
         return $result;
     }
@@ -268,6 +324,11 @@ class ArticleController extends Controller
     private function categories()
     {
         return ArticleCategory::orderby('category_name', 'ASC')->pluck('category_name', 'id');
+    }
+
+    private function tags()
+    {
+        return ArticleTag::orderby('tag_name', 'ASC')->pluck('tag_name', 'id');
     }
 
 

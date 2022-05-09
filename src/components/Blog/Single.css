@@ -179,6 +179,38 @@
     font-size: 15px;
     opacity: .7;
 }
+#recent-blogs{width: 100%;display: inline-block;margin-bottom: 10px;font-size: 25px;}
+.youtube-video img{width: 100%;margin-left: -20px;}
+.subsribetitle{font-weight: bold;font-size: 20px;margin-bottom: 10px;}
+.btn-subscribe .blog-poll-youtube-btn a{color: #fff;}
+.live-poll-question {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #31647C;
+  margin-bottom: 20px;
+}
+.live-poll-options span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #31647C;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.pollsdata{padding: 15px 25px;background: #f3f3f3;}
+.blog-poll-youtube-btn {
+  background: linear-gradient(93.41deg, #E5CD60 0%, #6CA0BC 100%);
+  padding: 10px 30px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
 .single-blog-page-2 .sb-written-by ul li a {
     text-decoration: underline !important;
     cursor: pointer;

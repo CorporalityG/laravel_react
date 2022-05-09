@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "./Single.css"
 import { useParams, Link } from 'react-router-dom'
-import { API_BASE_URL, API_IMG_URL } from '../../config';
+import { API_BASE_URL,BASE_URL, API_IMG_URL } from '../../config';
 import { SocialShare } from './SocialShare';
+import events from "../Blog/img/sidebarevent.jpg";
 import { RelatedBlogItem } from './RelatedBlogItem';
 import { RecentBlogItem } from './RecentBlogItem';
 
@@ -78,7 +79,7 @@ const Single = () => {
                             </div>
 
                             <div className="row single-blog-content-row">
-                                <div className="col-lg-3">
+                                <div className="col-lg-4">
                                     <div className='sb-sidebar'>
                                         <div className='sb-published'>{dateFormat(singleBlog.created_at)}</div>
                                         <ul className='sb-authors'>
@@ -89,12 +90,27 @@ const Single = () => {
                                         </ul>
 
                                         <SocialShare />
-
+                                        <div className="blog-poll-youtube-item">
+                                            <div className="title subsribetitle">Subscribe Our YouTube Channel</div>
+                                            <div className="youtube-video">
+                                                <img src={BASE_URL + '/img/blogs/YouTube-Channel.png'} alt="YouTube-Channel" />
+                                            </div>
+                                            <div className="btn-subscribe">
+                                                <div className="blog-poll-youtube-btn"><a href="https://www.youtube.com/c/Corporality">Subscribe</a></div>
+                                            </div>
+                                        </div>
+                                        <div className="recent-events">
+                                            <a class="sb-recent-blog-category" id="recent-blogs"><b>Upcoming Events</b></a>
+                                            <a href="https://corporality.global/club/corporality-global-event/" target="_blank"><img src={events} alt="" className="recent-events-imgs" /></a>
+                                        </div>
+                                        
+                                        
                                         {
                                             recentBlog ?
                                                 <div className="sb-recent-blog-items">
+                                                <a class="sb-recent-blog-category" id="recent-blogs"><b>Recent Blogs</b></a>
                                                     {
-                                                        recentBlog.slice(0,3).map((item, index) =>
+                                                        recentBlog.slice(0,1).map((item, index) =>
                                                             <RecentBlogItem
                                                                 key={`${item.id}`}
                                                                 thumbnail={`${API_IMG_URL + item.post_image}`}
@@ -108,10 +124,23 @@ const Single = () => {
                                                 </div>
                                                 : null
                                         }
+
+                                        <div className="blog-poll-youtube-item pollsdata">
+                                            <div className="title subsribetitle">Live poll</div>
+                                            <div className="live-poll">
+                                                <p className="live-poll-question">Readers, what insights would you like to gain next?</p>
+                                                <div className="live-poll-options">
+                                                    <span><input type="radio" id="live_poll_topic" name="live_poll" value="Whitepaper on yrending topic" /> <label htmlFor="live_poll_topic">Whitepaper on yrending topic</label></span>
+                                                    <span><input type="radio" id="live_poll_webinar" name="live_poll" value="Whitepaper on yrending topic" /> <label htmlFor="live_poll_webinar">Webinar on issue I’m passionate about</label></span>
+                                                    <span><input type="radio" id="live_poll_career" name="live_poll" value="Whitepaper on yrending topic" /> <label htmlFor="live_poll_career">Career advice from an experts</label></span>
+                                                </div>
+                                            </div>
+                                            <div className="blog-poll-youtube-btn">Vote</div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div className="col-lg-9">
+                                <div className="col-lg-8">
                                     <div className="sb-description">
                                         <div className="sb-content" dangerouslySetInnerHTML={{ __html: singleBlog.post_description }}></div>
 

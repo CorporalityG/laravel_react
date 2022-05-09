@@ -52,19 +52,12 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="categories_id">{{ __('Category') }}</label>
-                                    <div class="select2-purple">
-                                        <select name="categories_id[]" id="categories_id" multiple="multiple" class="select2 form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }}" data-placeholder="{{ __('-- Select Category --') }}" data-dropdown-css-class="select2-purple">
-                                            @forelse( $categories as $Key=>$Val )
-                                                <option value="{{ $Key }}" @if( !empty($article_categories_id) && in_array($Key, $article_categories_id) ) selected @endif>{{ $Val }}</option>
-                                            @empty
-                                            @endforelse
-                                        </select>
-                                    </div>
+                                    <label for="article_subtitle">{{ __('Article Subtitle') }}</label>
+                                    <input type="text" name="article_subtitle" id="article_subtitle" value="{{ old('article_subtitle', $article->article_subtitle ?? '') }}" class="form-control{{ $errors->has('article_subtitle') ? ' is-invalid' : '' }}" placeholder="{{ __('Article Subtitle') }}">
 
-                                    @if ($errors->has('categories_id'))
+                                    @if ($errors->has('article_subtitle'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('categories_id') }}</strong>
+                                            <strong>{{ $errors->first('article_subtitle') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -85,16 +78,39 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="article_description">{{ __('Description') }}</label>
-                                    <textarea name="article_description" id="article_description" class="form-control{{ $errors->has('article_description') ? ' is-invalid' : '' }}" placeholder="{{ __('Description') }}" rows="10">{{ old('article_description', $article->article_description ?? '') }}</textarea>
+                                    <label for="categories_id">{{ __('Category') }}</label>
+                                    <div class="select2-purple">
+                                        <select name="categories_id[]" id="categories_id" multiple="multiple" class="select2 form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }}" data-placeholder="{{ __('-- Select Category --') }}" data-dropdown-css-class="select2-purple">
+                                            @forelse( $categories as $Key=>$Val )
+                                                <option value="{{ $Key }}" @if( !empty($article_categories_id) && in_array($Key, $article_categories_id) ) selected @endif>{{ $Val }}</option>
+                                            @empty
+                                            @endforelse
+                                        </select>
+                                    </div>
 
-                                    @if ($errors->has('article_description'))
+                                    @if ($errors->has('categories_id'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('article_description') }}</strong>
+                                            <strong>{{ $errors->first('categories_id') }}</strong>
                                         </span>
                                     @endif
                                 </div>
                             </div>
+
+                            @forelse( $tags as $Key=>$Val )
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="description_{{ $Key }}">{{ $Val }} {{ __('Description') }}</label>
+                                        <textarea name="description[{{ $Key }}]" id="description_{{ $Key }}" class="form-control tag_description{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="{{ __('Description') }}" rows="10">{{ old('description', $article->description ?? '') }}</textarea>
+
+                                        @if ($errors->has('description'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                            @empty
+                            @endforelse
 
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -183,7 +199,8 @@
 <script>
 $(function () {
     // Summernote
-    $('#article_description').summernote();
+    $('#article_short_description').summernote();
+    $('.tag_description').summernote();
 
     //Initialize Select2 Elements
     $('.select2').select2();

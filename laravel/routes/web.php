@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 
 use App\Http\Controllers\ArticleCategoryController;
+use App\Http\Controllers\ArticleTagController;
 use App\Http\Controllers\ArticleController;
 
 use App\Http\Controllers\ResearchPaperController;
@@ -38,6 +39,7 @@ Route::group(['middleware'=>'auth'], function()
     Route::get('post-slug', [PostController::class, 'getSlug'])->name('posts.slug');
 
     Route::resources(['article-categories' => ArticleCategoryController::class]);
+    Route::resources(['article-tags' => ArticleTagController::class]);
     Route::resources(['articles' => ArticleController::class]);
     Route::get('article-slug', [ArticleController::class, 'getSlug'])->name('articles.slug');
 

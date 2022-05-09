@@ -143,6 +143,7 @@
 
                           $articleLinkActive = '';
                           $articleCategoryActive = '';
+                          $articleTagActive = '';
                         @endphp
 
                         @if( request()->routeIs('articles.index') || request()->is('articles/*') || request()->routeIs('article-categories.index') || request()->is('article-categories/*') )
@@ -161,6 +162,12 @@
                         @if( request()->routeIs('article-categories.index') || request()->is('article-categories/*') )
                           @php
                             $articleCategoryActive = 'active';
+                          @endphp
+                        @endif
+
+                        @if( request()->routeIs('article-tags.index') || request()->is('article-tags/*') )
+                          @php
+                            $articleTagActive = 'active';
                           @endphp
                         @endif
                         <li class="nav-item {{ $articleMenuOpen }}">
@@ -182,6 +189,12 @@
                               <a href="{{ route('article-categories.index') }}" class="nav-link {{ $articleCategoryActive }}">
                                 <i class="fas fa-th nav-icon"></i>
                                 <p>{{ __('Categories') }}</p>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="{{ route('article-tags.index') }}" class="nav-link {{ $articleTagActive }}">
+                                <i class="fas fa-th nav-icon"></i>
+                                <p>{{ __('Tags') }}</p>
                               </a>
                             </li>
                           </ul>
