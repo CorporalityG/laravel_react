@@ -11,7 +11,7 @@ function truncate(text, size)
 const IndustrialResourceItem = (props) => {
     return (
         <div className="blog-item" data-aos="fade-up" data-aos-duration="2000">
-            <Link to={`/${props.slug}`}>
+            <Link to={`/article/${props.slug}`}>
                 <div data-aos="fade-up" data-aos-duration="2000">
                     { props.thumbnail && <img src={BASE_URL + props.thumbnail} className="blog-img" alt={props.title} /> }
                 </div>

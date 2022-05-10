@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Single.css"
 import { useParams, Link } from 'react-router-dom'
-import { API_BASE_URL,BASE_URL, API_IMG_URL } from '../../config';
+import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
 import { SocialShare } from './SocialShare';
 import events from "../Blog/img/sidebarevent.jpg";
 import { RelatedBlogItem } from './RelatedBlogItem';

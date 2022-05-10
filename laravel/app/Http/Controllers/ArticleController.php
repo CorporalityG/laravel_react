@@ -155,7 +155,6 @@ class ArticleController extends Controller
             endforeach;
         endif;
 
-        dd($article->tags[0]->description);
         if( !empty($article->tags) ):
             foreach( $article->tags as $tag ):
                 array_push($article_tags_id, $tag->id);
@@ -165,7 +164,9 @@ class ArticleController extends Controller
         $categories = $this->categories();
         $tags = $this->tags();
 
-        return view('articles.create-edit', compact('article', 'article_categories_id','article_tags_id', 'categories', 'tags'));
+        $tag_articles = array_column($article->tagArticles->toArray(), 'description', 'tag_id');
+
+        return view('articles.create-edit', compact('article', 'article_categories_id','article_tags_id', 'categories', 'tags', 'tag_articles'));
     }
 
     /**
@@ -245,7 +246,7 @@ class ArticleController extends Controller
         $RS_Save->article_slug = $article_slug;
         $RS_Save->article_subtitle = $request->article_subtitle;
         $RS_Save->article_short_description = $request->article_short_description;
-        $RS_Save->article_description = $request->article_description;
+        // $RS_Save->article_description = $request->article_description;
         $RS_Save->meta_title = $request->meta_title;
         $RS_Save->meta_keywords = $request->meta_keywords;
         $RS_Save->meta_description = $request->meta_description;
@@ -267,6 +268,8 @@ class ArticleController extends Controller
         {
             if( !empty($request->description) )
             {
+                $pattern = "/<p[^>]*>[\<br>]*<\/p>/"; 
+                
                 foreach( $request->description as $Key=>$Val ):
 
                     $RS_TagArt = TagArticle::where([
@@ -286,7 +289,7 @@ class ArticleController extends Controller
 
                     $RS_TagArt_Save->article_id = $RS_Save->id;
                     $RS_TagArt_Save->tag_id = $Key;
-                    $RS_TagArt_Save->description = $Val;
+                    $RS_TagArt_Save->description = preg_replace($pattern, NULL, $Val);
 
                     $RS_TagArt_Save->save();
                 endforeach;
@@ -340,5 +343,39 @@ class ArticleController extends Controller
     public function getSlug(Request $request)
     {
         return Str::slug($request->title, '-');
+    }
+
+
+    /**
+     * Display a get single article.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getArticle(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $RS_Article = Article::where('article_slug', $request->slug)->first();
+            
+            $tag_articles_arr = array();
+            if( !empty($RS_Article->tagArticles) )
+            {
+                foreach( $RS_Article->tagArticles as $Row ):
+                    array_push($tag_articles_arr, 
+                        [
+                            'id' => $Row->tag_id,
+                            'tag_name' => $Row->articleTag->tag_name,
+                            'tag_slug' => $Row->articleTag->tag_slug,
+                            'description' => $Row->description
+                        ]
+                    );
+                endforeach;
+
+                // $RS_Article->article_tag = array_column($tag_articles_arr, 'article_tag');
+                $RS_Article->article_tag = $tag_articles_arr;
+            }
+        
+            return $RS_Article ?? array();
+        }
     }
 }

@@ -45,21 +45,21 @@ const IndustrialResources = () => {
                             thumbnail={'/img/Pros-and-Cons-of-Branding.png'}
                             title={'Pros and Cons of Branding | Corporality Global'}
                             description={'When you’re seeking to establish, raise awareness and grow your business, one of the things you turn to is branding. The goal of branding and identity is simple: to create a look and feel that is readily distinct and recognisable by the public.  With good branding, the value of a product and the organisation as a whole can be increased. Think about Starbucks, McDonald’s, Walt Disney, Coca-Cola, and Apple. We bet you thought of their logo just with the mention of their name. That’s what good branding does.'}
-                            slug={'pros-and-cons-of-branding'}
+                            slug={'pros-and-cons-of-branding-corporality-global'}
                         />
 
                         <IndustrialResourceItem 
                             thumbnail={'/img/advanced-biomatrics.jpg'}
                             title={'ADVANCED BIOMETRICS | Corporality Global'}
                             description={'“Biometrics” is a monumental part of modern sciences – it defines individuality from a strictly scientific standpoint. If we break down the term into two – “bio” stands for biological and “metrics” stands for measurements. Certain biological measurements help scientists/doctors differentiate us from other human beings. While DNA tests and other genetic tests help us understand complex biological aspects of a human being, there are advanced biometric tests that are used strictly for the identification of people.'}
-                            slug={'advanced-biometrics'}
+                            slug={'advanced-biometrics-corporality-global'}
                         />
 
                         <IndustrialResourceItem 
                             thumbnail={'/img/bitcoins-the-emergence.png'}
                             title={'Bitcoins – THE EMERGENCE | Corporality Global'}
                             description={'Crypto-currencies have been around for almost a decade and a half now in 2022. Bitcoin – the first cryptocurrency was invented about thirteen years ago in 2008 by a group called Satoshi Nakamoto. Bitcoin (BTC) was developed and brought to use after the global market crash in 2008. Initially, it faced a lot of skepticism and criticism by financial critics, and the ideas surrounding it were unconventional to the financial gurus back then.'}
-                            slug={'bitcoins-the-emergence'}
+                            slug={'bitcoins-the-emergence-corporality-global'}
                         />
 					</div>
 				</div>

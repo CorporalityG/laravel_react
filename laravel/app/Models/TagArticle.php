@@ -21,4 +21,9 @@ class TagArticle extends Model
         'article_id',
         'description',
     ];
+
+    public function articleTag()
+    {
+        return $this->belongsTo(ArticleTag::class, 'tag_id', 'id');
+    }
 }

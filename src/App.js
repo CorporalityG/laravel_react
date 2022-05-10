@@ -58,6 +58,7 @@ import Blogs2 from "./components/Blogs/Blogs2";
 import OurTeam from "./components/OurTeam/OurTeam";
 import ServiceInsights from "./components/ServiceInsights/ServiceInsights";
 import Single from "./components/Blog/Single";
+import SingleArticle from "./components/IndustrialResources/SingleArticle";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -151,6 +152,8 @@ function App() {
             <Route path="/:post_slug" exact element={<Single />}/>
 
             <Route path="/category/:category_slug" element={<Blogs />}/>
+
+            <Route path="/article/:article_slug" element={<SingleArticle />} />
             
             <Route path="/" exact element={<HomePage />} />
 

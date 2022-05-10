@@ -100,13 +100,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="description_{{ $Key }}">{{ $Val }} {{ __('Description') }}</label>
-                                        <textarea name="description[{{ $Key }}]" id="description_{{ $Key }}" class="form-control tag_description{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="{{ __('Description') }}" rows="10">{{ old('description', $article->description ?? '') }}</textarea>
-
-                                        @if ($errors->has('description'))
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $errors->first('description') }}</strong>
-                                            </span>
-                                        @endif
+                                        <textarea name="description[{{ $Key }}]" id="description_{{ $Key }}" class="form-control tag_description{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="{{ __('Description') }}" rows="10">{{ old('description', $tag_articles[$Key] ?? '') }}</textarea>
                                     </div>
                                 </div>
                             @empty
