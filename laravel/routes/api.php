@@ -33,3 +33,7 @@ Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/related-posts-2/{slug}/', [PostController::class, 'getRelatedPosts2']);
 
 Route::get('/single-article/{slug}', [ArticleController::class, 'getArticle']);
+
+Route::get('/latest-articles', [ArticleController::class, 'latestArticles']);
+Route::get('/latest-articles-2', [ArticleController::class, 'latestArticles2']);
+Route::get('/category-articles/{slug?}', [ArticleController::class, 'categoyArticles']);

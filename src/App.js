@@ -25,7 +25,7 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 // import Blog from "./components/Blog/Blog.jsx";
 import Write from "./components/Write/Write";
-import IndustrialResources from "./components/IndustrialResources/IndustrialResources";
+// import IndustrialResources from "./components/IndustrialResources/IndustrialResources";
 import DivineIntercession from "./components/CauseStudies/DivineIntercession";
 import BuildQ from "./components/CauseStudies/BuildQ";
 import FastgrowFinance from "./components/CauseStudies/FastgrowFinance";
@@ -58,7 +58,8 @@ import Blogs2 from "./components/Blogs/Blogs2";
 import OurTeam from "./components/OurTeam/OurTeam";
 import ServiceInsights from "./components/ServiceInsights/ServiceInsights";
 import Single from "./components/Blog/Single";
-import SingleArticle from "./components/IndustrialResources/SingleArticle";
+import SingleArticle from "./components/Articles/SingleArticle";
+import Articles from "./components/Articles/Articles";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -108,7 +109,7 @@ function App() {
 
             <Route path="/work-with-clients" element={<WorkWithClient />} />
 
-            <Route path="/article" element={<IndustrialResources />} />
+            <Route path="/article" element={<Articles />} />
 
             <Route path="/research-papers" element={<ResearchPapers />} />
 

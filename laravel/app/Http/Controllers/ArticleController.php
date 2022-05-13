@@ -378,4 +378,50 @@ class ArticleController extends Controller
             return $RS_Article ?? array();
         }
     }
+
+
+    public function latestArticles(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            return Article::with(['categories'])->take(5)->latest()->get();
+        }
+    }
+
+
+    public function latestArticles2(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $article = Article::latest()->first();
+            $article->timeAgo = $article->created_at->diffForHumans();
+            return $article;
+        }
+    }
+
+
+    public function categoyArticles(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $results = array();
+
+            $qry = Article::latest();
+
+            if( !empty($request->slug) )
+            {
+                $category = ArticleCategory::with('articles:id')->where('category_slug', $request->slug)->first();
+
+                if( !empty($category) )
+                {
+                    $articles = array_column($category->articles->toArray(), 'id');
+                    $qry->whereIn('id', $articles);
+                }
+            }
+
+            $results = $qry->take(6)->get();
+
+            return $results;
+        }
+    }
 }

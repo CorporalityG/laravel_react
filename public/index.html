@@ -65,35 +65,38 @@
   <script>
 
     jQuery(window).scroll(function () {
-      var length = jQuery('#sa-sidebar-col').height() - jQuery('#sa-sidebar').height() + jQuery('#sa-sidebar-col').offset().top;
+      if (jQuery('.single-article-page').length) {
 
-      var scroll = jQuery(this).scrollTop();
-      var height = jQuery('#sa-sidebar').height() + 'px';
+        var length = jQuery('#sa-sidebar-col').height() - jQuery('#sa-sidebar').height() + jQuery('#sa-sidebar-col').offset().top;
 
-      if (scroll < (jQuery('#sa-sidebar-col').offset().top - 90)) {
-        jQuery('#sa-sidebar').css({
-          'position': 'absolute',
-          'top': '0'
-        });
-      }
-      else if (scroll > (length - 90)) {
-        jQuery('#sa-sidebar').css({
-          'position': 'absolute',
-          'bottom': '0',
-          'top': 'auto'
-        });
-      }
-      else {
-        jQuery('#sa-sidebar').css({
-          'position': 'fixed',
-          'top': '90px',
-          'height': height
-        });
+        var scroll = jQuery(this).scrollTop();
+        var height = jQuery('#sa-sidebar').height() + 'px';
+
+        if (scroll < (jQuery('#sa-sidebar-col').offset().top - 90)) {
+          jQuery('#sa-sidebar').css({
+            'position': 'absolute',
+            'top': '0'
+          });
+        }
+        else if (scroll > (length - 90)) {
+          jQuery('#sa-sidebar').css({
+            'position': 'absolute',
+            'bottom': '0',
+            'top': 'auto'
+          });
+        }
+        else {
+          jQuery('#sa-sidebar').css({
+            'position': 'fixed',
+            'top': '90px',
+            'height': height
+          });
+        }
       }
     });
 
     jQuery(document).ready(function () {
-      jQuery(document).on('click', '.single-article-page .sa-sidebar-link', function(e) {
+      jQuery(document).on('click', '.single-article-page .sa-sidebar-link', function (e) {
         // console.log(jQuery(this).data('id'))
         // jQuery('.sa-section').css({'padding-top': '0'});
         jQuery('#' + jQuery(this).data('id')).css({
