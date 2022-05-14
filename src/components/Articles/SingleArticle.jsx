@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './SingleArticle.css'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { API_BASE_URL, API_IMG_URL } from '../../config';
 import { useParams } from 'react-router-dom'
 import { SocialShare } from './SocialShare';
 
@@ -38,7 +38,7 @@ function SingleArticle() {
                                                 singleArticle.article_tag ?
                                                     <>
                                                         {
-                                                            singleArticle.article_tag.slice(0,1).map((item) =>
+                                                            singleArticle.article_tag.slice(0, 1).map((item) =>
                                                                 <a key={`${item.tag_slug}`} href={`#${item.tag_slug}`} data-id={`${item.tag_slug}`} className='sa-sidebar-link'>Start Reading</a>
                                                             )
                                                         }
@@ -59,20 +59,22 @@ function SingleArticle() {
                         <div className='sa-content'>
                             <div className='container-lg'>
                                 <div className='row'>
-                                    <div id='sa-sidebar-col' className='col-lg-3'>
+                                    <div id='sa-sidebar-col' className='col-lg-3 col-md-4'>
                                         <div id='sa-sidebar' className='sa-sidebar'>
-                                            <div className='sa-sidebar-title'>Tags</div>
                                             {
                                                 singleArticle.article_tag ?
-                                                    <div className='sa-sidebar-nav'>
-                                                        {
-                                                            singleArticle.article_tag.map((item) =>
-                                                                item.description ?
-                                                                    <a key={`${item.tag_slug}`} href={`#${item.tag_slug}`} data-id={`${item.tag_slug}`} className='sa-sidebar-link'>{`${item.tag_name}`}</a>
-                                                                    : null
-                                                            )
-                                                        }
-                                                    </div>
+                                                    <>
+                                                        <div className='sa-sidebar-title'>Tags</div>
+                                                        <div className='sa-sidebar-nav'>
+                                                            {
+                                                                singleArticle.article_tag.map((item) =>
+                                                                    item.description ?
+                                                                        <a key={`${item.tag_slug}`} href={`#${item.tag_slug}`} data-id={`${item.tag_slug}`} className='sa-sidebar-link'>{`${item.tag_name}`}</a>
+                                                                        : null
+                                                                )
+                                                            }
+                                                        </div>
+                                                    </>
                                                     : null
                                             }
 
@@ -80,7 +82,7 @@ function SingleArticle() {
                                         </div>
                                     </div>
 
-                                    <div className='col-lg-9'>
+                                    <div className='col-lg-9 col-md-8'>
                                         {
                                             singleArticle.article_tag ?
                                                 <>

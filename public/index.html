@@ -65,33 +65,53 @@
   <script>
 
     jQuery(window).scroll(function () {
-      if (jQuery('.single-article-page').length) {
+      if (jQuery(window).width() > 825) {
 
-        var length = jQuery('#sa-sidebar-col').height() - jQuery('#sa-sidebar').height() + jQuery('#sa-sidebar-col').offset().top;
+        if (jQuery('.single-article-page').length) {
 
-        var scroll = jQuery(this).scrollTop();
-        var height = jQuery('#sa-sidebar').height() + 'px';
+          var length = jQuery('#sa-sidebar-col').height() - jQuery('#sa-sidebar').height() + jQuery('#sa-sidebar-col').offset().top;
 
-        if (scroll < (jQuery('#sa-sidebar-col').offset().top - 90)) {
-          jQuery('#sa-sidebar').css({
-            'position': 'absolute',
-            'top': '0'
-          });
+          var scroll = jQuery(this).scrollTop();
+          var height = jQuery('#sa-sidebar').height() + 'px';
+
+          if (scroll < (jQuery('#sa-sidebar-col').offset().top - 90)) {
+            jQuery('#sa-sidebar').css({
+              'position': 'absolute',
+              'top': '0'
+            });
+          }
+          else if (scroll > (length - 90)) {
+            jQuery('#sa-sidebar').css({
+              'position': 'absolute',
+              'bottom': '0',
+              'top': 'auto'
+            });
+          }
+          else {
+            jQuery('#sa-sidebar').css({
+              'position': 'fixed',
+              'top': '90px',
+              'height': height
+            });
+          }
         }
-        else if (scroll > (length - 90)) {
-          jQuery('#sa-sidebar').css({
-            'position': 'absolute',
-            'bottom': '0',
-            'top': 'auto'
-          });
-        }
-        else {
-          jQuery('#sa-sidebar').css({
-            'position': 'fixed',
-            'top': '90px',
-            'height': height
-          });
-        }
+      }
+      else {
+        jQuery('#sa-sidebar').css({
+          'position': 'sticky',
+          'top': 'auto',
+          'height': 'auto'
+        });
+      }
+    });
+
+    jQuery(window).resize(function () {
+      if (jQuery(window).width() > 825) {
+        jQuery('#sa-sidebar').css({
+          'position': 'sticky',
+          'top': 'auto',
+          'height': 'auto'
+        });
       }
     });
 

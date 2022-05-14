@@ -552,7 +552,10 @@
 
 /* responsive start */
 @media only screen and (max-width: 1399.99px) {
-    .career-banner-section .career-banner-content {
+    .career-banner-section .career-banner-content h1 {
+        max-width: 50%;
+    }
+    .career-banner-section .career-banner-content p {
         max-width: 70%;
     }
     .career-testimonial-section .career-testimonial-row .carousel-inner {
@@ -570,6 +573,9 @@
     .career-internship-requirements-section .career-internship-requirements-row .career-ir-content {
         max-width: 90%;
     }
+    .career-testimonial-section .career-testimonial-title {
+        max-width: 80%;
+    }
 }
 
 
@@ -580,15 +586,25 @@
     .career-internship-requirements-section .career-internship-requirements-row .career-ir-content {
         max-width: 100%;
     }
+    .career-banner-section .career-banner-content h1 {
+        max-width: 60%;
+    }
+    .career-banner-section .career-banner-content p {
+        max-width: 80%;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main {
+        max-width: 95%;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .accordion-body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 
 @media only screen and (max-width: 991.99px) {
     .career-banner-section .career-banner-content {
         max-width: 90%;
-    }
-    .career-banner-section .career-banner-phone {
-        bottom: 0;
     }
     .career-testimonial-section .career-testimonial-box .t-box-img-main {
         max-width: 270px;
@@ -604,12 +620,41 @@
     .career-internship-requirements-section .career-internship-requirements-row .career-ir-content {
         margin-bottom: 50px;
     }
+    .career-banner-section {
+        padding-top: 100px;
+        padding-bottom: 80px;
+        background-color: #EBEBEB;
+        background-size: 100%;
+        background-position: center top;
+    }
+    .career-banner-section .rec-2 {
+        top: 50px;
+        left: 34%;
+    }
+    .career-banner-section .rec-4 {
+        bottom: 50px;
+    }
+    .career-banner-section .career-banner-content h1 {
+        max-width: 70%;
+    }
+    .career-banner-section .career-banner-content p {
+        max-width: 90%;
+    }
+    .career-banner-section .career-banner-hiring {
+        left: 4%;
+    }
+    .career-banner-section .rec-1 {
+        left: 6%;
+    }
+    .career-banner-section .career-banner-phone {
+        bottom: -50px;
+    }
 }
 
 
 @media only screen and (max-width: 800.99px) {
     .career-banner-section .career-banner-social-main {
-        left: 20px;
+        right: 20px;
     }
     .career-testimonial-section .carousel-control-prev {
         left: -25px;
@@ -620,12 +665,76 @@
 }
 
 
+@media only screen and (max-width: 780.99px) {
+    .career-banner-section .career-banner-content h1 {
+        max-width: 90%;
+    }
+    .career-banner-section .career-banner-content p {
+        max-width: 100%;
+    }
+    .career-banner-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .career-banner-section .career-banner-hiring .hiring-img {
+        max-height: 100px;
+    }
+    .career-banner-section .career-banner-hiring {
+        bottom: -60px;
+    }
+    .career-banner-section .rec-1 {
+        bottom: unset;
+        top: 20px;
+        left: 20px;
+    }
+    .career-banner-section .rec-2 {
+        top: 20px;
+        left: 30%;
+    }
+    .career-banner-section .rec-3 {
+        top: 20px;
+    }
+    .career-banner-section .rec-4 {
+        bottom: 20px;
+        left: 55%;
+    }
+    .career-banner-section .career-banner-phone {
+        bottom: -80px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .cc-jobs-heading .cc-jobs-apply {
+        display: none;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .accordion-button {
+        padding: 20px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .cc-j-h-icon {
+        max-height: 40px;
+        margin-right: 15px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .accordion-button::after {
+        width: 25px;
+        height: 25px;
+        background-size: 25px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main {
+        max-width: 100%;
+    }
+    .career-testimonial-section .testimonial-rec {
+        max-height: 300px;
+        top: -100px;
+    }
+}
+
+
 @media only screen and (max-width: 735.99px) {
+    .career-banner-section .career-banner-content h1 {
+        max-width: 85%;
+    }
     .career-banner-section .career-banner-content {
         max-width: 100%;
     }
     .career-banner-section .career-banner-content p {
-        max-width: 90%;
+        max-width: 85%;
         margin: 0 auto 20px;
     }
 }
@@ -655,7 +764,8 @@
     .career-testimonial-section .row > *, 
     .career-opportunities-section .row > *, 
     .career-current-openings-section .row > *, 
-    .career-internship-requirements-section .row > * {
+    .career-internship-requirements-section .row > *, 
+    .career-current-jobs-section .row > * {
         padding-right: calc(var(--bs-gutter-x) * .5) !important;
         padding-left: calc(var(--bs-gutter-x) * .5) !important;
     }
@@ -666,13 +776,10 @@
     .career-banner-section .career-banner-content h1 {
         font-size: 24px;
     }
-    .career-banner-section .career-banner-phone {
-        left: 5%;
-    }
     .career-banner-section .career-banner-social-main {
-        left: initial;
-        right: 5%;
-        bottom: 25px;
+        left: 5%;
+        right: initial;
+        bottom: 40px;
     }
     .career-banner-section .career-banner-social-main .career-banner-social-icon-main {
         display: flex;
@@ -687,6 +794,37 @@
     }
     .career-banner-section .career-banner-content p {
         max-width: 100%;
+    }
+    .career-banner-section .career-banner-phone .phone-icon {
+        max-height: 100px;
+    }
+    .career-banner-section .career-banner-phone .phone-rect {
+        max-height: 50px;
+        right: -15px;
+    }
+    .career-banner-section .career-banner-hiring {
+        position: relative;
+        bottom: -100px;
+        margin-bottom: 10px;
+    }
+    .career-banner-section {
+        padding-bottom: 0;
+    }
+    .career-banner-section .career-banner-phone {
+        bottom: -40px;
+    }
+    .career-banner-section .rec-4 {
+        bottom: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 500.99px) {
+    .career-current-jobs-section .cc-jobs-accordion-main .cc-jobs-heading {
+        font-size: 20px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .accordion-button {
+        padding: 15px 10px;
     }
 }
 
@@ -725,6 +863,50 @@
     }
     .career-testimonial-section .career-testimonial-box .t-box-content .t-box-name {
         font-size: 20px;
+    }
+    .career-testimonial-section .career-testimonial-title {
+        max-width: 90%;
+    }
+    .career-testimonial-section .testimonial-rec {
+        max-height: 200px;
+        top: -50px;
+    }
+}
+
+
+@media only screen and (max-width: 414.99px) {
+    .career-banner-section .career-banner-content h1 {
+        max-width: 100%;
+    }
+    .career-banner-section .rec-1 {
+        max-height: 30px;
+        top: 10px;
+        left: 10px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .accordion-body ul {
+        padding-left: 15px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .accordion-body p {
+        font-size: 16px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .accordion-body ul li {
+        font-size: 16px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .accordion-button::after {
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .cc-jobs-apply {
+        padding: 10px 35px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .accordion-body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .career-testimonial-section .career-testimonial-title {
+        max-width: 100%;
+        margin-left: 10px;
     }
 }
 
@@ -792,6 +974,13 @@
     .career-testimonial-section .carousel-control-next {
         right: 10px;
     }
+    .career-current-jobs-section .cc-jobs-accordion-main .cc-jobs-heading {
+        font-size: 18px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .cc-j-h-icon {
+        max-height: 30px;
+        margin-right: 10px;
+    }
 }
 
 
@@ -814,9 +1003,6 @@
     .career-current-openings-section .career-co-title-row .career-co-title-content h2 {
         font-size: 24px;
     }
-    .career-banner-section .career-banner-phone {
-        left: 0;
-    }
     .career-banner-section .career-banner-phone img {
         max-height: 100px;
     }
@@ -825,5 +1011,14 @@
     }
     .career-testimonial-section .career-testimonial-box .t-box-img-main {
         margin-bottom: 30px;
+    }
+    .career-banner-section .rec-4 {
+        bottom: 70px;
+    }
+    .career-testimonial-section .career-testimonial-title h2 {
+        font-size: 20px;
+    }
+    .career-current-jobs-section .cc-jobs-accordion-main .cc-jobs-heading {
+        font-size: 17px;
     }
 }
