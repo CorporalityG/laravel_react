@@ -154,39 +154,47 @@ function Blogs2() {
 
                     {
                         corporateStrategyBlog ?
-                            <div className="row cs-blog-boxes-row">
-                                {
-                                    corporateStrategyBlog.slice(1, 4).map((item, index) =>
-                                        <BlogItem
-                                            uniqueKey={`${index + item.id}`}
-                                            thumbnail={`${API_IMG_URL + item.post_image}`}
-                                            title={`${item.post_title}`}
-                                            slug={`${item.post_slug}`}
-                                            category={`Corporate Strategy`}
-                                            catSlug={`corporate-strategy`}
-                                        />
-                                    )
-                                }
-
-                                <div className="col-lg-3 col-sm-6 latest-blog-box-col cs-blog-col-box">
+                            <>
+                                <div className="row cs-blog-boxes-row">
                                     {
-                                        corporateStrategyBlog.slice(4, 6).map((item, index) =>
-                                            <div className="row cs-blog-col-row" key={`${item.id + index}-${index}`}>
-                                                <div className="col-lg-4">
-                                                    <Link to={`/${item.post_slug}`}>
-                                                        {item.post_image && <img src={API_IMG_URL + item.post_image} alt={item.post_title} className="latest-blog-img" />}
-                                                    </Link>
-                                                </div>
-                                                <div className="col-lg-8">
-                                                    <div className="cs-blog-col-title">
-                                                        <Link to={`/${item.post_slug}`}>{item.post_title}</Link>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        corporateStrategyBlog.slice(1, 4).map((item, index) =>
+                                            <BlogItem
+                                                uniqueKey={`${index + item.id}`}
+                                                thumbnail={`${API_IMG_URL + item.post_image}`}
+                                                title={`${item.post_title}`}
+                                                slug={`${item.post_slug}`}
+                                                category={`Corporate Strategy`}
+                                                catSlug={`corporate-strategy`}
+                                            />
                                         )
                                     }
+
+                                    <div className="col-lg-3 col-sm-6 latest-blog-box-col cs-blog-col-box">
+                                        {
+                                            corporateStrategyBlog.slice(4, 6).map((item, index) =>
+                                                <div className="row cs-blog-col-row" key={`${item.id + index}-${index}`}>
+                                                    <div className="col-lg-4">
+                                                        <Link to={`/${item.post_slug}`}>
+                                                            {item.post_image && <img src={API_IMG_URL + item.post_image} alt={item.post_title} className="latest-blog-img" />}
+                                                        </Link>
+                                                    </div>
+                                                    <div className="col-lg-8">
+                                                        <div className="cs-blog-col-title">
+                                                            <Link to={`/${item.post_slug}`}>{item.post_title}</Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )
+                                        }
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div className="row">
+                                    <div className='col-lg-12'>
+                                        <Link to="/category/corporate-strategy" className='know_more_blogs'>Know More Blogs <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg><svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
+                                    </div>
+                                </div>
+                            </>
                             : null
                     }
                 </div>
@@ -296,6 +304,12 @@ function Blogs2() {
                                     </div>
                                     : null
                             }
+
+                            <div className="row">
+                                <div className='col-lg-12'>
+                                    <Link to="/category/digital-media-marketing" className='know_more_blogs'>Know More Blogs <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg><svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
+                                </div>
+                            </div>
                         </div>
 
                         <div className='col-lg-3 col-md-4'>
@@ -338,6 +352,12 @@ function Blogs2() {
                                                 />
                                             )
                                         }
+
+                                        <div className="row">
+                                            <div className='col-lg-12'>
+                                                <Link to="/category/lead-gen-and-sales-strategy" className='know_more_blogs'>Know More Blogs <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg><svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
+                                            </div>
+                                        </div>
                                     </>
                                     : null
                             }
@@ -352,6 +372,18 @@ function Blogs2() {
                                 <Link to="/">How we create Impact</Link>
                                 <Link to="/">Our Mini Events</Link>
                                 <Link to="/">Become a Forum Partner</Link>
+                            </div>
+                            
+                            <div className="blog2-heading categories-heading">
+                                <a>Categories</a>
+                            </div>
+                            <div className='categories-list'>
+                                <Link to="/category/blog">Blog</Link>
+                                <Link to="/category/marketing-strategy-for-2021">Marketing Strategy for 2021</Link>
+                                <Link to="/category/product-strategy">Product Strategy</Link>
+                                <Link to="/category/professional-practices-strategy">Professional Practices Strategy</Link>
+                                <Link to="/category/strategic-strength">Strategic Strength</Link>
+                                <Link to="/category/website-blueprint">Website Blueprint</Link>
                             </div>
                         </div>
 

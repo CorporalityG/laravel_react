@@ -1,82 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import './ServiceInsights.css'
-import { BASE_URL } from '../../config'
+import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config'
 import { Link } from 'react-router-dom';
-import { SectorsWeServeItem } from './SectorsWeServeItem';
 import { CapabilitiesItem } from './CapabilitiesItem';
 import { CaseStudiesItem } from './CaseStudiesItem';
-import { WhatWeThinkItemLeft } from './WhatWeThinkItemLeft';
-import { WhatWeThinkItemRight } from './WhatWeThinkItemRight';
-import { NewsItem } from './NewsItem';
-import { LeadershipMember } from './LeadershipMember';
+import { GetInvolvedItem } from './GetInvolvedItem';
+import Carousel from 'react-bootstrap/Carousel'
+import { AnnouncementItem } from './AnnouncementItem';
 
 function ServiceInsights() {
-
-    const [stickyClass, setStickyClass] = useState('no-sticky');
+    
+    const [latestArticles, setLatestArticles] = useState([]);
 
     useEffect(() => {
-        window.addEventListener('scroll', stickNavbar);
-
-        return () => {
-            window.removeEventListener('scroll', stickNavbar);
-        };
+        getLatestArticles();
     }, []);
 
-    const stickNavbar = () => {
-        if (window !== undefined) {
-            let windowHeight = window.scrollY;
-            windowHeight > 500 ? setStickyClass('jumplink-sticky') : setStickyClass('no-sticky');
-        }
-    };
+    async function getLatestArticles() {
+        let result = await fetch(`${API_BASE_URL}/latest-articles`);
+        result = await result.json();
+        setLatestArticles(result);
+    }
 
     return (
         <div className="service-insights-page">
-            <div className='si-banner-section'>
-                <div className='si-b-video'>
-                    <video autoPlay={true} muted loop>
-                        <source src={`${BASE_URL}/img/ServiceInsights/banner-video.mp4`} type="video/mp4" />
-                    </video>
-                </div>
-
-                <div className='container-lg'>
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='si-b-content'>
-                                <h1>Service Insights</h1>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className={`si-jumplink-section ${stickyClass}`}>
-                <div className='container-lg'>
-                    <div className='row'>
-                        <div className='col-md-3'>
-                            <Link to="/service-insights#sectors-we-serve" className="si-jl-item">Sectors We Serve</Link>
-                        </div>
-
-                        <div className='col-md-3'>
-                            <Link to="/service-insights#capabilities" className="si-jl-item">Capabilities</Link>
-                        </div>
-
-                        <div className='col-md-3'>
-                            <Link to="/service-insights#case-studies" className="si-jl-item">Case Studies</Link>
-                        </div>
-
-                        <div className='col-md-3'>
-                            <Link to="/service-insights#what-we-think" className="si-jl-item">What We Think</Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div className='si-announcement-section'>
                 <div className='container-lg'>
                     <div className='row si-a-row'>
                         <div className='col-lg-3 col-sm-4 si-a-banner'>
-                            <img src={`${BASE_URL}/img/ServiceInsights/priya_mam.png`} alt="" />
+                            <img src={`${BASE_URL}/img/ServiceInsights/priya_mam.png`} alt="Priya" />
                         </div>
                         <div className='col-lg-9 col-sm-8 si-a-content'>
                             <div className='si-a-c-subtitle'>Coporlaioty at Lorem</div>
@@ -89,38 +42,45 @@ function ServiceInsights() {
                 </div>
             </div>
 
-            <div className='si-high-tech-industry-section'>
-                <div className='container-lg'>
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='si-hti-title'>
-                                <h2>Transforming the high tech industry</h2>
-                            </div>
-                        </div>
-                    </div>
+            {
+                latestArticles ?
+                    <div className='si-high-tech-industry-section'>
+                        {
+                            latestArticles.slice(0, 1).map((item) =>
+                                <div key={`${item.id}`} className='container-lg'>
+                                    <div className='row'>
+                                        <div className='col-lg-12'>
+                                            <div className='si-hti-title'>
+                                                <h2>{item.article_title}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div className='row'>
-                        <div className='col-lg-6'>
-                            <div className='si-hti-content'>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    <div className='row'>
+                                        <div className='col-lg-6'>
+                                            <div className='si-hti-content'>
+                                                <span dangerouslySetInnerHTML={{ __html: (item.article_short_description) }}></span>
 
-                                <Link to="/" className="si-link">DOWNLOAD THE REPORT <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="" /></Link>
-                            </div>
-                        </div>
+                                                <Link to={`/article/${item.article_slug}`} className="si-link">Read More <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="->" /></Link>
+                                            </div>
+                                        </div>
 
-                        <div className='col-lg-6'>
-                            <div className='si-hti-video'>
-                                <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                                <div className='si-hti-v-content'>
-                                    <div className='si-hti-video-title'>Transforming an industry that transformed the world</div>
-                                    <Link to="/" className="si-link">View Transcript</Link>
+                                        <div className='col-lg-6'>
+                                            <div className='si-hti-video'>
+                                                <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                                <div className='si-hti-v-content'>
+                                                    <div className='si-hti-video-title'>Transforming an industry that transformed the world</div>
+                                                    <Link to="/" className="si-link">View Transcript</Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            )
+                        }
                     </div>
-                </div>
-            </div>
+                    : null
+            }
 
             <div className='si-blockchain-section'>
                 <div className='container-lg'>
@@ -141,143 +101,175 @@ function ServiceInsights() {
                 </div>
             </div>
 
-            <div className='si-high-tech-blog-section'>
-                <div className='container-lg'>
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='si-htb-title'>
-                                <h2>High Tech Perspectives blog series</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='row'>
-                        <div className='col-lg-6'>
-                            <div className='si-htb-content'>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <p>Read the latest blogs:</p>
-                                <ul>
-                                    <li><Link to="/">Lorem Ipsum is simply dummy text of the printing and typesetting industry</Link></li>
-                                    <li><Link to="/">Lorem Ipsum has been the industry's standard dummy text</Link></li>
-                                    <li><Link to="/">Ipsum has been the industry's</Link></li>
-                                </ul>
-
-                                <Link to="/" className="si-front-back-link">
-                                    <div className='si-link-front'>
-                                        <span>Learn more</span>
+            {
+                latestArticles ?
+                    <div className='si-high-tech-blog-section'>
+                        {
+                            latestArticles.slice(1, 2).map((item) =>
+                                <div key={`${item.id}`} className='container-lg'>
+                                    <div className='row'>
+                                        <div className='col-lg-12'>
+                                            <div className='si-htb-title'>
+                                                <h2>{item.article_title}</h2>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className='si-link-behind'>Learn more</div>
-                                </Link>
-                            </div>
-                        </div>
 
-                        <div className='col-lg-6'>
-                            <div className='si-htb-banner'>
-                                <img src={`${BASE_URL}/img/ServiceInsights/3d-in-medical-care-corporality-global.jpg`} alt="High Tech Perspectives blog series" />
-                            </div>
-                        </div>
+                                    <div className='row'>
+                                        <div className='col-lg-6'>
+                                            <div className='si-htb-content'>
+                                                <span dangerouslySetInnerHTML={{ __html: (item.article_short_description) }}></span>
+
+                                                <Link to={`/article/${item.article_slug}`} className="si-front-back-link">
+                                                    <div className='si-link-front'>
+                                                        <span>Learn more</span>
+                                                    </div>
+                                                    <div className='si-link-behind'>Learn more</div>
+                                                </Link>
+                                            </div>
+                                        </div>
+
+                                        <div className='col-lg-6'>
+                                            <div className='si-htb-banner'>
+                                                {item.article_image && <img src={`${API_IMG_URL + item.article_image}`} alt={item.article_title} />}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
                     </div>
-                </div>
-            </div>
-
-            <div id='sectors-we-serve' className='si-sectors-we-serve-section'>
-                <div className='container-lg'>
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='si-sws-title'>
-                                <h2>Sectors we serve</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='row si-sws-item-row'>
-                        <SectorsWeServeItem
-                            title={`Semiconductor`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
-                        />
-
-                        <SectorsWeServeItem
-                            title={`Enterprise Technology`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>`}
-                        />
-
-                        <SectorsWeServeItem
-                            title={`Consumer Technology`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>`}
-                        />
-
-                        <SectorsWeServeItem
-                            title={`Communications Technology`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
-                        />
-
-                        <SectorsWeServeItem
-                            title={`Medical Equipment`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
-                        />
-                    </div>
-                </div>
-            </div>
+                    : null
+            }
 
             <div id='capabilities' className='si-capabilities-section'>
                 <div className='container-lg'>
-                    <div className='row'>
-                        <div className='col-lg-12'>
+                    <div className='row si-c-row'>
+                        <div className='col-lg-8'>
                             <div className='si-c-title'>
-                                <h2>Capabilities</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                <h2>Articles</h2>
+                            </div>
+                        </div>
+
+                        <div className='col-lg-4 si-c-title-btn-col'>
+                            <div className='si-c-title-btn'>
+                                <Link to={`/article`} className="si-link">All Articles <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="->" /></Link>
                             </div>
                         </div>
                     </div>
 
-                    <div className='row si-c-item-row'>
-                        <CapabilitiesItem
-                            title={`Cloud for High Tech`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
-                        />
+                    {
+                        latestArticles ?
+                            <div className='row si-c-item-row'>
+                                {
+                                    latestArticles.slice(0, 6).map((item) =>
+                                        <CapabilitiesItem
+                                            key={`${item.id}`}
+                                            title={`${item.article_title}`}
+                                            slug={`${item.article_slug}`}
+                                            content={`${item.article_short_description ?? ''}`}
+                                        />
+                                    )
+                                }
+                            </div>
+                            : null
+                    }
+                </div>
+            </div>
 
-                        <CapabilitiesItem
-                            title={`As-a-Service Business`}
+            <div className='si-announcement-slider-section'>
+                <Carousel indicators={false} controls={false} interval={5000} fade>
+                    <Carousel.Item>
+                        <AnnouncementItem
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/priya_mam.png`}
+                            category={`CEO`}
+                            title={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
                             slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
-                        />
 
-                        <CapabilitiesItem
-                            title={`Intelligent revenue growth`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
                         />
+                    </Carousel.Item>
 
-                        <CapabilitiesItem
-                            title={`Intelligent supply chain`}
+                    <Carousel.Item>
+                        <AnnouncementItem
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/priya_mam.png`}
+                            category={`CMO`}
+                            title={`Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`}
                             slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
-                        />
 
-                        <CapabilitiesItem
-                            title={`Connected product innovation`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
                         />
+                    </Carousel.Item>
 
-                        <CapabilitiesItem
-                            title={`Modern platform engineering`}
+                    <Carousel.Item>
+                        <AnnouncementItem
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/priya_mam.png`}
+                            category={`CXO`}
+                            title={`Lorem Ipsum is standard dummy text of the printing industry.`}
                             slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
-                        />
 
-                        <CapabilitiesItem
-                            title={`Recharge growth with M&A`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
                         />
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <AnnouncementItem
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/priya_mam.png`}
+                            category={`COO`}
+                            title={`What is Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
+                            slug={``}
+
+                        />
+                    </Carousel.Item>
+                </Carousel>
+            </div>
+
+            <div className='si-organize-section'>
+                <img src={`${BASE_URL}/img/ServiceInsights/break-1a.svg`} alt="break-1a" className='si-o-bg-top' />
+                <img src={`${BASE_URL}/img/ServiceInsights/break-1b.svg`} alt="break-1b" className='si-o-bg-bottom' />
+
+                <div className='si-o-title-section'>
+                    <div className='si-o-title-content'>
+                        <div className='container-lg'>
+                            <div className='row'>
+                                <div className='col-lg-7 offset-lg-5'>
+                                    <div className='si-o-title-description'>
+                                        <h2>How Can We Organize</h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                        <Link to={`/article`} className="si-link">View All Articles <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='si-o-title-image'>
+                        <div className='container-lg'>
+                            <div className='row'>
+                                <div className='col-lg-7 offset-lg-5'>
+                                    <div className='si-o-img'>
+                                        <img src={`${BASE_URL}/img/ServiceInsights/organize.png`} alt="How Can We Organize" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='si-o-content-section'>
+                    <div className='container-lg'>
+                        <div className='row'>
+                            <div className='col-lg-4'>
+                                <div className='si-o-c-items'>
+                                    <div className='si-o-c-item'>
+                                        <Link to={`/interactive-blueprint`} className="si-o-c-item-title">Interactive Blueprint</Link>
+                                        <p>Creating a blueprint of your business to make sure that you stand out from the competition.</p>
+                                    </div>
+
+                                    <div className='si-o-c-item'>
+                                        <Link to={`/strategy-and-consulting`} className="si-o-c-item-title">Strategy And Consulting</Link>
+                                        <p>We truly believe in putting customers first.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -293,78 +285,43 @@ function ServiceInsights() {
 
                         <div className='col-lg-4 si-cs-title-btn-col'>
                             <div className='si-cs-title-btn'>
-                                <Link to={`/`} className="si-link">VIEW MORE CASE STUDIES <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="" /></Link>
+                                <Link to={`/clients`} className="si-link">VIEW MORE CASE STUDIES <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="->" /></Link>
                             </div>
                         </div>
                     </div>
 
                     <div className='row si-cs-item-row'>
                         <CaseStudiesItem
-                            thumbnail={`${BASE_URL}/img/ServiceInsights/3d-in-medical-care-corporality-global.jpg`}
-                            title={`What is Lorem Ipsum`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
-                            category={`High Tech`}
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/build-q.png`}
+                            title={`Build Q`}
+                            slug={`build-q`}
+                            content={`<p>Prospective plans to give back to society making a green environment a reality.</p>`}
+                            category={``}
                             catSlug={``}
                         />
 
                         <CaseStudiesItem
-                            thumbnail={`${BASE_URL}/img/ServiceInsights/3d-in-medical-care-corporality-global.jpg`}
-                            title={`What is Lorem Ipsum`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>`}
-                            category={`High Tech`}
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/Fastgrow-Finance.png`}
+                            title={`Fastgrow Finance`}
+                            slug={`fastgrow-finance`}
+                            content={`<p>Fastgrow was able to instantly stand out from the crowd with our brand positioning strategy.</p>`}
+                            category={``}
                             catSlug={``}
                         />
 
                         <CaseStudiesItem
-                            thumbnail={`${BASE_URL}/img/ServiceInsights/3d-in-medical-care-corporality-global.jpg`}
-                            title={`What is Lorem Ipsum`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
-                            category={`High Tech`}
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/divine-intercession.png`}
+                            title={`Divine Intercession`}
+                            slug={`divine-intercession`}
+                            content={`<p>Creating evangelist since 2014, helping our visionary customers to achieve their extraordinary goal</p>`}
+                            category={``}
                             catSlug={``}
                         />
                     </div>
                 </div>
             </div>
 
-            <div className='si-high-tech-multimedia-section'>
-                <div className='container-lg'>
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='si-htm-title'>
-                                <h2>High Tech multimedia center</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='row'>
-                        <div className='col-lg-6'>
-                            <div className='si-htm-content'>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-                                <Link to="/" className="si-front-back-link">
-                                    <div className='si-link-front'>
-                                        <span>Learn more</span>
-                                    </div>
-                                    <div className='si-link-behind'>Learn more</div>
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div className='col-lg-6'>
-                            <div className='si-htm-banner'>
-                                <img src={`${BASE_URL}/img/ServiceInsights/3d-in-medical-care-corporality-global.jpg`} alt="High Tech multimedia center" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id='what-we-think' className='si-what-we-think-section'>
+            {/* <div id='what-we-think' className='si-what-we-think-section'>
                 <div className='container-lg'>
                     <div className='row si-wwt-row'>
                         <div className='col-lg-8'>
@@ -450,81 +407,35 @@ function ServiceInsights() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div className='si-news-section'>
+            <div className='si-get-involved-section'>
                 <div className='container-lg'>
-                    <div className='row si-n-row'>
-                        <div className='col-lg-8'>
-                            <div className='si-n-title'>
-                                <h2>News</h2>
-                            </div>
-                        </div>
-
-                        <div className='col-lg-4 si-n-title-btn-col'>
-                            <div className='si-n-title-btn'>
-                                <Link to={`/`} className="si-link">VIEW MORE NEWS RELEASES <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="" /></Link>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='row si-news-item-row'>
-                        <NewsItem
-                            title={`Lorem Ipsum is simply dummy text of the printing and typesetting industry.`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>`}
-                        />
-
-                        <NewsItem
-                            title={`Lorem Ipsum is simply dummy`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>`}
-                        />
-
-                        <NewsItem
-                            title={`Lorem Ipsum is simply dummy text of the printing`}
-                            slug={``}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>`}
-                        />
-                    </div>
-                </div>
-            </div>
-
-            <div className='si-our-leaders-section'>
-                <div className='container-lg'>
-                    <div className='row si-ol-row'>
-                        <div className='col-lg-12'>
-                            <div className='si-ol-title'>
-                                <h2>Our leaders</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='row si-ol-members-row'>
-                        <LeadershipMember
-                            thumbnail={`${BASE_URL}/img/ServiceInsights/leadership-priya.png`}
-                            name={`Priya Mishra`}
-                            designation={`CEO`}
-                            linkedin={``}
-                        />
-
-                        <LeadershipMember
-                            thumbnail={`${BASE_URL}/img/ServiceInsights/leadership-jaish.png`}
-                            name={`JAISH`}
-                            designation={`COO`}
-                            linkedin={``}
-                        />
-                    </div>
-
                     <div className='row'>
-                        <div className='col-lg-12 text-center'>
-                            <Link to="/contact" className="si-front-back-link">
-                                <div className='si-link-front'>
-                                    <span>Contact Us</span>
-                                </div>
-                                <div className='si-link-behind'>Contact Us</div>
-                            </Link>
+                        <div className='col-lg-12'>
+                            <div className='si-gi-title-content'>
+                                <h2>Get Involved</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                            </div>
                         </div>
+                    </div>
+
+                    <div className='row si-gi-item-row'>
+                        <GetInvolvedItem
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/priya_mam.png`}
+                            title={`Become a partner`}
+                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>`}
+                            btnText={`Get involved`}
+                            btnLink={``}
+                        />
+
+                        <GetInvolvedItem
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/priya_mam.png`}
+                            title={`Join our digital community`}
+                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>`}
+                            btnText={`Join us`}
+                            btnLink={``}
+                        />
                     </div>
                 </div>
             </div>

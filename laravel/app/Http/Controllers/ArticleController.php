@@ -384,7 +384,7 @@ class ArticleController extends Controller
     {
         if( $request->is('api/*') )
         {
-            return Article::with(['categories'])->take(5)->latest()->get();
+            return Article::with(['categories'])->take(6)->latest()->get();
         }
     }
 

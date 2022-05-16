@@ -60,6 +60,10 @@ import ServiceInsights from "./components/ServiceInsights/ServiceInsights";
 import Single from "./components/Blog/Single";
 import SingleArticle from "./components/Articles/SingleArticle";
 import Articles from "./components/Articles/Articles";
+import CooInsights from "./components/Insights/CooInsights";
+import CmoInsights from "./components/Insights/CmoInsights";
+import CeoInsights from "./components/Insights/CeoInsights";
+import CxoInsights from "./components/Insights/CxoInsights";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -145,6 +149,11 @@ function App() {
             <Route path="/blog" element={<Blogs2 /> } />
             <Route path="/our-team" element={<OurTeam /> } />
             <Route path="/service-insights" element={<ServiceInsights /> } />
+
+            <Route path="/coo-insights" element={<CooInsights /> } />
+            <Route path="/cmo-insights" element={<CmoInsights /> } />
+            <Route path="/ceo-insights" element={<CeoInsights /> } />
+            <Route path="/cxo-insights" element={<CxoInsights /> } />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             

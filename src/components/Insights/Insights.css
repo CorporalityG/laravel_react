@@ -1,20 +1,20 @@
-.blog2 .blog-item {
+.insights .insight-item {
     overflow: hidden;
     margin-bottom: 30px;
 }
-.blog2 .blog-item img {
+.insights .insight-item img {
     max-width: 100%;
     width: 100%;
     height: 160px;
     transition: transform 1s ease-in-out;
     transform-origin: center center;
 }
-.blog2 .blog-item img:hover {
+.insights .insight-item img:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-.blog2 .blog-item .blog-item-category {
+.insights .insight-item .insight-item-category {
     color: #31647c;
     font-size: 16px;
     display: inline-block;
@@ -24,7 +24,7 @@
     text-transform: uppercase;
     width: 100%;
 }
-.blog2 .blog-item .blog-item-title {
+.insights .insight-item .insight-item-title {
     color: rgb(31, 31, 31);
     font-size: 16px;
     font-weight: 700;
@@ -32,13 +32,13 @@
     display: inline-block;
 }
 
-.blog2-heading {
+.insights-heading {
     position: relative;
     border-top: 1px solid #31647c;
     padding-top: 25px;
     padding-bottom: 25px;
 }
-.blog2-heading::before {
+.insights-heading::before {
     background: #31647c;
     content: "";
     display: block;
@@ -48,15 +48,15 @@
     width: 70px;
     height: 4px;
 }
-.blog2-heading a {
+.insights-heading a {
     color: rgb(31, 31, 31);
     font-size: 24px;
     font-weight: 700;
 }
-.blog2-heading a:hover {
+.insights-heading a:hover {
     color: #31647c;
 }
-.blog2-heading svg {
+.insights-heading svg {
     vertical-align: middle;
     margin-left: 0.5rem;
     width: auto;
@@ -66,21 +66,21 @@
 }
 
 
-.blog2-latest-section {
+.insights-latest-section {
     margin-top: 80px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.blog2-latest-section .latest-blog-row {
+.insights-latest-section .latest-insight-row {
     margin-bottom: 40px;
 }
-.blog2-latest-section .latest-blog-col {
+.insights-latest-section .latest-insight-col {
     background-color: #32363E;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.blog2-latest-section .category {
+.insights-latest-section .category {
     color: #a06db0;
     margin-bottom: 10px;
     display: inline-block;
@@ -89,61 +89,62 @@
     line-height: 1;
     text-transform: uppercase;
 }
-.blog2-latest-section .category:hover {
+.insights-latest-section .category:hover {
     color: #fff;
 }
-.blog2-latest-section .title-first {
+.insights-latest-section .title-first {
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: 600;
 }
-.blog2-latest-section .title-first a {
+.insights-latest-section .title-first a {
     color: #fff;
 }
-.blog2-latest-section .blog-content-first p {
+.insights-latest-section .insight-content-first p {
     color: #fff;
     margin-bottom: 0;
 }
-.blog2-latest-section .blog-content-first {
+.insights-latest-section .insight-content-first {
     max-width: 85%;
 }
-.blog2-latest-section .blog-banner-first {
+.insights-latest-section .insight-banner-first {
     overflow: hidden;
 }
-.blog2-latest-section .blog-banner-first img {
+.insights-latest-section .insight-banner-first img {
     max-width: 100%;
     transition: transform 1s ease-in-out;
     transform-origin: center center;
 }
-.blog2-latest-section .blog-banner-first img:hover {
+.insights-latest-section .insight-banner-first img:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
 
-.blog2-corporate-strategy-section {
+.insights-constructions-section {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.blog2-corporate-strategy-section .blog2-cs-title-row {
+.insights-constructions-section .insights-c-title-row {
     align-items: stretch;
     margin-bottom: 40px;
 }
-.blog2-corporate-strategy-section .cs-banner-first {
+.insights-constructions-section .c-banner-first {
     overflow: hidden;
 }
-.blog2-corporate-strategy-section .cs-banner-first img {
+.insights-constructions-section .c-banner-first img {
     max-width: 100%;
+    width: 100%;
     transition: transform 1s ease-in-out;
     transform-origin: center center;
 }
-.blog2-corporate-strategy-section .cs-banner-first img:hover {
+.insights-constructions-section .c-banner-first img:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-.blog2-corporate-strategy-section .cs-content-first-col {
+.insights-constructions-section .c-content-first-col {
     border-color: #31647c;
     border-style: solid;
     border-width: 1px 0 1px 0;
@@ -152,10 +153,10 @@
     justify-content: center;
     align-items: center;
 }
-.blog2-corporate-strategy-section .cs-content-first {
+.insights-constructions-section .c-content-first {
     padding-left: 30px;
 }
-.blog2-corporate-strategy-section .category {
+.insights-constructions-section .category {
     color: #a06db0;
     margin-bottom: 10px;
     display: inline-block;
@@ -164,22 +165,22 @@
     line-height: 1;
     text-transform: uppercase;
 }
-.blog2-corporate-strategy-section .blog-item {
+.insights-constructions-section .insight-item {
     overflow: hidden;
 }
-.blog2-corporate-strategy-section .blog-item img {
+.insights-constructions-section .insight-item img {
     max-width: 100%;
     width: 100%;
     height: 160px;
     transition: transform 1s ease-in-out;
     transform-origin: center center;
 }
-.blog2-corporate-strategy-section .blog-item img:hover {
+.insights-constructions-section .insight-item img:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-.blog2-corporate-strategy-section .box-item-category {
+.insights-constructions-section .box-item-category {
     color: #31647c;
     font-size: 16px;
     display: inline-block;
@@ -188,17 +189,17 @@
     font-weight: 700;
     text-transform: uppercase;
 }
-.blog2-corporate-strategy-section .box-item-title {
+.insights-constructions-section .box-item-title {
     font-size: 18px;
     font-weight: bold;
 }
-.blog2-corporate-strategy-section .box-item-title a {
+.insights-constructions-section .box-item-title a {
     color: rgb(31, 31, 31);
 }
-.blog2-corporate-strategy-section .cs-blog-col-box a {
+.insights-constructions-section .c-insight-col-box a {
     overflow: hidden;
 }
-.blog2-corporate-strategy-section .cs-blog-col-box img {
+.insights-constructions-section .c-insight-col-box img {
     max-width: 100%;
     transition: transform 1s ease-in-out;
     transform-origin: center center;
@@ -206,55 +207,55 @@
     width: 100%;
     object-fit: cover;
 }
-.blog2-corporate-strategy-section .cs-blog-col-box img:hover {
+.insights-constructions-section .c-insight-col-box img:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-.blog2-corporate-strategy-section .cs-blog-col-row {
+.insights-constructions-section .c-insight-col-row {
     margin-bottom: 20px;
 }
-.blog2-corporate-strategy-section .cs-blog-col-title a {
+.insights-constructions-section .c-insight-col-title a {
     font-size: 14px;
     font-weight: 600;
     color: rgb(31, 31, 31);
 }
-.blog2-corporate-strategy-section .title-first a {
+.insights-constructions-section .title-first a {
     color: #31647c;
     font-size: 24px;
     margin-bottom: 15px;
     display: inline-block;
 }
 
-.blog2-podcasts-section {
+.insights-podcasts-section {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.blog2-podcasts-section .blog2-p-music img {
+.insights-podcasts-section .insights-p-music img {
     width: 100%;
 }
-.blog2-podcasts-section .blog2-p-col {
+.insights-podcasts-section .insights-p-col {
     background: #32363E;
 }
-.blog2-podcasts-section .blog2-p-about {
+.insights-podcasts-section .insights-p-about {
     padding: 20px 15px;
 }
-.blog2-podcasts-section .blog2-p-about img {
+.insights-podcasts-section .insights-p-about img {
     max-width: 100%;
     margin-bottom: 15px;
 }
-.blog2-podcasts-section .blog2-p-about .blog2-p-about-title {
+.insights-podcasts-section .insights-p-about .insights-p-about-title {
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.blog2-podcasts-section .blog2-p-about p {
+.insights-podcasts-section .insights-p-about p {
     color: #FFFFFF;
     margin-bottom: 10px;
     font-size: 14px;
 }
-.blog2-podcasts-section .blog2-p-about a {
+.insights-podcasts-section .insights-p-about a {
     background: #E6E6E6;
     color: #6B717B;
     border-radius: 4px;
@@ -264,30 +265,30 @@
     display: inline-block;
 }
 
-.blog2-video-section {
+.insights-video-section {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-top: 50px;
     margin-bottom: 50px;
     position: relative;
 }
-.blog2-video-section .blog2-video-section-bg {
+.insights-video-section .insights-video-section-bg {
     position: absolute;
     width: 100%;
     height: 90%;
     background: #32363E;
 }
-.blog2-video-section .blog2-v-title {
+.insights-video-section .insights-v-title {
     font-size: 22px;
     padding-top: 25px;
     padding-bottom: 25px;
 }
-.blog2-video-section .blog2-v-title a {
+.insights-video-section .insights-v-title a {
     color: #fff;
     font-size: 22px;
     font-weight: 700;
 }
-.blog2-video-section .blog2-v-title svg {
+.insights-video-section .insights-v-title svg {
     vertical-align: middle;
     margin-left: 0.5rem;
     width: auto;
@@ -295,27 +296,27 @@
     display: inline-block;
     color: #31647c;
 }
-.blog2-video-section .blog2-v-first-row {
+.insights-video-section .insights-v-first-row {
     align-items: center;
     margin-bottom: 40px;
 }
-.blog2-video-section .v-banner-first {
+.insights-video-section .v-banner-first {
     overflow: hidden;
 }
-.blog2-video-section .v-banner-first img {
+.insights-video-section .v-banner-first img {
     max-width: 100%;
     transition: transform 1s ease-in-out;
     transform-origin: center center;
 }
-.blog2-video-section .v-banner-first img:hover {
+.insights-video-section .v-banner-first img:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-.blog2-video-section .v-banner-first a {
+.insights-video-section .v-banner-first a {
     position: relative;
 }
-.blog2-video-section .v-banner-first svg {
+.insights-video-section .v-banner-first svg {
     width: 50px;
     height: 58px;
     display: inline-block;
@@ -331,38 +332,38 @@
     -ms-transform: translate3d(-50%,-50%,0);
     transform: translate3d(-50%,-50%,0);
 }
-.blog2-video-section .v-title-first {
+.insights-video-section .v-title-first {
     margin-bottom: 10px;
     font-size: 24px;
     font-weight: 600;
 }
-.blog2-video-section .v-title-first a {
+.insights-video-section .v-title-first a {
     color: #fff;
 }
-.blog2-video-section .v-content-first {
+.insights-video-section .v-content-first {
     padding-left: 50px;
 }
-.blog2-video-section .v-content-first p {
+.insights-video-section .v-content-first p {
     color: #fff;
 }
-.blog2-video-section .video-box-item {
+.insights-video-section .video-box-item {
     overflow: hidden;
 }
-.blog2-video-section .video-box-item img {
+.insights-video-section .video-box-item img {
     max-width: 100%;
     transition: transform 1s ease-in-out;
     transform-origin: center center;
     margin-bottom: 10px;
 }
-.blog2-video-section .video-box-item img:hover {
+.insights-video-section .video-box-item img:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-.blog2-video-section .video-box-item a {
+.insights-video-section .video-box-item a {
     position: relative;
 }
-.blog2-video-section .video-box-item svg {
+.insights-video-section .video-box-item svg {
     width: 50px;
     height: 58px;
     display: inline-block;
@@ -378,73 +379,74 @@
     -ms-transform: translate3d(-50%,-50%,0);
     transform: translate3d(-50%,-50%,0);
 }
-.blog2-video-section .video-box-item .box-item-title {
+.insights-video-section .video-box-item .box-item-title {
     font-size: 18px;
     font-weight: bold;
 }
-.blog2-video-section .video-box-item .box-item-title a {
+.insights-video-section .video-box-item .box-item-title a {
     color: rgb(31, 31, 31);
 }
 
-.blog2-news-press-section {
+.insights-fintech-section {
     padding-top: 4px;
     padding-bottom: 40px;
 }
-.blog2-news-press-section .news-item {
+.insights-fintech-section .fintech-item {
     margin-bottom: 40px;
 }
-.blog2-news-press-section .news-item a {
+.insights-fintech-section .fintech-item a {
     font-weight: 600;
     color: rgb(31, 31, 31);
     font-size: 15px;
     margin-bottom: 5px;
     display: inline-block;
 }
-.blog2-news-press-section .news-item .website {
+.insights-fintech-section .fintech-item .category {
     color: #31647c;
     font-weight: 600;
     font-size: 14px;
 }
-.blog2-news-press-section .news-item .date {
+.insights-fintech-section .fintech-item .date {
     color: rgba(31, 31, 31, .6);
     font-size: 14px;
 }
-.blog2-news-press-section .press-item a {
+
+.insights-fintech-section .latest-insight-item a {
     font-weight: 500;
     color: rgb(31, 31, 31);
     font-size: 15px;
     margin-bottom: 15px;
     display: inline-block;
 }
-.blog2-news-press-section .press-item .posted-date {
+.insights-fintech-section .latest-insight-item .posted-date {
     color: rgba(31, 31, 31, .6);
     font-weight: 500;
 }
-.blog2-news-press-section .press-item .posted-date .date {
+.insights-fintech-section .latest-insight-item .posted-date .date {
     font-weight: 600;
 }
 
-.blog2-covid-explore-section {
+.insights-meditech-explore-section {
     padding-top: 40px;
     padding-bottom: 40px;
 }
-.blog2-covid-explore-section .blog2-covid-item-row {
+.insights-meditech-explore-section .insights-meditech-item-row {
     margin-bottom: 30px;
 }
-.blog2-covid-explore-section .covid-item-banner {
+.insights-meditech-explore-section .meditech-item-banner {
     overflow: hidden;
 }
-.blog2-covid-explore-section .covid-item-banner img {
+.insights-meditech-explore-section .meditech-item-banner img {
     max-width: 100%;
     transition: transform 1s ease-in-out;
     transform-origin: center center;
 }
-.blog2-covid-explore-section .covid-item-banner img:hover {
+.insights-meditech-explore-section .meditech-item-banner img:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-.blog2-covid-explore-section .covid-item-category {
+.insights-meditech-explore-section .meditech-item-category {
     color: #31647c;
     font-size: 16px;
     display: inline-block;
@@ -453,14 +455,14 @@
     text-transform: uppercase;
     width: 100%;
 }
-.blog2-covid-explore-section .covid-item-title {
+.insights-meditech-explore-section .meditech-item-title {
     font-size: 17px;
     font-weight: 700;
     color: rgb(31, 31, 31);
     width: 100%;
     display: inline-block;
 }
-.blog2-covid-explore-section .explore-list a {
+.insights-meditech-explore-section .explore-list a {
     color: rgb(31, 31, 31);
     font-size: 16px;
     display: inline-block;
@@ -468,29 +470,29 @@
     font-weight: 500;
     width: 100%;
 }
-.blog2-covid-explore-section .blog2-ce-subscribe {
+.insights-meditech-explore-section .insights-me-subscribe {
     background: #32363E;
     padding: 20px 15px;
 }
-.blog2-covid-explore-section .blog2-ce-subscribe img {
+.insights-meditech-explore-section .insights-me-subscribe img {
     max-width: 100%;
     margin-bottom: 15px;
 }
-.blog2-covid-explore-section .blog2-ce-subscribe .blog2-subscribe-title {
+.insights-meditech-explore-section .insights-me-subscribe .insights-subscribe-title {
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.blog2-covid-explore-section .blog2-ce-subscribe p {
+.insights-meditech-explore-section .insights-me-subscribe p {
     color: #FFFFFF;
     margin-bottom: 10px;
     font-size: 15px;
 }
-.blog2-covid-explore-section .blog2-ces-form {
+.insights-meditech-explore-section .insights-mes-form {
     position: relative;
 }
-.blog2-covid-explore-section .blog2-ces-form .emailid {
+.insights-meditech-explore-section .insights-mes-form .emailid {
     width: 100%;
     outline: 0;
     border-width: 0;
@@ -504,16 +506,16 @@
     border-radius: 0.375rem;
     color: rgb(31, 31, 31);
 }
-.blog2-covid-explore-section .blog2-ces-form .emailid::-webkit-input-placeholder { /* Edge */
+.insights-meditech-explore-section .insights-mes-form .emailid::-webkit-input-placeholder { /* Edge */
     color: rgba(31, 31, 31, .6);
 }
-.blog2-covid-explore-section .blog2-ces-form .emailid:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.insights-meditech-explore-section .insights-mes-form .emailid:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: rgba(31, 31, 31, .6);;
 }
-.blog2-covid-explore-section .blog2-ces-form .emailid::placeholder {
+.insights-meditech-explore-section .insights-mes-form .emailid::placeholder {
     color: rgba(31, 31, 31, .6);;
 }
-.blog2-covid-explore-section .blog2-ces-form .blog2-ces-btn {
+.insights-meditech-explore-section .insights-mes-form .insights-mes-btn {
     background-color: #31647c;
     color: #FFFFFF;
     border-width: 0;
@@ -523,27 +525,27 @@
     height: 40px;
     top: 0;
 }
-.blog2-covid-explore-section .blog2-ces-form .blog2-ces-btn svg {
+.insights-meditech-explore-section .insights-mes-form .insights-mes-btn svg {
     width: 40px;
     height: 50%;
 }
-.blog2-covid-explore-section .blog2-ce-boxes {
+.insights-meditech-explore-section .insights-me-boxes {
     background-color: #31647c;
     margin-top: 25px;
     padding: 20px 15px;
 }
-.blog2-covid-explore-section .blog2-ce-boxes .ce-box-title {
+.insights-meditech-explore-section .insights-me-boxes .me-box-title {
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.blog2-covid-explore-section .blog2-ce-boxes p {
+.insights-meditech-explore-section .insights-me-boxes p {
     color: #FFFFFF;
     margin-bottom: 10px;
     font-size: 15px;
 }
-.blog2-covid-explore-section .blog2-ce-boxes a {
+.insights-meditech-explore-section .insights-me-boxes a {
     background: #E6E6E6;
     color: #31647c;
     border-radius: 4px;
@@ -553,103 +555,73 @@
     display: inline-block;
 }
 
-.blog2-jobs-skills-section {
+.insights-jobs-skills-section {
     padding-top: 40px;
     padding-bottom: 40px;
 }
 
 
-.blog2-our-impact-section {
+.insights-our-impact-section {
     padding-top: 40px;
     padding-bottom: 60px;
-}
-
-.blog2 .know_more_blogs {
-    color: rgb(31, 31, 31);
-    font-size: 16px;
-    font-weight: 600;
-    width: 100%;
-    text-align: right;
-    display: inline-block;
-}
-.blog2 .know_more_blogs svg {
-    vertical-align: middle;
-    width: auto;
-    height: 15px;
-    display: inline-block;
-    color: #31647c;
-}
-
-.blog2 .blog2-heading.categories-heading {
-    margin-top: 30px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.blog2 .categories-list a {
-    color: rgb(31, 31, 31);
-    font-size: 16px;
-    display: inline-block;
-    margin-bottom: 15px;
-    font-weight: 500;
-    width: 100%;
 }
 
 
 /* responsive start */
 @media only screen and (min-width: 992px) and (max-width: 1399.99px) {
-    .blog2 .container-lg {
+    .insights .container-lg {
         max-width: 100%;
     }
-    .blog2-corporate-strategy-section .title-first a {
+    .insights-constructions-section .title-first a {
         font-size: 22px;
     }
-    .blog2-covid-explore-section .covid-item-title {
+    .insights-meditech-explore-section .meditech-item-title {
         font-size: 16px;
     }
 }
 
 
 @media only screen and (min-width: 992px) and (max-width: 1080.99px) {
-    .blog2 .blog-item .blog-item-title {
+    .insights .insight-item .insight-item-title {
         font-size: 15px;
     }
-    .blog2-covid-explore-section .covid-item-category {
+    .insights-meditech-explore-section .meditech-item-category {
         font-size: 14px;
     }
-    .blog2-covid-explore-section .covid-item-title {
+    .insights-meditech-explore-section .meditech-item-title {
         font-size: 14px;
     }
-    .blog2-covid-explore-section .blog2-ce-subscribe .blog2-subscribe-title {
+    .insights-meditech-explore-section .insights-me-subscribe .insights-subscribe-title {
         font-size: 16px;
     }
-    .blog2-corporate-strategy-section .cs-content-first {
+    .insights-constructions-section .c-content-first {
         padding-left: 0;
     }
-    .blog2-covid-explore-section .blog2-ce-subscribe p {
+    .insights-meditech-explore-section .insights-me-subscribe p {
         font-size: 14px;
     }
 }
 
 
 @media only screen and (max-width: 991.99px) {
-    .blog2-latest-section .latest-blog-col {
+    .insights-latest-section .latest-insight-col {
         background-color: transparent;
     }
-    .blog2-latest-section .blog-content-first {
+    .insights-latest-section .insight-content-first {
         max-width: 100%;
         background-color: #32363E;
         padding: 30px 20px;
     }
-    .blog2 .blog-item img {
+    .insights .insight-item img {
         height: 240px;
     }
-    .blog2-corporate-strategy-section .cs-blog-col-box img {
+    .insights-constructions-section .c-insight-col-box img {
         height: 130px;
     }
-    .blog2-corporate-strategy-section .cs-content-first-col {
+    .insights-constructions-section .c-content-first-col {
         border-width: 0;
     }
-    .blog2-corporate-strategy-section .cs-content-first {
+    .insights-constructions-section .c-content-first {
         padding: 15px 0;
         border-color: #31647c;
         border-style: solid;
@@ -657,38 +629,38 @@
         margin-top: 10px;
         margin-bottom: 20px;
     }
-    .blog2-corporate-strategy-section .cs-content-first p {
+    .insights-constructions-section .c-content-first p {
         margin-bottom: 0;
     }
-    .blog2-podcasts-section .blog2-p-col {
+    .insights-podcasts-section .insights-p-col {
         background: transparent;
     }
-    .blog2-podcasts-section .blog2-p-about {
+    .insights-podcasts-section .insights-p-about {
         background-color: #32363E;
         margin-top: 10px;
     }
-    .blog2-video-section .v-content-first {
+    .insights-video-section .v-content-first {
         padding-left: 0;
         margin-top: 10px;
     }
-    .blog2-corporate-strategy-section .blog2-cs-title-row {
+    .insights-constructions-section .insights-c-title-row {
         margin-bottom: 0;
     }
 }
 
 
 @media only screen and (max-width: 767.99px) {
-    .blog2 .blog-item img {
+    .insights .insight-item img {
         height: 175px;
     }
-    .blog2-corporate-strategy-section .cs-blog-col-box img {
+    .insights-constructions-section .c-insight-col-box img {
         height: 100px;
     }
 }
 
 
 @media only screen and (max-width: 600.99px) {
-    .blog2 .row > * {
+    .insights .row > * {
         padding-right: calc(var(--bs-gutter-x) * .5) !important;
         padding-left: calc(var(--bs-gutter-x) * .5) !important;
     }
@@ -696,43 +668,43 @@
 
 
 @media only screen and (max-width: 575.99px) {
-    .blog2 .blog-item img {
+    .insights .insight-item img {
         height: auto;
     }
-    .blog2-corporate-strategy-section .cs-blog-col-box img {
+    .insights-constructions-section .c-insight-col-box img {
         height: auto;
     }
-    .blog2-corporate-strategy-section .cs-blog-col-title a {
+    .insights-constructions-section .c-insight-col-title a {
         margin-top: 10px;
         display: inline-block;
     }
-    .blog2-covid-explore-section .covid-item-banner img {
+    .insights-meditech-explore-section .meditech-item-banner img {
         width: 100%;
     }
-    .blog2-covid-explore-section .covid-item-content {
+    .insights-meditech-explore-section .meditech-item-content {
         margin-top: 10px;
     }
-    .blog2-covid-explore-section .covid-item-category {
+    .insights-meditech-explore-section .meditech-item-category {
         margin-bottom: 0;
     }
 }
 
 
 @media only screen and (max-width: 520.99px) {
-    .blog2-corporate-strategy-section .title-first a {
+    .insights-constructions-section .title-first a {
         font-size: 22px;
     }
 }
 
 
 @media only screen and (max-width: 449.99px) {
-    .blog2-corporate-strategy-section .title-first a {
+    .insights-constructions-section .title-first a {
         font-size: 20px;
     }
-    .blog2-covid-explore-section .covid-item-category {
+    .insights-meditech-explore-section .meditech-item-category {
         font-size: 15px;
     }
-    .blog2-covid-explore-section .covid-item-title {
+    .insights-meditech-explore-section .meditech-item-title {
         font-size: 15px;
         line-height: 20px;
     }
@@ -740,54 +712,54 @@
 
 
 @media only screen and (max-width: 414.99px) {
-    .blog2-latest-section .blog-content-first {
+    .insights-latest-section .insight-content-first {
         padding-left: 10px;
         padding-right: 10px;
     }
-    .blog2-latest-section .title-first {
+    .insights-latest-section .title-first {
         font-size: 22px;
     }
-    .blog2-latest-section .blog-content-first p {
+    .insights-latest-section .insight-content-first p {
         font-size: 15px;
     }
-    .blog2 .blog-item .blog-item-category {
+    .insights .insight-item .insight-item-category {
         font-size: 15px;
     }
-    .blog2 .blog-item .blog-item-title {
+    .insights .insight-item .insight-item-title {
         font-size: 15px;
     }
-    .blog2-heading a {
+    .insights-heading a {
         font-size: 22px;
     }
 }
 
 
 @media only screen and (max-width: 360.99px) {
-    .blog2-covid-explore-section .blog2-heading a {
+    .insights-meditech-explore-section .insights-heading a {
         font-size: 20px;
     }
 }
 
 
 @media only screen and (max-width: 320.99px) {
-    .blog2-covid-explore-section .blog2-heading a {
+    .insights-meditech-explore-section .insights-heading a {
         font-size: 18px;
     }
-    .blog2-covid-explore-section .blog2-heading svg {
+    .insights-meditech-explore-section .insights-heading svg {
         height: 14px;
         margin-left: 5px;
     }
-    .blog2-news-press-section .blog2-heading a {
+    .insights-fintech-section .insights-heading a {
         font-size: 19px;
     }
-    .blog2-news-press-section .blog2-heading svg {
+    .insights-fintech-section .insights-heading svg {
         height: 14px;
         margin-left: 5px;
     }
-    .blog2-corporate-strategy-section .title-first a {
+    .insights-constructions-section .title-first a {
         font-size: 18px;
     }
-    .blog2-latest-section .title-first {
+    .insights-latest-section .title-first {
         font-size: 21px;
     }
 }

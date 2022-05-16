@@ -17,7 +17,11 @@ export const CaseStudiesItem = (props) => {
                 </div>
                 <div className='si-cs-item-content'>
                     <div className='si-cs-item-desc'>
-                        <Link to={`/${props.catSlug}`} className='si-cs-item-cat'>{props.category}</Link>
+                        {
+                            props.category ?
+                                <Link to={`/${props.catSlug}`} className='si-cs-item-cat'>{props.category}</Link>
+                                : null
+                        }
                         <div className='si-cs-item-title'>
                             <Link to={`/${props.slug}`}>{props.title}</Link>
                         </div>

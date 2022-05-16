@@ -34,7 +34,9 @@ export const ApplyNowPopUp = (props) => {
                             <div className="col-lg-12 form-group">
                                 <label>File</label>
                                 <div className="upload_resume">
-                                    <img src={`${BASE_URL}/img/Careers/upload-icon.png`} alt="Upload Your Resume" className="upload-icon" />Upload Your Resume
+                                    <input type="file" name="upload_resume" id="upload_resume" class="upload_resume_input" />
+                                    <label class="upload_resume_label">
+                                    <img src={`${BASE_URL}/img/Careers/upload-icon.png`} alt="Upload Your Resume" className="upload-icon" />Upload Your Resume</label>
                                 </div>
                             </div>
 
