@@ -96,16 +96,6 @@
                                 </div>
                             </div>
 
-                            @forelse( $tags as $Key=>$Val )
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="description_{{ $Key }}">{{ $Val }} {{ __('Description') }}</label>
-                                        <textarea name="description[{{ $Key }}]" id="description_{{ $Key }}" class="form-control tag_description{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="{{ __('Description') }}" rows="10">{{ old('description', $tag_articles[$Key] ?? '') }}</textarea>
-                                    </div>
-                                </div>
-                            @empty
-                            @endforelse
-
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="meta_title">{{ __('Meta Title (Page Title)') }}</label>

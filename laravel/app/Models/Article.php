@@ -54,4 +54,9 @@ class Article extends Model
     {
         return $this->hasMany(TagArticle::class);
     }
+
+    public function sections()
+    {
+        return $this->hasMany(ArticleSection::class);
+    }
 }

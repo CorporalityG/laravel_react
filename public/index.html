@@ -62,8 +62,8 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
   <script>
-
     jQuery(window).scroll(function () {
       if (jQuery(window).width() > 825) {
 
@@ -77,21 +77,25 @@
           if (scroll < (jQuery('#sa-sidebar-col').offset().top - 90)) {
             jQuery('#sa-sidebar').css({
               'position': 'absolute',
-              'top': '0'
+              'top': '0',
+              'width': 'auto'
             });
           }
           else if (scroll > (length - 90)) {
             jQuery('#sa-sidebar').css({
               'position': 'absolute',
-              'bottom': '0',
-              'top': 'auto'
+              // 'bottom': '0',
+              'top': 'auto',
+              'width': 'auto'
             });
           }
           else {
             jQuery('#sa-sidebar').css({
               'position': 'fixed',
               'top': '90px',
-              'height': height
+              // 'left': '0',
+              'width': '21%'
+              // 'height': height
             });
           }
         }

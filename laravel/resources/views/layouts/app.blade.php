@@ -191,12 +191,6 @@
                                 <p>{{ __('Categories') }}</p>
                               </a>
                             </li>
-                            <li class="nav-item">
-                              <a href="{{ route('article-tags.index') }}" class="nav-link {{ $articleTagActive }}">
-                                <i class="fas fa-th nav-icon"></i>
-                                <p>{{ __('Tags') }}</p>
-                              </a>
-                            </li>
                           </ul>
                         </li>
                         <!-- Article menu end -->

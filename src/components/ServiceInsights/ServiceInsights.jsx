@@ -9,7 +9,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import { AnnouncementItem } from './AnnouncementItem';
 
 function ServiceInsights() {
-    
+
     const [latestArticles, setLatestArticles] = useState([]);
 
     useEffect(() => {
@@ -35,7 +35,7 @@ function ServiceInsights() {
                             <div className='si-a-c-subtitle'>Coporlaioty at Lorem</div>
                             <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
                             <span>
-                                <Link to="/" className="si-link">Watch Now <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="" /></Link>
+                                <Link to="/" className="si-link">Watch Now <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
                             </span>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ function ServiceInsights() {
                                             <div className='si-hti-content'>
                                                 <span dangerouslySetInnerHTML={{ __html: (item.article_short_description) }}></span>
 
-                                                <Link to={`/article/${item.article_slug}`} className="si-link">Read More <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="->" /></Link>
+                                                <Link to={`/article/${item.article_slug}`} className="si-link">Read More <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
                                             </div>
                                         </div>
 
@@ -86,7 +86,7 @@ function ServiceInsights() {
                 <div className='container-lg'>
                     <div className='row si-blockchain-row'>
                         <div className='col-lg-1'>
-                            <img src={`${BASE_URL}/img/ServiceInsights/blockchain-icon.svg`} alt="blockchain" className='si-b-icon' />
+                            <img src={`${BASE_URL}/img/ServiceInsights/blockchain-icon.png`} alt="blockchain" className='si-b-icon' />
                         </div>
                         <div className='col-lg-4'>
                             <div className='si-b-title'>Connecting partners—blockchain for supply chain</div>
@@ -95,13 +95,13 @@ function ServiceInsights() {
                             <p>Coporlaioty & Microsoft create a scalable solution</p>
                         </div>
                         <div className='col-lg-2 si-link-col'>
-                            <Link to="/" className="si-link">Read More <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="" /></Link>
+                            <Link to="/" className="si-link">Read More <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {
+            {/* {
                 latestArticles ?
                     <div className='si-high-tech-blog-section'>
                         {
@@ -140,7 +140,27 @@ function ServiceInsights() {
                         }
                     </div>
                     : null
-            }
+            } */}
+
+            <div className='si-client-conversion-section'>
+                <div className='container-lg'>
+                    <div className='row si-cc-row'>
+                        <div className='col-lg-6'>
+                            <div className='si-cc-image'>
+                                <img src={`${BASE_URL}/img/ServiceInsights/client-conversion.png`} alt="Client conversion" />
+                            </div>
+                        </div>
+
+                        <div className='col-lg-6'>
+                            <div className='si-cc-content'>
+                                <h2>Client conversion shouldn't be this difficult - reach out to us!</h2>
+
+                                <Link to={`/`} className="si-learn-link">Learn More</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div id='capabilities' className='si-capabilities-section'>
                 <div className='container-lg'>
@@ -153,7 +173,7 @@ function ServiceInsights() {
 
                         <div className='col-lg-4 si-c-title-btn-col'>
                             <div className='si-c-title-btn'>
-                                <Link to={`/article`} className="si-link">All Articles <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="->" /></Link>
+                                <Link to={`/article`} className="si-link">All Articles <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
                             </div>
                         </div>
                     </div>
@@ -222,8 +242,7 @@ function ServiceInsights() {
             </div>
 
             <div className='si-organize-section'>
-                <img src={`${BASE_URL}/img/ServiceInsights/break-1a.svg`} alt="break-1a" className='si-o-bg-top' />
-                <img src={`${BASE_URL}/img/ServiceInsights/break-1b.svg`} alt="break-1b" className='si-o-bg-bottom' />
+                <img src={`${BASE_URL}/img/ServiceInsights/How-Can-We-Organize.png`} alt="How Can We Organize" className='si-o-bg-main' />
 
                 <div className='si-o-title-section'>
                     <div className='si-o-title-content'>
@@ -234,18 +253,6 @@ function ServiceInsights() {
                                         <h2>How Can We Organize</h2>
                                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                                         <Link to={`/article`} className="si-link">View All Articles <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='si-o-title-image'>
-                        <div className='container-lg'>
-                            <div className='row'>
-                                <div className='col-lg-7 offset-lg-5'>
-                                    <div className='si-o-img'>
-                                        <img src={`${BASE_URL}/img/ServiceInsights/organize.png`} alt="How Can We Organize" />
                                     </div>
                                 </div>
                             </div>
@@ -285,7 +292,7 @@ function ServiceInsights() {
 
                         <div className='col-lg-4 si-cs-title-btn-col'>
                             <div className='si-cs-title-btn'>
-                                <Link to={`/clients`} className="si-link">VIEW MORE CASE STUDIES <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="->" /></Link>
+                                <Link to={`/clients`} className="si-link">VIEW MORE CASE STUDIES <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
                             </div>
                         </div>
                     </div>
@@ -332,7 +339,7 @@ function ServiceInsights() {
 
                         <div className='col-lg-4 si-wwt-title-btn-col'>
                             <div className='si-wwt-title-btn'>
-                                <Link to={`/`} className="si-link">VIEW MORE ARTICLES <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="" /></Link>
+                                <Link to={`/`} className="si-link">VIEW MORE ARTICLES <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
                             </div>
                         </div>
                     </div>
@@ -415,24 +422,24 @@ function ServiceInsights() {
                         <div className='col-lg-12'>
                             <div className='si-gi-title-content'>
                                 <h2>Get Involved</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p>We believe that progress happens by bringing together people from all walks of life who have the drive and the influence to make a positive change.</p>
                             </div>
                         </div>
                     </div>
 
                     <div className='row si-gi-item-row'>
                         <GetInvolvedItem
-                            thumbnail={`${BASE_URL}/img/ServiceInsights/priya_mam.png`}
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/Become-a-Partner.png`}
                             title={`Become a partner`}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>`}
+                            content={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula eu felis morbi a neque urna.</p>`}
                             btnText={`Get involved`}
                             btnLink={``}
                         />
 
                         <GetInvolvedItem
-                            thumbnail={`${BASE_URL}/img/ServiceInsights/priya_mam.png`}
+                            thumbnail={`${BASE_URL}/img/ServiceInsights/Join-Our-Community.png`}
                             title={`Join our digital community`}
-                            content={`<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>`}
+                            content={`<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula eu felis morbi a neque urna.</p>`}
                             btnText={`Join us`}
                             btnLink={``}
                         />
@@ -460,7 +467,6 @@ function ServiceInsights() {
                                         <div className="col-xs-12 container-button">
                                             <a href="/" target="_blank" rel="noopener">
                                                 <div className="btn-subscribe">Subscribe</div>
-                                                <div className="behind"></div>
                                             </a>
 
                                         </div>

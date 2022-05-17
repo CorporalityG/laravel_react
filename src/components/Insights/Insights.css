@@ -106,6 +106,8 @@
 }
 .insights-latest-section .insight-content-first {
     max-width: 85%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .insights-latest-section .insight-banner-first {
     overflow: hidden;

@@ -79,9 +79,8 @@ class ArticleController extends Controller
     public function create()
     {
         $categories = $this->categories();
-        $tags = $this->tags();
 
-        return view('articles.create-edit', compact('categories','tags'));
+        return view('articles.create-edit', compact('categories'));
     }
 
     /**
@@ -122,6 +121,7 @@ class ArticleController extends Controller
                 with(['categories' => function ($q) {
                         $q->select('category_name')->orderBy('category_name', 'ASC');
                     }])
+                ->with(['sections'])
                 ->findOrFail($article->id);
         
         $article_categories = array();
@@ -162,11 +162,8 @@ class ArticleController extends Controller
         endif;
 
         $categories = $this->categories();
-        $tags = $this->tags();
 
-        $tag_articles = array_column($article->tagArticles->toArray(), 'description', 'tag_id');
-
-        return view('articles.create-edit', compact('article', 'article_categories_id','article_tags_id', 'categories', 'tags', 'tag_articles'));
+        return view('articles.create-edit', compact('article', 'article_categories_id','article_tags_id', 'categories'));
     }
 
     /**
@@ -262,40 +259,6 @@ class ArticleController extends Controller
         $result = $RS_Save->save();
 
         $RS_Save->categories()->sync($request->categories_id);
-        
-        //dd($request->description);
-        if( !empty($RS_Save->id) )
-        {
-            if( !empty($request->description) )
-            {
-                $pattern = "/<p[^>]*>[\<br>]*<\/p>/"; 
-                
-                foreach( $request->description as $Key=>$Val ):
-
-                    $RS_TagArt = TagArticle::where([
-                                        ['article_id', $RS_Save->id],
-                                        ['tag_id', $Key],
-                                    ])
-                                    ->first();
-
-                    if( !empty($RS_TagArt) )
-                    {
-                        $RS_TagArt_Save = TagArticle::findOrFail($RS_TagArt->id);
-                    }
-                    else
-                    {
-                        $RS_TagArt_Save = new TagArticle();
-                    }
-
-                    $RS_TagArt_Save->article_id = $RS_Save->id;
-                    $RS_TagArt_Save->tag_id = $Key;
-                    $RS_TagArt_Save->description = preg_replace($pattern, NULL, $Val);
-
-                    $RS_TagArt_Save->save();
-                endforeach;
-            }
-        }
-        
 
         return $result;
     }
@@ -355,25 +318,8 @@ class ArticleController extends Controller
     {
         if( $request->is('api/*') )
         {
-            $RS_Article = Article::where('article_slug', $request->slug)->first();
-            
-            $tag_articles_arr = array();
-            if( !empty($RS_Article->tagArticles) )
-            {
-                foreach( $RS_Article->tagArticles as $Row ):
-                    array_push($tag_articles_arr, 
-                        [
-                            'id' => $Row->tag_id,
-                            'tag_name' => $Row->articleTag->tag_name,
-                            'tag_slug' => $Row->articleTag->tag_slug,
-                            'description' => $Row->description
-                        ]
-                    );
-                endforeach;
-
-                // $RS_Article->article_tag = array_column($tag_articles_arr, 'article_tag');
-                $RS_Article->article_tag = $tag_articles_arr;
-            }
+            $RS_Article = Article::with(['sections'])
+                        ->where('article_slug', $request->slug)->first();
         
             return $RS_Article ?? array();
         }

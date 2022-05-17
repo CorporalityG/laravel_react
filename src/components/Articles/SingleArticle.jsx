@@ -35,11 +35,11 @@ function SingleArticle() {
 
                                         <div className='sa-banner-btn'>
                                             {
-                                                singleArticle.article_tag ?
+                                                singleArticle.sections ?
                                                     <>
                                                         {
-                                                            singleArticle.article_tag.slice(0, 1).map((item) =>
-                                                                <a key={`${item.tag_slug}`} href={`#${item.tag_slug}`} data-id={`${item.tag_slug}`} className='sa-sidebar-link'>Start Reading</a>
+                                                            singleArticle.sections.slice(0, 1).map((item) =>
+                                                                <a key={`${item.id}`} href={`#${item.section_slug}`} data-id={`${item.section_slug}`} className='sa-sidebar-link'>Start Reading</a>
                                                             )
                                                         }
                                                     </>
@@ -62,15 +62,13 @@ function SingleArticle() {
                                     <div id='sa-sidebar-col' className='col-lg-3 col-md-4'>
                                         <div id='sa-sidebar' className='sa-sidebar'>
                                             {
-                                                singleArticle.article_tag ?
+                                                singleArticle.sections ?
                                                     <>
                                                         <div className='sa-sidebar-title'>Tags</div>
                                                         <div className='sa-sidebar-nav'>
                                                             {
-                                                                singleArticle.article_tag.map((item) =>
-                                                                    item.description ?
-                                                                        <a key={`${item.tag_slug}`} href={`#${item.tag_slug}`} data-id={`${item.tag_slug}`} className='sa-sidebar-link'>{`${item.tag_name}`}</a>
-                                                                        : null
+                                                                singleArticle.sections.map((item) =>
+                                                                    <a key={`${item.id}`} href={`#${item.section_slug}`} data-id={`${item.section_slug}`} className='sa-sidebar-link'>{`${item.section_title}`}</a>
                                                                 )
                                                             }
                                                         </div>
@@ -84,11 +82,11 @@ function SingleArticle() {
 
                                     <div className='col-lg-9 col-md-8'>
                                         {
-                                            singleArticle.article_tag ?
+                                            singleArticle.sections ?
                                                 <>
                                                     {
-                                                        singleArticle.article_tag.map((item) =>
-                                                            <section key={`${item.tag_slug}`} id={`${item.tag_slug}`} className='sa-section' dangerouslySetInnerHTML={{ __html: item.description }}></section>
+                                                        singleArticle.sections.map((item) =>
+                                                            <section key={`${item.id}`} id={`${item.section_slug}`} className='sa-section' dangerouslySetInnerHTML={{ __html: item.section_description }}></section>
                                                         )
                                                     }
                                                 </>

@@ -106,6 +106,8 @@
 }
 .articles-latest-section .article-content-first {
     max-width: 85%;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .articles-latest-section .article-banner-first {
     overflow: hidden;

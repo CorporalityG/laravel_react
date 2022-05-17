@@ -61,7 +61,7 @@ function CmoInsights() {
 
             <div className="insights-latest-section">
                 <div className='container-fluid px-0'>
-                {
+                    {
                         latestArticles ?
                             <>
                                 {
@@ -71,15 +71,21 @@ function CmoInsights() {
                                                 <div className="insight-content-first">
                                                     {
                                                         item.categories ?
-                                                            <Link to={`/category/${item.categories[0].category_slug}`} className="category">
-                                                                {item.categories[0].category_name}
-                                                            </Link>
+                                                            <>
+                                                                {
+                                                                    item.categories.map((category) =>
+                                                                        <Link key={`${category.id}`} to={`/category/${category.category_slug}`} className="category">
+                                                                            {category.category_name}
+                                                                        </Link>
+                                                                    )
+                                                                }
+                                                            </>
                                                             : null
                                                     }
                                                     <h3 className="title-first">
                                                         <Link to={`/article/${item.article_slug}`}>{item.article_title}</Link>
                                                     </h3>
-                                                    <p><span dangerouslySetInnerHTML={{ __html: truncate(item.article_short_description ?? item.article_description, 175) }}></span></p>
+                                                    <p>{item.article_subtitle}</p>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 pl-lg-0">
@@ -108,8 +114,8 @@ function CmoInsights() {
                                             thumbnail={`${API_IMG_URL + item.article_image}`}
                                             title={`${item.article_title}`}
                                             slug={`${item.article_slug}`}
-                                            category={item.categories !== undefined ? item.categories[0].category_name : null}
-                                            catSlug={item.categories !== undefined ? item.categories[0].category_slug : null}
+                                            category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
+                                            catSlug={item.categories[0] !== undefined ? item.categories[0].category_slug : null}
                                         />
                                     )
                                 }
@@ -307,7 +313,7 @@ function CmoInsights() {
                                 mediTechArticles ?
                                     <>
                                         {
-                                            mediTechArticles.slice(0,3).map((item) =>
+                                            mediTechArticles.slice(0, 3).map((item) =>
                                                 <MeditechItem
                                                     key={`${item.id}`}
                                                     thumbnail={`${API_IMG_URL + item.article_image}`}
