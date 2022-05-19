@@ -41,10 +41,10 @@ border-radius: 20px;
   color: #33657E;
   width: 155px;
 height: 42px;
+width: 100%;
 }
 
 .sendReq{
-  font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 border-radius: 0%;

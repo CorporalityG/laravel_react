@@ -393,7 +393,9 @@ export default function BrandPositioning() {
 
       <ServicesInsights />
 
-      <ServicesAskQuote />
+      <ServicesAskQuote
+        action={`https://forms.zohopublic.com.au/corporality/form/AskQuoteBrandPositioningCorporality/formperma/k6FGqWxtWvyiI7HrOTTYXdCv7bYCyc-V405tSnoRKXk/htmlRecords/submit`}
+      />
     </>
   );
 }

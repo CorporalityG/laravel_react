@@ -11,7 +11,7 @@ import wall from "../NewsLetter/wall.png";
 
 const NewsLetter = () => {
   useEffect(() => {
-    aos.init({ duration: 3000});
+    aos.init({ duration: 3000 });
 
   }, [])
   return (
@@ -42,25 +42,18 @@ const NewsLetter = () => {
                 Our newsletter is more than just information Subscribe to see
                 the difference
               </p>
-              <div data-aos="fade-right" data-aos-delay="2000" className="Text_newsletter_email d-flex  align-items-center">
-                <input
-                  className="emailinput"
-                  type="text"
-                  name=""
-                  placeholder="Enter your Email"
-                  onFocus={(e) => {
-                    e.target.placeholder = "";
-                  }}
-                  onBlur={(e) => {
-                    e.target.placeholder = "Enter your Email";
-                  }}
-                />
-                <span>
-                  <a className="subscribe" href="">
-                    Subscribe
-                  </a>
-                </span>
-              </div>
+              <form action='https://forms.zohopublic.com.au/corporality/form/SubscribeNewslettersCorporality/formperma/h58Lc8-XG8Ll4jwIvKkFCFA_uwUgipzSLFZVfC_3lZs/htmlRecords/submit' name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' acceptCharset='UTF-8' encType='multipart/form-data' id='form'>
+                <input type="hidden" name="zf_referrer_name" />
+                <input type="hidden" name="zf_redirect_url" />
+                <input type="hidden" name="zc_gad" />
+                <div data-aos="fade-right" data-aos-delay="2000" className="Text_newsletter_email d-flex  align-items-center">
+                  <input fieldtype='9' type="text" className="emailinput" maxLength="255"
+                    name="Email" checktype="c5" placeholder="Enter your Email" onFocus={(e) => e.target.placeholder = ""} onBlur={(e) => e.target.placeholder = "Enter your Email"} />
+                  <span>
+                    <button className="subscribe">Subscribe</button>
+                  </span>
+                </div>
+              </form>
             </div>
           </div>
           <div className="col-lg-6 newsLetter_image_section">

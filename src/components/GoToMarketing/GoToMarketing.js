@@ -327,7 +327,9 @@ export default function GoToMarketing() {
 
             <ServicesInsights />
 
-            <ServicesAskQuote />
+            <ServicesAskQuote
+                action={`https://forms.zohopublic.com.au/corporality/form/AskQuoteGoToMarketCorporality/formperma/w4QerTkMcfNk8G8uydQP08pbGDNGJ3ot2f3svS3U8_8/htmlRecords/submit`}
+            />
         </>
     )
 }

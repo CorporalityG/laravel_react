@@ -463,7 +463,9 @@ function CorporateStrategy() {
 
       <ServicesInsights />
 
-      <ServicesAskQuote />
+      <ServicesAskQuote
+        action={`https://forms.zohopublic.com.au/corporality/form/AskQuoteCorporateStrategyCorporality/formperma/WaJWy-U1801p17xHSqXy9JGHGYfX5LsdU0erb65w3gs/htmlRecords/submit`}
+      />
     </>
   );
 }

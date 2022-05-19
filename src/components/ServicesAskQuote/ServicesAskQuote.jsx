@@ -1,7 +1,7 @@
 import React from 'react'
 import './ServicesAskQuote.css'
 
-export const ServicesAskQuote = () => {
+export const ServicesAskQuote = (props) => {
     return (
         <div className="services-quote-section">
             <div className="container-lg">
@@ -13,15 +13,21 @@ export const ServicesAskQuote = () => {
                             </div>
 
                             <div className="col-lg-6">
-                                <div className="row">
-                                    <div className="col-sm-6 form-group">
-                                        <input type={`email`} name="email" id="email" className="form-control" placeholder="Email Address" />
-                                    </div>
+                                <form action={props.action ? props.action : 'https://forms.zohopublic.com.au/corporality/form/SubscribeNewslettersCorporality/formperma/h58Lc8-XG8Ll4jwIvKkFCFA_uwUgipzSLFZVfC_3lZs/htmlRecords/submit'} name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' acceptCharset='UTF-8' encType='multipart/form-data' id='form'>
+                                    <input type="hidden" name="zf_referrer_name" />
+                                    <input type="hidden" name="zf_redirect_url" />
+                                    <input type="hidden" name="zc_gad" />
 
-                                    <div className="col-sm-6 form-group">
-                                        <input type={`submit`} name="btnQuote" id="btnQuote" value={`Ask for Quote`} className="quote-btn" />
+                                    <div className="row">
+                                        <div className="col-sm-6 form-group">
+                                            <input fieldtype='9' type="text" className="form-control" maxLength="255" name="Email" checktype="c5" placeholder="Email Address" />
+                                        </div>
+
+                                        <div className="col-sm-6 form-group">
+                                            <button className="quote-btn">Ask for Quote</button>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>

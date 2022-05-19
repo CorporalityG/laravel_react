@@ -58,23 +58,25 @@ export default function Footer() {
               </div>
               {/* share animation div - end */}
               <div className="emailDivWrapper">
-                <input type="email" className="email-space " id="floatingInput" placeholder="Email Id" />
-                {/* <label for="floatingInput">Email ID</label> */}
+                <form action='https://forms.zohopublic.com.au/corporality/form/SubscribeNewslettersCorporality/formperma/h58Lc8-XG8Ll4jwIvKkFCFA_uwUgipzSLFZVfC_3lZs/htmlRecords/submit' name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' acceptCharset='UTF-8' encType='multipart/form-data' id='form'>
+                  <input type="hidden" name="zf_referrer_name" />
+                  <input type="hidden" name="zf_redirect_url" />
+                  <input type="hidden" name="zc_gad" />
+                  <input fieldtype='9' type="text" className="email-space" maxLength="255"
+                    name="Email" checktype="c5" placeholder="Email Id" />
+                  <p id="Email_error" className="zf-errorMessage" style={{ display: "none" }}>Invalid value</p>
 
-                <div className="checkBox">
-                  <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" />
-                  <p className="text-above-button">
-                    I agree to have my personal data stored, processed and
-                    analysed by Corporality as outlined in this Privacy Policy.*
-                  </p>
-                </div>
-                <a href="mailto:connect@corporality.global">
-                  <div className="footer-button-wrapper">
-                    <button type="button" className="footerButton">
-                      Subscribe
-                    </button>
+                  <div className="checkBox">
+                    <input className="form-check-input" type="checkbox" id="flexCheckIndeterminate" />
+                    <p className="text-above-button">
+                      I agree to have my personal data stored, processed and
+                      analysed by Corporality as outlined in this Privacy Policy.*
+                    </p>
                   </div>
-                </a>
+                  <div className="footer-button-wrapper">
+                    <button className="zf-submitColor footerButton">Subscribe</button>
+                  </div>
+                </form>
               </div>
             </div>
 

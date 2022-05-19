@@ -83,11 +83,12 @@
 }
 
 .subscribe {
-  width: 10%;
+  width: 100%;
   text-decoration: none !important;
   color: white;
   background-color: #4e86a4;
   padding: 13.35px;
+  border: 0;
 }
 
 .subscribe:hover {

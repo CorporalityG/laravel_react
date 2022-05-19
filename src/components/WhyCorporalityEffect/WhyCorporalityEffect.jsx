@@ -6,6 +6,7 @@ import { RightForYouItem } from './RightForYouItem';
 import { CommitmentItem } from './CommitmentItem';
 import Accordion from 'react-bootstrap/Accordion'
 import { KeyElementItem } from './KeyElementItem';
+import MetaTags from 'react-meta-tags';
 
 function WhyCorporalityEffect() {
 
@@ -16,6 +17,11 @@ function WhyCorporalityEffect() {
 
     return (
         <>
+            <MetaTags>
+                <title>{`Why Corporality Effect? | Best Digital Marketing Strategy Online `}</title>
+                <meta name="description" content={`This is not the time to slow down in your digital marketing effort. Take advantage of the Corporality Effect program to help you with your digital marketing strategies.`} />
+            </MetaTags>
+
             <div className="wce-banner-main">
                 <img src={BASE_URL + '/img/WhyCorporalityEffect/banner.png'} alt="Why Corporality Effect?" className="wce-banner-img" />
                 <img src={BASE_URL + '/img/WhyCorporalityEffect/banner-vector.png'} alt="Vector" className="wce-banner-vector" />

@@ -214,7 +214,9 @@ function IntractiveBluePrint() {
 
       <ServicesInsights />
 
-      <ServicesAskQuote />
+      <ServicesAskQuote
+        action={`https://forms.zohopublic.com.au/corporality/form/AskQuoteInteractiveBluepritCorporality/formperma/rgqpcij8vhOVXCu2mCXDJaMS7Og47qjWKOsVioK_t4c/htmlRecords/submit`}
+      />
     </>
   );
 }

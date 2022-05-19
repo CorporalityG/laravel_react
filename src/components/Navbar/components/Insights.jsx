@@ -62,11 +62,11 @@ const Insights = () => {
                             </div> */}
                         </div>
 
-                        <div className="col-md-3">
-                            {/* <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
+                        {/* <div className="col-md-3">
+                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
                                 <h6>Download Resources</h6>
                                 <div className="diamond-line"></div>
-                            </div> */}
+                            </div>
                             <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
                                 <h6>Video Library</h6>
                                 <div className="diamond-line"></div>
@@ -75,7 +75,7 @@ const Insights = () => {
                                 <h6>Podcast</h6>
                                 <div className="diamond-line"></div>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="col-md-3">
                             <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/ceo-insights")}}>

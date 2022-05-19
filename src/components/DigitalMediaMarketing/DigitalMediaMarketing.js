@@ -297,7 +297,9 @@ function DigitalMediaMarketing() {
 
       <ServicesInsights />
 
-      <ServicesAskQuote />
+      <ServicesAskQuote
+        action={`https://forms.zohopublic.com.au/corporality/form/AskQuoteDigitalMediaMarketingCorporality/formperma/RJ0OkudWCLZ2oPlxOgTofvvwaCnpzCfpDRNnNJsV2u0/htmlRecords/submit`}
+      />
     </>
   );
 }

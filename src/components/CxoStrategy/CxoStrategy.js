@@ -271,7 +271,9 @@ function CxoStrategy() {
 
       <ServicesInsights />
 
-      <ServicesAskQuote />
+      <ServicesAskQuote
+        action={`https://forms.zohopublic.com.au/corporality/form/AskQuoteCXOStrategyCorporality/formperma/3CfaHcU0yZY-Gmm5Luu4jEr5qsoAZtDkJ2JrldG-KoU/htmlRecords/submit`}
+      />
     </>
   );
 }
