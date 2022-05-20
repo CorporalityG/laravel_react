@@ -23,14 +23,14 @@
     background-color: #6CA0BC;
     padding: 20px 10px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 22px;
     color: #FFFFFF;
     text-transform: none;
 }
 .clients-work-section .clients-work-right .clients-work-title {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 34px;
     text-transform: none;
     color: #33657E;
@@ -73,7 +73,7 @@
 }
 .clients-work-section .clients-work-right .studies-title {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 22px;
     color: #33657E;
     text-transform: capitalize;
@@ -143,7 +143,7 @@
 }
 .clients-work-section .clients-work-count {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 96px;
     color: #E2E6F1;
     position: absolute;

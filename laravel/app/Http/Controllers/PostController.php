@@ -444,4 +444,13 @@ class PostController extends Controller
             return $relatedPost;
         }
     }
+
+
+    public function randomBlogs(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            return Post::inRandomOrder()->limit(3)->get();
+        }
+    }
 }

@@ -61,7 +61,7 @@
 }
 .cc-banner-section .cc-banner-content-row h1 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-align: center;
     text-transform: capitalize;
@@ -105,7 +105,7 @@
 }
 .cc-work-mind-section .cc-wm-row .cc-wm-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-transform: capitalize;
     color: #3C708E;
@@ -143,7 +143,7 @@
 }
 .cc-major-problem-section .cc-mp-row .cc-mp-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-transform: capitalize;
     color: #3C708E;
@@ -172,7 +172,7 @@
 }
 .cc-top-elements-section .cc-te-content-row .cc-te-title h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-transform: capitalize;
     color: #3C708E;
@@ -282,7 +282,7 @@
 }
 .cc-top-elements-section .cc-te-boxes-row .cc-te-box .te-box-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     text-align: center;
 }
@@ -354,7 +354,7 @@
 }
 .cc-work-section .cc-work-title-row .cc-work-heading h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-transform: none;
     color: #33657E;
@@ -423,7 +423,7 @@
 }
 .cc-work-section .cc-work-content-main h3 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     text-transform: capitalize;
     color: #33657E;
@@ -446,7 +446,7 @@
 }
 .cc-process-section .cc-process-title-row .cc-process-title-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-align: center;
     text-transform: capitalize;
@@ -473,7 +473,7 @@
 }
 .cc-process-section .cc-process-boxes-row .p-box .p-box-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 20px;
     color: #33657E;
     margin-bottom: 15px;

@@ -8,6 +8,7 @@ import ServicesInsights from "../ServicesInsights/ServicesInsights";
 import Accordion from 'react-bootstrap/Accordion'
 import { WhyHireItem } from "./WhyHireItem";
 import { MethodologyProcessItem } from "./MethodologyProcessItem";
+import MetaTags from 'react-meta-tags';
 
 function CorporateStrategy() {
 
@@ -25,6 +26,12 @@ function CorporateStrategy() {
 
   return (
     <>
+      <MetaTags>
+        <title>{`Corporality Global Corporate Strategy| Top Brand Strategy & Consultancy`}</title>
+        <meta name="description" content={`Corporality Global Corporate Strategy helps to achieve their goals faster than your competitors. Contact us to know about the Corporate Strategy +61 2 83794089`} />
+        <meta name="keywords" content={`Corporate Strategy`} />
+      </MetaTags>
+
       <div className="coo-banner-section">
         <div className='coo-banner-top'></div>
         <div className='coo-banner-middle' data-aos="zoom-in-up" data-aos-duration="1500"></div>

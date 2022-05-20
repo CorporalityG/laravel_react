@@ -4,10 +4,16 @@ import { BASE_URL } from '../../config'
 import { TopElementItem } from './TopElementItem'
 import Accordion from 'react-bootstrap/Accordion'
 import { ProcessItem } from './ProcessItem'
+import MetaTags from 'react-meta-tags';
 
 function CulturallyConditioned() {
     return (
         <>
+            <MetaTags>
+                <title>{`Culturally Conditioned Framework | Digital Marketing Services in Sydney`}</title>
+                <meta name="description" content={`Corporality's digital marketing services employ a culturally-conditioned framework which is designed to establish participation and excitement around accountability.`} />
+            </MetaTags>
+
             <div className="cc-banner-section">
                 <img src={BASE_URL + '/img/CulturallyConditioned/banner-dots.png'} alt="Culturally Conditioned" className="cc-banner-img" />
                 <img src={BASE_URL + '/img/CulturallyConditioned/banner-vector.png'} alt="Vector" className="cc-banner-vector" />

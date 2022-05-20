@@ -6,6 +6,7 @@ import { TestimonialItem } from './TestimonialItem'
 import { Link } from 'react-router-dom'
 import Accordion from 'react-bootstrap/Accordion'
 import { ApplyNowPopUp } from './ApplyNowPopUp'
+import MetaTags from 'react-meta-tags';
 
 function Careers() {
 
@@ -18,6 +19,11 @@ function Careers() {
 
   return (
     <>
+      <MetaTags>
+        <title>{`Careers | Corporality`}</title>
+        <meta name="description" content={`Corporality provides a positive environment & helps to create the best work culture with your professional life. Send us your CV to hello@corporality.global`} />
+      </MetaTags>
+
       <div className="career-banner-section">
         <img src={`${BASE_URL}/img/Careers/rec-1.png`} alt="Rec 1" className="rec-1" />
         <img src={`${BASE_URL}/img/Careers/rec-2.png`} alt="Rec 2" className="rec-2" />
@@ -169,7 +175,7 @@ function Careers() {
 
                 <Accordion.Item eventKey="2">
                   <Accordion.Header>
-                  <div className="cc-jobs-heading">
+                    <div className="cc-jobs-heading">
                       <img src={`${BASE_URL}/img/Careers/hr.png`} alt="Intern - HR (Human Resources)" className="cc-j-h-icon" />
                       <span>Intern - HR (Human Resources)</span>
                       <div className="cc-jobs-apply" onClick={() => handleShow('apply')}>Apply now</div>
@@ -217,7 +223,7 @@ function Careers() {
 
                 <Accordion.Item eventKey="3">
                   <Accordion.Header>
-                  <div className="cc-jobs-heading">
+                    <div className="cc-jobs-heading">
                       <img src={`${BASE_URL}/img/Careers/wordpress.png`} alt="Intern - WordPress Developer" className="cc-j-h-icon" />
                       <span>Intern - WordPress Developer</span>
                       <div className="cc-jobs-apply" onClick={() => handleShow('apply')}>Apply now</div>

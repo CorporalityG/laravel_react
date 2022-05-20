@@ -9,6 +9,7 @@ import AOS from "aos";
 import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
 import ServicesClients from "../ServicesClients/ServicesClients";
 import ServicesInsights from "../ServicesInsights/ServicesInsights";
+import MetaTags from 'react-meta-tags';
 
 function DigitalMediaMarketing() {
 
@@ -26,6 +27,11 @@ function DigitalMediaMarketing() {
 
   return (
     <>
+      <MetaTags>
+        <title>{`Digital Marketing Agency Sydney | Best Marketing Service | Corporality`}</title>
+        <meta name="description" content={`Digital Media Marketing is a powerful brand strategy for many business owners and entrepreneurs. Learn how it works in this resource crafted by marketing and brand consultants.`} />
+      </MetaTags>
+
       <div className="dmm-banner-section">
         <div className="container-lg">
           <div className="row dmm-banner-row">
@@ -175,7 +181,7 @@ function DigitalMediaMarketing() {
               <div className="dmm-ft-content">
                 <div className="dmm-ft-subtitle" data-aos="zoom-in-up" data-aos-delay="100">Have a Questions</div>
                 <h2 data-aos="zoom-in-down" data-aos-delay="200">Check our Frequently asked Questions</h2>
-                <div className="dmm-ft-btn" onClick={handelToggleFaq} data-aos="zoom-in-right"  data-aos-delay="300">Show <i className={`fa ${showFaq ? "fa-angle-up" : "fa-angle-down"}`}></i></div>
+                <div className="dmm-ft-btn" onClick={handelToggleFaq} data-aos="zoom-in-right" data-aos-delay="300">Show <i className={`fa ${showFaq ? "fa-angle-up" : "fa-angle-down"}`}></i></div>
               </div>
             </div>
           </div>

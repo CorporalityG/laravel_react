@@ -38,7 +38,7 @@
 }
 .dbanner .boxSubHead {
   color: #232323;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 16px;
 }
 .dbanner .sbox {
@@ -114,7 +114,7 @@
 
 .dbanner .learn-more {
   color: #232323;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 16px;
   margin: 10px auto;
   text-align: center;

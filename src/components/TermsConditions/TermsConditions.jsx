@@ -3,10 +3,16 @@ import './TermsConditions.css'
 import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/Nav'
 import { BASE_URL } from '../../config'
+import MetaTags from 'react-meta-tags';
 
 function TermsConditions() {
   return (
     <>
+      <MetaTags>
+        <title>{`Terms and Conditions | Corporality`}</title>
+        <meta name="description" content={`In using this website you are deemed to have read and agreed to the following terms and conditions. Please read carefully.`} />
+      </MetaTags>
+
       <div className="terms-conditions-section">
         <img src={`${BASE_URL}/img/TermsConditions/rec-1.png`} alt="Rec 1" className="rec-1" />
         <img src={`${BASE_URL}/img/TermsConditions/rec-2.png`} alt="Rec 2" className="rec-2" />

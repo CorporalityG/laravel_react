@@ -164,7 +164,7 @@
   text-transform: none;
   font-size: 32px;
   line-height: 44px;
-  font-weight: bold;
+  font-weight: 500;
   margin: 0px !important;
   text-transform: capitalize;
 }
@@ -207,7 +207,7 @@
   color: #33657E;
   line-height: 2.5em;
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0px 0px 5px 0px !important;
 }
 
@@ -547,7 +547,7 @@
 }
 .bannerContainer .twoDiamonds .banner-count {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 96px;
   color: #E2E6F1;
 }
@@ -885,7 +885,7 @@
 }
 .bannerContainer .twoDiamonds .banner-count {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 50px;
     color: #E2E6F1;
 }

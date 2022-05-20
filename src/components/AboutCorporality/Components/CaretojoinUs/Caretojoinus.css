@@ -21,9 +21,8 @@
 }
 
 .caretojoinus_heading {
-  font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 32px;
   line-height: 40px;
   color: #ffffff;
@@ -32,7 +31,6 @@
 }
 
 .caretojoinus_description {
-  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

@@ -75,7 +75,7 @@
     margin-bottom: 40px;
 }
 .insights-latest-section .latest-insight-col {
-    background-color: #32363E;
+    background-color: #a06db0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,7 +237,7 @@
     width: 100%;
 }
 .insights-podcasts-section .insights-p-col {
-    background: #32363E;
+    background: #6ca0bc;
 }
 .insights-podcasts-section .insights-p-about {
     padding: 20px 15px;
@@ -278,7 +278,7 @@
     position: absolute;
     width: 100%;
     height: 90%;
-    background: #32363E;
+    background-color: #a06db0;
 }
 .insights-video-section .insights-v-title {
     font-size: 22px;
@@ -296,7 +296,7 @@
     width: auto;
     height: 16px;
     display: inline-block;
-    color: #31647c;
+    color: #fff;
 }
 .insights-video-section .insights-v-first-row {
     align-items: center;
@@ -473,7 +473,7 @@
     width: 100%;
 }
 .insights-meditech-explore-section .insights-me-subscribe {
-    background: #32363E;
+    background: #6ca0bc;
     padding: 20px 15px;
 }
 .insights-meditech-explore-section .insights-me-subscribe img {

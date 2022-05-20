@@ -5,7 +5,7 @@
 }
 .services-insights-section .services-insights-heading {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 34px;
     text-align: center;
     text-transform: none;
@@ -82,7 +82,7 @@
 }
 .services-insights-section .services-insights-grid .services-insights-grid-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     color: #FFFFFF;
     padding-bottom: 25px;

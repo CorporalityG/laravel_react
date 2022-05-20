@@ -111,7 +111,7 @@ function Articles() {
                                     latestArticles.slice(1, 5).map((item) =>
                                         <ArticleItem
                                             key={`${item.id}`}
-                                            thumbnail={`${API_IMG_URL + item.article_image}`}
+                                            thumbnail={`${item.article_image ? API_IMG_URL + item.article_image : ''}`}
                                             title={`${item.article_title}`}
                                             slug={`${item.article_slug}`}
                                             category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
@@ -171,7 +171,7 @@ function Articles() {
                                     constructionsArticles.slice(1, 4).map((item) =>
                                         <ArticleItem
                                             key={`${item.id}`}
-                                            thumbnail={`${API_IMG_URL + item.article_image}`}
+                                            thumbnail={`${item.article_image ? API_IMG_URL + item.article_image : ''}`}
                                             title={`${item.article_title}`}
                                             slug={`${item.article_slug}`}
                                             category={`Constructions`}
@@ -316,7 +316,7 @@ function Articles() {
                                             mediTechArticles.slice(0, 3).map((item) =>
                                                 <MeditechItem
                                                     key={`${item.id}`}
-                                                    thumbnail={`${API_IMG_URL + item.article_image}`}
+                                                    thumbnail={`${item.article_image ? API_IMG_URL + item.article_image : ''}`}
                                                     title={`${item.article_title}`}
                                                     slug={`${item.article_slug}`}
                                                     category={`Meditech`}

@@ -6,6 +6,7 @@ import AOS from "aos";
 import { LeadershipMember } from './LeadershipMember';
 import CarouselGrid from 'react-grid-carousel'
 import { TeamMember } from './TeamMember';
+import MetaTags from 'react-meta-tags';
 
 function OurTeam() {
 
@@ -17,6 +18,11 @@ function OurTeam() {
 
     return (
         <>
+            <MetaTags>
+                <title>{`Our Team | A Company Made Of Top Marketing Professionals | Corporality`}</title>
+                <meta name="description" content={`Our team is composed of customer-centric and top marketing professionals, consultants, strategists and creative talents delivering tailor-fit solutions for your business.`} />
+            </MetaTags>
+
             <div className="ot-banner-section">
                 <img src={`${BASE_URL}/img/OurTeam/banner-dot.png`} alt="A company made of true professionals" className="ot-banner-img" data-aos="fade-left" />
                 <img src={`${BASE_URL}/img/OurTeam/banner-vector.png`} alt="Vector" className="ot-banner-vector" data-aos="fade-left" />
@@ -121,7 +127,7 @@ function OurTeam() {
                         <div className="col-lg-12">
                             <div className="ot-tm-title">Team Members</div>
                             <div className="ot-tm-list">
-                                <CarouselGrid cols={5} rows={1} gap={25} autoplay={4000} loop hideArrow={true} responsiveLayout={[{breakpoint: 1199, cols: 4}, {breakpoint: 887, cols: 3}]}>
+                                <CarouselGrid cols={5} rows={1} gap={25} autoplay={4000} loop hideArrow={true} responsiveLayout={[{ breakpoint: 1199, cols: 4 }, { breakpoint: 887, cols: 3 }]}>
                                     <CarouselGrid.Item>
                                         <TeamMember
                                             avtar={`${BASE_URL}/img/OurTeam/Saravanan.png`}

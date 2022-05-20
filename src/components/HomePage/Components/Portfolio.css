@@ -36,7 +36,7 @@
 .portfolioContainer .portfolioHead h2 {
   font-size: 2em;
   line-height: 2.125em;
-  font-weight: 700;
+  font-weight: 500;
   color: #33657E;
   margin: 0;
   padding: 0;
@@ -139,7 +139,7 @@
   margin: 0px 0px 0px 0px !important;
   font-size: 1.2em;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: none;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -151,7 +151,7 @@
   font-size: 0.9em;
   line-height: 1.5em;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   margin: 5% 0px 5% 0px !important;
   padding: 0% 10% !important;
   opacity: 0;
@@ -163,7 +163,7 @@
   margin: 0px 0px 0px 0px !important;
   font-size: 0.9em;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   color: #534b53;
   opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
@@ -221,14 +221,14 @@
   background-color: #6CA0BC;
   padding: 20px 10px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 22px;
   color: #FFFFFF;
   text-transform: none;
 }
 .portfolio-container .portfolio-right .portfolio-title {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 34px;
   text-transform: capitalize;
   color: #33657E;
@@ -271,14 +271,14 @@
 }
 .portfolio-container .portfolio-right .studies-title {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 22px;
   color: #33657E;
   text-transform: capitalize;
 }
 .portfolio-container .portfolio-right .portfolio-link {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 16px;
   color: #33657E;
   cursor: pointer;
@@ -304,7 +304,7 @@
 }
 .portfolio-container .portfolio-right .steps-content p {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 16px;
   line-height: 22px;
   color: #232323;
@@ -330,7 +330,7 @@
 }
 .portfolio-container .portfolio-count {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 96px;
   color: #E2E6F1;
   position: absolute;
@@ -365,7 +365,7 @@
   background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
   padding: 12px 28px;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 18px;
   color: #FFFFFF;
   display: inline-block;

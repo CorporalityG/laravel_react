@@ -62,7 +62,7 @@
 }
 .is-banner-section .is-banner-content-row h1 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-transform: capitalize;
     color: #33657E;
@@ -117,7 +117,7 @@
 }
 .is-commitment-section .is-commitment-row .is-commitment-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     color: #33657E;
     margin-bottom: 15px;
@@ -136,7 +136,7 @@
 }
 .is-shifting-section .is-shifting-row .is-shifting-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-transform: capitalize;
     color: #3C708E;
@@ -169,7 +169,7 @@
 }
 .is-curious-section .is-curious-row .is-curious-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-align: center;
     text-transform: capitalize;
@@ -194,7 +194,7 @@
 }
 .is-curious-section .is-curious-boxes-row .is-curious-box .c-box-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 20px;
     text-align: center;
     color: #33657E;
@@ -217,7 +217,7 @@
 }
 .is-problems-section .is-problems-row .is-problems-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-transform: capitalize;
     color: #3C708E;
@@ -247,7 +247,7 @@
 }
 .is-work-section .is-work-title-row h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-align: center;
     text-transform: capitalize;

@@ -3,10 +3,16 @@ import './InboundShifting.css'
 import { BASE_URL } from '../../config'
 import { CuriousItem } from './CuriousItem'
 import Accordion from 'react-bootstrap/Accordion'
+import MetaTags from 'react-meta-tags';
 
 function InboundShifting() {
     return (
         <>
+            <MetaTags>
+                <title>{`Corporality Inbound Shiftings | Corporality`}</title>
+                <meta name="description" content={`Inbound shifting is a powerful brand strategy for many business owners and entrepreneurs. Learn how it works in this resource crafted by marketing`} />
+            </MetaTags>
+
             <div className="is-banner-section">
                 <img src={BASE_URL + '/img/InboundShifting/banner-dots.png'} alt="Why Corporality Effect?" className="is-banner-img" />
                 <img src={BASE_URL + '/img/InboundShifting/banner-vector.png'} alt="Vector" className="is-banner-vector" />
@@ -220,7 +226,7 @@ function InboundShifting() {
                     <div className="row is-model-assessment-row">
                         <div className="col-lg-12">
                             <div className="is-ma-img">
-                            <img src={BASE_URL + '/img/InboundShifting/model-assessment.png'} alt="Model Assessment" />
+                                <img src={BASE_URL + '/img/InboundShifting/model-assessment.png'} alt="Model Assessment" />
                             </div>
                         </div>
                     </div>

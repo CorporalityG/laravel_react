@@ -5,7 +5,7 @@
 }
 .blogs-container .blog-heading {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 34px;
   text-align: center;
   text-transform: none;
@@ -47,7 +47,7 @@
 }
 .blogs-container .blog-content .blog-title {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 18px;
   color: #3C708E;
   /* margin-bottom: 10px;
@@ -65,7 +65,7 @@
 }
 .blogs-container .blog-content p {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 16px;
   text-align: justify;
   color: #757575;
@@ -81,7 +81,7 @@
 }
 .blogs-container .blog-content .blog-date-comment-main .blog-date-comment {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 16px;
   color: #BFBFBF;
   display: flex;
@@ -103,7 +103,7 @@
   margin: 30px auto 10px;
   padding: 8px 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   color: #33657E;
   max-width: 150px;
@@ -129,14 +129,14 @@
 }
 .blogs-container .blog-item-left .blog-item-box-main .blog-item-box-subtitle {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   color: #757575;
   margin-bottom: 10px;
 }
 .blogs-container .blog-item-left .blog-item-box-main .blog-item-box-title {
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 18px;
   color: #3C708E;
   text-transform: none;

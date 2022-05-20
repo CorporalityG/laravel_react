@@ -6,6 +6,7 @@ import { SocialShare } from './SocialShare';
 import events from "../Blog/img/sidebarevent.jpg";
 import { RelatedBlogItem } from './RelatedBlogItem';
 import { RecentBlogItem } from './RecentBlogItem';
+import MetaTags from 'react-meta-tags';
 
 function dateFormat(date) {
     var dateObj = new Date(date);
@@ -53,6 +54,12 @@ const Single = () => {
             {
                 singleBlog ?
                     <>
+                        <MetaTags>
+                            <title>{singleBlog.meta_title ?? singleBlog.post_title}</title>
+                            {singleBlog.meta_description && <meta name="description" content={singleBlog.meta_description} />}
+                            {singleBlog.meta_keywords && <meta name="keywords" content={singleBlog.meta_keywords} />}
+                        </MetaTags>
+                        
                         <div className="container-lg">
                             <div className="row">
                                 <div className="col-lg-12">
@@ -100,17 +107,17 @@ const Single = () => {
                                             </div>
                                         </div>
                                         <div className="recent-events">
-                                            <a class="sb-recent-blog-category" id="recent-blogs"><b>Upcoming Events</b></a>
+                                            <a className="sb-recent-blog-category" id="recent-blogs"><b>Upcoming Events</b></a>
                                             <a href="https://corporality.global/club/corporality-global-event/" target="_blank"><img src={events} alt="" className="recent-events-imgs" /></a>
                                         </div>
-                                        
-                                        
+
+
                                         {
                                             recentBlog ?
                                                 <div className="sb-recent-blog-items">
-                                                <a class="sb-recent-blog-category" id="recent-blogs"><b>Recent Blogs</b></a>
+                                                    <a className="sb-recent-blog-category" id="recent-blogs"><b>Recent Blogs</b></a>
                                                     {
-                                                        recentBlog.slice(0,1).map((item, index) =>
+                                                        recentBlog.slice(0, 1).map((item, index) =>
                                                             <RecentBlogItem
                                                                 key={`${item.id}`}
                                                                 thumbnail={`${API_IMG_URL + item.post_image}`}

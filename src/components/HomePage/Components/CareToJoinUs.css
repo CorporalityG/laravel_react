@@ -19,7 +19,7 @@
 .caretojoinus-heading {
   font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 32px;
   color: #ffffff;
   margin-bottom: 10px;
@@ -30,7 +30,7 @@
 }
 .caretojoinus-description p {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 16px;
   color: #ffffff;
 }
