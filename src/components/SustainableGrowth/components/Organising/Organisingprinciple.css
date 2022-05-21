@@ -27,7 +27,7 @@
     line-height: 42px  ;
 /* identical to box height, or 125% */
 
-    text-transform: uppercase  ;
+    text-transform: capitalize  ;
 
     color: #33657E  ;
 } 

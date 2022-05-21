@@ -11,9 +11,9 @@
     padding-bottom: 250px;
 }
 .single-article-page h1 {
-    font-size: 48px;
+    font-size: 42px;
     line-height: 50px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 .single-article-page .sa-banner-subtitle {
@@ -47,7 +47,7 @@
     display: inline-block;
     font-size: 14px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     padding: 10px 30px;
     text-align: center;
     border-radius: 4px;
@@ -68,7 +68,7 @@
 }
 .single-article-page .sa-sidebar .sa-sidebar-title {
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 .single-article-page .sa-sidebar .sa-sidebar-nav {
@@ -83,7 +83,7 @@
     color: var(--bs-body-color);
 }
 .single-article-page .sa-sidebar .sa-sidebar-nav a:hover {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .single-article-page .sa-section {

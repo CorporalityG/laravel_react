@@ -29,7 +29,7 @@
 }
 .gtm-banner-section .gtm-banner-content .gtm-b-heading {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-transform: capitalize;
     color: #A06DAF;
@@ -37,7 +37,7 @@
 }
 .gtm-banner-section .gtm-banner-content h1 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 42px;
     color: #33657E;
     margin-bottom: 15px;
@@ -45,7 +45,7 @@
 }
 .gtm-banner-section .gtm-banner-content .gtm-b-subtitle {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     color: #232323;
     margin-bottom: 15px;
@@ -61,7 +61,7 @@
 .gtm-banner-section .gtm-banner-content .gtm-banner-btn {
     background: linear-gradient(95.12deg, #E2C53F 0%, #6CA0BC 83.42%);
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     text-align: center;
     text-transform: uppercase;
@@ -154,14 +154,14 @@
 .gtm-approach-section .gtm-a-item .a-item-number-main .a-item-number {
     transform: rotate(-45deg);
     font-style: normal;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 42px;
     text-align: center;
     color: #FFFFFF;
 }
 .gtm-approach-section .gtm-a-item .a-item-title {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     line-height: 22px;
     text-align: center;
@@ -228,7 +228,7 @@
 .gtm-approach-section .gtm-a-item-middle .a-item-title-middle {
     position: absolute;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     text-align: center;
     color: #FFFFFF;
@@ -248,7 +248,7 @@
 }
 .gtm-finding-ways-section .gtm-fw-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-align: center;
     text-transform: capitalize;
@@ -278,7 +278,7 @@
 }
 .gtm-faqs-section .gtm-ft-content .gtm-ft-subtitle {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-transform: none;
     color: #3C708E;
@@ -286,7 +286,7 @@
 }
 .gtm-faqs-section .gtm-ft-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     text-transform: capitalize;
     color: #232323;
@@ -313,7 +313,7 @@
 }
 .gtm-faqs-section .gtm-ft-content .gtm-ft-btn .fa {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 500;
     color: #6B9EB9;
 }
 .gtm-faqs-section .gtm-faqs-list-row.hide {
@@ -334,7 +334,7 @@
     color: #33657e;
     font-size: 20px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     box-shadow: unset;
     margin-bottom: 0;
 }
@@ -353,7 +353,7 @@
 }
 .gtm-faqs-section .gtm-faqs-list .accordion-body h3 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     color: #A06DAF;
     margin-bottom: 10px;
@@ -412,7 +412,7 @@
 }
 .gtm-faqs-section .gtm-faqs-list .faq-box-main .faq-box-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     color: #6CA0BC;
     margin-top: 10px;
@@ -512,7 +512,7 @@
 .gtm-expand-section .gtm-ec-banner .bw-box-btn {
     background: linear-gradient(95.12deg, #E2C53F 0%, #6CA0BC 83.42%);
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     text-align: center;
     text-transform: none;
@@ -524,7 +524,7 @@
 }
 .gtm-expand-section .gtm-ec-desc h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     text-transform: capitalize;
     color: #3C708E;
@@ -580,7 +580,7 @@
 }
 .gtm-write-us-modal .gtm-wu-heading {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     color: #3C708E;
     margin-bottom: 25px;
@@ -668,7 +668,7 @@
 }
 .gtm-product-strategy-section .gtm-ps-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-align: center;
     text-transform: capitalize;

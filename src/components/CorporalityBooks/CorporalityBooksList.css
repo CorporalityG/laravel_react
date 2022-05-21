@@ -25,9 +25,9 @@
 }
 .c-book-list-banner-container h1 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
-    text-transform: none;
+    text-transform: capitalize;
     color: #33657E;
     margin-bottom: 25px;
 }
@@ -110,7 +110,7 @@
 }
 .c-book-list-container .c-book-content-main .c-book-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     text-transform: none;
     color: #33657E;
@@ -176,7 +176,7 @@
 }
 .c-book-payment-modal .c-book-payment-content-heading {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 34px;
     text-transform: none;
     color: #33657E;
@@ -209,7 +209,7 @@
 }
 .c-book-payment-modal .c-book-payment-process-heading {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     text-transform: none;
     color: #33657E;
@@ -321,7 +321,7 @@
 }
 .c-book-download-modal .c-book-download-heading {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 24px;
     text-transform: none;
     color: #33657E;

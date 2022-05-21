@@ -36,6 +36,7 @@ require __DIR__.'/auth.php';
 Route::group(['middleware'=>'auth'], function()
 {
     Route::resources(['categories' => CategoryController::class]);
+    Route::get('subcategories', [CategoryController::class, 'getSubcategories'])->name('categories.subcategories');
     Route::resources(['posts' => PostController::class]);
     Route::get('post-slug', [PostController::class, 'getSlug'])->name('posts.slug');
 

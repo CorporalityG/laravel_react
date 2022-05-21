@@ -85,7 +85,7 @@ const ConForm = () => {
                         <div data-aos="fade-left">
                             <div className="fluid mx-lg-5 px-md-4">
                                 <div className="conform-contactForm  p-5 m-4">
-                                    <p className="conform-contactHeading fw-bold my-3 fs-4">Contact Us</p>
+                                    <p className="conform-contactHeading my-3 fs-4">Contact Us</p>
                                     <form action='https://forms.zohopublic.com.au/corporality/form/ContactUsCorporality/formperma/p9xYt83oAKygfe4BlX5Z9RT6BwSWuWEMqz595Cv7cpM/htmlRecords/submit' name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' acceptCharset='UTF-8' encType='multipart/form-data' id='form'>
                                         <input type="hidden" name="zf_referrer_name" />
                                         <input type="hidden" name="zf_redirect_url" />

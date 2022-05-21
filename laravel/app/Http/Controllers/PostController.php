@@ -114,8 +114,10 @@ class PostController extends Controller
     public function create()
     {
         $categories = $this->categories();
+        $post_categories_id = array();
+        $post_subcategories_id = '';
 
-        return view('posts.create-edit', compact('categories'));
+        return view('posts.create-edit', compact('categories', 'post_categories_id', 'post_subcategories_id'));
     }
 
     /**
@@ -179,18 +181,35 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     { 
-        $post = Post::with('categories:id')->findOrFail($post->id);
+        $post = Post::with('categories')->findOrFail($post->id);
         
         $post_categories_id = array();
+        $post_subcategories_id = array();
+
         if( !empty($post->categories) ):
+            if( !empty($post->categories[0]->parent) )
+            {
+                array_push($post_categories_id, $post->categories[0]->parent->id);
+            }
+            else
+            {
+                if( !empty($post->categories[0]) )
+                {
+                    array_push($post_categories_id, $post->categories[0]->id);
+                }
+            }
+
             foreach( $post->categories as $category ):
-                array_push($post_categories_id, $category->id);
+                array_push($post_subcategories_id, $category->id);
             endforeach;
+
+            $post_subcategories_id = implode(', ', $post_subcategories_id);
         endif;
+        // dd($post_subcategories_id);
 
         $categories = $this->categories();
 
-        return view('posts.create-edit', compact('post', 'post_categories_id', 'categories'));
+        return view('posts.create-edit', compact('post', 'post_categories_id', 'post_subcategories_id', 'categories'));
     }
 
     /**
@@ -284,7 +303,14 @@ class PostController extends Controller
 
         $result = $RS_Save->save();
 
-        $RS_Save->categories()->sync($request->categories_id);
+        if( !empty($request->subcategories_id) )
+        {
+            $RS_Save->subcategories()->sync($request->subcategories_id);
+        }
+        else
+        {
+            $RS_Save->categories()->sync($request->categories_id);
+        }
 
         return $result;
     }
@@ -313,9 +339,9 @@ class PostController extends Controller
     /**
      * get a listing of the category.
      */
-    private function categories()
+    private function categories($parentID=0)
     {
-        return Category::orderby('category_name', 'ASC')->pluck('category_name', 'id');
+        return Category::where('parent_id', $parentID)->orderby('category_name', 'ASC')->pluck('category_name', 'id');
     }
 
 

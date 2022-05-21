@@ -179,7 +179,7 @@ function CxoStrategy() {
                 <p>Guiding business to  hit organisational relationship goals is our job. A long-term sustainable customer plan is better than a short-term non-sustainable strategy that is expensive. Choose the best diffence against the churn as you hire a CXO that can navigate your business across complex scenarios by inculcating discipline into your customer service plan. </p>
                 <p>Our on-demand leadership moves swiftly from concept to execution without hitting the learning curve, utilising strategic and operational expertise.</p>
               </div>
-              <div class="cxo-expect-btn" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Explore More</div>
+              <div className="cxo-expect-btn" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Explore More</div>
             </div>
           </div>
         </div>

@@ -20,14 +20,14 @@
     display: inline-block;
     margin-top: 15px;
     margin-bottom: 5px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     width: 100%;
 }
 .insights .insight-item .insight-item-title {
     color: rgb(31, 31, 31);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     width: 100%;
     display: inline-block;
 }
@@ -51,7 +51,7 @@
 .insights-heading a {
     color: rgb(31, 31, 31);
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
 }
 .insights-heading a:hover {
     color: #31647c;
@@ -85,7 +85,7 @@
     margin-bottom: 10px;
     display: inline-block;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
 }
@@ -95,7 +95,7 @@
 .insights-latest-section .title-first {
     margin-bottom: 20px;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .insights-latest-section .title-first a {
     color: #fff;
@@ -163,7 +163,7 @@
     margin-bottom: 10px;
     display: inline-block;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
 }
@@ -188,12 +188,12 @@
     display: inline-block;
     margin-top: 20px;
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
 }
 .insights-constructions-section .box-item-title {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
 }
 .insights-constructions-section .box-item-title a {
     color: rgb(31, 31, 31);
@@ -219,7 +219,7 @@
 }
 .insights-constructions-section .c-insight-col-title a {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: rgb(31, 31, 31);
 }
 .insights-constructions-section .title-first a {
@@ -249,7 +249,7 @@
 .insights-podcasts-section .insights-p-about .insights-p-about-title {
     color: #FFFFFF;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 .insights-podcasts-section .insights-p-about p {
@@ -288,7 +288,7 @@
 .insights-video-section .insights-v-title a {
     color: #fff;
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 500;
 }
 .insights-video-section .insights-v-title svg {
     vertical-align: middle;
@@ -337,7 +337,7 @@
 .insights-video-section .v-title-first {
     margin-bottom: 10px;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .insights-video-section .v-title-first a {
     color: #fff;
@@ -383,7 +383,7 @@
 }
 .insights-video-section .video-box-item .box-item-title {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
 }
 .insights-video-section .video-box-item .box-item-title a {
     color: rgb(31, 31, 31);
@@ -397,7 +397,7 @@
     margin-bottom: 40px;
 }
 .insights-fintech-section .fintech-item a {
-    font-weight: 600;
+    font-weight: 500;
     color: rgb(31, 31, 31);
     font-size: 15px;
     margin-bottom: 5px;
@@ -405,7 +405,7 @@
 }
 .insights-fintech-section .fintech-item .category {
     color: #31647c;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
 }
 .insights-fintech-section .fintech-item .date {
@@ -425,7 +425,7 @@
     font-weight: 500;
 }
 .insights-fintech-section .latest-insight-item .posted-date .date {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .insights-meditech-explore-section {
@@ -453,13 +453,13 @@
     font-size: 16px;
     display: inline-block;
     margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     width: 100%;
 }
 .insights-meditech-explore-section .meditech-item-title {
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 500;
     color: rgb(31, 31, 31);
     width: 100%;
     display: inline-block;
@@ -483,7 +483,7 @@
 .insights-meditech-explore-section .insights-me-subscribe .insights-subscribe-title {
     color: #FFFFFF;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 .insights-meditech-explore-section .insights-me-subscribe p {
@@ -539,7 +539,7 @@
 .insights-meditech-explore-section .insights-me-boxes .me-box-title {
     color: #FFFFFF;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 .insights-meditech-explore-section .insights-me-boxes p {

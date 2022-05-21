@@ -53,7 +53,7 @@
 }
 .dmm-banner-section .dmm-banner-content-main h1 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 34px;
     text-transform: capitalize;
     color: #FFFFFF;
@@ -71,7 +71,7 @@
     display: inline-block;
     margin-top: 30px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     text-align: center;
     text-transform: none;
@@ -116,7 +116,7 @@
 }
 .dmm-strategy-section .dmm-s-title-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-align: center;
     text-transform: capitalize;
@@ -170,7 +170,7 @@
     line-height: 1;
     transition: all 0.5s;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 100px;
     color: #F3F3F3;
 }
@@ -194,7 +194,7 @@
 }
 .dmm-strategy-section .dmm-s-box .s-box-content .s-box-title {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 22px;
     text-align: center;
     color: #232323;
@@ -228,7 +228,7 @@
 }
 .dmm-key-objectives-section .dmm-ko-content .dmm-ko-subtitle {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-transform: capitalize;
     color: #A06DAF;
@@ -335,7 +335,7 @@
 }
 .dmm-goals-section .dmm-goals-content .gc-box .gc-box-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 55px;
     text-align: justify;
     color: #A06DAF;
@@ -369,7 +369,7 @@
 }
 .dmm-faqs-section .dmm-ft-content .dmm-ft-subtitle {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-transform: none;
     color: #3C708E;
@@ -377,7 +377,7 @@
 }
 .dmm-faqs-section .dmm-ft-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     text-transform: capitalize;
     color: #232323;
@@ -404,7 +404,7 @@
 }
 .dmm-faqs-section .dmm-ft-content .dmm-ft-btn .fa {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 500;
     color: #6B9EB9;
 }
 .dmm-faqs-section .dmm-faqs-list-row.hide {
@@ -425,7 +425,7 @@
     color: #33657e;
     font-size: 20px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     box-shadow: unset;
     margin-bottom: 0;
 }
@@ -456,7 +456,7 @@
 }
 .dmm-expect-section .dmm-expect-content .dmm-ec-subtitle {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-transform: capitalize;
     color: #A06DAF;
@@ -464,7 +464,7 @@
 }
 .dmm-expect-section .dmm-expect-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-transform: capitalize;
     color: #33657E;
@@ -496,7 +496,7 @@
 }
 .dmm-expect-section .dmm-expect-items .dmm-e-item .e-item-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-align: justify;
     color: #E5CC5C;
@@ -532,7 +532,7 @@
 }
 .dmm-perfect-scenario-section .dmm-ps-title-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-align: center;
     text-transform: capitalize;
@@ -567,7 +567,7 @@
 }
 .dmm-quote-section .dmm-quote-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     line-height: 36px;
     color: #FFFFFF;

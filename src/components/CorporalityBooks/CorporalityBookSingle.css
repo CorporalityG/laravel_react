@@ -16,7 +16,7 @@
 }
 .c-book-single-banner-container h1 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-transform: none;
     color: #33657E;
@@ -67,7 +67,7 @@
 }
 .c-book-single-main-content-container .c-book-single-main-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     text-transform: none;
     color: #33657E;
@@ -119,7 +119,7 @@
 }
 .c-book-single-more-content-container .c-book-single-more-title h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 52px;
     text-transform: none;
     color: #33657E;
@@ -140,7 +140,7 @@
 }
 .c-book-single-more-content-container .c-book-single-more-content-buy-row .c-book-single-more-content-heading {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     text-transform: none;
     color: #33657E;

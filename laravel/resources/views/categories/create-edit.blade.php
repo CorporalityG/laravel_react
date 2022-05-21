@@ -39,6 +39,27 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
+                                    <label for="parent_category_id">{{ __('Parent Category') }}</label>
+                                    <div class="select2-purple">
+                                        <select name="parent_category_id" id="parent_category_id" class="select2 form-control{{ $errors->has('parent_category_id') ? ' is-invalid' : '' }}" data-placeholder="{{ __('-- Select Category --') }}" data-dropdown-css-class="select2-purple" >
+                                            <option value="0">{{ __('-- Select Parent Category --') }}</option>
+                                            @forelse( $parentCategories as $parentCategory )
+                                                <option value="{{ $parentCategory->id }}" @if( !empty($category->parent_id) && $parentCategory->id===$category->parent_id ) selected @endif>{{ $parentCategory->category_name }}</option>
+                                            @empty
+                                            @endforelse
+                                        </select>
+                                    </div>
+
+                                    @if ($errors->has('parent_category_id'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('parent_category_id') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
                                     <label for="description">{{ __('Description') }}</label>
                                     <textarea name="description" id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="{{ __('Description') }}">{{ old('description', $category->description ?? '') }}</textarea>
 
@@ -60,4 +81,12 @@
         </div>
     </div>
 
+<!-- Page specific script -->
+<script>
+$(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2();
+
+})
+</script>
 @endsection

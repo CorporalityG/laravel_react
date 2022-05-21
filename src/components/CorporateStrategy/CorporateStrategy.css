@@ -85,7 +85,7 @@
 }
 .coo-banner-section .coo-banner-content .coo-banner-subtitle {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     color: #232323;
     margin-bottom: 20px;
@@ -246,7 +246,7 @@
 }
 .coo-methodology-process-section .coo-mp-item-heading {
     color: #a06cae;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 20px;
     text-align: center;
     text-transform: capitalize;
@@ -280,7 +280,7 @@
 }
 .coo-methodology-process-section .coo-mp-item .mp-item-title {
     color: #a06cae;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 15px;
     text-transform: capitalize;
 }
@@ -302,7 +302,7 @@
 }
 .coo-expect-section .coo-expect-title h2 {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 28px;
     text-transform: capitalize;
     color: #3C708E;
@@ -485,7 +485,7 @@
 }
 .coo-why-hire-section .coo-wh-title-content h2 {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 28px;
     text-transform: capitalize;
     color: #3C708E;
@@ -544,7 +544,7 @@
 }
 .coo-success-strategy-section .coo-ss-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 28px;
     text-transform: capitalize;
     color: #33657E;
@@ -589,7 +589,7 @@
 }
 .coo-faqs-section .coo-ft-content .coo-ft-subtitle {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-transform: none;
     color: #3C708E;
@@ -599,7 +599,7 @@
 }
 .coo-faqs-section .coo-ft-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     text-transform: capitalize;
     color: #232323;
@@ -625,7 +625,7 @@
 }
 .coo-faqs-section .coo-ft-content .coo-ft-btn .fa {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 500;
     color: #6B9EB9;
 }
 .coo-faqs-section .coo-faqs-list-row.hide {
@@ -646,7 +646,7 @@
     color: #33657e;
     font-size: 20px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     box-shadow: unset;
     margin-bottom: 0;
 }

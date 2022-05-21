@@ -20,14 +20,14 @@
     display: inline-block;
     margin-top: 15px;
     margin-bottom: 5px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     width: 100%;
 }
 .articles .article-item .article-item-title {
     color: rgb(31, 31, 31);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     width: 100%;
     display: inline-block;
 }
@@ -51,7 +51,7 @@
 .articles-heading a {
     color: rgb(31, 31, 31);
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
 }
 .articles-heading a:hover {
     color: #31647c;
@@ -75,7 +75,7 @@
     margin-bottom: 40px;
 }
 .articles-latest-section .latest-article-col {
-    background-color: #32363E;
+    background-color: #6ca0bc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +85,7 @@
     margin-bottom: 10px;
     display: inline-block;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
 }
@@ -95,7 +95,7 @@
 .articles-latest-section .title-first {
     margin-bottom: 20px;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .articles-latest-section .title-first a {
     color: #fff;
@@ -163,7 +163,7 @@
     margin-bottom: 10px;
     display: inline-block;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
 }
@@ -188,12 +188,12 @@
     display: inline-block;
     margin-top: 20px;
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
 }
 .articles-constructions-section .box-item-title {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
 }
 .articles-constructions-section .box-item-title a {
     color: rgb(31, 31, 31);
@@ -219,7 +219,7 @@
 }
 .articles-constructions-section .c-article-col-title a {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: rgb(31, 31, 31);
 }
 .articles-constructions-section .title-first a {
@@ -237,7 +237,7 @@
     width: 100%;
 }
 .articles-podcasts-section .articles-p-col {
-    background: #32363E;
+    background: #6ca0bc;
 }
 .articles-podcasts-section .articles-p-about {
     padding: 20px 15px;
@@ -249,7 +249,7 @@
 .articles-podcasts-section .articles-p-about .articles-p-about-title {
     color: #FFFFFF;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 .articles-podcasts-section .articles-p-about p {
@@ -278,7 +278,7 @@
     position: absolute;
     width: 100%;
     height: 90%;
-    background: #32363E;
+    background: #a06db0;
 }
 .articles-video-section .articles-v-title {
     font-size: 22px;
@@ -288,7 +288,7 @@
 .articles-video-section .articles-v-title a {
     color: #fff;
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 500;
 }
 .articles-video-section .articles-v-title svg {
     vertical-align: middle;
@@ -296,7 +296,7 @@
     width: auto;
     height: 16px;
     display: inline-block;
-    color: #31647c;
+    color: #fff;
 }
 .articles-video-section .articles-v-first-row {
     align-items: center;
@@ -337,7 +337,7 @@
 .articles-video-section .v-title-first {
     margin-bottom: 10px;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .articles-video-section .v-title-first a {
     color: #fff;
@@ -383,7 +383,7 @@
 }
 .articles-video-section .video-box-item .box-item-title {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
 }
 .articles-video-section .video-box-item .box-item-title a {
     color: rgb(31, 31, 31);
@@ -397,7 +397,7 @@
     margin-bottom: 40px;
 }
 .articles-fintech-section .fintech-item a {
-    font-weight: 600;
+    font-weight: 500;
     color: rgb(31, 31, 31);
     font-size: 15px;
     margin-bottom: 5px;
@@ -405,7 +405,7 @@
 }
 .articles-fintech-section .fintech-item .category {
     color: #31647c;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
 }
 .articles-fintech-section .fintech-item .date {
@@ -425,7 +425,7 @@
     font-weight: 500;
 }
 .articles-fintech-section .latest-article-item .posted-date .date {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .articles-meditech-explore-section {
@@ -453,13 +453,13 @@
     font-size: 16px;
     display: inline-block;
     margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     width: 100%;
 }
 .articles-meditech-explore-section .meditech-item-title {
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 500;
     color: rgb(31, 31, 31);
     width: 100%;
     display: inline-block;
@@ -473,7 +473,7 @@
     width: 100%;
 }
 .articles-meditech-explore-section .articles-me-subscribe {
-    background: #32363E;
+    background: #6ca0bc;
     padding: 20px 15px;
 }
 .articles-meditech-explore-section .articles-me-subscribe img {
@@ -483,7 +483,7 @@
 .articles-meditech-explore-section .articles-me-subscribe .articles-subscribe-title {
     color: #FFFFFF;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 .articles-meditech-explore-section .articles-me-subscribe p {
@@ -539,7 +539,7 @@
 .articles-meditech-explore-section .articles-me-boxes .me-box-title {
     color: #FFFFFF;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 .articles-meditech-explore-section .articles-me-boxes p {

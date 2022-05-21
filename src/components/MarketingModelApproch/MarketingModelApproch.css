@@ -10,9 +10,8 @@
     max-width: 90%;
 }
 .mma-banner-section .mma-b-content .mma-b-title {
-    font-family: 'Roboto';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-transform: capitalize;
     color: #A06DAF;
@@ -20,7 +19,7 @@
 }
 .mma-banner-section .mma-b-content h1 {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 28px;
     color: #33657E;
     text-transform: capitalize;
@@ -80,7 +79,7 @@
     background: linear-gradient(95.12deg, #E2C53F 0%, #6CA0BC 83.42%);
     border-radius: 60px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     text-align: center;
     text-transform: uppercase;
@@ -258,7 +257,7 @@
 }
 .mma-models-section .mma-models-title h2 {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 28px;
     text-transform: capitalize;
     color: #3C708E;
@@ -294,7 +293,7 @@
 .mma-models-section .mma-models-banner .mma-eb-title {
     position: relative;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
     text-transform: capitalize;
     color: #FFFFFF;
@@ -336,7 +335,7 @@
 }
 .mma-marketing-approach-section .mma-ma-title h2 {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 28px;
     text-transform: capitalize;
     color: #3C708E;
@@ -392,7 +391,7 @@
     top: -35px;
     right: -15px;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 80px;
     color: #F3F3F3;
     z-index: -1;
@@ -404,7 +403,7 @@
 .mma-marketing-approach-section .mma-ma-step .ma-step-title {
     position: absolute;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
     text-align: center;
     color: #232323;

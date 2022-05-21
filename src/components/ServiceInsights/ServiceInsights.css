@@ -72,7 +72,7 @@
 .service-insights-page .si-front-back-link span {
     color: #fff;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     font-size: .875rem;
 }
 
@@ -187,7 +187,7 @@
     margin-top: 0;
     padding: .56em 0 .56em 1.11em;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-transform: uppercase;
     color: #A06DAF;
@@ -251,7 +251,7 @@
 .si-high-tech-industry-section .si-hti-video-title {
     max-width: 60%;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 22px;
     color: #212529;
     margin-bottom: 15px;
@@ -279,7 +279,7 @@
 
 .si-blockchain-section .si-b-title {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     color: #212529;
     text-transform: uppercase;
@@ -376,7 +376,7 @@
 .si-sectors-we-serve-section .si-sws-item .si-sws-item-title {
     font-size: 1.5625rem;
     color: #232323;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 15px;
     display: inline-block;
     width: 100%;
@@ -430,7 +430,7 @@
     margin-bottom: 1.25rem;
     padding-right: 2.75rem;
     color: #232323;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .si-capabilities-section .si-c-item:hover .si-c-item-title {
@@ -544,12 +544,12 @@
     border-bottom: .13rem solid #3c708e;
     padding-bottom: .25rem;
     color: #232323;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .si-case-studies-section .si-cs-item .si-cs-item-title a {
     font-size: 1.5625rem;
-    font-weight: 800;
+    font-weight: 500;
     margin-bottom: .8em;
     color: #232323;
     display: inline-block;
@@ -631,12 +631,12 @@
     border-bottom: .13rem solid #3c708e;
     padding-bottom: .25rem;
     color: #232323;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .si-what-we-think-section .si-wwt-item-content .si-wwt-item-title a {
     font-size: 1.5625rem;
-    font-weight: 800;
+    font-weight: 500;
     margin-bottom: .5em;
     color: #232323;
     display: inline-block;
@@ -696,7 +696,7 @@
 .si-news-section .si-news-item .si-news-item-title {
     font-size: 1.2625rem;
     color: #232323;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 15px;
     display: inline-block;
     width: 100%;
@@ -749,7 +749,7 @@
 .si-our-leaders-section .si-ol-member .ol-member-name {
     font-size: 1rem;
     margin-bottom: 10px;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 .si-our-leaders-section .si-ol-member .ol-member-designation {
@@ -846,7 +846,7 @@
     color: #fff;
     font-size: 1.5625rem;
     line-height: 1.2;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .si-subscribe-section .container-left .block-content .container-button {
@@ -886,7 +886,7 @@
     line-height: 1rem;
     border-radius: 0;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .si-subscribe-section .block-content .container-button .behind {
@@ -998,7 +998,7 @@
 
 .si-organize-section .si-o-title-content .si-link {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 17px;
     text-align: center;
     color: #FFFFFF;
@@ -1046,7 +1046,7 @@
 
 .si-organize-section .si-o-content-section .si-o-c-item .si-o-c-item-title {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 22px;
     text-transform: capitalize;
     color: #33657E;
@@ -1081,7 +1081,7 @@
 
 .si-get-involved-section .si-gi-title-content h2 {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 32px;
     text-align: center;
     color: #33657E;
@@ -1103,7 +1103,7 @@
 
 .si-get-involved-section .si-gi-item .si-gi-item-title {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 22px;
     color: #33657E;
     margin-bottom: 8px;
@@ -1127,7 +1127,7 @@
 
 .si-get-involved-section .si-gi-item .si-gi-item-btn a {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     text-align: center;
     text-transform: capitalize;
@@ -1187,7 +1187,7 @@
     margin-top: 0;
     padding: .56em 0 .56em 1.11em;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 18px;
     text-transform: uppercase;
     color: #A06DAF;
@@ -1249,7 +1249,7 @@
 .si-client-conversion-section .si-cc-content .si-learn-link {
     background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 17px;
     color: #FFFFFF;
     padding: 10px 16px;

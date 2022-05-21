@@ -52,9 +52,10 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="post_title">{{ __('Category') }}</label>
-                                    <div class="select2-purple">
-                                        <select name="categories_id[]" id="categories_id" multiple="multiple" class="select2 form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }}" data-placeholder="{{ __('-- Select Category --') }}" data-dropdown-css-class="select2-purple">
+                                    <label for="categories_id">{{ __('Category') }}</label>
+                                    <div class="select2-info">
+                                        <select name="categories_id[]" id="categories_id" class="select2 form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }}" data-placeholder="{{ __('-- Select Category --') }}" data-dropdown-css-class="select2-info">
+                                            <option value="0">{{ __('-- Select Category --') }}</option>
                                             @forelse( $categories as $Key=>$Val )
                                                 <option value="{{ $Key }}" @if( !empty($post_categories_id) && in_array($Key, $post_categories_id) ) selected @endif>{{ $Val }}</option>
                                             @empty
@@ -62,11 +63,29 @@
                                         </select>
                                     </div>
 
-                                    @if ($errors->has('post_title'))
+                                    @if ($errors->has('categories_id'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('post_title') }}</strong>
+                                            <strong>{{ $errors->first('categories_id') }}</strong>
                                         </span>
                                     @endif
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div id="subcategories_list">
+                                    <div class="form-group">
+                                        <label for="subcategories_id">{{ __('SubCategory') }}</label>
+                                        <div class="select2-purple">
+                                            <select name="subcategories_id[]" id="subcategories_id" multiple="multiple" class="select2 form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }}" data-placeholder="{{ __('-- Select Category --') }}" data-dropdown-css-class="select2-purple">
+                                            </select>
+                                        </div>
+
+                                        @if ($errors->has('subcategories_id'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('subcategories_id') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
 
@@ -236,6 +255,43 @@ $(function () {
     <?php
     }
     ?>
+
+    // subcategories start
+    $(document).on('change', "#categories_id", function (e) {
+        e.preventDefault();
+
+        var category_id = $(this).val();
+        // console.log(category_id);
+
+        subcategories_data(category_id);
+    });
+
+    subcategories_data('@php echo !empty($post_categories_id[0]) ? $post_categories_id[0] : 0; @endphp', "@php echo $post_subcategories_id @endphp");
+
+    function subcategories_data(category_id, post_subcategories_id='')
+    {
+        // console.log(post_subcategories_id); return false;
+        $.ajax({
+            url:"<?php echo route('categories.subcategories'); ?>",
+            cache: false,
+            data: {
+                category_id: category_id,
+                post_subcategories_id: post_subcategories_id,
+            },
+            beforeSend: function() {
+                // Show image container
+                // jQuery("#loader").show();
+            },
+            success: function(response) {
+                jQuery('#subcategories_list').html(response.subcategories);
+            },
+            complete:function(data) {
+                // Hide image container
+                // jQuery("#loader").hide();
+            }
+        });
+    }
+    // subcategories end
 })
 </script>
 @endsection

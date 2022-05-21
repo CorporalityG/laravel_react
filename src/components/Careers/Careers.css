@@ -56,7 +56,7 @@
 
 .career-banner-section .career-banner-content h1 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 34px;
     text-align: center;
     text-transform: capitalize;
@@ -129,7 +129,7 @@
 
 .career-testimonial-section .career-testimonial-title h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 24px;
     text-transform: capitalize;
     color: #3C708E;
@@ -271,7 +271,7 @@
 
 .career-current-openings-section .career-co-title-row .career-co-title-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     text-transform: capitalize;
     color: #3C708E;
@@ -307,7 +307,7 @@
 
 .career-current-openings-section .career-current-openings-row .career-co-box .co-box-title {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     text-align: center;
     color: #3C708E;
@@ -380,7 +380,7 @@
 
 .career-internship-requirements-section .career-internship-requirements-row .career-ir-content h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 24px;
     text-transform: capitalize;
     color: #3C708E;
@@ -474,7 +474,7 @@
     display: flex;
     align-items: center;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 22px;
     color: #3C708E;
     width: 100%;
@@ -489,7 +489,7 @@
 .career-current-jobs-section .cc-jobs-accordion-main .cc-jobs-apply {
     background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     text-align: center;
     color: #FFFFFF;
@@ -558,7 +558,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     color: #33657E;
     justify-content: center;
@@ -570,7 +570,7 @@
     right: 20px;
     color: #646464;
     font-size: 10px;
-    font-weight: bold;
+    font-weight: 500;
     box-shadow: unset;
 }
 
@@ -655,7 +655,7 @@
 .cc-job-apply-modal .send-btn {
     background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), linear-gradient(180deg, #F49AF4 0%, #C21EC2 100%);
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     line-height: 16px;
     text-align: center;

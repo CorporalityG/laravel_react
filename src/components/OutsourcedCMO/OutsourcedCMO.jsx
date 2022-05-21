@@ -165,7 +165,7 @@ function OutsourcedCMO() {
                                 </ul>
                             </div>
 
-                            <div class="cmo-expect-btn" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                            <div className="cmo-expect-btn" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                                 <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Schedule a Call</a>
                             </div>
                         </div>

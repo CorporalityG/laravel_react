@@ -50,9 +50,8 @@
 }
 
 .head {
-  font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 28px;
   line-height: 37px;
   /* or 132% */
@@ -63,7 +62,6 @@
 }
 
 .Consultancypage-4-cont > p {
-  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -183,7 +181,6 @@
 
 .explore-btn{
     margin-left: 10px;
-    font-family: Roboto;
 font-style: normal;
 font-weight: 500;
 font-size: 16px;

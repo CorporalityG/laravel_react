@@ -24,7 +24,8 @@
                     <table id="custom-table" class="table table-bordered dataTable yajra-datatable">
                         <thead>
                             <tr>
-                                <th width="80%">Category</th>
+                                <th width="40%">Category</th>
+                                <th width="40%">Parent Category</th>
                                 <th width="5%">Posts</th>
                                 <th width="15%" data-orderable="false"><center>Action</center></th>
                             </tr>
@@ -49,6 +50,7 @@ jQuery(function () {
       columns: [
         // {data: 'DT_RowIndex', name: 'DT_RowIndex'},
         {data: 'category_name', name: 'category_name'},
+        {data: 'parent_category_name', name: 'parent_category_name'},
         {data: 'count', name: 'count'},
         {
           data: 'action', 

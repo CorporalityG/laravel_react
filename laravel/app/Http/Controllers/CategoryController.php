@@ -30,6 +30,9 @@ class CategoryController extends Controller
 
             return Datatables::of($categories)
                 // ->addIndexColumn()
+                ->addColumn('parent_category_name', function($category) {
+                    return !empty($category->parent) ? $category->parent->category_name : '-';
+                })
                 ->addColumn('count', function($category) {
                     return '<center>'.$category->posts->count().'</center>';
                 })
@@ -48,7 +51,7 @@ class CategoryController extends Controller
                         
                     return $actionBtn;
                 })
-                ->rawColumns(['count', 'action'])
+                ->rawColumns(['parent_category_name', 'count', 'action'])
                 ->make(true);
         }
         else {
@@ -63,7 +66,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('categories.create-edit');
+        $parentCategories = $this->getCategories();
+
+        return view('categories.create-edit', compact('parentCategories'));
     }
 
     /**
@@ -114,8 +119,9 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         $category = Category::findOrFail($category->id);
+        $parentCategories = $this->getCategories(0, $category->id);
 
-        return view('categories.create-edit', compact('category'));
+        return view('categories.create-edit', compact('category', 'parentCategories'));
     }
 
     /**
@@ -188,6 +194,7 @@ class CategoryController extends Controller
 
         $categoryName = $request->category_name;
 
+        $RS_Save->parent_id = $request->parent_category_id;
         $RS_Save->category_name = $categoryName;
         $RS_Save->category_slug = Str::slug($categoryName, '-');
         $RS_Save->description = $request->description;
@@ -195,5 +202,45 @@ class CategoryController extends Controller
         $result = $RS_Save->save();
 
         return $result;
+    }
+
+    /**
+     * get category
+    */
+    private function getCategories($parentID=0, $equalID=0)
+    {
+        return Category::where('parent_id', $parentID)
+                ->whereNotIn('id', [$equalID])
+                ->orderby('category_name', 'ASC')->get();
+    }
+
+
+    /**
+     * get subcategory
+    */
+    public function getSubcategories(Request $request)
+    {
+        $subcategories = array();
+
+        if( !empty($request->category_id) )
+        {
+            $subcategories = $this->getCategories($request->category_id);
+            $post_subcategories_id = array();
+
+            if( !empty($request->post_subcategories_id) )
+            {
+                $post_subcategories_id = explode(', ', $request->post_subcategories_id);
+            }
+            
+            if( $request->ajax() )
+            {
+                return response()
+                        ->json([
+                                'subcategories' => view('categories.subcategories_list', compact('subcategories', 'post_subcategories_id'))->render()
+                            ]);
+            }
+        }
+        
+        return $subcategories;
     }
 }

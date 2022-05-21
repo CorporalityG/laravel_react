@@ -69,9 +69,8 @@
 }
 
 .model-para > h2 {
-  font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 28px;
   line-height: 37px;
   /* or 132% */
@@ -82,7 +81,6 @@
 }
 
 .model-para > p {
-  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -124,7 +122,6 @@
 
 
 .Consultancydia > p {
-  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
