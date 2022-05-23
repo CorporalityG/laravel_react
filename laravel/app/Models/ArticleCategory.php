@@ -15,6 +15,7 @@ class ArticleCategory extends Model
      * @var array
      */
     protected $fillable = [
+                            'parent_id',
                             'category_name',
                             'category_slug',
                             'description'
@@ -24,5 +25,20 @@ class ArticleCategory extends Model
     public function articles()
     {
         return $this->belongsToMany(Article::class, 'category_article', 'category_id', 'article_id');
+    }
+
+    public function subcategoriesArticles()
+    {
+        return $this->belongsToMany(Article::class, 'subcategory_article', 'category_id', 'article_id');
+    }
+
+    // One level child
+    public function child() {
+        return $this->hasMany(self::class, 'parent_id');
+    }
+
+    // One level parent
+    public function parent() {
+        return $this->belongsTo(self::class, 'parent_id');
     }
 }

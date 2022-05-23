@@ -60,6 +60,16 @@ class PostController extends Controller
                     
                     return $post_categories;
                 })
+                ->addColumn('subcategory', function($post) {
+                    $post_subcategories = array();
+                    if( !empty($post->subcategories) ):
+                        foreach( $post->subcategories as $category ):
+                            array_push($post_subcategories, ' '.$category->category_name);
+                        endforeach;
+                    endif;
+                    
+                    return $post_subcategories;
+                })
                 ->addColumn('created_at', function($post) {
                     return $post->getCreatedAt($post->created_at);
                 })
@@ -72,7 +82,7 @@ class PostController extends Controller
 
                     return $actionBtn;
                 })
-                ->rawColumns(['category', 'created_at', 'action'])
+                ->rawColumns(['category', 'subcategory', 'created_at', 'action'])
                 ->make(true);
         }
         else {
@@ -187,19 +197,13 @@ class PostController extends Controller
         $post_subcategories_id = array();
 
         if( !empty($post->categories) ):
-            if( !empty($post->categories[0]->parent) )
-            {
-                array_push($post_categories_id, $post->categories[0]->parent->id);
-            }
-            else
-            {
-                if( !empty($post->categories[0]) )
-                {
-                    array_push($post_categories_id, $post->categories[0]->id);
-                }
-            }
-
             foreach( $post->categories as $category ):
+                array_push($post_categories_id, $category->id);
+            endforeach;
+        endif;
+
+        if( !empty($post->subcategories) ):
+            foreach( $post->subcategories as $category ):
                 array_push($post_subcategories_id, $category->id);
             endforeach;
 
@@ -303,14 +307,8 @@ class PostController extends Controller
 
         $result = $RS_Save->save();
 
-        if( !empty($request->subcategories_id) )
-        {
-            $RS_Save->subcategories()->sync($request->subcategories_id);
-        }
-        else
-        {
-            $RS_Save->categories()->sync($request->categories_id);
-        }
+        $RS_Save->categories()->sync($request->categories_id);
+        $RS_Save->subcategories()->sync($request->subcategories_id);
 
         return $result;
     }

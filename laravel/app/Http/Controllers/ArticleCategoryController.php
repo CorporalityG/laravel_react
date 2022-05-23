@@ -22,9 +22,13 @@ class ArticleCategoryController extends Controller
             $categories = ArticleCategory::latest()->get();
 
             return Datatables::of($categories)
-                // ->addIndexColumn()
+                ->addColumn('parent_category_name', function($category) {
+                    return !empty($category->parent) ? $category->parent->category_name : '-';
+                })
                 ->addColumn('count', function($category) {
-                    return '<center>'.$category->articles->count().'</center>';
+                    $articleCount = empty($category->parent_id) ? $category->articles->count() : $category->subcategoriesArticles->count();
+
+                    return '<center>'.$articleCount.'</center>';
                 })
                 ->addColumn('action', function($category) {
                     $actionBtn = '<center>
@@ -51,7 +55,9 @@ class ArticleCategoryController extends Controller
      */
     public function create()
     {
-        return view('articles.categories.create-edit');
+        $parentCategories = $this->getCategories();
+
+        return view('articles.categories.create-edit', compact('parentCategories'));
     }
 
     /**
@@ -102,8 +108,9 @@ class ArticleCategoryController extends Controller
     public function edit(ArticleCategory $articleCategory)
     {
         $category = ArticleCategory::findOrFail($articleCategory->id);
+        $parentCategories = $this->getCategories(0, $articleCategory->id);
 
-        return view('articles.categories.create-edit', compact('category'));
+        return view('articles.categories.create-edit', compact('category', 'parentCategories'));
     }
 
     /**
@@ -175,6 +182,7 @@ class ArticleCategoryController extends Controller
 
         $categoryName = $request->category_name;
 
+        $RS_Save->parent_id = $request->parent_category_id;
         $RS_Save->category_name = $categoryName;
         $RS_Save->category_slug = Str::slug($categoryName, '-');
         $RS_Save->description = $request->description;
@@ -182,5 +190,45 @@ class ArticleCategoryController extends Controller
         $result = $RS_Save->save();
 
         return $result;
+    }
+
+    /**
+     * get category
+    */
+    private function getCategories($parentID=0, $equalID=0)
+    {
+        return ArticleCategory::where('parent_id', $parentID)
+                ->whereNotIn('id', [$equalID])
+                ->orderby('category_name', 'ASC')->get();
+    }
+
+
+    /**
+     * get subcategory
+    */
+    public function getSubcategories(Request $request)
+    {
+        $subcategories = array();
+
+        if( !empty($request->category_id) )
+        {
+            $subcategories = $this->getCategories($request->category_id);
+            $article_subcategories_id = array();
+
+            if( !empty($request->article_subcategories_id) )
+            {
+                $article_subcategories_id = explode(', ', $request->article_subcategories_id);
+            }
+            
+            if( $request->ajax() )
+            {
+                return response()
+                        ->json([
+                                'subcategories' => view('articles.categories.subcategories_list', compact('subcategories', 'article_subcategories_id'))->render()
+                            ]);
+            }
+        }
+        
+        return $subcategories;
     }
 }

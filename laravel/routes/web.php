@@ -41,6 +41,7 @@ Route::group(['middleware'=>'auth'], function()
     Route::get('post-slug', [PostController::class, 'getSlug'])->name('posts.slug');
 
     Route::resources(['article-categories' => ArticleCategoryController::class]);
+    Route::get('article-subcategories', [ArticleCategoryController::class, 'getSubcategories'])->name('article-categories.subcategories');
     Route::resources(['article-tags' => ArticleTagController::class]);
     Route::resources(['articles' => ArticleController::class]);
     Route::get('article-slug', [ArticleController::class, 'getSlug'])->name('articles.slug');

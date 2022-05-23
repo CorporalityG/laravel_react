@@ -37,7 +37,7 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-md-6 align-self-center">
-                                            <h4 class="card-title">{{ __('Post List') }} ({{ $category->posts->count() }})</h4>
+                                            <h4 class="card-title">{{ __('Post List') }} ({{ empty($category->parent_id) ? $category->posts->count() : $category->subcategoriesPosts->count() }})</h4>
                                         </div>
                                         <div class="col-md-6">
                                         </div>
@@ -46,11 +46,19 @@
 
                                 <div class="card-body">
                                     <ul>
-                                        @forelse( $category->posts as $post )
-                                            <li class="mb-2"><a href="{{ route('posts.show', $post->id) }}" class="text-dark"><i class="fas fa-link mr-2"></i> {{ $post->post_title }}</a></li>
-                                        @empty
-                                            {{ __('Post not found') }}
-                                        @endforelse
+                                        @if( empty($category->parent_id) )
+                                            @forelse( $category->posts as $post )
+                                                <li class="mb-2"><a href="{{ route('posts.show', $post->id) }}" class="text-dark"><i class="fas fa-link mr-2"></i> {{ $post->post_title }}</a></li>
+                                            @empty
+                                                {{ __('Post not found') }}
+                                            @endforelse
+                                        @else
+                                            @forelse( $category->subcategoriesPosts as $post )
+                                                <li class="mb-2"><a href="{{ route('posts.show', $post->id) }}" class="text-dark"><i class="fas fa-link mr-2"></i> {{ $post->post_title }}</a></li>
+                                            @empty
+                                                {{ __('Post not found') }}
+                                            @endforelse
+                                        @endif
                                     </ul>
                                 </div>
                             </div>

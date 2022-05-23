@@ -27,6 +27,9 @@ class ArticleController extends Controller
                 ->with(['categories' => function ($q) {
                         $q->select('category_name')->orderBy('category_name', 'ASC');
                     }])
+                ->with(['subcategories' => function ($q) {
+                        $q->select('category_name')->orderBy('category_name', 'ASC');
+                    }])
                 ->get();
 
             return Datatables::of($articles)
@@ -40,6 +43,16 @@ class ArticleController extends Controller
                     endif;
                     
                     return $article_categories;
+                })
+                ->addColumn('subcategory', function($article) {
+                    $article_subcategories = array();
+                    if( !empty($article->subcategories) ):
+                        foreach( $article->subcategories as $category ):
+                            array_push($article_subcategories, ' '.$category->category_name);
+                        endforeach;
+                    endif;
+                    
+                    return $article_subcategories;
                 })
                 ->addColumn('tag', function($article) {
                     $article_tags = array();
@@ -63,7 +76,7 @@ class ArticleController extends Controller
 
                     return $actionBtn;
                 })
-                ->rawColumns(['category','tag', 'created_at', 'action'])
+                ->rawColumns(['category', 'subcategory', 'tag', 'created_at', 'action'])
                 ->make(true);
         }
         else {
@@ -79,8 +92,10 @@ class ArticleController extends Controller
     public function create()
     {
         $categories = $this->categories();
+        $article_categories_id = array();
+        $article_subcategories_id = '';
 
-        return view('articles.create-edit', compact('categories'));
+        return view('articles.create-edit', compact('categories', 'article_categories_id', 'article_subcategories_id'));
     }
 
     /**
@@ -145,14 +160,24 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        $article = Article::with('categories:id')->findOrFail($article->id);
+        $article = Article::with(['categories:id', 'subcategories:id'])->findOrFail($article->id);
 
         $article_categories_id = array();
+        $article_subcategories_id = array();
         $article_tags_id = array();
+
         if( !empty($article->categories) ):
             foreach( $article->categories as $category ):
                 array_push($article_categories_id, $category->id);
             endforeach;
+        endif;
+
+        if( !empty($article->subcategories) ):
+            foreach( $article->subcategories as $category ):
+                array_push($article_subcategories_id, $category->id);
+            endforeach;
+
+            $article_subcategories_id = implode(', ', $article_subcategories_id);
         endif;
 
         if( !empty($article->tags) ):
@@ -163,7 +188,7 @@ class ArticleController extends Controller
 
         $categories = $this->categories();
 
-        return view('articles.create-edit', compact('article', 'article_categories_id','article_tags_id', 'categories'));
+        return view('articles.create-edit', compact('article', 'article_categories_id', 'article_subcategories_id', 'article_tags_id', 'categories'));
     }
 
     /**
@@ -259,6 +284,7 @@ class ArticleController extends Controller
         $result = $RS_Save->save();
 
         $RS_Save->categories()->sync($request->categories_id);
+        $RS_Save->subcategories()->sync($request->subcategories_id);
 
         return $result;
     }
@@ -287,9 +313,9 @@ class ArticleController extends Controller
     /**
      * get a listing of the category.
      */
-    private function categories()
+    private function categories($parentID=0)
     {
-        return ArticleCategory::orderby('category_name', 'ASC')->pluck('category_name', 'id');
+        return ArticleCategory::where('parent_id', $parentID)->orderby('category_name', 'ASC')->pluck('category_name', 'id');
     }
 
     private function tags()

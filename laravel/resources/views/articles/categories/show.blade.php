@@ -37,7 +37,7 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-md-6 align-self-center">
-                                            <h4 class="card-title">{{ __('Article List') }} ({{ $category->articles->count() }})</h4>
+                                            <h4 class="card-title">{{ __('Article List') }} ({{ empty($category->parent_id) ? $category->articles->count() : $category->subcategoriesArticles->count() }})</h4>
                                         </div>
                                         <div class="col-md-6">
                                         </div>
@@ -46,11 +46,19 @@
 
                                 <div class="card-body">
                                     <ul>
-                                        @forelse( $category->articles as $article )
-                                            <li class="mb-2"><a href="{{ route('articles.show', $article->id) }}" class="text-dark"><i class="fas fa-link mr-2"></i> {{ $article->article_title }}</a></li>
-                                        @empty
-                                            {{ __('Article not found') }}
-                                        @endforelse
+                                        @if( empty($category->parent_id) )
+                                            @forelse( $category->articles as $article )
+                                                <li class="mb-2"><a href="{{ route('articles.show', $article->id) }}" class="text-dark"><i class="fas fa-link mr-2"></i> {{ $article->article_title }}</a></li>
+                                            @empty
+                                                {{ __('Article not found') }}
+                                            @endforelse
+                                        @else
+                                            @forelse( $category->subcategoriesArticles as $article )
+                                                <li class="mb-2"><a href="{{ route('articles.show', $article->id) }}" class="text-dark"><i class="fas fa-link mr-2"></i> {{ $article->article_title }}</a></li>
+                                            @empty
+                                                {{ __('Article not found') }}
+                                            @endforelse
+                                        @endif
                                     </ul>
                                 </div>
                             </div>

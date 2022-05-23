@@ -45,6 +45,11 @@ class Article extends Model
         return $this->belongsToMany(ArticleCategory::class, 'category_article', 'article_id', 'category_id');
     }
 
+    public function subcategories()
+    {
+        return $this->belongsToMany(ArticleCategory::class, 'subcategory_article', 'article_id', 'category_id');
+    }
+
     public function tags()
     {
         return $this->belongsToMany(ArticleTag::class, 'tag_article', 'article_id', 'tag_id');

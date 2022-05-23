@@ -34,7 +34,9 @@ class CategoryController extends Controller
                     return !empty($category->parent) ? $category->parent->category_name : '-';
                 })
                 ->addColumn('count', function($category) {
-                    return '<center>'.$category->posts->count().'</center>';
+                    $postCount = empty($category->parent_id) ? $category->posts->count() : $category->subcategoriesPosts->count();
+                    
+                    return '<center>'.$postCount.'</center>';
                 })
                 ->addColumn('action', function($category) {
                     /*$deleteLink = '<form action="'.route('categories.destroy', $category->id).'" method="POST" class="d-inline-block">

@@ -24,8 +24,9 @@
                     <table id="custom-table" class="table table-bordered dataTable yajra-datatable">
                         <thead>
                             <tr>
-                                <th width="50%">Article Title</th>
-                                <th width="20%">Category</th>
+                                <th width="40%">Article Title</th>
+                                <th width="15%">Category</th>
+                                <th width="15%">SubCategory</th>
                                 <th width="15%">Published</th>
                                 <th width="15%"><center>Action</center></th>
                             </tr>
@@ -52,6 +53,7 @@ jQuery(function () {
         // {data: 'DT_RowIndex', name: 'DT_RowIndex'},
         {data: 'article_title', name: 'article_title'},
         {data: 'category', name: 'category'},
+        {data: 'subcategory', name: 'subcategory'},
         {data: 'created_at', name: 'created_at'},
         {
           data: 'action', 
