@@ -12,8 +12,8 @@ export const FinTechItem = (props) => {
     return (
         <div className="col-lg-6 fintech-item-col">
             <div className='fintech-item'>
-                <Link to={`/article/${props.slug}`}>{props.title}</Link>
-                <div className='category-date'><span className='category'>{props.category}</span> <span className='date'>{dateFormat(props.date)}</span></div>
+                <Link to={`/${props.slug}`}>{props.title}</Link>
+                <div className='category-date'><span className='category'>{props.subcategories}</span> <span className='date'>{dateFormat(props.date)}</span></div>
             </div>
         </div>
     )

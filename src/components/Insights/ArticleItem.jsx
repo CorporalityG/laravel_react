@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 export const ArticleItem = (props) => {
     return (
-        <div className="col-lg-3 col-sm-6 insight-item-col">
+        <div className="insight-item-col">
             <div className="insight-item">
                 {
                     props.thumbnail ?
-                        <Link to={`/article/${props.slug}`}>
+                        <Link to={`/${props.slug}`}>
                             <img src={props.thumbnail} alt={props.title} />
                         </Link>
                         : null
@@ -19,7 +19,13 @@ export const ArticleItem = (props) => {
                         : null
                 }
 
-                <Link to={`/article/${props.slug}`} className="insight-item-title">{props.title}</Link>
+                <Link to={`/${props.slug}`} className="insight-item-title">{props.title}</Link>
+
+                {
+                    props.shortDescription ?
+                        <div className="insight-item-description" dangerouslySetInnerHTML={{ __html: props.shortDescription }}></div>
+                        : null
+                }
             </div>
         </div>
     )

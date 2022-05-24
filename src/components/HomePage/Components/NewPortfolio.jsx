@@ -159,11 +159,11 @@ const NewPortfolio = () => {
                             
                         </Carousel>
 
-                        <div className="portfolio-count" data-aos="fade-up" data-aos-duration="2200">
+                        <div className="portfolio-count">
                             <span className="big-count">0{index + 1}</span>/<span className="small-count">{totalSlide}</span>
                         </div>
 
-                        <div className="portfolio-btn" data-aos="fade-up" data-aos-duration="2200"><span className="portfolio-view-all" onClick={() => { navigate("/clients"); topHandle(); }}>View All Clients</span></div>
+                        <div className="portfolio-btn"><span className="portfolio-view-all" onClick={() => { navigate("/clients"); topHandle(); }}>View All Clients</span></div>
                     </div>
                 </div>
             </div>

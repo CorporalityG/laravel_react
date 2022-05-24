@@ -40,7 +40,7 @@ class PostController extends Controller
                 }
             }
 
-            $results = $qry->with(['categories'])->paginate(6);
+            $results = $qry->with(['categories'])->with(['subcategories'])->paginate(6);
             return $results;
         }
 
@@ -475,6 +475,52 @@ class PostController extends Controller
         if( $request->is('api/*') )
         {
             return Post::inRandomOrder()->limit(3)->get();
+        }
+    }
+
+    /* CSuit subcategory */
+    public function getCSuitSubCatBlog(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $qry = Post::latest();
+
+            if( !empty($request->category) )
+            {
+                $category = Category::with('subcategoriesPosts:id')->where('category_slug', $request->category)->first();
+                
+                $posts = array_column($category->subcategoriesPosts->toArray(), 'id');
+                $qry->whereIn('id', $posts);
+            }
+
+            $results = $qry->with(['categories'])->paginate(6);
+            return $results;
+        }
+    }
+
+    /* CSuit category */
+    public function getCSuitCatBlog(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $qry = Post::inRandomOrder();
+            
+            if( !empty($request->category) )
+            {
+                $category = Category::with('posts:id')
+                            ->where('category_slug', $request->category)->first();
+                $catPosts = array_column($category->posts->toArray(), 'id');
+
+                $subCategory = Category::with('subcategoriesPosts:id')
+                            ->where('category_slug', $request->subcategory)->first();
+                $subCatPosts = array_column($subCategory->subcategoriesPosts->toArray(), 'id');
+                
+                $posts = array_diff($catPosts, $subCatPosts);
+                $qry->whereIn('id', $posts);
+            }
+
+            $results = $qry->with(['categories', 'subcategories'])->paginate(6);
+            return $results;
         }
     }
 }

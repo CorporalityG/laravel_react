@@ -1,36 +1,28 @@
 import React, { useEffect, useState } from 'react'
 import './Insights.css'
-import { Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config'
 import { FinTechItem } from './FinTechItem'
-import { MeditechItem } from './MeditechItem'
 import { ArticleItem } from './ArticleItem'
-
-function truncate(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
-}
+import RecentBlogs from './RecentBlogs'
 
 function CooInsights() {
 
-    const [latestArticles, setLatestArticles] = useState([]);
+    const params = useParams();
+    const subCategory = 'coo';
+
     const [latestArticles2, setLatestArticles2] = useState([]);
-    const [constructionsArticles, setConstructionsArticles] = useState([]);
-    const [finTechArticles, setFinTechArticles] = useState([]);
-    const [mediTechArticles, setMediTechArticles] = useState([]);
+    const [csuitBlogs, setCSuitBlogs] = useState([]);
+    const [blogs, setBlogs] = useState([]);
+    const [paginationLinks, setPaginationLinks] = useState([]);
+
+    let linkLabel = '';
 
     useEffect(() => {
-        getLatestArticles();
         getLatestArticles2();
-        getConstructionsArticles()
-        getFinTechArticles()
-        getMediTechArticles()
-    }, []);
-
-    async function getLatestArticles() {
-        let result = await fetch(`${API_BASE_URL}/latest-articles`);
-        result = await result.json();
-        setLatestArticles(result);
-    }
+        getCSuitBlogs()
+        getBlogData();
+    }, [params]);
 
     async function getLatestArticles2() {
         let result = await fetch(`${API_BASE_URL}/latest-articles-2`);
@@ -38,167 +30,82 @@ function CooInsights() {
         setLatestArticles2(result);
     }
 
-    async function getConstructionsArticles() {
-        let result = await fetch(`${API_BASE_URL}/category-articles/constructions`);
+    async function getBlogData(pageLink = '') {
+        const categorySlug = "category=" + subCategory;
+        const apiLink = (pageLink === '' ?
+            API_BASE_URL + "/csuit-subcat-posts?" + categorySlug :
+            pageLink + "&" + categorySlug
+        );
+        let result = await fetch(apiLink);
         result = await result.json();
-        setConstructionsArticles(result);
+        setBlogs(result.data);
+        setPaginationLinks(result.links);
     }
 
-    async function getFinTechArticles() {
-        let result = await fetch(`${API_BASE_URL}/category-articles/fintech`);
-        result = await result.json();
-        setFinTechArticles(result);
+    const paginate = (pageNumber) => {
+        if (pageNumber) {
+            getBlogData(pageNumber);
+        }
+        const topScroll = document.getElementById('insights-latest-section');
+        window.scrollTo({
+            top: topScroll.offsetTop - 90,
+            behavior: "smooth"
+        });
     }
 
-    async function getMediTechArticles() {
-        let result = await fetch(`${API_BASE_URL}/category-articles/meditech`);
+    async function getCSuitBlogs() {
+        const categorySlug = "category=csuit&subcategory=" + subCategory;
+        const apiLink = (API_BASE_URL + "/csuit-cat-posts?" + categorySlug);
+
+        let result = await fetch(apiLink);
         result = await result.json();
-        setMediTechArticles(result);
+        setCSuitBlogs(result.data);
     }
 
     return (
         <div className="insights">
 
-            <div className="insights-latest-section">
-                <div className='container-fluid px-0'>
-                    {
-                        latestArticles ?
-                            <>
-                                {
-                                    latestArticles.slice(0, 1).map((item) =>
-                                        <div key={`${item.id}`} className="row latest-insight-row">
-                                            <div className="col-lg-6 px-lg-0 latest-insight-col">
-                                                <div className="insight-content-first">
-                                                    {
-                                                        item.categories ?
-                                                            <>
-                                                                {
-                                                                    item.categories.map((category) =>
-                                                                        <Link key={`${category.id}`} to={`/category/${category.category_slug}`} className="category">
-                                                                            {category.category_name}
-                                                                        </Link>
-                                                                    )
-                                                                }
-                                                            </>
-                                                            : null
-                                                    }
-                                                    <h3 className="title-first">
-                                                        <Link to={`/article/${item.article_slug}`}>{item.article_title}</Link>
-                                                    </h3>
-                                                    <p>{item.article_subtitle}</p>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 pl-lg-0">
-                                                <div className="insight-banner-first">
-                                                    <Link to={`/article/${item.article_slug}`}>
-                                                        {item.article_image && <img src={`${API_IMG_URL + item.article_image}`} alt={item.article_title} className="latest-insight-img" />}
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                }
-                            </>
-                            : null
-                    }
-                </div>
-
+            <div id="insights-latest-section" className="insights-latest-section">
                 <div className="container-lg">
                     {
-                        latestArticles ?
-                            <div className="row latest-insight-boxes-row">
-                                {
-                                    latestArticles.slice(1, 5).map((item) =>
-                                        <ArticleItem
-                                            key={`${item.id}`}
-                                            thumbnail={`${item.article_image ? API_IMG_URL + item.article_image : ''}`}
-                                            title={`${item.article_title}`}
-                                            slug={`${item.article_slug}`}
-                                            category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
-                                            catSlug={item.categories[0] !== undefined ? item.categories[0].category_slug : null}
-                                        />
-                                    )
-                                }
-                            </div>
-                            : null
-                    }
-                </div>
-            </div>
-
-            <div className="insights-constructions-section">
-                <div className="container-lg">
-                    <div className="row insights-c-title-row">
-                        <div className="col-lg-12">
-                            <div className="insights-heading">
-                                <Link to="/category/constructions">Constructions <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
-                            </div>
-                        </div>
-                    </div>
-
-                    {
-                        constructionsArticles ?
+                        blogs ?
                             <>
-                                {
-                                    constructionsArticles.slice(0, 1).map((item) =>
-                                        <div key={`${item.id}`} className="row insights-c-title-row">
-                                            <div className="col-lg-6">
-                                                <div className="c-banner-first">
-                                                    <Link to={`/article/${item.article_slug}`}>
-                                                        {item.article_image && <img src={`${API_IMG_URL + item.article_image}`} alt={item.article_title} className="latest-insight-img" />}
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 c-content-first-col">
-                                                <div className="c-content-first">
-                                                    <Link to="/category/constructions" className="category">Constructions</Link>
-                                                    <h3 className="title-first">
-                                                        <Link to={`/article/${item.article_slug}`}>{`${item.article_title}`}</Link>
-                                                    </h3>
-                                                    <p><span dangerouslySetInnerHTML={{ __html: truncate(item.article_short_description ?? item.article_description, 175) }}></span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                }
-                            </>
-                            : null
-                    }
-
-                    {
-                        constructionsArticles ?
-                            <div className="row c-insight-boxes-row">
-                                {
-                                    constructionsArticles.slice(1, 4).map((item) =>
-                                        <ArticleItem
-                                            key={`${item.id}`}
-                                            thumbnail={`${item.article_image ? API_IMG_URL + item.article_image : ''}`}
-                                            title={`${item.article_title}`}
-                                            slug={`${item.article_slug}`}
-                                            category={`Constructions`}
-                                            catSlug={`constructions`}
-                                        />
-                                    )
-                                }
-
-                                <div className="col-lg-3 col-sm-6 latest-insight-box-col c-insight-col-box">
+                                <div className="latest-insight-boxes-row">
                                     {
-                                        constructionsArticles.slice(4, 6).map((item) =>
-                                            <div key={`${item.id}`} className="row c-insight-col-row">
-                                                <div className="col-lg-4">
-                                                    <Link to={`/article/${item.article_slug}`}>
-                                                        {item.article_image && <img src={`${API_IMG_URL + item.article_image}`} alt={item.article_title} className="latest-insight-img" />}
-                                                    </Link>
-                                                </div>
-                                                <div className="col-lg-8">
-                                                    <div className="c-insight-col-title">
-                                                        <Link to={`/article/${item.article_slug}`}>{item.article_title}</Link>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        blogs.map((item) =>
+                                            <ArticleItem
+                                                key={`${item.id}`}
+                                                thumbnail={`${item.post_image ? API_IMG_URL + item.post_image : ''}`}
+                                                title={`${item.post_title}`}
+                                                slug={`${item.post_slug}`}
+                                                shortDescription={`${item.post_short_description ? '<p>'+item.post_short_description+'</p>' : ''}`}
+                                                category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
+                                                catSlug={item.categories[0] !== undefined ? item.categories[0].category_slug : null}
+                                            />
                                         )
                                     }
                                 </div>
-                            </div>
+
+                                {
+                                    paginationLinks.length > 3 ?
+                                        <div className="latest-insight-pagination-container">
+                                            {
+                                                paginationLinks.map((link, index, { length, lastIndex = length - 1 }) => {
+                                                    linkLabel = `${link.label}`;
+                                                    if (index === 0) {
+                                                        linkLabel = <i className="fa fa-angle-left"></i>;
+                                                    }
+                                                    else if (index === lastIndex) {
+                                                        linkLabel = <i className="fa fa-angle-right"></i>;
+                                                    }
+                                                    return <div key={index} className={`pagination-number${(index === 0) ? ' pagination-arrow pagination-prev' : ''} ${(index === lastIndex) ? ' pagination-arrow pagination-next' : ''} ${(link.active === true) ? 'pagination-active' : ''}`} onClick={() => paginate(link.url)}>{linkLabel}</div>
+                                                }
+                                                )
+                                            }
+                                        </div>
+                                        : null
+                                }
+                            </>
                             : null
                     }
                 </div>
@@ -262,19 +169,40 @@ function CooInsights() {
                     <div className="row insights-fintech-row">
                         <div className='col-lg-9 col-md-8'>
                             <div className="insights-heading">
-                                <Link to="/category/fintech">FinTech <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
+                                <Link to="/category/csuit">CSuit <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
                             </div>
 
                             {
-                                finTechArticles ?
+                                csuitBlogs ?
                                     <div className='row insights-news-row'>
                                         {
-                                            finTechArticles.map((item) =>
+                                            csuitBlogs.slice(0, 6).map((item) =>
                                                 <FinTechItem
                                                     key={`${item.id}`}
-                                                    title={`${item.article_title}`}
-                                                    slug={`${item.article_slug}`}
-                                                    category={`FinTech`}
+                                                    title={`${item.post_title}`}
+                                                    slug={`${item.post_slug}`}
+                                                    category={
+                                                        item.categories ?
+                                                            <>
+                                                                {
+                                                                    item.categories.map((item) =>
+                                                                        <Link key={`${item.id}`} to={`/category/${item.category_slug}`}>{item.category_name}, </Link>
+                                                                    )
+                                                                }
+                                                            </>
+                                                            : null
+                                                    }
+                                                    subcategories={
+                                                        item.subcategories ?
+                                                            <>
+                                                                {
+                                                                    item.subcategories.map((item, index, subcategoriesCount) =>
+                                                                        <Link key={`${item.id}`} to={`/category/${item.category_slug}`}>{item.category_name}{index !== subcategoriesCount.length - 1 ? ',' : ''} </Link>
+                                                                    )
+                                                                }
+                                                            </>
+                                                            : null
+                                                    }
                                                     date={`${item.created_at}`}
                                                 />
                                             )
@@ -292,7 +220,7 @@ function CooInsights() {
                             {
                                 latestArticles2 ?
                                     <div className='latest-insight-item'>
-                                        <Link to={`/${latestArticles2.article_slug}`}>{latestArticles2.article_title}</Link>
+                                        <Link to={`/article/${latestArticles2.article_slug}`}>{latestArticles2.article_title}</Link>
                                         <div className='posted-date'>Posted <span className='date'>{latestArticles2.timeAgo}</span></div>
                                     </div>
                                     : null
@@ -302,61 +230,7 @@ function CooInsights() {
                 </div>
             </div>
 
-            <div className="insights-meditech-explore-section">
-                <div className="container-lg">
-                    <div className="row insights-me-row">
-                        <div className='col-lg-6'>
-                            <div className="insights-heading">
-                                <Link to="/category/meditech">Meditech <svg viewBox="0 0 10 16" focusable="false"><path d="m1.83288 15c-.20616 0-.42731-.0737-.58971-.2361-.324226-.3242-.324226-.8402 0-1.1645l5.58722-5.60223-5.58722-5.58722c-.324226-.32422-.324226-.84022 0-1.16445.32422-.324795.84022-.324795 1.16444-.01497l6.17694 6.17694c.1624.1624.23612.36857.23612.58971s-.08869.4273-.23612.58971l-6.17694 6.17691c-.1624.1624-.36857.2361-.57473.2361z" fill="currentColor" stroke="currentColor" strokeWidth=".831256"></path></svg></Link>
-                            </div>
-                            {
-                                mediTechArticles ?
-                                    <>
-                                        {
-                                            mediTechArticles.slice(0, 3).map((item) =>
-                                                <MeditechItem
-                                                    key={`${item.id}`}
-                                                    thumbnail={`${item.article_image ? API_IMG_URL + item.article_image : ''}`}
-                                                    title={`${item.article_title}`}
-                                                    slug={`${item.article_slug}`}
-                                                    category={`Meditech`}
-                                                    catSlug={`meditech`}
-                                                />
-                                            )
-                                        }
-                                    </>
-                                    : null
-                            }
-                        </div>
-
-                        <div className='col-lg-3 col-sm-6'>
-                            <div className="insights-heading">
-                                <Link to="/">Explore</Link>
-                            </div>
-
-                            <div className='explore-list'>
-                                <Link to="/">How we create Impact</Link>
-                                <Link to="/">Our Mini Events</Link>
-                                <Link to="/">Become a Forum Partner</Link>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3 col-sm-6">
-                            <div className="insights-me-subscribe">
-                                <img src={`${BASE_URL}/img/logo.png`} alt="logo" />
-                                <div className='insights-subscribe-title'>Subscribe for updates</div>
-                                <p>A weekly update of what’s on the Corporality Global</p>
-                                <div className='insights-mes-form'>
-                                    <input type="email" name="emailid" placeholder="Email address" className="emailid" />
-                                    <button type="submit" className="insights-mes-btn">
-                                        <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z" fill="currentColor"></path></svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <RecentBlogs />
         </div>
     )
 }

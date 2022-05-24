@@ -29,20 +29,83 @@ function ServiceInsights() {
                 <div className='container-lg'>
                     <div className='row si-a-row'>
                         <div className='col-lg-3 col-sm-4 si-a-banner'>
-                            <img src={`${BASE_URL}/img/ServiceInsights/priya_mam.png`} alt="Priya" />
+                            <img src={`${BASE_URL}/img/ServiceInsights/Global-B2B-Conference-2022.png`} alt="Priya" />
                         </div>
                         <div className='col-lg-9 col-sm-8 si-a-content'>
-                            <div className='si-a-c-subtitle'>Coporlaioty at Lorem</div>
-                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
-                            <span>
-                                <Link to="/" className="si-link">Watch Now <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
-                            </span>
+                            <div className='si-a-desc'>
+                                <div className='si-a-date'>[ September 1-2 , Sydney ]</div>
+                                <h2>Global B2B Conference 2022</h2>
+                                <div className='si-a-organised'>Organised by Corporality</div>
+                            </div>
+                            <div className='si-a-btn'>
+                                <Link to={`/`} className="si-a-link">Register Now</Link>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {
+            <div className='si-high-tech-industry-section'>
+                <div className='container-lg'>
+                    <div className='row'>
+                        <div className='col-lg-6'>
+                            <div className='si-hti-content'>
+                                <h2>Go To Marketing Strategy Guide</h2>
+
+                                <p>Learning how to develop an effective marketing strategy for the business can capitalize on development potential.</p>
+                                <p>For marketing strategies to properly match with bigger business objectives, a thorough understanding of context, audience targeting, and the buyer's journey is required. To add to the complication, some marketers must optimize orever-changing business goals, which vary based on the age of the organization and the product or service being offered.</p>
+                                <p>To save you both time and money, we've created a framework that can help you to your business.</p>
+                                <p>We have a lot to explore.</p>
+                                <p>Let's get started now!</p>
+
+                                <Link to={`/`} className="si-link">Read More <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
+                            </div>
+                        </div>
+
+                        <div className='col-lg-6'>
+                            <div className='si-hti-video'>
+                                <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                <div className='si-hti-v-content'>
+                                    <div className='si-hti-video-title'>Transforming an industry that transformed the world</div>
+                                    <Link to="/" className="si-link">View Transcript</Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='si-high-tech-industry-section'>
+                <div className='container-lg'>
+                    <div className='row'>
+                        <div className='col-lg-6'>
+                            <div className='si-hti-video'>
+                                <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                <div className='si-hti-v-content'>
+                                    <div className='si-hti-video-title'>Transforming an industry that transformed the world</div>
+                                    <Link to="/" className="si-link">View Transcript</Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='col-lg-6'>
+                            <div className='si-hti-content'>
+                                <h2>Go To Marketing Strategy Guide</h2>
+
+                                <p>Learning how to develop an effective marketing strategy for the business can capitalize on development potential.</p>
+                                <p>For marketing strategies to properly match with bigger business objectives, a thorough understanding of context, audience targeting, and the buyer's journey is required. To add to the complication, some marketers must optimize orever-changing business goals, which vary based on the age of the organization and the product or service being offered.</p>
+                                <p>To save you both time and money, we've created a framework that can help you to your business.</p>
+                                <p>We have a lot to explore.</p>
+                                <p>Let's get started now!</p>
+
+                                <Link to={`/`} className="si-link">Read More <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* {
                 latestArticles ?
                     <div className='si-high-tech-industry-section'>
                         {
@@ -72,47 +135,6 @@ function ServiceInsights() {
                                                     <div className='si-hti-video-title'>Transforming an industry that transformed the world</div>
                                                     <Link to="/" className="si-link">View Transcript</Link>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        }
-                    </div>
-                    : null
-            }
-
-            {/* {
-                latestArticles ?
-                    <div className='si-high-tech-blog-section'>
-                        {
-                            latestArticles.slice(1, 2).map((item) =>
-                                <div key={`${item.id}`} className='container-lg'>
-                                    <div className='row'>
-                                        <div className='col-lg-12'>
-                                            <div className='si-htb-title'>
-                                                <h2>{item.article_title}</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className='row'>
-                                        <div className='col-lg-6'>
-                                            <div className='si-htb-content'>
-                                                <span dangerouslySetInnerHTML={{ __html: (item.article_short_description) }}></span>
-
-                                                <Link to={`/article/${item.article_slug}`} className="si-front-back-link">
-                                                    <div className='si-link-front'>
-                                                        <span>Learn more</span>
-                                                    </div>
-                                                    <div className='si-link-behind'>Learn more</div>
-                                                </Link>
-                                            </div>
-                                        </div>
-
-                                        <div className='col-lg-6'>
-                                            <div className='si-htb-banner'>
-                                                {item.article_image && <img src={`${API_IMG_URL + item.article_image}`} alt={item.article_title} />}
                                             </div>
                                         </div>
                                     </div>
@@ -223,7 +245,7 @@ function ServiceInsights() {
             </div>
 
             <div className='si-organize-section'>
-                <img src={`${BASE_URL}/img/ServiceInsights/How-Can-We-Organize.png`} alt="How Can We Organize" className='si-o-bg-main' />
+                <img src={`${BASE_URL}/img/ServiceInsights/How-Can-We-Organize.jpg`} alt="How Can We Organize" className='si-o-bg-main' />
 
                 <div className='si-o-title-section'>
                     <div className='si-o-title-content'>
@@ -250,7 +272,7 @@ function ServiceInsights() {
                                         <Link to={`/interactive-blueprint`} className="si-o-c-item-title">Interactive Blueprint</Link>
                                         <p>Creating a blueprint of your business to make sure that you stand out from the competition.</p>
                                     </div>
-
+                                    <div className='si-o-c-line'></div>
                                     <div className='si-o-c-item'>
                                         <Link to={`/strategy-and-consulting`} className="si-o-c-item-title">Strategy And Consulting</Link>
                                         <p>We truly believe in putting customers first.</p>
@@ -369,55 +391,18 @@ function ServiceInsights() {
                             title={`Become a partner`}
                             content={`<p>We partner with like-minded people to take on tough business challenges and our commitment to delivering expected results.</p>`}
                             btnText={`Get involved`}
-                            btnLink={``}
+                            btnLink={`/partnership-programmes`}
                         />
 
                         <GetInvolvedItem
                             thumbnail={`${BASE_URL}/img/ServiceInsights/Join-Our-Community.png`}
-                            title={`Join our digital community`}
+                            title={`Join Our Community`}
                             content={`<p>Join our club to stay ahead of the curve, and be part of the thought leaders' community to cross through the tough challenges together.</p>`}
                             btnText={`Join us`}
-                            btnLink={``}
+                            btnLink={`https://corporality.global/club/membership/`}
                         />
                     </div>
                 </div>
-            </div>
-
-            <div className='si-subscribe-section'>
-                <div className="block-left-background"></div>
-                <div className='container-lg'>
-                    <div className="row ribbon-row">
-                        <div className="container-left">
-                            <div className="block-extension"></div>
-                            <div className="block-content">
-                                <div className="row">
-                                    <div className="col-xs-12">
-                                        <div className="col-xs-12 container-title">
-                                            <span className="module-title cta-text">Stay in the know with our newsletter</span>
-                                        </div>
-
-                                        <div className="col-xs-12 container-date">
-                                            <span className="content-date tertiary-title"></span>
-                                        </div>
-
-                                        <div className="col-xs-12 container-button">
-                                            <a href="/" target="_blank" rel="noopener">
-                                                <div className="btn-subscribe">Subscribe</div>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="container-right">
-                            <div className="triangle"></div>
-                            <div className="block-extension"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="block-right-background"></div>
             </div>
         </div>
     )

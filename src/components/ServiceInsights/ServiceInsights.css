@@ -164,48 +164,61 @@
 
 .si-announcement-section .si-a-row {
     background-color: #f2f2f2;
-    padding-top: 15px;
-    padding-bottom: 15px;
     align-items: center;
 }
 
 .si-announcement-section .si-a-banner {
     text-align: center;
+    padding-left: 0;
 }
 
 .si-announcement-section .si-a-banner img {
     max-width: 100%;
+    height: 100%;
 }
-
 .si-announcement-section .si-a-content {
-    border-image: linear-gradient(to bottom, rgb(229, 205, 96) 0%, rgb(108, 160, 188) 100%) 1 100%;
-    border-width: 0 0 0 .25em;
-    border-left-style: solid;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
 }
-
-.si-announcement-section .si-a-content .si-a-c-subtitle {
-    margin-top: 0;
-    padding: .56em 0 .56em 1.11em;
+.si-announcement-section .si-a-content .si-a-desc {
+    flex: 0 0 75%;
+}
+.si-announcement-section .si-a-content .si-a-btn {
+    flex: 0 0 25%;
+}
+.si-announcement-section .si-a-content .si-a-date {
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
-    color: #A06DAF;
+    color: #AC74BC;
+    margin-bottom: 10px;
 }
-
 .si-announcement-section .si-a-content h2 {
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
-    text-transform: capitalize;
+    font-size: 38px;
     color: #33657E;
-    padding: 0 0 .29em .57em;
+    margin-bottom: 0;
+    text-transform: capitalize;
 }
-
-.si-announcement-section .si-a-content span {
-    display: block;
-    padding-left: 1.25em;
-    padding-bottom: .63em;
+.si-announcement-section .si-a-content .si-a-organised {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    color: #6CA0BC;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.si-announcement-section .si-a-content .si-a-btn .si-a-link {
+    background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+    padding: 10px 19px;
 }
 
 /* announcement end */
@@ -229,13 +242,20 @@
     text-transform: capitalize;
     color: #33657E;
 }
-
+.si-high-tech-industry-section .si-hti-content h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: capitalize;
+    color: #33657E;
+    margin-bottom: 20px;
+}
 .si-high-tech-industry-section .si-hti-content p {
-    margin-bottom: 25px;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     color: #232323;
+    margin-bottom: 15px;
 }
 
 .si-high-tech-industry-section .si-hti-video iframe {
@@ -251,8 +271,9 @@
 .si-high-tech-industry-section .si-hti-video-title {
     max-width: 60%;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 22px;
+    line-height: 28px;
     color: #212529;
     margin-bottom: 15px;
 }
@@ -969,7 +990,7 @@
 
 .si-organize-section .si-o-title-section {
     position: absolute;
-    top: 65px;
+    top: 0;
     width: 100%;
 }
 
@@ -979,7 +1000,15 @@
     padding-bottom: 30px;
     color: #fff;
 }
-
+.si-organize-section .si-o-title-content:after {
+    content: "";
+    background: rgba(160, 109, 175, 0.5);
+    height: 20px;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+}
 .si-organize-section .si-o-title-content h2 {
     font-style: normal;
     font-weight: 500;
@@ -1023,7 +1052,7 @@
 
 .si-organize-section .si-o-content-section {
     position: absolute;
-    top: 180px;
+    top: 60px;
     width: 100%;
 }
 
@@ -1032,22 +1061,38 @@
     box-shadow: 0 .13rem .25rem 0 #ccc;
     border-top-width: .25rem;
     border-top-style: solid;
-    border-top-color: #85389B;
+    border-top-color: #E5CC5C;
     position: absolute;
+    padding-bottom: 30px;
 }
 
 .si-organize-section .si-o-content-section .si-o-c-item {
     margin: 0 30px;
     padding: 30px 0;
+    position: relative;
 }
-
-.si-organize-section .si-o-content-section .si-o-c-item:not(:last-child) {
-    border-bottom: 1px solid #DBDBDB;
+.si-organize-section .si-o-content-section .si-o-c-item:before {
+    content: "";
+    background-color: #33657E;
+    width: 4px;
+    height: 20px;
+    position: absolute;
+    left: -30px;
+    top: 35px;
+}
+.si-organize-section .si-o-content-section .si-o-c-line {
+    margin: 0 auto;
+    width: calc(100% - 60px);
+    height: 10px;
+    background-color: transparent;
+    border-width: 2px 0;
+    border-style: solid;
+    border-color: #E6E6E6;
 }
 
 .si-organize-section .si-o-content-section .si-o-c-item .si-o-c-item-title {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 22px;
     text-transform: capitalize;
     color: #33657E;
@@ -1068,10 +1113,8 @@
 
 /* get-involved start */
 .si-get-involved-section {
-    background-color: #f2f2f2;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-bottom: 60px;
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 .si-get-involved-section .si-gi-title-content {
@@ -1159,8 +1202,8 @@
 
 /* announcement slider start */
 .si-announcement-slider-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 100px;
 }
 
 .si-announcement-slider-section .si-a-row {
@@ -1172,35 +1215,36 @@
 
 .si-announcement-slider-section .si-a-banner {
     text-align: center;
+    padding-right: 50px;
 }
-
 .si-announcement-slider-section .si-a-banner img {
     max-width: 100%;
+    width: 100%;
 }
 
 .si-announcement-slider-section .si-a-content {
     border-image: linear-gradient(to bottom, rgb(229, 205, 96) 0%, rgb(108, 160, 188) 100%) 1 100%;
     border-width: 0 0 0 .25em;
     border-left-style: solid;
+    padding-left: 30px;
 }
 
 .si-announcement-slider-section .si-a-content .si-a-c-subtitle {
     margin-top: 0;
-    padding: .56em 0 .56em 1.11em;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
     color: #A06DAF;
+    margin-bottom: 10px;
 }
-
 .si-announcement-slider-section .si-a-content h2 {
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
     text-transform: capitalize;
     color: #33657E;
-    padding: 0 0 .29em .57em;
+    margin-bottom: 18px;
 }
 
 .si-announcement-slider-section .si-a-content span {
@@ -1229,8 +1273,8 @@
 
 /* client-conversion start */
 .si-client-conversion-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 .si-client-conversion-section .si-cc-row {
     align-items: center;

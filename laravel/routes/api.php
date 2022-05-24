@@ -38,3 +38,6 @@ Route::get('/single-article/{slug}', [ArticleController::class, 'getArticle']);
 Route::get('/latest-articles', [ArticleController::class, 'latestArticles']);
 Route::get('/latest-articles-2', [ArticleController::class, 'latestArticles2']);
 Route::get('/category-articles/{slug?}', [ArticleController::class, 'categoyArticles']);
+
+Route::get('/csuit-subcat-posts', [PostController::class, 'getCSuitSubCatBlog']);
+Route::get('/csuit-cat-posts', [PostController::class, 'getCSuitCatBlog']);
