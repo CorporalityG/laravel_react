@@ -37,7 +37,7 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-md-6 align-self-center">
-                                            <h4 class="card-title">{{ __('Post List') }} ({{ empty($category->parent_id) ? $category->posts->count() : $category->subcategoriesPosts->count() }})</h4>
+                                            <h4 class="card-title">{{ __('Blogs List') }} ({{ empty($category->parent_id) ? $category->posts->count() : $category->subcategoriesPosts->count() }})</h4>
                                         </div>
                                         <div class="col-md-6">
                                         </div>

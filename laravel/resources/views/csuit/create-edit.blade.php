@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('Title', (!empty($post) ? 'Edit' : 'Add').' Blog')
+@section('Title', (!empty($csuit) ? 'Edit' : 'Add').' CSuit')
 
 @section('content')
 
@@ -14,24 +14,24 @@
                 </div>
 
                 <div class="card-body">
-                    @if( !empty($post) )
-                        @php $action = route('posts.update', $post->id); @endphp
+                    @if( !empty($csuit) )
+                        @php $action = route('csuit.update', $csuit->id); @endphp
                     @else
-                        @php $action = route('posts.store'); @endphp
+                        @php $action = route('csuit.store'); @endphp
                     @endif
                     <form method="POST" action="{{ $action }}" enctype="multipart/form-data">
                         @csrf
-                        @if( !empty($post) ) {{ method_field('PUT') }} @endif
+                        @if( !empty($csuit) ) {{ method_field('PUT') }} @endif
                         
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="post_title">{{ __('Post Title') }}</label>
-                                    <input type="text" name="post_title" id="post_title" value="{{ old('post_title', $post->post_title ?? '') }}" class="form-control{{ $errors->has('post_title') ? ' is-invalid' : '' }}" placeholder="{{ __('Post Title') }}" autofocus>
+                                    <label for="title">{{ __('Title') }}</label>
+                                    <input type="text" name="title" id="title" value="{{ old('title', $csuit->title ?? '') }}" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" placeholder="{{ __('Title') }}" autofocus>
 
-                                    @if ($errors->has('post_title'))
+                                    @if ($errors->has('title'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('post_title') }}</strong>
+                                            <strong>{{ $errors->first('title') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -39,12 +39,25 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="post_slug">{{ __('Post Slug') }}</label>
-                                    <input type="text" name="post_slug" id="post_slug" value="{{ old('post_slug', $post->post_slug ?? '') }}" class="form-control{{ $errors->has('post_slug') ? ' is-invalid' : '' }}" placeholder="{{ __('Post Slug') }}" autofocus>
+                                    <label for="slug">{{ __('Slug') }}</label>
+                                    <input type="text" name="slug" id="slug" value="{{ old('slug', $csuit->slug ?? '') }}" class="form-control{{ $errors->has('slug') ? ' is-invalid' : '' }}" placeholder="{{ __('Slug') }}" autofocus>
 
-                                    @if ($errors->has('post_slug'))
+                                    @if ($errors->has('slug'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('post_slug') }}</strong>
+                                            <strong>{{ $errors->first('slug') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="subtitle">{{ __('Subtitle') }}</label>
+                                    <input type="text" name="subtitle" id="subtitle" value="{{ old('subtitle', $csuit->subtitle ?? '') }}" class="form-control{{ $errors->has('subtitle') ? ' is-invalid' : '' }}" placeholder="{{ __('Subtitle') }}">
+
+                                    @if ($errors->has('subtitle'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('subtitle') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -57,7 +70,7 @@
                                         <select name="categories_id[]" id="categories_id" class="select2 form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }}" data-placeholder="{{ __('-- Select Category --') }}" data-dropdown-css-class="select2-info">
                                             <option value="0">{{ __('-- Select Category --') }}</option>
                                             @forelse( $categories as $Key=>$Val )
-                                                <option value="{{ $Key }}" @if( !empty($post_categories_id) && in_array($Key, $post_categories_id) ) selected @endif>{{ $Val }}</option>
+                                                <option value="{{ $Key }}" @if( !empty($categories_id) && in_array($Key, $categories_id) ) selected @endif>{{ $Val }}</option>
                                             @empty
                                             @endforelse
                                         </select>
@@ -76,7 +89,7 @@
                                     <div class="form-group">
                                         <label for="subcategories_id">{{ __('SubCategory') }}</label>
                                         <div class="select2-purple">
-                                            <select name="subcategories_id[]" id="subcategories_id" multiple="multiple" class="select2 form-control{{ $errors->has('category_id') ? ' is-invalid' : '' }}" data-placeholder="{{ __('-- Select Category --') }}" data-dropdown-css-class="select2-purple">
+                                            <select name="subcategories_id[]" id="subcategories_id" multiple="multiple" class="select2 form-control{{ $errors->has('subcategories_id') ? ' is-invalid' : '' }}" data-placeholder="{{ __('-- Select Category --') }}" data-dropdown-css-class="select2-purple">
                                             </select>
                                         </div>
 
@@ -91,12 +104,12 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="post_short_description">{{ __('Short Description') }}</label>
-                                    <textarea name="post_short_description" id="post_short_description" class="form-control{{ $errors->has('post_short_description') ? ' is-invalid' : '' }}" placeholder="{{ __('Short Description') }}">{{ old('post_short_description', $post->post_short_description ?? '') }}</textarea>
+                                    <label for="short_description">{{ __('Short Description') }}</label>
+                                    <textarea name="short_description" id="short_description" class="form-control{{ $errors->has('short_description') ? ' is-invalid' : '' }}" placeholder="{{ __('Short Description') }}">{{ old('short_description', $csuit->short_description ?? '') }}</textarea>
 
-                                    @if ($errors->has('post_short_description'))
+                                    @if ($errors->has('short_description'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('post_short_description') }}</strong>
+                                            <strong>{{ $errors->first('short_description') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -104,12 +117,12 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="post_description">{{ __('Description') }}</label>
-                                    <textarea name="post_description" id="post_description" class="form-control{{ $errors->has('post_description') ? ' is-invalid' : '' }}" placeholder="{{ __('Description') }}" rows="10">{{ old('post_description', $post->post_description ?? '') }}</textarea>
+                                    <label for="description">{{ __('Description') }}</label>
+                                    <textarea name="description" id="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="{{ __('Description') }}" rows="10">{{ old('description', $csuit->description ?? '') }}</textarea>
 
-                                    @if ($errors->has('post_description'))
+                                    @if ($errors->has('description'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('post_description') }}</strong>
+                                            <strong>{{ $errors->first('description') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -118,7 +131,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="meta_title">{{ __('Meta Title (Page Title)') }}</label>
-                                    <input type="text" name="meta_title" id="meta_title" value="{{ old('meta_title', $post->meta_title ?? '') }}" class="form-control{{ $errors->has('meta_title') ? ' is-invalid' : '' }}" placeholder="{{ __('Meta Title (Page Title)') }}">
+                                    <input type="text" name="meta_title" id="meta_title" value="{{ old('meta_title', $csuit->meta_title ?? '') }}" class="form-control{{ $errors->has('meta_title') ? ' is-invalid' : '' }}" placeholder="{{ __('Meta Title (Page Title)') }}">
 
                                     @if ($errors->has('meta_title'))
                                         <span class="invalid-feedback" role="alert">
@@ -131,7 +144,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="meta_keywords">{{ __('Meta Keywords') }}</label>
-                                    <input type="text" name="meta_keywords" id="meta_keywords" value="{{ old('meta_keywords', $post->meta_keywords ?? '') }}" class="form-control{{ $errors->has('meta_keywords') ? ' is-invalid' : '' }}" placeholder="{{ __('Meta Keywords') }}">
+                                    <input type="text" name="meta_keywords" id="meta_keywords" value="{{ old('meta_keywords', $csuit->meta_keywords ?? '') }}" class="form-control{{ $errors->has('meta_keywords') ? ' is-invalid' : '' }}" placeholder="{{ __('Meta Keywords') }}">
 
                                     @if ($errors->has('meta_keywords'))
                                         <span class="invalid-feedback" role="alert">
@@ -144,7 +157,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="meta_description">{{ __('Meta Description') }}</label>
-                                    <textarea name="meta_description" id="meta_description" class="form-control{{ $errors->has('meta_description') ? ' is-invalid' : '' }}" placeholder="{{ __('Meta Description') }}">{{ old('meta_description', $post->meta_description ?? '') }}</textarea>
+                                    <textarea name="meta_description" id="meta_description" class="form-control{{ $errors->has('meta_description') ? ' is-invalid' : '' }}" placeholder="{{ __('Meta Description') }}">{{ old('meta_description', $csuit->meta_description ?? '') }}</textarea>
 
                                     @if ($errors->has('meta_description'))
                                         <span class="invalid-feedback" role="alert">
@@ -168,29 +181,29 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="post_image">{{ __('Post Image') }}</label>
-                                    <div class="input-group{{ $errors->has('post_image') ? ' is-invalid' : '' }}">
+                                    <label for="image">{{ __('Image') }}</label>
+                                    <div class="input-group{{ $errors->has('image') ? ' is-invalid' : '' }}">
                                         <div class="custom-file">
-                                            <input type="file" name="post_image" id="post_image" value="{{ old('post_image') }}" class="custom-file-input" placeholder="Post Name" accept="image/*">
-                                            <label class="custom-file-label" for="post_image">Choose post image</label>
+                                            <input type="file" name="image" id="image" value="{{ old('image') }}" class="custom-file-input" placeholder="Image" accept="image/*">
+                                            <label class="custom-file-label" for="image">Choose image</label>
                                         </div>
                                     </div>
 
-                                    @if ($errors->has('post_image'))
+                                    @if ($errors->has('image'))
                                         <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('post_image') }}</strong>
+                                            <strong>{{ $errors->first('image') }}</strong>
                                         </span>
                                     @endif
 
-                                    @if( !empty($post->post_image) )
-                                        <img src="{{ url('uploads/'.$post->post_image) }}" alt="{{ $post->post_title }}" class="max-height-150 mt-3">
+                                    @if( !empty($csuit->image) )
+                                        <img src="{{ url('uploads/'.$csuit->image) }}" alt="{{ $csuit->title }}" class="max-height-150 mt-3">
                                     @endif
                                 </div>
                             </div>
                         </div>
 
                         <button type="submit" class="btn btn-info btn-fill">Submit</button>
-                        <a href="{{ route('posts.index') }}" class="btn btn-default float-right">Back</a>
+                        <a href="{{ route('csuit.index') }}" class="btn btn-default float-right">Back</a>
                         <div class="clearfix"></div>
                     </form>
                 </div>
@@ -202,13 +215,13 @@
 <script>
 $(function () {
     // Summernote
-    $('#post_description').summernote();
+    $('#description').summernote();
 
     //Initialize Select2 Elements
     $('.select2').select2();
 
     //Date and time picker
-    var defDateVal = '<?php echo $post->created_at ?? ''; ?>';
+    var defDateVal = '<?php echo $csuit->created_at ?? ''; ?>';
     var defaultDateVal = new Date();
     if( defDateVal!='' )
     {
@@ -222,21 +235,19 @@ $(function () {
     // $('#created_at').attr('readonly', 'readonly');
 
     <?php
-    if( empty($post) )
+    if( empty($csuit) )
     {
     ?>
-        $("#post_title").on('blur', function (e) {
+        $("#title").on('blur', function (e) {
             e.preventDefault();
 
-            var post_title = $(this).val();
-            // let _token = $('meta[name="csrf-token"]').attr('content');
+            var title = $(this).val();
 
             $.ajax({
-                url:"<?php echo route('posts.slug'); ?>",
+                url:"<?php echo route('csuit.slug'); ?>",
                 cache: false,
                 data: {
-                    // _token: _token,
-                    post_title: post_title,
+                    title: title,
                 },
                 beforeSend: function(){
                     // Show image container
@@ -244,7 +255,7 @@ $(function () {
                 },
                 success: function(response){
                     // console.log(response);
-                    $('#post_slug').val(response);
+                    $('#slug').val(response);
                 },
                 complete:function(data){
                     // Hide image container
@@ -261,22 +272,21 @@ $(function () {
         e.preventDefault();
 
         var category_id = $(this).val();
-        // console.log(category_id);
 
         subcategories_data(category_id);
     });
 
-    subcategories_data('@php echo !empty($post_categories_id[0]) ? $post_categories_id[0] : 0; @endphp', "@php echo $post_subcategories_id @endphp");
+    subcategories_data('@php echo !empty($categories_id[0]) ? $categories_id[0] : 0; @endphp', "@php echo $subcategories_id @endphp");
 
-    function subcategories_data(category_id, post_subcategories_id='')
+    function subcategories_data(category_id, subcategories_id='')
     {
-        // console.log(post_subcategories_id); return false;
+        // console.log(subcategories_id); return false;
         $.ajax({
-            url:"<?php echo route('categories.subcategories'); ?>",
+            url:"<?php echo route('csuit-categories.subcategories'); ?>",
             cache: false,
             data: {
                 category_id: category_id,
-                post_subcategories_id: post_subcategories_id,
+                subcategories_id: subcategories_id,
             },
             beforeSend: function() {
                 // Show image container

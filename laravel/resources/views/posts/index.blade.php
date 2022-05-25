@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('Title', 'Post List')
+@section('Title', 'Blogs List')
 
 @section('content')
 
@@ -24,7 +24,7 @@
                     <table id="custom-table" class="table table-bordered dataTable yajra-datatable">
                         <thead>
                             <tr>
-                                <th width="40%">Post Title</th>
+                                <th width="40%">Blog Title</th>
                                 <th width="15%">Category</th>
                                 <th width="15%">SubCategory</th>
                                 <th width="15%">Published</th>

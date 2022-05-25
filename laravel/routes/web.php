@@ -11,6 +11,9 @@ use App\Http\Controllers\ArticleSectionController;
 
 use App\Http\Controllers\ResearchPaperController;
 
+use App\Http\Controllers\CsuitCategoryController;
+use App\Http\Controllers\CsuitController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,4 +54,9 @@ Route::group(['middleware'=>'auth'], function()
 
     Route::resources(['research-papers' => ResearchPaperController::class]);
     Route::get('research-paper-slug', [ResearchPaperController::class, 'getSlug'])->name('research-papers.slug');
+
+    Route::resources(['csuit-categories' => CsuitCategoryController::class]);
+    Route::get('csuit-subcategories', [CsuitCategoryController::class, 'getSubcategories'])->name('csuit-categories.subcategories');
+    Route::resources(['csuit' => CsuitController::class]);
+    Route::get('csuit-slug', [CsuitController::class, 'getSlug'])->name('csuit.slug');
 });

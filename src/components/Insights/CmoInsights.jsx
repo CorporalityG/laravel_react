@@ -11,6 +11,7 @@ function CmoInsights() {
     const params = useParams();
     const subCategory = 'cmo';
 
+    const [latestArticles, setLatestArticles] = useState([]);
     const [latestArticles2, setLatestArticles2] = useState([]);
     const [csuitBlogs, setCSuitBlogs] = useState([]);
     const [blogs, setBlogs] = useState([]);
@@ -19,10 +20,17 @@ function CmoInsights() {
     let linkLabel = '';
 
     useEffect(() => {
+        getLatestArticles();
         getLatestArticles2();
         getCSuitBlogs()
         getBlogData();
     }, [params]);
+
+    async function getLatestArticles() {
+        let result = await fetch(`${API_BASE_URL}/latest-articles`);
+        result = await result.json();
+        setLatestArticles(result);
+    }
 
     async function getLatestArticles2() {
         let result = await fetch(`${API_BASE_URL}/latest-articles-2`);
@@ -48,7 +56,7 @@ function CmoInsights() {
         }
         const topScroll = document.getElementById('insights-latest-section');
         window.scrollTo({
-            top: topScroll.offsetTop - 90,
+            top: topScroll.offsetTop - 100,
             behavior: "smooth"
         });
     }
@@ -65,8 +73,51 @@ function CmoInsights() {
     return (
         <div className="insights">
 
-            <div id="insights-latest-section" className="insights-latest-section">
-                <div className="container-lg">
+            <div className="insights-latest-section">
+                <div className='container-fluid px-0'>
+                    {
+                        latestArticles ?
+                            <>
+                                {
+                                    latestArticles.slice(0, 1).map((item) =>
+                                        <div key={`${item.id}`} className="row latest-insight-row">
+                                            <div className="col-lg-6 px-lg-0 latest-insight-col">
+                                                <div className="insight-content-first">
+                                                    {
+                                                        item.categories ?
+                                                            <>
+                                                                {
+                                                                    item.categories.map((category) =>
+                                                                        <Link key={`${category.id}`} to={`/category/${category.category_slug}`} className="category">
+                                                                            {category.category_name}
+                                                                        </Link>
+                                                                    )
+                                                                }
+                                                            </>
+                                                            : null
+                                                    }
+                                                    <h3 className="title-first">
+                                                        <Link to={`/article/${item.article_slug}`}>{item.article_title}</Link>
+                                                    </h3>
+                                                    <p>{item.article_subtitle}</p>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6 pl-lg-0">
+                                                <div className="insight-banner-first">
+                                                    <Link to={`/article/${item.article_slug}`}>
+                                                        {item.article_image && <img src={`${API_IMG_URL + item.article_image}`} alt={item.article_title} className="latest-insight-img" />}
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                            </>
+                            : null
+                    }
+                </div>
+
+                <div id="insights-latest-section" className="container-lg">
                     {
                         blogs ?
                             <>
@@ -78,7 +129,7 @@ function CmoInsights() {
                                                 thumbnail={`${item.post_image ? API_IMG_URL + item.post_image : ''}`}
                                                 title={`${item.post_title}`}
                                                 slug={`${item.post_slug}`}
-                                                shortDescription={`${item.post_short_description ? '<p>'+item.post_short_description+'</p>' : ''}`}
+                                                shortDescription={`${item.post_short_description ? '<p>' + item.post_short_description + '</p>' : ''}`}
                                                 category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
                                                 catSlug={item.categories[0] !== undefined ? item.categories[0].category_slug : null}
                                             />

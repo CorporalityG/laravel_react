@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('Title', 'Service Insights List')
+@section('Title', 'Category List')
 
 @section('content')
 
@@ -15,7 +15,7 @@
                             <h4 class="card-title">@yield('Title')</h4>
                         </div>
                         <div class="col-md-6">
-                            <a href="{{ route('articles.create') }}" class="btn btn-sm btn-info float-right">Add Article</a>
+                            <a href="{{ route('csuit-categories.create') }}" class="btn btn-sm btn-info float-right">Add Category</a>
                         </div>
                     </div>
                 </div>
@@ -24,11 +24,10 @@
                     <table id="custom-table" class="table table-bordered dataTable yajra-datatable">
                         <thead>
                             <tr>
-                                <th width="40%">Service Insights Title</th>
-                                <th width="15%">Category</th>
-                                <th width="15%">SubCategory</th>
-                                <th width="15%">Published</th>
-                                <th width="15%"><center>Action</center></th>
+                                <th width="40%">Category</th>
+                                <th width="40%">Parent Category</th>
+                                <th width="5%">CSuit</th>
+                                <th width="15%" data-orderable="false"><center>Action</center></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,7 +38,7 @@
         </div>
     </div>
 
-    @include('articles.delete_modal')
+    @include('csuit.categories.delete_modal')
 
 <!-- Page specific script -->
 <script>
@@ -47,14 +46,11 @@ jQuery(function () {
     var table = $('.yajra-datatable').DataTable({
       processing: true,
       serverSide: true,
-      ajax: "{{ route('articles.index') }}",
-      order: [],
+      ajax: "{{ route('csuit-categories.index') }}",
       columns: [
-        // {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-        {data: 'article_title', name: 'article_title'},
-        {data: 'category', name: 'category'},
-        {data: 'subcategory', name: 'subcategory'},
-        {data: 'created_at', name: 'created_at'},
+        {data: 'category_name', name: 'category_name'},
+        {data: 'parent_category_name', name: 'parent_category_name'},
+        {data: 'count', name: 'count'},
         {
           data: 'action', 
           name: 'action', 
@@ -63,6 +59,7 @@ jQuery(function () {
         },
       ]
     });
+
 
     // delete start
     jQuery(document).on('click', '.delete', function(e) {

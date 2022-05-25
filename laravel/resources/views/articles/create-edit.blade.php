@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('Title', (!empty($article) ? 'Edit' : 'Add').' Article')
+@section('Title', (!empty($article) ? 'Edit' : 'Add').' Service Insights')
 
 @section('content')
 

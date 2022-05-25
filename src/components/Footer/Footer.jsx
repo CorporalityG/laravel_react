@@ -181,7 +181,7 @@ export default function Footer() {
           <div className="footer-text" onClick={() => { navigate("/terms-and-conditions"); topHandle(); }}>Terms and Conditions</div>
           <div className="footer-text">Sitemap</div>
         </div>
-        <div className="row2">Copyright © 2022 Corporality</div>
+        <div className="row2">Copyright © 2014–2022, The Corporaltiy Global</div>
       </div>
     </>
   );

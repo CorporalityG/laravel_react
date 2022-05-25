@@ -11,7 +11,7 @@ function CeoInsights() {
     const params = useParams();
     const subCategory = 'ceo';
 
-    // const [latestArticles, setLatestArticles] = useState([]);
+    const [latestArticles, setLatestArticles] = useState([]);
     const [latestArticles2, setLatestArticles2] = useState([]);
     const [csuitBlogs, setCSuitBlogs] = useState([]);
     const [blogs, setBlogs] = useState([]);
@@ -20,17 +20,17 @@ function CeoInsights() {
     let linkLabel = '';
 
     useEffect(() => {
-        // getLatestArticles();
+        getLatestArticles();
         getLatestArticles2();
         getCSuitBlogs()
         getBlogData();
     }, [params]);
 
-    /* async function getLatestArticles() {
+    async function getLatestArticles() {
         let result = await fetch(`${API_BASE_URL}/latest-articles`);
         result = await result.json();
         setLatestArticles(result);
-    } */
+    }
 
     async function getLatestArticles2() {
         let result = await fetch(`${API_BASE_URL}/latest-articles-2`);
@@ -56,7 +56,7 @@ function CeoInsights() {
         }
         const topScroll = document.getElementById('insights-latest-section');
         window.scrollTo({
-            top: topScroll.offsetTop - 90,
+            top: topScroll.offsetTop - 100,
             behavior: "smooth"
         });
     }
@@ -73,8 +73,8 @@ function CeoInsights() {
     return (
         <div className="insights">
 
-            <div id="insights-latest-section" className="insights-latest-section">
-                {/* <div className='container-fluid px-0'>
+            <div className="insights-latest-section">
+                <div className='container-fluid px-0'>
                     {
                         latestArticles ?
                             <>
@@ -115,9 +115,9 @@ function CeoInsights() {
                             </>
                             : null
                     }
-                </div> */}
+                </div>
 
-                <div className="container-lg">
+                <div id="insights-latest-section" className="container-lg">
                     {
                         blogs ?
                             <>

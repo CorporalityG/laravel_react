@@ -113,7 +113,7 @@
                           <a href="javarscript:;" class="nav-link {{ $postMenuActive }}">
                             <i class="nav-icon fas fa-edit"></i>
                             <p>
-                              {{ __('Posts') }}
+                              {{ __('Blogs') }}
                               <i class="right fas fa-angle-left"></i>
                             </p>
                           </a>
@@ -121,7 +121,7 @@
                             <li class="nav-item">
                               <a href="{{ route('posts.index') }}" class="nav-link {{ $postLinkActive }}">
                                 <i class="far fa-copy nav-icon"></i>
-                                <p>{{ __('Posts') }}</p>
+                                <p>{{ __('Blogs') }}</p>
                               </a>
                             </li>
                             <li class="nav-item">
@@ -174,7 +174,7 @@
                           <a href="javarscript:;" class="nav-link {{ $articleMenuActive }}">
                             <i class="nav-icon fas fa-newspaper"></i>
                             <p>
-                              {{ __('Articles') }}
+                              {{ __('Service Insights') }}
                               <i class="right fas fa-angle-left"></i>
                             </p>
                           </a>
@@ -182,7 +182,7 @@
                             <li class="nav-item">
                               <a href="{{ route('articles.index') }}" class="nav-link {{ $articleLinkActive }}">
                                 <i class="far fa-copy nav-icon"></i>
-                                <p>{{ __('Articles') }}</p>
+                                <p>{{ __('Service Insights') }}</p>
                               </a>
                             </li>
                             <li class="nav-item">
@@ -217,6 +217,60 @@
                           </a>
                         </li>
                         <!-- Article menu end -->
+                        
+                        <div class="post"></div>
+
+                        <!-- csuit menu start -->
+                        @php
+                          $csuitMenuOpen = '';
+                          $csuitMenuActive = '';
+
+                          $csuitLinkActive = '';
+                          $csuitCategoryActive = '';
+                        @endphp
+
+                        @if( request()->routeIs('csuit.index') || request()->is('csuit/*') || request()->routeIs('csuit-categories.index') || request()->is('csuit-categories/*') )
+                          @php
+                            $csuitMenuOpen = 'menu-open';
+                            $csuitMenuActive = 'active';
+                          @endphp
+                        @endif
+
+                        @if( request()->routeIs('csuit.index') || request()->is('csuit/*') )
+                          @php
+                            $csuitLinkActive = 'active';
+                          @endphp
+                        @endif
+
+                        @if( request()->routeIs('csuit-categories.index') || request()->is('csuit-categories/*') )
+                          @php
+                            $csuitCategoryActive = 'active';
+                          @endphp
+                        @endif
+                        <li class="nav-item {{ $csuitMenuOpen }}">
+                          <a href="javarscript:;" class="nav-link {{ $csuitMenuActive }}">
+                            <i class="nav-icon fas fa-edit"></i>
+                            <p>
+                              {{ __('CSuit') }}
+                              <i class="right fas fa-angle-left"></i>
+                            </p>
+                          </a>
+                          <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                              <a href="{{ route('csuit.index') }}" class="nav-link {{ $csuitLinkActive }}">
+                                <i class="far fa-copy nav-icon"></i>
+                                <p>{{ __('CSuit') }}</p>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="{{ route('csuit-categories.index') }}" class="nav-link {{ $csuitCategoryActive }}">
+                                <i class="fas fa-th nav-icon"></i>
+                                <p>{{ __('Categories') }}</p>
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <!-- csuit menu end -->
                         
                         <div class="post"></div>
 

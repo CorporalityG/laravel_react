@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('Title', 'Service Insights List')
+@section('Title', 'CSuit List')
 
 @section('content')
 
@@ -15,7 +15,7 @@
                             <h4 class="card-title">@yield('Title')</h4>
                         </div>
                         <div class="col-md-6">
-                            <a href="{{ route('articles.create') }}" class="btn btn-sm btn-info float-right">Add Article</a>
+                            <a href="{{ route('csuit.create') }}" class="btn btn-sm btn-info float-right">Add CSuit</a>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                     <table id="custom-table" class="table table-bordered dataTable yajra-datatable">
                         <thead>
                             <tr>
-                                <th width="40%">Service Insights Title</th>
+                                <th width="40%">Title</th>
                                 <th width="15%">Category</th>
                                 <th width="15%">SubCategory</th>
                                 <th width="15%">Published</th>
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    @include('articles.delete_modal')
+    @include('csuit.delete_modal')
 
 <!-- Page specific script -->
 <script>
@@ -47,11 +47,10 @@ jQuery(function () {
     var table = $('.yajra-datatable').DataTable({
       processing: true,
       serverSide: true,
-      ajax: "{{ route('articles.index') }}",
+      ajax: "{{ route('csuit.index') }}",
       order: [],
       columns: [
-        // {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-        {data: 'article_title', name: 'article_title'},
+        {data: 'title', name: 'title'},
         {data: 'category', name: 'category'},
         {data: 'subcategory', name: 'subcategory'},
         {data: 'created_at', name: 'created_at'},
