@@ -96,9 +96,9 @@ function CmoInsights() {
                                                             </>
                                                             : null
                                                     }
-                                                    <h3 className="title-first">
+                                                    <h1 className="title-first">
                                                         <Link to={`/article/${item.article_slug}`}>{item.article_title}</Link>
-                                                    </h3>
+                                                    </h1>
                                                     <p>{item.article_subtitle}</p>
                                                 </div>
                                             </div>

@@ -31,7 +31,7 @@ const Second = () => {
                     data-aos="fade-right"
                     className="polygon-last"
                     src={polygon}
-                    alt=""
+                    alt="polygon"
                   />
                 </span>
                 <p data-aos="fade-right" className="container-2-text-2">
@@ -45,7 +45,7 @@ const Second = () => {
                     data-aos="fade-right"
                     className="polygon-last"
                     src={polygon}
-                    alt=""
+                    alt="polygon"
                   />
                 </span>
                 <p data-aos="fade-right" className="container-2-text-2">
@@ -59,7 +59,7 @@ const Second = () => {
                     data-aos="fade-right"
                     className="polygon-last"
                     src={polygon}
-                    alt=""
+                    alt="polygon"
                   />
                 </span>
                 <p data-aos="fade-right" className="container-2-text-2">
@@ -73,7 +73,7 @@ const Second = () => {
                     data-aos="fade-right"
                     className="polygon-last"
                     src={polygon}
-                    alt=""
+                    alt="polygon"
                   />
                 </span>
                 <p data-aos="fade-right" className="container-2-text-2">
@@ -85,13 +85,13 @@ const Second = () => {
           </div>
           <div className="col-lg-6 d-flex justify-content-center ">
             <div className="imagessecond">
-              <img className="rect-2-1" src={rect1} alt="" />
-              <img className="rect-2-2" src={rect2} alt="" />
-              <img className="rect-2-3" src={rect3} alt="" />
-              <img className="rect-2-4" src={rect4} alt="" />
-              <img className="wall-2-2" src={wall} alt="" />
-              <img className="mainimagesecond" src={Main} alt="" />
-              <img className="backimagesecond" src={Back} alt="" />
+              <img className="rect-2-1" src={rect1} alt="rect1" />
+              <img className="rect-2-2" src={rect2} alt="rect2" />
+              <img className="rect-2-3" src={rect3} alt="rect3" />
+              <img className="rect-2-4" src={rect4} alt="rect4" />
+              <img className="wall-2-2" src={wall} alt="wall" />
+              <img className="mainimagesecond" src={Main} alt="Main" />
+              <img className="backimagesecond" src={Back} alt="Back" />
             </div>
           </div>
         </div>

@@ -71,37 +71,37 @@ function Page1() {
 							href="https://www.facebook.com/CorporalityG/"
 							className="socialIcon d-flex align-items-center justify-content-center ms-0 me-1"
 						>
-							<img src={fb} alt="" width="30%" />
+							<img src={fb} alt="facebook" width="30%" />
 						</a>
 						<a
 							href="https://twitter.com/corporalityg/"
 							className="socialIcon d-flex align-items-center justify-content-center mx-lg-0 mx-md-2 mx-1"
 						>
-							<img src={twt} alt="" width="50%" />
+							<img src={twt} alt="twitter" width="50%" />
 						</a>
 						<a
 							href="https://www.instagram.com/corporalityg/"
 							className="socialIcon d-flex align-items-center justify-content-center mx-lg-0 mx-md-2 mx-1"
 						>
-							<img src={ig} alt="" width="50%" />
+							<img src={ig} alt="instagram" width="50%" />
 						</a>
 						<a
 							href="https://www.linkedin.com/company/corporality/"
 							className="socialIcon d-flex align-items-center justify-content-center mx-lg-0 mx-md-2 mx-1"
 						>
-							<img src={lnkd} alt="" width="50%" />
+							<img src={lnkd} alt="linkedin" width="50%" />
 						</a>
 						<a
 							href="https://in.pinterest.com/CorporalityG/"
 							className="socialIcon d-flex align-items-center justify-content-center mx-lg-0 mx-md-2 mx-1"
 						>
-							<img src={pin} alt="" width="50%" />
+							<img src={pin} alt="pinterest" width="50%" />
 						</a>
 						<a
 							href="https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg/"
 							className="socialIcon d-flex align-items-center justify-content-center mx-lg-0 mx-md-2 mx-1"
 						>
-							<img src={yt} alt="" width="50%" />
+							<img src={yt} alt="youtube" width="50%" />
 						</a>
 					</div>
 					{/* <div className="col-lg-6 col-0 container2">

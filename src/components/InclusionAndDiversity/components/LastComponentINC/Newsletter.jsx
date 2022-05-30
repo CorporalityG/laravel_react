@@ -15,8 +15,8 @@ const Newsletter = () => {
     }, [])
     return (
         <div className="second-Ns">
-            <img className='wall-2-2-Ns' src={wall} alt='' />
-            <img className='rect-2-4-Ns' src={rect4} alt='' />
+            <img className='wall-2-2-Ns' src={wall} alt='wall' />
+            <img className='rect-2-4-Ns' src={rect4} alt='rect4' />
             <div className='container second-container-Ns' >
                 <div className="row interactive_blueprint-row-Ns">
                     <div className="col-lg-6 textndlists-Ns d-flex flex-column  justify-content-center">
@@ -39,16 +39,16 @@ const Newsletter = () => {
                     </div>
                     <div className="col-lg-6 d-flex justify-content-center ">
                         <div className="imagessecond-Ns">
-                            <img className='rect-2-1-Ns' src={rect1} alt='' />
-                            <img className='rect-2-2-Ns' src={rect2} alt='' />
-                            <img className='rect-2-3-Ns' src={rect3} alt='' />
+                            <img className='rect-2-1-Ns' src={rect1} alt='rect1' />
+                            <img className='rect-2-2-Ns' src={rect2} alt='rect2' />
+                            <img className='rect-2-3-Ns' src={rect3} alt='rect3' />
 
 
                             <div className="mainndback-4-Ns">
-                                <img className='backimagesecond-fourth-Ns' src={Back} alt='' />
+                                <img className='backimagesecond-fourth-Ns' src={Back} alt='Back' />
                                 <div className="bp_our-newsletter-polygon9-Ns">
                                     <div data-aos="fade-down-left" data-aos-duration="2000" data-aos-delay="1000">
-                                        <img className='main-2-2-Ns' src={Main} alt="" />
+                                        <img className='main-2-2-Ns' src={Main} alt="Main" />
                                     </div>
                                 </div>
                             </div>

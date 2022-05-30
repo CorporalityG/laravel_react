@@ -23,13 +23,13 @@ const Ideation = () => {
                 <div className="row">
                     <div className="col-lg-6 d-flex third-image-Ideation justify-content-center flex-column  align-items-center">
                         <div data-aos="fade-right" data-aos-delay="500"  className='images-prev-3-Ideation'>
-                            <img alt='' className='smaller3-Ideation' src={smaller3Ideation} />
-                            <img alt='' className='small3-Ideation' src={small3Ideation} />
-                            <img alt='' className='wall3-Ideation' src={wall3Ideation} />
-                            <img alt='' className='back3-Ideation' src={back3Ideation} />
+                            <img alt='smaller3Ideation' className='smaller3-Ideation' src={smaller3Ideation} />
+                            <img alt='small3Ideation' className='small3-Ideation' src={small3Ideation} />
+                            <img alt='wall3Ideation' className='wall3-Ideation' src={wall3Ideation} />
+                            <img alt='back3Ideation' className='back3-Ideation' src={back3Ideation} />
                             <div className="images-hover-4-Ideation">
                                 <div className="bp_iwfc_img-Ideation">
-                                    <img className='main3-Ideation' src={main3Ideation} alt="" />
+                                    <img className='main3-Ideation' src={main3Ideation} alt="main3Ideation" />
                                 </div>
                             </div>
 
@@ -40,7 +40,7 @@ const Ideation = () => {
 
                         <div data-aos="fade-up" data-aos-delay="500"  className="textndicon-Ideation">
                             <div /* className="icon-Ideation" */>
-                                <img alt='' className='icon1-Ideation' src={favicon0Ideation} />
+                                <img alt='favicon0Ideation' className='icon1-Ideation' src={favicon0Ideation} />
                             </div>
                             <div className="text-box-3-Ideation">
                                 <p className='container-3_text-1_heading-Ideation'>Customer Experience</p>
@@ -48,8 +48,8 @@ const Ideation = () => {
                                 <a className='exploreinit-Ideation' href='#'>
                                     <div className="explore-4-Ideation">
                                         <div className="explore-link-Ideation">
-                                            <img src={explorerectIdeation} alt='' className='explore-rect-Ideation' />
-                                            <img src={explorearrowIdeation} alt='' className='explore-arrow-Ideation' />
+                                            <img src={explorerectIdeation} alt='explorerectIdeation' className='explore-rect-Ideation' />
+                                            <img src={explorearrowIdeation} alt='Explore' className='explore-arrow-Ideation' />
                                             <span className='explore-text-Ideation'>Explore</span>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@ const Ideation = () => {
                         </div>
                         <div data-aos="fade-up" data-aos-delay="1000"  className="textndicon-Ideation">
                             <div /* className="icon-Ideation" */>
-                                <img alt='' className='icon1-Ideation' src={favicon1Ideation} />
+                                <img alt='favicon1Ideation' className='icon1-Ideation' src={favicon1Ideation} />
                             </div>
                             <div className="text-box-3-Ideation">
                                 <p className='container-3_text-2_heading-Ideation'>Intended Maturation Model</p>
@@ -66,8 +66,8 @@ const Ideation = () => {
                                 <a className='exploreinit-Ideation' href='#'>
                                     <div className="explore-4-Ideation">
                                         <div className="explore-link-Ideation">
-                                            <img src={explorerectIdeation} alt='' className='explore-rect-Ideation' />
-                                            <img src={explorearrowIdeation} alt='' className='explore-arrow-Ideation' />
+                                            <img src={explorerectIdeation} alt='explorerectIdeation' className='explore-rect-Ideation' />
+                                            <img src={explorearrowIdeation} alt='explorearrowIdeation' className='explore-arrow-Ideation' />
                                             <span className='explore-text-Ideation'>Explore</span>
                                         </div>
                                     </div>
@@ -77,7 +77,7 @@ const Ideation = () => {
                         </div>
                         <div data-aos="fade-up" data-aos-delay="1500"  className="textndicon-Ideation">
                             <div>
-                                <img alt='' className='icon1-Ideation' src={favicon2Ideation} />
+                                <img alt='favicon2Ideation' className='icon1-Ideation' src={favicon2Ideation} />
                             </div>
                             <div className="text-box-3-Ideation">
                                 <p className='container-3_text-3_heading-Ideation'>Creating a Culture of Revivalism</p>
@@ -85,8 +85,8 @@ const Ideation = () => {
                                 <a className='exploreinit-Ideation' href='#'>
                                     <div className="explore-4-Ideation">
                                         <div className="explore-link-Ideation">
-                                            <img src={explorerectIdeation} alt='' className='explore-rect-Ideation' />
-                                            <img src={explorearrowIdeation} alt='' className='explore-arrow-Ideation' />
+                                            <img src={explorerectIdeation} alt='explorerectIdeation' className='explore-rect-Ideation' />
+                                            <img src={explorearrowIdeation} alt='explorearrowIdeation' className='explore-arrow-Ideation' />
                                             <span className='explore-text-Ideation'>Explore</span>
                                         </div>
                                     </div>

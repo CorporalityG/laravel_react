@@ -9,7 +9,7 @@ const Limitless = () => {
             <div className="In_Div_anm_container-Limitless">
 
                 <div className="In_Div_anm_container_img-Limitless">
-                    <img src={hoverimage} alt="" />
+                    <img src={hoverimage} alt="hoverimage" />
                 </div>
                 <div className="In_Div_anm_container_text-Limitless">
                     <div className="In_Div_anm_upper_box-Limitless">

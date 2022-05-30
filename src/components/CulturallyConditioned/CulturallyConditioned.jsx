@@ -12,6 +12,7 @@ function CulturallyConditioned() {
             <MetaTags>
                 <title>{`Culturally Conditioned Framework | Digital Marketing Services in Sydney`}</title>
                 <meta name="description" content={`Corporality's digital marketing services employ a culturally-conditioned framework which is designed to establish participation and excitement around accountability.`} />
+                <link rel="canonical" href={`${BASE_URL}/corporality-culturally-conditioned/`} />
             </MetaTags>
 
             <div className="cc-banner-section">

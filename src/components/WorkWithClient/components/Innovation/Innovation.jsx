@@ -11,7 +11,7 @@ const Innovation = () => {
   }, []);
   return (
     <div className="fifthcomponent-Innovation effectiveImage-Innovation">
-      <img className="group5-Innovation" src={groupInnovation} alt="" />
+      <img className="group5-Innovation" src={groupInnovation} alt="groupInnovation" />
       <div className="container">
         <div className="row ">
           <div
@@ -26,8 +26,8 @@ const Innovation = () => {
               Sydney that aims to tread across continents and industries as we
               use next-gen technology to resolve every business challenge.
             </p>
-            <img src={small2Innovation} className="small2-5-Innovation" alt="" />
-            <img src={smallInnovation} className="small-5-Innovation" alt="" />
+            <img src={small2Innovation} className="small2-5-Innovation" alt="Innovation" />
+            <img src={smallInnovation} className="small-5-Innovation" alt="Innovation" />
             <a href="">
               <div className="link-Innovation">
                 <div className="button-4-Innovation">

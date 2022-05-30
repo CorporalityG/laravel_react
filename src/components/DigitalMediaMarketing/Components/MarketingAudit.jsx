@@ -17,15 +17,15 @@ const MarketingAudit = () => {
 
                 <div className="d-flex flex-column ddm-Scope">
             {/* <div data-aos="fade-up"> */}
-                    {/* <img src="./img/DigitalMediaMarketing/ddmscope.png" alt="" className="img-fluid m-2" /> */}
+                    {/* <img src="./img/DigitalMediaMarketing/ddmscope.png" alt="ddmscope" className="img-fluid m-2" /> */}
                     <div data-aos="fade-down">
-                    <img src="./img/DigitalMediaMarketing/scope.png" alt="" className="Scope-txt" />
+                    <img src="./img/DigitalMediaMarketing/scope.png" alt="scope" className="Scope-txt" />
                     </div>
 
                     <div></div>
                     <div className="ddminitReasearch"><p>Initial Research</p></div>
-                    <img src="./img/DigitalMediaMarketing/scopeline.png" alt="" className=" Scope-Line" />
-                    <img src="./img/DigitalMediaMarketing/scopekscope.png" alt="" className=" Scope-K-Scope" />
+                    <img src="./img/DigitalMediaMarketing/scopeline.png" alt="Scope-Line" className=" Scope-Line" />
+                    <img src="./img/DigitalMediaMarketing/scopekscope.png" alt="Scope-K-Scope" className=" Scope-K-Scope" />
                 {/* </div> */}
             </div>
                 
@@ -50,28 +50,28 @@ const MarketingAudit = () => {
 
             <div data-aos="fade-up" data-aos-delay="200">
                     <p>
-                        <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
+                        <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="Streamline your digital" className=" mx-2" />
                         Streamline your digital marketing marketing  processes
                     </p>
             </div>
             <div data-aos="fade-up" data-aos-delay="400">
 
                     <p>
-                        <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
+                        <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="Address inefficiencies" className=" mx-2" />
                         Address inefficiencies while augmenting efficacy 
                     </p>
             </div>
             <div data-aos="fade-up" data-aos-delay="600">
 
                     <p>
-                        <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
+                        <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="Cut down on unnecessary costs" className=" mx-2" />
                         Cut down on unnecessary costs
                     </p>
             </div>
             <div data-aos="fade-up" data-aos-delay="800">
 
                     <p>
-                        <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
+                        <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="Improve marketing ROIs" className=" mx-2" />
                         Improve marketing ROIs
                     </p>
             </div>

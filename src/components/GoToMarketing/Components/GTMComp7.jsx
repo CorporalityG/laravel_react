@@ -35,7 +35,7 @@ const GTMComp7 = () => {
                 <div>
                     <div className="moving-blue-bar"></div>
                     <div className="gtm-comp7-img-wrapper">
-                        <img src={img1} alt="" />
+                        <img src={img1} alt="Improved Marketing" />
                     </div>
                     <div className="random-comp7-div"></div>
                 </div>

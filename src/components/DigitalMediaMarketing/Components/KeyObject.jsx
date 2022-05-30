@@ -33,42 +33,42 @@ const KeyObject = () => {
 
                             <div data-aos="fade-up" data-aos-delay="200">
                                 <p>
-                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
+                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="Augmenting company visibility" className=" mx-2" />
                                     Augmenting company visibility
                                 </p>
                             </div>
                             <div data-aos="fade-up" data-aos-delay="400">
 
                                 <p>
-                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
+                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="Increasing the size" className=" mx-2" />
                                     Increasing the size of the audience with corporate or business level strategy 
                                 </p>
                             </div>
                             <div data-aos="fade-up" data-aos-delay="600">
 
                                 <p>
-                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
+                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="Differentiating" className=" mx-2" />
                                     Differentiating you from competition
                                 </p>
                             </div>
                             <div data-aos="fade-up" data-aos-delay="800">
 
                                 <p>
-                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
+                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="Market share increase" className=" mx-2" />
                                     Market share increase and maintenance
                                 </p>
                             </div>
                             <div data-aos="fade-up" data-aos-delay="1000">
 
                                 <p>
-                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
+                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="Generating qualified" className=" mx-2" />
                                    Generating qualified leads with effective lead generation strategy 
                                 </p>
                             </div>
                             <div data-aos="fade-up" data-aos-delay="1200">
 
                                 <p>
-                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="" className=" mx-2" />
+                                    <img src="./img/DigitalMediaMarketing/ddmdiamo.png" alt="Customer engagement" className=" mx-2" />
                                     Customer engagement and usage 
                                 </p>
                             </div>
@@ -85,7 +85,7 @@ const KeyObject = () => {
 
                 </div>
                 <div className="key_objective_img">
-                    <img src="./img/DigitalMediaMarketing/objective.gif" className="img-fluid m-5" alt="" />
+                    <img src="./img/DigitalMediaMarketing/objective.gif" className="img-fluid m-5" alt="objective" />
                 </div>
             </div>
 

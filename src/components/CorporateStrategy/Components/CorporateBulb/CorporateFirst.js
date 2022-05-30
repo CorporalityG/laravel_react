@@ -45,17 +45,17 @@ function CorporateFirst() {
       <div className="corporatefirst_left_icons">
         <div className="corporatefirst_facebook_icon">
           <a href="https://www.facebook.com/CorporalityG">
-            <img src={corporatefirst_facebook} alt="" />
+            <img src={corporatefirst_facebook} alt="facebook" />
           </a>
         </div>
         <div className="corporatefirst_twitter_icon">
           <a href="https://twitter.com/corporalityg" target="_blank">
-            <img src={corporatefirst_twitter} alt="" />
+            <img src={corporatefirst_twitter} alt="twitter" />
           </a>
         </div>
         <div className="corporatefirst_instagram_icon">
           <a href="https://www.instagram.com/corporalityg" target="_blank">
-            <img src={corporatefirst_instagram} alt="" />
+            <img src={corporatefirst_instagram} alt="instagram" />
           </a>
         </div>
         <div className="corporatefirst_linkedin_icon">
@@ -63,12 +63,12 @@ function CorporateFirst() {
             href="https://www.linkedin.com/company/corporality"
             target="_blank"
           >
-            <img src={corporatefirst_linkedin} alt="" />{" "}
+            <img src={corporatefirst_linkedin} alt="linkedin" />{" "}
           </a>
         </div>
         <div className="corporatefirst_pinterest_icon">
           <a href="https://in.pinterest.com/CorporalityG" target="_blank">
-            <img src={corporatefirst_pinterest} alt="" />{" "}
+            <img src={corporatefirst_pinterest} alt="pinterest" />{" "}
           </a>
         </div>
         <div className="corporatefirst_youtube_icon">
@@ -76,7 +76,7 @@ function CorporateFirst() {
             href="https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg"
             target="_blank"
           >
-            <img src={corporatefirst_youtube} alt="" />{" "}
+            <img src={corporatefirst_youtube} alt="youtube" />{" "}
           </a>
         </div>
       </div>
@@ -104,10 +104,10 @@ function CorporateFirst() {
           <div className="corporatefirst_right_images">
             <div className="corporatefirst_main_bulb">
               <div className="main_bulb_bulb_image">
-                <img src={main_bulb} alt="" className="center_bulb" />
+                <img src={main_bulb} alt="main_bulb" className="center_bulb" />
 
                 <div className="bulb_glow">
-                  <img src={bulb_glow} alt="" />
+                  <img src={bulb_glow} alt="bulb_glow" />
                 </div>
 
                 <div
@@ -116,7 +116,7 @@ function CorporateFirst() {
                   data-aos-duration="3000"
                   data-aos-delay="500"
                 >
-                  <img src={goal_icon} alt="" />
+                  <img src={goal_icon} alt="goal_icon" />
                 </div>
 
                 <div
@@ -124,7 +124,7 @@ function CorporateFirst() {
                   data-aos="fade-left"
                   data-aos-duration="2000"
                 >
-                  <img src={goal_line} alt="" />
+                  <img src={goal_line} alt="goal_line" />
                 </div>
 
                 <div
@@ -133,7 +133,7 @@ function CorporateFirst() {
                   data-aos-duration="2000"
                   data-aos-delay="1000"
                 >
-                  <img src={goal_text} alt="" />
+                  <img src={goal_text} alt="goal_text" />
                 </div>
 
                 <div
@@ -142,7 +142,7 @@ function CorporateFirst() {
                   data-aos-duration="2000"
                   data-aos-delay="500"
                 >
-                  <img src={idea_icon} alt="" />
+                  <img src={idea_icon} alt="idea_icon" />
                 </div>
 
                 <div
@@ -150,7 +150,7 @@ function CorporateFirst() {
                   data-aos="fade-left"
                   data-aos-duration="2000"
                 >
-                  <img src={idea_line} alt="" />
+                  <img src={idea_line} alt="idea_line" />
                 </div>
 
                 <div
@@ -159,7 +159,7 @@ function CorporateFirst() {
                   data-aos-duration="2000"
                   data-aos-delay="1000"
                 >
-                  <img src={idea_text} alt="" />
+                  <img src={idea_text} alt="idea_text" />
                 </div>
 
                 <div
@@ -168,7 +168,7 @@ function CorporateFirst() {
                   data-aos-duration="2000"
                   data-aos-delay="500"
                 >
-                  <img src={plan_icon} alt="" />
+                  <img src={plan_icon} alt="plan_icon" />
                 </div>
 
                 <div
@@ -176,7 +176,7 @@ function CorporateFirst() {
                   data-aos="fade-right"
                   data-aos-duration="2000"
                 >
-                  <img src={plan_line} alt="" />
+                  <img src={plan_line} alt="plan_line" />
                 </div>
 
                 <div
@@ -185,7 +185,7 @@ function CorporateFirst() {
                   data-aos-duration="2000"
                   data-aos-delay="1000"
                 >
-                  <img src={plan_text} alt="" />
+                  <img src={plan_text} alt="plan_text" />
                 </div>
 
                 <div
@@ -194,7 +194,7 @@ function CorporateFirst() {
                   data-aos-duration="2000"
                   data-aos-delay="500"
                 >
-                  <img src={strategy_icon} alt="" />
+                  <img src={strategy_icon} alt="strategy_icon" />
                 </div>
 
                 <div
@@ -202,7 +202,7 @@ function CorporateFirst() {
                   data-aos="fade-left"
                   data-aos-duration="2000"
                 >
-                  <img src={strategy_line} alt="" />
+                  <img src={strategy_line} alt="strategy_line" />
                 </div>
 
                 <div
@@ -211,7 +211,7 @@ function CorporateFirst() {
                   data-aos-duration="2000"
                   data-aos-delay="1000"
                 >
-                  <img src={strategy_text} alt="" />
+                  <img src={strategy_text} alt="strategy_text" />
                 </div>
 
                 <div
@@ -220,7 +220,7 @@ function CorporateFirst() {
                   data-aos-duration="2000"
                   data-aos-delay="500"
                 >
-                  <img src={team_icon} alt="" />
+                  <img src={team_icon} alt="team_icon" />
                 </div>
 
                 <div
@@ -228,7 +228,7 @@ function CorporateFirst() {
                   data-aos="fade-right"
                   data-aos-duration="2000"
                 >
-                  <img src={team_line} alt="" />
+                  <img src={team_line} alt="team_line" />
                 </div>
 
                 <div
@@ -237,27 +237,27 @@ function CorporateFirst() {
                   data-aos-duration="2000"
                   data-aos-delay="1000"
                 >
-                  <img src={team_text} alt="" />
+                  <img src={team_text} alt="team_text" />
                 </div>
               </div>
 
               <div className="corporatefirst_bottom_cloud">
-                <img src={bottom_cloud} alt="" />
+                <img src={bottom_cloud} alt="bottom_cloud" />
               </div>
 
               <div
                 className="corporatefirst_bottom_phone"
                 onClick={() => window.open("tel: +61 2 83794089", "_self")}
               >
-                <img src={bottom_phone} alt="" />
+                <img src={bottom_phone} alt="bottom_phone" />
               </div>
 
               <div className="corporatefirst_small_stars">
-                <img src={small_stars} alt="" />
+                <img src={small_stars} alt="small_stars" />
               </div>
 
               <div className="corporatefirst_saturn">
-                <img src={saturn} alt="" />
+                <img src={saturn} alt="saturn" />
               </div>
             </div>
 
@@ -267,7 +267,7 @@ function CorporateFirst() {
               data-aos-duration="3000"
               data-aos-delay="200"
             >
-              <img src={fade_text} alt="" />
+              <img src={fade_text} alt="fade_text" />
             </div>
           </div>
         </div>

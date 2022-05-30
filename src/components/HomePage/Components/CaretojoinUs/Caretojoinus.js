@@ -19,7 +19,7 @@ function Caretojoinus() {
   return (
     <div className="caretojoinus_parentdiv">
       <div className="left_wall">
-        <img src={wall} alt="" />
+        <img src={wall} alt="wall" />
       </div>
       <div className="container caretojoinus_container">
         <div className="caretojoinus_main">
@@ -39,16 +39,16 @@ function Caretojoinus() {
             </div>
           </div>
           <div className="bottom_rectangle">
-            <img src={bottom} alt="" />
+            <img src={bottom} alt="bottom" />
           </div>
           <div className="center_rectangle">
-            <img src={middle} alt="" />
+            <img src={middle} alt="middle" />
           </div>
           <div className="middle_rectangle">
-            <img src={rectangle} alt="" />
+            <img src={rectangle} alt="rectangle" />
           </div>
           <div className="top_rectangle">
-            <img src={top} alt="" />
+            <img src={top} alt="top" />
           </div>
 
           <div
@@ -60,12 +60,12 @@ function Caretojoinus() {
             <div className="right_image_container">
               <img
                 src={right_image2}
-                alt=""
+                alt="right_image2"
                 className="caretojoinus_rightimage"
               />
             </div>
             <div className="back_image">
-              <img src={image_back} alt="" />
+              <img src={image_back} alt="image_back" />
             </div>
           </div>
         </div>

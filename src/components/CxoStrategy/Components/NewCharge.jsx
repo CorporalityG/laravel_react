@@ -7,7 +7,7 @@ const NewCharge = () => {
     return (
         <div className='new-charge'>
             <div className='new-charge-left' >
-                <img data-aos="fade-right" data-aos-duration="1200" src={priya} alt="" />
+                <img data-aos="fade-right" data-aos-duration="1200" src={priya} alt="priya" />
             </div>
             <div className='new-charge-middle' data-aos="zoom-in-up" data-aos-duration="1500">
             </div>

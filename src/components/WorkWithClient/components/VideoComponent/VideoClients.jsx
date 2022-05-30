@@ -6,7 +6,7 @@ const VideoClients = () => {
     return(
         <div className="VideoMain">
             <div className="container VideoContainer">
-                <img src = {video} alt="" className="Video_clients" />
+                <img src = {video} alt="video" className="Video_clients" />
             </div>
         </div>
     )

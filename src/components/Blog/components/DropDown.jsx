@@ -54,7 +54,7 @@ const DropDown = ({initial, list, className, loading}) => {
                         {
                             list.map( (item, i) => (
                                 <li key={i} >
-                                    <img src={i%3===0? purpc : i%3===2? yc : bluec} alt="" />
+                                    <img src={i%3===0? purpc : i%3===2? yc : bluec} alt={item.post_title} />
                                     <Link to={`/${item.post_slug}`} onClick={() => topHandler() } className="dropdown-item"><p>{item.post_title}</p></Link>
                                 </li>
                             ))

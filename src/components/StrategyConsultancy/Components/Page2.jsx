@@ -19,7 +19,7 @@ const Page2 = () => {
 
                         <div>
 
-                            <img className="mx-5 iluilukyah" src={BASE_URL + "/img/StrategyConsultancy/page-2.png"} alt="" />
+                            <img className="mx-5 iluilukyah" src={BASE_URL + "/img/StrategyConsultancy/page-2.png"} alt="page-2" />
                         </div>
                     </div>
 
@@ -27,7 +27,7 @@ const Page2 = () => {
 
 
                         <div>
-                            <img className=" consultdvice " src={BASE_URL + "/img/StrategyConsultancy/advice.png"} alt="" />
+                            <img className=" consultdvice " src={BASE_URL + "/img/StrategyConsultancy/advice.png"} alt="advice" />
 
                         </div>
                     </div>
@@ -38,8 +38,8 @@ const Page2 = () => {
 
             <div data-aos="fade-right" data-aos-duration="1200">
                 <div className="consultancygradbox">
-                    <img src={BASE_URL + "/img/StrategyConsultancy/page2-1.png"} alt="" className="consultancybox-1" />
-                    <img src={BASE_URL + "/img/StrategyConsultancy/page-2-1.png"} alt="" className="consultancybox-2" />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/page2-1.png"} alt="consultancybox-1" className="consultancybox-1" />
+                    <img src={BASE_URL + "/img/StrategyConsultancy/page-2-1.png"} alt="consultancybox-2" className="consultancybox-2" />
                 </div>
             </div>
             <div data-aos="fade-down" data-aos-duration="1200">
@@ -59,13 +59,13 @@ const Page2 = () => {
 
 
                     <div className="d-flex justify-content-around flex-wrap m-5">
-                        <div className=''><img src={BASE_URL + "/img/StrategyConsultancy/box1.jpg"} alt="" /></div>
-                        <div><img src={BASE_URL + "/img/StrategyConsultancy/b0x2.png"} alt="" /></div>
-                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box3.png"} alt="" /></div>
-                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box4.png"} alt="" /></div>
-                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box5.png"} alt="" /></div>
-                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box6.png"} alt="" /></div>
-                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box2.png"} alt="" /></div>
+                        <div className=''><img src={BASE_URL + "/img/StrategyConsultancy/box1.jpg"} alt="box1" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/b0x2.png"} alt="b0x2" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box3.png"} alt="box3" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box4.png"} alt="box4" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box5.png"} alt="box5" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box6.png"} alt="box6" /></div>
+                        <div><img src={BASE_URL + "/img/StrategyConsultancy/box2.png"} alt="box2" /></div>
                     </div>
                     </div>
 

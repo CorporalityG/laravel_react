@@ -15,15 +15,15 @@ export default function PPComp2() {
     return (
         <div>
             <div className="p-0 ppComp2  ">
-                <img className="ppc2Img2back" src={img2back} alt="" />
+                <img className="ppc2Img2back" src={img2back} alt="img2back" />
                 <div className="row d-flex flex-row ppc2RowContainer">
                     <div className="col p-0">
                         <div data-aos="fade-right" data-aos-duration="2000" className="ppc2ImgWrapper">
                             <div className="ppc2MainImg">
-                                <img className="ppc2Img2" src={img2} alt="" />
+                                <img className="ppc2Img2" src={img2} alt="img2" />
                             </div>
-                            <img className="ppc2Wall" src={wall} alt="" />
-                            <img className="ppc2Rec8" src={rec8} alt="" />
+                            <img className="ppc2Wall" src={wall} alt="wall" />
+                            <img className="ppc2Rec8" src={rec8} alt="rec8" />
                         </div>
                     </div>
                     <div className="col p-0 ppc2ColContainer">

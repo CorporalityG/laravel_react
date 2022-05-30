@@ -34,13 +34,13 @@ const Global = () => {
                 <div  className="global_twitter_circle">
                   <img
                     src={circle}
-                    alt=" "
+                    alt="circle"
                     className="circle1_Sustaible_growth"
                   />
                   <div className="global_twitter_icon">
                     <img
                       src={twitter}
-                      alt=" "
+                      alt="twitter"
                       className="twitter_Sustaible_growth"
                     />
                   </div>
@@ -48,7 +48,7 @@ const Global = () => {
                 <div className="global_twitter_arrow">
                   <img
                     src={arrow}
-                    alt=" "
+                    alt="arrow"
                     className="arrow1_Sustaible_growth"
                   />
                 </div>
@@ -62,13 +62,13 @@ const Global = () => {
                 <div className="global_twitter_circle">
                   <img
                     src={circle}
-                    alt=" "
+                    alt="circle"
                     className="circle1_Sustaible_growth"
                   />
                   <div className="global_twitter_icon">
                     <img
                       src={linkedin}
-                      alt=" "
+                      alt="linkedin"
                       className="Linkedin_Sustaible_growth"
                     />
                   </div>
@@ -76,7 +76,7 @@ const Global = () => {
                 <div className="global_twitter_arrow">
                   <img
                     src={arrow}
-                    alt=" "
+                    alt="arrow"
                     className="arrow2_Sustaible_growth"
                   />
                 </div>

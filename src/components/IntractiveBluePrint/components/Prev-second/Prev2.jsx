@@ -16,18 +16,18 @@ const Prev2 = () => {
 
     return (
         <div className='prev2'>
-            <img className='side2-container' src={side2Interactive} alt='' />
+            <img className='side2-container' src={side2Interactive} alt='side2Interactive' />
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 imaging-2 d-flex justify-content-center align-items-center flex-column">
                         <div className="images-2">
-                            <img className='wall2-container' src={wall2Interactive} alt='' />
+                            <img className='wall2-container' src={wall2Interactive} alt='wall2Interactive' />
                             
-                            <img className='small2-container' src={small2Interactive} alt='' />
+                            <img className='small2-container' src={small2Interactive} alt='small2Interactive' />
                             <div className="img-container">
                                 <div className="hoverinit Inc_Div_our-faith-main-img">
-                                    <div alt="" data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="10">
-                                        <img className='main2 ' src={main2Interactive} alt='' />
+                                    <div alt="main2Interactive" data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="10">
+                                        <img className='main2 ' src={main2Interactive} alt='main2Interactive' />
                                     </div>
                                 </div>
                             </div>

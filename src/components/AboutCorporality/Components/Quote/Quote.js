@@ -16,7 +16,7 @@ function Quote() {
     <>
       <div className="quote_container_parent">
         <div className="box_image">
-          <img src={group_boxes} alt="" />
+          <img src={group_boxes} alt="group_boxes" />
         </div>
         <div className="container">
           <div className="quote_container">
@@ -40,10 +40,10 @@ function Quote() {
               data-aos-easing="ease-out-cubic"
               data-aos-duration="1000"
             >
-              <img src={priya_mam} alt="" />
+              <img src={priya_mam} alt="priya_mam" />
             </div>
             <div className="quote_image">
-              <img src={quotation_mark} alt="" />
+              <img src={quotation_mark} alt="quotation_mark" />
             </div>
           </div>
         </div>

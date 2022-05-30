@@ -7,8 +7,8 @@ const GTMVectorComp = () => {
     return (
         <div className="gtm-vector-comp">
             <div className="gtm-vector-comp-container">
-                <img src={megaPhone} className="gtm-megaPhone" alt="" />
-                <img src={bulb} className="gtm-bulb" alt="" />
+                <img src={megaPhone} className="gtm-megaPhone" alt="megaPhone" />
+                <img src={bulb} className="gtm-bulb" alt="bulb" />
             </div>
         </div>
     )

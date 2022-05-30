@@ -4,7 +4,7 @@ import "./NewStep.css"
 const NewStep = () => {
     return (
         <div className='new-step-container'>
-            <img src="./img/CxoStrategy/img/step/Vector.png" alt="" />
+            <img src="./img/CxoStrategy/img/step/Vector.png" alt="Vector" />
             <p>
             Corporality takes a genuine step towards the customer.
              While identifying significant financial, operational 

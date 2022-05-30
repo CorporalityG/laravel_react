@@ -55,7 +55,7 @@ function AllCardsNew() {
 
         <div className="all_cards_parent">
           <div className="line_vertical">
-            <img src={line_vertical} alt="" />
+            <img src={line_vertical} alt="line_vertical" />
           </div>
           <div
             className="cards_text_side_1 aos-init aos-animate"
@@ -63,12 +63,12 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="line_horizontal_1">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
 
             <div className="cards_top_heading_text ">Audit and Diagnostic</div>
             <div className="cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -80,7 +80,7 @@ function AllCardsNew() {
           >
             <div className="image_side_1_card1">
               <div className="side1_card1_image">
-                <img src={position} alt="" />
+                <img src={position} alt="position" />
               </div>
               <div className="side1_card1_text">Position</div>
             </div>
@@ -94,7 +94,7 @@ function AllCardsNew() {
           >
             <div className="image_side_1_card2 ">
               <div className="side1_card2_image">
-                <img src={readiness} alt="" />
+                <img src={readiness} alt="readiness" />
               </div>
               <div className="side1_card2_text">Readiness</div>
             </div>
@@ -108,7 +108,7 @@ function AllCardsNew() {
           >
             <div className="image_side_1_card3">
               <div className="side1_card3_image">
-                <img src={timeline} alt="" />
+                <img src={timeline} alt="timeline" />
               </div>
               <div className="side1_card3_text">Timeline</div>
             </div>
@@ -122,7 +122,7 @@ function AllCardsNew() {
           >
             <div className="image_side_1_card4">
               <div className="side1_card4_image">
-                <img src={segmentation} alt="" />
+                <img src={segmentation} alt="segmentation" />
               </div>
               <div className="side1_card4_text">Matrix and Tracking</div>
             </div>
@@ -136,11 +136,11 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="line_horizontal_2">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
             <div className="cards_top_heading_text">Vision Remapping</div>
             <div className="cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -152,7 +152,7 @@ function AllCardsNew() {
           >
             <div className="image_side_2_card1 ">
               <div className="side2_card1_image">
-                <img src={corporateVision} alt="" />
+                <img src={corporateVision} alt="corporateVision" />
               </div>
               <div className="side2_card1_text">Corporate Vision</div>
             </div>
@@ -166,7 +166,7 @@ function AllCardsNew() {
           >
             <div className="image_side_2_card2 ">
               <div className="side2_card2_image">
-                <img src={endgoal} alt="" />
+                <img src={endgoal} alt="endgoal" />
               </div>
               <div className="side2_card2_text">Marketing Objective</div>
             </div>
@@ -180,7 +180,7 @@ function AllCardsNew() {
           >
             <div className="image_side_2_card3">
               <div className="side2_card3_image">
-                <img src={outcome} alt="" />
+                <img src={outcome} alt="outcome" />
               </div>
               <div className="side2_card3_text">Outcome model</div>
             </div>
@@ -196,13 +196,13 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="line_horizontal_3">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
             <div className="cards_top_heading_text">
               Strategizing and Planning
             </div>
             <div className="cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -214,7 +214,7 @@ function AllCardsNew() {
           >
             <div className="image_side_3_card1">
               <div className="side3_card1_image">
-                <img src={scoping} alt="" />
+                <img src={scoping} alt="scoping" />
               </div>
               <div className="side3_card1_text">Scoping</div>
             </div>
@@ -228,7 +228,7 @@ function AllCardsNew() {
           >
             <div className="image_side_3_card2 ">
               <div className="side3_card2_image">
-                <img src={budget} alt="" />
+                <img src={budget} alt="budget" />
               </div>
               <div className="side3_card2_text">Budgeting</div>
             </div>
@@ -242,7 +242,7 @@ function AllCardsNew() {
           >
             <div className="image_side_3_card3 ">
               <div className="side3_card3_image">
-                <img src={strategizing} alt="" />
+                <img src={strategizing} alt="strategizing" />
               </div>
               <div className="side3_card3_text">Steategizing</div>
             </div>
@@ -256,7 +256,7 @@ function AllCardsNew() {
           >
             <div className="image_side_3_card4 ">
               <div className="side3_card4_image">
-                <img src={taskPlan} alt="" />
+                <img src={taskPlan} alt="taskPlan" />
               </div>
               <div className="side3_card4_text">Task Planning</div>
             </div>
@@ -268,14 +268,14 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="line_horizontal_4">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
 
             <div className="cards_top_heading_text">
               Task Force and Execution
             </div>
             <div className="cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -287,7 +287,7 @@ function AllCardsNew() {
           >
             <div className="image_side_4_card1">
               <div className="side4_card1_image">
-                <img src={techStack} alt="" />
+                <img src={techStack} alt="techStack" />
               </div>
               <div className="side4_card1_text">Tech Stack</div>
             </div>
@@ -301,7 +301,7 @@ function AllCardsNew() {
           >
             <div className="image_side_4_card2">
               <div className="side4_card2_image">
-                <img src={scheduling} alt="" />
+                <img src={scheduling} alt="scheduling" />
               </div>
               <div className="side4_card2_text">Scheduling</div>
             </div>
@@ -315,7 +315,7 @@ function AllCardsNew() {
           >
             <div className="image_side_4_card3 ">
               <div className="side4_card3_image">
-                <img src={implimentation} alt="" />
+                <img src={implimentation} alt="implimentation" />
               </div>
               <div className="side4_card3_text">Implementation</div>
             </div>
@@ -329,7 +329,7 @@ function AllCardsNew() {
           >
             <div className="image_side_4_card4 ">
               <div className="side4_card4_image">
-                <img src={segmentation} alt="" />
+                <img src={segmentation} alt="segmentation" />
               </div>
               <div className="side4_card4_text">Segmentation and Matrix</div>
             </div>
@@ -341,12 +341,12 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="line_horizontal_5">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
 
             <div className="cards_top_heading_text">Asset Buiding</div>
             <div className="cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -358,7 +358,7 @@ function AllCardsNew() {
           >
             <div className="image_side_5_card1">
               <div className="side5_card1_image">
-                <img src={knowledge} alt="" />
+                <img src={knowledge} alt="knowledge" />
               </div>
               <div className="side5_card1_text">Knowledge based</div>
             </div>
@@ -372,7 +372,7 @@ function AllCardsNew() {
           >
             <div className="image_side_5_card2 ">
               <div className="side5_card2_image">
-                <img src={systemPrep} alt="" />
+                <img src={systemPrep} alt="systemPrep" />
               </div>
               <div className="side5_card2_text">System Preparation</div>
             </div>
@@ -387,12 +387,12 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="line_horizontal_6">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
 
             <div className="cards_top_heading_text">Plan Ahead</div>
             <div className="cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -404,7 +404,7 @@ function AllCardsNew() {
           >
             <div className="image_side_6_card1">
               <div className="side6_card1_image">
-                <img src={future} alt="" />
+                <img src={future} alt="future" />
               </div>
               <div className="side6_card1_text">Future beyond 52 weeks</div>
             </div>
@@ -418,7 +418,7 @@ function AllCardsNew() {
           >
             <div className="image_side_6_card2 ">
               <div className="side6_card2_image">
-                <img src={endgoal} alt="" />
+                <img src={endgoal} alt="endgoal" />
               </div>
               <div className="side6_card2_text">End goal setting</div>
             </div>

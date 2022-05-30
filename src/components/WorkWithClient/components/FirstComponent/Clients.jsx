@@ -20,26 +20,26 @@ const Clients = () => {
             <div className="navbar-Clients"></div>
             <div className="container container-1-Clients">
             <div className="yellowbackground_Clients">
-                <img src={yellowbackground} alt='' />
+                <img src={yellowbackground} alt='yellowbackground' />
             </div>
                 <div className="row first-image-Clients">
                     <div className="col-lg-6">
                         <div data-aos="fade-right"  className="text-box-1-Clients">
 
                             <p className='container-1_text-Clients'>Working with our clients</p>
-                            <p className='container-2_text-Clients'>Nurturing the customers’ vision to bring it closer to reality. </p>
+                            <h1 className='container-2_text-Clients'>Nurturing the customers’ vision to bring it closer to reality. </h1>
                             <p className='container-3_text-Clients'>We are one of the most powerful sources of business growth and progress. We help our customers unfold their dreams to reality.</p>
-                            <div className="small-rect-prev-1-Clients"><img src={ smallerrectClients} alt='' className='smaller-rect-prev-1' /></div>
+                            <div className="small-rect-prev-1-Clients"><img src={ smallerrectClients} alt='smallerrectClients' className='smaller-rect-prev-1' /></div>
                         </div>
                     </div>
                     <div className="col-lg-6  d-flex justify-content-center text-center flex-column ">
                         <div data-aos="fade-left"  className="image-first-Clients">
-                            <img alt='' className='rect-Clients' src={rectClients} />
-                            <img alt='' className='wall-Clients' src={wallClients} />
-                            <img alt='' className='smallrect-Clients' src={smallrectClients} />
-                            <img alt='' className='backimg-Clients' src={BackClients} />
+                            <img alt='rectClients' className='rect-Clients' src={rectClients} />
+                            <img alt='wallClients' className='wall-Clients' src={wallClients} />
+                            <img alt='smallrectClients' className='smallrect-Clients' src={smallrectClients} />
+                            <img alt='BackClients' className='backimg-Clients' src={BackClients} />
                             <div className="banner_right_inner-Clients" >
-                                <img className='main-prev1-Clients' src={MainClients} alt="" />
+                                <img className='main-prev1-Clients' src={MainClients} alt="MainClients" />
                             </div>
                         </div>
                     </div>

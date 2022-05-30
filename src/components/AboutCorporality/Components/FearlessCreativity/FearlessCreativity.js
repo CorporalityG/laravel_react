@@ -22,7 +22,7 @@ function FearlessCreativity() {
         >
           <div className="fearless_image_side">
             <div className="fearless_main_image">
-              <img src={main_image} alt="" />
+              <img src={main_image} alt="main_image" />
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ function FearlessCreativity() {
             >
               <div className="fearless_content_1">
                 <div className="fearless_content_imageside">
-                  <img src={point_1} alt="" />
+                  <img src={point_1} alt="point_1" />
                 </div>
                 <div className="fearless_content_textside">
                   <div className="textside_heading">
@@ -65,7 +65,7 @@ function FearlessCreativity() {
             >
               <div className="fearless_content_2">
                 <div className="fearless_content_imageside">
-                  <img src={point_2} alt="" />
+                  <img src={point_2} alt="point_2" />
                 </div>
                 <div className="fearless_content_textside">
                   <div className="textside_heading">Our beliefs</div>
@@ -86,7 +86,7 @@ function FearlessCreativity() {
             >
               <div className="fearless_content_3">
                 <div className="fearless_content_imageside">
-                  <img src={point_3} alt="" />
+                  <img src={point_3} alt="point_3" />
                 </div>
                 <div className="fearless_content_textside">
                   <div className="textside_heading">Inclusivity</div>

@@ -58,6 +58,7 @@ const Single = () => {
                             <title>{singleBlog.meta_title ?? singleBlog.post_title}</title>
                             {singleBlog.meta_description && <meta name="description" content={singleBlog.meta_description} />}
                             {singleBlog.meta_keywords && <meta name="keywords" content={singleBlog.meta_keywords} />}
+                            <link rel="canonical" href={`${BASE_URL}/${singleBlog.post_slug}/`} />
                         </MetaTags>
                         
                         <div className="container-lg">
@@ -108,7 +109,7 @@ const Single = () => {
                                         </div>
                                         <div className="recent-events">
                                             <a className="sb-recent-blog-category" id="recent-blogs"><b>Upcoming Events</b></a>
-                                            <a href="https://corporality.global/club/corporality-global-event/" target="_blank"><img src={events} alt="" className="recent-events-imgs" /></a>
+                                            <a href="https://corporality.global/club/corporality-global-event/" target="_blank"><img src={events} alt="events" className="recent-events-imgs" /></a>
                                         </div>
 
 

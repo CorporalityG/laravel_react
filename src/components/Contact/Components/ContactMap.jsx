@@ -24,7 +24,7 @@ const ContactMap = () => {
                                             <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank" className="btn know_button ">Speaker Booking</a>
                                         </div>
 
-                                        <img className="img-fluid mx-5 bookcal-Image" src="./img/Contact/connnn.png" alt="" />
+                                        <img className="img-fluid mx-5 bookcal-Image" src="./img/Contact/connnn.png" alt="connnn" />
                                     </div>
                                 </div>
                             </div>

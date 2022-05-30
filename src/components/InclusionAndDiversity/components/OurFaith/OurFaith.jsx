@@ -14,19 +14,19 @@ const OurFaith = () => {
     }, [])
     return (
         <div className='OurFaith container-second-ourfaith'>
-            <img className='side2-container-Faith' src={side2} alt='' />
+            <img className='side2-container-Faith' src={side2} alt='side2' />
             <div className="container ">
                 <div className="">
                     <div className="row">
                         <div className="col-lg-6 imaging-2-Faith d-flex justify-content-center align-items-center flex-column">
                             <div className="images-2-Faith">
-                                <img className='wall2-container-Faith' src={wall2} alt='' />
+                                <img className='wall2-container-Faith' src={wall2} alt='wall2' />
 
-                                <img className='small2-container-Faith' src={small2} alt='' />
+                                <img className='small2-container-Faith' src={small2} alt='small2' />
                                 <div className="img-container-Faith">
                                     <div className="hoverinit-Faith Inc_Div_our-faith-main-img-Faith">
-                                        <div alt="" data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="1000">
-                                            <img className='main2-Faith ' src={main2} alt='' />
+                                        <div alt="main2" data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="1000">
+                                            <img className='main2-Faith ' src={main2} alt='main2' />
                                         </div>
                                     </div>
                                 </div>

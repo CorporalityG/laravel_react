@@ -35,14 +35,14 @@ function Leadership() {
 
           <div className="first_leadership_image">
             <div className="community_top_image-Leaderships">
-              <img src={top_image2} alt="" className="community_top_image_image-Leaderships" />
+              <img src={top_image2} alt="top_image2" className="community_top_image_image-Leaderships" />
             </div>
             <div className="community_top_back_image-Leaderships">
-              <img src={top_back} alt="" />
+              <img src={top_back} alt="top_back" />
             </div>
           </div>
           <div className="community_top_rectangle-Leaderships">
-            <img src={top_rectangle} alt="" />
+            <img src={top_rectangle} alt="top_rectangle" />
           </div>
         </div>
         <div
@@ -65,16 +65,16 @@ function Leadership() {
             <div className="community_bottom_image-Leaderships">
               <img
                 src={bottom_image2}
-                alt=""
+                alt="bottom_image2"
                 className="community_bottom_image_image-Leaderships"
               />
             </div>
             <div className="community_bottom_back_image-Leaderships">
-              <img src={bottom_back} alt="" />
+              <img src={bottom_back} alt="bottom_back" />
             </div>
           </div>
           <div className="community_bottom_rectangle-Leaderships">
-            <img src={bottom_rectangle} alt="" />
+            <img src={bottom_rectangle} alt="bottom_rectangle" />
           </div>
         </div>
       </div>

@@ -36,8 +36,8 @@ export default function SACComp4() {
               long-term foresight
             </p>
             <div className="sacc4RCBottom d-flex justify-content-center align-items-center">
-              <img className="sacc4Rec13" src={rec13} alt="" />
-              <img className="sacc4Arrow" src={arrow} alt="" />
+              <img className="sacc4Rec13" src={rec13} alt="rec13" />
+              <img className="sacc4Arrow" src={arrow} alt="arrow" />
               <span className="sacc4Button">Read More</span>
             </div>
           </div>
@@ -53,8 +53,8 @@ export default function SACComp4() {
               and beyond to drive performance and growth
             </p>
             <div className="sacc4RCBottom d-flex justify-content-center align-items-center">
-              <img className="sacc4Rec13" src={rec13} alt="" />
-              <img className="sacc4Arrow" src={arrow} alt="" />
+              <img className="sacc4Rec13" src={rec13} alt="rec13" />
+              <img className="sacc4Arrow" src={arrow} alt="arrow" />
               <span className="sacc4Button">Read More</span>
             </div>
           </div>
@@ -70,8 +70,8 @@ export default function SACComp4() {
               resilient solutions that fortify industry presence
             </p>
             <div className="sacc4RCBottom d-flex justify-content-center align-items-center">
-              <img className="sacc4Rec13" src={rec13} alt="" />
-              <img className="sacc4Arrow" src={arrow} alt="" />
+              <img className="sacc4Rec13" src={rec13} alt="rec13" />
+              <img className="sacc4Arrow" src={arrow} alt="arrow" />
               <span className="sacc4Button">Read More</span>
             </div>
           </div>
@@ -88,8 +88,8 @@ export default function SACComp4() {
                     satisfaction and loyalty leading to business growth
                   </p>
                   <div className="sacc4DCBottom d-flex justify-content-center align-items-center">
-                    <img className="sacc4Rec13" src={rec13} alt="" />
-                    <img className="sacc4Arrow" src={arrow} alt="" />
+                    <img className="sacc4Rec13" src={rec13} alt="rec13" />
+                    <img className="sacc4Arrow" src={arrow} alt="arrow" />
                     <span className="sacc4Button">Read More</span>
                   </div>
                 </div>
@@ -107,8 +107,8 @@ export default function SACComp4() {
                     organisations to make better marketing decisions.
                   </p>
                   <div className="sacc4DCBottom d-flex justify-content-center align-items-center">
-                    <img className="sacc4Rec13" src={rec13} alt="" />
-                    <img className="sacc4Arrow" src={arrow} alt="" />
+                    <img className="sacc4Rec13" src={rec13} alt="rec13" />
+                    <img className="sacc4Arrow" src={arrow} alt="arrow" />
                     <span className="sacc4Button">Read More</span>
                   </div>
                 </div>
@@ -129,8 +129,8 @@ export default function SACComp4() {
                     satisfaction and loyalty leading to business growth
                   </p>
                   <div className="sacc4DCBottom d-flex justify-content-center align-items-center">
-                    <img className="sacc4Rec13" src={rec13} alt="" />
-                    <img className="sacc4Arrow" src={arrow} alt="" />
+                    <img className="sacc4Rec13" src={rec13} alt="rec13" />
+                    <img className="sacc4Arrow" src={arrow} alt="arrow" />
                     <span className="sacc4Button">Read More</span>
                   </div>
                 </div>
@@ -148,8 +148,8 @@ export default function SACComp4() {
                     organisations to make better marketing decisions.
                   </p>
                   <div className="sacc4DCBottom d-flex justify-content-center align-items-center">
-                    <img className="sacc4Rec13" src={rec13} alt="" />
-                    <img className="sacc4Arrow" src={arrow} alt="" />
+                    <img className="sacc4Rec13" src={rec13} alt="rec13" />
+                    <img className="sacc4Arrow" src={arrow} alt="arrow" />
                     <span className="sacc4Button">Read More</span>
                   </div>
                 </div>

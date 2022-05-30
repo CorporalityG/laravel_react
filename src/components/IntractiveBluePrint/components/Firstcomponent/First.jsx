@@ -25,7 +25,7 @@ const First = () => {
           <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="500" className="interactive_card1">
             <div className="card-1-blueprint-interactive">
               <div className="interactive_card_image">
-                <img src={icon1} alt="" />
+                <img src={icon1} alt="Explore" />
               </div>
               <div className="interactive_card_heading">Explore</div>
               <div className="interactive_card_text">
@@ -36,7 +36,7 @@ const First = () => {
           </div>
           <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="1000" className="interactive_card2">
             <div className="interactive_card_image">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="Audience" />
             </div>
             <div className="interactive_card_heading">Audience</div>
             <div className="interactive_card_text">
@@ -47,7 +47,7 @@ const First = () => {
           </div>
           <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="1500" className="interactive_card3">
             <div className="interactive_card_image">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="Design" />
             </div>
             <div className="interactive_card_heading">Design</div>
             <div className="interactive_card_text">
@@ -58,7 +58,7 @@ const First = () => {
           </div>
           <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="2000" className="interactive_card4">
             <div className="interactive_card_image">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="Scope" />
             </div>
             <div className="interactive_card_heading">Scope</div>
             <div className="interactive_card_text interactive_card_4_change">
@@ -68,7 +68,7 @@ const First = () => {
           </div>
           <div data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="2500" className="interactive_card5">
             <div className="interactive_card_image">
-              <img src={icon5} alt="" />
+              <img src={icon5} alt="Conversions" />
             </div>
             <div className="interactive_card_heading">Conversions</div>
             <div className="interactive_card_text">
@@ -78,7 +78,7 @@ const First = () => {
           </div>
           <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="3000" className="interactive_card6">
             <div className="interactive_card_image heading-last-Ib">
-              <img src={icon6} alt="" />
+              <img src={icon6} alt="Call to Action Analysis" />
             </div>
             <div className="interactive_card_heading ">
               Call to Action Analysis

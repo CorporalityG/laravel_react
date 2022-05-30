@@ -106,8 +106,8 @@ const Blog = () => {
                 <div className='blogContainer'>
                     <div className="blogHead">
                     <div className='blogImageWrapper'>
-                        {/* <img src={`${blog.photo}`} alt="" /> */}
-                        <img src={`http://localhost:3000/images/${blog.photo}`} alt="" />
+                        {/* <img src={`${blog.photo}`} alt="photo" /> */}
+                        <img src={`http://localhost:3000/images/${blog.photo}`} alt="photo" />
                     </div>
                         <div className='likeShare'>
                             <span>

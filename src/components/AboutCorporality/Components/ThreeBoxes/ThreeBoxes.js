@@ -22,7 +22,7 @@ function ThreeBoxes() {
           data-aos-duration="1000"
         >
           <div className="first_box_image">
-            <img src={projects} alt="" />
+            <img src={projects} alt="projects" />
           </div>
           <div className="first_box_text">
             <div className="first_heading">590+</div>
@@ -36,7 +36,7 @@ function ThreeBoxes() {
           data-aos-duration="1000"
         >
           <div className="second_box_image">
-            <img src={client} alt="" />
+            <img src={client} alt="client" />
           </div>
           <div className="second_box_text">
             <div className="second_heading">100</div>
@@ -52,7 +52,7 @@ function ThreeBoxes() {
           data-aos-duration="1000"
         >
           <div className="third_box_image">
-            <img src={chart} alt="" />
+            <img src={chart} alt="chart" />
           </div>
           <div className="third_box_text">Geospatial and CSR initiatives</div>
         </div>

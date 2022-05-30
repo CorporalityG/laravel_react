@@ -23,17 +23,17 @@ export default function PPComp1() {
 //                         <p data-aos="fade-right" data-aos-duration="500" className="ppcHeading">Partnership Programmes</p><br />
 //                         <p className="ppcText" data-aos="fade-right" data-aos-delay="300" data-aos-duration="500">Corporality Global holds extensive strategic strength partnership programmes that extend entrepreneurial reach beyond the ordinary</p><br />
 //                         <a data-aos="fade-right" data-aos-delay="600" data-aos-duration="500" className='ppc1Button' href="/#">Read More</a>
-//                         <img className="ppc1Rec9" src={rec9} alt="" />
+//                         <img className="ppc1Rec9" src={rec9} alt="rec9" />
 //                     </div>
 //                     <div className="col p-0 d-flex flex-column justify-content-center ppc1ColWrapper">
 //                         <div  data-aos="fade-left" data-aos-duration="1000" className="ppc1ImageWrapper cont">
-//                             <img className="qwerty" src={diamond} />
-//                             <img className="ppc1Rec6" src={rec6} alt="" />
+//                             <img className="qwerty" src={diamond} alt="diamond" />
+//                             <img className="ppc1Rec6" src={rec6} alt="rec6" />
 //                             <div className="ppc1MainImg">
-//                                 <img className="ppc1Img1" src={img1} alt="" />
+//                                 <img className="ppc1Img1" src={img1} alt="img1" />
 //                             </div>
-//                             <img className="ppc1Wall" src={wall} alt="" />
-//                             <img className="ppc1Rec8" src={rec8} alt="" />
+//                             <img className="ppc1Wall" src={wall} alt="wall" />
+//                             <img className="ppc1Rec8" src={rec8} alt="rec8" />
 //                         </div>
 //                     </div>
 //                 </div>
@@ -53,9 +53,9 @@ return (
                 <div className="col-lg-6">
                     <div data-aos="fade-right" className="text-box-1-Op">
 
-                        <p className='container-1_text-Op'>Partnership Programmes</p>
+                        <h1 className='container-1_text-Op'>Partnership Programmes</h1>
                         <p className='container-2_text-Op'>Corporality holds extensive startegic strength partnership programmes extend enterpreneurial reach beyond the ordinary </p>
-                        <div className="small-rect-prev-1-Op"><img src={smallerrect} alt='' className='smaller-rect-prev-1' /></div>
+                        <div className="small-rect-prev-1-Op"><img src={smallerrect} alt='smallerrect' className='smaller-rect-prev-1' /></div>
                         <a
               data-aos="fade-right"
               data-aos-delay="600"
@@ -69,12 +69,12 @@ return (
                 </div>
                 <div className="col-lg-6  d-flex justify-content-center text-center flex-column ">
                     <div data-aos="fade-left" className="image-first-Op">
-                        <img alt='' className='rect-Op' src={rect} />
-                        <img alt='' className='wall-Op' src={wall} />
-                        <img alt='' className='smallrect-Op' src={smallrect} />
-                        <img alt='' className='backimg-Op' src={Back} />
+                        <img alt='rect' className='rect-Op' src={rect} />
+                        <img alt='wall' className='wall-Op' src={wall} />
+                        <img alt='smallrect' className='smallrect-Op' src={smallrect} />
+                        <img alt='Back' className='backimg-Op' src={Back} />
                         <div className="banner_right_inner-Op" >
-                            <img className='main-prev1-Op' src={Main} alt=""/>
+                            <img className='main-prev1-Op' src={Main} alt="Main"/>
                         </div>
 
                     </div>

@@ -18,7 +18,7 @@ const Second = () => {
     }, [])
     return (
         <div className="second">
-            <img className='wall-2-2' src={wall} alt='' />
+            <img className='wall-2-2' src={wall} alt='wall' />
             <div className='container second-container' >
                 <div className="row interactive_blueprint-row">
                     <div className="col-lg-6 textndlists">
@@ -27,22 +27,22 @@ const Second = () => {
                             <div className="textndimg">
 
 
-                                <span><img  className='polygon-last' src={polygon} alt='' /></span><p className='container-2-text-2'>Drafting an accurate project scope and preventing bigger headaches along the road</p>
+                                <span><img  className='polygon-last' src={polygon} alt='polygon' /></span><p className='container-2-text-2'>Drafting an accurate project scope and preventing bigger headaches along the road</p>
                             </div>
                             <div className="textndimg">
 
 
-                                <span><img  className='polygon-last' src={polygon} alt='' /></span><p className='container-2-text-2'>Improving team buy-in by ensuring team collaboration and stakeholder participation</p>
+                                <span><img  className='polygon-last' src={polygon} alt='polygon' /></span><p className='container-2-text-2'>Improving team buy-in by ensuring team collaboration and stakeholder participation</p>
                             </div>
                             <div className="textndimg">
 
 
-                                <span><img  className='polygon-last' src={polygon} alt='' /></span><p className='container-2-text-2'>Project  breakage to manageable pieces allowing you manage workload and budgets efficiently</p>
+                                <span><img  className='polygon-last' src={polygon} alt='polygon' /></span><p className='container-2-text-2'>Project  breakage to manageable pieces allowing you manage workload and budgets efficiently</p>
                             </div>
                             <div className="textndimg">
 
 
-                                <span><img  className='polygon-last' src={polygon} alt='' /></span><p className='container-2-text-2'>Written plan along with comprehensive research and expert recommendations</p>
+                                <span><img  className='polygon-last' src={polygon} alt='polygon' /></span><p className='container-2-text-2'>Written plan along with comprehensive research and expert recommendations</p>
                             </div>
                             <a href=''>
                                 <div className="button-5">
@@ -57,16 +57,16 @@ const Second = () => {
                     </div>
                     <div className="col-lg-6 d-flex justify-content-center ">
                         <div className="imagessecond">
-                            <img className='rect-2-1' src={rect1} alt='' />
-                            <img className='rect-2-2' src={rect2} alt='' />
-                            <img className='rect-2-3' src={rect3} alt='' />
-                            <img className='rect-2-4' src={rect4} alt='' />
+                            <img className='rect-2-1' src={rect1} alt='rect1' />
+                            <img className='rect-2-2' src={rect2} alt='rect2' />
+                            <img className='rect-2-3' src={rect3} alt='rect3' />
+                            <img className='rect-2-4' src={rect4} alt='rect4' />
 
                             <div className="mainndback-4">
-                                <img className='backimagesecond-fourth' src={Back} alt='' />
+                                <img className='backimagesecond-fourth' src={Back} alt='Back' />
                                 <div className="bp_our-newsletter-polygon9">
                                     <div data-aos="fade-down-left" data-aos-duration="2000">
-                                        <img className='main-2-2' src={Main} alt="" />
+                                        <img className='main-2-2' src={Main} alt="Main" />
                                     </div>
                                 </div>
                             </div>

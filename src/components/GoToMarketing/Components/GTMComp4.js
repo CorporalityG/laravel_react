@@ -41,7 +41,7 @@ function GTMComp4() {
                                 <div className="cf-inner">
                                     <div className="overlay"></div>
                                     <div className="inner inner1">
-                                        <img className="mb-3" src={aa} alt="" />
+                                        <img className="mb-3" src={aa} alt="Forming a clearly" />
                                         <h2 className="yellowSquare">Forming a clearly defined product marketing plan</h2>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@ function GTMComp4() {
                                 <div className="cf-inner">
                                     <div className="overlay"></div>
                                     <div className="inner inner1">
-                                        <img className="mb-3" src={aa} alt="" />
+                                        <img className="mb-3" src={aa} alt="Forming a clearly" />
                                         <h2 className="yellowSquare">Forming a clearly defined product marketing plan</h2>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@ function GTMComp4() {
                                 <div className="cf-inner">
                                     <div className="overlay"></div>
                                     <div className="inner inner1">
-                                        <img className="mb-3" src={ab} alt="" />
+                                        <img className="mb-3" src={ab} alt="Proper allocation" />
                                         <h2 className="yellowSquare">Proper allocation of time and money</h2>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@ function GTMComp4() {
                                 <div className="cf-inner">
                                     <div className="overlay"></div>
                                     <div className="inner inner1">
-                                        <img className="mb-3" src={ab} alt="" />
+                                        <img className="mb-3" src={ab} alt="Proper allocation" />
                                         <h2 className="yellowSquare">Proper allocation of time and money</h2>
                                     </div>
                                 </div>
@@ -85,7 +85,7 @@ function GTMComp4() {
                                 <div className="cf-inner">
                                     <div className="overlay"></div>
                                     <div className="inner inner1">
-                                        <img className="mb-3" src={ac} alt="" />
+                                        <img className="mb-3" src={ac} alt="Succeessful product" />
                                         <h2 className="yellowSquare">Succeessful product or service launch</h2>
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@ function GTMComp4() {
                                 <div className="cf-inner">
                                     <div className="overlay"></div>
                                     <div className="inner inner1">
-                                        <img className="mb-3" src={ac} alt="" />
+                                        <img className="mb-3" src={ac} alt="Succeessful product" />
                                         <h2 className="yellowSquare">Succeessful product or service launch</h2>
                                     </div>
                                 </div>
@@ -107,7 +107,7 @@ function GTMComp4() {
                                 <div className="cf-inner">
                                     <div className="overlay"></div>
                                     <div className="inner inner1">
-                                        <img className="mb-3" src={ad} alt="" />
+                                        <img className="mb-3" src={ad} alt="Creating a solid path" />
                                         <h2 className="yellowSquare">Creating a solid path for growth</h2>
                                     </div>
                                 </div>
@@ -116,7 +116,7 @@ function GTMComp4() {
                                 <div className="cf-inner">
                                     <div className="overlay"></div>
                                     <div className="inner inner1">
-                                        <img className="mb-3" src={ad} alt="" />
+                                        <img className="mb-3" src={ad} alt="Creating a solid path" />
                                         <h2 className="yellowSquare">Creating a solid path for growth</h2>
                                     </div>
                                 </div>
@@ -129,7 +129,7 @@ function GTMComp4() {
                                 <div className="cf-inner">
                                     <div className="overlay"></div>
                                     <div className="inner inner1">
-                                        <img className="mb-3" src={ae} alt="" />
+                                        <img className="mb-3" src={ae} alt="Establishing an effective" />
                                         <h2 className="yellowSquare">Establishing an effective customer service</h2>
                                     </div>
                                 </div>
@@ -138,7 +138,7 @@ function GTMComp4() {
                                 <div className="cf-inner">
                                     <div className="overlay"></div>
                                     <div className="inner inner1">
-                                        <img className="mb-3" src={ae} alt="" />
+                                        <img className="mb-3" src={ae} alt="Establishing an effective" />
                                         <h2 className="yellowSquare">Establishing an effective customer service</h2>
                                     </div>
                                 </div>

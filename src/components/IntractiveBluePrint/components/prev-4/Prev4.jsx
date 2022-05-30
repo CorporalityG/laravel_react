@@ -14,7 +14,7 @@ const Prev4 = () => {
             <div className="bp_anm_container">
 
                 <div className="bp_anm_container_img">
-                    <img src={hoverimg} alt="" />
+                    <img src={hoverimg} alt="We create fortified" />
                 </div>
                 <div className="main_container">
                     <div className="bp_anm_container_text" >

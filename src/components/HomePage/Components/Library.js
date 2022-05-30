@@ -91,7 +91,7 @@ function Library() {
               id="image1"
             >
               <div className="upper_image">
-                <img src={img1} alt="" />
+                <img src={img1} alt="img1" />
               </div>
               <div className="lower_text">
                 <div className="lower_text_heading">Industry Research</div>
@@ -111,7 +111,7 @@ function Library() {
               id="image2"
             >
               <div className="upper_image">
-                <img src={img2} alt="" />
+                <img src={img2} alt="img2" />
               </div>
               <div className="lower_text">
                 <div className="lower_text_heading">Video Library</div>
@@ -132,7 +132,7 @@ function Library() {
               id="image3"
             >
               <div className="upper_image" onClick={() => navigate("/blog")}>
-                <img src={img3} alt="" />
+                <img src={img3} alt="img3" />
               </div>
               <div className="lower_text">
                 <div className="lower_text_heading">Blog</div>
@@ -153,7 +153,7 @@ function Library() {
               id="image4"
             >
               <div className="upper_image fourth_img">
-                <img src={img4} alt="" />
+                <img src={img4} alt="img4" />
               </div>
               <div className="lower_text">
                 <div className="lower_text_heading">Download Resources</div>

@@ -29,21 +29,21 @@ export default function Banner2() {
             <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
               <div className="purpleD align-items-center"></div>
               <div className="position-absolute top-50 start-50 translate-middle align-items-center dImg">
-                <img src={BASE_URL + '/img/HomePage/media/Vector.png'} alt="" className="img-fluid" />
+                <img src={BASE_URL + '/img/HomePage/media/Vector.png'} alt="Vector" className="img-fluid" />
               </div>
             </div>
             <div className="box position-relative">
               <div className="position-absolute start-50 top-0 translate-middle-x my-4">
                 <img
                   src={BASE_URL + '/img/HomePage/media/polygon-23.png'}
-                  alt=""
+                  alt="polygon"
                   className="img-fluid dd1"
                 />
               </div>
               <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
                 <img
                   src={BASE_URL + '/img/HomePage/media/polygon-24.png'}
-                  alt=""
+                  alt="polygon"
                   className="img-fluid dd1"
                 />
               </div>
@@ -70,7 +70,7 @@ export default function Banner2() {
                 <img
                   // src={BASE_URL + '/img/HomePage/media/planet-earth 1.png"
                   src={BASE_URL + '/img/HomePage/media/planet.png'}
-                  alt=""
+                  alt="planet"
                   className="img-fluid"
                 />
               </div>
@@ -79,14 +79,14 @@ export default function Banner2() {
               <div className="position-absolute start-50 top-0 translate-middle-x my-4">
                 <img
                   src={BASE_URL + '/img/HomePage/media/polygon-23.png'}
-                  alt=""
+                  alt="polygon"
                   className="img-fluid dd1"
                 />
               </div>
               <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
                 <img
                   src={BASE_URL + '/img/HomePage/media/polygon-24.png'}
-                  alt=""
+                  alt="polygon"
                   className="img-fluid dd1"
                 />
               </div>
@@ -111,21 +111,21 @@ export default function Banner2() {
             <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
               <div className="purpleD align-items-center"></div>
               <div className="position-absolute top-50 start-50 translate-middle align-items-center dImg">
-                <img src={BASE_URL + '/img/HomePage/media/agile.png'} alt="" className="img-fluid" />
+                <img src={BASE_URL + '/img/HomePage/media/agile.png'} alt="agile" className="img-fluid" />
               </div>
             </div>
             <div className="box">
               <div className="position-absolute start-50 top-0 translate-middle-x my-4">
                 <img
                   src={BASE_URL + '/img/HomePage/media/polygon-23.png'}
-                  alt=""
+                  alt="polygon"
                   className="img-fluid dd1"
                 />
               </div>
               <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
                 <img
                   src={BASE_URL + '/img/HomePage/media/polygon-24.png'}
-                  alt=""
+                  alt="polygon"
                   className="img-fluid dd1"
                 />
               </div>

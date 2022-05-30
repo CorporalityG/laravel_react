@@ -16,8 +16,8 @@ const NewsLetter = () => {
   }, [])
   return (
     <div className="NewsLetter_Main_work">
-      <img src={wall} alt=" " className="Wall_newsletter" />
-      <img src={rightrect} alt=" " className="rect_newsletter" />
+      <img src={wall} alt="wall" className="Wall_newsletter" />
+      <img src={rightrect} alt="rightrect" className="rect_newsletter" />
 
       <div className="container">
         <div className="row NewsLetter_full ">
@@ -57,17 +57,17 @@ const NewsLetter = () => {
             </div>
           </div>
           <div className="col-lg-6 newsLetter_image_section">
-            <img src={growmore} alt=" " className="growmore_newsletter" />
-            <img src={learnmore} alt=" " className="learnmore_newsletter" />
-            <img src={logo} alt=" " className="logo_newsletter" />
+            <img src={growmore} alt="growmore" className="growmore_newsletter" />
+            <img src={learnmore} alt="learnmore" className="learnmore_newsletter" />
+            <img src={logo} alt="logo" className="logo_newsletter" />
 
             <div className="Main_back_NewsLetter">
               <div className="Work-newsletter-polygon9">
                 <div data-aos="fade-left" data-aos-delay="500">
-                  <img src={main} alt="" />
+                  <img src={main} alt="main" />
                 </div>
               </div>
-              <img src={back} className="back_newsLetter" alt="" />
+              <img src={back} className="back_newsLetter" alt="back" />
             </div>
           </div>
         </div>

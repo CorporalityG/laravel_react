@@ -45,7 +45,7 @@ function Leadership() {
               data-aos-duration="1000"
             >
               <div className="leadership1_image">
-                <img src={image_1} alt="" />
+                <img src={image_1} alt="image_1" />
               </div>
               <div className="leader_card_content_box">
                 <div className="card_content_h1">Priya Mishra</div>
@@ -65,7 +65,7 @@ function Leadership() {
               data-aos-duration="1000"
             >
               <div className="leadership2_image">
-                <img src={image_2} alt="" />
+                <img src={image_2} alt="image_2" />
               </div>
 
               <div className="leader_card_content_box">

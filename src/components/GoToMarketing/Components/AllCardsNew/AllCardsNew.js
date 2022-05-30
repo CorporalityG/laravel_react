@@ -37,7 +37,7 @@ function AllCardsNew() {
       <div className="container gotomarketing_cards_container">
         <div className="gotomarketing_all_cards_parent ">
           <div className="gotomarketing_line_vertical">
-            <img src={line_vertical} alt="" />
+            <img src={line_vertical} alt="line_vertical" />
           </div>
           <div
             className="gotomarketing_cards_text_side_1 aos-init aos-animate"
@@ -45,14 +45,14 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="gotomarketing_line_horizontal_1">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
 
             <div className="gotomarketing_cards_top_heading_text ">
               CUSTOMER PERSONA
             </div>
             <div className="gotomarketing_cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -63,7 +63,7 @@ function AllCardsNew() {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side1_card1_image">
-              <img src={aa} alt="" />
+              <img src={aa} alt="Research Personas" />
             </div>
             <div className="gotomarketing_side1_card1_text">
               Research Personas
@@ -77,7 +77,7 @@ function AllCardsNew() {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side1_card2_image">
-              <img src={ab} alt="" />
+              <img src={ab} alt="Segment Personas" />
             </div>
             <div className="gotomarketing_side1_card2_text">
               Segment Personas
@@ -91,7 +91,7 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side1_card3_image">
-              <img src={ac} alt="" />
+              <img src={ac} alt="Create a name or story" />
             </div>
             <div className="gotomarketing_side1_card3_text">
               Create a name or story
@@ -105,7 +105,7 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side1_card4_image">
-              <img src={ad} alt="" />
+              <img src={ad} alt="Identify objectives" />
             </div>
             <div className="gotomarketing_side1_card4_text">
               Identify objectives and challenges
@@ -119,7 +119,7 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side1_card5_image">
-              <img src={ae} alt="" />
+              <img src={ae} alt="Customised digital marketing" />
             </div>
             <div className="gotomarketing_side1_card5_text">
               Customised digital marketing and sales strategies
@@ -134,13 +134,13 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="gotomarketing_line_horizontal_2">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
             <div className="gotomarketing_cards_top_heading_text">
               COMPETITOR ANALYSIS
             </div>
             <div className="gotomarketing_cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -151,7 +151,7 @@ function AllCardsNew() {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side2_card1_image">
-              <img src={ba} alt="" />
+              <img src={ba} alt="Identifying objectives" />
             </div>
             <div className="gotomarketing_side2_card1_text">
               Identifying objectives and competitors
@@ -165,7 +165,7 @@ function AllCardsNew() {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side2_card2_image">
-              <img src={bb} alt="" />
+              <img src={bb} alt="Market share and SWOT Analysis" />
             </div>
             <div className="gotomarketing_side2_card2_text">
               Market share and SWOT Analysis
@@ -179,7 +179,7 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side2_card3_image">
-              <img src={bc} alt="" />
+              <img src={bc} alt="Building a competitive portfolio" />
             </div>
             <div className="gotomarketing_side2_card3_text">
               Building a competitive portfolio
@@ -192,7 +192,7 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side2_card4_image">
-              <img src={bd} alt="" />
+              <img src={bd} alt="Compare value propositions" />
             </div>
             <div className="gotomarketing_side2_card4_text">
               Compare value propositions
@@ -205,7 +205,7 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side2_card5_image">
-              <img src={be} alt="" />
+              <img src={be} alt="Execute strategies and follow-up" />
             </div>
             <div className="gotomarketing_side2_card5_text">
               Execute strategies and follow-up
@@ -220,13 +220,13 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="gotomarketing_line_horizontal_3">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
             <div className="gotomarketing_cards_top_heading_text">
               MESSAGING STRATEGY
             </div>
             <div className="gotomarketing_cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -237,7 +237,7 @@ function AllCardsNew() {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side3_card1_image">
-              <img src={ca} alt="" />
+              <img src={ca} alt="Perpare a guide and outline" />
             </div>
             <div className="gotomarketing_side3_card1_text">
               Perpare a guide and outline
@@ -251,7 +251,7 @@ function AllCardsNew() {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side3_card2_image">
-              <img src={cb} alt="" />
+              <img src={cb} alt="Identify messaging channels" />
             </div>
             <div className="gotomarketing_side3_card2_text">
               Identify messaging channels
@@ -265,7 +265,7 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side3_card3_image">
-              <img src={cc} alt="" />
+              <img src={cc} alt="Draft purpose of the communication" />
             </div>
             <div className="gotomarketing_side3_card3_text">
               Draft purpose of the communication
@@ -279,7 +279,7 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side3_card4_image">
-              <img src={cd} alt="" />
+              <img src={cd} alt="Research Target Audience" />
             </div>
             <div className="gotomarketing_side3_card4_text">
               Research Target Audience
@@ -293,7 +293,7 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side3_card5_image">
-              <img src={ce} alt="" />
+              <img src={ce} alt="Critical feedback gathering" />
             </div>
             <div className="gotomarketing_side3_card5_text">
               Critical feedback gathering and improvement
@@ -306,14 +306,14 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="gotomarketing_line_horizontal_4">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
 
             <div className="gotomarketing_cards_top_heading_text">
               STRATAGEM
             </div>
             <div className="gotomarketing_cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -324,7 +324,7 @@ function AllCardsNew() {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side4_card1_image">
-              <img src={da} alt="" />
+              <img src={da} alt="Collecting high-quality" />
             </div>
             <div className="gotomarketing_side4_card1_text">
               Collecting high-quality data-to target the right people
@@ -338,7 +338,7 @@ function AllCardsNew() {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side4_card2_image">
-              <img src={db} alt="" />
+              <img src={db} alt="Designing offers according" />
             </div>
             <div className="gotomarketing_side4_card2_text">
               Designing offers according to customer funnels
@@ -352,7 +352,7 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side4_card3_image">
-              <img src={dc} alt="" />
+              <img src={dc} alt="Finding competitor ranking" />
             </div>
             <div className="gotomarketing_side4_card3_text">
               Finding competitor ranking and niches
@@ -366,7 +366,7 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side4_card4_image">
-              <img src={dd} alt="" />
+              <img src={dd} alt="Co-marketing initiatives" />
             </div>
             <div className="gotomarketing_side4_card4_text">
               Co-marketing initiatives and events
@@ -379,12 +379,12 @@ function AllCardsNew() {
             data-aos-duration="2500"
           >
             <div className="gotomarketing_line_horizontal_5">
-              <img src={line_horizontal} alt="" />
+              <img src={line_horizontal} alt="line_horizontal" />
             </div>
 
             <div className="gotomarketing_cards_top_heading_text">FEEDBACK</div>
             <div className="gotomarketing_cards_top_heading_joiner">
-              <img src={joiner} alt="" />
+              <img src={joiner} alt="joiner" />
             </div>
           </div>
 
@@ -395,7 +395,7 @@ function AllCardsNew() {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side5_card1_image">
-              <img src={ea} alt="" />
+              <img src={ea} alt="Establishing a feedback loop" />
             </div>
             <div className="gotomarketing_side5_card1_text">
               Establishing a feedback loop
@@ -409,7 +409,7 @@ function AllCardsNew() {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side5_card2_image">
-              <img src={eb} alt="" />
+              <img src={eb} alt="Reporting progress" />
             </div>
             <div className="gotomarketing_side5_card2_text">
               Reporting progress
@@ -422,7 +422,7 @@ function AllCardsNew() {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side5_card3_image">
-              <img src={ec} alt="" />
+              <img src={ec} alt="Resolving pain points" />
             </div>
             <div className="gotomarketing_side5_card3_text">
               Resolving pain points

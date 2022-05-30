@@ -56,15 +56,16 @@ const Blog = () => {
 
     return (
         <div className="single-blog-page">
-            {/*{
+            {
                 singleBlog ?
                     <MetaTags>
                         <title>{singleBlog.meta_title ?? singleBlog.post_title}</title>
                         { singleBlog.meta_description && <meta name="description" content={singleBlog.meta_description} /> }
                         { singleBlog.meta_keywords && <meta name="keywords" content={singleBlog.meta_keywords} /> }
+                        <link rel="canonical" href={`${BASE_URL}/${singleBlog.post_slug}/`} />
                     </MetaTags>
                 : null
-            }*/}
+            }
             
             <BlogTop />
 

@@ -35,7 +35,7 @@ export default function Process() {
 										<div className="cf-inner">
 											<div className="overlay"></div>
 											<div className="inner inner1">
-												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Initial-Extraction.png" alt="" />
+												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Initial-Extraction.png" alt="Initial-Extraction" />
 												<h2 className="yellowSquare">Initial Extraction</h2>
 												<p>Discover your brand and redesign goals and how you’ll measure your project’s success  </p>
 											</div>
@@ -45,7 +45,7 @@ export default function Process() {
 										<div className="cf-inner">
 											<div className="overlay"></div>
 											<div className="inner inner1">
-												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Initial-Extraction.png" alt="" />
+												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Initial-Extraction.png" alt="Initial Extraction" />
 												<h2 className="yellowSquare">Initial Extraction</h2>
 												<p>Discover your brand and redesign goals and how you’ll measure your project’s success  </p>
 											</div>
@@ -59,7 +59,7 @@ export default function Process() {
 										<div className="cf-inner">
 											<div className="overlay"></div>
 											<div className="inner inner1">
-												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Competitive-Analysis.png" alt="" />
+												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Competitive-Analysis.png" alt="Competitive-Analysis" />
 												<h2 className="yellowSquare">Competitive Analysis</h2>
 												<p>Find the competitive edge and list of competitors for each service/ product</p>
 											</div>
@@ -69,7 +69,7 @@ export default function Process() {
 										<div className="cf-inner">
 											<div className="overlay"></div>
 											<div className="inner inner1">
-												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Competitive-Analysis.png" alt="" />
+												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Competitive-Analysis.png" alt="Competitive-Analysis" />
 												<h2 className="yellowSquare">Competitive Analysis</h2>
 												<p>Find the competitive edge and list of competitors for each service/ product</p>
 											</div>
@@ -83,7 +83,7 @@ export default function Process() {
 										<div className="cf-inner">
 											<div className="overlay"></div>
 											<div className="inner inner1">
-												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/High-impact-Content.png" alt="" />
+												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/High-impact-Content.png" alt="High-impact-Content" />
 												<h2 className="yellowSquare">High-impact Content</h2>
 												<p>Educate and sell to your customers at the same time - let’s make a powerful Content marketing Strategy with high impact and recall.</p>
 											</div>
@@ -93,7 +93,7 @@ export default function Process() {
 										<div className="cf-inner">
 											<div className="overlay"></div>
 											<div className="inner inner1">
-												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/High-impact-Content.png" alt="" />
+												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/High-impact-Content.png" alt="High-impact-Content" />
 												<h2 className="yellowSquare">High-impact Content</h2>
 												<p>Educate and sell to your customers at the same time - let’s make a powerful Content marketing Strategy with high impact and recall.</p>
 											</div>
@@ -107,7 +107,7 @@ export default function Process() {
 										<div className="cf-inner">
 											<div className="overlay"></div>
 											<div className="inner inner1">
-												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Layout-and-layers.png" alt="" />
+												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Layout-and-layers.png" alt="Layout-and-layers" />
 												<h2 className="yellowSquare">Layout and layerst</h2>
 												<p>Functionality, system integration, technical, and accessibility requirements</p>
 											</div>
@@ -117,7 +117,7 @@ export default function Process() {
 										<div className="cf-inner">
 											<div className="overlay"></div>
 											<div className="inner inner1">
-												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Layout-and-layers.png" alt="" />
+												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Layout-and-layers.png" alt="Layout-and-layers" />
 												<h2 className="yellowSquare">Layout and layers</h2>
 												<p>Functionality, system integration, technical, and accessibility requirements</p>
 											</div>
@@ -131,7 +131,7 @@ export default function Process() {
 										<div className="cf-inner">
 											<div className="overlay"></div>
 											<div className="inner inner1">
-												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Sitemap.png" alt="" />
+												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Sitemap.png" alt="Sitemap" />
 												<h2 className="yellowSquare">Sitemap</h2>
 												<p>An initial site map and easy navigation setup across the website</p>
 											</div>
@@ -141,7 +141,7 @@ export default function Process() {
 										<div className="cf-inner">
 											<div className="overlay"></div>
 											<div className="inner inner1">
-												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Sitemap.png" alt="" />
+												<img className="mb-3" src="./img/DigitalMediaMarketing/img/Process/Sitemap.png" alt="Sitemap" />
 												<h2 className="yellowSquare">Sitemap</h2>
 												<p>An initial site map and easy navigation setup across the website</p>
 											</div>

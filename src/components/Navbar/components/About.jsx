@@ -94,7 +94,7 @@ const About = () => {
                             <h6>Inbound Shifting</h6>
                             <div className="diamond-line"></div>
                         </Link>
-                        <Link to="/" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
+                        <Link to="/corporality-striker" onClick={() => {setShowAbout(false); topHandler()}} className="section-list-items">
                             <h6>Corporality Striker</h6>
                             <div className="diamond-line"></div>
                         </Link>

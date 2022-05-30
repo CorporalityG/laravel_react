@@ -22,6 +22,7 @@ function Careers() {
       <MetaTags>
         <title>{`Careers | Corporality`}</title>
         <meta name="description" content={`Corporality provides a positive environment & helps to create the best work culture with your professional life. Send us your CV to hello@corporality.global`} />
+        <link rel="canonical" href={`${BASE_URL}/careers/`} />
       </MetaTags>
 
       <div className="career-banner-section">

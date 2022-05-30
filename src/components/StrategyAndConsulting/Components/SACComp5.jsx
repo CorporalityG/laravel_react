@@ -24,14 +24,14 @@ const SACComp5 = () => {
                 <div className="row">
                     <div className="col-lg-6 d-flex SACComp5_third-image-Ideation justify-content-center flex-column  align-items-center">
                         <div data-aos="fade-right" className='SACComp5_images-prev-3-Ideation'>
-                            <img alt='' className='SACComp5_smaller3-Ideation' src={smaller3Internal} />
-                            <img alt='' className='SACComp5_small3-Ideation' src={small3Internal} />
-                            <img alt='' className='SACComp5_wall3-Ideation' src={wall3Internal} />
+                            <img alt='smaller3Internal' className='SACComp5_smaller3-Ideation' src={smaller3Internal} />
+                            <img alt='small3Internal' className='SACComp5_small3-Ideation' src={small3Internal} />
+                            <img alt='wall3Internal' className='SACComp5_wall3-Ideation' src={wall3Internal} />
                             <div className="">
-                                <img alt='' className='SACComp5_back3-Ideation' src={back3Internal} />
+                                <img alt='back3Internal' className='SACComp5_back3-Ideation' src={back3Internal} />
                                 <div className="SACComp5_images-hover-4-Ideation">
                                     <div className="SACComp5_bp_iwfc_img-Ideation">
-                                        <img className='SACComp5_main3-Ideation' src={img2Internal} alt="" />
+                                        <img className='SACComp5_main3-Ideation' src={img2Internal} alt="img2Internal" />
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ const SACComp5 = () => {
 
                         <div data-aos="fade-up" data-aos-delay="500" className="SACComp5_textndicon-Ideation">
                             <div /* className="icon-Ideation" */>
-                                <img alt='' className='SACComp5_icon1-Ideation' src={favicon1Internal} />
+                                <img alt='favicon1Internal' className='SACComp5_icon1-Ideation' src={favicon1Internal} />
                             </div>
                             <div className="SACComp5_text-box-3-Ideation">
                                 <p className='SACComp5_container-3_text-1_heading-Ideation'>Innovative and Inclusive Cultures</p>
@@ -51,8 +51,8 @@ const SACComp5 = () => {
                                 <a className='SACComp5_exploreinit-Ideation' href='#'>
                                     <div className="SACComp5_explore-4-Ideation">
                                         <div className="SACComp5_explore-link-Ideation">
-                                            <img src={readmoreInternal} alt='' className='SACComp5_explore-rect-Ideation' />
-                                            <img src={readmorearrow} alt='' className='SACComp5_explore-arrow-Ideation' />
+                                            <img src={readmoreInternal} alt='readmoreInternal' className='SACComp5_explore-rect-Ideation' />
+                                            <img src={readmorearrow} alt='readmorearrow' className='SACComp5_explore-arrow-Ideation' />
                                             <span className='SACComp5_explore-text-Ideation'>Read More</span>
                                         </div>
                                     </div>
@@ -61,7 +61,7 @@ const SACComp5 = () => {
                         </div>
                         <div data-aos="fade-up" data-aos-delay="1000" className="SACComp5_textndicon-Ideation">
                             <div /* className="icon-Ideation" */>
-                                <img alt='' className='SACComp5_icon1-Ideation' src={favicon0Internal} />
+                                <img alt='favicon0Internal' className='SACComp5_icon1-Ideation' src={favicon0Internal} />
                             </div>
                             <div className="SACComp5_text-box-3-Ideation">
                                 <p className='SACComp5_container-3_text-2_heading-Ideation'>Picking up the pace with Preparation</p>
@@ -69,8 +69,8 @@ const SACComp5 = () => {
                                 <a className='SACComp5_exploreinit-Ideation' href='#'>
                                     <div className="SACComp5_explore-4-Ideation">
                                         <div className="SACComp5_explore-link-Ideation">
-                                            <img src={readmoreInternal} alt='' className='SACComp5_explore-rect-Ideation' />
-                                            <img src={readmorearrow} alt='' className='SACComp5_explore-arrow-Ideation' />
+                                            <img src={readmoreInternal} alt='readmoreInternal' className='SACComp5_explore-rect-Ideation' />
+                                            <img src={readmorearrow} alt='readmorearrow' className='SACComp5_explore-arrow-Ideation' />
                                             <span className='SACComp5_explore-text-Ideation'>Read More</span>
                                         </div>
                                     </div>

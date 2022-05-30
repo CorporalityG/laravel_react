@@ -74,25 +74,25 @@ const GTMComp9 = () => {
                 <div>
                     <div className="gtm-comp9-body-vector">
                         <div className="gtm-comp9-body-vector-img">
-                            <img src={prod} alt="" />
+                            <img src={prod} alt="Product Research" />
                         </div>
                         <h3>Product Research</h3>
                     </div>
                     <div className="gtm-comp9-body-vector">
                         <div className="gtm-comp9-body-vector-img">
-                            <img src={market} alt="" />
+                            <img src={market} alt="Market Research" />
                         </div>
                         <h3>Market Research</h3>
                     </div>
                     <div className="gtm-comp9-body-vector">
                         <div className="gtm-comp9-body-vector-img">
-                            <img src={ca} alt="" />
+                            <img src={ca} alt="Customer Analysis" />
                         </div>
                         <h3>Customer Analysis</h3>
                     </div>
                     <div className="gtm-comp9-body-vector">
                         <div className="gtm-comp9-body-vector-img">
-                            <img src={pros} alt="" />
+                            <img src={pros} alt="Prospecting" />
                         </div>
                         <h3>Prospecting</h3>
                     </div>
@@ -100,19 +100,19 @@ const GTMComp9 = () => {
                 <div>
                     <div className="gtm-comp9-body-vector">
                         <div className="gtm-comp9-body-vector-img">
-                            <img src={sol} alt="" />
+                            <img src={sol} alt="Solutions to customer pain points" />
                         </div>
                         <h3>Solutions to customer pain points</h3>
                     </div>
                     <div className="gtm-comp9-body-vector">
                         <div className="gtm-comp9-body-vector-img">
-                            <img src={usp} alt="" />
+                            <img src={usp} alt="Drafting a USP" />
                         </div>
                         <h3>Drafting a USP</h3>
                     </div>
                     <div className="gtm-comp9-body-vector">
                         <div className="gtm-comp9-body-vector-img">
-                            <img src={deals} alt="" />
+                            <img src={deals} alt="Qualifying deals" />
                         </div>
                         <h3>Qualifying deals and crafting proposals</h3>
                     </div>

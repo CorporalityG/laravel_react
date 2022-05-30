@@ -25,19 +25,19 @@ const OrganisingPrinciple = () => {
                     <div className="col-lg-6">
                         <div data-aos="fade-right" className="text-box-1-Op">
 
-                            <p className='container-1_text-Op'>SUSTAINABLE GROWTH OUR ORGANISING PRINCIPLE</p>
+                            <h1 className='container-1_text-Op'>SUSTAINABLE GROWTH OUR ORGANISING PRINCIPLE</h1>
                             <p className='container-2_text-Op'>Corporality Global intends to use ingenuity and technology to enforce sustainable change so that future generations can meet their needs without any hindrances </p>
-                            <div className="small-rect-prev-1-Op"><img src={smallerrectOrganising} alt='' className='smaller-rect-prev-1' /></div>
+                            <div className="small-rect-prev-1-Op"><img src={smallerrectOrganising} alt='smallerrectOrganising' className='smaller-rect-prev-1' /></div>
                         </div>
                     </div>
                     <div className="col-lg-6  d-flex justify-content-center text-center flex-column ">
                         <div data-aos="fade-left" className="image-first-Op">
-                            <img alt='' className='rect-Op' src={rectOrganising} />
-                            <img alt='' className='wall-Op' src={wallOrganising} />
-                            <img alt='' className='smallrect-Op' src={smallrectOrganising} />
-                            <img alt='' className='backimg-Op' src={BackOrganising} />
+                            <img alt='rectOrganising' className='rect-Op' src={rectOrganising} />
+                            <img alt='wallOrganising' className='wall-Op' src={wallOrganising} />
+                            <img alt='smallrectOrganising' className='smallrect-Op' src={smallrectOrganising} />
+                            <img alt='BackOrganising' className='backimg-Op' src={BackOrganising} />
                             <div className="banner_right_inner-Op" >
-                                <img className='main-prev1-Op' src={MainOrganising} />
+                                <img className='main-prev1-Op' src={MainOrganising} alt="MainOrganising" />
                             </div>
 
                         </div>

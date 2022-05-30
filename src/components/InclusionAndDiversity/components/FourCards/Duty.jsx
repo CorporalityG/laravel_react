@@ -28,7 +28,7 @@ const Duty = () => {
             <div  className="Duty_images_card Duty_image_card_1_top">
               <div className="Inc_Div_duty_card_img">
                 <div className="Inc_Div_duty_card_img_inner">
-                  <img src={polygon1} alt="" />
+                  <img src={polygon1} alt="polygon1" />
                 </div>
               </div>
               <div className="Duty_card_text Duty_card_text_1">
@@ -46,7 +46,7 @@ const Duty = () => {
             <div  className="Duty_images_card Duty-images-card-2">
               <div className="Inc_Div_duty_card_img">
                 <div className="Inc_Div_duty_card_img_inner">
-                  <img src={polygon2} alt="" />
+                  <img src={polygon2} alt="polygon2" />
                 </div>
               </div>
               <div className="Duty_card_text_2">
@@ -66,7 +66,7 @@ const Duty = () => {
             <div  className="Duty_images_card Duty-images-card-3">
               <div className="Inc_Div_duty_card_img">
                 <div className="Inc_Div_duty_card_img_inner">
-                  <img src={polygon4} alt="" />
+                  <img src={polygon4} alt="polygon4" />
                 </div>
               </div>
               <div className="Duty_card_text_3 ">
@@ -86,7 +86,7 @@ const Duty = () => {
             <div  className="Duty_images_card Duty-images-card-4">
               <div className="Inc_Div_duty_card_img">
                 <div className="Inc_Div_duty_card_img_inner">
-                  <img src={polygon3} alt="" />
+                  <img src={polygon3} alt="polygon3" />
                 </div>
               </div>
               <div className="Duty_card_text_4 ">

@@ -27,7 +27,7 @@ function TeamSpiritNew() {
             <div className="community_first_heading-Invirogating">
               <div className="community_first_heading_text-Invirogating">Invigorating the Team spirit</div>
               <div className="community_first_heading_arrow-Invirogating">
-                <img src={heading_1_arrow} alt="" />
+                <img src={heading_1_arrow} alt="Invigorating the Team spirit" />
               </div>
 
             </div>
@@ -37,13 +37,13 @@ function TeamSpiritNew() {
             </div>
           </div>
           <div className="community_top_image-Invirogating">
-            <img src={bottom_image2} alt="" className="community_top_image_image-Invirogating" />
+            <img src={bottom_image2} alt="Invirogating" className="community_top_image_image-Invirogating" />
           </div>
           <div className="community_top_back_image-Invirogating">
-            <img src={top_back} alt="" />
+            <img src={top_back} alt="Invirogating" />
           </div>
           <div className="community_top_rectangle-Invirogating">
-            <img src={top_rectangle} alt="" />
+            <img src={top_rectangle} alt="Invirogating" />
           </div>
         </div>
         <div
@@ -55,7 +55,7 @@ function TeamSpiritNew() {
                 Stepping into the Global Market
               </div>
               <div className="community_second_heading_arrow-Invirogating">
-                <img src={heading_2_arrow} alt="" />
+                <img src={heading_2_arrow} alt="arrow" />
               </div>
 
             </div>
@@ -69,16 +69,16 @@ function TeamSpiritNew() {
             <div className="community_bottom_image-Invirogating">
               <img
                 src={top_image2}
-                alt=""
+                alt="Invirogating"
                 className="community_bottom_image_image-Invirogating"
               />
             </div>
             <div className="community_bottom_back_image-Invirogating">
-              <img src={bottom_back} alt="" />
+              <img src={bottom_back} alt="Invirogating" />
             </div>
           </div>
           <div className="community_bottom_rectangle-Invirogating">
-            <img src={bottom_rectangle} alt="" />
+            <img src={bottom_rectangle} alt="Invirogating" />
           </div>
         </div>
       </div>

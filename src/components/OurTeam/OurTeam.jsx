@@ -21,6 +21,7 @@ function OurTeam() {
             <MetaTags>
                 <title>{`Our Team | A Company Made Of Top Marketing Professionals | Corporality`}</title>
                 <meta name="description" content={`Our team is composed of customer-centric and top marketing professionals, consultants, strategists and creative talents delivering tailor-fit solutions for your business.`} />
+                <link rel="canonical" href={`${BASE_URL}/our-team/`} />
             </MetaTags>
 
             <div className="ot-banner-section">

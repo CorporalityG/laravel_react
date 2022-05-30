@@ -4,10 +4,16 @@ import { BASE_URL } from '../../config'
 import { CorporalityStrikerItem } from './CorporalityStrikerItem'
 import NewPortfolio from '../HomePage/Components/NewPortfolio'
 import { GetInvolved } from '../ServiceInsights/GetInvolved'
+import MetaTags from 'react-meta-tags';
 
 function CorporalityStrikers() {
     return (
         <div className='corporality-striker'>
+            <MetaTags>
+                <title>{`Corporality Strikers | A Collection Of Marketing Guidelines | Best Branding Agency`}</title>
+                <meta name="description" content={`Revolutionise the way you do business with this collection of marketing guidelines with easy-to-follow steps, examples and case lessons, created by the best PR agency.`} />
+                <link rel="canonical" href={`${BASE_URL}/corporality-striker/`} />
+            </MetaTags>
 
             <div className='corporality-striker-banner-section'>
                 <img src={`${BASE_URL}/img/CorporalityStrikers/banner-vector.png`} alt="Vector" className='cs-banner-vector' />

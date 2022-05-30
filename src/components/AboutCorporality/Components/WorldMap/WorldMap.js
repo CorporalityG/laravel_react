@@ -21,7 +21,7 @@ function WorldMap() {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            <img src={left} alt="" />
+            <img src={left} alt="left" />
           </div>
           <div
             className="worldmap_right "
@@ -29,7 +29,7 @@ function WorldMap() {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            <img src={right} alt="" />
+            <img src={right} alt="right" />
           </div>
         </div>
       </div>

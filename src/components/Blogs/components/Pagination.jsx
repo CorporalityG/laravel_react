@@ -51,13 +51,13 @@ const Pagination = ({ totalArticles, paginate, currentPage }) => {
                     <div
                         className="leftArrow d-flex flex-row justify-content-evenly align-items-center"
                         onClick={() => currentPage-1 > 0? paginate(currentPage - 1): null}>
-                        <img src={leftArrow} alt="" />
+                        <img src={leftArrow} alt="leftArrow" />
                     </div>
                     {getPagination(totalPages, currentPage)}
                     <div
                         className="rightArrow d-flex flex-row justify-content-evenly align-items-center"
                         onClick={() => currentPage+1 <= totalPages? paginate(currentPage + 1): null}>
-                        <img src={rightArrow} alt="" />
+                        <img src={rightArrow} alt="rightArrow" />
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ const Hover = () => {
         <div>
             <div className="In_Div_anm_container">
                 <div className="In_Div_anm_container_img">
-                    <img src={bg} alt="" />
+                    <img src={bg} alt="Inclusivity and diversity" />
                 </div>
                 <div className="In_Div_anm_container_text">
                     <div className="In_Div_anm_upper_box">

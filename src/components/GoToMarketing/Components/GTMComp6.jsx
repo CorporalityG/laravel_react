@@ -48,16 +48,16 @@ const GTMComp6 = () => {
             </div>
             <div className="gtm-comp-6-body">
                 <div data-aos="zoom-in-down" data-aos-duration="1000" className="center-comp-6">
-                    <img data-aos="zoom-in" data-aos-duration="1600" src={main} className="comp-6-main-img" alt="" />
-                    {/* <img src={sub} className="comp-6-main-img" alt="" /> */}
+                    <img data-aos="zoom-in" data-aos-duration="1600" src={main} className="comp-6-main-img" alt="main" />
+                    {/* <img src={sub} className="comp-6-main-img" alt="sub" /> */}
                 </div>
-                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={a} alt="" />
-                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={b} alt="" />
-                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={c} alt="" />
-                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={d} alt="" />
-                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={e} alt="" />
-                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={f} alt="" />
-                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={g} alt="" />
+                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={a} alt="a" />
+                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={b} alt="b" />
+                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={c} alt="c" />
+                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={d} alt="d" />
+                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={e} alt="e" />
+                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={f} alt="f" />
+                <img data-aos="fade-zoom-in" className="comp-6-sub-img" src={g} alt="g" />
             </div>
         </div>
     )

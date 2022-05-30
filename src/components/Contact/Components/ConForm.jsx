@@ -25,7 +25,7 @@ const ConForm = () => {
 
                     <div className="d-lg-flex align-items-center  ">
                         <div className="conform-info-box m-5">
-                            <h2 className="conform-info-heading">Let’s Talk</h2>
+                            <h1 className="conform-info-heading">Let’s Talk</h1>
                             <p className="conform-info-para">Our customer experience experts are always ready to provide you with all the answers. <br /> Call us now!</p>
                             <div data-aos="fade-right">
                                 <div className="location-box-main">

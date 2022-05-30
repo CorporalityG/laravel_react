@@ -65,6 +65,8 @@ import CmoInsights from "./components/Insights/CmoInsights";
 import CeoInsights from "./components/Insights/CeoInsights";
 import CxoInsights from "./components/Insights/CxoInsights";
 import CorporalityStrikers from "./components/CorporalityStrikers/CorporalityStrikers";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
+import Sitemap from "./components/Sitemap/Sitemap";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -157,6 +159,10 @@ function App() {
             <Route path="/cxo-insights" element={<CxoInsights /> } />
 
             <Route path="/corporality-striker" element={<CorporalityStrikers /> } />
+
+            <Route path="/404" element={<PageNotFound />} />
+
+            <Route path="/sitemap" element={<Sitemap />} />
 
             <Route path="/search/:search_string" element={<Blogs />}/>
             

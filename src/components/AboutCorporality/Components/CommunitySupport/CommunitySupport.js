@@ -34,7 +34,7 @@ function CommunitySupport() {
                 Community Support
               </div>
               <div className="community_first_heading_arrow ">
-                <img src={heading_1_arrow} alt="" />
+                <img src={heading_1_arrow} alt="heading_1_arrow" />
               </div>
             </div>
             <div className="community_first_description">
@@ -45,15 +45,15 @@ function CommunitySupport() {
             <div className="community_top_image">
               <img
                 src={top_image2}
-                alt=""
+                alt="top_image2"
                 className="community_top_image_image"
               />
             </div>
             <div className="community_top_back_image">
-              <img src={top_back} alt="" />
+              <img src={top_back} alt="top_back" />
             </div>
             <div className="community_top_rectangle">
-              <img src={top_rectangle} alt="" />
+              <img src={top_rectangle} alt="top_rectangle" />
             </div>
           </div>
           <div
@@ -67,7 +67,7 @@ function CommunitySupport() {
                 Corporate Social Responsibility
               </div>
               <div className="community_second_heading_arrow">
-                <img src={heading_2_arrow} alt="" />
+                <img src={heading_2_arrow} alt="heading_2_arrow" />
               </div>
             </div>
             <div className="community_second_description">
@@ -78,15 +78,15 @@ function CommunitySupport() {
             <div className="community_bottom_image">
               <img
                 src={bottom_image2}
-                alt=""
+                alt="bottom_image2"
                 className="community_bottom_image_image"
               />
             </div>
             <div className="community_bottom_back_image">
-              <img src={bottom_back} alt="" />
+              <img src={bottom_back} alt="bottom_back" />
             </div>
             <div className="community_bottom_rectangle">
-              <img src={bottom_rectangle} alt="" />
+              <img src={bottom_rectangle} alt="bottom_rectangle" />
             </div>
           </div>
         </div>

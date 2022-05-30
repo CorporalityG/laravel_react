@@ -34,8 +34,8 @@ function ServiceInsights() {
                         <div className='col-lg-9 col-sm-8 si-a-content'>
                             <div className='si-a-desc'>
                                 <div className='si-a-date'>[ September 1-2 , Sydney ]</div>
-                                <h2>Global B2B Conference 2022</h2>
-                                <div className='si-a-organised'>Organised by Corporality</div>
+                                <h1>Global B2B Conference 2022</h1>
+                                <h2 className='si-a-organised'>Organised by Corporality</h2>
                             </div>
                             <div className='si-a-btn'>
                                 <Link to={`/`} className="si-a-link">Register Now</Link>

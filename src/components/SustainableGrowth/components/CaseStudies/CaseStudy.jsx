@@ -16,8 +16,8 @@ const CaseStudy = () => {
     }, [])
     return (
         <div className="second-Cs">
-            <img className='wall-2-2-Cs' src={wall} alt='' />
-            <img className='rect-2-4-Cs' src={rect4} alt='' />
+            <img className='wall-2-2-Cs' src={wall} alt='wall' />
+            <img className='rect-2-4-Cs' src={rect4} alt='rect4' />
             <div className='container second-container-Cs' >
                 <div className="row interactive_blueprint-row-Cs">
                     <div className="col-lg-6 textndlists-Cs d-flex flex-column  justify-content-center">
@@ -29,16 +29,16 @@ const CaseStudy = () => {
                     </div>
                     <div className="col-lg-6 d-flex justify-content-center ">
                         <div className="imagessecond-Cs">
-                            <img className='rect-2-1-Cs' src={rect1} alt='' />
-                            <img className='rect-2-2-Cs' src={rect2} alt='' />
-                            <img className='rect-2-3-Cs' src={rect3} alt='' />
+                            <img className='rect-2-1-Cs' src={rect1} alt='rect1' />
+                            <img className='rect-2-2-Cs' src={rect2} alt='rect2' />
+                            <img className='rect-2-3-Cs' src={rect3} alt='rect3' />
                             
                             
                             <div className="mainndback-4-Cs">
-                                <img className='backimagesecond-fourth-Cs' src={Back} alt='' />
+                                <img className='backimagesecond-fourth-Cs' src={Back} alt='Back' />
                                 <div className="bp_our-newsletter-polygon9-Cs">
                                     <div data-aos="fade-down-left" data-aos-duration="2000">
-                                        <img className='main-2-2-Cs' src={Main} alt="" />
+                                        <img className='main-2-2-Cs' src={Main} alt="Main" />
                                     </div>
                                 </div>
                             </div>

@@ -42,28 +42,28 @@ function CardsChart() {
 
         <div className="CardsChart_maincontainer">
           <div className="CardsChart_div1">
-            <img src={LineHorizontal} alt="" className="cardschart_line1" />
+            <img src={LineHorizontal} alt="LineHorizontal" className="cardschart_line1" />
             <img
               src={LineVertical}
-              alt=""
+              alt="LineVertical"
               className="cardschart_linevertical"
             />
             <div className="CardsChart_textbox">
               <div className="CardsChart_textbox_text">Planning Phase</div>
               <div className="CardsChart_textbox_joiner">
-                <img src={joiner} alt="" />
+                <img src={joiner} alt="joiner" />
               </div>
             </div>
           </div>
           <div className="CardsChart_div2">
             <div className="CardsChart_div_image">
-              <img src={MarketingAudit} alt="" />
+              <img src={MarketingAudit} alt="MarketingAudit" />
             </div>
             <div className="CardsChart_div_text">Marketing Audit</div>
           </div>
           <div className="CardsChart_div3">
             <div className="CardsChart_div_image">
-              <img src={Inbound} alt="" />
+              <img src={Inbound} alt="Inbound" />
             </div>
             <div className="CardsChart_div_text">
               Inbound Marketing Concept to proposed plan
@@ -71,13 +71,13 @@ function CardsChart() {
           </div>
           <div className="CardsChart_div4">
             <div className="CardsChart_div_image">
-              <img src={MasterMind} alt="" />
+              <img src={MasterMind} alt="MasterMind" />
             </div>
             <div className="CardsChart_div_text">Master minding workshop</div>
           </div>
           <div className="CardsChart_div5">
             <div className="CardsChart_div_image">
-              <img src={Accountability} alt="" />
+              <img src={Accountability} alt="Accountability" />
             </div>
             <div className="CardsChart_div_text">
               Presentation and Accountability
@@ -85,34 +85,34 @@ function CardsChart() {
           </div>
           <div className="CardsChart_div6">
             <div className="CardsChart_div_image">
-              <img src={Talent} alt="" />
+              <img src={Talent} alt="Talent" />
             </div>
             <div className="CardsChart_div_text">Talent Alignment</div>
           </div>
           <div className="CardsChart_div7">
             <div className="CardsChart_div_image">
-              <img src={Strategy} alt="" />
+              <img src={Strategy} alt="Strategy" />
             </div>
             <div className="CardsChart_div_text">Strategy Preparation</div>
           </div>
           <div className="CardsChart_div8">
-            <img src={LineHorizontal} alt="" className="cardschart_line2" />
+            <img src={LineHorizontal} alt="LineHorizontal" className="cardschart_line2" />
             <div className="CardsChart_textbox">
               <div className="CardsChart_textbox_text">Prep Phase</div>
               <div className="CardsChart_textbox_joiner">
-                <img src={joiner} alt="" />
+                <img src={joiner} alt="joiner" />
               </div>
             </div>
           </div>
           <div className="CardsChart_div9">
             <div className="CardsChart_div_image">
-              <img src={Targeting} alt="" />
+              <img src={Targeting} alt="Targeting" />
             </div>
             <div className="CardsChart_div_text">Channel Targeting</div>
           </div>
           <div className="CardsChart_div10">
             <div className="CardsChart_div_image">
-              <img src={SocialMedia} alt="" />
+              <img src={SocialMedia} alt="SocialMedia" />
             </div>
             <div className="CardsChart_div_text">
               Social Media Marketing Strategy
@@ -120,40 +120,40 @@ function CardsChart() {
           </div>
           <div className="CardsChart_div11">
             <div className="CardsChart_div_image">
-              <img src={Content} alt="" />
+              <img src={Content} alt="Content" />
             </div>
             <div className="CardsChart_div_text">Content Strategy</div>
           </div>
           <div className="CardsChart_div12">
             <div className="CardsChart_div_image">
-              <img src={SEO} alt="" />
+              <img src={SEO} alt="SEO" />
             </div>
             <div className="CardsChart_div_text">SEO Strategy</div>
           </div>
           <div className="CardsChart_div13">
             <div className="CardsChart_div_image">
-              <img src={Searches} alt="" />
+              <img src={Searches} alt="Searches" />
             </div>
             <div className="CardsChart_div_text">Social Searches Strategy</div>
           </div>
           <div className="CardsChart_div14">
             <div className="CardsChart_div_image">
-              <img src={EmailApproach} alt="" />
+              <img src={EmailApproach} alt="EmailApproach" />
             </div>
             <div className="CardsChart_div_text">Email Marketing Approach</div>
           </div>
           <div className="CardsChart_div15">
-            <img src={LineHorizontal} alt="" className="cardschart_line3" />
+            <img src={LineHorizontal} alt="LineHorizontal" className="cardschart_line3" />
             <div className="CardsChart_textbox">
               <div className="CardsChart_textbox_text">Execution Phase</div>
               <div className="CardsChart_textbox_joiner">
-                <img src={joiner} alt="" />
+                <img src={joiner} alt="joiner" />
               </div>
             </div>
           </div>
           <div className="CardsChart_div16">
             <div className="CardsChart_div_image">
-              <img src={Implementation} alt="" />
+              <img src={Implementation} alt="Implementation" />
             </div>
             <div className="CardsChart_div_text">
               On-page SEO Implementation
@@ -161,7 +161,7 @@ function CardsChart() {
           </div>
           <div className="CardsChart_div17">
             <div className="CardsChart_div_image">
-              <img src={Action} alt="" />
+              <img src={Action} alt="Action" />
             </div>
             <div className="CardsChart_div_text">
               Off-page SEO Action defined
@@ -169,19 +169,19 @@ function CardsChart() {
           </div>
           <div className="CardsChart_div18">
             <div className="CardsChart_div_image">
-              <img src={Engine} alt="" />
+              <img src={Engine} alt="Engine" />
             </div>
             <div className="CardsChart_div_text">Search Engine Marketing</div>
           </div>
           <div className="CardsChart_div19">
             <div className="CardsChart_div_image">
-              <img src={Preparation} alt="" />
+              <img src={Preparation} alt="Preparation" />
             </div>
             <div className="CardsChart_div_text">Content Preparation</div>
           </div>
           <div className="CardsChart_div20">
             <div className="CardsChart_div_image">
-              <img src={Testing} alt="" />
+              <img src={Testing} alt="Testing" />
             </div>
             <div className="CardsChart_div_text">
               A/B Testing on Inbound Strategy
@@ -189,23 +189,23 @@ function CardsChart() {
           </div>
           <div className="CardsChart_div21"> </div>
           <div className="CardsChart_div22">
-            <img src={LineHorizontal} alt="" className="cardschart_line4" />
+            <img src={LineHorizontal} alt="LineHorizontal" className="cardschart_line4" />
             <div className="CardsChart_textbox">
               <div className="CardsChart_textbox_text">Monitoring Phase</div>
               <div className="CardsChart_textbox_joiner">
-                <img src={joiner} alt="" />
+                <img src={joiner} alt="joiner" />
               </div>
             </div>
           </div>
           <div className="CardsChart_div23">
             <div className="CardsChart_div_image">
-              <img src={Tweak} alt="" />
+              <img src={Tweak} alt="Tweak" />
             </div>
             <div className="CardsChart_div_text">Test, Tweak and treat</div>
           </div>
           <div className="CardsChart_div24">
             <div className="CardsChart_div_image">
-              <img src={Performance} alt="" />
+              <img src={Performance} alt="Performance" />
             </div>
             <div className="CardsChart_div_text">
               Performance and Benchmarking
@@ -213,19 +213,19 @@ function CardsChart() {
           </div>
           <div className="CardsChart_div25">
             <div className="CardsChart_div_image">
-              <img src={Reporting} alt="" />
+              <img src={Reporting} alt="Reporting" />
             </div>
             <div className="CardsChart_div_text">Reporting and Feedback</div>
           </div>
           <div className="CardsChart_div26">
             <div className="CardsChart_div_image">
-              <img src={ROI} alt="" />
+              <img src={ROI} alt="ROI" />
             </div>
             <div className="CardsChart_div_text">ROI Evaluation</div>
           </div>
           <div className="CardsChart_div27">
             <div className="CardsChart_div_image">
-              <img src={Model} alt="" />
+              <img src={Model} alt="Model" />
             </div>
             <div className="CardsChart_div_text">Maturation Model</div>
           </div>

@@ -30,6 +30,7 @@ function DigitalMediaMarketing() {
       <MetaTags>
         <title>{`Digital Marketing Agency Sydney | Best Marketing Service | Corporality`}</title>
         <meta name="description" content={`Digital Media Marketing is a powerful brand strategy for many business owners and entrepreneurs. Learn how it works in this resource crafted by marketing and brand consultants.`} />
+        <link rel="canonical" href={`${BASE_URL}/digital-media-marketing/`} />
       </MetaTags>
 
       <div className="dmm-banner-section">

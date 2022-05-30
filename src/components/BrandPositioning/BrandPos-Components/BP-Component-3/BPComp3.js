@@ -22,14 +22,14 @@ export default function BPComp3() {
         <div className="position-absolute top-50 start-50 translate-middle bpcp3BackLogo">
           <img
             src="/img/BrandPositioning/Mask-Group.png"
-            alt=""
+            alt="Mask-Group"
             className="img-fluid"
           />
         </div>
         <div className="">
           <img
             src="/img/BrandPositioning/path.png"
-            alt=""
+            alt="path"
             className="img-fluid position-absolute top-50 start-50 translate-middle-x bpcp3Snake vw-100"
           />
         </div>
@@ -38,14 +38,14 @@ export default function BPComp3() {
             <div className="upArrow position-absolute bottom-50 start-50 translate-middle-x bpcp3xAllign">
               <img
                 src="/img/BrandPositioning/Line-51.png"
-                alt=""
+                alt="Line"
                 className="img-fluid bpcp3xAllign"
               />
             </div>
             <div className="position-absolute top-50 translate-middle-y bpcp3Ellipse1">
               <img
                 src="/img/BrandPositioning/Ellipse-80.png"
-                alt=""
+                alt="Ellipse"
                 className="img-fluid"
               />
               <p className="text-wrap text-center position-absolute top-50 start-50 translate-middle bpcp3xAllign bpcp3CircleText">
@@ -61,14 +61,14 @@ export default function BPComp3() {
             <div className="downArrow position-absolute top-50 start-50 translate-middle-x bpcp3xAllign">
               <img
                 src="/img/BrandPositioning/Line-55.png"
-                alt=""
+                alt="Line"
                 className="img-fluid"
               />
             </div>
             <div className="position-absolute top-50 translate-middle-y bpcp3Ellipse2">
               <img
                 src="/img/BrandPositioning/Ellipse-80.png"
-                alt=""
+                alt="Ellipse"
                 className="img-fluid"
               />
               <p className="text-wrap text-center position-absolute top-50 start-50 translate-middle bpcp3xAllign bpcp3CircleText">
@@ -84,14 +84,14 @@ export default function BPComp3() {
             <div className="upArrow position-absolute bottom-50 start-50 translate-middle-x bpcp3xAllign">
               <img
                 src="/img/BrandPositioning/Line-51.png"
-                alt=""
+                alt="Line"
                 className="img-fluid"
               />
             </div>
             <div className="position-absolute top-50 translate-middle-y bpcp3Ellipse1">
               <img
                 src="/img/BrandPositioning/Ellipse-80.png"
-                alt=""
+                alt="Ellipse"
                 className="img-fluid"
               />
               <p className="text-wrap text-center position-absolute top-50 start-50 translate-middle bpcp3xAllign bpcp3CircleText">
@@ -107,14 +107,14 @@ export default function BPComp3() {
             <div className="downArrow position-absolute top-50 start-50 translate-middle-x bpcp3xAllign">
               <img
                 src="/img/BrandPositioning/Line-55.png"
-                alt=""
+                alt="Line"
                 className="img-fluid"
               />
             </div>
             <div className="position-absolute top-50 translate-middle-y bpcp3Ellipse2">
               <img
                 src="/img/BrandPositioning/Ellipse-80.png"
-                alt=""
+                alt="Ellipse"
                 className="img-fluid"
               />
               <p className="text-wrap text-center position-absolute top-50 start-50 translate-middle bpcp3xAllign bpcp3CircleText">
@@ -130,14 +130,14 @@ export default function BPComp3() {
             <div className="upArrow position-absolute bottom-50 start-50 translate-middle-x bpcp3xAllign">
               <img
                 src="/img/BrandPositioning/Line-51.png"
-                alt=""
+                alt="Line"
                 className="img-fluid"
               />
             </div>
             <div className="position-absolute top-50 translate-middle-y bpcp3Ellipse1">
               <img
                 src="/img/BrandPositioning/Ellipse-80.png"
-                alt=""
+                alt="Ellipse"
                 className="img-fluid"
               />
               <p className="text-wrap text-center position-absolute top-50 start-50 translate-middle bpcp3xAllign bpcp3CircleText">
@@ -153,7 +153,7 @@ export default function BPComp3() {
             <div className="position-absolute top-50 translate-middle-y bpcp3Ellipse2">
               <img
                 src="/img/BrandPositioning/Ellipse-80.png"
-                alt=""
+                alt="Ellipse"
                 className="img-fluid"
               />
               <p className="text-wrap text-center position-absolute top-50 start-50 translate-middle bpcp3xAllign bpcp3CircleText">

@@ -40,6 +40,7 @@ export default function GoToMarketing() {
                 <title>{`Go to Market Strategy | Corporality Go-to-market (GTM) Strategy`}</title>
                 <meta name="description" content={`Corporality Global - Go to Marketing Strategy helps to achieve the business goals. Click here to know about What is a Go to Marketing Strategy? and why go to marketing strategy?`} />
                 <meta name="keywords" content={`Go to Marketing Strategy`} />
+                <link rel="canonical" href={`${BASE_URL}/goto-market-strategy/`} />
             </MetaTags>
 
             <div className="gtm-banner-section">

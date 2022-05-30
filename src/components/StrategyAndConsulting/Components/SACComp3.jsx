@@ -21,7 +21,7 @@ const  SACComp3 = () => {
               className="sacc3TextWrapper d-flex flex-row"
             >
               <div className="sacc3Left">
-                <img src={wall} alt="" />
+                <img src={wall} alt="wall" />
               </div>
               <div className="sacc3Right">
                 <p className="sacc3Heading1">STRATEGY & CONSULTING</p>

@@ -13,7 +13,7 @@ const Combating = () => {
   return (
     <div className="COmbatinG">
       <div className="threeboxes_combat">
-        <img src={groupCombating} alt="" className="Combating_group" />
+        <img src={groupCombating} alt="groupCombating" className="Combating_group" />
       </div>
       <div className="container">
         <div className="row">
@@ -26,10 +26,10 @@ const Combating = () => {
               <div className="MainAndBack_Combating">
                 <div className="Combating_main">
                   <div className="Combating_main_on_div">
-                    <img src={mainCombating} alt="" />
+                    <img src={mainCombating} alt="mainCombating" />
                   </div>
                 </div>
-                <img src={backCombating} alt="" className="Combating_back" />
+                <img src={backCombating} alt="backCombating" className="Combating_back" />
               </div>
               <div className="Texting_in_image_Combating">
                 <p className="Image_texting_1">
@@ -39,7 +39,7 @@ const Combating = () => {
                   A combination of expertise, skill, knowledge and proven
                   programmes.
                 </p>
-                <img src={textrectCombating} alt="" className="Image_rect" />
+                <img src={textrectCombating} alt="textrectCombating" className="Image_rect" />
               </div>
             </div>
           </div>

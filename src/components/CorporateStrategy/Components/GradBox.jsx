@@ -22,8 +22,8 @@ const GradBox = () => {
 
         <div className="bottom_area">
           <div className="moving_icon">
-            <img src={download} alt="" />
-            <img src={download_arrow} alt="" className="front_arrow" />
+            <img src={download} alt="download" />
+            <img src={download_arrow} alt="download_arrow" className="front_arrow" />
           </div>
           <div className="explore_text">Explore (link to Outsourced CXO services)</div>
         </div>

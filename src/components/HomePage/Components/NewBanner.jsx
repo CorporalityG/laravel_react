@@ -99,21 +99,21 @@ const NewBanner = () => {
                         
                         <div className="bgPartBanner">
                             <div className="mainBannerImg">
-                                <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="" className="banner-image" data-aos="fade-down" data-aos-duration="2500" />
-                                <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="" className="video-icon" data-aos="fade-up" data-aos-duration="2700" />
+                                <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="Global Management Consulting Company" className="banner-image" data-aos="fade-down" data-aos-duration="2500" />
+                                <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" data-aos="fade-up" data-aos-duration="2700" />
                             </div>
 
                             <div className="bannerImgs">
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-1.png'} alt="" className="rectangle-1" data-aos="fade-right" data-aos-duration="3000" />
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="" className="rectangle-2" data-aos="fade-down" data-aos-duration="3000" />
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="" className="rectangle-3" data-aos="fade-left" data-aos-duration="3000" />
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-4.png'} alt="" className="rectangle-4" data-aos="fade-up" data-aos-duration="3000" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-1.png'} alt="rectangle" className="rectangle-1" data-aos="fade-right" data-aos-duration="3000" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="rectangle" className="rectangle-2" data-aos="fade-down" data-aos-duration="3000" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="rectangle" className="rectangle-3" data-aos="fade-left" data-aos-duration="3000" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-4.png'} alt="rectangle" className="rectangle-4" data-aos="fade-up" data-aos-duration="3000" />
                             </div>
                         </div>
 
                         <div className="rightPartBanner" onClick={() => { handleShow(1); }} data-aos="fade-up" data-aos-duration="2500">
                             <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="Video Thumbnail" />
-                            {/* {!showYoutube && <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="" />} */}
+                            {/* {!showYoutube && <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="video-thumbnail" />} */}
                         </div>
                         
                         <Modal show={show==1 ? show : ''} onHide={handleClose} size="lg" centered>
@@ -129,7 +129,7 @@ const NewBanner = () => {
                     </div>
 
                     <div className={`mainPartBanner ${indicatorId===2? "" : "bannerTextHide"}`}>
-                        <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="" className="banner-bg-image" />
+                        <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="banner-bg" className="banner-bg-image" />
 
                         <div className="leftPartBanner">
                             <div className="bannerText">
@@ -143,15 +143,15 @@ const NewBanner = () => {
 
                         <div className="bgPartBanner">
                             <div className="mainBannerImg">
-                                <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="" className="banner-image" />
-                                <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="" className="video-icon" />
+                                <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="banner main" className="banner-image" />
+                                <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
                             </div>
 
                             <div className="bannerImgs">
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-1.png'} alt="" className="rectangle-1" />
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="" className="rectangle-2" />
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="" className="rectangle-3" />
-                                <img src={BASE_URL + 'img/HomePage/media/rectangle-4.png'} alt="" className="rectangle-4" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-1.png'} alt="rectangle" className="rectangle-1" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="rectangle" className="rectangle-2" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="rectangle" className="rectangle-3" />
+                                <img src={BASE_URL + 'img/HomePage/media/rectangle-4.png'} alt="rectangle" className="rectangle-4" />
                             </div>
                         </div>
 
@@ -170,7 +170,7 @@ const NewBanner = () => {
                     </div>
 
                     <div className={`mainPartBanner ${indicatorId===3? "" : "bannerTextHide"}`}>
-                        <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="" className="banner-bg-image" />
+                        <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="banner-bg" className="banner-bg-image" />
 
                         <div className="leftPartBanner">
                             <div className="bannerText">
@@ -184,15 +184,15 @@ const NewBanner = () => {
 
                         <div className="bgPartBanner">
                             <div className="mainBannerImg">
-                                <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="" className="banner-image" />
-                                <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="" className="video-icon" />
+                                <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="banner main" className="banner-image" />
+                                <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
                             </div>
 
                             <div className="bannerImgs">
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-1.png'} alt="" className="rectangle-1" />
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="" className="rectangle-2" />
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="" className="rectangle-3" />
-                                <img src={BASE_URL + '/img/HomePage/media/rectangle-4.png'} alt="" className="rectangle-4" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-1.png'} alt="rectangle" className="rectangle-1" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="rectangle" className="rectangle-2" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="rectangle" className="rectangle-3" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-4.png'} alt="rectangle" className="rectangle-4" />
                             </div>
                         </div>
 
@@ -219,7 +219,7 @@ const NewBanner = () => {
             </div>
 
             <div className="bannerSocialLinksContainer" data-aos="fade-right" data-aos-duration="2500">
-                <div className="bannerSocialImg"><img src={BASE_URL + '/img/HomePage/media/social.png'} alt="" /></div>
+                <div className="bannerSocialImg"><img src={BASE_URL + '/img/HomePage/media/social.png'} alt="social" /></div>
                 <div className="socialIconsContainer">
                     <div className="socialIcon" onClick={() => window.open("https://www.facebook.com/CorporalityG/")}>
                         <i className="fa fa-facebook-f"></i>
@@ -244,20 +244,20 @@ const NewBanner = () => {
 
             <div className="twoDiamonds">
                 <div data-aos="fade-right" className="phone-icon" data-aos-duration="2800">
-                    <img src={BASE_URL + '/img/HomePage/media/phone-icon.png'} alt="" onClick={() => window.open("tel:61283794089","_self")} />
+                    <img src={BASE_URL + '/img/HomePage/media/phone-icon.png'} alt="phone" onClick={() => window.open("tel:61283794089","_self")} />
                 </div>
                 <div data-aos="fade-left" className="banner-count" data-aos-duration="2800">
                     <span className="bigBannerCount">0{bannerCount}</span>/<span className="smallBannerCount">03</span>
                 </div>
                 {/*<div data-aos="fade-right" className="bigDiamond">
-                    <img src={BASE_URL + '/img/HomePage/media/bigRectangle.png'} alt="" />
+                    <img src={BASE_URL + '/img/HomePage/media/bigRectangle.png'} alt="bigRectangle" />
                     <div className="callButton" onClick={() => window.open("tel: +61 2 83794089","_self")}>
-                        <img src={BASE_URL + '/img/HomePage/media/callButton.png'} alt="" />
+                        <img src={BASE_URL + '/img/HomePage/media/callButton.png'} alt="callButton" />
                     </div>
                     <h3 className="mobileNumber">+61 2 83794089</h3>
                 </div>
                 <div data-aos="fade-right" className="smallDiamond">
-                    <img src={BASE_URL + '/img/HomePage/media/smallRectangle.png'} alt="" />
+                    <img src={BASE_URL + '/img/HomePage/media/smallRectangle.png'} alt="smallRectangle" />
                 </div>*/}
             </div>
             

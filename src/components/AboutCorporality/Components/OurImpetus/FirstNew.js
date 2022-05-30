@@ -19,7 +19,7 @@ function FirstNew() {
 
   return (
     <div className="ourimpetus_parent">
-      <img src={yellow_back} alt="" className="ourimpetus_yellowback" />
+      <img src={yellow_back} alt="yellow_back" className="ourimpetus_yellowback" />
       <div className="container">
         <div className="ourimpetus_container">
           <div
@@ -30,12 +30,12 @@ function FirstNew() {
             data-aos-offset="0"
           >
             <div className="impetus_text_box1">
-              <img src={rect} alt="" />
+              <img src={rect} alt="rect" />
             </div>
             <div className="impetus_text_box2">
-              <img src={text_rectangle} alt="" />
+              <img src={text_rectangle} alt="text_rectangle" />
             </div>
-            <div className="ourimpetus_textside_heading">Our Impetus</div>
+            <h1 className="ourimpetus_textside_heading">Our Impetus</h1>
             <div className="ourimpetus_textside_description">
             To Deliver The Best In Digital Marketing And Sales Solutions Using
               Innovation And Intuition To Craft Business Brilliance
@@ -55,16 +55,16 @@ function FirstNew() {
           >
             <div className="imageside_maincontainer">
               <div className="imagesidecontainer2">
-                <img src={main2} alt="" className="impetus_mainimage" />
+                <img src={main2} alt="main2" className="impetus_mainimage" />
               </div>
               <div className="impetus_main_backside">
-                <img src={backimg} alt="" />
+                <img src={backimg} alt="backimg" />
               </div>
               <div className="impetus_main_wall">
-                <img src={wall} alt="" />
+                <img src={wall} alt="wall" />
               </div>
               <div className="impetus_main_box">
-                <img src={smallrect} alt="" />
+                <img src={smallrect} alt="smallrect" />
               </div>
             </div>
           </div>

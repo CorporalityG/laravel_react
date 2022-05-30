@@ -30,7 +30,7 @@ function UnderstandingDifficulty() {
             </div>
           </div>
           <div className="Background_in_Strategy">
-            <img src={background} alt="" />
+            <img src={background} alt="background" />
           </div>
           <div className="understanding_difficulty_middle_image"></div>
           <div

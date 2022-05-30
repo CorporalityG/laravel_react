@@ -77,6 +77,7 @@ function Blogs2() {
             <MetaTags>
                 <title>{`Blog | Digital Media Marketing | Corporality`}</title>
                 <meta name="description" content={`Read our blog to get updated about the last news, tools, insights, analysis & opinion on different topics like digital media marketing, advertising and website.`} />
+                <link rel="canonical" href={`${BASE_URL}/blog/`} />
             </MetaTags>
 
             <div className="blog2">
@@ -95,9 +96,9 @@ function Blogs2() {
                                                     </Link>
                                                     : null
                                             }
-                                            <h3 className="title-first">
+                                            <h1 className="title-first">
                                                 <Link to={`/${latestBlog.post_slug}`}>{latestBlog.post_title}</Link>
-                                            </h3>
+                                            </h1>
                                             <p><span dangerouslySetInnerHTML={{ __html: truncate(latestBlog.post_short_description ?? latestBlog.post_description, 175) }}></span></p>
                                         </div>
                                     </div>

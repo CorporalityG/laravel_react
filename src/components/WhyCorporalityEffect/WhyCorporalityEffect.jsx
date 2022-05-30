@@ -20,6 +20,7 @@ function WhyCorporalityEffect() {
             <MetaTags>
                 <title>{`Why Corporality Effect? | Best Digital Marketing Strategy Online `}</title>
                 <meta name="description" content={`This is not the time to slow down in your digital marketing effort. Take advantage of the Corporality Effect program to help you with your digital marketing strategies.`} />
+                <link rel="canonical" href={`${BASE_URL}/why-corporality-effect/`} />
             </MetaTags>
 
             <div className="wce-banner-main">

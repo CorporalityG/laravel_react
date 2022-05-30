@@ -11,6 +11,7 @@ function InboundShifting() {
             <MetaTags>
                 <title>{`Corporality Inbound Shiftings | Corporality`}</title>
                 <meta name="description" content={`Inbound shifting is a powerful brand strategy for many business owners and entrepreneurs. Learn how it works in this resource crafted by marketing`} />
+                <link rel="canonical" href={`${BASE_URL}/corporality-inbound-shiftings/`} />
             </MetaTags>
 
             <div className="is-banner-section">

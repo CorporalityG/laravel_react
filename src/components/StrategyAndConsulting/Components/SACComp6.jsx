@@ -26,7 +26,7 @@ function SACComp6() {
             <div className="SACComp6_community_first_heading-Invirogating">
               <div className="SACComp6_community_first_heading_text-Invirogating">Deep Industry Expertise</div>
               <div className="SACComp6_community_first_heading_arrow-Invirogating">
-                <img src={heading_1_arrowExpertise} alt="" />
+                <img src={heading_1_arrowExpertise} alt="Deep Industry Expertise" />
               </div>
 
             </div>
@@ -36,13 +36,13 @@ function SACComp6() {
             </div>
           </div>
           <div className="SACComp6_community_top_image-Invirogating">
-            <img src={Main1Expertise} alt="" className="SACComp6_community_top_image_image-Invirogating" />
+            <img src={Main1Expertise} alt="Invirogating" className="SACComp6_community_top_image_image-Invirogating" />
           </div>
           <div className="SACComp6_community_top_back_image-Invirogating">
-            <img src={top_backExpertise} alt="" />
+            <img src={top_backExpertise} alt="Invirogating" />
           </div>
           <div className="SACComp6_community_top_rectangle-Invirogating">
-            <img src={top_rectangleExpertise} alt="" />
+            <img src={top_rectangleExpertise} alt="Invirogating" />
           </div>
         </div>
         <div
@@ -54,7 +54,7 @@ function SACComp6() {
               Agility and Enterprise Resilience
               </div>
               <div className="SACComp6_community_second_heading_arrow-Invirogating">
-                <img src={heading_1_arrowExpertise} alt="" />
+                <img src={heading_1_arrowExpertise} alt="Agility and Enterprise Resilience" />
               </div>
 
             </div>
@@ -68,16 +68,16 @@ function SACComp6() {
             <div className="SACComp6_community_bottom_image-Invirogating">
               <img
                 src={Main2Expertise}
-                alt=""
+                alt="Invirogating"
                 className="SACComp6_community_bottom_image_image-Invirogating"
               />
             </div>
             <div className="SACComp6_community_bottom_back_image-Invirogating">
-              <img src={bottom_backExpertise} alt="" />
+              <img src={bottom_backExpertise} alt="Invirogating" />
             </div>
           </div>
           <div className="SACComp6_community_bottom_rectangle-Invirogating">
-            <img src={bottom_rectangleExpertise} alt="" />
+            <img src={bottom_rectangleExpertise} alt="Invirogating" />
           </div>
         </div>
       </div>

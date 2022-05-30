@@ -81,7 +81,7 @@ function BlogTop() {
             <div className="blogMarketWrapper">
                 <div className="container-lg">
                     <div className="blogMarket">
-                        <img src={blogTopLeft} alt="" />
+                        <img src={blogTopLeft} alt="blogTopLeft" />
                         <div>
                             <h3>Do you want me to do your marketing for you?</h3>
                             <div>Yes, I want</div>

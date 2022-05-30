@@ -18,6 +18,7 @@ function WhatIsCorporalityEffect() {
             <MetaTags>
                 <title>{`What is Corporality Effect? | Top Marketing Trends Online | Corporality Global`}</title>
                 <meta name="description" content={`Corporality Effect is a business vision which will transform you into one of the most influential people in your industry. We leverage top marketing trends for your success.`} />
+                <link rel="canonical" href={`${BASE_URL}/what-is-corporality-effect/`} />
             </MetaTags>
 
             <div className="wice-banner-main">

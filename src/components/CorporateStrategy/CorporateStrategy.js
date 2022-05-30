@@ -30,6 +30,7 @@ function CorporateStrategy() {
         <title>{`Corporality Global Corporate Strategy| Top Brand Strategy & Consultancy`}</title>
         <meta name="description" content={`Corporality Global Corporate Strategy helps to achieve their goals faster than your competitors. Contact us to know about the Corporate Strategy +61 2 83794089`} />
         <meta name="keywords" content={`Corporate Strategy`} />
+        <link rel="canonical" href={`${BASE_URL}/corporate-strategy/`} />
       </MetaTags>
 
       <div className="coo-banner-section">

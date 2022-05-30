@@ -22,7 +22,7 @@ function WorkParallax() {
   return (
     <div className="aboutus_parallax_parent">
       <div className="boxes_left">
-        <img src={threeboxes} alt="" />
+        <img src={threeboxes} alt="threeboxes" />
       </div>
       <div className="container">
         <div className="outer_container">
@@ -55,10 +55,10 @@ function WorkParallax() {
               <button onClick={() => { navigate("/go-to-marketing"); topHandle(); }}> Our Services </button>
             </div>
             <div className="box_top">
-              <img src={top_rectangle} alt="" />
+              <img src={top_rectangle} alt="top_rectangle" />
             </div>
             <div className="box_right">
-              <img src={right_rectangle} alt="" />
+              <img src={right_rectangle} alt="right_rectangle" />
             </div>
           </div>
         </div>

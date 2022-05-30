@@ -11,7 +11,7 @@ export const NewsItem = (props) => {
                     <div className="si-news-item-desc" dangerouslySetInnerHTML={{ __html: props.content }}></div>
                 </div>
                 <div className='si-news-item-btn'>
-                    <Link to={`/${props.slug}`} className="si-link">Read More <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="" /></Link>
+                    <Link to={`/${props.slug}`} className="si-link">Read More <img src={`${BASE_URL}/img/ServiceInsights/left-arrow.png`} alt="arrow" /></Link>
                 </div>
             </div>
         </div>

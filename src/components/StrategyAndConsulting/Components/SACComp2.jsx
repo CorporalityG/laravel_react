@@ -13,23 +13,23 @@ const SACComp2 = () => {
   }, []);
   return (
     <div className="SACC2_prev2">
-      <img className="SACC2_side2-container" src={side2Organic} alt="" />
+      <img className="SACC2_side2-container" src={side2Organic} alt="side2Organic" />
       <div className="container">
         <div className="row">
           <div className="col-lg-6 SACC2_imaging-2 d-flex justify-content-center align-items-center flex-column">
             <div className="SACC2_images-2">
-              <img className="SACC2_wall2-container" src={wall2Organic} alt="" />
+              <img className="SACC2_wall2-container" src={wall2Organic} alt="wall2Organic" />
 
-              <img className="SACC2_small2-container" src={small2Organic} alt="" />
+              <img className="SACC2_small2-container" src={small2Organic} alt="small2Organic" />
               <div className="SACC2_img-container">
                 <div className="SACC2_hoverinit SACC2_Inc_Div_our-faith-main-img">
                   <div
-                    alt=""
+                    alt="main2Organic"
                     data-aos="fade-up-right"
                     data-aos-duration="2000"
                     data-aos-delay="10"
                   >
-                    <img className="SACC2_main2 " src={main2Organic} alt="" />
+                    <img className="SACC2_main2 " src={main2Organic} alt="main2Organic" />
                   </div>
                 </div>
               </div>

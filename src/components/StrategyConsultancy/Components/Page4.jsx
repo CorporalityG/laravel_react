@@ -16,12 +16,12 @@ const Page4 = () => {
             <div className="d-flex justify-content-center Consultancypage-4">
                 <div className='circle-container2'>
                     <div className="center">
-                        <img src={BASE_URL + "/img/StrategyConsultancy/centerCircle.png"} alt="" className="" />
+                        <img src={BASE_URL + "/img/StrategyConsultancy/centerCircle.png"} alt="centerCircle" className="" />
                     </div>
-                    <div className="deg0"><img src={BASE_URL + "/img/StrategyConsultancy/polygon3.png"} className=" Consultpolygon Consultancydia" alt="" /></div>
-                    <div className="deg90"><img src={BASE_URL + "/img/StrategyConsultancy/polygon2.png"} className=" Consultpolygon Consultancydia" alt="" /></div>
-                    <div className="deg180"><img src={BASE_URL + "/img/StrategyConsultancy/polygon1.png"} className=" Consultpolygon Consultancydia" alt="" /></div>
-                    <div className="deg270"><img src={BASE_URL + "/img/StrategyConsultancy/polygon2.png"} className=" Consultpolygon Consultancydia" alt="" /></div>
+                    <div className="deg0"><img src={BASE_URL + "/img/StrategyConsultancy/polygon3.png"} className=" Consultpolygon Consultancydia" alt="polygon3" /></div>
+                    <div className="deg90"><img src={BASE_URL + "/img/StrategyConsultancy/polygon2.png"} className=" Consultpolygon Consultancydia" alt="polygon2" /></div>
+                    <div className="deg180"><img src={BASE_URL + "/img/StrategyConsultancy/polygon1.png"} className=" Consultpolygon Consultancydia" alt="polygon1" /></div>
+                    <div className="deg270"><img src={BASE_URL + "/img/StrategyConsultancy/polygon2.png"} className=" Consultpolygon Consultancydia" alt="polygon2" /></div>
 
                 </div>
 
@@ -30,16 +30,16 @@ const Page4 = () => {
                     <p>Corporality Global offers Go To Marketing strategies that set you in the right direction. While choosing the market differentiators, we help you draw insights from your customers and your competitors to plan your strategy and tactics that will set you up for success</p>
 
                     <div className="main-div">
-                        <img className="" src={BASE_URL + "/img/StrategyConsultancy/explore.png"} alt="" />
-                        <img className=" front_arrow" src={BASE_URL + "/img/StrategyConsultancy/vector.png"} alt="" />
+                        <img className="" src={BASE_URL + "/img/StrategyConsultancy/explore.png"} alt="explore" />
+                        <img className=" front_arrow" src={BASE_URL + "/img/StrategyConsultancy/vector.png"} alt="vector" />
                         <span className="explore-btn">Explore</span>
                     </div>
                     <h2 className="head head2">Customer Experience</h2>
                     <p>Even the slightest friction can affect customer experiences. CXO initiatives are the best way to regulate and monitor customer satisfaction. Corporality Global takes CXO a notch higher, offering strategies that directly impact consumer gratification and revenue growth.</p>
 
                     <div className="main-div">
-                        <img className="" src={BASE_URL + "/img/StrategyConsultancy/explore.png"} alt="" />
-                        <img className=" front_arrow" src={BASE_URL + "/img/StrategyConsultancy/vector.png"} alt="" />
+                        <img className="" src={BASE_URL + "/img/StrategyConsultancy/explore.png"} alt="explore" />
+                        <img className=" front_arrow" src={BASE_URL + "/img/StrategyConsultancy/vector.png"} alt="vector" />
                         <span className="explore-btn">Explore</span>
                     </div>
                 </div>

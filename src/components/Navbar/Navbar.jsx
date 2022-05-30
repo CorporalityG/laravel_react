@@ -60,10 +60,10 @@ const Navbar = () => {
                                         <div className="insights-a">INSIGHTS</div>
                                     </div>
                                     <Insights />
-                                    <div className={`nav-item industries ${(showIndustries && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => { console.log("set industries"); setShowIndustries(!showIndustries) }} onMouseOver={() => { if (isLargeScreen) setShowIndustries(true) }} onMouseLeave={() => { if (isLargeScreen) setShowIndustries(false) }}>
+                                    {/* <div className={`nav-item industries ${(showIndustries && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => { console.log("set industries"); setShowIndustries(!showIndustries) }} onMouseOver={() => { if (isLargeScreen) setShowIndustries(true) }} onMouseLeave={() => { if (isLargeScreen) setShowIndustries(false) }}>
                                         <div className="industries-a">INDUSTRIES</div>
                                     </div>
-                                    <Industries />
+                                    <Industries /> */}
                                     <div className="nav-item contact" onClick={() => { navigate("/contact"); topHandler() }}>
                                         <div className="contact-a">CONTACT</div>
                                     </div>
