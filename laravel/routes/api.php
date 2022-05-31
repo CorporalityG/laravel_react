@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CsuitController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,6 @@ Route::get('/category-articles/{slug?}', [ArticleController::class, 'categoyArti
 
 Route::get('/csuit-subcat-posts', [PostController::class, 'getCSuitSubCatBlog']);
 Route::get('/csuit-cat-posts', [PostController::class, 'getCSuitCatBlog']);
+
+Route::get('/csuits/{category_slug?}', [CsuitController::class, 'categoyCSuits']);
+Route::get('/csuits-announcement', [CsuitController::class, 'categoyCSuitsAnnouncement']);

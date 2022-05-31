@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /offline/
+
+Sitemap: https://corporality.global/sitemap.xml

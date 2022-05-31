@@ -303,4 +303,50 @@ class CsuitController extends Controller
     {
         return Str::slug($request->title, '-');
     }
+
+    public function categoyCSuits(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $results = array();
+
+            $qry = Csuit::latest();
+
+            if( !empty($request->category_slug) )
+            {
+                $category = CsuitCategory::with('subcategoriesCsuits:id')->where('category_slug', $request->category_slug)->first();
+
+                if( !empty($category) )
+                {
+                    $csuits = array_column($category->subcategoriesCsuits->toArray(), 'id');
+                    $qry->whereIn('id', $csuits);
+                }
+            }
+
+            $results = $qry->with(['categories', 'subcategories'])->take(11)->get();
+
+            return $results;
+        }
+    }
+
+    public function categoyCSuitsAnnouncement(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $categories = CsuitCategory::where('parent_id', '!=', 0)->get();
+
+            $csuits = array();
+            if( !empty($categories) )
+            {
+                foreach( $categories as $category )
+                {
+                    if( $category->subcategoriesCsuits()->count() > 0 )
+                    {
+                        array_push($csuits, $category->subcategoriesCsuits()->with(['subcategories'])->latest()->first());
+                    }
+                }
+            }
+            return $csuits;
+        }
+    }
 }

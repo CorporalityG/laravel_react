@@ -1,0 +1,332 @@
+.csuit-insights {
+    margin-top: 80px;
+    background-image: url('./img/csuit-insights.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.csuit-insights .csuit-insights-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    text-align: center;
+    color: #33657E;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    position: relative;
+}
+.csuit-insights .csuit-insights-title::after {
+    background: #A06DAF;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    width: 80px;
+}
+
+/* insight-item start */
+.csuit-insights .insight-item-col {
+    display: flex;
+}
+.csuit-insights .insight-item {
+    overflow: hidden;
+    box-shadow: 0px 0px 11px 0 #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    width: 100%;
+}
+.csuit-insights .insight-item img {
+    max-width: 100%;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+    transform-origin: center center;
+}
+.csuit-insights .insight-item img:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.csuit-insights .insight-item .insight-item-category {
+    color: #31647c;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+}
+.csuit-insights .insight-item .insight-item-title {
+    color: rgb(31, 31, 31);
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+/* insight-item end */
+
+/* banner start */
+.csuit-insights .csuit-insights-banner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.csuit-insights .csuit-insights-banner .csuit-insights-banner-row {
+    align-items: center;
+}
+.csuit-insights .csuit-insights-banner-title h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    color: #33657E;
+    position: relative;
+    padding-bottom: 25px;
+}
+.csuit-insights .csuit-insights-banner-title h1::after {
+    background: #A06DAF;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    left: 5px;
+    position: absolute;
+    width: 125px;
+}
+.csuit-insights .csuit-insights-banner-content {
+    background: #FFFFFF;
+    border-top: 8px solid #A06DAF;
+    box-shadow: 0px 24px 34px -20px rgba(0, 0, 0, 0.25);
+    padding: 35px 20px;
+}
+.csuit-insights .csuit-insights-banner-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #232323;
+}
+/* banner end */
+
+/* latest start */
+.csuit-insights .csuit-insights-latest {
+    background-color: #F7F7F7;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.csuit-insights .csuit-insights-latest-title {
+    margin-bottom: 50px;
+}
+.csuit-insights .csuit-insights-latest .insight-item img {
+    max-height: 335px;
+}
+/* latest end */
+
+/* video start */
+.csuit-insights .csuit-insights-video {
+    background-color: #F7F7F7;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+.csuit-insights .csuit-insights-video .video-heading-bg {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    max-width: 100%;
+}
+.csuit-insights .csuit-insights-video .csuit-insights-video-row {
+    align-items: center;
+}
+.csuit-insights .csuit-insights-video .csuit-insights-video-img img {
+    max-width: 100%;
+}
+.csuit-insights .csuit-insights-video .csuit-insights-video-content h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: #33657E;
+    margin-bottom: 15px;
+}
+.csuit-insights .csuit-insights-video .csuit-insights-video-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #232323;
+    margin-bottom: 30px;
+}
+.csuit-insights .csuit-insights-video .csuit-insights-video-content .play-video-btn {
+    background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+    padding: 10px 25px;
+    display: inline-block;
+    cursor: pointer;
+}
+/* video end */
+
+/* announcement slider start */
+.csuit-insights .csuit-insights-announcement-slider {
+    background-color: #F7F7F7;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.csuit-insights .csuit-insights-announcement-slider .csuit-insights-as-row {
+    background-color: #A06DAF;
+    border: 1px solid #CDCDCD;
+    box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    align-items: center;
+}
+.csuit-insights .csuit-insights-announcement-slider .csuit-insights-as-banner img {
+    max-width: 100%;
+    width: 100%;
+    max-height: 150px;
+}
+.csuit-insights .csuit-insights-announcement-slider .csuit-insights-as-content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.csuit-insights .csuit-insights-announcement-slider .csuit-insights-as-category {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.csuit-insights .csuit-insights-announcement-slider .csuit-insights-as-content h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+}
+.csuit-insights .csuit-insights-announcement-slider .csuit-insights-as-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.csuit-insights .csuit-insights-announcement-slider .csuit-insights-as-link svg {
+    height: 16px;
+    fill: #fff;
+    margin-left: 5px;
+}
+/* announcement slider end */
+
+
+/* all start */
+.csuit-insights .csuit-insights-all {
+    background-color: #F7F7F7;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-image: url('./img/csuit-insights-all-bg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.csuit-insights .csuit-insights-all .bVoXXg {
+    display: flex;
+}
+.csuit-insights .csuit-insights-all .insight-item-col {
+    width: 100%;
+}
+.csuit-insights .csuit-insights-all .insight-item img {
+    max-height: 180px;
+}
+.csuit-insights .csuit-insights-all-title {
+    margin-bottom: 50px;
+}
+.csuit-insights .csuit-insights-all-title p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #232323;
+    margin: 20px auto;
+    max-width: 50%;
+}
+.csuit-insights .csuit-insights-all .insight-item {
+    margin: 10px 15px;
+}
+.csuit-insights .csuit-insights-all .sc-bwzfXH {
+    box-shadow: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25px;
+    width: 25px;
+    opacity: 1;
+    background-color: transparent;
+}
+.csuit-insights .csuit-insights-all .kVtMtA::before {
+    content: unset;
+}
+.csuit-insights .csuit-insights-all .kVtMtA {
+    background-image: url("./img/prev-arrow.png");
+    left: -20px;
+}
+.csuit-insights .csuit-insights-all .bhRnqO::before {
+    content: unset;
+}
+.csuit-insights .csuit-insights-all .bhRnqO {
+    background-image: url("./img/next-arrow.png");
+    right: -20px;
+}
+/* all end */
+
+/* csuit-insights-service start */
+.csuit-insights .csuit-insights-service {
+    background-color: #F7F7F7;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.csuit-insights .csuit-insights-service-row {
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #CBCACA;
+    border-radius: 12px;
+}
+.csuit-insights .csuit-insights-service-content {
+    padding: 15px;
+}
+.csuit-insights .csuit-insights-service-content h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: #33657E;
+    margin-bottom: 15px;
+}
+.csuit-insights .csuit-insights-service-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #232323;
+    margin-bottom: 30px;
+}
+.csuit-insights .csuit-insights-service-content .csuit-insights-service-btn {
+    background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+    padding: 10px 25px;
+    display: inline-block;
+    cursor: pointer;
+}
+.csuit-insights .csuit-insights-service-img {
+    padding-right: 0;
+}
+.csuit-insights .csuit-insights-service-img img {
+    width: 100%;
+}
+/* csuit-insights-service end */
