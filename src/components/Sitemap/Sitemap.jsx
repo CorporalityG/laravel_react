@@ -1,17 +1,17 @@
 import React from 'react'
 import './Sitemap.css'
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 import { BASE_URL } from '../../config';
 import { Link } from 'react-router-dom'
 
 function Sitemap() {
     return (
         <>
-            <MetaTags>
+            <Helmet>
                 <title>{`Sitemap | Corporality`}</title>
                 <meta name="description" content={`Sitemap Corporality`} />
                 <link rel="canonical" href={`${BASE_URL}/sitemap/`} />
-            </MetaTags>
+            </Helmet>
 
             <div className='sitemap-page'>
                 <div className='container-lg'>

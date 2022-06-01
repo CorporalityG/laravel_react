@@ -6,7 +6,7 @@ import { TestimonialItem } from './TestimonialItem'
 import { Link } from 'react-router-dom'
 import Accordion from 'react-bootstrap/Accordion'
 import { ApplyNowPopUp } from './ApplyNowPopUp'
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 
 function Careers() {
 
@@ -19,11 +19,11 @@ function Careers() {
 
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>{`Careers | Corporality`}</title>
         <meta name="description" content={`Corporality provides a positive environment & helps to create the best work culture with your professional life. Send us your CV to hello@corporality.global`} />
         <link rel="canonical" href={`${BASE_URL}/careers/`} />
-      </MetaTags>
+      </Helmet>
 
       <div className="career-banner-section">
         <img src={`${BASE_URL}/img/Careers/rec-1.png`} alt="Rec 1" className="rec-1" />

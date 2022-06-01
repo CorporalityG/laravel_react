@@ -4,16 +4,16 @@ import { BASE_URL } from '../../config'
 import { TopElementItem } from './TopElementItem'
 import Accordion from 'react-bootstrap/Accordion'
 import { ProcessItem } from './ProcessItem'
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 
 function CulturallyConditioned() {
     return (
         <>
-            <MetaTags>
-                <title>{`Culturally Conditioned Framework | Digital Marketing Services in Sydney`}</title>
-                <meta name="description" content={`Corporality's digital marketing services employ a culturally-conditioned framework which is designed to establish participation and excitement around accountability.`} />
+            <Helmet>
+                <title>{`What is Corporate Strategy? - Definition | Meaning | Example`}</title>
+                <meta name="description" content={`Corporate strategy encompasses a firm’s corporate actions with the aim to achieve company objectives while achieving a competitive advantage.`} />
                 <link rel="canonical" href={`${BASE_URL}/corporality-culturally-conditioned/`} />
-            </MetaTags>
+            </Helmet>
 
             <div className="cc-banner-section">
                 <img src={BASE_URL + '/img/CulturallyConditioned/banner-dots.png'} alt="Culturally Conditioned" className="cc-banner-img" />

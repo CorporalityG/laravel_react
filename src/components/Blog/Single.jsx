@@ -6,7 +6,7 @@ import { SocialShare } from './SocialShare';
 import events from "../Blog/img/sidebarevent.jpg";
 import { RelatedBlogItem } from './RelatedBlogItem';
 import { RecentBlogItem } from './RecentBlogItem';
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 
 function dateFormat(date) {
     var dateObj = new Date(date);
@@ -54,12 +54,12 @@ const Single = () => {
             {
                 singleBlog ?
                     <>
-                        <MetaTags>
+                        <Helmet>
                             <title>{singleBlog.meta_title ?? singleBlog.post_title}</title>
                             {singleBlog.meta_description && <meta name="description" content={singleBlog.meta_description} />}
                             {singleBlog.meta_keywords && <meta name="keywords" content={singleBlog.meta_keywords} />}
                             <link rel="canonical" href={`${BASE_URL}/${singleBlog.post_slug}/`} />
-                        </MetaTags>
+                        </Helmet>
                         
                         <div className="container-lg">
                             <div className="row">

@@ -6,7 +6,7 @@ import AOS from "aos";
 import { LeadershipMember } from './LeadershipMember';
 import CarouselGrid from 'react-grid-carousel'
 import { TeamMember } from './TeamMember';
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 
 function OurTeam() {
 
@@ -18,11 +18,11 @@ function OurTeam() {
 
     return (
         <>
-            <MetaTags>
+            <Helmet>
                 <title>{`Our Team | A Company Made Of Top Marketing Professionals | Corporality`}</title>
                 <meta name="description" content={`Our team is composed of customer-centric and top marketing professionals, consultants, strategists and creative talents delivering tailor-fit solutions for your business.`} />
                 <link rel="canonical" href={`${BASE_URL}/our-team/`} />
-            </MetaTags>
+            </Helmet>
 
             <div className="ot-banner-section">
                 <img src={`${BASE_URL}/img/OurTeam/banner-dot.png`} alt="A company made of true professionals" className="ot-banner-img" data-aos="fade-left" />

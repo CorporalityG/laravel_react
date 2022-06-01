@@ -9,7 +9,7 @@ import { ApproachItem } from './ApproachItem';
 import Accordion from 'react-bootstrap/Accordion'
 import { useNavigate } from 'react-router-dom'
 import WriteToUsModal from "./WriteToUsModal";
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 
 export default function GoToMarketing() {
 
@@ -36,12 +36,12 @@ export default function GoToMarketing() {
 
     return (
         <>
-            <MetaTags>
+            <Helmet>
                 <title>{`Go to Market Strategy | Corporality Go-to-market (GTM) Strategy`}</title>
                 <meta name="description" content={`Corporality Global - Go to Marketing Strategy helps to achieve the business goals. Click here to know about What is a Go to Marketing Strategy? and why go to marketing strategy?`} />
                 <meta name="keywords" content={`Go to Marketing Strategy`} />
                 <link rel="canonical" href={`${BASE_URL}/goto-market-strategy/`} />
-            </MetaTags>
+            </Helmet>
 
             <div className="gtm-banner-section">
                 <img src={`${BASE_URL}/img/GoToMarketing/banner-rec.png`} alt="Rect" className="gtm-banner-rec" data-aos="zoom-in" />

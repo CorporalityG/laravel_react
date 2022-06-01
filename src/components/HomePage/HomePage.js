@@ -10,7 +10,7 @@ import NewPortfolio from "./Components/NewPortfolio";
 import CareToJoinUs from "./Components/CareToJoinUs";
 import OurIniatives from "./Components/OurIniatives.jsx";
 import AOS from "aos";
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 
 function HomePage() {
   useEffect(() => {
@@ -21,10 +21,10 @@ function HomePage() {
   }, []);
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>{`Corporality Global |#1 Marketing and Sales company in Sydney| Marketing & Brand Strategist `}</title>
         <meta name="description" content={`"Corporality Global is a no 1 Marketing and Sales company which helps to promote your business with right strategy. Services in Digital Marketing, Website creation and maintenance."`} />
-      </MetaTags>
+      </Helmet>
 
       <NewBanner />
       <Banner2 />

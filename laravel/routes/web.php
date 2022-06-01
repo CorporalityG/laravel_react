@@ -14,6 +14,9 @@ use App\Http\Controllers\ResearchPaperController;
 use App\Http\Controllers\CsuitCategoryController;
 use App\Http\Controllers\CsuitController;
 
+use App\Http\Controllers\IndustrialArticleCategoryController;
+use App\Http\Controllers\IndustrialArticleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,4 +62,9 @@ Route::group(['middleware'=>'auth'], function()
     Route::get('csuit-subcategories', [CsuitCategoryController::class, 'getSubcategories'])->name('csuit-categories.subcategories');
     Route::resources(['csuit' => CsuitController::class]);
     Route::get('csuit-slug', [CsuitController::class, 'getSlug'])->name('csuit.slug');
+
+    Route::resources(['industrial-article-categories' => IndustrialArticleCategoryController::class]);
+    Route::get('industrial-article-subcategories', [IndustrialArticleCategoryController::class, 'getSubcategories'])->name('industrial-article-categories.subcategories');
+    Route::resources(['industrial-articles' => IndustrialArticleController::class]);
+    Route::get('industrial-article-slug', [IndustrialArticleController::class, 'getSlug'])->name('industrial-articles.slug');
 });

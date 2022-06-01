@@ -6,6 +6,7 @@ import AOS from "aos";
 import WriteToUsModal from "./components/WriteToUsModal";
 import ServicesClients from "../ServicesClients/ServicesClients";
 import ServicesInsights from "../ServicesInsights/ServicesInsights";
+import { Helmet } from "react-helmet";
 
 function IntractiveBluePrint() {
 
@@ -24,6 +25,12 @@ function IntractiveBluePrint() {
 
   return (
     <>
+      <Helmet>
+        <title>{`What is Blue Ocean Strategy | About Blue Ocean Strategy`}</title>
+        <meta name="description" content={`Blue Ocean Strategy provides a systematic approach to making the competition irrelevant. Low cost to open up a new market space and create new demand.`} />
+        <link rel="canonical" href={`${BASE_URL}/interactive-blueprint/`} />
+      </Helmet>
+
       <div className="ibp-banner-section">
         <img src={`${BASE_URL}/img/IntractiveBluePrint/banner-rec-1.png`} alt="Rec 1" className="ibp-b-rec-1" />
         <img src={`${BASE_URL}/img/IntractiveBluePrint/banner-rec-2.png`} alt="Rec 2" className="ibp-b-rec-2" />
@@ -190,9 +197,9 @@ function IntractiveBluePrint() {
       </div>
 
       <div className="ibp-strategy-solutions-section">
-          <img src={`${BASE_URL}/img/IntractiveBluePrint/ss-ellipse.png`} alt="ss-ellipse" className="ss-ellipse" data-aos="fade-right" data-aos-delay="500" />
-          <img src={`${BASE_URL}/img/IntractiveBluePrint/ss-vector.png`} alt="ss-vector" className="ss-vector" data-aos="fade-right" data-aos-delay="300" />
-          <img src={`${BASE_URL}/img/IntractiveBluePrint/ss-rec.png`} alt="ss-rec" className="ss-rec" data-aos="fade-right" data-aos-delay="400" />
+        <img src={`${BASE_URL}/img/IntractiveBluePrint/ss-ellipse.png`} alt="ss-ellipse" className="ss-ellipse" data-aos="fade-right" data-aos-delay="500" />
+        <img src={`${BASE_URL}/img/IntractiveBluePrint/ss-vector.png`} alt="ss-vector" className="ss-vector" data-aos="fade-right" data-aos-delay="300" />
+        <img src={`${BASE_URL}/img/IntractiveBluePrint/ss-rec.png`} alt="ss-rec" className="ss-rec" data-aos="fade-right" data-aos-delay="400" />
 
         <div className="container-lg">
           <div className="row ibp-strategy-solutions-row">

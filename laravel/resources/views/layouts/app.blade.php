@@ -274,6 +274,60 @@
                         
                         <div class="post"></div>
 
+                        <!-- Industrial Article menu start -->
+                        @php
+                          $industrialArticleMenuOpen = '';
+                          $industrialArticleMenuActive = '';
+
+                          $industrialArticleLinkActive = '';
+                          $industrialArticleCategoryActive = '';
+                        @endphp
+
+                        @if( request()->routeIs('industrial-articles.index') || request()->is('industrial-articles/*') || request()->routeIs('industrial-article-categories.index') || request()->is('industrial-article-categories/*') )
+                          @php
+                            $industrialArticleMenuOpen = 'menu-open';
+                            $industrialArticleMenuActive = 'active';
+                          @endphp
+                        @endif
+
+                        @if( request()->routeIs('industrial-articles.index') || request()->is('industrial-articles/*') )
+                          @php
+                            $industrialArticleLinkActive = 'active';
+                          @endphp
+                        @endif
+
+                        @if( request()->routeIs('industrial-article-categories.index') || request()->is('industrial-article-categories/*') )
+                          @php
+                            $industrialArticleCategoryActive = 'active';
+                          @endphp
+                        @endif
+                        <li class="nav-item {{ $industrialArticleMenuOpen }}">
+                          <a href="javarscript:;" class="nav-link {{ $industrialArticleMenuActive }}">
+                            <i class="nav-icon fas fa-newspaper"></i>
+                            <p>
+                              {{ __('Industrial Articles') }}
+                              <i class="right fas fa-angle-left"></i>
+                            </p>
+                          </a>
+                          <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                              <a href="{{ route('industrial-articles.index') }}" class="nav-link {{ $industrialArticleLinkActive }}">
+                                <i class="far fa-copy nav-icon"></i>
+                                <p>{{ __('Industrial Articles') }}</p>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="{{ route('industrial-article-categories.index') }}" class="nav-link {{ $industrialArticleCategoryActive }}">
+                                <i class="fas fa-th nav-icon"></i>
+                                <p>{{ __('Categories') }}</p>
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <!-- Industrial Article menu end -->
+                        
+                        <div class="post"></div>
+
                         <li class="nav-item">
                           <!-- Authentication -->
                           <form method="POST" action="{{ route('logout') }}">

@@ -151,7 +151,7 @@ class ArticleCategoryController extends Controller
         $category = ArticleCategory::findOrFail($articleCategory->id);
         // dd($category->articles->count());
 
-        if( empty($category->articles->count()) ):
+        if( empty($category->articles->count()) && empty($category->subcategoriesArticles->count()) ):
             $category->delete();
 
             Session::flash('messageType', 'success');

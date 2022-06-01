@@ -4,7 +4,7 @@ import { BASE_URL } from '../../config';
 import { Link } from 'react-router-dom';
 import { FactorDrivingConclusionItem } from './FactorDrivingConclusionItem';
 import { KeyElementItem } from './KeyElementItem';
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 
 function WhatIsCorporalityEffect() {
 
@@ -15,11 +15,11 @@ function WhatIsCorporalityEffect() {
 
     return (
         <>
-            <MetaTags>
-                <title>{`What is Corporality Effect? | Top Marketing Trends Online | Corporality Global`}</title>
-                <meta name="description" content={`Corporality Effect is a business vision which will transform you into one of the most influential people in your industry. We leverage top marketing trends for your success.`} />
+            <Helmet>
+                <title>{`What is Corporate Strategy? - Definition | Meaning | Example`}</title>
+                <meta name="description" content={`Corporate strategy encompasses a firm’s corporate actions with the aim to achieve company objectives while achieving a competitive advantage.`} />
                 <link rel="canonical" href={`${BASE_URL}/what-is-corporality-effect/`} />
-            </MetaTags>
+            </Helmet>
 
             <div className="wice-banner-main">
                 <img src={BASE_URL + '/img/WhatIsCorporalityEffect/banner-dots.png'} alt="What is Corporality Effect?" className="wice-banner-img" />

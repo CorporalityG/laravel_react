@@ -7,7 +7,7 @@ function truncate(text, size) {
 
 export const CapabilitiesItem = (props) => {
     return (
-        <div className='col-lg-4 si-c-item-col'>
+        <div className='col-lg-4 col-md-6 si-c-item-col'>
             <div className='si-c-item'>
                 <Link to={`/article/${props.slug}`} className="si-c-item-link">
                     <div className="si-c-item-title">{props.title}</div>

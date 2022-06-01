@@ -164,7 +164,7 @@ class CategoryController extends Controller
         $category = Category::findOrFail($category->id);
         // dd($category->posts->count());
 
-        if( empty($category->posts->count()) ):
+        if( empty($category->posts->count()) && empty($category->subcategoriesPosts->count()) ):
             $category->delete();
 
             Session::flash('messageType', 'success');

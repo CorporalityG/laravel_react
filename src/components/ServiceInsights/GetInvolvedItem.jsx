@@ -6,7 +6,7 @@ export const GetInvolvedItem = (props) => {
             <div className='si-gi-item'>
                 <div className='container-fluid px-0'>
                     <div className='row'>
-                        <div className='col-lg-4'>
+                        <div className='col-lg-4 col-sm-3'>
                             <div className='si-gi-item-img'>
                                 {
                                     props.thumbnail ?
@@ -16,7 +16,7 @@ export const GetInvolvedItem = (props) => {
                             </div>
                         </div>
 
-                        <div className='col-lg-8'>
+                        <div className='col-lg-8 col-sm-9'>
                             <div className='si-gi-item-content'>
                                 <div className='si-gi-item-desc'>
                                     <div className='si-gi-item-title'>{props.title}</div>

@@ -1,16 +1,16 @@
 import React from 'react'
 import './PrivacyPolicy.css'
 import { BASE_URL } from '../../config'
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 
 function PrivacyPolicy() {
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>{`Privacy Policy | Corporality`}</title>
         <meta name="description" content={`If you require any more information or have any questions about our privacy policy, please feel free to contact us by email at info@corporality.global.`} />
         <link rel="canonical" href={`${BASE_URL}/privacy-policy/`} />
-      </MetaTags>
+      </Helmet>
 
       <div className="privacy-policy-section">
         <img src={`${BASE_URL}/img/PrivacyPolicy/rec-1.png`} alt="Rec 1" className="rec-1" />

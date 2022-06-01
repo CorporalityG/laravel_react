@@ -15,6 +15,7 @@ import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/Nav'
 // import MetaTags from 'react-meta-tags';
 // import RelatedPost from './components/RelatedPost'
+import { Helmet } from "react-helmet";
 
 function dateFormat(date)
 {
@@ -58,12 +59,12 @@ const Blog = () => {
         <div className="single-blog-page">
             {
                 singleBlog ?
-                    <MetaTags>
+                    <Helmet>
                         <title>{singleBlog.meta_title ?? singleBlog.post_title}</title>
                         { singleBlog.meta_description && <meta name="description" content={singleBlog.meta_description} /> }
                         { singleBlog.meta_keywords && <meta name="keywords" content={singleBlog.meta_keywords} /> }
                         <link rel="canonical" href={`${BASE_URL}/${singleBlog.post_slug}/`} />
-                    </MetaTags>
+                    </Helmet>
                 : null
             }
             

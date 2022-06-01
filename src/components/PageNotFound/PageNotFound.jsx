@@ -1,16 +1,16 @@
 import React from 'react'
 import './PageNotFound.css'
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 import { BASE_URL } from '../../config';
 
 function PageNotFound() {
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>{`Page Not Found | Corporality`}</title>
         <meta name="description" content={`Why not to try other pages!`} />
         <link rel="canonical" href={`${BASE_URL}/404/`} />
-      </MetaTags>
+      </Helmet>
 
       <div className='page-not-found-page'>
         <div className='container-lg'>

@@ -9,7 +9,7 @@ import { CSuitAllItem } from './CSuitAllItem'
 import { GetInvolved } from '../ServiceInsights/GetInvolved'
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 function CooInsights() {
 
@@ -178,7 +178,7 @@ function CooInsights() {
                         <div className='col-lg-6 csuit-insights-service-content'>
                             <h2>Service Insights</h2>
                             <p>Marketing Communications is often overlooked by business leaders yet it is also a crucial component of any business strategy. How do you communicate with media outlets and other businesses that can partner with you or give you mutual benefits? Gaining good Marcom strength is a key to establishing one’s position in their category.</p>
-                            <a className='csuit-insights-service-btn'>Play Video</a>
+                            <Link to={`/service-insights`} className="csuit-insights-service-btn">Read More</Link>
                         </div>
 
                         <div className='col-lg-6 csuit-insights-service-img'>

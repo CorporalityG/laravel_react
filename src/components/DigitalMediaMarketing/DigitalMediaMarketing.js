@@ -9,7 +9,7 @@ import AOS from "aos";
 import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
 import ServicesClients from "../ServicesClients/ServicesClients";
 import ServicesInsights from "../ServicesInsights/ServicesInsights";
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 
 function DigitalMediaMarketing() {
 
@@ -27,11 +27,11 @@ function DigitalMediaMarketing() {
 
   return (
     <>
-      <MetaTags>
+      <Helmet>
         <title>{`Digital Marketing Agency Sydney | Best Marketing Service | Corporality`}</title>
         <meta name="description" content={`Digital Media Marketing is a powerful brand strategy for many business owners and entrepreneurs. Learn how it works in this resource crafted by marketing and brand consultants.`} />
         <link rel="canonical" href={`${BASE_URL}/digital-media-marketing/`} />
-      </MetaTags>
+      </Helmet>
 
       <div className="dmm-banner-section">
         <div className="container-lg">

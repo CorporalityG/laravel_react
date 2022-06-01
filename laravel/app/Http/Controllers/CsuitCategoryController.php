@@ -150,7 +150,7 @@ class CsuitCategoryController extends Controller
     {
         $category = CsuitCategory::findOrFail($csuitCategory->id);
 
-        if( empty($category->csuits->count()) ):
+        if( empty($category->csuits->count()) && empty($category->subcategoriesCsuits->count()) ):
             $category->delete();
 
             Session::flash('messageType', 'success');

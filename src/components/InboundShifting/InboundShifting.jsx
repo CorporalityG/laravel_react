@@ -3,16 +3,16 @@ import './InboundShifting.css'
 import { BASE_URL } from '../../config'
 import { CuriousItem } from './CuriousItem'
 import Accordion from 'react-bootstrap/Accordion'
-import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 
 function InboundShifting() {
     return (
         <>
-            <MetaTags>
-                <title>{`Corporality Inbound Shiftings | Corporality`}</title>
-                <meta name="description" content={`Inbound shifting is a powerful brand strategy for many business owners and entrepreneurs. Learn how it works in this resource crafted by marketing`} />
+            <Helmet>
+                <title>{`The Importance of Shifting from Outbound to Inbound Marketing Strategy`}</title>
+                <meta name="description" content={`Its important to shift from an outbound to inbound marketing strategy to make it easier for potential customers to find you.`} />
                 <link rel="canonical" href={`${BASE_URL}/corporality-inbound-shiftings/`} />
-            </MetaTags>
+            </Helmet>
 
             <div className="is-banner-section">
                 <img src={BASE_URL + '/img/InboundShifting/banner-dots.png'} alt="Why Corporality Effect?" className="is-banner-img" />

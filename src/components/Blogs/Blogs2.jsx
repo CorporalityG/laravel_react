@@ -6,7 +6,8 @@ import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config'
 import { NewsItem } from './NewsItem'
 import { CovidItem } from './CovidItem'
 import { BlogItem } from './BlogItem'
-import MetaTags from 'react-meta-tags';
+// import MetaTags from 'react-meta-tags';
+import { Helmet } from "react-helmet";
 import Moment from 'moment';
 
 function truncate(text, size) {
@@ -74,11 +75,17 @@ function Blogs2() {
 
     return (
         <>
-            <MetaTags>
+            {/* <MetaTags>
                 <title>{`Blog | Digital Media Marketing | Corporality`}</title>
                 <meta name="description" content={`Read our blog to get updated about the last news, tools, insights, analysis & opinion on different topics like digital media marketing, advertising and website.`} />
                 <link rel="canonical" href={`${BASE_URL}/blog/`} />
-            </MetaTags>
+            </MetaTags> */}
+
+            <Helmet>
+                <title>{`Blog | Digital Media Marketing | Corporality`}</title>
+                <meta name="description" content={`Read our blog to get updated about the last news, tools, insights, analysis & opinion on different topics like digital media marketing, advertising and website.`} />
+                <link rel="canonical" href={`${BASE_URL}/blog/`} />
+            </Helmet>
 
             <div className="blog2">
 
