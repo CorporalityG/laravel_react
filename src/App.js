@@ -67,6 +67,7 @@ import CxoInsights from "./components/Insights/CxoInsights";
 import CorporalityStrikers from "./components/CorporalityStrikers/CorporalityStrikers";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import Sitemap from "./components/Sitemap/Sitemap";
+import CSuitSingle from "./components/Insights/CSuitSingle/CSuitSingle";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -173,6 +174,8 @@ function App() {
             <Route path="/category/:category_slug" element={<Blogs />}/>
 
             <Route path="/article/:article_slug" element={<SingleArticle />} />
+
+            <Route path="/csuit/:csuit_slug" element={<CSuitSingle />} />
             
             <Route path="/" exact element={<HomePage />} />
 

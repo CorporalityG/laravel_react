@@ -1608,7 +1608,7 @@
         margin-top: 215px;
     }
     .si-capabilities-section .si-c-item .si-c-item-title {
-        padding-right: 2.95rem;
+        padding-right: 0;
     }
 }
 
@@ -1634,5 +1634,76 @@
     }
     .si-organize-section .si-o-content-section .si-o-c-item p {
         font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 375.99px) {
+    .si-organize-section .si-o-title-content h2 {
+        font-size: 28px;
+    }
+    .si-organize-section .si-o-bg-main {
+        margin-top: 240px;
+    }
+}
+
+
+@media only screen and (max-width: 345.99px) {
+    .si-announcement-section .si-a-content .si-a-date {
+        font-size: 18px;
+    }
+    .si-announcement-section .si-a-content h1 {
+        font-size: 24px;
+    }
+    .si-announcement-section .si-a-content .si-a-organised {
+        font-size: 24px;
+    }
+    .si-announcement-section .si-a-content .si-a-btn .si-a-link {
+        font-size: 16px;
+    }
+    .si-high-tech-industry-section .si-hti-content h2 {
+        font-size: 24px;
+    }
+    .si-capabilities-section .si-c-title h2 {
+        font-size: 36px;
+    }
+    .si-announcement-slider-section .carousel-control-next, 
+    .si-announcement-slider-section .carousel-control-prev {
+        width: 7%;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .si-organize-section .si-o-title-content h2 {
+        font-size: 24px;
+    }
+    .si-organize-section .si-o-content-section .si-o-c-item .si-o-c-item-title {
+        font-size: 20px;
+    }
+    .si-organize-section .si-o-bg-main {
+        margin-top: 265px;
+    }
+    .si-organize-section .si-o-title-content .si-link {
+        font-size: 16px;
+    }
+    .si-announcement-slider-section .si-a-content h2 {
+        font-size: 20px;
+    }
+    .si-client-conversion-section .si-cc-content h2 {
+        font-size: 22px;
+    }
+    .si-high-tech-industry-section .si-hti-video-title {
+        font-size: 20px;
+    }
+    .service-insights-page .si-link {
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 280.99px) {
+    .si-organize-section .si-o-bg-main {
+        margin-top: 325px;
     }
 }

@@ -2,4 +2,7 @@
 User-agent: *
 Disallow: /offline/
 
+User-agent: *
+Allow: /
+
 Sitemap: https://corporality.global/sitemap.xml

@@ -349,4 +349,21 @@ class CsuitController extends Controller
             return $csuits;
         }
     }
+
+
+    /**
+     * Display a get single csuit.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getCSuit(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $RS_Row = Csuit::with(['subcategories'])->where('slug', $request->slug)->first();
+            $RS_Row->date_created_at = \Carbon\Carbon::parse($RS_Row->created_at)->format('d F Y');
+
+            return $RS_Row ?? array();
+        }
+    }
 }

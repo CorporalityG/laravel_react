@@ -79,7 +79,7 @@ function CxoInsights() {
                                                 key={`${item.id}`}
                                                 thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
                                                 title={`${item.title}`}
-                                                slug={`${item.slug}`}
+                                                slug={`csuit/${item.slug}`}
                                                 category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
                                                 categorySlug={item.categories[0] !== undefined ? item.categories[0].category_slug : null}
                                             />
@@ -117,14 +117,14 @@ function CxoInsights() {
             <div className='csuit-insights-announcement-slider'>
                 {
                     announcements ?
-                        <Carousel indicators={false} controls={true} interval={5000}>
+                        <Carousel indicators={false} controls={false} interval={5000}>
                             {
                                 announcements.map((item) =>
                                     <Carousel.Item key={`${item.id}`}>
                                         <AnnouncementItem
                                             thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
                                             title={`${item.title}`}
-                                            slug={`${item.slug}`}
+                                            slug={`csuit/${item.slug}`}
                                             category={item.subcategories[0] !== undefined ? item.subcategories[0].category_name : null}
                                         />
                                     </Carousel.Item>
@@ -149,14 +149,14 @@ function CxoInsights() {
                             <div className="csuit-insights-all-slider">
                                 {
                                     latestCSuits ?
-                                        <CarouselGrid cols={3} rows={1} gap={0} responsiveLayout={[{ breakpoint: 767, cols: 1, gap: 0, loop: true, autoplay: 4000 }]}>
+                                        <CarouselGrid cols={3} rows={1} gap={0} responsiveLayout={[{ breakpoint: 1024, cols: 2 }, { breakpoint: 767, cols: 1, gap: 0, loop: true, autoplay: 4000 }]}>
                                             {
                                                 latestCSuits.slice(2, 11).map((item) =>
                                                     <CarouselGrid.Item key={`${item.id}`}>
                                                         <CSuitAllItem
                                                             thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
                                                             title={`${item.title}`}
-                                                            slug={`${item.slug}`}
+                                                            slug={`csuit/${item.slug}`}
                                                             category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
                                                             categorySlug={item.categories[0] !== undefined ? item.categories[0].category_slug : null}
                                                         />

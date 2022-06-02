@@ -1,8 +1,5 @@
 .csuit-insights {
     margin-top: 80px;
-    background-image: url('./img/csuit-insights.png');
-    background-repeat: no-repeat;
-    background-position: left top;
 }
 .csuit-insights .csuit-insights-title {
     font-style: normal;
@@ -65,7 +62,7 @@
     font-weight: 500;
     width: 100%;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 /* insight-item end */
 
@@ -73,6 +70,10 @@
 .csuit-insights .csuit-insights-banner {
     padding-top: 50px;
     padding-bottom: 50px;
+    background-image: url('./img/csuit-insights.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
 }
 .csuit-insights .csuit-insights-banner .csuit-insights-banner-row {
     align-items: center;
@@ -136,6 +137,7 @@
     right: 0;
     top: 80px;
     max-width: 100%;
+    max-height: 700px;
 }
 .csuit-insights .csuit-insights-video .csuit-insights-video-row {
     align-items: center;
@@ -240,7 +242,7 @@
     width: 100%;
 }
 .csuit-insights .csuit-insights-all .insight-item img {
-    max-height: 180px;
+    height: 180px;
 }
 .csuit-insights .csuit-insights-all-title {
     margin-bottom: 50px;
@@ -330,3 +332,68 @@
     width: 100%;
 }
 /* csuit-insights-service end */
+
+/* responsive start */
+@media only screen and (max-width: 1399.99px) {
+    .csuit-insights .csuit-insights-all-title p {
+        max-width: 60%;
+    }
+    .csuit-insights .csuit-insights-announcement-slider .csuit-insights-as-content h2 {
+        font-size: 32px;
+    }
+}
+
+
+@media only screen and (max-width: 1300.99px) {
+    .csuit-insights .csuit-insights-video .video-heading-bg {
+        max-height: 650px;
+    }
+}
+
+
+@media only screen and (max-width: 1199.99px) {
+    .csuit-insights .container-lg {
+        max-width: 98%;
+    }
+    .csuit-insights .csuit-insights-video .video-heading-bg {
+        max-height: 600px;
+    }
+    .csuit-insights .csuit-insights-all .kVtMtA {
+        left: -8px;
+    }
+    .csuit-insights .csuit-insights-all .bhRnqO {
+        right: -8px;
+    }
+}
+
+
+@media only screen and (max-width: 1025.99px) {
+    .csuit-insights .csuit-insights-all-title p {
+        max-width: 70%;
+    }
+    .csuit-insights .csuit-insights-all .insight-item img {
+        height: 200px;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .csuit-insights .csuit-insights-banner-content {
+        margin-top: 50px;
+    }
+    .csuit-insights .csuit-insights-banner-title h1 {
+        padding-bottom: 15px;
+    }
+    .csuit-insights .csuit-insights-video .csuit-insights-video-content {
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+    .csuit-insights .csuit-insights-service-img {
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    .csuit-insights .csuit-insights-announcement-slider .csuit-insights-as-content h2 {
+        font-size: 28px;
+    }
+}

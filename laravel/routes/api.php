@@ -45,3 +45,4 @@ Route::get('/csuit-cat-posts', [PostController::class, 'getCSuitCatBlog']);
 
 Route::get('/csuits/{category_slug?}', [CsuitController::class, 'categoyCSuits']);
 Route::get('/csuits-announcement', [CsuitController::class, 'categoyCSuitsAnnouncement']);
+Route::get('/single-csuit/{slug}', [CsuitController::class, 'getCSuit']);
