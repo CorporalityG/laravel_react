@@ -188,7 +188,7 @@ function WhyCorporalityEffect() {
                                         </div>
                                     </Accordion.Header>
                                     <Accordion.Body>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                                        <p>Through constant monitoring, you’ll know if you need to update your strategy.</p>
                                     </Accordion.Body>
                                 </Accordion.Item>
 
@@ -200,7 +200,7 @@ function WhyCorporalityEffect() {
                                         </div>
                                     </Accordion.Header>
                                     <Accordion.Body>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                                        <p>We make sure your teams know the right action item, monthly marketing objective and content strategy and scheduling process.</p>
                                     </Accordion.Body>
                                 </Accordion.Item>
 
@@ -212,7 +212,7 @@ function WhyCorporalityEffect() {
                                         </div>
                                     </Accordion.Header>
                                     <Accordion.Body>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                                        <p>You will receive reports and know the numbers on monthly basis.</p>
                                     </Accordion.Body>
                                 </Accordion.Item>
 
@@ -224,7 +224,7 @@ function WhyCorporalityEffect() {
                                         </div>
                                     </Accordion.Header>
                                     <Accordion.Body>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                                        <p>We will also streamline task accountability goals along the way with matrix observation and ROI understanding.</p>
                                     </Accordion.Body>
                                 </Accordion.Item>
 
@@ -236,7 +236,7 @@ function WhyCorporalityEffect() {
                                         </div>
                                     </Accordion.Header>
                                     <Accordion.Body>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium, nunc sed donec sapien condimentum porta. Eget in nullam pharetra velit.</p>
+                                        <p>We’ll help prop you up for even bigger gains in the future.</p>
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>
@@ -278,11 +278,6 @@ function WhyCorporalityEffect() {
                         <KeyElementItem
                             title={'Digital Impact'}
                             content={'<p>Everything today rests on something digital: from the home to industries, all businesses have more or less taken digital platforms for selling. Social networks and websites have become the new home for entrepreneurs, and Corporality Effect can help you maximise your digital presence. ere.</p>'}
-                        />
-
-                        <KeyElementItem
-                            title={'Inbound Marketing Strategy'}
-                            content={'<p>The post-digital era opened up the world to various new approaches to marketing, and Inbound is currently the biggest wave to ride. Corporality Effect makes full use of this contemporary approach.</p>'}
                         />
                     </div>
                 </div>

@@ -33,6 +33,7 @@ Route::get('/related-posts/{slug}/', [PostController::class, 'getRelatedPosts'])
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/related-posts-2/{slug}/', [PostController::class, 'getRelatedPosts2']);
 Route::get('/random-blogs', [PostController::class, 'randomBlogs']);
+Route::get('/category-posts/{slug?}', [PostController::class, 'categoyPosts']);
 
 Route::get('/single-article/{slug}', [ArticleController::class, 'getArticle']);
 

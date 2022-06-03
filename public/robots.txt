@@ -1,6 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: /offline/
+Disallow: https://corporality.global/offline/
 
 User-agent: *
 Allow: /

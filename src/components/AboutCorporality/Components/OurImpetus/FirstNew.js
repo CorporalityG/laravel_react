@@ -37,8 +37,7 @@ function FirstNew() {
             </div>
             <h1 className="ourimpetus_textside_heading">Our Impetus</h1>
             <div className="ourimpetus_textside_description">
-            To Deliver The Best In Digital Marketing And Sales Solutions Using
-              Innovation And Intuition To Craft Business Brilliance
+            We crate evangelist for our customers through Human Intelligence and our proprietary framework established in house.
             </div>
             <div className="ourimpetus_textside_smalltext">
               We create long-lasting values while helping you embrace change in

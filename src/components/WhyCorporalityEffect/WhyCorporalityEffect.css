@@ -329,6 +329,9 @@
 .wce-key-elements-section .wce-key-elements-title-row {
     margin-bottom: 30px;
 }
+.wce-key-elements-section .wce-key-elements-boxes-row {
+    justify-content: center;
+}
 .wce-key-elements-section .wce-key-elements-title-row h2 {
     font-style: normal;
     font-weight: 500;

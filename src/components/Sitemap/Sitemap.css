@@ -10,8 +10,24 @@
     color: #33657E;
     padding-bottom: 20px;
 }
-.sitemap-page ul {
+.sitemap-page h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: capitalize;
+    color: #33657E;
+}
+.sitemap-page .sitemap-link-list-ul {
+    list-style: none;
+    columns: 3 auto;
+}
+.sitemap-page .sitemap-link-list-item {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+.sitemap-page .sitemap-link-list-item ul {
     list-style-image: url("./img/list-icon.png");
+    padding-left: 20px;
 }
 .sitemap-page ul li a {
     font-style: normal;

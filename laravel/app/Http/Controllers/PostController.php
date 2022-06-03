@@ -474,7 +474,7 @@ class PostController extends Controller
     {
         if( $request->is('api/*') )
         {
-            return Post::inRandomOrder()->limit(3)->get();
+            return Post::inRandomOrder()->limit(7)->get();
         }
     }
 
@@ -520,6 +520,32 @@ class PostController extends Controller
             }
 
             $results = $qry->with(['categories', 'subcategories'])->paginate(6);
+            return $results;
+        }
+    }
+
+
+    public function categoyPosts(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $results = array();
+
+            $qry = Post::latest();
+
+            if( !empty($request->slug) )
+            {
+                $category = Category::with('posts:id')->where('category_slug', $request->slug)->first();
+
+                if( !empty($category) )
+                {
+                    $posts = array_column($category->posts->toArray(), 'id');
+                    $qry->whereIn('id', $posts);
+                }
+            }
+
+            $results = $qry->with(['categories', 'subcategories'])->take(6)->get();
+
             return $results;
         }
     }

@@ -17,102 +17,130 @@ function Sitemap() {
                 <div className='container-lg'>
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <h1>Sitemap</h1>
+                            <h1>Corporality Site Map</h1>
 
                             <div className='sitemap-link-list'>
-                                <ul>
+                                <ul className='sitemap-link-list-ul'>
                                     <li>
-                                        <Link to={`/`}>Home</Link>
+                                        <div className='sitemap-link-list-item'>
+                                            <h2>About</h2>
+                                            <ul>
+                                                <li>
+                                                    <Link to={`/about-corporality/`}>About Corporality</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/work-with-clients/`}>How We Work with Clients</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/inclusion-and-diversity/`}>Inclusion and Diversity</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/partnership-programmes/`}>Partnership Programmes</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/sustainable-growth/`}>Sustainable Growth</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/interactive-blueprint/`}>Interactive Blueprint</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/strategy-and-consulting/`}>Strategy & Consulting</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/why-corporality-effect/`}>Why corporality Effect?</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/what-is-corporality-effect/`}>What is corporality effect?</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/corporality-culturally-conditioned/`}>Culturally Conditioned</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/corporality-inbound-shiftings/`}>Inbound Shifting</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/corporality-striker/`}>Corporality Striker</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
+
                                     <li>
-                                        <Link to={`/about-corporality/`}>About Corporality</Link>
+                                        <div className='sitemap-link-list-item'>
+                                            <h2>Services</h2>
+                                            <ul>
+                                                <li>
+                                                    <Link to={`/brand-positioning/`}>Brand Positioning</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/digital-media-marketing/`}>Digital Media Marketing</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/cxo-strategy/`}>Outsourced CXO</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/outsourced-cmo/`}>Outsourced CMO</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/corporate-strategy/`}>Outsourced COO</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/goto-market-strategy/`}>Go to Marketing Strategy</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/account-based-marketing/`}>Account Based Marketing</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/strategic-consultancy/`}>Strategic Consulting</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/marketing-model-approch/`}>Marketing Model Approach</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
+
                                     <li>
-                                        <Link to={`/work-with-clients/`}>How We Work with Clients</Link>
+                                        <div className='sitemap-link-list-item'>
+                                            <h2>Insights</h2>
+                                            <ul>
+                                                <li>
+                                                    <Link to={`/corporality-books/`}>Corporality - Books</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/blog/`}>Blogs</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/service-insights/`}>Service Insights</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/our-team/`}>Our Team</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/careers/`}>Careers</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
+
                                     <li>
-                                        <Link to={`/inclusion-and-diversity/`}>Inclusion and Diversity</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/partnership-programmes/`}>Partnership Programmes</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/sustainable-growth/`}>Sustainable Growth</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/interactive-blueprint/`}>Interactive Blueprint</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/strategy-and-consulting/`}>Strategy & Consulting</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/why-corporality-effect/`}>Why corporality Effect?</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/what-is-corporality-effect/`}>What is corporality effect?</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/corporality-culturally-conditioned/`}>Culturally Conditioned</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/corporality-inbound-shiftings/`}>Inbound Shifting</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/corporality-striker/`}>Corporality Striker</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/brand-positioning/`}>Brand Positioning</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/digital-media-marketing/`}>Digital Media Marketing</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/cxo-strategy/`}>Outsourced CXO</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/outsourced-cmo/`}>Outsourced CMO</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/corporate-strategy/`}>Outsourced COO</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/goto-market-strategy/`}>Go to Marketing Strategy</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/account-based-marketing/`}>Account Based Marketing</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/corporality-books/`}>Corporality - Books</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/blog/`}>Blogs</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/service-insights/`}>Service Insights</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/contact/`}>Contact</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/strategic-consultancy/`}>Strategic Consulting</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/our-team/`}>Our Team</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/careers/`}>Careers</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/privacy-policy/`}>Privacy Policy</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/terms-and-conditions/`}>Terms and Conditions</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/sitemap/`}>Sitemap</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={`/marketing-model-approch/`}>Marketing Model Approach</Link>
+                                        <div className='sitemap-link-list-item'>
+                                            <h2>Navigation</h2>
+                                            <ul>
+                                                <li>
+                                                    <Link to={`/contact/`}>Contact</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/privacy-policy/`}>Privacy Policy</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/terms-and-conditions/`}>Terms and Conditions</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/sitemap/`}>Sitemap</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
