@@ -117,7 +117,7 @@ function CeoInsights() {
             <div className='csuit-insights-announcement-slider'>
                 {
                     announcements ?
-                        <Carousel indicators={false} controls={true} interval={5000}>
+                        <Carousel indicators={false} controls={false} interval={5000}>
                             {
                                 announcements.map((item) =>
                                     <Carousel.Item key={`${item.id}`}>

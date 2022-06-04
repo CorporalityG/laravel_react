@@ -226,6 +226,12 @@
     height: 100px;
     width: 100%;
     object-fit: cover;
+    font-size: 11px;
+    line-height: 1.2;
+}
+.blog2-corporate-strategy-section .cs-blog-col-box img::before {
+    font-size: 11px;
+    line-height: 1.2;
 }
 .blog2-corporate-strategy-section .cs-blog-col-box img:hover {
     -webkit-transform: scale(1.05);
@@ -739,6 +745,56 @@
 }
 
 
+@media only screen and (max-width: 1280.99px) {
+    .blog2 .carousel-control-next, 
+    .blog2 .b-announcement-slider-section .carousel-control-prev {
+        width: 7%;
+    }
+    .blog2-latest-section .blog-content-first {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .blog2-latest-section .category {
+        margin-bottom: 0;
+    }
+    .blog2-latest-section .title-first {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 1199.99px) {
+    .blog2 .container-lg {
+        max-width: 98%;
+    }
+    .blog2 .b-announcement-slider-section .carousel-control-next, 
+    .blog2 .b-announcement-slider-section .carousel-control-prev {
+        width: 5%;
+    }
+    .blog2-latest-section .blog-content-first {
+        max-width: 95%;
+    }
+    .blog2 .blog-item img {
+        height: 110px;
+    }
+    .blog2-video-section .video-box-item iframe {
+        height: 150px;
+    }
+    .blog2-corporate-strategy-section .cs-content-first {
+        padding-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 1090.99px) {
+    .blog2 .b-announcement-slider-section .b-a-content h2 {
+        font-size: 32px;
+    }
+}
+
+
 @media only screen and (min-width: 992px) and (max-width: 1080.99px) {
     .blog2 .blog-item .blog-item-title {
         font-size: 15px;
@@ -804,6 +860,38 @@
     .blog2-corporate-strategy-section .blog2-cs-title-row {
         margin-bottom: 0;
     }
+    .blog2 .b-announcement-slider-section .b-a-content h2 {
+        font-size: 28px;
+    }
+    .blog2 .b-announcement-slider-section {
+        padding-bottom: 60px;
+    }
+    .blog2-video-section .video-box-item iframe {
+        height: 250px;
+        margin-bottom: 15px;
+    }
+    .blog2-video-section .v-banner-first iframe {
+        height: 400px;
+    }
+    .blog2 .know_more_blogs {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 855.99px) {
+    .blog2 .b-announcement-slider-section .b-a-banner {
+        padding-right: 30px;
+    }
+    .blog2 .b-announcement-slider-section .b-a-content h2 {
+        font-size: 26px;
+    }
+    .blog2-latest-section .blog-content-first {
+        padding: 20px 10px;
+    }
+    .blog2 .blog-item img {
+        height: 200px;
+    }
 }
 
 
@@ -813,6 +901,26 @@
     }
     .blog2-corporate-strategy-section .cs-blog-col-box img {
         height: 100px;
+    }
+    .blog2 .b-announcement-slider-section .b-a-banner {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .blog2 .b-announcement-slider-section .b-a-banner img {
+        max-width: 220px;
+    }
+    .blog2-video-section .video-box-item iframe {
+        height: 300px;
+    }
+    .blog2 .container-lg {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+    .blog2 .blog-item img {
+        height: 150px;
     }
 }
 
@@ -845,12 +953,28 @@
     .blog2-covid-explore-section .covid-item-category {
         margin-bottom: 0;
     }
+    .blog2-video-section .v-banner-first iframe {
+        height: 300px;
+    }
 }
 
 
 @media only screen and (max-width: 520.99px) {
     .blog2-corporate-strategy-section .title-first a {
         font-size: 22px;
+    }
+    .blog2 .b-announcement-slider-section .b-a-content h2 {
+        font-size: 22px;
+    }
+}
+
+
+@media only screen and (max-width: 500.99px) {
+    .blog2-video-section .v-banner-first iframe {
+        height: 250px;
+    }
+    .blog2-video-section .video-box-item iframe {
+        height: 250px;
     }
 }
 
@@ -865,6 +989,12 @@
     .blog2-covid-explore-section .covid-item-title {
         font-size: 15px;
         line-height: 20px;
+    }
+    .blog2-latest-section .blog-content-first-mm {
+        font-size: 28px;
+    }
+    .blog2-latest-section .blog-content-first-la {
+        font-size: 24px;
     }
 }
 
@@ -889,12 +1019,48 @@
     .blog2-heading a {
         font-size: 22px;
     }
+    .blog2-video-section .v-banner-first iframe {
+        height: 200px;
+    }
+    .blog2-video-section .video-box-item iframe {
+        height: 200px;
+    }
+}
+
+
+@media only screen and (max-width: 400.99px) {
+    .blog2-latest-section .blog-content-first-mm {
+        font-size: 24px;
+    }
+    .blog2-latest-section .blog-content-first-la {
+        font-size: 22px;
+    }
 }
 
 
 @media only screen and (max-width: 360.99px) {
     .blog2-covid-explore-section .blog2-heading a {
         font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 345.99px) {
+    .blog2 .b-announcement-slider-section .carousel-control-next, 
+    .blog2 .b-announcement-slider-section .carousel-control-prev {
+        width: 7%;
+    }
+    .blog2-latest-section .blog-content-first-mm {
+        line-height: 1.1;
+    }
+    .blog2 .b-announcement-slider-section .b-a-content h2 {
+        font-size: 20px;
+    }
+    .blog2-video-section .v-banner-first iframe {
+        height: 180px;
+    }
+    .blog2-video-section .video-box-item iframe {
+        height: 180px;
     }
 }
 
@@ -919,5 +1085,27 @@
     }
     .blog2-latest-section .title-first {
         font-size: 21px;
+    }
+    .blog2 .b-announcement-slider-section .b-a-content h2 {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .blog2-video-section .v-banner-first iframe {
+        height: 150px;
+    }
+    .blog2-video-section .video-box-item iframe {
+        height: 150px;
+    }
+    .blog2-heading a {
+        font-size: 19px;
+    }
+    .blog2-heading svg {
+        margin-left: 5px;
+    }
+    .blog2-heading-main {
+        font-size: 24px;
     }
 }
