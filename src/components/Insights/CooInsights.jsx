@@ -157,8 +157,8 @@ function CooInsights() {
                                                             thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
                                                             title={`${item.title}`}
                                                             slug={`csuit/${item.slug}`}
-                                                            category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
-                                                            categorySlug={item.categories[0] !== undefined ? item.categories[0].category_slug : null}
+                                                            category={item.subcategories[0] !== undefined ? item.subcategories[0].category_name : null}
+                                                            categorySlug={item.subcategories[0] !== undefined ? item.subcategories[0].category_slug : null}
                                                         />
                                                     </CarouselGrid.Item>
                                                 )

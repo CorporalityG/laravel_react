@@ -40,6 +40,16 @@ class Article extends Model
         return \Carbon\Carbon::parse($value)->format('Y/m/d h:i A');
     }
 
+    /**
+     * Get the user's full name.
+     *
+     * @return string
+     */
+    /* public function getArticleSlugAttribute($value)
+    {
+        return "article/".$value;
+    } */
+
     public function categories()
     {
         return $this->belongsToMany(ArticleCategory::class, 'category_article', 'article_id', 'category_id');

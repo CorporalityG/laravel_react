@@ -1,0 +1,145 @@
+.search-page {
+    margin-top: 80px;
+}
+
+.search-page .search-form-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.search-page .search-form-section .search-keyword {
+    padding: 23px 15px;
+    box-shadow: unset;
+    border-radius: 0;
+}
+.search-page .search-form-section .search-keyword:focus {
+    border-color: #e2c53f;
+}
+.search-page .search-form-section .search-btn {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(95.12deg,#e2c53f,#6ca0bc 83.42%);
+    border-width: 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+.search-page .search-form-section .search-btn .fa-search {
+    font-size: 18px;
+    font-weight: 500;
+}
+.search-page .search-form-section .search-btn .search-text {
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.search-page .search-results-section {
+    padding-bottom: 80px;
+}
+.search-page .search-results-section .search-results-row {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 .31em .13em rgba(107,107,107,.15);
+}
+.search-page .search-results-section .results-for-keyword {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.search-page .search-results-section .results-for-keyword span {
+    text-transform: capitalize;
+}
+.search-page .search-results-section .all-results {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.search-page .search-results-section .number-of-results {
+    text-align: right;
+}
+.search-page .search-results-section .search-item-row {
+    border-top: 1px solid #31647c;
+    padding-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.search-page .search-results-section .search-item-img img {
+    width: 100%;
+}
+.search-page .search-results-section .search-item-title {
+    color: #33657e;
+    font-size: 24px;
+}
+.search-page .search-results-section .search-item-title a {
+    color: #33657e;
+}
+.search-page .search-results-section .search-item-category {
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.search-page .search-results-section .search-filters {
+    margin-left: 50px;
+}
+.search-page .search-results-section .search-filter-sort {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.search-page .search-results-section .search-filter-sort-by-label {
+    margin-right: 5px;
+}
+.search-page .search-results-section .search-filter-sort-type {
+    color: #33657e;
+}
+.search-page .search-results-section .search-filter-sort-type:not(:last-child) {
+    margin-right: 5px;
+}
+.search-page .search-results-section .search-filter-sort-type:last-child {
+    margin-left: 5px;
+}
+.search-page .search-results-section .search-filter-sort-type.sort-active {
+    color: inherit;
+    font-weight: 500;
+}
+.search-page .search-results-section .search-filter-by {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.search-page .search-results-section .search-accordion-main .accordion-item {
+    border-radius: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+.search-page .search-results-section .search-accordion-main .accordion-button {
+    box-shadow: unset;
+    background-color: transparent;
+    color: inherit;
+    padding: 15px 10px;
+    font-size: 18px;
+}
+.search-page .search-results-section .search-accordion-main .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23212529%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e");
+}
+.search-page .search-results-section .search-accordion-main .accordion-body {
+    background-color: #f2f2f2;
+    border-top: .06em solid #ccc;
+    box-shadow: inset 0 .75em 1.25em -.38em rgba(0,0,0,.15);
+    padding: 15px;
+    max-height: 340px;
+    overflow-y: auto;
+}
+.search-page .search-results-section .search-accordion-main .accordion-body ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.search-page .search-results-section .search-accordion-main .accordion-body ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+.search-page .search-results-section .search-accordion-main .accordion-body ul li label {
+    margin-bottom: 0;
+    width: 100%;
+}
+.search-page .search-results-section .search-accordion-main .accordion-body ul li .search-filter-checkbox {
+    margin-right: 10px;
+}

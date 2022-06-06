@@ -68,6 +68,7 @@ import CorporalityStrikers from "./components/CorporalityStrikers/CorporalityStr
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import Sitemap from "./components/Sitemap/Sitemap";
 import CSuitSingle from "./components/Insights/CSuitSingle/CSuitSingle";
+import Search from "./components/Search/Search";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -165,7 +166,7 @@ function App() {
 
             <Route path="/sitemap" element={<Sitemap />} />
 
-            <Route path="/search/:search_string" element={<Blogs />}/>
+            {/* <Route path="/search/:search_string" element={<Blogs />}/> */}
             
             {/*<Route path="/articles/:article_name" element={<Blog />}/>*/}
  
@@ -176,6 +177,9 @@ function App() {
             <Route path="/article/:article_slug" element={<SingleArticle />} />
 
             <Route path="/csuit/:csuit_slug" element={<CSuitSingle />} />
+
+            <Route path="/search/:search_keyword" element={<Search />}/>
+            <Route path="/search/" element={<Search />}/>
             
             <Route path="/" exact element={<HomePage />} />
 

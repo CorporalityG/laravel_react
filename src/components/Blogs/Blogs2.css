@@ -94,8 +94,10 @@
 }
 .blog2-latest-section .blog-content-first-mm {
     margin-bottom: 10px;
-    font-size: 32px;
+    font-size: 28px;
     color: #fff;
+    font-weight: 500;
+    text-decoration: underline;
 }
 .blog2-latest-section .blog-content-first-la {
     margin-bottom: 20px;
@@ -615,6 +617,20 @@
     height: 15px;
     display: inline-block;
     color: #31647c;
+}
+
+.blog2 .blogs_btn-col {
+    text-align: right;
+}
+.blog2 .know_more_blogs.blogs_btn {
+    background: linear-gradient(95.12deg,#e2c53f,#6ca0bc 83.42%);
+    border-radius: 6px;
+    color: #fff;
+    padding: 12px 15px;
+    width: auto;
+}
+.blog2 .know_more_blogs.blogs_btn svg {
+    color: #fff;
 }
 
 .blog2 .blog2-heading.categories-heading {
