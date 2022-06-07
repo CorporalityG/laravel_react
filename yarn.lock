@@ -4640,6 +4640,11 @@
     "is-date-object" "^1.0.1"
     "is-symbol" "^1.0.2"
 
+"es6-promise@^4.2.8":
+  "integrity" "sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w=="
+  "resolved" "https://registry.npmjs.org/es6-promise/-/es6-promise-4.2.8.tgz"
+  "version" "4.2.8"
+
 "escalade@^3.1.1":
   "integrity" "sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw=="
   "resolved" "https://registry.npmjs.org/escalade/-/escalade-3.1.1.tgz"
@@ -7540,6 +7545,11 @@
   "resolved" "https://registry.npmjs.org/nwsapi/-/nwsapi-2.2.0.tgz"
   "version" "2.2.0"
 
+"object-assign@^3.0.0":
+  "integrity" "sha512-jHP15vXVGeVh1HuaA2wY6lxk+whK/x4KBG88VXeRma7CCun7iGD5qPc4eYykQ9sdQvg8jkwFKsSxHln2ybW3xQ=="
+  "resolved" "https://registry.npmjs.org/object-assign/-/object-assign-3.0.0.tgz"
+  "version" "3.0.0"
+
 "object-assign@^4.1.0", "object-assign@^4.1.1":
   "integrity" "sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM="
   "resolved" "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
@@ -8730,6 +8740,17 @@
     "regenerator-runtime" "^0.13.9"
     "whatwg-fetch" "^3.6.2"
 
+"react-autosuggest@^10.1.0":
+  "integrity" "sha512-/azBHmc6z/31s/lBf6irxPf/7eejQdR0IqnZUzjdSibtlS8+Rw/R79pgDAo6Ft5QqCUTyEQ+f0FhL+1olDQ8OA=="
+  "resolved" "https://registry.npmjs.org/react-autosuggest/-/react-autosuggest-10.1.0.tgz"
+  "version" "10.1.0"
+  dependencies:
+    "es6-promise" "^4.2.8"
+    "prop-types" "^15.7.2"
+    "react-themeable" "^1.1.0"
+    "section-iterator" "^2.0.0"
+    "shallow-equal" "^1.2.1"
+
 "react-bootstrap@^2.0.3":
   "integrity" "sha512-gIRzQf170SGKS09azr8Cl9+8FxBf3J9jyFf/8sWNWXtRcgbRzTog9bFCS4ua5Wv1U/A7W7hRlnrKxzy+wl+5Rw=="
   "resolved" "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-2.0.3.tgz"
@@ -8993,6 +9014,13 @@
   "integrity" "sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ=="
   "resolved" "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.1.tgz"
   "version" "2.1.1"
+
+"react-themeable@^1.1.0":
+  "integrity" "sha512-kl5tQ8K+r9IdQXZd8WLa+xxYN04lLnJXRVhHfdgwsUJr/SlKJxIejoc9z9obEkx1mdqbTw1ry43fxEUwyD9u7w=="
+  "resolved" "https://registry.npmjs.org/react-themeable/-/react-themeable-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "object-assign" "^3.0.0"
 
 "react-transition-group@^4.4.1":
   "integrity" "sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg=="
@@ -9469,6 +9497,11 @@
     "@types/json-schema" "^7.0.4"
     "ajv" "^6.12.2"
     "ajv-keywords" "^3.4.1"
+
+"section-iterator@^2.0.0":
+  "integrity" "sha1-v0RNev7rlK1Dw5rS+yYVFifMuio="
+  "resolved" "https://registry.npmjs.org/section-iterator/-/section-iterator-2.0.0.tgz"
+  "version" "2.0.0"
 
 "select-hose@^2.0.0":
   "integrity" "sha1-Yl2GWPhlr0Psliv8N2o3NZpJlMo="
