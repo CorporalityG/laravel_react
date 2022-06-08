@@ -25,8 +25,20 @@ function Search() {
 
     const params = useParams();
     const navigate = useNavigate();
-    
+
     const search_keyword = params.search_keyword.replace("-", " ");
+
+    let prefixSlug = '.';
+    if (search_keyword==='article' || search_keyword==='articles' || search_keyword==='service insights') {
+        prefixSlug = 'article'
+    }
+    else if (search_keyword==='csuit') {
+        prefixSlug = 'csuit'
+    }
+    else if (search_keyword==='industrial article') {
+        prefixSlug = 'industrial-article'
+    }
+
     const [searchResults, setSearchResults] = useState([]);
     const [showingResultsFrom, setShowingResultsFrom] = useState([]);
     const [showingResultsTo, setShowingResultsTo] = useState([]);
@@ -34,6 +46,7 @@ function Search() {
     const [searchCategories, setSearchCategories] = useState([]);
     const [paginationLinks, setPaginationLinks] = useState([]);
     const [filterCategories, setFilterCategories] = useState([])
+    const [sortBy, setSortBy] = useState([])
 
     let linkLabel = '';
 
@@ -42,11 +55,12 @@ function Search() {
         getSearchCategoriesData(params.search_keyword);
 
         setFilterCategories([])
+        setSortBy([])
     }, [params]);
 
-    async function getSearchResultsData(searchKeyword, pageLink = '', filterCategoryList = '') {
-        // console.log(filterCategoryList)
-        let searchSlug = `search_keyword=${searchKeyword}&filter_category=${filterCategoryList}`;
+    async function getSearchResultsData(searchKeyword, pageLink = '', filterCategoryList = '', sortByVal = '') {
+        // console.log(sortByVal)
+        let searchSlug = `search_keyword=${searchKeyword}&filter_category=${filterCategoryList}&sort_by=${sortByVal}`;
 
         let apiLink = (pageLink === '' ?
             `${API_BASE_URL}/search?${searchSlug}` :
@@ -66,7 +80,7 @@ function Search() {
 
     const paginate = (pageNumber) => {
         if (pageNumber) {
-            getSearchResultsData(params.search_keyword, pageNumber, filterCategories);
+            getSearchResultsData(params.search_keyword, pageNumber, filterCategories, sortBy);
         }
 
         topHandler()
@@ -86,6 +100,13 @@ function Search() {
         }
 
         getSearchResultsData(params.search_keyword, '', filterCategories);
+
+        topHandler()
+    }
+
+    const sortByFunc = (value) => {
+        setSortBy(value)
+        getSearchResultsData(params.search_keyword, '', filterCategories, value);
     }
 
     const topHandler = () => {
@@ -103,7 +124,7 @@ function Search() {
     }
 
     /* auto suggest start */
-    const [value, setValue] = useState("");
+    const [value, setValue] = useState(search_keyword);
     const [suggestions, setSuggestions] = useState([]);
 
     function getSuggestions(value) {
@@ -130,8 +151,8 @@ function Search() {
                                             setValue(value);
                                             setSuggestions(getSuggestions(value));
                                         }}
-                                        onSuggestionSelected={(_, { suggestionValue }) =>{
-                                            navigate(`/search/${suggestionValue.replace(/\s/g , "-")}`)
+                                        onSuggestionSelected={(_, { suggestionValue }) => {
+                                            navigate(`/search/${suggestionValue.replace(/\s/g, "-")}`)
                                         }}
                                         getSuggestionValue={suggestion => suggestion.name}
                                         renderSuggestion={suggestion => <span>{suggestion.name}</span>}
@@ -169,7 +190,7 @@ function Search() {
                                     <h1 className='results-for-keyword'>Results for "<span>{search_keyword}</span>"</h1>
 
                                     {
-                                        searchResults && searchResults.length>0 ?
+                                        searchResults && searchResults.length > 0 ?
                                             <>
                                                 <div className='row'>
                                                     <div className='col-lg-7'>
@@ -187,7 +208,7 @@ function Search() {
                                                             key={`${item.id}`}
                                                             thumbnail={item.image ? `${API_IMG_URL + item.image}` : ''}
                                                             title={`${item.title}`}
-                                                            slug={`article/${item.slug}`}
+                                                            slug={`${prefixSlug}/${item.slug}`}
                                                             shortDescription={item.short_description ?? item.description}
                                                             category={
                                                                 item.categories ?
@@ -214,8 +235,8 @@ function Search() {
                                             <div className='search-filters'>
                                                 <div className="search-filter-sort">
                                                     <span className="search-filter-sort-by-label">Sort By:</span>
-                                                    <a className="search-filter-sort-type sort-active">Most Relevant</a> |
-                                                    <a className="search-filter-sort-type">Date</a>
+                                                    <div className={`search-filter-sort-type ${sortBy=="" || sortBy==='most-relevant' ? 'sort-active' : ''}`} onClick={() => sortByFunc('most-relevant')}>Most Relevant</div> |
+                                                    <div className={`search-filter-sort-type ${sortBy==='date' ? 'sort-active' : ''}`} onClick={() => sortByFunc('date')}>Date</div>
                                                 </div>
 
                                                 <div className="search-filter-by">Filter By:</div>
@@ -234,7 +255,7 @@ function Search() {
                                                                                 <li key={`${item.id}`} >
                                                                                     <label htmlFor={`search_filter_category_${item.category_slug}`} className="search-filter-cat-label">
                                                                                         <input className="search-filter-checkbox" id={`search_filter_category_${item.category_slug}`} type="checkbox" name="search_filter_category[]" value={`${item.category_slug}`} onClick={(e) => filterCategory(e.target.checked, e.target.value)} />
-                                                                                        <span className="search-filter-text-checkbox">{item.category_name} ({item.count>0 ? item.count : item.sub_count})</span>
+                                                                                        <span className="search-filter-text-checkbox">{item.category_name} ({item.count > 0 ? item.count : item.sub_count})</span>
                                                                                     </label>
                                                                                 </li>
                                                                             )
@@ -253,7 +274,7 @@ function Search() {
                         </div>
 
                         {
-                            showingResultsTotal>5 && paginationLinks ?
+                            showingResultsTotal > 6 && paginationLinks ?
                                 <div className='container-lg'>
                                     <div className='row search-pagination-row'>
                                         <div className='col-lg-12'>

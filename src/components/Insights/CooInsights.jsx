@@ -10,6 +10,8 @@ import { GetInvolved } from '../ServiceInsights/GetInvolved'
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 import { useParams, Link } from 'react-router-dom'
+import { EditPickItem } from './EditPickItem'
+import ServicesClients from '../ServicesClients/ServicesClients'
 
 function CooInsights() {
 
@@ -18,6 +20,7 @@ function CooInsights() {
 
     const [latestCSuits, setLatestCSuits] = useState([]);
     const [announcements, setAnnouncements] = useState([]);
+    const [editPicks, setEditPicks] = useState([]);
 
     useEffect(() => {
         AOS.init({
@@ -26,6 +29,7 @@ function CooInsights() {
 
         getLatestCSuits();
         getAnnouncements()
+        getEditPickCSuits()
     }, [params]);
 
     async function getLatestCSuits() {
@@ -38,6 +42,12 @@ function CooInsights() {
         let result = await fetch(`${API_BASE_URL}/csuits-announcement`);
         result = await result.json();
         setAnnouncements(result);
+    }
+
+    async function getEditPickCSuits() {
+        let result = await fetch(`${API_BASE_URL}/csuits/${subCategory}?sort_by=random`);
+        result = await result.json();
+        setEditPicks(result);
     }
 
     return (
@@ -54,7 +64,25 @@ function CooInsights() {
 
                         <div className='col-lg-6'>
                             <div className='csuit-insights-banner-content'>
-                                <p>For marketing strategies to properly match with bigger business objectives, a thorough understanding of context, audience targeting, and the buyer's journey is required. To add to the complication, some marketers must optimize forever-changing business goals, which vary based on the age of the organization and the product or service being offered.some marketers must optimize forever-changing business goals, which vary based</p>
+                                <h2 className='csuit-insights-banner-latest-title'>Latest Article</h2>
+                                {
+                                    latestCSuits ?
+                                        <div className='row'>
+                                            {
+                                                latestCSuits.slice(0, 1).map((item) =>
+                                                    <CSuitLatestItem
+                                                        key={`${item.id}`}
+                                                        thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
+                                                        title={`${item.title}`}
+                                                        slug={`csuit/${item.slug}`}
+                                                        category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
+                                                        categorySlug={item.categories[0] !== undefined ? item.categories[0].category_slug : null}
+                                                    />
+                                                )
+                                            }
+                                        </div>
+                                        : null
+                                }
                             </div>
                         </div>
                     </div>
@@ -66,16 +94,16 @@ function CooInsights() {
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div className='csuit-insights-latest-title'>
-                                <h2 className='csuit-insights-title'>Latest Articles</h2>
+                                <h2 className='csuit-insights-title'>Edit Pick's</h2>
                             </div>
                         </div>
 
                         {
-                            latestCSuits ?
+                            editPicks ?
                                 <>
                                     {
-                                        latestCSuits.slice(0, 2).map((item) =>
-                                            <CSuitLatestItem
+                                        editPicks.slice(0, 2).map((item) =>
+                                            <EditPickItem
                                                 key={`${item.id}`}
                                                 thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
                                                 title={`${item.title}`}
@@ -151,7 +179,7 @@ function CooInsights() {
                                     latestCSuits ?
                                         <CarouselGrid cols={3} rows={1} gap={0} responsiveLayout={[{ breakpoint: 1024, cols: 2 }, { breakpoint: 767, cols: 1, gap: 0, loop: true, autoplay: 4000 }]}>
                                             {
-                                                latestCSuits.slice(2, 11).map((item) =>
+                                                latestCSuits.slice(1, 11).map((item) =>
                                                     <CarouselGrid.Item key={`${item.id}`}>
                                                         <CSuitAllItem
                                                             thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
@@ -167,6 +195,10 @@ function CooInsights() {
                                         : null
                                 }
                             </div>
+
+                            <div className='csuit-insights-more-link'>
+                                <Link to={`/blog`}>Read More Blogs</Link>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,7 +210,7 @@ function CooInsights() {
                         <div className='col-lg-6 csuit-insights-service-content'>
                             <h2>Service Insights</h2>
                             <p>Marketing Communications is often overlooked by business leaders yet it is also a crucial component of any business strategy. How do you communicate with media outlets and other businesses that can partner with you or give you mutual benefits? Gaining good Marcom strength is a key to establishing one’s position in their category.</p>
-                            <Link to={`/service-insights`} className="csuit-insights-service-btn">Read More</Link>
+                            <Link to={`/service-insights`} className="csuit-insights-service-btn">Check More Insights</Link>
                         </div>
 
                         <div className='col-lg-6 csuit-insights-service-img'>
@@ -187,6 +219,8 @@ function CooInsights() {
                     </div>
                 </div>
             </div>
+
+            <ServicesClients />
 
             <GetInvolved />
 

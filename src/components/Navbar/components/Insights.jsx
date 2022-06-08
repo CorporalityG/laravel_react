@@ -52,17 +52,17 @@ const Insights = () => {
                                 <h6>Service Insights</h6>
                                 <div className="diamond-line"></div>
                             </div>
-                            <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/article")}}>
+                            {/* <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/article")}}>
                                 <h6>Industrial Resources</h6>
                                 <div className="diamond-line"></div>
                             </div>
                             <div className="insights-container-body-section" onClick={() => {closeOnLink(); navigate("/research-papers")}}>
                                 <h6>Research Papers</h6>
                                 <div className="diamond-line"></div>
-                            </div>
+                            </div> */}
                         </div>
 
-                        <div className="col-md-3">
+                        {/* <div className="col-md-3">
                             <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/")}}>
                                 <h6>Download Resources</h6>
                                 <div className="diamond-line"></div>
@@ -75,7 +75,7 @@ const Insights = () => {
                                 <h6>Podcast</h6>
                                 <div className="diamond-line"></div>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="col-md-3">
                             <div className="insights-container-body-section" onClick={() => {closeOnLink();navigate("/ceo-insights")}}>

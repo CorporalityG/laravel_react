@@ -91,6 +91,7 @@
 }
 .search-page .search-results-section .search-filter-sort-type {
     color: #33657e;
+    cursor: pointer;
 }
 .search-page .search-results-section .search-filter-sort-type:not(:last-child) {
     margin-right: 5px;

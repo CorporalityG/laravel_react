@@ -24,10 +24,9 @@ class SearchController extends Controller
             {
                 $qry = '';
 
-                if( $request->search_keyword=='articles' || $request->search_keyword=='service-insights' )
+                if( $request->search_keyword=='articles' || $request->search_keyword=='article' || $request->search_keyword=='service-insights' )
                 {
-                    $qry = Article::latest()
-                            ->select('id', 'article_title AS title', 'article_slug AS slug', 'article_image AS image', 'article_short_description AS short_description', 'article_description AS description');
+                    $qry = Article::select('id', 'article_title AS title', 'article_slug AS slug', 'article_image AS image', 'article_short_description AS short_description', 'article_description AS description');
 
                     if( !empty($request->filter_category) )
                     {
@@ -47,10 +46,9 @@ class SearchController extends Controller
                         }
                     }
                 }
-                else if( $request->search_keyword=='blogs' )
+                else if( $request->search_keyword=='blogs' || $request->search_keyword=='blog' )
                 {
-                    $qry = Post::latest()
-                            ->select('id', 'post_title as title', 'post_slug AS slug', 'post_image AS image', 'post_short_description AS short_description', 'post_description AS description');
+                    $qry = Post::select('id', 'post_title as title', 'post_slug AS slug', 'post_image AS image', 'post_short_description AS short_description', 'post_description AS description');
                     
                     if( !empty($request->filter_category) )
                     {
@@ -72,7 +70,7 @@ class SearchController extends Controller
                 }
                 else if( $request->search_keyword=='csuit' )
                 {
-                    $qry = Csuit::latest();
+                    $qry = Csuit::select('id', 'title', 'slug', 'image', 'short_description', 'description');
                     
                     if( !empty($request->filter_category) )
                     {
@@ -94,7 +92,7 @@ class SearchController extends Controller
                 }
                 else if( $request->search_keyword=='industrial-article' )
                 {
-                    $qry = IndustrialArticle::latest();
+                    $qry = IndustrialArticle::select('id', 'title', 'slug', 'image', 'short_description', 'description');
                     
                     if( !empty($request->filter_category) )
                     {
@@ -117,6 +115,15 @@ class SearchController extends Controller
 
                 if( !empty($qry) )
                 {
+                    if( !empty($request->sort_by) && $request->sort_by=='date')
+                    {
+                        $qry->orderBy('updated_at', 'DESC');
+                    }
+                    else
+                    {
+                        $qry->latest();
+                    }
+
                     $results = $qry->with(['categories'])->paginate(6);
                 }
             }
@@ -134,17 +141,37 @@ class SearchController extends Controller
             
             if( !empty($request->search_slug) )
             {
-                if( $request->search_slug=='articles' || $request->search_slug=='service-insights' )
+                if( $request->search_slug=='articles' || $request->search_slug=='article' || $request->search_slug=='service-insights' )
                 {
-                    $results = ArticleCategory::withCount(['articles AS count', 'subcategoriesArticles AS sub_count'])->orderby('category_name', 'ASC')->get();
+                    $results = ArticleCategory::withCount([
+                                    'articles AS count', 
+                                    'subcategoriesArticles AS sub_count'
+                                ])
+                                ->orderby('category_name', 'ASC')->get();
                 }
-                else if( $request->search_slug=='blogs' )
+                else if( $request->search_slug=='blogs' || $request->search_slug=='blog' )
                 {
-                    $results = Category::withCount(['posts AS count', 'subcategoriesPosts AS sub_count'])->orderby('category_name', 'ASC')->get();
+                    $results = Category::withCount([
+                                    'posts AS count', 
+                                    'subcategoriesPosts AS sub_count'
+                                ])
+                                ->orderby('category_name', 'ASC')->get();
                 }
                 else if( $request->search_slug=='csuit' )
                 {
-                    $results = CsuitCategory::withCount(['csuits AS count', 'subcategoriesCsuits AS sub_count'])->orderby('category_name', 'ASC')->get();
+                    $results = CsuitCategory::withCount([
+                                    'csuits AS count', 
+                                    'subcategoriesCsuits AS sub_count'
+                                ])
+                                ->orderby('category_name', 'ASC')->get();
+                }
+                else if( $request->search_slug=='industrial-article' )
+                {
+                    $results = IndustrialArticleCategory::withCount([
+                                    'industrialArticles AS count', 
+                                    'subcategoriesIndustrialArticles AS sub_count'
+                                ])
+                                ->orderby('category_name', 'ASC')->get();
                 }
             }
 

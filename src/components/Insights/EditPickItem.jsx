@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const CSuitLatestItem = (props) => {
+export const EditPickItem = (props) => {
   return (
-    <div className="col-md-12 insight-item-col">
+    <div className="col-md-6 insight-item-col">
             <div className="insight-item">
                 {
                     props.thumbnail ?

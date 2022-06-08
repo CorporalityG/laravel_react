@@ -304,13 +304,30 @@ class CsuitController extends Controller
         return Str::slug($request->title, '-');
     }
 
-    public function categoyCSuits(Request $request)
+    /* public function categoyCSuits(Request $request)
     {
         if( $request->is('api/*') )
         {
             $results = array();
 
-            $qry = Csuit::latest();
+            if( !empty($request->sort_by) && $request->sort_by=='random' )
+            {
+                if( !empty($request->category_slug) )
+                {
+                    $category = CsuitCategory::where('category_slug', $request->category_slug)->first();
+                    $RS_Latest = $category->subcategoriesCsuits()->latest()->first();
+                    
+                    if( !empty($RS_Latest) )
+                    {
+                        $qry = Csuit::inRandomOrder()->take(2)
+                                    ->where('id', '!=', $RS_Latest->id);
+                    }
+                }
+            }
+            else
+            {
+                $qry = Csuit::latest()->take(11);
+            }
 
             if( !empty($request->category_slug) )
             {
@@ -323,7 +340,43 @@ class CsuitController extends Controller
                 }
             }
 
-            $results = $qry->with(['categories', 'subcategories'])->take(11)->get();
+            $results = $qry->with(['categories', 'subcategories'])->get();
+
+            return $results;
+        }
+    } */
+
+    public function categoyCSuits(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $results = array();
+
+            if( !empty($request->category_slug) )
+            {
+                $category = CsuitCategory::with('subcategoriesCsuits:id')
+                                ->where('category_slug', $request->category_slug)
+                                ->first();
+                
+                if( !empty($category) )
+                {
+                    $qry = $category->subcategoriesCsuits()
+                                ->with(['categories', 'subcategories']);
+
+                    if( !empty($request->sort_by) && $request->sort_by=='random' )
+                    {
+                        $RS_Latest = $category->subcategoriesCsuits()->latest()->first();
+                        
+                        if( !empty($RS_Latest) )
+                        {
+                            $qry->where('csuits.id', '!=', $RS_Latest->id)
+                                        ->inRandomOrder()->take(2);
+                        }
+                    }
+
+                    $results = $qry->get();
+                }
+            }
 
             return $results;
         }
