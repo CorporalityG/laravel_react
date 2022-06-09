@@ -29,15 +29,6 @@ function Search() {
     const search_keyword = params.search_keyword.replace("-", " ");
 
     let prefixSlug = '.';
-    if (search_keyword==='article' || search_keyword==='articles' || search_keyword==='service insights') {
-        prefixSlug = 'article'
-    }
-    else if (search_keyword==='csuit') {
-        prefixSlug = 'csuit'
-    }
-    else if (search_keyword==='industrial article') {
-        prefixSlug = 'industrial-article'
-    }
 
     const [searchResults, setSearchResults] = useState([]);
     const [showingResultsFrom, setShowingResultsFrom] = useState([]);
@@ -140,10 +131,8 @@ function Search() {
                 <div className='container-lg'>
                     <div className='row'>
                         <div className='col-lg-6 offset-lg-3'>
-                            {/* <form className="search-form" aria-label="search-form" role="search"> */}
                             <div className='row search-form-row'>
                                 <div className='col-lg-9 col-md-9 col-sm-10 pr-0'>
-                                    {/* <input id="search-keyword" className="form-control search-keyword autocomplete-search-field" type="text" placeholder="Type to search..." /> */}
                                     <AutoSuggest
                                         suggestions={suggestions}
                                         onSuggestionsClearRequested={() => setSuggestions([])}
@@ -169,13 +158,12 @@ function Search() {
                                 </div>
 
                                 <div className='col-lg-3 col-md-3 col-sm-2 pl-0'>
-                                    <button className="search-btn">
+                                    <button className="search-btn" onClick={() => navigate(`/search/${value.replace(/\s/g, "-")}`)}>
                                         <i className="fa fa-search"></i>
                                         <span className="search-text">Search</span>
                                     </button>
                                 </div>
                             </div>
-                            {/* </form> */}
                         </div>
                     </div>
                 </div>
@@ -208,7 +196,7 @@ function Search() {
                                                             key={`${item.id}`}
                                                             thumbnail={item.image ? `${API_IMG_URL + item.image}` : ''}
                                                             title={`${item.title}`}
-                                                            slug={`${prefixSlug}/${item.slug}`}
+                                                            slug={`${prefixSlug}/${item.source != "" ? item.source + "/" : ""}${item.slug}`}
                                                             shortDescription={item.short_description ?? item.description}
                                                             category={
                                                                 item.categories ?
@@ -230,45 +218,52 @@ function Search() {
                                 </div>
 
                                 <div className='col-lg-4'>
-                                    {
-                                        searchCategories && searchCategories.length > 0 ?
-                                            <div className='search-filters'>
+
+                                    <div className='search-filters'>
+                                        {
+                                            searchResults && searchResults.length > 0 ?
                                                 <div className="search-filter-sort">
                                                     <span className="search-filter-sort-by-label">Sort By:</span>
-                                                    <div className={`search-filter-sort-type ${sortBy=="" || sortBy==='most-relevant' ? 'sort-active' : ''}`} onClick={() => sortByFunc('most-relevant')}>Most Relevant</div> |
-                                                    <div className={`search-filter-sort-type ${sortBy==='date' ? 'sort-active' : ''}`} onClick={() => sortByFunc('date')}>Date</div>
+                                                    <div className={`search-filter-sort-type ${sortBy == "" || sortBy === 'most-relevant' ? 'sort-active' : ''}`} onClick={() => sortByFunc('most-relevant')}>Most Relevant</div> |
+                                                    <div className={`search-filter-sort-type ${sortBy === 'date' ? 'sort-active' : ''}`} onClick={() => sortByFunc('date')}>Date</div>
                                                 </div>
+                                                : null
+                                        }
 
-                                                <div className="search-filter-by">Filter By:</div>
+                                        {
+                                            searchCategories && searchCategories.length > 0 ?
+                                                <>
+                                                    <div className="search-filter-by">Filter By:</div>
 
-                                                <Accordion className="search-accordion-main">
-                                                    <Accordion.Item eventKey="0">
-                                                        <Accordion.Header>
-                                                            <div className="search-filter-heading">Category</div>
-                                                        </Accordion.Header>
-                                                        <Accordion.Body>
-                                                            {
-                                                                searchCategories ?
-                                                                    <ul>
-                                                                        {
-                                                                            searchCategories.map((item) =>
-                                                                                <li key={`${item.id}`} >
-                                                                                    <label htmlFor={`search_filter_category_${item.category_slug}`} className="search-filter-cat-label">
-                                                                                        <input className="search-filter-checkbox" id={`search_filter_category_${item.category_slug}`} type="checkbox" name="search_filter_category[]" value={`${item.category_slug}`} onClick={(e) => filterCategory(e.target.checked, e.target.value)} />
-                                                                                        <span className="search-filter-text-checkbox">{item.category_name} ({item.count > 0 ? item.count : item.sub_count})</span>
-                                                                                    </label>
-                                                                                </li>
-                                                                            )
-                                                                        }
-                                                                    </ul>
-                                                                    : null
-                                                            }
-                                                        </Accordion.Body>
-                                                    </Accordion.Item>
-                                                </Accordion>
-                                            </div>
-                                            : null
-                                    }
+                                                    <Accordion className="search-accordion-main">
+                                                        <Accordion.Item eventKey="0">
+                                                            <Accordion.Header>
+                                                                <div className="search-filter-heading">Category</div>
+                                                            </Accordion.Header>
+                                                            <Accordion.Body>
+                                                                {
+                                                                    searchCategories ?
+                                                                        <ul>
+                                                                            {
+                                                                                searchCategories.map((item) =>
+                                                                                    <li key={`${item.id}`} >
+                                                                                        <label htmlFor={`search_filter_category_${item.category_slug}`} className="search-filter-cat-label">
+                                                                                            <input className="search-filter-checkbox" id={`search_filter_category_${item.category_slug}`} type="checkbox" name="search_filter_category[]" value={`${item.category_slug}`} onClick={(e) => filterCategory(e.target.checked, e.target.value)} />
+                                                                                            <span className="search-filter-text-checkbox">{item.category_name} ({item.count > 0 ? item.count : item.sub_count})</span>
+                                                                                        </label>
+                                                                                    </li>
+                                                                                )
+                                                                            }
+                                                                        </ul>
+                                                                        : null
+                                                                }
+                                                            </Accordion.Body>
+                                                        </Accordion.Item>
+                                                    </Accordion>
+                                                </>
+                                                : null
+                                        }
+                                    </div>
                                 </div>
                             </div>
                         </div>

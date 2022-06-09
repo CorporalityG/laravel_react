@@ -196,6 +196,14 @@
     display: inline-block;
     cursor: pointer;
 }
+.csuit-insights .csuit-insights-video .csuit-insights-video-content .play-video-btn svg {
+    color: #fff;
+    display: inline-block;
+    height: 16px;
+    margin-left: .5rem;
+    vertical-align: middle;
+    width: auto;
+}
 /* video end */
 
 /* announcement slider start */
@@ -354,6 +362,8 @@
     text-align: justify;
     color: #232323;
     margin-bottom: 30px;
+    max-width: 97%;
+    width: 100%;
 }
 .csuit-insights .csuit-insights-service-content .csuit-insights-service-btn {
     background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
@@ -380,6 +390,9 @@
     }
     .csuit-insights .csuit-insights-announcement-slider .csuit-insights-as-content h2 {
         font-size: 32px;
+    }
+    .csuit-insights .csuit-insights-latest .insight-item img {
+        height: 260px;
     }
 }
 
@@ -413,6 +426,9 @@
     }
     .csuit-insights .csuit-insights-all .insight-item img {
         height: 200px;
+    }
+    .csuit-insights .csuit-insights-latest .insight-item img {
+        height: 220px;
     }
 }
 
@@ -456,6 +472,9 @@
     .csuit-insights .csuit-insights-all-title p {
         max-width: 80%;
     }
+    .csuit-insights .csuit-insights-latest .insight-item img {
+        height: 180px;
+    }
 }
 
 
@@ -471,6 +490,9 @@
     }
     .csuit-insights .csuit-insights-all {
         background-size: 95%;
+    }
+    .csuit-insights .csuit-insights-latest .insight-item img {
+        height: auto;
     }
 }
 

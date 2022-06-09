@@ -11,6 +11,7 @@ use App\Models\Csuit;
 use App\Models\CsuitCategory;
 use App\Models\IndustrialArticle;
 use App\Models\IndustrialArticleCategory;
+use DB;
 
 class SearchController extends Controller
 {
@@ -24,9 +25,17 @@ class SearchController extends Controller
             {
                 $qry = '';
 
+                $qryPost = Post::select('id', 'post_title as title', 'post_slug AS slug', 'post_image AS image', 'post_short_description AS short_description', 'post_description AS description', 'created_at', 'updated_at', DB::raw('"" as source'));
+
+                $qryArticle = Article::select('id', 'article_title AS title', 'article_slug AS slug', 'article_image AS image', 'article_short_description AS short_description', 'article_description AS description', 'created_at', 'updated_at', DB::raw('"article" as source'));
+
+                $qryCsuit = Csuit::select('id', 'title', 'slug', 'image', 'short_description', 'description', 'created_at', 'updated_at', DB::raw('"csuit" as source'));
+
+                $qryIndustrialArticle = IndustrialArticle::select('id', 'title', 'slug', 'image', 'short_description', 'description', 'created_at', 'updated_at', DB::raw('"industrail-article" as source'));
+
                 if( $request->search_keyword=='articles' || $request->search_keyword=='article' || $request->search_keyword=='service-insights' )
                 {
-                    $qry = Article::select('id', 'article_title AS title', 'article_slug AS slug', 'article_image AS image', 'article_short_description AS short_description', 'article_description AS description');
+                    $qry = $qryArticle;
 
                     if( !empty($request->filter_category) )
                     {
@@ -48,7 +57,7 @@ class SearchController extends Controller
                 }
                 else if( $request->search_keyword=='blogs' || $request->search_keyword=='blog' )
                 {
-                    $qry = Post::select('id', 'post_title as title', 'post_slug AS slug', 'post_image AS image', 'post_short_description AS short_description', 'post_description AS description');
+                    $qry = $qryPost;
                     
                     if( !empty($request->filter_category) )
                     {
@@ -70,7 +79,7 @@ class SearchController extends Controller
                 }
                 else if( $request->search_keyword=='csuit' )
                 {
-                    $qry = Csuit::select('id', 'title', 'slug', 'image', 'short_description', 'description');
+                    $qry = $qryCsuit;
                     
                     if( !empty($request->filter_category) )
                     {
@@ -92,7 +101,7 @@ class SearchController extends Controller
                 }
                 else if( $request->search_keyword=='industrial-article' )
                 {
-                    $qry = IndustrialArticle::select('id', 'title', 'slug', 'image', 'short_description', 'description');
+                    $qry = $qryIndustrialArticle;
                     
                     if( !empty($request->filter_category) )
                     {
@@ -111,6 +120,33 @@ class SearchController extends Controller
                             $qry->whereIn('id', $allIndustrialArticles);
                         }
                     }
+                }
+                else
+                {
+                    $search_keyword = str_replace('-', ' ', $request->search_keyword);
+
+                    $articles = $qryArticle
+                            ->where('article_title', 'LIKE', '%' . $search_keyword . '%')
+                            ->orWhere('article_short_description', 'LIKE', '%' . $search_keyword . '%')
+                            ->orWhere('article_description', 'LIKE', '%' . $search_keyword . '%');
+
+                    $csuits = $qryCsuit
+                            ->where('title', 'LIKE', '%' . $search_keyword . '%')
+                            ->orWhere('short_description', 'LIKE', '%' . $search_keyword . '%')
+                            ->orWhere('description', 'LIKE', '%' . $search_keyword . '%');
+
+                    $industrialArticles = $qryIndustrialArticle
+                            ->where('title', 'LIKE', '%' . $search_keyword . '%')
+                            ->orWhere('short_description', 'LIKE', '%' . $search_keyword . '%')
+                            ->orWhere('description', 'LIKE', '%' . $search_keyword . '%');
+
+                    $qry = $qryPost
+                            ->where('post_title', 'LIKE', '%' . $search_keyword . '%')
+                            ->orWhere('post_short_description', 'LIKE', '%' . $search_keyword . '%')
+                            ->orWhere('post_description', 'LIKE', '%' . $search_keyword . '%')
+                            ->union($articles)
+                            ->union($csuits)
+                            ->union($industrialArticles);
                 }
 
                 if( !empty($qry) )

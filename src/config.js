@@ -1,12 +1,12 @@
-const BASE_URL = 'http://localhost:3000';
+/* const BASE_URL = 'http://localhost:3000';
 
-const API_HOME_BASE_URL = 'http://localhost/corporality.global/laravel_react/laravel';
+const API_HOME_BASE_URL = 'http://localhost/corporality.global/laravel_react/laravel'; */
 
 
 /* staging */
-/* const BASE_URL = 'https://ausiweb.com.au';
+const BASE_URL = 'https://ausiweb.com.au';
 
-const API_HOME_BASE_URL = 'https://ausiweb.com.au/laravel-dashboard'; */
+const API_HOME_BASE_URL = 'https://ausiweb.com.au/laravel-dashboard';
 
 
 /* live */
