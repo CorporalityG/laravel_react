@@ -549,4 +549,17 @@ class PostController extends Controller
             return $results;
         }
     }
+
+
+    public function getCSuitBlogs(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $results = Post::latest()
+                        ->with(['categories'])->with(['subcategories'])
+                        ->paginate(9);
+
+            return $results;
+        }
+    }
 }

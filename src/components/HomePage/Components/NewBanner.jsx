@@ -151,7 +151,7 @@ const NewBanner = () => {
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-1.png'} alt="rectangle" className="rectangle-1" />
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-2.png'} alt="rectangle" className="rectangle-2" />
                                 <img src={BASE_URL + '/img/HomePage/media/rectangle-3.png'} alt="rectangle" className="rectangle-3" />
-                                <img src={BASE_URL + 'img/HomePage/media/rectangle-4.png'} alt="rectangle" className="rectangle-4" />
+                                <img src={BASE_URL + '/img/HomePage/media/rectangle-4.png'} alt="rectangle" className="rectangle-4" />
                             </div>
                         </div>
 
