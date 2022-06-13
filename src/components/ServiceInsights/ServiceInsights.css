@@ -257,6 +257,16 @@
     color: #232323;
     margin-bottom: 15px;
 }
+.si-high-tech-industry-section .si-hti-content .si-link-btn {
+    background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color: #FFFFFF;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    display: inline-block;
+}
 
 .si-high-tech-industry-section .si-hti-video iframe {
     width: 100%;

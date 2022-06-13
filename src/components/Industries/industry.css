@@ -1,0 +1,255 @@
+.industry-page {
+    margin-top: 80px;
+}
+
+.industry-page .industry-banner-section {
+    position: relative;
+    background: #F4F4F4;
+}
+.industry-page .industry-banner-section .industry-banner-img {
+    width: 100%;
+    position: absolute;
+}
+.industry-page .industry-banner-section .industry-banner-content-main {
+    padding-top: 80px;
+    width: 100%;
+}
+.industry-page .industry-banner-section .industry-banner-content h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    color: #33657E;
+    margin-bottom: 45px;
+    position: relative;
+    text-transform: capitalize;
+}
+.industry-page .industry-banner-section .industry-banner-content h1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 3px solid #A06DAF;
+    width: 125px;
+    bottom: -15px;
+}
+.industry-page .industry-banner-section .industry-banner-desc {
+    background: #33657E;
+    box-shadow: 0px 4px 44px rgba(120, 120, 120, 0.25);
+    padding: 35px;
+}
+.industry-page .industry-banner-section .industry-banner-desc p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.industry-page .industry-banner-section .industry-banner-desc p:not(:last-child) {
+    margin-bottom: 15px;
+}
+.industry-page .industry-banner-section .industry-banner-ebook {
+    background: #FFFFFF;
+    border-top: 8px solid #A06DAF;
+    box-shadow: 0px 24px 34px -20px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+}
+.industry-page .industry-banner-section .industry-banner-dwn {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.industry-page .industry-banner-section .industry-banner-dwn .industry-banner-dwn-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: capitalize;
+    color: #33657E;
+}
+.industry-page .industry-banner-section .industry-banner-paper-survey-row {
+    margin-top: 50px;
+}
+.industry-page .industry-banner-section .industry-banner-paper-survey-item {
+    background: #FFFFFF;
+    box-shadow: 0px 14px 44px rgba(120, 120, 120, 0.15);
+    padding: 30px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.industry-page .industry-banner-section .industry-banner-paper-survey-item .paper-survey-item-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: capitalize;
+    color: #33657E;
+    position: relative;
+    margin-bottom: 15px;
+}
+.industry-page .industry-banner-section .industry-banner-paper-survey-item .paper-survey-item-title::after {
+    content: "";
+    display: block;
+    border: 3px solid #A06DAF;
+    width: 50px;
+    margin-top: 5px;
+}
+.industry-page .industry-banner-section .industry-banner-paper-survey-item .paper-survey-item-link {
+    background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);
+    padding: 10px 18px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+    display: inline-block;
+}
+
+.industry-page .industry-blog-name-section {
+    background: #F4F4F4;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.industry-page .industry-blog-name-section h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    color: #33657E;
+    margin-bottom: 10px;
+}
+.industry-page .industry-blog-name-section p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #232323;
+}
+.industry-page .industry-blog-name-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+.industry-page .industry-blog-name-section ul li {
+    margin-bottom: 15px;
+}
+.industry-page .industry-blog-name-section ul li a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    text-decoration-line: underline !important;
+    color: #063CFE;
+    width: 100%;
+    display: inline-block;
+}
+.industry-page .industry-blog-name-section .blog-name-img {
+    max-width: 100%;
+}
+
+.industry-page .industry-other-industries-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.industry-page .industry-other-industries-section h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    color: #33657E;
+    margin-bottom: 40px;
+    position: relative;
+    text-transform: capitalize;
+}
+.industry-page .industry-other-industries-section h2::after {
+    content: "";
+    display: block;
+    border: 3px solid #A06DAF;
+    width: 125px;
+    margin-top: 10px;
+}
+.industry-page .industry-other-industries-section .industry-oi-item {
+    margin-bottom: 30px;
+}
+.industry-page .industry-other-industries-section .industry-oi-item-img img {
+    max-width: 100%;
+    width: 100%;
+}
+.industry-page .industry-other-industries-section .industry-oi-item-category {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: justify;
+    color: #A06DAF;
+    margin-bottom: 10px;
+}
+.industry-page .industry-other-industries-section .industry-oi-item-title a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: justify;
+    color: #232323;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.industry-page .industry-other-industries-section .industry-oi-desc p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #676767;
+    margin-bottom: 0;
+}
+
+.industry-page .industry-global-conference-section {
+    position: relative;
+    padding-top: 60px;
+}
+.industry-page .industry-global-conference-section .industry-global-conference-banner-bg {
+    position: absolute;
+    top: 0;
+}
+.industry-page .industry-global-conference-section .industry-global-conference-content {
+    background: #FFFFFF;
+    border-top: 8px solid #A06DAF;
+    box-shadow: 0px 24px 34px -20px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    padding: 70px 35px;
+    margin-top: 150px;
+}
+.industry-page .industry-global-conference-section .industry-global-conference-content p:first-child {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #232323;
+    margin-bottom: 20px;
+}
+.industry-page .industry-global-conference-section .industry-global-conference-content p:first-child span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    color: #A06DAF;
+}
+.industry-page .industry-global-conference-section .industry-global-conference-content p:not(:first-child) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    color: #232323;
+}
+.industry-page .industry-global-conference-section .industry-global-conference-content a {
+    background: linear-gradient(95.12deg, #E2C53F 0%, #6CA0BC 83.42%);
+    border-radius: 6px;
+    display: inline-block;
+    padding: 10px 25px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+.industry-page .industry-global-conference-section .industry-global-conference-img {
+    text-align: center;
+}
+.industry-page .industry-global-conference-section .industry-global-conference-img img {
+    max-width: 100%;
+}

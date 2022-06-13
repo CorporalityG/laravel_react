@@ -69,6 +69,7 @@ import PageNotFound from "./components/PageNotFound/PageNotFound";
 import Sitemap from "./components/Sitemap/Sitemap";
 import CSuitSingle from "./components/Insights/CSuitSingle/CSuitSingle";
 import Search from "./components/Search/Search";
+import MedTech from "./components/Industries/MedTech";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -166,6 +167,8 @@ function App() {
 
             <Route path="/sitemap" element={<Sitemap />} />
 
+            <Route path="/medtech" element={<MedTech />} />
+
             {/* <Route path="/search/:search_string" element={<Blogs />}/> */}
             
             {/*<Route path="/articles/:article_name" element={<Blog />}/>*/}
@@ -182,6 +185,7 @@ function App() {
             <Route path="/search/" element={<Search />}/>
             
             <Route path="/" exact element={<HomePage />} />
+            <Route path="*" element={<PageNotFound />}/>
 
           </Routes>
           <Footer />

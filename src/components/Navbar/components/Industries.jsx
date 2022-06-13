@@ -17,11 +17,11 @@ const Industries = () => {
         <OutsideClickHandler className="outside-handler"  onOutsideClick={() => setShowIndustries(false)}>
         <div className={`industries-container ${showIndustries? "" : "hidden"}`} onMouseOver={() => {if(isLargeScreen)setShowIndustries(true)}} onMouseLeave={() => {if(isLargeScreen)setShowIndustries(false)}}>
             <div className="industries-section"> 
-                <Link to="/" onClick={closeOnLink} className="industries-item">
+                <Link to="/medtech" onClick={closeOnLink} className="industries-item">
                     <h6 className="industries-item-content">Medtech</h6>
                     <div className="diamond-line"></div>
                 </Link>
-                <Link to="/" onClick={closeOnLink} className="industries-item">
+                {/* <Link to="/" onClick={closeOnLink} className="industries-item">
                     <h6 className="industries-item-content">Finance</h6>
                     <div className="diamond-line"></div>
                 </Link>
@@ -32,10 +32,10 @@ const Industries = () => {
                 <Link to="/" onClick={closeOnLink} className="industries-item">
                     <h6 className="industries-item-content">Biotech / Bio chemical / Chemical Engineering</h6>
                     <div className="diamond-line"></div>
-                </Link>
+                </Link> */}
             </div>
             <div className="industries-section">
-                <Link to="/" onClick={closeOnLink} className="industries-item">
+                {/* <Link to="/" onClick={closeOnLink} className="industries-item">
                     <h6 className="industries-item-content">Nanotech</h6>
                     <div className="diamond-line"></div>
                 </Link>
@@ -50,10 +50,10 @@ const Industries = () => {
                 <Link to="/" onClick={closeOnLink} className="industries-item">
                     <h6 className="industries-item-content">Industrial Equipment</h6>
                     <div className="diamond-line"></div>
-                </Link>
+                </Link> */}
             </div>
             <div className="industries-section">
-                <Link to="/" onClick={closeOnLink} className="industries-item">
+                {/* <Link to="/" onClick={closeOnLink} className="industries-item">
                     <h6 className="industries-item-content">Metal Industry</h6>
                     <div className="diamond-line"></div>
                 </Link>
@@ -68,10 +68,10 @@ const Industries = () => {
                 <Link to="/" onClick={closeOnLink} className="industries-item">
                     <h6 className="industries-item-content">Information Technology</h6>
                     <div className="diamond-line"></div>
-                </Link>
+                </Link> */}
             </div>
             <div className="industries-section">
-                <Link to="/" onClick={closeOnLink} className="industries-item">
+                {/* <Link to="/" onClick={closeOnLink} className="industries-item">
                     <h6 className="industries-item-content">High Tech</h6>
                     <div className="diamond-line"></div>
                 </Link>
@@ -86,7 +86,7 @@ const Industries = () => {
                 <Link to="/" onClick={closeOnLink} className="industries-item">
                     <h6 className="industries-item-content">Utilities and Energy - Solar energy / Renewable</h6>
                     <div className="diamond-line"></div>
-                </Link>
+                </Link> */}
 
             </div>
             
