@@ -8,7 +8,7 @@ import { GetInvolved } from '../ServiceInsights/GetInvolved'
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
-function MedTech() {
+function Construction() {
 
     useEffect(() => {
         AOS.init({
@@ -17,7 +17,7 @@ function MedTech() {
     }, []);
 
     return (
-        <div className='industry-page medtech-page'>
+        <div className='industry-page construction-page'>
             <div className='industry-banner-section'>
                 <img src={`${BASE_URL}/img/industries/industry-banner.png`} alt={`Industry Banner`} className="industry-banner-img" />
 
@@ -26,7 +26,7 @@ function MedTech() {
                         <div className='row'>
                             <div className='col-lg-4'>
                                 <div className='industry-banner-content'>
-                                    <h1>Med Tech Industry</h1>
+                                    <h1>Construction Industry</h1>
                                     <div className='industry-banner-desc'>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien facilisi augue posuere fringilla. Sit dictum hac viverra ac urna. Accumsan vitae faucibus purus, ultrices consectetur aliquam duis massa arcu. Tellus in morbi massa at a neque, augue sed dapibus. Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
                                         <p>Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
@@ -177,4 +177,4 @@ function MedTech() {
     )
 }
 
-export default MedTech
+export default Construction

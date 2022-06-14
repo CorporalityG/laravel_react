@@ -70,11 +70,26 @@ import Sitemap from "./components/Sitemap/Sitemap";
 import CSuitSingle from "./components/Insights/CSuitSingle/CSuitSingle";
 import Search from "./components/Search/Search";
 import MedTech from "./components/Industries/MedTech";
+import Finance from "./components/Industries/Finance";
+import Geospatial from "./components/Industries/Geospatial";
+import Biotech from "./components/Industries/Biotech";
+import Nanotech from "./components/Industries/Nanotech";
+import AgeCareAndRetirement from "./components/Industries/AgeCareAndRetirement";
+import AlliedIndustries from "./components/Industries/AlliedIndustries";
+import IndustrialEquipment from "./components/Industries/IndustrialEquipment";
+import Metal from "./components/Industries/Metal";
+import Construction from "./components/Industries/Construction";
+import Manufacturing from "./components/Industries/Manufacturing";
+import InformationTechnology from "./components/Industries/InformationTechnology";
+import HighTech from "./components/Industries/HighTech";
+import Agriculture from "./components/Industries/Agriculture";
+import HealthCare from "./components/Industries/HealthCare";
+import UtilitiesAndEnergy from "./components/Industries/UtilitiesAndEnergy";
 
 function App() {
   const { user, dispatch } = useContext(Context);
   // const handleLogout = () => {
-    // dispatch({ type: "LOGOUT" });
+  // dispatch({ type: "LOGOUT" });
   // };
   return (
     <>
@@ -88,7 +103,7 @@ function App() {
             <Route path="/about-corporality" element={<AboutCorporality />} />
 
             <Route path="/register" element={user ? <HomePage /> : <Register />} />
-            
+
             <Route path="/login" element={user ? <HomePage /> : <Login />} />
 
             <Route path="/write" element={user ? <Write /> : <Register />} />
@@ -142,50 +157,65 @@ function App() {
             <Route path="/why-corporality-effect" element={<WhyCorporalityEffect />} />
             <Route path="/what-is-corporality-effect" element={<WhatIsCorporalityEffect />} />
             <Route path="/corporality-culturally-conditioned" element={<CulturallyConditioned />} />
-            <Route path="/corporality-inbound-shiftings" element={<InboundShifting /> } />
+            <Route path="/corporality-inbound-shiftings" element={<InboundShifting />} />
 
-            <Route path="/careers" element={<Careers /> } />
-            <Route path="/terms-and-conditions" element={<TermsConditions /> } />
-            <Route path="/privacy-policy" element={<PrivacyPolicy /> } />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/terms-and-conditions" element={<TermsConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
-            <Route path="/account-based-marketing" element={<AccountBasedMarketing /> } />
-            <Route path="/outsourced-cmo" element={<OutsourcedCMO /> } />
-            <Route path="/marketing-model-approch" element={<MarketingModelApproch/> } />
+            <Route path="/account-based-marketing" element={<AccountBasedMarketing />} />
+            <Route path="/outsourced-cmo" element={<OutsourcedCMO />} />
+            <Route path="/marketing-model-approch" element={<MarketingModelApproch />} />
 
-            <Route path="/blog" element={<Blogs2 /> } />
-            <Route path="/our-team" element={<OurTeam /> } />
-            <Route path="/service-insights" element={<ServiceInsights /> } />
+            <Route path="/blog" element={<Blogs2 />} />
+            <Route path="/our-team" element={<OurTeam />} />
+            <Route path="/service-insights" element={<ServiceInsights />} />
 
-            <Route path="/coo-insights" element={<CooInsights /> } />
-            <Route path="/cmo-insights" element={<CmoInsights /> } />
-            <Route path="/ceo-insights" element={<CeoInsights /> } />
-            <Route path="/cxo-insights" element={<CxoInsights /> } />
+            <Route path="/coo-insights" element={<CooInsights />} />
+            <Route path="/cmo-insights" element={<CmoInsights />} />
+            <Route path="/ceo-insights" element={<CeoInsights />} />
+            <Route path="/cxo-insights" element={<CxoInsights />} />
 
-            <Route path="/corporality-striker" element={<CorporalityStrikers /> } />
+            <Route path="/corporality-striker" element={<CorporalityStrikers />} />
 
             <Route path="/404" element={<PageNotFound />} />
 
             <Route path="/sitemap" element={<Sitemap />} />
 
             <Route path="/medtech" element={<MedTech />} />
+            <Route path="/finance" element={<Finance />} />
+            <Route path="/geospatial" element={<Geospatial />} />
+            <Route path="/biotech" element={<Biotech />} />
+            <Route path="/nanotech" element={<Nanotech />} />
+            <Route path="/age-care-and-retirement" element={<AgeCareAndRetirement />} />
+            <Route path="/allied-industries" element={<AlliedIndustries />} />
+            <Route path="/industrial-equipment" element={<IndustrialEquipment />} />
+            <Route path="/metal" element={<Metal />} />
+            <Route path="/construction" element={<Construction />} />
+            <Route path="/manufacturing" element={<Manufacturing />} />
+            <Route path="/information-technology" element={<InformationTechnology />} />
+            <Route path="/high-tech" element={<HighTech />} />
+            <Route path="/agriculture" element={<Agriculture />} />
+            <Route path="/health-care" element={<HealthCare />} />
+            <Route path="/utilities-and-energy" element={<UtilitiesAndEnergy />} />
 
             {/* <Route path="/search/:search_string" element={<Blogs />}/> */}
-            
-            {/*<Route path="/articles/:article_name" element={<Blog />}/>*/}
- 
-            <Route path="/:post_slug" exact element={<Single />}/>
 
-            <Route path="/category/:category_slug" element={<Blogs />}/>
+            {/*<Route path="/articles/:article_name" element={<Blog />}/>*/}
+
+            <Route path="/:post_slug" exact element={<Single />} />
+
+            <Route path="/category/:category_slug" element={<Blogs />} />
 
             <Route path="/article/:article_slug" element={<SingleArticle />} />
 
             <Route path="/csuit/:csuit_slug" element={<CSuitSingle />} />
 
-            <Route path="/search/:search_keyword" element={<Search />}/>
-            <Route path="/search/" element={<Search />}/>
-            
+            <Route path="/search/:search_keyword" element={<Search />} />
+            <Route path="/search/" element={<Search />} />
+
             <Route path="/" exact element={<HomePage />} />
-            <Route path="*" element={<PageNotFound />}/>
+            <Route path="*" element={<PageNotFound />} />
 
           </Routes>
           <Footer />
