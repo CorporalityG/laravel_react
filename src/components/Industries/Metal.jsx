@@ -3,7 +3,7 @@ import './industry.css'
 import { BASE_URL } from '../../config'
 import { ReseachPaperSurveyItem } from './ReseachPaperSurveyItem'
 import { Link } from 'react-router-dom'
-import { IndustryItem } from './IndustryItem'
+import { OtherIndustryItem } from './OtherIndustryItem'
 import { GetInvolved } from '../ServiceInsights/GetInvolved'
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
@@ -106,36 +106,60 @@ function Metal() {
                     </div>
 
                     <div className='row industry-other-industries-row'>
-                        <IndustryItem
-                            thumbnail={`${BASE_URL}/img/industries/Industry-Name-1.png`}
-                            title={`When launching a new product or service, a go-to-market strategy is a tactical plan that contains/`}
-                            slug={``}
-                            short_description={`<p>When launching a new product or service, a go-to-market strategy is a tactical plan that contains  strategy is a tactical plan that contains strategy is a tactical plan that contains.</p>`}
-                            category={`Industry Name`}
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/nanotech.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/nanotech-hover.png`}
+                            category={`Nanotech`}
+                            slug={`nanotech`}
                         />
 
-                        <IndustryItem
-                            thumbnail={`${BASE_URL}/img/industries/Industry-Name-2.png`}
-                            title={`When launching a new product or service, a go-to-market strategy is a tactical plan that contains/`}
-                            slug={``}
-                            short_description={`<p>When launching a new product or service, a go-to-market strategy is a tactical plan that contains  strategy is a tactical plan that contains strategy is a tactical plan that contains.</p>`}
-                            category={`Industry Name`}
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/metal-industry.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/metal-industry-hover.png`}
+                            category={`Metal Industry`}
+                            slug={`metal`}
                         />
 
-                        <IndustryItem
-                            thumbnail={`${BASE_URL}/img/industries/Industry-Name-3.png`}
-                            title={`When launching a new product or service, a go-to-market strategy is a tactical plan that contains/`}
-                            slug={``}
-                            short_description={`<p>When launching a new product or service, a go-to-market strategy is a tactical plan that contains  strategy is a tactical plan that contains strategy is a tactical plan that contains.</p>`}
-                            category={`Industry Name`}
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/hightech.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/hightech-hover.png`}
+                            category={`Hightech`}
+                            slug={`high-tech`}
                         />
 
-                        <IndustryItem
-                            thumbnail={`${BASE_URL}/img/industries/Industry-Name-4.png`}
-                            title={`When launching a new product or service, a go-to-market strategy is a tactical plan that contains/`}
-                            slug={``}
-                            short_description={`<p>When launching a new product or service, a go-to-market strategy is a tactical plan that contains  strategy is a tactical plan that contains strategy is a tactical plan that contains.</p>`}
-                            category={`Industry Name`}
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/finance.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/finance-hover.png`}
+                            category={`Finance`}
+                            slug={`finance`}
+                        />
+
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/construction.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/construction-hover.png`}
+                            category={`Construction`}
+                            slug={`construction`}
+                        />
+
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/agriculture.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/agriculture-hover.png`}
+                            category={`Agriculture`}
+                            slug={`agriculture`}
+                        />
+
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/geospatial.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/geospatial-hover.png`}
+                            category={`Geospatial`}
+                            slug={`geospatial`}
+                        />
+
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/manufacturing.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/manufacturing-hover.png`}
+                            category={`Manufacturing`}
+                            slug={`manufacturing`}
                         />
                     </div>
                 </div>
