@@ -6,7 +6,8 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="&quot;Corporality Global is a no 1 Marketing and Sales company which helps to promote your business with right strategy. Services in Digital Marketing, Website creation and maintenance.&quot;" />
+  <meta name="description"
+    content="&quot;Corporality Global is a no 1 Marketing and Sales company which helps to promote your business with right strategy. Services in Digital Marketing, Website creation and maintenance.&quot;" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -43,7 +44,7 @@
 
     gtag('config', 'G-6M9X9CHQCC');
   </script>
-  <script type='application/ld+json'> 
+  <script type='application/ld+json'>
     {
       "@context": "http://www.schema.org",
       "@type": "WebSite",
@@ -73,7 +74,7 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
+
   <script>
     jQuery(window).scroll(function () {
       if (jQuery(window).width() > 825) {
@@ -110,9 +111,53 @@
             });
           }
         }
+
+        // single indestry page start
+        if (jQuery('.industry-single-page').length) {
+
+          var colWidth = jQuery('.industry-single-col-boxes').width();
+          var colHeight = jQuery('.industry-single-col-boxes').height();
+
+          var boxesOffsetTop = jQuery('.industry-single-col-boxes').offset().top;
+
+          var length = colHeight - jQuery('.industry-single-boxes').height() + boxesOffsetTop;
+
+          var scroll = jQuery(this).scrollTop();
+          var height = jQuery('.industry-single-boxes').height() + 'px';
+
+          if (scroll < (boxesOffsetTop - 90)) {
+            jQuery('.industry-single-boxes').css({
+              'position': 'relative',
+              'top': '0',
+              'width': 'auto'
+            });
+          }
+          else if (scroll > (length - 90)) {
+            jQuery('.industry-single-boxes').css({
+              'position': 'sticky',
+              'bottom': '0',
+              'width': 'auto'
+            });
+          }
+          else {
+            jQuery('.industry-single-boxes').css({
+              'position': 'fixed',
+              'top': '90px',
+              'width': colWidth,
+              'height': height
+            });
+          }
+        }
+        // single indestry page end
       }
       else {
         jQuery('#sa-sidebar').css({
+          'position': 'sticky',
+          'top': 'auto',
+          'height': 'auto'
+        });
+
+        jQuery('.industry-single-boxes').css({
           'position': 'sticky',
           'top': 'auto',
           'height': 'auto'
@@ -123,6 +168,12 @@
     jQuery(window).resize(function () {
       if (jQuery(window).width() > 825) {
         jQuery('#sa-sidebar').css({
+          'position': 'sticky',
+          'top': 'auto',
+          'height': 'auto'
+        });
+
+        jQuery('.industry-single-boxes').css({
           'position': 'sticky',
           'top': 'auto',
           'height': 'auto'

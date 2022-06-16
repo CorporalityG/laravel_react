@@ -1,0 +1,167 @@
+.industry-single-page {
+    margin-top: 80px;
+    background-color: #F2F2F2;
+}
+
+.industry-single-page .industry-single-banner {
+    background-image: url(./img/industry-single-banner-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.industry-single-page .industry-single-banner .industry-single-banner-row {
+    align-items: center;
+}
+.industry-single-page .industry-single-banner .industry-single-banner-cat {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    color: #A06DAF;
+    margin-bottom: 25px;
+}
+.industry-single-page .industry-single-banner .industry-single-banner-cat:after {
+    content: "";
+    display: block;
+    width: 55px;
+    border: 3px solid #E5CC5C;
+    margin-top: 10px;
+}
+.industry-single-page .industry-single-banner h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    color: #33657E;
+    margin-bottom: 20px;
+}
+.industry-single-page .industry-single-banner .industry-single-banner-date {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #A06DAF;
+    text-transform: uppercase;
+}
+.industry-single-page .industry-single-banner .industry-single-banner-img img {
+    width: 100%;
+}
+
+.industry-single-page .industry-single-content .industry-single-content-row {
+    background: #FFFFFF;
+    padding: 35px 20px 70px;
+}
+.industry-single-page .industry-single-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: justify;
+    color: #333333;
+    margin-bottom: 20px;
+}
+.industry-single-page .industry-single-content h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: justify;
+    color: #33657E;
+    margin-bottom: 20px;
+}
+.industry-single-page .industry-single-content h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: justify;
+    color: #A06DAF;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: inline-block;
+    width: 100%;
+}
+
+.industry-single-page .industry-single-survey-box {
+    background: #FFFFFF;
+    box-shadow: 0px 14px 21px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+.industry-single-page .industry-single-survey-box .survey-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #232323;
+    text-align: center;
+}
+
+.industry-single-page .industry-single-box {
+    background: #FFFFFF;
+    box-shadow: 0px 14px 21px rgba(0, 0, 0, 0.11);
+    border-radius: 20px;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+}
+.industry-single-page .industry-single-box .is-box-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #232323;
+    margin-bottom: 20px;
+}
+.industry-single-page .industry-single-box .is-box-title:after {
+    content: "";
+    display: block;
+    border: 3px solid #E5CC5C;
+    width: 55px;
+    margin-top: 8px;
+}
+.industry-single-page .industry-single-related-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+.industry-single-page .industry-single-related-box ul li:not(:last-child) {
+    margin-bottom: 20px;
+}
+.industry-single-page .industry-single-related-box ul li a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: justify;
+    text-decoration-line: underline !important;
+    color: #6CA0BC;
+    width: 100%;
+    display: inline-block;
+}
+
+.industry-single-page .industry-single-other-box .is-oi-cat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.industry-single-page .industry-single-other-box .is-oi-cat-item:hover {
+    background-color: #e9ebf7;
+}
+.industry-single-page .industry-single-other-box .is-oi-cat-item-icon {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(171, 179, 224, 0.5);
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-right: 10px;
+}
+.industry-single-page .industry-single-other-box .is-oi-cat-item-icon .item-icon {
+    height: 20px;
+}
+.industry-single-page .industry-single-other-box .is-oi-cat-item-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color: #33657E;
+}
+
+.industry-single-page .si-get-involved-section {
+    background-color: #fff;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
