@@ -194,7 +194,7 @@ function Search() {
                                                     searchResults.map((item) =>
                                                         <SearchItem
                                                             key={`${item.id}`}
-                                                            thumbnail={item.image ? `${API_IMG_URL + item.image}` : ''}
+                                                            thumbnail={item.image ? `${API_IMG_URL + item.image}` : `${BASE_URL}/img/logo.png`}
                                                             title={`${item.title}`}
                                                             slug={`${prefixSlug}/${item.source != "" ? item.source + "/" : ""}${item.slug}`}
                                                             shortDescription={item.short_description ?? item.description}
