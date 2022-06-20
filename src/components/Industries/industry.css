@@ -2,6 +2,24 @@
     margin-top: 80px;
 }
 
+.industry-page .read_more_cat_ia {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    width: auto;
+    display: inline-block;
+    margin-top: 20px;
+    background-image: linear-gradient(95.12deg,#e2c53f,#6ca0bc 83.42%);
+    padding: 10px 15px;
+}
+.industry-page .read_more_cat_ia svg {
+    vertical-align: middle;
+    width: auto;
+    height: 15px;
+    display: inline-block;
+    color: #fff;
+}
+
 .industry-page .industry-banner-section {
     position: relative;
     background: #F4F4F4;

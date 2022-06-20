@@ -81,6 +81,7 @@
 
         if (jQuery('.single-article-page').length) {
 
+          var colWidth = jQuery('#sa-sidebar-col').width();
           var length = jQuery('#sa-sidebar-col').height() - jQuery('#sa-sidebar').height() + jQuery('#sa-sidebar-col').offset().top;
 
           var scroll = jQuery(this).scrollTop();
@@ -106,7 +107,7 @@
               'position': 'fixed',
               'top': '90px',
               // 'left': '0',
-              'width': '21%'
+              'width': colWidth
               // 'height': height
             });
           }

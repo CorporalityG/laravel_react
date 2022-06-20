@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CsuitController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\IndustrialArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,8 @@ Route::get('/single-csuit/{slug}', [CsuitController::class, 'getCSuit']);
 
 Route::get('/search', [SearchController::class, 'getSearch']);
 Route::get('/search-category/{search_slug?}', [SearchController::class, 'getSearchCategory']);
+
+Route::get('/latest-industrial-article/{category_slug?}', [IndustrialArticleController::class, 'latestIndustrialArticle']);
+Route::get('/realted-industrial-articles/{category_slug?}', [IndustrialArticleController::class, 'relatedIndustrialCategoyArticles']);
+Route::get('/single-industry-article/{slug}', [IndustrialArticleController::class, 'getIndustryArticle']);
+Route::get('/single-realted-industrial-article/{slug?}', [IndustrialArticleController::class, 'singleRelatedIndustrialArticles']);

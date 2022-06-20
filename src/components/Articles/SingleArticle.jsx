@@ -3,6 +3,8 @@ import './SingleArticle.css'
 import { API_BASE_URL, API_IMG_URL } from '../../config';
 import { useParams } from 'react-router-dom'
 import { SocialShare } from './SocialShare';
+import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
+import AOS from "aos";
 
 function SingleArticle() {
 
@@ -10,6 +12,10 @@ function SingleArticle() {
     const [singleArticle, setSingleArticle] = useState([]);
 
     useEffect(() => {
+        AOS.init({
+            duration: 2000,
+        });
+        
         getArticle(params.article_slug);
     }, [params])
 
@@ -24,7 +30,7 @@ function SingleArticle() {
             {
                 singleArticle ?
                     <>
-                        <div className="sa-banner-section" style={{ backgroundImage: `linear-gradient(180deg,hsla(0, 0%, 100%, .4),hsla(0, 0%, 100%, .4)), url(${singleArticle.article_image !== undefined ? API_IMG_URL + singleArticle.article_image : ''})` }}>
+                        <div className="sa-banner-section">
                             <div className="container-lg">
                                 <div className='row sa-banner-row'>
                                     <div className='col-lg-6'>
@@ -99,6 +105,8 @@ function SingleArticle() {
                     </>
                     : null
             }
+
+            <ServicesAskQuote />
         </div>
     )
 }

@@ -303,4 +303,92 @@ class IndustrialArticleController extends Controller
     {
         return Str::slug($request->title, '-');
     }
+
+    public function latestIndustrialArticle(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $result = array();
+
+            if( !empty($request->category_slug) )
+            {
+                $category = IndustrialArticleCategory::
+                                where('category_slug', $request->category_slug)
+                                ->first();
+                
+                if( !empty($category) )
+                {
+                    $qry = $category->industrialArticles()
+                                ->with(['categories', 'subcategories']);
+
+                    $result = $qry->latest()->first();
+                }
+            }
+
+            return $result;
+        }
+    }
+
+    public function relatedIndustrialCategoyArticles(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $results = array();
+
+            if( !empty($request->category_slug) )
+            {
+                $category = IndustrialArticleCategory::
+                                where('category_slug', $request->category_slug)
+                                ->first();
+                
+                if( !empty($category) )
+                {
+                    $qry = $category->industrialArticles()
+                                ->with(['categories', 'subcategories']);
+
+                    $results = $qry->skip(1)->take(3)->latest()->get();
+                }
+            }
+
+            return $results;
+        }
+    }
+
+
+    /**
+     * Display a get single csuit.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getIndustryArticle(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $RS_Row = IndustrialArticle::with(['categories'])->where('slug', $request->slug)->first();
+            $RS_Row->date_created_at = \Carbon\Carbon::parse($RS_Row->created_at)->format('F d, Y');
+
+            return $RS_Row ?? array();
+        }
+    }
+
+    public function singleRelatedIndustrialArticles(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $post = array();
+            if( !empty($request->slug) )
+            {
+                $post = IndustrialArticle::where('slug', '=', $request->slug)->first();
+            }
+
+            $relatedPost = IndustrialArticle::whereHas('categories', function ($q) use ($post) {
+                return $q->whereIn('category_slug', $post->categories->pluck('category_slug')); 
+            })
+            ->latest()->take(3)
+            ->where('slug', '!=', $request->slug) // So you won't fetch same post
+            ->get();
+
+            return $relatedPost;
+        }
+    }
 }

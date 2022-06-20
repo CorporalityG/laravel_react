@@ -179,6 +179,9 @@
     font-size: 15px;
     opacity: .7;
 }
+.single-blog-page-2 .recent-events .recent-events-imgs {
+    width: 100%;
+}
 #recent-blogs{width: 100%;display: inline-block;margin-bottom: 10px;font-size: 25px;}
 .youtube-video img{width: 100%;margin-left: -20px;}
 .subsribetitle{font-weight: 500;font-size: 20px;margin-bottom: 10px;}
