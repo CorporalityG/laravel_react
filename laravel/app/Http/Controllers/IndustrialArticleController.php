@@ -391,4 +391,53 @@ class IndustrialArticleController extends Controller
             return $relatedPost;
         }
     }
+
+    /**
+     * Display a latest.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function latestInArticle(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $RS_Row = IndustrialArticle::with(['categories'])->latest()->first();
+            $RS_Row->timeAgo = $RS_Row->created_at->diffForHumans();
+
+            return $RS_Row;
+        }
+    }
+    
+    /**
+     * Display a listing of the industrial articles.
+     */
+    public function getIndustrialArticles(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $qry = IndustrialArticle::latest();
+
+            if( !empty($request->search_keyword) )
+            {
+                $qry->where('title', 'LIKE', '%' . $request->search_keyword . '%');
+            }
+
+            if( !empty($request->category) )
+            {
+                $category = IndustrialArticleCategory::with('industrialArticles:id')
+                                ->where('category_slug', $request->category)
+                                ->first();
+
+                if( !empty($category) )
+                {
+                    $RS_Results = array_column($category->industrialArticles->toArray(), 'id');
+                    $qry->whereIn('id', $RS_Results);
+                }
+            }
+
+            $results = $qry->with(['categories', 'subcategories'])->paginate(6);
+
+            return $results;
+        }
+    }
 }

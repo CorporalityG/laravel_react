@@ -230,4 +230,17 @@ class IndustrialArticleCategoryController extends Controller
         
         return $subcategories;
     }
+
+    /**
+     * get category
+    */
+    public function getIACategories(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            return IndustrialArticleCategory::where('parent_id', 0)
+                    ->orderby('category_name', 'ASC')
+                    ->get();
+        }
+    }
 }

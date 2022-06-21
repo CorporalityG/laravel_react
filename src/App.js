@@ -86,6 +86,7 @@ import Agriculture from "./components/Industries/Agriculture";
 import HealthCare from "./components/Industries/HealthCare";
 import UtilitiesAndEnergy from "./components/Industries/UtilitiesAndEnergy";
 import IndustrySingle from "./components/Industries/IndustrySingle/IndustrySingle";
+import IndustryCategory from "./components/Industries/Category/IndustryCategory";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -216,6 +217,7 @@ function App() {
             <Route path="/search/" element={<Search />} />
 
             <Route path="/industry/:industry_slug" element={<IndustrySingle />} />
+            <Route path="/industry/category/:category_slug" element={<IndustryCategory />} />
 
             <Route path="/" exact element={<HomePage />} />
             <Route path="*" element={<PageNotFound />} />
