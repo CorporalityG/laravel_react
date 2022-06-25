@@ -8,9 +8,10 @@ import ServicesClients from '../ServicesClients/ServicesClients';
 import ServicesInsights from '../ServicesInsights/ServicesInsights';
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import { LifeCycleStepItem } from './LifeCycleStepItem';
+import { Helmet } from "react-helmet";
 
 function OutsourcedCMO() {
-    
+
     useEffect(() => {
         Aos.init({
             duration: 2000,
@@ -25,6 +26,16 @@ function OutsourcedCMO() {
 
     return (
         <>
+            <Helmet>
+                <title>{`Best Outsourced CMO Services | Experts in Strategy`}</title>
+                <meta name="description" content={`An outsourced CMO gives your business an expert marketing strategy without the commitment to a full-time CMO. Let's talk about growth today.`} />
+                <meta
+                    name="keywords"
+                    content="outsourced CMO services"
+                />
+                <link rel="canonical" href={`${BASE_URL}/brand-positioning/`} />
+            </Helmet>
+
             <div className="cmo-banner-section">
                 <div className='cmo-banner-top'></div>
                 <div className='cmo-banner-middle' data-aos="zoom-in-up" data-aos-duration="1500"></div>

@@ -8,6 +8,7 @@ import AOS from "aos";
 import CarouselGrid from 'react-grid-carousel'
 import ServicesClients from '../ServicesClients/ServicesClients';
 import ServicesInsights from '../ServicesInsights/ServicesInsights'
+import { Helmet } from "react-helmet";
 
 function AccountBasedMarketing() {
 
@@ -19,6 +20,16 @@ function AccountBasedMarketing() {
 
     return (
         <>
+            <Helmet>
+                <title>{`The Ultimate Guide to Account-Based Marketing (ABM).`}</title>
+                <meta name="description" content={`Learn how to identify and reach high-value customers with the most-effective Account-Based Marketing (ABM) tactics and software.`} />
+                <meta
+                    name="keywords"
+                    content="account based marketing"
+                />
+                <link rel="canonical" href={`${BASE_URL}/account-based-marketing/`} />
+            </Helmet>
+
             <div className="abm-banner-section">
                 <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-1.png`} alt="Rec 1" className="abm-b-rec-1" />
                 <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-2.png`} alt="Rec 2" className="abm-b-rec-2" />
@@ -104,7 +115,7 @@ function AccountBasedMarketing() {
                     <div className="row abm-logo-row">
                         <div className="col-lg-12 abm-logo-col">
                             <div className="abm-logo-carousel" data-aos="flip-up">
-                                <CarouselGrid cols={4} rows={1} gap={30} responsiveLayout={[{breakpoint: 767, cols: 1, gap: 0, loop: true, autoplay: 2000}]}>
+                                <CarouselGrid cols={4} rows={1} gap={30} responsiveLayout={[{ breakpoint: 767, cols: 1, gap: 0, loop: true, autoplay: 2000 }]}>
                                     <CarouselGrid.Item>
                                         <LogoItem
                                             logo={`${BASE_URL}/img/AccountBasedMarketing/klek-services-logo.png`}

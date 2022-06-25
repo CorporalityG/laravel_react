@@ -107,8 +107,12 @@ function Blogs2() {
             </MetaTags> */}
 
             <Helmet>
-                <title>{`Blog | Digital Media Marketing | Corporality`}</title>
-                <meta name="description" content={`Read our blog to get updated about the last news, tools, insights, analysis & opinion on different topics like digital media marketing, advertising and website.`} />
+                <title>{`What is Corporate Strategy? - Definition | Meaning | Example`}</title>
+                <meta name="description" content={`Corporate strategy encompasses a firm’s corporate actions with the aim to achieve company objectives while achieving a competitive advantage.`} />
+                <meta
+                    name="keywords"
+                    content="corporate marketing strategy"
+                />
                 <link rel="canonical" href={`${BASE_URL}/blog/`} />
             </Helmet>
 

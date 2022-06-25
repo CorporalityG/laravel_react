@@ -28,8 +28,12 @@ function DigitalMediaMarketing() {
   return (
     <>
       <Helmet>
-        <title>{`Digital Marketing Agency Sydney | Best Marketing Service | Corporality`}</title>
-        <meta name="description" content={`Digital Media Marketing is a powerful brand strategy for many business owners and entrepreneurs. Learn how it works in this resource crafted by marketing and brand consultants.`} />
+        <title>{`The Best digital marketing firm in Sydney | Corporality`}</title>
+        <meta name="description" content={`Grow your business globally with the experts that offers marketing services to let you promote business using SEO, PPC and SMM.`} />
+        <meta
+          name="keywords"
+          content="digital media marketing"
+        />
         <link rel="canonical" href={`${BASE_URL}/digital-media-marketing/`} />
       </Helmet>
 

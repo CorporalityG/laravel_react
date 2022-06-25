@@ -67,6 +67,26 @@ function Sitemap() {
 
                                     <li>
                                         <div className='sitemap-link-list-item'>
+                                            <h2>Navigation</h2>
+                                            <ul>
+                                                <li>
+                                                    <Link to={`/contact/`}>Contact</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/privacy-policy/`}>Privacy Policy</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/terms-and-conditions/`}>Terms and Conditions</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/sitemap/`}>Sitemap</Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className='sitemap-link-list-item'>
                                             <h2>Services</h2>
                                             <ul>
                                                 <li>
@@ -114,6 +134,18 @@ function Sitemap() {
                                                     <Link to={`/service-insights/`}>Service Insights</Link>
                                                 </li>
                                                 <li>
+                                                    <Link to={`/ceo-insights/`}>CEO Insights</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/cxo-insights/`}>CXO Insights</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/cmo-insights/`}>CMO Insights</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/coo-insights/`}>COO Insights</Link>
+                                                </li>
+                                                <li>
                                                     <Link to={`/our-team/`}>Our Team</Link>
                                                 </li>
                                                 <li>
@@ -125,19 +157,55 @@ function Sitemap() {
 
                                     <li>
                                         <div className='sitemap-link-list-item'>
-                                            <h2>Navigation</h2>
+                                            <h2>Industries</h2>
                                             <ul>
                                                 <li>
-                                                    <Link to={`/contact/`}>Contact</Link>
+                                                    <Link to={`/medtech/`}>Med Tech</Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={`/privacy-policy/`}>Privacy Policy</Link>
+                                                    <Link to={`/finance/`}>Finance</Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={`/terms-and-conditions/`}>Terms and Conditions</Link>
+                                                    <Link to={`/geospatial/`}>Geospatial</Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={`/sitemap/`}>Sitemap</Link>
+                                                    <Link to={`/biotech/`}>Biotech</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/nanotech/`}>Nanotech</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/age-care-and-retirement/`}>Age Care and retirement</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/allied-industries/`}>Allied</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/industrial-equipment/`}>Industrial Equipment</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/metal/`}>Metal</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/construction/`}>Construction</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/manufacturing/`}>Manufacturing</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/information-technology/`}>Information Technology</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/high-tech/`}>High Tech</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/agriculture/`}>Agriculture</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/health-care/`}>Health Care</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/utilities-and-energy/`}>Utilities and Energy</Link>
                                                 </li>
                                             </ul>
                                         </div>

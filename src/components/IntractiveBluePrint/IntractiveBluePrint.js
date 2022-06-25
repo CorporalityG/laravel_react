@@ -26,8 +26,12 @@ function IntractiveBluePrint() {
   return (
     <>
       <Helmet>
-        <title>{`What is Blue Ocean Strategy | About Blue Ocean Strategy`}</title>
-        <meta name="description" content={`Blue Ocean Strategy provides a systematic approach to making the competition irrelevant. Low cost to open up a new market space and create new demand.`} />
+        <title>{`The most interactive element in service is interactive blueprint`}</title>
+        <meta name="description" content={`Visualizing the customer journey is critical to improving their experience. Follow these best practices to build your service design using interactive blueprint`} />
+        <meta
+          name="keywords"
+          content="interactive blueprint"
+        />
         <link rel="canonical" href={`${BASE_URL}/interactive-blueprint/`} />
       </Helmet>
 

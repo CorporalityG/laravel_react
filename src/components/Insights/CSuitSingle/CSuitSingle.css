@@ -69,6 +69,29 @@
     border: 1px solid #ccc;
     display: inline-block;
 }
+.csuit-single-page .csuit-single-content {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #232323;
+}
+.csuit-single-page .csuit-single-content ul {
+    padding-left: 15px;
+}
+.csuit-single-page .csuit-single-content ul li {
+    list-style-image: url('./img/right-arrow.png');
+    list-style-position: inside;
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    color: #232323;
+}
+.csuit-single-page .csuit-single-content a {
+    color: #33657e;
+}
 
 .csuit-single-page .csuit-single-social-share {
     position: fixed;
@@ -101,4 +124,131 @@
     align-items: center;
     justify-content: center;
     color: #31647c;
+}
+
+
+/* responsive start */
+@media only screen and (min-width: 992px) and (max-width: 1115.99px) {
+    .csuit-single-page .container-lg {
+        max-width: 80%;
+    }
+    .csuit-single-page .offset-lg-2 {
+        margin-left: 0;
+    }
+    .csuit-single-page .col-lg-8 {
+        width: 100%;
+    }
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-content h1 {
+        font-size: 42px;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-content h1 {
+        font-size: 42px;
+    }
+}
+
+
+@media only screen and (max-width: 855.99px) {
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-content h1 {
+        font-size: 36px;
+    }
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-content {
+        margin-bottom: 20px;
+    }
+    .csuit-single-page .csuit-single-content {
+        padding-top: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 767.99px) {
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-content h1 {
+        font-size: 32px;
+    }
+}
+
+
+@media only screen and (max-width: 667.99px) {
+    .csuit-single-page .csuit-single-banner {
+        padding-top: 30px;
+    }
+    .csuit-single-page .csuit-single-content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 620.99px) {
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-content h1 {
+        font-size: 28px;
+    }
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-img {
+        margin-bottom: 20px;
+    }
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-content {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .csuit-single-page .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .csuit-single-page .csuit-single-social-share {
+        position: relative;
+        top: 0;
+        transform: translate(0, 0);
+    }
+    .csuit-single-page .csuit-single-social-share ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .csuit-single-page .csuit-single-social-share ul li {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .csuit-single-page .csuit-single-social-share ul li a {
+        margin-bottom: 0;
+    }
+    .csuit-single-page .csuit-single-content {
+        padding-top: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 480.99px) {
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-content h1 {
+        font-size: 24px;
+    }
+    .csuit-single-page .csuit-single-banner .csuit-single-breadcrumbs ul {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 390.99px) {
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-content h1 {
+        font-size: 22px;
+    }
+    .csuit-single-page .csuit-single-banner {
+        padding-bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .csuit-single-page .csuit-single-banner .csuit-single-banner-content h1 {
+        font-size: 20px;
+    }
 }

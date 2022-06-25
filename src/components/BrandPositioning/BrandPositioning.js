@@ -8,6 +8,7 @@ import ServicesClients from "../ServicesClients/ServicesClients";
 import ServicesInsights from "../ServicesInsights/ServicesInsights";
 import AllCardsNew from "./AllCardsNew/AllCardsNew";
 import Accordion from 'react-bootstrap/Accordion'
+import { Helmet } from "react-helmet";
 
 export default function BrandPositioning() {
 
@@ -25,6 +26,16 @@ export default function BrandPositioning() {
 
   return (
     <>
+      <Helmet>
+        <title>{`Build Your Brand Positioning Framework & Methodology`}</title>
+        <meta name="description" content={`Brand positioning is an extremely efficient way for marketing strategy of mapping different brand positioning strategies between you and the competitors`} />
+        <meta
+          name="keywords"
+          content="brand positioning"
+        />
+        <link rel="canonical" href={`${BASE_URL}/brand-positioning/`} />
+      </Helmet>
+
       <div className="bp-banner-section">
         <img src={`${BASE_URL}/img/BrandPositioning/banner-rec-1.png`} alt="Rec 1" className="bp-b-rec-1" />
         <img src={`${BASE_URL}/img/BrandPositioning/banner-rec-2.png`} alt="Rec 2" className="bp-b-rec-2" />
@@ -378,13 +389,13 @@ export default function BrandPositioning() {
 
       <div className="bp-articulating-yourself-section  text-center mx-auto d-flex flex-column align-items-center justify-content-center">
         <div className="container-lg">
-        <div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" className="aos-init aos-animate">
-          <h1 className="animate two">
-            <span>Articulating</span>&nbsp;<span>Yourself</span>&nbsp;<span>- Creating</span><br></br>
-            <span>Magic</span>&nbsp;<span>From</span>&nbsp;<span>The</span>&nbsp;<span>Basics</span>
-          </h1>
-        </div>
-        <div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-delay="1000" className="mb-5 mt-2 text aos-init aos-animate">An effective brand positioning and marketing strategy is all about taking the most effective steps towards becoming clear, differentiated and meaningful. Corporality Global evaluates your current branding orientation in combination with market analytics to help you articulate yourself. You need a roadmap that clearly presents who you are - what you do-why you matter, making positioning. not just beneficial but sustainable as well. We then tie the positioning to an already existing idea of your company with the target audience and shift truth to your audience's advantage. </div>
+          <div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" className="aos-init aos-animate">
+            <h1 className="animate two">
+              <span>Articulating</span>&nbsp;<span>Yourself</span>&nbsp;<span>- Creating</span><br></br>
+              <span>Magic</span>&nbsp;<span>From</span>&nbsp;<span>The</span>&nbsp;<span>Basics</span>
+            </h1>
+          </div>
+          <div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-delay="1000" className="mb-5 mt-2 text aos-init aos-animate">An effective brand positioning and marketing strategy is all about taking the most effective steps towards becoming clear, differentiated and meaningful. Corporality Global evaluates your current branding orientation in combination with market analytics to help you articulate yourself. You need a roadmap that clearly presents who you are - what you do-why you matter, making positioning. not just beneficial but sustainable as well. We then tie the positioning to an already existing idea of your company with the target audience and shift truth to your audience's advantage. </div>
         </div>
         <AllCardsNew />
       </div>

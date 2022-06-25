@@ -37,9 +37,9 @@ export default function GoToMarketing() {
     return (
         <>
             <Helmet>
-                <title>{`Go to Market Strategy | Corporality Go-to-market (GTM) Strategy`}</title>
-                <meta name="description" content={`Corporality Global - Go to Marketing Strategy helps to achieve the business goals. Click here to know about What is a Go to Marketing Strategy? and why go to marketing strategy?`} />
-                <meta name="keywords" content={`Go to Marketing Strategy`} />
+                <title>{`What is a Go-To-Marketing Strategy and How Do You Build?`}</title>
+                <meta name="description" content={`A Go-To-Marketing (GTM) Strategy is a plan that helps you define your ideal customers, coordinate your messaging and position your product for launch.`} />
+                <meta name="keywords" content={`corporate marketing strategy`} />
                 <link rel="canonical" href={`${BASE_URL}/goto-market-strategy/`} />
             </Helmet>
 

@@ -7,6 +7,7 @@ import ServicesClients from "../ServicesClients/ServicesClients";
 import ServicesInsights from "../ServicesInsights/ServicesInsights";
 import { LeverageModelItem } from "./Components/LeverageModelItem";
 import Accordion from 'react-bootstrap/Accordion'
+import { Helmet } from "react-helmet";
 
 function CxoStrategy() {
 
@@ -24,6 +25,16 @@ function CxoStrategy() {
 
   return (
     <>
+      <Helmet>
+        <title>{`Marketing strategies for the CXO | Marketing Agency`}</title>
+        <meta name="description" content={`Develop and execute marketing strategies to create and maintain competitive advantage, particularly in highly uncertain environments.`} />
+        <meta
+          name="keywords"
+          content="cxo relationship strategy"
+        />
+        <link rel="canonical" href={`${BASE_URL}/brand-positioning/`} />
+      </Helmet>
+
       <div className="cxo-banner-section">
         <div className='cxo-banner-top'></div>
         <div className='cxo-banner-middle' data-aos="zoom-in-up" data-aos-duration="1500"></div>

@@ -27,7 +27,7 @@ function CSuitSingle() {
                         <div className='csuit-single-banner'>
                             <div className='container-lg'>
                                 <div className='row'>
-                                    <div className='col-lg-8 offset-lg-2'>
+                                    <div className='col-lg-8 offset-lg-2 col-sm-10 offset-sm-1'>
                                         <div className='csuit-single-banner-content'>
                                             {singleCSuit.image && <img src={`${API_IMG_URL + singleCSuit.image}`} alt={`${singleCSuit.title}`} className='csuit-single-banner-img' />}
 
@@ -70,9 +70,6 @@ function CSuitSingle() {
                                         <li>
                                             <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${BASE_URL}/csuit/${singleCSuit.slug}&title=${singleCSuit.title}`} target="_blank"><i className="fa fa-linkedin"></i></a>
                                         </li>
-                                        {/* <li>
-                                            <a href={`https://www.facebook.com/sharer/sharer.php?u=${BASE_URL}/csuit/${singleCSuit.slug}&quote=${singleCSuit.title}`} target="_blank"><i className="fa fa-instagram"></i></a>
-                                        </li> */}
                                         <li>
                                             <a href={`http://pinterest.com/pin/create/link/?url=${BASE_URL}/csuit/${singleCSuit.slug}`} target="_blank"><i className="fa fa-pinterest"></i></a>
                                         </li>
@@ -84,7 +81,7 @@ function CSuitSingle() {
                         <div className='csuit-single-content'>
                             <div className='container-lg'>
                                 <div className='row'>
-                                    <div className='col-lg-8 offset-lg-2'>
+                                    <div className='col-lg-8 offset-lg-2 col-sm-10 offset-sm-1'>
                                         <div className='csuit-single-description' dangerouslySetInnerHTML={{ __html: singleCSuit.description }}>
                                         </div>
                                     </div>

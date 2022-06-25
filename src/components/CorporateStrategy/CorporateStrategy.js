@@ -27,8 +27,8 @@ function CorporateStrategy() {
   return (
     <>
       <Helmet>
-        <title>{`Corporality Global Corporate Strategy| Top Brand Strategy & Consultancy`}</title>
-        <meta name="description" content={`Corporality Global Corporate Strategy helps to achieve their goals faster than your competitors. Contact us to know about the Corporate Strategy +61 2 83794089`} />
+        <title>{`What is Corporate Strategy? - Definition | Meaning | Example`}</title>
+        <meta name="description" content={`Corporate strategy encompasses a firm’s corporate actions with the aim to achieve company objectives while achieving a competitive advantage.`} />
         <meta name="keywords" content={`Corporate Strategy`} />
         <link rel="canonical" href={`${BASE_URL}/corporate-strategy/`} />
       </Helmet>

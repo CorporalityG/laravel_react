@@ -8,6 +8,7 @@ import { AnnouncementItem } from './AnnouncementItem';
 import ServicesClients from "../ServicesClients/ServicesClients";
 import { GetInvolved } from './GetInvolved';
 import AOS from "aos";
+import { Helmet } from "react-helmet";
 
 function ServiceInsights() {
 
@@ -37,6 +38,15 @@ function ServiceInsights() {
 
     return (
         <div className="service-insights-page">
+            <Helmet>
+                <title>{`The Best digital marketing firm in Sydney | Corporality`}</title>
+                <meta name="description" content={`Grow your business globally with the experts that offers marketing services to let you promote business using SEO, PPC and SMM.`} />
+                <meta
+                    name="keywords"
+                    content="Marketing Services"
+                />
+                <link rel="canonical" href={`${BASE_URL}/service-insights/`} />
+            </Helmet>
 
             <div className='si-announcement-section'>
                 <div className='container-lg'>
