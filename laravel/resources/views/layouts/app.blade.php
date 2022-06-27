@@ -328,6 +328,29 @@
                         
                         <div class="post"></div>
 
+                        <!-- pages menu start -->
+                        @php
+                          $pagrLinkActive = '';
+                        @endphp
+
+                        @if( request()->routeIs('pages.index') || request()->is('pages/*') )
+                          @php
+                            $pagrLinkActive = 'active';
+                          @endphp
+                        @endif
+                        <li class="nav-item">
+                          <a href="{{ route('pages.index') }}" class="nav-link {{ $pagrLinkActive }}">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>
+                              {{ __('Pages') }}
+                              <i class="right fas fa-angle-left"></i>
+                            </p>
+                          </a>
+                        </li>
+                        <!-- pages menu end -->
+
+                        <div class="post"></div>
+
                         <li class="nav-item">
                           <!-- Authentication -->
                           <form method="POST" action="{{ route('logout') }}">

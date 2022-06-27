@@ -51,17 +51,16 @@ function MedTech() {
                                 <div className='industry-banner-content'>
                                     <h1>Med Tech Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien facilisi augue posuere fringilla. Sit dictum hac viverra ac urna. Accumsan vitae faucibus purus, ultrices consectetur aliquam duis massa arcu. Tellus in morbi massa at a neque, augue sed dapibus. Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
-                                        <p>Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
-                                        <p>Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
+                                        <p>The medical technology is a diverse and innovative sector, using data to deliver robust healthcare to patients all over the globe. As the pandemic shining a spotlight on how this industry is crucial to society's healthcare infrastructure, we're seeing venture capitalists invest around $9.1 billion in the past two years alone. Learn more industry insights here.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div className='col-lg-8'>
                                 <div className='row'>
-                                    <div className='col-lg-8 offset-lg-4'>
+                                    <div className='col-lg-6 offset-lg-5'>
                                         <div className='industry-banner-ebook'>
+                                            <div className='ib-ebook-ttile'>Ebook</div>
                                             <img src={`${BASE_URL}/img/industries/CORPORALITY-STRIKERS-bg.png`} alt={`CORPORALITY STRIKERS`} className="industry-cs" />
                                             <img src={`${BASE_URL}/img/industries/cs-pattern.png`} alt={`cs-pattern`} className="industry-cs-pattern" />
                                             <Link to={`/`} className='industry-cs-link'>Download</Link>
@@ -72,7 +71,7 @@ function MedTech() {
                                 <div className='row industry-banner-paper-survey-row'>
                                     <div className='col-md-6'>
                                         <div className='industry-banner-paper-survey-item industry-banner-paper'>
-                                            <div className='paper-survey-item-title'>Reseach Paper</div>
+                                            <div className='paper-survey-item-title'>Research Paper</div>
                                             <div className='paper-survey-item-subtitle'>CAN THE MEDTECH INDUSTRY LOOK UP TO MARKETING FOR A SOLUTION?</div>
                                             <Link to={`/`} className='paper-survey-item-link'>Start Reading</Link>
                                         </div>
@@ -80,6 +79,7 @@ function MedTech() {
 
                                     <div className='col-md-6'>
                                         <div className='industry-banner-paper-survey-item industry-banner-survey'>
+                                            <div className='ib-s-title'>Survey</div>
                                             <img src={`${BASE_URL}/img/industries/your-om.png`} alt={`your-om`} className="industry-your-om" />
                                             <Link to={`/`} className='paper-survey-item-link'>Get Started</Link>
                                         </div>
@@ -153,7 +153,7 @@ function MedTech() {
                 <div className='container-lg'>
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <h2>Other Industries</h2>
+                            <h2>Related Industries</h2>
                         </div>
                     </div>
 

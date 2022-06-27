@@ -11,9 +11,9 @@ function descLimit(text, size) {
     return text?.length > size ? text.substr(0, size - 1) + '...' : text;
 }
 
-function Geospatial() {
+function Fintech() {
 
-    const category = 'geospatial';
+    const category = 'fintech';
 
     const [latestIndustrialArticle, setLatestIndustrialArticle] = useState([]);
     const [realtedIndustrialArticles, setRealtedIndustrialArticles] = useState([]);
@@ -40,7 +40,7 @@ function Geospatial() {
     }
 
     return (
-        <div className='industry-page geospatial-page'>
+        <div className='industry-page fintech-page'>
             <div className='industry-banner-section'>
                 <img src={`${BASE_URL}/img/industries/industry-banner.png`} alt={`Industry Banner`} className="industry-banner-img" />
 
@@ -49,9 +49,9 @@ function Geospatial() {
                         <div className='row'>
                             <div className='col-lg-4'>
                                 <div className='industry-banner-content'>
-                                    <h1>Geospatial Industry</h1>
+                                    <h1>Fintech Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>For many years, geospatial analysis has worked hand in hand with the medical sector to illustrate hotspots for diseases in certain medical crises. Today, with so much data available to us, advanced geospatial analytics is playing a part in archeology, disaster response, urban planning, infrastructure, logistics, retail , transportation and government services.</p>
+                                        <p>A combination of "financial" and "technology," fintech is empowering consumers to take charge of their financial lives and ecouraging more pronounced financial literacy. Gone are the old silos that have kept consumers from researching, choosing stocks, and seeing their financial transactions. Everyone now has the chance to advance their financial situation through leveraging advanced technology.</p>
                                     </div>
                                 </div>
                             </div>
@@ -161,15 +161,8 @@ function Geospatial() {
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/nanotech.png`}
                             hoverIcon={`${BASE_URL}/img/industries/nanotech-hover.png`}
-                            category={`Utilities and Energy`}
-                            slug={`utilities-and-energy`}
-                        />
-
-                        <OtherIndustryItem
-                            icon={`${BASE_URL}/img/industries/geospatial.png`}
-                            hoverIcon={`${BASE_URL}/img/industries/geospatial-hover.png`}
-                            category={`Nanotech`}
-                            slug={`nanotech`}
+                            category={`Information Technology`}
+                            slug={`information-technology`}
                         />
 
                         <OtherIndustryItem
@@ -182,15 +175,15 @@ function Geospatial() {
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/hightech.png`}
                             hoverIcon={`${BASE_URL}/img/industries/hightech-hover.png`}
-                            category={`Hightech`}
-                            slug={`high-tech`}
+                            category={`Utilities and Energy`}
+                            slug={`utilities-and-energy`}
                         />
 
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/finance.png`}
                             hoverIcon={`${BASE_URL}/img/industries/finance-hover.png`}
-                            category={`Industrial Equipment`}
-                            slug={`industrial-equipment`}
+                            category={`Biotech`}
+                            slug={`biotech`}
                         />
 
                         <OtherIndustryItem
@@ -205,6 +198,13 @@ function Geospatial() {
                             hoverIcon={`${BASE_URL}/img/industries/agriculture-hover.png`}
                             category={`Agriculture`}
                             slug={`agriculture`}
+                        />
+
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/geospatial.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/geospatial-hover.png`}
+                            category={`Geospatial`}
+                            slug={`geospatial`}
                         />
 
                         <OtherIndustryItem
@@ -253,4 +253,4 @@ function Geospatial() {
     )
 }
 
-export default Geospatial
+export default Fintech

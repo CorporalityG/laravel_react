@@ -6,6 +6,7 @@ import { OtherIndustryItem } from './OtherIndustryItem'
 import { GetInvolved } from '../../ServiceInsights/GetInvolved'
 import { ServicesAskQuote } from '../../ServicesAskQuote/ServicesAskQuote'
 import AOS from "aos"
+import { Helmet } from "react-helmet";
 
 function IndustrySingle() {
 
@@ -39,6 +40,13 @@ function IndustrySingle() {
             {
                 singleIndustry ?
                     <>
+                        <Helmet>
+                            <title>{singleIndustry.meta_title ?? singleIndustry.title}</title>
+                            {singleIndustry.meta_description && <meta name="description" content={singleIndustry.meta_description} />}
+                            {singleIndustry.meta_keywords && <meta name="keywords" content={singleIndustry.meta_keywords} />}
+                            <link rel="canonical" href={`${BASE_URL}/${singleIndustry.slug}/`} />
+                        </Helmet>
+
                         <div className='industry-single-banner'>
                             <div className='container-lg'>
                                 <div className='row industry-single-banner-row'>

@@ -29,7 +29,7 @@
     position: absolute;
 }
 .industry-page .industry-banner-section .industry-banner-content-main {
-    padding-top: 80px;
+    padding-top: 50px;
     width: 100%;
 }
 .industry-page .industry-banner-section .industry-banner-content h1 {
@@ -72,6 +72,17 @@
     padding: 15px 0 0;
     position: relative;
 }
+.industry-page .industry-banner-section .ib-ebook-ttile {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    color: #E1E1E1;
+    z-index: 1;
+}
 .industry-page .industry-banner-section .industry-banner-ebook .industry-cs {
     width: 100%;
     z-index: 1;
@@ -110,13 +121,13 @@
     color: #33657E;
 }
 .industry-page .industry-banner-section .industry-banner-paper-survey-row {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .industry-page .industry-banner-section .industry-banner-paper-survey-item {
     background: #FFFFFF;
     box-shadow: 0px 14px 44px rgba(120, 120, 120, 0.15);
     padding: 25px;
-    height: 270px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -164,10 +175,21 @@
 }
 .industry-page .industry-banner-section .industry-banner-survey {
     align-items: center;
+    position: relative;
 }
 .industry-page .industry-banner-section .industry-banner-survey .industry-your-om {
     max-width: 100%;
     max-height: 150px;
+}
+.industry-page .industry-banner-section .ib-s-title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    color: #E1E1E1;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 40%;
+    left: -30px;
 }
 
 .industry-page .industry-blog-name-section {

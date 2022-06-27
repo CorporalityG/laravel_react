@@ -60,8 +60,9 @@ function AlliedIndustries() {
 
                             <div className='col-lg-8'>
                                 <div className='row'>
-                                    <div className='col-lg-8 offset-lg-4'>
+                                    <div className='col-lg-6 offset-lg-5'>
                                         <div className='industry-banner-ebook'>
+                                            <div className='ib-ebook-ttile'>Ebook</div>
                                             <img src={`${BASE_URL}/img/industries/CORPORALITY-STRIKERS-bg.png`} alt={`CORPORALITY STRIKERS`} className="industry-cs" />
                                             <img src={`${BASE_URL}/img/industries/cs-pattern.png`} alt={`cs-pattern`} className="industry-cs-pattern" />
                                             <Link to={`/`} className='industry-cs-link'>Download</Link>
@@ -72,7 +73,7 @@ function AlliedIndustries() {
                                 <div className='row industry-banner-paper-survey-row'>
                                     <div className='col-md-6'>
                                         <div className='industry-banner-paper-survey-item industry-banner-paper'>
-                                            <div className='paper-survey-item-title'>Reseach Paper</div>
+                                            <div className='paper-survey-item-title'>Research Paper</div>
                                             <div className='paper-survey-item-subtitle'>CAN THE MEDTECH INDUSTRY LOOK UP TO MARKETING FOR A SOLUTION?</div>
                                             <Link to={`/`} className='paper-survey-item-link'>Start Reading</Link>
                                         </div>
@@ -80,6 +81,7 @@ function AlliedIndustries() {
 
                                     <div className='col-md-6'>
                                         <div className='industry-banner-paper-survey-item industry-banner-survey'>
+                                            <div className='ib-s-title'>Survey</div>
                                             <img src={`${BASE_URL}/img/industries/your-om.png`} alt={`your-om`} className="industry-your-om" />
                                             <Link to={`/`} className='paper-survey-item-link'>Get Started</Link>
                                         </div>
@@ -153,11 +155,25 @@ function AlliedIndustries() {
                 <div className='container-lg'>
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <h2>Other Industries</h2>
+                            <h2>Related Industries</h2>
                         </div>
                     </div>
 
                     <div className='row industry-other-industries-row'>
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/finance.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/finance-hover.png`}
+                            category={`Finance`}
+                            slug={`finance`}
+                        />
+
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/construction.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/construction-hover.png`}
+                            category={`Construction`}
+                            slug={`construction`}
+                        />
+                        
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/nanotech.png`}
                             hoverIcon={`${BASE_URL}/img/industries/nanotech-hover.png`}
@@ -180,20 +196,6 @@ function AlliedIndustries() {
                         />
 
                         <OtherIndustryItem
-                            icon={`${BASE_URL}/img/industries/finance.png`}
-                            hoverIcon={`${BASE_URL}/img/industries/finance-hover.png`}
-                            category={`Finance`}
-                            slug={`finance`}
-                        />
-
-                        <OtherIndustryItem
-                            icon={`${BASE_URL}/img/industries/construction.png`}
-                            hoverIcon={`${BASE_URL}/img/industries/construction-hover.png`}
-                            category={`Construction`}
-                            slug={`construction`}
-                        />
-
-                        <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/agriculture.png`}
                             hoverIcon={`${BASE_URL}/img/industries/agriculture-hover.png`}
                             category={`Agriculture`}
@@ -203,8 +205,8 @@ function AlliedIndustries() {
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/geospatial.png`}
                             hoverIcon={`${BASE_URL}/img/industries/geospatial-hover.png`}
-                            category={`Geospatial`}
-                            slug={`geospatial`}
+                            category={`Biotech`}
+                            slug={`biotech`}
                         />
 
                         <OtherIndustryItem

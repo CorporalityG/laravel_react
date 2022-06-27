@@ -87,6 +87,9 @@ import HealthCare from "./components/Industries/HealthCare";
 import UtilitiesAndEnergy from "./components/Industries/UtilitiesAndEnergy";
 import IndustrySingle from "./components/Industries/IndustrySingle/IndustrySingle";
 import IndustryCategory from "./components/Industries/Category/IndustryCategory";
+import Fintech from "./components/Industries/Fintech";
+import Insurtech from "./components/Industries/Insurtech";
+import Edtech from "./components/Industries/Edtech";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -200,6 +203,9 @@ function App() {
             <Route path="/agriculture" element={<Agriculture />} />
             <Route path="/health-care" element={<HealthCare />} />
             <Route path="/utilities-and-energy" element={<UtilitiesAndEnergy />} />
+            <Route path="/fintech" element={<Fintech />} />
+            <Route path="/insurtech" element={<Insurtech />} />
+            <Route path="/edtech" element={<Edtech />} />
 
             {/* <Route path="/search/:search_string" element={<Blogs />}/> */}
 

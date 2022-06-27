@@ -17,6 +17,8 @@ use App\Http\Controllers\CsuitController;
 use App\Http\Controllers\IndustrialArticleCategoryController;
 use App\Http\Controllers\IndustrialArticleController;
 
+use App\Http\Controllers\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,4 +69,7 @@ Route::group(['middleware'=>'auth'], function()
     Route::get('industrial-article-subcategories', [IndustrialArticleCategoryController::class, 'getSubcategories'])->name('industrial-article-categories.subcategories');
     Route::resources(['industrial-articles' => IndustrialArticleController::class]);
     Route::get('industrial-article-slug', [IndustrialArticleController::class, 'getSlug'])->name('industrial-articles.slug');
+
+    Route::resources(['pages' => PageController::class]);
+    Route::get('page-slug', [PageController::class, 'getSlug'])->name('pages.slug');
 });

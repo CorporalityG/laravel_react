@@ -51,17 +51,16 @@ function Agriculture() {
                                 <div className='industry-banner-content'>
                                     <h1>Agriculture Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien facilisi augue posuere fringilla. Sit dictum hac viverra ac urna. Accumsan vitae faucibus purus, ultrices consectetur aliquam duis massa arcu. Tellus in morbi massa at a neque, augue sed dapibus. Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
-                                        <p>Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
-                                        <p>Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
+                                        <p>By 2050, it is projected that the Earth will need to feed around $9.7 billion people. With the agricultural industy four times more effective in raising the quality of life among the poorer sectors, farming is crucial to not only healthy, sustainable and inclusive food systems, but also to economic growth. With the right tools and strategy, the agriculture sector can also help solve climate change.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div className='col-lg-8'>
                                 <div className='row'>
-                                    <div className='col-lg-8 offset-lg-4'>
+                                    <div className='col-lg-6 offset-lg-5'>
                                         <div className='industry-banner-ebook'>
+                                            <div className='ib-ebook-ttile'>Ebook</div>
                                             <img src={`${BASE_URL}/img/industries/CORPORALITY-STRIKERS-bg.png`} alt={`CORPORALITY STRIKERS`} className="industry-cs" />
                                             <img src={`${BASE_URL}/img/industries/cs-pattern.png`} alt={`cs-pattern`} className="industry-cs-pattern" />
                                             <Link to={`/`} className='industry-cs-link'>Download</Link>
@@ -72,7 +71,7 @@ function Agriculture() {
                                 <div className='row industry-banner-paper-survey-row'>
                                     <div className='col-md-6'>
                                         <div className='industry-banner-paper-survey-item industry-banner-paper'>
-                                            <div className='paper-survey-item-title'>Reseach Paper</div>
+                                            <div className='paper-survey-item-title'>Research Paper</div>
                                             <div className='paper-survey-item-subtitle'>CAN THE MEDTECH INDUSTRY LOOK UP TO MARKETING FOR A SOLUTION?</div>
                                             <Link to={`/`} className='paper-survey-item-link'>Start Reading</Link>
                                         </div>
@@ -80,6 +79,7 @@ function Agriculture() {
 
                                     <div className='col-md-6'>
                                         <div className='industry-banner-paper-survey-item industry-banner-survey'>
+                                            <div className='ib-s-title'>Survey</div>
                                             <img src={`${BASE_URL}/img/industries/your-om.png`} alt={`your-om`} className="industry-your-om" />
                                             <Link to={`/`} className='paper-survey-item-link'>Get Started</Link>
                                         </div>
@@ -153,7 +153,7 @@ function Agriculture() {
                 <div className='container-lg'>
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <h2>Other Industries</h2>
+                            <h2>Related Industries</h2>
                         </div>
                     </div>
 
@@ -180,6 +180,20 @@ function Agriculture() {
                         />
 
                         <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/agriculture.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/agriculture-hover.png`}
+                            category={`Health Care`}
+                            slug={`health-care`}
+                        />
+
+                        <OtherIndustryItem
+                            icon={`${BASE_URL}/img/industries/geospatial.png`}
+                            hoverIcon={`${BASE_URL}/img/industries/geospatial-hover.png`}
+                            category={`Geospatial`}
+                            slug={`geospatial`}
+                        />
+
+                        <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/finance.png`}
                             hoverIcon={`${BASE_URL}/img/industries/finance-hover.png`}
                             category={`Finance`}
@@ -194,24 +208,10 @@ function Agriculture() {
                         />
 
                         <OtherIndustryItem
-                            icon={`${BASE_URL}/img/industries/agriculture.png`}
-                            hoverIcon={`${BASE_URL}/img/industries/agriculture-hover.png`}
-                            category={`Agriculture`}
-                            slug={`agriculture`}
-                        />
-
-                        <OtherIndustryItem
-                            icon={`${BASE_URL}/img/industries/geospatial.png`}
-                            hoverIcon={`${BASE_URL}/img/industries/geospatial-hover.png`}
-                            category={`Geospatial`}
-                            slug={`geospatial`}
-                        />
-
-                        <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/manufacturing.png`}
                             hoverIcon={`${BASE_URL}/img/industries/manufacturing-hover.png`}
-                            category={`Manufacturing`}
-                            slug={`manufacturing`}
+                            category={`Biotech`}
+                            slug={`biotech`}
                         />
                     </div>
                 </div>

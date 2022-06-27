@@ -39,16 +39,16 @@ const Industries = () => {
                     <h6 className="industries-item-content">Nanotech</h6>
                     <div className="diamond-line"></div>
                 </Link>
-                <Link to="/age-care-and-retirement" onClick={closeOnLink} className="industries-item">
-                    <h6 className="industries-item-content">Age Care and retirement</h6>
+                <Link to="/fintech" onClick={closeOnLink} className="industries-item">
+                    <h6 className="industries-item-content">Fintech</h6>
                     <div className="diamond-line"></div>
                 </Link>
                 <Link to="/allied-industries" onClick={closeOnLink} className="industries-item">
                     <h6 className="industries-item-content">Allied Industries </h6>
                     <div className="diamond-line"></div>
                 </Link>
-                <Link to="/industrial-equipment" onClick={closeOnLink} className="industries-item">
-                    <h6 className="industries-item-content">Industrial Equipment</h6>
+                <Link to="/edtech" onClick={closeOnLink} className="industries-item">
+                    <h6 className="industries-item-content">Edtech</h6>
                     <div className="diamond-line"></div>
                 </Link>
             </div>
@@ -79,8 +79,8 @@ const Industries = () => {
                     <h6 className="industries-item-content">Agriculture</h6>
                     <div className="diamond-line"></div>
                 </Link>
-                <Link to="/health-care" onClick={closeOnLink} className="industries-item">
-                    <h6 className="industries-item-content">Health Care</h6>
+                <Link to="/insurtech" onClick={closeOnLink} className="industries-item">
+                    <h6 className="industries-item-content">Insurtech</h6>
                     <div className="diamond-line"></div>
                 </Link>
                 <Link to="/utilities-and-energy" onClick={closeOnLink} className="industries-item">
