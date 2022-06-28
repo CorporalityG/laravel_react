@@ -240,23 +240,27 @@ function OutsourcedCMO() {
                             <div className="cmo-faqs-list">
                                 <Accordion>
                                     <Accordion.Item eventKey="0">
-                                        <Accordion.Header>What is Lorem Ipsum?</Accordion.Header>
+                                        <Accordion.Header>How will an Outsourced CMO impact my business?</Accordion.Header>
                                         <Accordion.Body>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                            <p>An Outsourced CMO is a skilled marketing leader who understands all of the moving parts and pieces inside of your organization, including past marketing campaigns assets that you have on hand, such as potential customers, email campaigns, social media ads, and the like.</p>
+                                            <p>This also comprises of the human resource capacity that's available so that the chief marketing officer can then build a strategy that works best for your organization. The Outsourced chief marketing officer will be able to impact your business by bringing in the right talent and ensuring they achieve the outcomes needed.
+                                            </p>
                                         </Accordion.Body>
                                     </Accordion.Item>
 
                                     <Accordion.Item eventKey="1">
-                                        <Accordion.Header>Why do we use it?</Accordion.Header>
+                                        <Accordion.Header>How will an Outsourced Chief Marketing Officer work with my current marketing team?</Accordion.Header>
                                         <Accordion.Body>
-                                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                            <p>An Outsourced CMO will not replace your team members.</p>
+                                            <p>Most organizations have smart capable marketing staff, but no real strategic leadership in the organization. With the strategic leadership of a CMO, the marketing team is able to get more work done.</p>
+                                            <p>The perfect outcome for an Outsourced CMO is to support and encourage the growth of your current marketing team, and hiring additional marketing support as needed.</p>
                                         </Accordion.Body>
                                     </Accordion.Item>
 
                                     <Accordion.Item eventKey="2">
-                                        <Accordion.Header>Where does it come from?</Accordion.Header>
+                                        <Accordion.Header>Why are CMOs high in demand?</Accordion.Header>
                                         <Accordion.Body>
-                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+                                            <p>CMOs are leading their organizations in understanding how to apply technology for the benefit of their business. With an advanced level of understanding for today's tech, marketing teams today can be more valuable to the overall business and more efficient with larger scale digital initiatives.</p>
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>

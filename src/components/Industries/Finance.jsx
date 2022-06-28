@@ -42,7 +42,7 @@ function Finance() {
     return (
         <div className='industry-page finance-page'>
             <div className='industry-banner-section'>
-                <img src={`${BASE_URL}/img/industries/industry-banner.png`} alt={`Industry Banner`} className="industry-banner-img" />
+                <img src={`${BASE_URL}/img/industries/Finance-banner.png`} alt={`Finance Industry`} className="industry-banner-img" />
 
                 <div className='industry-banner-content-main'>
                     <div className='container-lg'>

@@ -8,6 +8,7 @@ import learnmore from "../NewsLetter/learnmore.png";
 import logo from "../NewsLetter/logo.png";
 import rightrect from "../NewsLetter/rightrect.png";
 import wall from "../NewsLetter/wall.png";
+import { Link } from "react-router-dom";
 
 const NewsLetter = () => {
   useEffect(() => {
@@ -33,7 +34,9 @@ const NewsLetter = () => {
                 Change is positive and long-lasting with us.
               </p>
               <div data-aos="fade-right" data-aos-delay="500" className="aos-in-button">
-                <button className="button-seventh">Apply here</button>
+                <button className="button-seventh">
+                  <Link to={`/careers`}>Apply here</Link>
+                </button>
               </div>
               <br />
               <br />

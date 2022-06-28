@@ -42,7 +42,7 @@ function MedTech() {
     return (
         <div className='industry-page medtech-page'>
             <div className='industry-banner-section'>
-                <img src={`${BASE_URL}/img/industries/industry-banner.png`} alt={`Industry Banner`} className="industry-banner-img" />
+                <img src={`${BASE_URL}/img/industries/medtech-banner.png`} alt={`Med Tech Industry`} className="industry-banner-img" />
 
                 <div className='industry-banner-content-main'>
                     <div className='container-lg'>

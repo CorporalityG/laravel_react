@@ -42,14 +42,14 @@ function Edtech() {
     return (
         <div className='industry-page edtech-page'>
             <div className='industry-banner-section'>
-                <img src={`${BASE_URL}/img/industries/industry-banner.png`} alt={`Industry Banner`} className="industry-banner-img" />
+                <img src={`${BASE_URL}/img/industries/EduTech-banner.png`} alt={`EduTech Industry`} className="industry-banner-img" />
 
                 <div className='industry-banner-content-main'>
                     <div className='container-lg'>
                         <div className='row'>
                             <div className='col-lg-4'>
                                 <div className='industry-banner-content'>
-                                    <h1>Edtech Industry</h1>
+                                    <h1>EduTech Industry</h1>
                                     <div className='industry-banner-desc'>
                                         <p>By 2028, experts are predicting that the edtech industry is going to surpass $377 to make schooling more accessible and convenient for children with varying needs. As education and training is the backbone of communities, technology is becoming useful to share information and skills at a faster rate.</p>
                                     </div>

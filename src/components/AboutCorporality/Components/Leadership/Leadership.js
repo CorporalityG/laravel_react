@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 import image_1 from "./image_1.png";
 import image_2 from "./image_2.png";
@@ -80,14 +81,11 @@ function Leadership() {
               </div>
             </div>
           </div>
-          <div
+          <Link to={`/our-team`} 
             className="leadership_button"
             data-aos="fade-up"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="1000"
-          >
-            View All Team
-          </div>
+            data-aos-duration="1000">View All Team</Link>
         </div>
       </div>
     </div>

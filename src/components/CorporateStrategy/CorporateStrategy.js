@@ -238,7 +238,7 @@ function CorporateStrategy() {
                 />
 
                 <MethodologyProcessItem
-                  icon={`${BASE_URL}/img/OutsourcedCOO/Scheduling.png`}
+                  icon={`${BASE_URL}/img/OutsourcedCOO/scheduling.png`}
                   title={`scheduling`}
                 />
 

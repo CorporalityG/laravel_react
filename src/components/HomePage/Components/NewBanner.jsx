@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { API_BASE_URL, BASE_URL } from '../../../config';
+import { BASE_URL } from '../../../config';
 import "./NewBanner.css"
 import Modal from 'react-bootstrap/Modal'
+import { Link } from "react-router-dom";
 
 const NewBanner = () => {
     const [indicatorId, setIndicatorId] = useState(1);
@@ -177,7 +178,7 @@ const NewBanner = () => {
                                 <h1 className="bannerHead">Our focus is on creating an impact that multiplies your business</h1>
                                 <p className="bannerSubtitle">We believe in communicating through omni effect, actionable insights, and implementing solutions with guaranteed results.</p>
                                 <div className="bannerBtn">
-                                    <a href="javascript:;">Ask us</a>
+                                    <Link to={`/contact`} className="learn-more">Ask us</Link>
                                 </div>
                             </div>
                         </div>

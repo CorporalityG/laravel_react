@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import './ContactMap.css'
+import { Link } from "react-router-dom";
 
 const ContactMap = () => {
 
@@ -36,7 +37,9 @@ const ContactMap = () => {
                                     <div className="conmap-detail-head">
                                         <h2 className="m-3">Partner With Us</h2>
                                         <p className="m-3">Corporality Global is always on the look out for enterprising partners who can build the business and grow along with us. Our parternship journeys are designed to enable, strengthen and grow your business using high-level performance plans and strategies.</p>
-                                        <button type="button" className="btn know_button">Know More</button>
+                                        <button className="btn know_button">
+                                        <Link to={`/partnership-programmes`}>Know More</Link>
+                                        </button>
                                         <a href="tel:61283794089" className="btn footer-button">
                                             <div className="footer-button-text p-1">
 

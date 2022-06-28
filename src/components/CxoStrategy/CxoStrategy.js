@@ -252,23 +252,24 @@ function CxoStrategy() {
               <div className="cxo-faqs-list">
                 <Accordion>
                   <Accordion.Item eventKey="0">
-                    <Accordion.Header>What is Lorem Ipsum?</Accordion.Header>
+                    <Accordion.Header>Why should my company outsource a CXO?</Accordion.Header>
                     <Accordion.Body>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                      <p>The chief experience officer's responsibility is to prevent customer neglect and ensure each step of the buyer's journey and the customer lifecycle is fully optimized and user friendly. The goal is for customer satisfaction to remain high throughout the relationship.</p>
+                      <p>Because customer experience drives over two-thirds of customer loyalty, a good customer experience makes a person five times more likely to recommend a company and more likely to purchase in the future. </p>
                     </Accordion.Body>
                   </Accordion.Item>
 
                   <Accordion.Item eventKey="1">
-                    <Accordion.Header>Why do we use it?</Accordion.Header>
+                    <Accordion.Header>What are a Chief Experience Officer's duties?</Accordion.Header>
                     <Accordion.Body>
-                      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      <p>Chief experience officers must constantly test and evalute business practices, methods, and strategies to improve customer engagement while sustaining employee interaction. A CXO does this by ensuring employees are passionate about the company's products and services so that this culture and training comes across when working with customers.</p>
                     </Accordion.Body>
                   </Accordion.Item>
 
                   <Accordion.Item eventKey="2">
-                    <Accordion.Header>Where does it come from?</Accordion.Header>
+                    <Accordion.Header>Are CXOs high in demand?</Accordion.Header>
                     <Accordion.Body>
-                      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+                      <p>Companies that include customer experience in their value proposition or are customer-centric by design have a C-level position in charge of CX. Every Chief Experience Officer will vary in experience and background, more companies are valuing the diverse insights that they can offer. In 2020, almost 90% oforganizations reported that they have a CXO.</p>
                     </Accordion.Body>
                   </Accordion.Item>
                 </Accordion>

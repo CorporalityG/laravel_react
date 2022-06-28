@@ -42,7 +42,7 @@ function Nanotech() {
     return (
         <div className='industry-page nanotech-page'>
             <div className='industry-banner-section'>
-                <img src={`${BASE_URL}/img/industries/industry-banner.png`} alt={`Industry Banner`} className="industry-banner-img" />
+                <img src={`${BASE_URL}/img/industries/Nanotech-banner.png`} alt={`Nanotech Industry`} className="industry-banner-img" />
 
                 <div className='industry-banner-content-main'>
                     <div className='container-lg'>

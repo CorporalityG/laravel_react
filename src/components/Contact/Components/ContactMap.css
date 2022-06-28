@@ -33,6 +33,9 @@
 .conmap-detail-head > button{
   margin: 2% !important;
 }
+.know_button a {
+  color: #000;
+}
 
 .SpeakerBooking {
   border: 1px solid;

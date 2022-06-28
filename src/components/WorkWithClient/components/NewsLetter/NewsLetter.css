@@ -61,6 +61,9 @@
   line-height: 16px;
   text-align: center;
 }
+.button-seventh a {
+  color: #fff;
+}
 
 .emailinput {
   width: 60%;

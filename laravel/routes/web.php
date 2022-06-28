@@ -72,4 +72,5 @@ Route::group(['middleware'=>'auth'], function()
 
     Route::resources(['pages' => PageController::class]);
     Route::get('page-slug', [PageController::class, 'getSlug'])->name('pages.slug');
+    Route::post('page-meta', [PageController::class, 'saveMeta'])->name('pages.meta');
 });

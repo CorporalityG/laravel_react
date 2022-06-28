@@ -42,7 +42,7 @@ function Fintech() {
     return (
         <div className='industry-page fintech-page'>
             <div className='industry-banner-section'>
-                <img src={`${BASE_URL}/img/industries/industry-banner.png`} alt={`Industry Banner`} className="industry-banner-img" />
+                <img src={`${BASE_URL}/img/industries/Fintech-banner.png`} alt={`Fintech Industry`} className="industry-banner-img" />
 
                 <div className='industry-banner-content-main'>
                     <div className='container-lg'>
