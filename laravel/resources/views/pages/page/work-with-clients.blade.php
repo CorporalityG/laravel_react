@@ -152,6 +152,36 @@
 							<textarea name="fearless_item_1_description" id="fearless_item_1_description" class="form-control" placeholder="{{ __('Item 1 Description') }}">{{ old('fearless_item_1_description', $RS_Meta['fearless_item_1_description'] ?? '') }}</textarea>
 						</div>
 					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_1_btn_text">{{ __('Item 1 Button Text') }}</label>
+							<input type="text" name="fearless_item_1_btn_text" id="fearless_item_1_btn_text" value="{{ old('fearless_item_1_btn_text', $RS_Meta['fearless_item_1_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_1_btn_link">{{ __('Item 1 Button Link') }}</label>
+							<input type="text" name="fearless_item_1_btn_link" id="fearless_item_1_btn_link" value="{{ old('fearless_item_1_btn_link', $RS_Meta['fearless_item_1_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_1_icon">{{ __('Item 1 Icon') }}</label>
+							<div class="input-group{{ $errors->has('fearless_item_1_icon') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="fearless_item_1_icon" id="fearless_item_1_icon" value="{{ old('fearless_item_1_icon') }}" class="custom-file-input" placeholder="Choose Icon" accept="image/*">
+									<label class="custom-file-label" for="fearless_item_1_icon">Choose Icon</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['fearless_item_1_icon']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['fearless_item_1_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
 				</div>
 
 				<hr >
@@ -170,6 +200,36 @@
 							<textarea name="fearless_item_2_description" id="fearless_item_2_description" class="form-control" placeholder="{{ __('Item 2 Description') }}">{{ old('fearless_item_2_description', $RS_Meta['fearless_item_2_description'] ?? '') }}</textarea>
 						</div>
 					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_2_btn_text">{{ __('Item 2 Button Text') }}</label>
+							<input type="text" name="fearless_item_2_btn_text" id="fearless_item_2_btn_text" value="{{ old('fearless_item_2_btn_text', $RS_Meta['fearless_item_2_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_2_btn_link">{{ __('Item 2 Button Link') }}</label>
+							<input type="text" name="fearless_item_2_btn_link" id="fearless_item_2_btn_link" value="{{ old('fearless_item_2_btn_link', $RS_Meta['fearless_item_2_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_2_icon">{{ __('Item 2 Icon') }}</label>
+							<div class="input-group{{ $errors->has('fearless_item_2_icon') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="fearless_item_2_icon" id="fearless_item_2_icon" value="{{ old('fearless_item_2_icon') }}" class="custom-file-input" placeholder="Choose Icon" accept="image/*">
+									<label class="custom-file-label" for="fearless_item_2_icon">Choose Icon</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['fearless_item_2_icon']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['fearless_item_2_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
 				</div>
 
 				<hr >
@@ -186,6 +246,36 @@
 						<div class="form-group">
 							<label for="fearless_item_3_description">{{ __('Item 3 Description') }}</label>
 							<textarea name="fearless_item_3_description" id="fearless_item_3_description" class="form-control" placeholder="{{ __('Item 3 Description') }}">{{ old('fearless_item_3_description', $RS_Meta['fearless_item_3_description'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_3_btn_text">{{ __('Item 3 Button Text') }}</label>
+							<input type="text" name="fearless_item_3_btn_text" id="fearless_item_3_btn_text" value="{{ old('fearless_item_3_btn_text', $RS_Meta['fearless_item_3_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_3_btn_link">{{ __('Item 3 Button Link') }}</label>
+							<input type="text" name="fearless_item_3_btn_link" id="fearless_item_3_btn_link" value="{{ old('fearless_item_3_btn_link', $RS_Meta['fearless_item_3_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_3_icon">{{ __('Item 3 Icon') }}</label>
+							<div class="input-group{{ $errors->has('fearless_item_3_icon') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="fearless_item_3_icon" id="fearless_item_3_icon" value="{{ old('fearless_item_3_icon') }}" class="custom-file-input" placeholder="Choose Icon" accept="image/*">
+									<label class="custom-file-label" for="fearless_item_3_icon">Choose Icon</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['fearless_item_3_icon']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['fearless_item_3_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
 						</div>
 					</div>
 				</div>

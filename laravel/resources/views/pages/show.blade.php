@@ -25,7 +25,9 @@
                     </div>
 
                     <div class="card-body">
-                        @if( $RS_Row->slug=='about-corporality' )
+                        @if( $RS_Row->slug=='home' )
+                            @include('pages.page.home')
+                        @elseif( $RS_Row->slug=='about-corporality' )
                             @include('pages.page.about-corporality')
                         @elseif( $RS_Row->slug=='work-with-clients' )
                             @include('pages.page.work-with-clients')
@@ -33,6 +35,18 @@
                             @include('pages.page.inclusion-and-diversity')
                         @elseif( $RS_Row->slug=='partnership-programmes' )
                             @include('pages.page.partnership-programmes')
+                        @elseif( $RS_Row->slug=='sustainable-growth' )
+                            @include('pages.page.sustainable-growth')
+                        @elseif( $RS_Row->slug=='strategy-and-consulting' )
+                            @include('pages.page.strategy-and-consulting')
+                        @elseif( $RS_Row->slug=='interactive-blueprint' )
+                            @include('pages.page.interactive-blueprint')
+                        @elseif( $RS_Row->slug=='why-corporality-effect' )
+                            @include('pages.page.why-corporality-effect')
+                        @elseif( $RS_Row->slug=='what-is-corporality-effect' )
+                            @include('pages.page.what-is-corporality-effect')
+                        @elseif( $RS_Row->slug=='corporality-culturally-conditioned' )
+                            @include('pages.page.corporality-culturally-conditioned')
                         @endif
                     </div>
 
