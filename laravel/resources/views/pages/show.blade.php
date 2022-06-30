@@ -47,6 +47,20 @@
                             @include('pages.page.what-is-corporality-effect')
                         @elseif( $RS_Row->slug=='corporality-culturally-conditioned' )
                             @include('pages.page.corporality-culturally-conditioned')
+                        @elseif( $RS_Row->slug=='corporality-inbound-shiftings' )
+                            @include('pages.page.corporality-inbound-shiftings')
+                        @elseif( $RS_Row->slug=='corporality-striker' )
+                            @include('pages.page.corporality-striker')
+                        @elseif( $RS_Row->slug=='brand-positioning' )
+                            @include('pages.page.brand-positioning')
+                        @elseif( $RS_Row->slug=='digital-media-marketing' )
+                            @include('pages.page.digital-media-marketing')
+                        @elseif( $RS_Row->slug=='cxo-strategy' )
+                            @include('pages.page.cxo-strategy')
+                        @elseif( $RS_Row->slug=='outsourced-cmo' )
+                            @include('pages.page.outsourced-cmo')
+                        @elseif( $RS_Row->slug=='corporate-strategy' )
+                            @include('pages.page.corporate-strategy')
                         @endif
                     </div>
 

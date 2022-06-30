@@ -627,5 +627,5 @@ $(function () {
     // Summernote
     $('#banner_description').summernote();
 	$('#business_need_description').summernote();
-})
+});
 </script>

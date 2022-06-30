@@ -48,35 +48,31 @@ const NewBanner = () => {
     const bannerCountFunc = (value) => {
         setBannerCount(value);
     }
-    
+
     useEffect(() => {
         setInterval(() => {
             setIndicatorId(i => {
                 //console.log(i);
-                if(i < 3)
-                {
+                if (i < 3) {
                     return i + 1;
                 }
-                else
-                {
+                else {
                     return 1;
                 }
             });
-          }, 8000);
+        }, 8000);
 
         setInterval(() => {
             setBannerCount(c => {
                 // console.log(c);
-                if(c < 3)
-                {
+                if (c < 3) {
                     return c + 1;
                 }
-                else
-                {
+                else {
                     return 1;
                 }
             });
-          }, 8000);
+        }, 8000);
     }, [])
 
     return (
@@ -85,7 +81,7 @@ const NewBanner = () => {
 
                 <div className="mainBanner">
 
-                    <div className={`mainPartBanner ${indicatorId===1? "" : "bannerTextHide"}`}>
+                    <div className={`mainPartBanner ${indicatorId === 1 ? "" : "bannerTextHide"}`}>
                         <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="banner-bg-image" className="banner-bg-image" />
 
                         <div className="leftPartBanner" data-aos="fade-left" data-aos-duration="2500">
@@ -97,11 +93,13 @@ const NewBanner = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="bgPartBanner">
                             <div className="mainBannerImg">
                                 <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="Global Management Consulting Company" className="banner-image" data-aos="fade-down" data-aos-duration="2500" />
-                                <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" data-aos="fade-up" data-aos-duration="2700" />
+                                <div onClick={() => window.open("https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg")}>
+                                    <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" data-aos="fade-up" data-aos-duration="2700" />
+                                </div>
                             </div>
 
                             <div className="bannerImgs">
@@ -116,20 +114,20 @@ const NewBanner = () => {
                             <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="Video Thumbnail" />
                             {/* {!showYoutube && <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="video-thumbnail" />} */}
                         </div>
-                        
-                        <Modal show={show==1 ? show : ''} onHide={handleClose} size="lg" centered>
+
+                        <Modal show={show == 1 ? show : ''} onHide={handleClose} size="lg" centered>
                             <Modal.Header closeButton>Global Management Consulting and Marketing Company</Modal.Header>
                             <Modal.Body closeButton>
                                 <div className="home_banner_modal">
                                     <video src={BASE_URL + '/img/home-page-banner.mp4'} controls={true} autoPlay={true} />
                                     {/* <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
-                                </div>   
+                                </div>
                             </Modal.Body>
                         </Modal>
-                        
+
                     </div>
 
-                    <div className={`mainPartBanner ${indicatorId===2? "" : "bannerTextHide"}`}>
+                    <div className={`mainPartBanner ${indicatorId === 2 ? "" : "bannerTextHide"}`}>
                         <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="banner-bg" className="banner-bg-image" />
 
                         <div className="leftPartBanner">
@@ -137,7 +135,7 @@ const NewBanner = () => {
                                 <h1 className="bannerHead">Delivering Results You Can Visualize</h1>
                                 <p className="bannerSubtitle">Corporality is a strategic consulting firm that provides over 8 years of market intelligence backed by data-driven strategies to deliver measurable results.</p>
                                 <div className="bannerBtn">
-                                    <a href="javascript:;">Request call back</a>
+                                    <Link to={`/contact`} className="learn-more">Request call back</Link>
                                 </div>
                             </div>
                         </div>
@@ -145,7 +143,9 @@ const NewBanner = () => {
                         <div className="bgPartBanner">
                             <div className="mainBannerImg">
                                 <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="banner main" className="banner-image" />
-                                <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
+                                <div onClick={() => window.open("https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg")}>
+                                    <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
+                                </div>
                             </div>
 
                             <div className="bannerImgs">
@@ -160,17 +160,17 @@ const NewBanner = () => {
                             <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="Video Thumbnail" />
                         </div>
 
-                        <Modal show={show==2 ? show : ''} onHide={handleClose} size="lg" centered>
+                        <Modal show={show == 2 ? show : ''} onHide={handleClose} size="lg" centered>
                             <Modal.Header closeButton>Delivering Results You Can Visualize</Modal.Header>
                             <Modal.Body closeButton>
                                 <div className="home_banner_modal">
                                     <video src={BASE_URL + '/img/home-page-banner.mp4'} controls={true} autoPlay={true} />
-                                </div>   
+                                </div>
                             </Modal.Body>
                         </Modal>
                     </div>
 
-                    <div className={`mainPartBanner ${indicatorId===3? "" : "bannerTextHide"}`}>
+                    <div className={`mainPartBanner ${indicatorId === 3 ? "" : "bannerTextHide"}`}>
                         <img src={BASE_URL + '/img/HomePage/media/banner-bg-image.png'} alt="banner-bg" className="banner-bg-image" />
 
                         <div className="leftPartBanner">
@@ -186,7 +186,9 @@ const NewBanner = () => {
                         <div className="bgPartBanner">
                             <div className="mainBannerImg">
                                 <img src={BASE_URL + '/img/HomePage/media/banner-image-main.png'} alt="banner main" className="banner-image" />
-                                <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
+                                <div onClick={() => window.open("https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg")}>
+                                    <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
+                                </div>
                             </div>
 
                             <div className="bannerImgs">
@@ -201,20 +203,20 @@ const NewBanner = () => {
                             <img src={BASE_URL + '/img/HomePage/media/video-thumbnail.png'} alt="Video Thumbnail" />
                         </div>
 
-                        <Modal show={show==3 ? show : ''} onHide={handleClose} size="lg" centered>
+                        <Modal show={show == 3 ? show : ''} onHide={handleClose} size="lg" centered>
                             <Modal.Header closeButton>Our focus is on creating an Impact that multiplies your business</Modal.Header>
                             <Modal.Body closeButton>
                                 <div className="home_banner_modal">
                                     <video src={BASE_URL + '/img/home-page-banner.mp4'} controls={true} autoPlay={true} />
-                                </div>   
+                                </div>
                             </Modal.Body>
                         </Modal>
                     </div>
 
                     <div className="leftIndicators">
-                        <div className={`indicatorCircle ${indicatorId === 1? "activeIndicatorCircle" : ""}`} onClick={() => { bannerCountFunc(1); setIndicatorId(1); }} ></div>
-                        <div className={`indicatorCircle ${indicatorId === 2? "activeIndicatorCircle" : ""}`} onClick={() =>{ bannerCountFunc(2); setIndicatorId(2); }}></div>
-                        <div className={`indicatorCircle ${indicatorId === 3? "activeIndicatorCircle" : ""}`} onClick={() =>{ bannerCountFunc(3); setIndicatorId(3); }}></div>
+                        <div className={`indicatorCircle ${indicatorId === 1 ? "activeIndicatorCircle" : ""}`} onClick={() => { bannerCountFunc(1); setIndicatorId(1); }} ></div>
+                        <div className={`indicatorCircle ${indicatorId === 2 ? "activeIndicatorCircle" : ""}`} onClick={() => { bannerCountFunc(2); setIndicatorId(2); }}></div>
+                        <div className={`indicatorCircle ${indicatorId === 3 ? "activeIndicatorCircle" : ""}`} onClick={() => { bannerCountFunc(3); setIndicatorId(3); }}></div>
                     </div>
                 </div>
             </div>
@@ -245,7 +247,7 @@ const NewBanner = () => {
 
             <div className="twoDiamonds">
                 <div data-aos="fade-right" className="phone-icon" data-aos-duration="2800">
-                    <img src={BASE_URL + '/img/HomePage/media/phone-icon.png'} alt="phone" onClick={() => window.open("tel:61283794089","_self")} />
+                    <img src={BASE_URL + '/img/HomePage/media/phone-icon.png'} alt="phone" onClick={() => window.open("tel:61283794089", "_self")} />
                 </div>
                 <div data-aos="fade-left" className="banner-count" data-aos-duration="2800">
                     <span className="bigBannerCount">0{bannerCount}</span>/<span className="smallBannerCount">03</span>
@@ -261,7 +263,7 @@ const NewBanner = () => {
                     <img src={BASE_URL + '/img/HomePage/media/smallRectangle.png'} alt="smallRectangle" />
                 </div>*/}
             </div>
-            
+
         </div>
     )
 }

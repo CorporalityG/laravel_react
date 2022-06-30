@@ -53,16 +53,16 @@ export default function Banner2() {
           <div data-aos="flip-right" className="sbox d-flex align-items-center my-3 px-3 justify-content-evenly position-relative">
             <div className="boxContent p-3 align-items-center position-absolute">
               <p className=" boxHead text-center mt-5">
-                Social Impact
+              Sustainable Growth
               </p>
               <p className="text-wrap text-center mt-2">
                 Prospective plans to give back to society making a green
                 environment a reality
               </p>
-              <div className="learn-more">
+              <Link to={`/sustainable-growth`} className="learn-more">
                 Learn More
                 <img src={BASE_URL + '/img/HomePage/media/right-arrow.png'} alt="Arrow" />
-              </div>
+              </Link>
             </div>
             <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
               <div className="purpleD align-items-center"></div>
