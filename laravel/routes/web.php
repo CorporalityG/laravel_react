@@ -19,6 +19,12 @@ use App\Http\Controllers\IndustrialArticleController;
 
 use App\Http\Controllers\PageController;
 
+use App\Http\Controllers\JobController;
+
+use App\Http\Controllers\TestimonialController;
+
+use App\Http\Controllers\TeamMemberController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -73,4 +79,11 @@ Route::group(['middleware'=>'auth'], function()
     Route::resources(['pages' => PageController::class]);
     Route::get('page-slug', [PageController::class, 'getSlug'])->name('pages.slug');
     Route::post('page-meta', [PageController::class, 'saveMeta'])->name('pages.meta');
+
+    Route::resources(['jobs' => JobController::class]);
+    Route::get('job-slug', [JobController::class, 'getSlug'])->name('jobs.slug');
+
+    Route::resources(['testimonials' => TestimonialController::class]);
+
+    Route::resources(['team-members' => TeamMemberController::class]);
 });

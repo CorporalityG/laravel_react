@@ -330,16 +330,16 @@
 
                         <!-- pages menu start -->
                         @php
-                          $pagrLinkActive = '';
+                          $pageLinkActive = '';
                         @endphp
 
                         @if( request()->routeIs('pages.index') || request()->is('pages/*') )
                           @php
-                            $pagrLinkActive = 'active';
+                            $pageLinkActive = 'active';
                           @endphp
                         @endif
                         <li class="nav-item">
-                          <a href="{{ route('pages.index') }}" class="nav-link {{ $pagrLinkActive }}">
+                          <a href="{{ route('pages.index') }}" class="nav-link {{ $pageLinkActive }}">
                             <i class="nav-icon fas fa-file"></i>
                             <p>
                               {{ __('Pages') }}
@@ -348,6 +348,75 @@
                           </a>
                         </li>
                         <!-- pages menu end -->
+
+                        <div class="post"></div>
+
+                        <!-- jobs menu start -->
+                        @php
+                          $jobLinkActive = '';
+                        @endphp
+
+                        @if( request()->routeIs('jobs.index') || request()->is('jobs/*') )
+                          @php
+                            $jobLinkActive = 'active';
+                          @endphp
+                        @endif
+                        <li class="nav-item">
+                          <a href="{{ route('jobs.index') }}" class="nav-link {{ $jobLinkActive }}">
+                            <i class="nav-icon fas fa-graduation-cap"></i>
+                            <p>
+                              {{ __('Jobs') }}
+                              <i class="right fas fa-angle-left"></i>
+                            </p>
+                          </a>
+                        </li>
+                        <!-- jobs menu end -->
+
+                        <div class="post"></div>
+
+                        <!-- testimonials menu start -->
+                        @php
+                          $testimonialLinkActive = '';
+                        @endphp
+
+                        @if( request()->routeIs('testimonials.index') || request()->is('testimonials/*') )
+                          @php
+                            $testimonialLinkActive = 'active';
+                          @endphp
+                        @endif
+                        <li class="nav-item">
+                          <a href="{{ route('testimonials.index') }}" class="nav-link {{ $testimonialLinkActive }}">
+                            <i class="nav-icon fas fa-quote-left"></i>
+                            <p>
+                              {{ __('Testimonial') }}
+                              <i class="right fas fa-angle-left"></i>
+                            </p>
+                          </a>
+                        </li>
+                        <!-- testimonials menu end -->
+
+                        <div class="post"></div>
+
+                        <!-- team-members menu start -->
+                        @php
+                          $TeamMemberLinkActive = '';
+                        @endphp
+
+                        @if( request()->routeIs('team-members.index') || request()->is('team-members/*') )
+                          @php
+                            $TeamMemberLinkActive = 'active';
+                          @endphp
+                        @endif
+                        <li class="nav-item">
+                          <a href="{{ route('team-members.index') }}" class="nav-link {{ $TeamMemberLinkActive }}">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>
+                              {{ __('Team Member') }}
+                              <i class="right fas fa-angle-left"></i>
+                            </p>
+                          </a>
+                        </li>
+                        <!-- team-members menu end -->
 
                         <div class="post"></div>
 
@@ -363,6 +432,9 @@
                           </form>
                         </li>
 
+                        <div class="post"></div>
+
+                        <li class="nav-item">&nbsp;</li>
                         <div class="post"></div>
                       </ul>
                     </nav>

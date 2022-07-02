@@ -61,6 +61,16 @@
                             @include('pages.page.outsourced-cmo')
                         @elseif( $RS_Row->slug=='corporate-strategy' )
                             @include('pages.page.corporate-strategy')
+                        @elseif( $RS_Row->slug=='goto-market-strategy' )
+                            @include('pages.page.goto-market-strategy')
+                        @elseif( $RS_Row->slug=='account-based-marketing' )
+                            @include('pages.page.account-based-marketing')
+                        @elseif( $RS_Row->slug=='marketing-model-approch' )
+                            @include('pages.page.marketing-model-approch')
+                        @elseif( $RS_Row->slug=='careers' )
+                            @include('pages.page.careers')
+                        @elseif( $RS_Row->slug=='our-team' )
+                            @include('pages.page.our-team')
                         @endif
                     </div>
 

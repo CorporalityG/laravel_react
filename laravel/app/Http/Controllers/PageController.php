@@ -197,15 +197,22 @@ class PageController extends Controller
      */
     private function uploadImage($image, $image_prefix, $image_name='')
     {
-        $destinationPath = public_path('/uploads/pages/');
-
-        if( !empty($image_name) && File::exists($destinationPath.$image_name) )
+        if( !empty($image) )
         {
-            File::delete($destinationPath.$image_name);
-        }
+            $destinationPath = public_path('/uploads/pages/');
 
-        $imgName = Str::slug($image_prefix, '-').'_'.time().'.'.$image->getClientOriginalExtension();
-        $image->move($destinationPath, $imgName);
+            if( !empty($image_name) && File::exists($destinationPath.$image_name) )
+            {
+                File::delete($destinationPath.$image_name);
+            }
+
+            $imgName = Str::slug($image_prefix, '-').'_'.time().'.'.$image->getClientOriginalExtension();
+            $image->move($destinationPath, $imgName);
+        }
+        else
+        {
+            $imgName = $image_name;
+        }
 
         return $imgName;
     }
@@ -2932,6 +2939,320 @@ class PageController extends Controller
                 $data['success_strategy_image'] = $success_strategy_image;
             }
         }
+
+        $our_approach_image = $RS_Row->getMeta('our_approach_image');
+        if( $request->hasFile('our_approach_image') )
+        {
+            $image_name = $this->uploadImage($request->file('our_approach_image'), $request->our_approach_title, $our_approach_image);
+            $data['our_approach_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($our_approach_image) )
+            {
+                $data['our_approach_image'] = $our_approach_image;
+            }
+        }
+
+        $faq_item_4_box_1_item_image = $RS_Row->getMeta('faq_item_4_box_1_item_image');
+        if( $request->hasFile('faq_item_4_box_1_item_image') )
+        {
+            $image_name = $this->uploadImage($request->file('faq_item_4_box_1_item_image'), $request->faq_item_4_box_1_title, $faq_item_4_box_1_item_image);
+            $data['faq_item_4_box_1_item_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($faq_item_4_box_1_item_image) )
+            {
+                $data['faq_item_4_box_1_item_image'] = $faq_item_4_box_1_item_image;
+            }
+        }
+
+        $faq_item_4_box_2_item_image = $RS_Row->getMeta('faq_item_4_box_2_item_image');
+        if( $request->hasFile('faq_item_4_box_2_item_image') )
+        {
+            $image_name = $this->uploadImage($request->file('faq_item_4_box_2_item_image'), $request->faq_item_4_box_2_title, $faq_item_4_box_2_item_image);
+            $data['faq_item_4_box_2_item_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($faq_item_4_box_2_item_image) )
+            {
+                $data['faq_item_4_box_2_item_image'] = $faq_item_4_box_2_item_image;
+            }
+        }
+
+        $market_expand_image = $RS_Row->getMeta('market_expand_image');
+        if( $request->hasFile('market_expand_image') )
+        {
+            $image_name = $this->uploadImage($request->file('market_expand_image'), $request->market_expand_title, $market_expand_image);
+            $data['market_expand_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($market_expand_image) )
+            {
+                $data['market_expand_image'] = $market_expand_image;
+            }
+        }
+
+        $product_strategy_image = $RS_Row->getMeta('product_strategy_image');
+        if( $request->hasFile('product_strategy_image') )
+        {
+            $image_name = $this->uploadImage($request->file('product_strategy_image'), $request->product_strategy_title, $product_strategy_image);
+            $data['product_strategy_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($product_strategy_image) )
+            {
+                $data['product_strategy_image'] = $product_strategy_image;
+            }
+        }
+
+        $you_know_item_1_image = $RS_Row->getMeta('you_know_item_1_image');
+        if( $request->hasFile('you_know_item_1_image') )
+        {
+            $image_name = $this->uploadImage($request->file('you_know_item_1_image'), $request->you_know_item_1_title, $you_know_item_1_image);
+            $data['you_know_item_1_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($you_know_item_1_image) )
+            {
+                $data['you_know_item_1_image'] = $you_know_item_1_image;
+            }
+        }
+
+        $you_know_item_2_image = $RS_Row->getMeta('you_know_item_2_image');
+        if( $request->hasFile('you_know_item_2_image') )
+        {
+            $image_name = $this->uploadImage($request->file('you_know_item_2_image'), $request->you_know_item_2_title, $you_know_item_2_image);
+            $data['you_know_item_2_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($you_know_item_2_image) )
+            {
+                $data['you_know_item_2_image'] = $you_know_item_2_image;
+            }
+        }
+
+        $client_logo_1_image = $RS_Row->getMeta('client_logo_1_image');
+        if( $request->hasFile('client_logo_1_image') )
+        {
+            $image_name = $this->uploadImage($request->file('client_logo_1_image'), 'cl_1', $client_logo_1_image);
+            $data['client_logo_1_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($client_logo_1_image) )
+            {
+                $data['client_logo_1_image'] = $client_logo_1_image;
+            }
+        }
+
+        $client_logo_2_image = $RS_Row->getMeta('client_logo_2_image');
+        if( $request->hasFile('client_logo_2_image') )
+        {
+            $image_name = $this->uploadImage($request->file('client_logo_2_image'), 'cl_2', $client_logo_2_image);
+            $data['client_logo_2_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($client_logo_2_image) )
+            {
+                $data['client_logo_2_image'] = $client_logo_2_image;
+            }
+        }
+
+        $client_logo_3_image = $RS_Row->getMeta('client_logo_3_image');
+        if( $request->hasFile('client_logo_3_image') )
+        {
+            $image_name = $this->uploadImage($request->file('client_logo_3_image'), 'cl_3', $client_logo_3_image);
+            $data['client_logo_3_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($client_logo_3_image) )
+            {
+                $data['client_logo_3_image'] = $client_logo_3_image;
+            }
+        }
+
+        $client_logo_4_image = $RS_Row->getMeta('client_logo_4_image');
+        if( $request->hasFile('client_logo_4_image') )
+        {
+            $image_name = $this->uploadImage($request->file('client_logo_4_image'), 'cl_4', $client_logo_4_image);
+            $data['client_logo_4_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($client_logo_4_image) )
+            {
+                $data['client_logo_4_image'] = $client_logo_4_image;
+            }
+        }
+
+        $client_logo_5_image = $RS_Row->getMeta('client_logo_5_image');
+        if( $request->hasFile('client_logo_5_image') )
+        {
+            $image_name = $this->uploadImage($request->file('client_logo_5_image'), 'cl_5', $client_logo_5_image);
+            $data['client_logo_5_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($client_logo_5_image) )
+            {
+                $data['client_logo_5_image'] = $client_logo_5_image;
+            }
+        }
+
+        $client_logo_6_image = $RS_Row->getMeta('client_logo_6_image');
+        if( $request->hasFile('client_logo_6_image') )
+        {
+            $image_name = $this->uploadImage($request->file('client_logo_6_image'), 'cl_6', $client_logo_6_image);
+            $data['client_logo_6_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($client_logo_6_image) )
+            {
+                $data['client_logo_6_image'] = $client_logo_6_image;
+            }
+        }
+
+        $client_logo_7_image = $RS_Row->getMeta('client_logo_7_image');
+        if( $request->hasFile('client_logo_7_image') )
+        {
+            $image_name = $this->uploadImage($request->file('client_logo_7_image'), 'cl_7', $client_logo_7_image);
+            $data['client_logo_7_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($client_logo_7_image) )
+            {
+                $data['client_logo_7_image'] = $client_logo_7_image;
+            }
+        }
+
+        $client_logo_8_image = $RS_Row->getMeta('client_logo_8_image');
+        if( $request->hasFile('client_logo_8_image') )
+        {
+            $image_name = $this->uploadImage($request->file('client_logo_8_image'), 'cl_8', $client_logo_8_image);
+            $data['client_logo_8_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($client_logo_8_image) )
+            {
+                $data['client_logo_8_image'] = $client_logo_8_image;
+            }
+        }
+
+        $client_logo_9_image = $RS_Row->getMeta('client_logo_9_image');
+        if( $request->hasFile('client_logo_9_image') )
+        {
+            $image_name = $this->uploadImage($request->file('client_logo_9_image'), 'cl_9', $client_logo_9_image);
+            $data['client_logo_9_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($client_logo_9_image) )
+            {
+                $data['client_logo_9_image'] = $client_logo_9_image;
+            }
+        }
+
+        $client_logo_10_image = $RS_Row->getMeta('client_logo_10_image');
+        if( $request->hasFile('client_logo_10_image') )
+        {
+            $image_name = $this->uploadImage($request->file('client_logo_10_image'), 'cl_10', $client_logo_10_image);
+            $data['client_logo_10_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($client_logo_10_image) )
+            {
+                $data['client_logo_10_image'] = $client_logo_10_image;
+            }
+        }
+
+        $define_solve_image = $RS_Row->getMeta('define_solve_image');
+        if( $request->hasFile('define_solve_image') )
+        {
+            $image_name = $this->uploadImage($request->file('define_solve_image'), $request->define_solve_title, $define_solve_image);
+            $data['define_solve_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($define_solve_image) )
+            {
+                $data['define_solve_image'] = $define_solve_image;
+            }
+        }
+
+        $connect_convert_image = $RS_Row->getMeta('connect_convert_image');
+        if( $request->hasFile('connect_convert_image') )
+        {
+            $image_name = $this->uploadImage($request->file('connect_convert_image'), $request->connect_convert_title, $connect_convert_image);
+            $data['connect_convert_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($connect_convert_image) )
+            {
+                $data['connect_convert_image'] = $connect_convert_image;
+            }
+        }
+
+        $marketing_models_image = $RS_Row->getMeta('marketing_models_image');
+        if( $request->hasFile('marketing_models_image') )
+        {
+            $image_name = $this->uploadImage($request->file('marketing_models_image'), $request->marketing_models_title, $marketing_models_image);
+            $data['marketing_models_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($marketing_models_image) )
+            {
+                $data['marketing_models_image'] = $marketing_models_image;
+            }
+        }
+
+        $priya_title_image = $RS_Row->getMeta('priya_title_image');
+        if( $request->hasFile('priya_title_image') )
+        {
+            $image_name = $this->uploadImage($request->file('priya_title_image'), 'pt', $priya_title_image);
+            $data['priya_title_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($priya_title_image) )
+            {
+                $data['priya_title_image'] = $priya_title_image;
+            }
+        }
+
+        $priya_image = $RS_Row->getMeta('priya_image');
+        if( $request->hasFile('priya_image') )
+        {
+            $image_name = $this->uploadImage($request->file('priya_image'), 'p', $priya_image);
+            $data['priya_image'] = $image_name;
+        }
+        else
+        {
+            if( !empty($priya_image) )
+            {
+                $data['priya_image'] = $priya_image;
+            }
+        }
+
+        /* $priya_image_1 = $this->uploadImage($request->file('priya_image_1'), 'p_m_1', $RS_Row->getMeta('priya_image_1'));
+        if( !empty($priya_image_1) )
+        {
+            $data['priya_image_1'] = $priya_image_1;
+        } */
 
         // data save
         $RS_Row->syncMeta($data);
