@@ -1,6 +1,18 @@
 @extends('layouts.app')
 
-@section('Title', 'Page List')
+@php
+    $type = '';
+    $typeName = 'Page';
+@endphp
+
+@if( Request::get('type')=='section' )
+    @php
+        $type = '?type=section';
+        $typeName = 'Page Section';
+    @endphp
+@endif
+
+@section('Title', $typeName.' List')
 
 @section('content')
 
@@ -15,7 +27,7 @@
                             <h4 class="card-title">@yield('Title')</h4>
                         </div>
                         <div class="col-md-6">
-                            <a href="{{ route('pages.create') }}" class="btn btn-sm btn-info float-right">Add Page</a>
+                            <a href="{{ route('pages.create').$type }}" class="btn btn-sm btn-info float-right">Add {{ $typeName }}</a>
                         </div>
                     </div>
                 </div>
@@ -44,7 +56,7 @@ jQuery(function () {
     var table = $('.yajra-datatable').DataTable({
       processing: true,
       serverSide: true,
-      ajax: "{{ route('pages.index') }}",
+      ajax: "{{ route('pages.index').$type }}",
       order: [],
       columns: [
         {data: 'title', name: 'title'},

@@ -1,6 +1,18 @@
 @extends('layouts.app')
 
-@section('Title', (!empty($RS_Row) ? 'Edit' : 'Add').' Page')
+@php
+    $type = '';
+    $typeName = ' Page';
+@endphp
+
+@if( Request::get('type')=='section' )
+    @php
+        $type = '?type=section';
+        $typeName = ' Section';
+    @endphp
+@endif
+
+@section('Title', (!empty($RS_Row) ? 'Edit' : 'Add').$typeName)
 
 @section('content')
 
@@ -22,6 +34,7 @@
                     <form method="POST" action="{{ $action }}" enctype="multipart/form-data">
                         @csrf
                         @if( !empty($RS_Row) ) {{ method_field('PUT') }} @endif
+                        <input type="hidden" name="type" id="type" value="{{ Request::get('type')=='section' ? 'section' : 'page' }}" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" placeholder="{{ __('Type') }}">
                         
                         <div class="row">
                             <div class="col-md-12">
@@ -40,7 +53,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="slug">{{ __('Slug') }}</label>
-                                    <input type="text" name="slug" id="slug" value="{{ old('slug', $RS_Row->slug ?? '') }}" class="form-control{{ $errors->has('slug') ? ' is-invalid' : '' }}" placeholder="{{ __('Slug') }}" autofocus>
+                                    <input type="text" name="slug" id="slug" value="{{ old('slug', $RS_Row->slug ?? '') }}" class="form-control{{ $errors->has('slug') ? ' is-invalid' : '' }}" placeholder="{{ __('Slug') }}">
 
                                     @if ($errors->has('slug'))
                                         <span class="invalid-feedback" role="alert">
@@ -50,7 +63,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12">
+                            <div class="col-md-12{{ Request::get('type')=='section' ? ' d-none' : '' }}">
                                 <div class="form-group">
                                     <label for="meta_title">{{ __('Meta Title (Page Title)') }}</label>
                                     <input type="text" name="meta_title" id="meta_title" value="{{ old('meta_title', $RS_Row->meta_title ?? '') }}" class="form-control{{ $errors->has('meta_title') ? ' is-invalid' : '' }}" placeholder="{{ __('Meta Title (Page Title)') }}">
@@ -63,7 +76,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12">
+                            <div class="col-md-12{{ Request::get('type')=='section' ? ' d-none' : '' }}">
                                 <div class="form-group">
                                     <label for="meta_keywords">{{ __('Meta Keywords') }}</label>
                                     <input type="text" name="meta_keywords" id="meta_keywords" value="{{ old('meta_keywords', $RS_Row->meta_keywords ?? '') }}" class="form-control{{ $errors->has('meta_keywords') ? ' is-invalid' : '' }}" placeholder="{{ __('Meta Keywords') }}">
@@ -76,7 +89,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12">
+                            <div class="col-md-12{{ Request::get('type')=='section' ? ' d-none' : '' }}">
                                 <div class="form-group">
                                     <label for="meta_description">{{ __('Meta Description') }}</label>
                                     <textarea name="meta_description" id="meta_description" class="form-control{{ $errors->has('meta_description') ? ' is-invalid' : '' }}" placeholder="{{ __('Meta Description') }}">{{ old('meta_description', $RS_Row->meta_description ?? '') }}</textarea>
@@ -91,7 +104,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-info btn-fill">Submit</button>
-                        <a href="{{ route('pages.index') }}" class="btn btn-default float-right">Back</a>
+                        <a href="{{ route('pages.index').$type }}" class="btn btn-default float-right">Back</a>
                         <div class="clearfix"></div>
                     </form>
                 </div>

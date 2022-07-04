@@ -330,22 +330,44 @@
 
                         <!-- pages menu start -->
                         @php
+                          $pageMenuOpen = '';
                           $pageLinkActive = '';
                         @endphp
+
+                        @if( request()->routeIs('pages.index') || request()->is('pages/*') )
+                          @php
+                            $pageMenuOpen = 'menu-open';
+                            $pageLinkActive = 'active';
+                          @endphp
+                        @endif
 
                         @if( request()->routeIs('pages.index') || request()->is('pages/*') )
                           @php
                             $pageLinkActive = 'active';
                           @endphp
                         @endif
-                        <li class="nav-item">
-                          <a href="{{ route('pages.index') }}" class="nav-link {{ $pageLinkActive }}">
+                        <li class="nav-item {{ $pageMenuOpen }}">
+                          <a href="javarscript:;" class="nav-link {{ $pageLinkActive }}">
                             <i class="nav-icon fas fa-file"></i>
                             <p>
                               {{ __('Pages') }}
                               <i class="right fas fa-angle-left"></i>
                             </p>
                           </a>
+                          <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                              <a href="{{ route('pages.index') }}" class="nav-link {{ $pageLinkActive }}">
+                                <i class="far fa-copy nav-icon"></i>
+                                <p>{{ __('Pages') }}</p>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="{{ route('pages.index').'?type=section' }}" class="nav-link">
+                                <i class="fas fa-th nav-icon"></i>
+                                <p>{{ __('Page Section') }}</p>
+                              </a>
+                            </li>
+                          </ul>
                         </li>
                         <!-- pages menu end -->
 

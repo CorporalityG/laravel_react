@@ -369,6 +369,431 @@
 
 		<div class="card card-secondary card-outline">
 			<div class="card-header d-flex">
+				<h4 class="card-title text-dark w-100">Services Section</h4>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<h5>Service 1 Detail</h5>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_1_tab_title">{{ __('Tab Title') }}</label>
+							<input type="text" name="service_1_tab_title" id="service_1_tab_title" value="{{ old('service_1_tab_title', $RS_Meta['service_1_tab_title'] ?? '') }}" class="form-control" placeholder="{{ __('Tab Title') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_1_title">{{ __('Title') }}</label>
+							<input type="text" name="service_1_title" id="service_1_title" value="{{ old('service_1_title', $RS_Meta['service_1_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_1_description">{{ __('Description') }}</label>
+							<textarea name="service_1_description" id="service_1_description" class="form-control service_description" placeholder="{{ __('Description') }}">{{ old('service_1_description', $RS_Meta['service_1_description'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_1_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="service_1_btn_text" id="service_1_btn_text" value="{{ old('service_1_btn_text', $RS_Meta['service_1_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_1_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="service_1_btn_link" id="service_1_btn_link" value="{{ old('service_1_btn_link', $RS_Meta['service_1_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_1_image">{{ __('Image') }}</label>
+							<div class="input-group{{ $errors->has('service_1_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="service_1_image" id="service_1_image" value="{{ old('service_1_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="service_1_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['service_1_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['service_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<h5>Service 2 Detail</h5>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_2_tab_title">{{ __('Tab Title') }}</label>
+							<input type="text" name="service_2_tab_title" id="service_2_tab_title" value="{{ old('service_2_tab_title', $RS_Meta['service_2_tab_title'] ?? '') }}" class="form-control" placeholder="{{ __('Tab Title') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_2_title">{{ __('Title') }}</label>
+							<input type="text" name="service_2_title" id="service_2_title" value="{{ old('service_2_title', $RS_Meta['service_2_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_2_description">{{ __('Description') }}</label>
+							<textarea name="service_2_description" id="service_2_description" class="form-control service_description" placeholder="{{ __('Description') }}">{{ old('service_2_description', $RS_Meta['service_2_description'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_2_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="service_2_btn_text" id="service_2_btn_text" value="{{ old('service_2_btn_text', $RS_Meta['service_2_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_2_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="service_2_btn_link" id="service_2_btn_link" value="{{ old('service_2_btn_link', $RS_Meta['service_2_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_2_image">{{ __('Image') }}</label>
+							<div class="input-group{{ $errors->has('service_2_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="service_2_image" id="service_2_image" value="{{ old('service_2_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="service_2_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['service_2_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['service_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<h5>Service 3 Detail</h5>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_3_tab_title">{{ __('Tab Title') }}</label>
+							<input type="text" name="service_3_tab_title" id="service_3_tab_title" value="{{ old('service_3_tab_title', $RS_Meta['service_3_tab_title'] ?? '') }}" class="form-control" placeholder="{{ __('Tab Title') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_3_title">{{ __('Title') }}</label>
+							<input type="text" name="service_3_title" id="service_3_title" value="{{ old('service_3_title', $RS_Meta['service_3_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_3_description">{{ __('Description') }}</label>
+							<textarea name="service_3_description" id="service_3_description" class="form-control service_description" placeholder="{{ __('Description') }}">{{ old('service_3_description', $RS_Meta['service_3_description'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_3_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="service_3_btn_text" id="service_3_btn_text" value="{{ old('service_3_btn_text', $RS_Meta['service_3_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_3_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="service_3_btn_link" id="service_3_btn_link" value="{{ old('service_3_btn_link', $RS_Meta['service_3_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_3_image">{{ __('Image') }}</label>
+							<div class="input-group{{ $errors->has('service_3_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="service_3_image" id="service_3_image" value="{{ old('service_3_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="service_3_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['service_3_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['service_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<h5>Service 4 Detail</h5>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_4_tab_title">{{ __('Tab Title') }}</label>
+							<input type="text" name="service_4_tab_title" id="service_4_tab_title" value="{{ old('service_4_tab_title', $RS_Meta['service_4_tab_title'] ?? '') }}" class="form-control" placeholder="{{ __('Tab Title') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_4_title">{{ __('Title') }}</label>
+							<input type="text" name="service_4_title" id="service_4_title" value="{{ old('service_4_title', $RS_Meta['service_4_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_4_description">{{ __('Description') }}</label>
+							<textarea name="service_4_description" id="service_4_description" class="form-control service_description" placeholder="{{ __('Description') }}">{{ old('service_4_description', $RS_Meta['service_4_description'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_4_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="service_4_btn_text" id="service_4_btn_text" value="{{ old('service_4_btn_text', $RS_Meta['service_4_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_4_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="service_4_btn_link" id="service_4_btn_link" value="{{ old('service_4_btn_link', $RS_Meta['service_4_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_4_image">{{ __('Image') }}</label>
+							<div class="input-group{{ $errors->has('service_4_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="service_4_image" id="service_4_image" value="{{ old('service_4_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="service_4_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['service_4_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['service_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<h5>Service 5 Detail</h5>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_5_tab_title">{{ __('Tab Title') }}</label>
+							<input type="text" name="service_5_tab_title" id="service_5_tab_title" value="{{ old('service_5_tab_title', $RS_Meta['service_5_tab_title'] ?? '') }}" class="form-control" placeholder="{{ __('Tab Title') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_5_title">{{ __('Title') }}</label>
+							<input type="text" name="service_5_title" id="service_5_title" value="{{ old('service_5_title', $RS_Meta['service_5_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_5_description">{{ __('Description') }}</label>
+							<textarea name="service_5_description" id="service_5_description" class="form-control service_description" placeholder="{{ __('Description') }}">{{ old('service_5_description', $RS_Meta['service_5_description'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_5_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="service_5_btn_text" id="service_5_btn_text" value="{{ old('service_5_btn_text', $RS_Meta['service_5_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_5_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="service_5_btn_link" id="service_5_btn_link" value="{{ old('service_5_btn_link', $RS_Meta['service_5_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_5_image">{{ __('Image') }}</label>
+							<div class="input-group{{ $errors->has('service_5_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="service_5_image" id="service_5_image" value="{{ old('service_5_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="service_5_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['service_5_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['service_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<h5>Service 6 Detail</h5>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_6_tab_title">{{ __('Tab Title') }}</label>
+							<input type="text" name="service_6_tab_title" id="service_6_tab_title" value="{{ old('service_6_tab_title', $RS_Meta['service_6_tab_title'] ?? '') }}" class="form-control" placeholder="{{ __('Tab Title') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_6_title">{{ __('Title') }}</label>
+							<input type="text" name="service_6_title" id="service_6_title" value="{{ old('service_6_title', $RS_Meta['service_6_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_6_description">{{ __('Description') }}</label>
+							<textarea name="service_6_description" id="service_6_description" class="form-control service_description" placeholder="{{ __('Description') }}">{{ old('service_6_description', $RS_Meta['service_6_description'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_6_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="service_6_btn_text" id="service_6_btn_text" value="{{ old('service_6_btn_text', $RS_Meta['service_6_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_6_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="service_6_btn_link" id="service_6_btn_link" value="{{ old('service_6_btn_link', $RS_Meta['service_6_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_6_image">{{ __('Image') }}</label>
+							<div class="input-group{{ $errors->has('service_6_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="service_6_image" id="service_6_image" value="{{ old('service_6_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="service_6_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['service_6_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['service_6_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<h5>Service 7 Detail</h5>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_7_tab_title">{{ __('Tab Title') }}</label>
+							<input type="text" name="service_7_tab_title" id="service_7_tab_title" value="{{ old('service_7_tab_title', $RS_Meta['service_7_tab_title'] ?? '') }}" class="form-control" placeholder="{{ __('Tab Title') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_7_title">{{ __('Title') }}</label>
+							<input type="text" name="service_7_title" id="service_7_title" value="{{ old('service_7_title', $RS_Meta['service_7_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_7_description">{{ __('Description') }}</label>
+							<textarea name="service_7_description" id="service_7_description" class="form-control service_description" placeholder="{{ __('Description') }}">{{ old('service_7_description', $RS_Meta['service_7_description'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_7_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="service_7_btn_text" id="service_7_btn_text" value="{{ old('service_7_btn_text', $RS_Meta['service_7_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="service_7_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="service_7_btn_link" id="service_7_btn_link" value="{{ old('service_7_btn_link', $RS_Meta['service_7_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="service_7_image">{{ __('Image') }}</label>
+							<div class="input-group{{ $errors->has('service_7_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="service_7_image" id="service_7_image" value="{{ old('service_7_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="service_7_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['service_7_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['service_7_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card card-secondary card-outline">
+			<div class="card-header d-flex">
 				<h4 class="card-title text-dark w-100">Emotional Quest Section</h4>
 			</div>
 			<div class="card-body">
@@ -711,3 +1136,10 @@
 		</div>
 	</div>
 </div>
+<!-- Page specific script -->
+<script>
+$(function () {
+    // Summernote
+    $('.service_description').summernote();
+});
+</script>

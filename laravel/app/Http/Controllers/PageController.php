@@ -19,12 +19,23 @@ class PageController extends Controller
     {
         if( $request->ajax() ) {
 
-            $RS_Results = Page::latest()->get();
+            $RS_Results = Page::latest();
+
+            if( $request->type=='section' )
+            {
+                $RS_Results->where('type', 'section');
+            }
+            else
+            {
+                $RS_Results->where('type', 'page')->orWhereNull('type');
+            }
+
+            $RS_Results->get();
 
             return Datatables::of($RS_Results)
                 ->addColumn('action', function($RS_Row) {
                     $actionBtn = '<center>
-                        <a href="'.route('pages.edit', $RS_Row->id).'" class="edit btn btn-success btn-sm mr-2" data-id="'.$RS_Row->id.'"><i class="fas fa-edit"></i></a>
+                        <a href="'.route('pages.edit', $RS_Row->id).'?type='.$RS_Row->type.'" class="edit btn btn-success btn-sm mr-2" data-id="'.$RS_Row->id.'"><i class="fas fa-edit"></i></a>
                         <a href="'.route('pages.show', $RS_Row->id).'" class="show btn bg-purple btn-sm"><i class="fas fa-eye"></i></a>
                         </center>';
 
@@ -62,10 +73,13 @@ class PageController extends Controller
         $response = $this->StoreUpdate($request);
 
         if( !empty($response) ):
+            $type = $request->type=='section' ? '?type=section' : '';
+            $redircetURL = route('pages.edit', $response).$type;
+
             Session::flash('messageType', 'success');
             Session::flash('message', 'New page created successfully.');
 
-            return redirect::route('pages.edit', $response);
+            return redirect($redircetURL);
         else:
             Session::flash('messageType', 'error');
             Session::flash('message', 'Can\'t create page.');
@@ -117,10 +131,13 @@ class PageController extends Controller
         $response = $this->StoreUpdate($request, $page->id);
 
         if( !empty($response) ):
+            $type = $request->type=='section' ? '?type=section' : '';
+            $redircetURL = route('pages.edit', $response).$type;
+
             Session::flash('messageType', 'success');
             Session::flash('message', 'Page updated successfully.');
 
-            return redirect::route('pages.edit', $response);
+            return redirect($redircetURL);
         else:
             Session::flash('messageType', 'error');
             Session::flash('message', 'Can\'t update page.');
@@ -182,6 +199,7 @@ class PageController extends Controller
         $RS_Save->user_id = Auth::user()->id;
         $RS_Save->title = $title;
         $RS_Save->slug = $slug;
+        $RS_Save->type = $request->type;
         $RS_Save->meta_title = $request->meta_title;
         $RS_Save->meta_keywords = $request->meta_keywords;
         $RS_Save->meta_description = $request->meta_description;
@@ -1454,1805 +1472,1027 @@ class PageController extends Controller
             {
                 $data['key_elements_item_5_icon'] = $key_elements_item_5_icon;
             }
-        }
+        } // remaing
 
-        $work_mind_image = $RS_Row->getMeta('work_mind_image');
-        if( $request->hasFile('work_mind_image') )
-        {
-            $image_name = $this->uploadImage($request->file('work_mind_image'), $request->work_mind_title, $work_mind_image);
-            $data['work_mind_image'] = $image_name;
-        }
-        else
+        $work_mind_image = $this->uploadImage($request->file('work_mind_image'), $request->work_mind_title, $RS_Row->getMeta('work_mind_image'));
+        if( !empty($work_mind_image) )
         {
-            if( !empty($work_mind_image) )
-            {
-                $data['work_mind_image'] = $work_mind_image;
-            }
+            $data['work_mind_image'] = $work_mind_image;
         }
 
-        $work_image = $RS_Row->getMeta('work_image');
-        if( $request->hasFile('work_image') )
+        $work_image = $this->uploadImage($request->file('work_image'), $request->work_title, $RS_Row->getMeta('work_image'));
+        if( !empty($work_image) )
         {
-            $image_name = $this->uploadImage($request->file('work_image'), $request->work_title, $work_image);
-            $data['work_image'] = $image_name;
+            $data['work_image'] = $work_image;
         }
-        else
-        {
-            if( !empty($work_image) )
-            {
-                $data['work_image'] = $work_image;
-            }
-        }
 
-        $process_item_1_icon = $RS_Row->getMeta('process_item_1_icon');
-        if( $request->hasFile('process_item_1_icon') )
-        {
-            $image_name = $this->uploadImage($request->file('process_item_1_icon'), $request->process_item_1_title, $process_item_1_icon);
-            $data['process_item_1_icon'] = $image_name;
-        }
-        else
+        $process_item_1_icon = $this->uploadImage($request->file('process_item_1_icon'), $request->process_item_1_title, $RS_Row->getMeta('process_item_1_icon'));
+        if( !empty($process_item_1_icon) )
         {
-            if( !empty($process_item_1_icon) )
-            {
-                $data['process_item_1_icon'] = $process_item_1_icon;
-            }
+            $data['process_item_1_icon'] = $process_item_1_icon;
         }
 
-        $process_item_2_icon = $RS_Row->getMeta('process_item_2_icon');
-        if( $request->hasFile('process_item_2_icon') )
-        {
-            $image_name = $this->uploadImage($request->file('process_item_2_icon'), $request->process_item_2_title, $process_item_2_icon);
-            $data['process_item_2_icon'] = $image_name;
-        }
-        else
+        $process_item_2_icon = $this->uploadImage($request->file('process_item_2_icon'), $request->process_item_2_title, $RS_Row->getMeta('process_item_2_icon'));
+        if( !empty($process_item_2_icon) )
         {
-            if( !empty($process_item_2_icon) )
-            {
-                $data['process_item_2_icon'] = $process_item_2_icon;
-            }
+            $data['process_item_2_icon'] = $process_item_2_icon;
         }
 
-        $process_item_3_icon = $RS_Row->getMeta('process_item_3_icon');
-        if( $request->hasFile('process_item_3_icon') )
+        $process_item_3_icon = $this->uploadImage($request->file('process_item_3_icon'), $request->process_item_3_title, $RS_Row->getMeta('process_item_3_icon'));
+        if( !empty($process_item_3_icon) )
         {
-            $image_name = $this->uploadImage($request->file('process_item_3_icon'), $request->process_item_3_title, $process_item_3_icon);
-            $data['process_item_3_icon'] = $image_name;
+            $data['process_item_3_icon'] = $process_item_3_icon;
         }
-        else
-        {
-            if( !empty($process_item_3_icon) )
-            {
-                $data['process_item_3_icon'] = $process_item_3_icon;
-            }
-        }
 
-        $shifting_image = $RS_Row->getMeta('shifting_image');
-        if( $request->hasFile('shifting_image') )
-        {
-            $image_name = $this->uploadImage($request->file('shifting_image'), $request->shifting_title, $shifting_image);
-            $data['shifting_image'] = $image_name;
-        }
-        else
+        $shifting_image = $this->uploadImage($request->file('shifting_image'), $request->shifting_title, $RS_Row->getMeta('shifting_image'));
+        if( !empty($shifting_image) )
         {
-            if( !empty($shifting_image) )
-            {
-                $data['shifting_image'] = $shifting_image;
-            }
+            $data['shifting_image'] = $shifting_image;
         }
 
-        $problems_tackle_image = $RS_Row->getMeta('problems_tackle_image');
-        if( $request->hasFile('problems_tackle_image') )
+        $problems_tackle_image = $this->uploadImage($request->file('problems_tackle_image'), $request->problems_tackle_title, $RS_Row->getMeta('problems_tackle_image'));
+        if( !empty($problems_tackle_image) )
         {
-            $image_name = $this->uploadImage($request->file('problems_tackle_image'), $request->problems_tackle_title, $problems_tackle_image);
-            $data['problems_tackle_image'] = $image_name;
+            $data['problems_tackle_image'] = $problems_tackle_image;
         }
-        else
-        {
-            if( !empty($problems_tackle_image) )
-            {
-                $data['problems_tackle_image'] = $problems_tackle_image;
-            }
-        }
 
-        $marketing_model_image = $RS_Row->getMeta('marketing_model_image');
-        if( $request->hasFile('marketing_model_image') )
-        {
-            $image_name = $this->uploadImage($request->file('marketing_model_image'), 'mm_', $marketing_model_image);
-            $data['marketing_model_image'] = $image_name;
-        }
-        else
+        $marketing_model_image = $this->uploadImage($request->file('marketing_model_image'), 'mm_', $RS_Row->getMeta('marketing_model_image'));
+        if( !empty($marketing_model_image) )
         {
-            if( !empty($marketing_model_image) )
-            {
-                $data['marketing_model_image'] = $marketing_model_image;
-            }
+            $data['marketing_model_image'] = $marketing_model_image;
         }
 
-        $striker_item_1_image = $RS_Row->getMeta('striker_item_1_image');
-        if( $request->hasFile('striker_item_1_image') )
-        {
-            $image_name = $this->uploadImage($request->file('striker_item_1_image'), $request->striker_item_1_title, $striker_item_1_image);
-            $data['striker_item_1_image'] = $image_name;
-        }
-        else
+        $striker_item_1_image = $this->uploadImage($request->file('striker_item_1_image'), $request->striker_item_1_title, $RS_Row->getMeta('striker_item_1_image'));
+        if( !empty($striker_item_1_image) )
         {
-            if( !empty($striker_item_1_image) )
-            {
-                $data['striker_item_1_image'] = $striker_item_1_image;
-            }
+            $data['striker_item_1_image'] = $striker_item_1_image;
         }
 
-        $striker_item_2_image = $RS_Row->getMeta('striker_item_2_image');
-        if( $request->hasFile('striker_item_2_image') )
-        {
-            $image_name = $this->uploadImage($request->file('striker_item_2_image'), $request->striker_item_2_title, $striker_item_2_image);
-            $data['striker_item_2_image'] = $image_name;
-        }
-        else
+        $striker_item_2_image = $this->uploadImage($request->file('striker_item_2_image'), $request->striker_item_2_title, $RS_Row->getMeta('striker_item_2_image'));
+        if( !empty($striker_item_2_image) )
         {
-            if( !empty($striker_item_2_image) )
-            {
-                $data['striker_item_2_image'] = $striker_item_2_image;
-            }
+            $data['striker_item_2_image'] = $striker_item_2_image;
         }
 
-        $striker_item_3_image = $RS_Row->getMeta('striker_item_3_image');
-        if( $request->hasFile('striker_item_3_image') )
-        {
-            $image_name = $this->uploadImage($request->file('striker_item_3_image'), $request->striker_item_3_title, $striker_item_3_image);
-            $data['striker_item_3_image'] = $image_name;
-        }
-        else
+        $striker_item_3_image = $this->uploadImage($request->file('striker_item_3_image'), $request->striker_item_3_title, $RS_Row->getMeta('striker_item_3_image'));
+        if( !empty($striker_item_3_image) )
         {
-            if( !empty($striker_item_3_image) )
-            {
-                $data['striker_item_3_image'] = $striker_item_3_image;
-            }
+            $data['striker_item_3_image'] = $striker_item_3_image;
         }
 
-        $striker_item_4_image = $RS_Row->getMeta('striker_item_4_image');
-        if( $request->hasFile('striker_item_4_image') )
+        $striker_item_4_image = $this->uploadImage($request->file('striker_item_4_image'), $request->striker_item_4_title, $RS_Row->getMeta('striker_item_4_image'));
+        if( !empty($striker_item_4_image) )
         {
-            $image_name = $this->uploadImage($request->file('striker_item_4_image'), $request->striker_item_4_title, $striker_item_4_image);
-            $data['striker_item_4_image'] = $image_name;
+            $data['striker_item_4_image'] = $striker_item_4_image;
         }
-        else
-        {
-            if( !empty($striker_item_4_image) )
-            {
-                $data['striker_item_4_image'] = $striker_item_4_image;
-            }
-        }
 
-        $striker_item_5_image = $RS_Row->getMeta('striker_item_5_image');
-        if( $request->hasFile('striker_item_5_image') )
-        {
-            $image_name = $this->uploadImage($request->file('striker_item_5_image'), $request->striker_item_5_title, $striker_item_5_image);
-            $data['striker_item_5_image'] = $image_name;
-        }
-        else
+        $striker_item_5_image = $this->uploadImage($request->file('striker_item_5_image'), $request->striker_item_5_title, $RS_Row->getMeta('striker_item_5_image'));
+        if( !empty($striker_item_5_image) )
         {
-            if( !empty($striker_item_5_image) )
-            {
-                $data['striker_item_5_image'] = $striker_item_5_image;
-            }
+            $data['striker_item_5_image'] = $striker_item_5_image;
         }
 
-        $striker_item_6_image = $RS_Row->getMeta('striker_item_6_image');
-        if( $request->hasFile('striker_item_6_image') )
+        $striker_item_6_image = $this->uploadImage($request->file('striker_item_6_image'), $request->striker_item_6_title, $RS_Row->getMeta('striker_item_6_image'));
+        if( !empty($striker_item_6_image) )
         {
-            $image_name = $this->uploadImage($request->file('striker_item_6_image'), $request->striker_item_6_title, $striker_item_6_image);
-            $data['striker_item_6_image'] = $image_name;
+            $data['striker_item_6_image'] = $striker_item_6_image;
         }
-        else
-        {
-            if( !empty($striker_item_6_image) )
-            {
-                $data['striker_item_6_image'] = $striker_item_6_image;
-            }
-        }
 
-        $improved_company_image = $RS_Row->getMeta('improved_company_image');
-        if( $request->hasFile('improved_company_image') )
-        {
-            $image_name = $this->uploadImage($request->file('improved_company_image'), 'improved', $improved_company_image);
-            $data['improved_company_image'] = $image_name;
-        }
-        else
+        $improved_company_image = $this->uploadImage($request->file('improved_company_image'), 'improved', $RS_Row->getMeta('improved_company_image'));
+        if( !empty($improved_company_image) )
         {
-            if( !empty($improved_company_image) )
-            {
-                $data['improved_company_image'] = $improved_company_image;
-            }
+            $data['improved_company_image'] = $improved_company_image;
         }
 
-        $customer_loyalty_image = $RS_Row->getMeta('customer_loyalty_image');
-        if( $request->hasFile('customer_loyalty_image') )
-        {
-            $image_name = $this->uploadImage($request->file('customer_loyalty_image'), 'customer', $customer_loyalty_image);
-            $data['customer_loyalty_image'] = $image_name;
-        }
-        else
+        $customer_loyalty_image = $this->uploadImage($request->file('customer_loyalty_image'), 'customer', $RS_Row->getMeta('customer_loyalty_image'));
+        if( !empty($customer_loyalty_image) )
         {
-            if( !empty($customer_loyalty_image) )
-            {
-                $data['customer_loyalty_image'] = $customer_loyalty_image;
-            }
+            $data['customer_loyalty_image'] = $customer_loyalty_image;
         }
 
-        $relatable_identity_image = $RS_Row->getMeta('relatable_identity_image');
-        if( $request->hasFile('relatable_identity_image') )
+        $relatable_identity_image = $this->uploadImage($request->file('relatable_identity_image'), 'relatable', $RS_Row->getMeta('relatable_identity_image'));
+        if( !empty($relatable_identity_image) )
         {
-            $image_name = $this->uploadImage($request->file('relatable_identity_image'), 'relatable', $relatable_identity_image);
-            $data['relatable_identity_image'] = $image_name;
+            $data['relatable_identity_image'] = $relatable_identity_image;
         }
-        else
-        {
-            if( !empty($relatable_identity_image) )
-            {
-                $data['relatable_identity_image'] = $relatable_identity_image;
-            }
-        }
 
-        $omni_effect_image = $RS_Row->getMeta('omni_effect_image');
-        if( $request->hasFile('omni_effect_image') )
-        {
-            $image_name = $this->uploadImage($request->file('omni_effect_image'), 'omni', $omni_effect_image);
-            $data['omni_effect_image'] = $image_name;
-        }
-        else
+        $omni_effect_image = $this->uploadImage($request->file('omni_effect_image'), 'omni', $RS_Row->getMeta('omni_effect_image'));
+        if( !empty($omni_effect_image) )
         {
-            if( !empty($omni_effect_image) )
-            {
-                $data['omni_effect_image'] = $omni_effect_image;
-            }
+            $data['omni_effect_image'] = $omni_effect_image;
         }
 
-        $successfull_branding_strategy_image = $RS_Row->getMeta('successfull_branding_strategy_image');
-        if( $request->hasFile('successfull_branding_strategy_image') )
-        {
-            $image_name = $this->uploadImage($request->file('successfull_branding_strategy_image'), 'successfull', $successfull_branding_strategy_image);
-            $data['successfull_branding_strategy_image'] = $image_name;
-        }
-        else
+        $successfull_branding_strategy_image = $this->uploadImage($request->file('successfull_branding_strategy_image'), 'successfull', $RS_Row->getMeta('successfull_branding_strategy_image'));
+        if( !empty($successfull_branding_strategy_image) )
         {
-            if( !empty($successfull_branding_strategy_image) )
-            {
-                $data['successfull_branding_strategy_image'] = $successfull_branding_strategy_image;
-            }
+            $data['successfull_branding_strategy_image'] = $successfull_branding_strategy_image;
         }
 
-        $framework_methodology_image = $RS_Row->getMeta('framework_methodology_image');
-        if( $request->hasFile('framework_methodology_image') )
-        {
-            $image_name = $this->uploadImage($request->file('framework_methodology_image'), $request->framework_methodology_title, $framework_methodology_image);
-            $data['framework_methodology_image'] = $image_name;
-        }
-        else
+        $framework_methodology_image = $this->uploadImage($request->file('framework_methodology_image'), $request->framework_methodology_title, $RS_Row->getMeta('framework_methodology_image'));
+        if( !empty($framework_methodology_image) )
         {
-            if( !empty($framework_methodology_image) )
-            {
-                $data['framework_methodology_image'] = $framework_methodology_image;
-            }
+            $data['framework_methodology_image'] = $framework_methodology_image;
         }
 
-        $framework_methodology_item_1_image = $RS_Row->getMeta('framework_methodology_item_1_image');
-        if( $request->hasFile('framework_methodology_item_1_image') )
-        {
-            $image_name = $this->uploadImage($request->file('framework_methodology_item_1_image'), $request->framework_methodology_item_1_title, $framework_methodology_item_1_image);
-            $data['framework_methodology_item_1_image'] = $image_name;
-        }
-        else
+        $framework_methodology_item_1_image = $this->uploadImage($request->file('framework_methodology_item_1_image'), $request->framework_methodology_item_1_title, $RS_Row->getMeta('framework_methodology_item_1_image'));
+        if( !empty($framework_methodology_item_1_image) )
         {
-            if( !empty($framework_methodology_item_1_image) )
-            {
-                $data['framework_methodology_item_1_image'] = $framework_methodology_item_1_image;
-            }
+            $data['framework_methodology_item_1_image'] = $framework_methodology_item_1_image;
         }
 
-        $framework_methodology_item_2_image = $RS_Row->getMeta('framework_methodology_item_2_image');
-        if( $request->hasFile('framework_methodology_item_2_image') )
+        $framework_methodology_item_2_image = $this->uploadImage($request->file('framework_methodology_item_2_image'), $request->framework_methodology_item_2_title, $RS_Row->getMeta('framework_methodology_item_2_image'));
+        if( !empty($framework_methodology_item_2_image) )
         {
-            $image_name = $this->uploadImage($request->file('framework_methodology_item_2_image'), $request->framework_methodology_item_2_title, $framework_methodology_item_2_image);
-            $data['framework_methodology_item_2_image'] = $image_name;
+            $data['framework_methodology_item_2_image'] = $framework_methodology_item_2_image;
         }
-        else
-        {
-            if( !empty($framework_methodology_item_2_image) )
-            {
-                $data['framework_methodology_item_2_image'] = $framework_methodology_item_2_image;
-            }
-        }
 
-        $indomitable_item_1_icon = $RS_Row->getMeta('indomitable_item_1_icon');
-        if( $request->hasFile('indomitable_item_1_icon') )
-        {
-            $image_name = $this->uploadImage($request->file('indomitable_item_1_icon'), $request->indomitable_item_1_title.'_icon', $indomitable_item_1_icon);
-            $data['indomitable_item_1_icon'] = $image_name;
-        }
-        else
+        $indomitable_item_1_icon = $this->uploadImage($request->file('indomitable_item_1_icon'), $request->indomitable_item_1_title.'_icon', $RS_Row->getMeta('indomitable_item_1_icon'));
+        if( !empty($indomitable_item_1_icon) )
         {
-            if( !empty($indomitable_item_1_icon) )
-            {
-                $data['indomitable_item_1_icon'] = $indomitable_item_1_icon;
-            }
+            $data['indomitable_item_1_icon'] = $indomitable_item_1_icon;
         }
 
-        $indomitable_item_1_image = $RS_Row->getMeta('indomitable_item_1_image');
-        if( $request->hasFile('indomitable_item_1_image') )
+        $indomitable_item_1_image = $this->uploadImage($request->file('indomitable_item_1_image'), $request->indomitable_item_1_title, $RS_Row->getMeta('indomitable_item_1_image'));
+        if( !empty($indomitable_item_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('indomitable_item_1_image'), $request->indomitable_item_1_title, $indomitable_item_1_image);
-            $data['indomitable_item_1_image'] = $image_name;
+            $data['indomitable_item_1_image'] = $indomitable_item_1_image;
         }
-        else
-        {
-            if( !empty($indomitable_item_1_image) )
-            {
-                $data['indomitable_item_1_image'] = $indomitable_item_1_image;
-            }
-        }
 
-        $indomitable_item_2_icon = $RS_Row->getMeta('indomitable_item_2_icon');
-        if( $request->hasFile('indomitable_item_2_icon') )
-        {
-            $image_name = $this->uploadImage($request->file('indomitable_item_2_icon'), $request->indomitable_item_2_title.'_icon', $indomitable_item_2_icon);
-            $data['indomitable_item_2_icon'] = $image_name;
-        }
-        else
+        $indomitable_item_2_icon = $this->uploadImage($request->file('indomitable_item_2_icon'), $request->indomitable_item_2_title.'_icon', $RS_Row->getMeta('indomitable_item_2_icon'));
+        if( !empty($indomitable_item_2_icon) )
         {
-            if( !empty($indomitable_item_2_icon) )
-            {
-                $data['indomitable_item_2_icon'] = $indomitable_item_2_icon;
-            }
+            $data['indomitable_item_2_icon'] = $indomitable_item_2_icon;
         }
 
-        $indomitable_item_2_image = $RS_Row->getMeta('indomitable_item_2_image');
-        if( $request->hasFile('indomitable_item_2_image') )
-        {
-            $image_name = $this->uploadImage($request->file('indomitable_item_2_image'), $request->indomitable_item_2_title, $indomitable_item_2_image);
-            $data['indomitable_item_2_image'] = $image_name;
-        }
-        else
+        $indomitable_item_2_image = $this->uploadImage($request->file('indomitable_item_2_image'), $request->indomitable_item_2_title, $RS_Row->getMeta('indomitable_item_2_image'));
+        if( !empty($indomitable_item_2_image) )
         {
-            if( !empty($indomitable_item_2_image) )
-            {
-                $data['indomitable_item_2_image'] = $indomitable_item_2_image;
-            }
+            $data['indomitable_item_2_image'] = $indomitable_item_2_image;
         }
 
-        $indomitable_item_3_icon = $RS_Row->getMeta('indomitable_item_3_icon');
-        if( $request->hasFile('indomitable_item_3_icon') )
-        {
-            $image_name = $this->uploadImage($request->file('indomitable_item_3_icon'), $request->indomitable_item_3_title.'_icon', $indomitable_item_3_icon);
-            $data['indomitable_item_3_icon'] = $image_name;
-        }
-        else
+        $indomitable_item_3_icon = $this->uploadImage($request->file('indomitable_item_3_icon'), $request->indomitable_item_3_title.'_icon', $RS_Row->getMeta('indomitable_item_3_icon'));
+        if( !empty($indomitable_item_3_icon) )
         {
-            if( !empty($indomitable_item_3_icon) )
-            {
-                $data['indomitable_item_3_icon'] = $indomitable_item_3_icon;
-            }
+            $data['indomitable_item_3_icon'] = $indomitable_item_3_icon;
         }
 
-        $indomitable_item_3_image = $RS_Row->getMeta('indomitable_item_3_image');
-        if( $request->hasFile('indomitable_item_3_image') )
-        {
-            $image_name = $this->uploadImage($request->file('indomitable_item_3_image'), $request->indomitable_item_3_title, $indomitable_item_3_image);
-            $data['indomitable_item_3_image'] = $image_name;
-        }
-        else
+        $indomitable_item_3_image = $this->uploadImage($request->file('indomitable_item_3_image'), $request->indomitable_item_3_title, $RS_Row->getMeta('indomitable_item_3_image'));
+        if( !empty($indomitable_item_3_image) )
         {
-            if( !empty($indomitable_item_3_image) )
-            {
-                $data['indomitable_item_3_image'] = $indomitable_item_3_image;
-            }
+            $data['indomitable_item_3_image'] = $indomitable_item_3_image;
         }
 
-        $indomitable_item_4_icon = $RS_Row->getMeta('indomitable_item_4_icon');
-        if( $request->hasFile('indomitable_item_4_icon') )
+        $indomitable_item_4_icon = $this->uploadImage($request->file('indomitable_item_4_icon'), $request->indomitable_item_4_title.'_icon', $RS_Row->getMeta('indomitable_item_4_icon'));
+        if( !empty($indomitable_item_4_icon) )
         {
-            $image_name = $this->uploadImage($request->file('indomitable_item_4_icon'), $request->indomitable_item_4_title.'_icon', $indomitable_item_4_icon);
-            $data['indomitable_item_4_icon'] = $image_name;
+            $data['indomitable_item_4_icon'] = $indomitable_item_4_icon;
         }
-        else
-        {
-            if( !empty($indomitable_item_4_icon) )
-            {
-                $data['indomitable_item_4_icon'] = $indomitable_item_4_icon;
-            }
-        }
 
-        $indomitable_item_4_image = $RS_Row->getMeta('indomitable_item_4_image');
-        if( $request->hasFile('indomitable_item_4_image') )
-        {
-            $image_name = $this->uploadImage($request->file('indomitable_item_4_image'), $request->indomitable_item_4_title, $indomitable_item_4_image);
-            $data['indomitable_item_4_image'] = $image_name;
-        }
-        else
+        $indomitable_item_4_image = $this->uploadImage($request->file('indomitable_item_4_image'), $request->indomitable_item_4_title, $RS_Row->getMeta('indomitable_item_4_image'));
+        if( !empty($indomitable_item_4_image) )
         {
-            if( !empty($indomitable_item_4_image) )
-            {
-                $data['indomitable_item_4_image'] = $indomitable_item_4_image;
-            }
+            $data['indomitable_item_4_image'] = $indomitable_item_4_image;
         }
 
-        $indomitable_item_5_icon = $RS_Row->getMeta('indomitable_item_5_icon');
-        if( $request->hasFile('indomitable_item_5_icon') )
-        {
-            $image_name = $this->uploadImage($request->file('indomitable_item_5_icon'), $request->indomitable_item_5_title.'_icon', $indomitable_item_5_icon);
-            $data['indomitable_item_5_icon'] = $image_name;
-        }
-        else
+        $indomitable_item_5_icon = $this->uploadImage($request->file('indomitable_item_5_icon'), $request->indomitable_item_5_title.'_icon', $RS_Row->getMeta('indomitable_item_5_icon'));
+        if( !empty($indomitable_item_5_icon) )
         {
-            if( !empty($indomitable_item_5_icon) )
-            {
-                $data['indomitable_item_5_icon'] = $indomitable_item_5_icon;
-            }
+            $data['indomitable_item_5_icon'] = $indomitable_item_5_icon;
         }
 
-        $indomitable_item_5_image = $RS_Row->getMeta('indomitable_item_5_image');
-        if( $request->hasFile('indomitable_item_5_image') )
+        $indomitable_item_5_image = $this->uploadImage($request->file('indomitable_item_5_image'), $request->indomitable_item_5_title, $RS_Row->getMeta('indomitable_item_5_image'));
+        if( !empty($indomitable_item_5_image) )
         {
-            $image_name = $this->uploadImage($request->file('indomitable_item_5_image'), $request->indomitable_item_5_title, $indomitable_item_5_image);
-            $data['indomitable_item_5_image'] = $image_name;
+            $data['indomitable_item_5_image'] = $indomitable_item_5_image;
         }
-        else
-        {
-            if( !empty($indomitable_item_5_image) )
-            {
-                $data['indomitable_item_5_image'] = $indomitable_item_5_image;
-            }
-        }
 
-        $articulating_planning_phase_item_1_image = $RS_Row->getMeta('articulating_planning_phase_item_1_image');
-        if( $request->hasFile('articulating_planning_phase_item_1_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_planning_phase_item_1_image'), $request->articulating_planning_phase_item_1_title, $articulating_planning_phase_item_1_image);
-            $data['articulating_planning_phase_item_1_image'] = $image_name;
-        }
-        else
+        $articulating_planning_phase_item_1_image = $this->uploadImage($request->file('articulating_planning_phase_item_1_image'), $request->articulating_planning_phase_item_1_title, $RS_Row->getMeta('articulating_planning_phase_item_1_image'));
+        if( !empty($articulating_planning_phase_item_1_image) )
         {
-            if( !empty($articulating_planning_phase_item_1_image) )
-            {
-                $data['articulating_planning_phase_item_1_image'] = $articulating_planning_phase_item_1_image;
-            }
+            $data['articulating_planning_phase_item_1_image'] = $articulating_planning_phase_item_1_image;
         }
 
-        $articulating_planning_phase_item_2_image = $RS_Row->getMeta('articulating_planning_phase_item_2_image');
-        if( $request->hasFile('articulating_planning_phase_item_2_image') )
+        $articulating_planning_phase_item_2_image = $this->uploadImage($request->file('articulating_planning_phase_item_2_image'), $request->articulating_planning_phase_item_2_title, $RS_Row->getMeta('articulating_planning_phase_item_2_image'));
+        if( !empty($articulating_planning_phase_item_2_image) )
         {
-            $image_name = $this->uploadImage($request->file('articulating_planning_phase_item_2_image'), $request->articulating_planning_phase_item_2_title, $articulating_planning_phase_item_2_image);
-            $data['articulating_planning_phase_item_2_image'] = $image_name;
+            $data['articulating_planning_phase_item_2_image'] = $articulating_planning_phase_item_2_image;
         }
-        else
-        {
-            if( !empty($articulating_planning_phase_item_2_image) )
-            {
-                $data['articulating_planning_phase_item_2_image'] = $articulating_planning_phase_item_2_image;
-            }
-        }
 
-        $articulating_planning_phase_item_3_image = $RS_Row->getMeta('articulating_planning_phase_item_3_image');
-        if( $request->hasFile('articulating_planning_phase_item_3_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_planning_phase_item_3_image'), $request->articulating_planning_phase_item_3_title, $articulating_planning_phase_item_3_image);
-            $data['articulating_planning_phase_item_3_image'] = $image_name;
-        }
-        else
+        $articulating_planning_phase_item_3_image = $this->uploadImage($request->file('articulating_planning_phase_item_3_image'), $request->articulating_planning_phase_item_3_title, $RS_Row->getMeta('articulating_planning_phase_item_3_image'));
+        if( !empty($articulating_planning_phase_item_3_image) )
         {
-            if( !empty($articulating_planning_phase_item_3_image) )
-            {
-                $data['articulating_planning_phase_item_3_image'] = $articulating_planning_phase_item_3_image;
-            }
+            $data['articulating_planning_phase_item_3_image'] = $articulating_planning_phase_item_3_image;
         }
 
-        $articulating_planning_phase_item_4_image = $RS_Row->getMeta('articulating_planning_phase_item_4_image');
-        if( $request->hasFile('articulating_planning_phase_item_4_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_planning_phase_item_4_image'), $request->articulating_planning_phase_item_4_title, $articulating_planning_phase_item_4_image);
-            $data['articulating_planning_phase_item_4_image'] = $image_name;
-        }
-        else
+        $articulating_planning_phase_item_4_image = $this->uploadImage($request->file('articulating_planning_phase_item_4_image'), $request->articulating_planning_phase_item_4_title, $RS_Row->getMeta('articulating_planning_phase_item_4_image'));
+        if( !empty($articulating_planning_phase_item_4_image) )
         {
-            if( !empty($articulating_planning_phase_item_4_image) )
-            {
-                $data['articulating_planning_phase_item_4_image'] = $articulating_planning_phase_item_4_image;
-            }
+            $data['articulating_planning_phase_item_4_image'] = $articulating_planning_phase_item_4_image;
         }
 
-        $articulating_planning_phase_item_5_image = $RS_Row->getMeta('articulating_planning_phase_item_5_image');
-        if( $request->hasFile('articulating_planning_phase_item_5_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_planning_phase_item_5_image'), $request->articulating_planning_phase_item_5_title, $articulating_planning_phase_item_5_image);
-            $data['articulating_planning_phase_item_5_image'] = $image_name;
-        }
-        else
+        $articulating_planning_phase_item_5_image = $this->uploadImage($request->file('articulating_planning_phase_item_5_image'), $request->articulating_planning_phase_item_5_title, $RS_Row->getMeta('articulating_planning_phase_item_5_image'));
+        if( !empty($articulating_planning_phase_item_5_image) )
         {
-            if( !empty($articulating_planning_phase_item_5_image) )
-            {
-                $data['articulating_planning_phase_item_5_image'] = $articulating_planning_phase_item_5_image;
-            }
+            $data['articulating_planning_phase_item_5_image'] = $articulating_planning_phase_item_5_image;
         }
 
-        $articulating_prep_phase_item_1_image = $RS_Row->getMeta('articulating_prep_phase_item_1_image');
-        if( $request->hasFile('articulating_prep_phase_item_1_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_prep_phase_item_1_image'), $request->articulating_prep_phase_item_1_title, $articulating_prep_phase_item_1_image);
-            $data['articulating_prep_phase_item_1_image'] = $image_name;
-        }
-        else
+        $articulating_prep_phase_item_1_image = $this->uploadImage($request->file('articulating_prep_phase_item_1_image'), $request->articulating_prep_phase_item_1_title, $RS_Row->getMeta('articulating_prep_phase_item_1_image'));
+        if( !empty($articulating_prep_phase_item_1_image) )
         {
-            if( !empty($articulating_prep_phase_item_1_image) )
-            {
-                $data['articulating_prep_phase_item_1_image'] = $articulating_prep_phase_item_1_image;
-            }
+            $data['articulating_prep_phase_item_1_image'] = $articulating_prep_phase_item_1_image;
         }
 
-        $articulating_prep_phase_item_2_image = $RS_Row->getMeta('articulating_prep_phase_item_2_image');
-        if( $request->hasFile('articulating_prep_phase_item_2_image') )
+        $articulating_prep_phase_item_2_image = $this->uploadImage($request->file('articulating_prep_phase_item_2_image'), $request->articulating_prep_phase_item_2_title, $RS_Row->getMeta('articulating_prep_phase_item_2_image'));
+        if( !empty($articulating_prep_phase_item_2_image) )
         {
-            $image_name = $this->uploadImage($request->file('articulating_prep_phase_item_2_image'), $request->articulating_prep_phase_item_2_title, $articulating_prep_phase_item_2_image);
-            $data['articulating_prep_phase_item_2_image'] = $image_name;
+            $data['articulating_prep_phase_item_2_image'] = $articulating_prep_phase_item_2_image;
         }
-        else
-        {
-            if( !empty($articulating_prep_phase_item_2_image) )
-            {
-                $data['articulating_prep_phase_item_2_image'] = $articulating_prep_phase_item_2_image;
-            }
-        }
 
-        $articulating_prep_phase_item_3_image = $RS_Row->getMeta('articulating_prep_phase_item_3_image');
-        if( $request->hasFile('articulating_prep_phase_item_3_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_prep_phase_item_3_image'), $request->articulating_prep_phase_item_3_title, $articulating_prep_phase_item_3_image);
-            $data['articulating_prep_phase_item_3_image'] = $image_name;
-        }
-        else
+        $articulating_prep_phase_item_3_image = $this->uploadImage($request->file('articulating_prep_phase_item_3_image'), $request->articulating_prep_phase_item_3_title, $RS_Row->getMeta('articulating_prep_phase_item_3_image'));
+        if( !empty($articulating_prep_phase_item_3_image) )
         {
-            if( !empty($articulating_prep_phase_item_3_image) )
-            {
-                $data['articulating_prep_phase_item_3_image'] = $articulating_prep_phase_item_3_image;
-            }
+            $data['articulating_prep_phase_item_3_image'] = $articulating_prep_phase_item_3_image;
         }
 
-        $articulating_prep_phase_item_4_image = $RS_Row->getMeta('articulating_prep_phase_item_4_image');
-        if( $request->hasFile('articulating_prep_phase_item_4_image') )
+        $articulating_prep_phase_item_4_image = $this->uploadImage($request->file('articulating_prep_phase_item_4_image'), $request->articulating_prep_phase_item_4_title, $RS_Row->getMeta('articulating_prep_phase_item_4_image'));
+        if( !empty($articulating_prep_phase_item_4_image) )
         {
-            $image_name = $this->uploadImage($request->file('articulating_prep_phase_item_4_image'), $request->articulating_prep_phase_item_4_title, $articulating_prep_phase_item_4_image);
-            $data['articulating_prep_phase_item_4_image'] = $image_name;
+            $data['articulating_prep_phase_item_4_image'] = $articulating_prep_phase_item_4_image;
         }
-        else
-        {
-            if( !empty($articulating_prep_phase_item_4_image) )
-            {
-                $data['articulating_prep_phase_item_4_image'] = $articulating_prep_phase_item_4_image;
-            }
-        }
 
-        $articulating_prep_phase_item_5_image = $RS_Row->getMeta('articulating_prep_phase_item_5_image');
-        if( $request->hasFile('articulating_prep_phase_item_5_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_prep_phase_item_5_image'), $request->articulating_prep_phase_item_5_title, $articulating_prep_phase_item_5_image);
-            $data['articulating_prep_phase_item_5_image'] = $image_name;
-        }
-        else
+        $articulating_prep_phase_item_5_image = $this->uploadImage($request->file('articulating_prep_phase_item_5_image'), $request->articulating_prep_phase_item_5_title, $RS_Row->getMeta('articulating_prep_phase_item_5_image'));
+        if( !empty($articulating_prep_phase_item_5_image) )
         {
-            if( !empty($articulating_prep_phase_item_5_image) )
-            {
-                $data['articulating_prep_phase_item_5_image'] = $articulating_prep_phase_item_5_image;
-            }
+            $data['articulating_prep_phase_item_5_image'] = $articulating_prep_phase_item_5_image;
         }
 
-        $articulating_execution_phase_item_1_image = $RS_Row->getMeta('articulating_execution_phase_item_1_image');
-        if( $request->hasFile('articulating_execution_phase_item_1_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_execution_phase_item_1_image'), $request->articulating_execution_phase_item_1_title, $articulating_execution_phase_item_1_image);
-            $data['articulating_execution_phase_item_1_image'] = $image_name;
-        }
-        else
+        $articulating_execution_phase_item_1_image = $this->uploadImage($request->file('articulating_execution_phase_item_1_image'), $request->articulating_execution_phase_item_1_title, $RS_Row->getMeta('articulating_execution_phase_item_1_image'));
+        if( !empty($articulating_execution_phase_item_1_image) )
         {
-            if( !empty($articulating_execution_phase_item_1_image) )
-            {
-                $data['articulating_execution_phase_item_1_image'] = $articulating_execution_phase_item_1_image;
-            }
+            $data['articulating_execution_phase_item_1_image'] = $articulating_execution_phase_item_1_image;
         }
 
-        $articulating_execution_phase_item_2_image = $RS_Row->getMeta('articulating_execution_phase_item_2_image');
-        if( $request->hasFile('articulating_execution_phase_item_2_image') )
+        $articulating_execution_phase_item_2_image = $this->uploadImage($request->file('articulating_execution_phase_item_2_image'), $request->articulating_execution_phase_item_2_title, $RS_Row->getMeta('articulating_execution_phase_item_2_image'));
+        if( !empty($articulating_execution_phase_item_2_image) )
         {
-            $image_name = $this->uploadImage($request->file('articulating_execution_phase_item_2_image'), $request->articulating_execution_phase_item_2_title, $articulating_execution_phase_item_2_image);
-            $data['articulating_execution_phase_item_2_image'] = $image_name;
+            $data['articulating_execution_phase_item_2_image'] = $articulating_execution_phase_item_2_image;
         }
-        else
-        {
-            if( !empty($articulating_execution_phase_item_2_image) )
-            {
-                $data['articulating_execution_phase_item_2_image'] = $articulating_execution_phase_item_2_image;
-            }
-        }
 
-        $articulating_execution_phase_item_3_image = $RS_Row->getMeta('articulating_execution_phase_item_3_image');
-        if( $request->hasFile('articulating_execution_phase_item_3_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_execution_phase_item_3_image'), $request->articulating_execution_phase_item_3_title, $articulating_execution_phase_item_3_image);
-            $data['articulating_execution_phase_item_3_image'] = $image_name;
-        }
-        else
+        $articulating_execution_phase_item_3_image = $this->uploadImage($request->file('articulating_execution_phase_item_3_image'), $request->articulating_execution_phase_item_3_title, $RS_Row->getMeta('articulating_execution_phase_item_3_image'));
+        if( !empty($articulating_execution_phase_item_3_image) )
         {
-            if( !empty($articulating_execution_phase_item_3_image) )
-            {
-                $data['articulating_execution_phase_item_3_image'] = $articulating_execution_phase_item_3_image;
-            }
+            $data['articulating_execution_phase_item_3_image'] = $articulating_execution_phase_item_3_image;
         }
 
-        $articulating_execution_phase_item_4_image = $RS_Row->getMeta('articulating_execution_phase_item_4_image');
-        if( $request->hasFile('articulating_execution_phase_item_4_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_execution_phase_item_4_image'), $request->articulating_execution_phase_item_4_title, $articulating_execution_phase_item_4_image);
-            $data['articulating_execution_phase_item_4_image'] = $image_name;
-        }
-        else
+        $articulating_execution_phase_item_4_image = $this->uploadImage($request->file('articulating_execution_phase_item_4_image'), $request->articulating_execution_phase_item_4_title, $RS_Row->getMeta('articulating_execution_phase_item_4_image'));
+        if( !empty($articulating_execution_phase_item_4_image) )
         {
-            if( !empty($articulating_execution_phase_item_4_image) )
-            {
-                $data['articulating_execution_phase_item_4_image'] = $articulating_execution_phase_item_4_image;
-            }
+            $data['articulating_execution_phase_item_4_image'] = $articulating_execution_phase_item_4_image;
         }
 
-        $articulating_execution_phase_item_5_image = $RS_Row->getMeta('articulating_execution_phase_item_5_image');
-        if( $request->hasFile('articulating_execution_phase_item_5_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_execution_phase_item_5_image'), $request->articulating_execution_phase_item_5_title, $articulating_execution_phase_item_5_image);
-            $data['articulating_execution_phase_item_5_image'] = $image_name;
-        }
-        else
+        $articulating_execution_phase_item_5_image = $this->uploadImage($request->file('articulating_execution_phase_item_5_image'), $request->articulating_execution_phase_item_5_title, $RS_Row->getMeta('articulating_execution_phase_item_5_image'));
+        if( !empty($articulating_execution_phase_item_5_image) )
         {
-            if( !empty($articulating_execution_phase_item_5_image) )
-            {
-                $data['articulating_execution_phase_item_5_image'] = $articulating_execution_phase_item_5_image;
-            }
+            $data['articulating_execution_phase_item_5_image'] = $articulating_execution_phase_item_5_image;
         }
 
-        $articulating_monitoring_phase_item_1_image = $RS_Row->getMeta('articulating_monitoring_phase_item_1_image');
-        if( $request->hasFile('articulating_monitoring_phase_item_1_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_monitoring_phase_item_1_image'), $request->articulating_monitoring_phase_item_1_title, $articulating_monitoring_phase_item_1_image);
-            $data['articulating_monitoring_phase_item_1_image'] = $image_name;
-        }
-        else
+        $articulating_monitoring_phase_item_1_image = $this->uploadImage($request->file('articulating_monitoring_phase_item_1_image'), $request->articulating_monitoring_phase_item_1_title, $RS_Row->getMeta('articulating_monitoring_phase_item_1_image'));
+        if( !empty($articulating_monitoring_phase_item_1_image) )
         {
-            if( !empty($articulating_monitoring_phase_item_1_image) )
-            {
-                $data['articulating_monitoring_phase_item_1_image'] = $articulating_monitoring_phase_item_1_image;
-            }
+            $data['articulating_monitoring_phase_item_1_image'] = $articulating_monitoring_phase_item_1_image;
         }
 
-        $articulating_monitoring_phase_item_2_image = $RS_Row->getMeta('articulating_monitoring_phase_item_2_image');
-        if( $request->hasFile('articulating_monitoring_phase_item_2_image') )
+        $articulating_monitoring_phase_item_2_image = $this->uploadImage($request->file('articulating_monitoring_phase_item_2_image'), $request->articulating_monitoring_phase_item_2_title, $RS_Row->getMeta('articulating_monitoring_phase_item_2_image'));
+        if( !empty($articulating_monitoring_phase_item_2_image) )
         {
-            $image_name = $this->uploadImage($request->file('articulating_monitoring_phase_item_2_image'), $request->articulating_monitoring_phase_item_2_title, $articulating_monitoring_phase_item_2_image);
-            $data['articulating_monitoring_phase_item_2_image'] = $image_name;
+            $data['articulating_monitoring_phase_item_2_image'] = $articulating_monitoring_phase_item_2_image;
         }
-        else
-        {
-            if( !empty($articulating_monitoring_phase_item_2_image) )
-            {
-                $data['articulating_monitoring_phase_item_2_image'] = $articulating_monitoring_phase_item_2_image;
-            }
-        }
 
-        $articulating_monitoring_phase_item_3_image = $RS_Row->getMeta('articulating_monitoring_phase_item_3_image');
-        if( $request->hasFile('articulating_monitoring_phase_item_3_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_monitoring_phase_item_3_image'), $request->articulating_monitoring_phase_item_3_title, $articulating_monitoring_phase_item_3_image);
-            $data['articulating_monitoring_phase_item_3_image'] = $image_name;
-        }
-        else
+        $articulating_monitoring_phase_item_3_image = $this->uploadImage($request->file('articulating_monitoring_phase_item_3_image'), $request->articulating_monitoring_phase_item_3_title, $RS_Row->getMeta('articulating_monitoring_phase_item_3_image'));
+        if( !empty($articulating_monitoring_phase_item_3_image) )
         {
-            if( !empty($articulating_monitoring_phase_item_3_image) )
-            {
-                $data['articulating_monitoring_phase_item_3_image'] = $articulating_monitoring_phase_item_3_image;
-            }
+            $data['articulating_monitoring_phase_item_3_image'] = $articulating_monitoring_phase_item_3_image;
         }
 
-        $articulating_monitoring_phase_item_4_image = $RS_Row->getMeta('articulating_monitoring_phase_item_4_image');
-        if( $request->hasFile('articulating_monitoring_phase_item_4_image') )
+        $articulating_monitoring_phase_item_4_image = $this->uploadImage($request->file('articulating_monitoring_phase_item_4_image'), $request->articulating_monitoring_phase_item_4_title, $RS_Row->getMeta('articulating_monitoring_phase_item_4_image'));
+        if( !empty($articulating_monitoring_phase_item_4_image) )
         {
-            $image_name = $this->uploadImage($request->file('articulating_monitoring_phase_item_4_image'), $request->articulating_monitoring_phase_item_4_title, $articulating_monitoring_phase_item_4_image);
-            $data['articulating_monitoring_phase_item_4_image'] = $image_name;
+            $data['articulating_monitoring_phase_item_4_image'] = $articulating_monitoring_phase_item_4_image;
         }
-        else
-        {
-            if( !empty($articulating_monitoring_phase_item_4_image) )
-            {
-                $data['articulating_monitoring_phase_item_4_image'] = $articulating_monitoring_phase_item_4_image;
-            }
-        }
 
-        $articulating_monitoring_phase_item_5_image = $RS_Row->getMeta('articulating_monitoring_phase_item_5_image');
-        if( $request->hasFile('articulating_monitoring_phase_item_5_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_monitoring_phase_item_5_image'), $request->articulating_monitoring_phase_item_5_title, $articulating_monitoring_phase_item_5_image);
-            $data['articulating_monitoring_phase_item_5_image'] = $image_name;
-        }
-        else
+        $articulating_monitoring_phase_item_5_image = $this->uploadImage($request->file('articulating_monitoring_phase_item_5_image'), $request->articulating_monitoring_phase_item_5_title, $RS_Row->getMeta('articulating_monitoring_phase_item_5_image'));
+        if( !empty($articulating_monitoring_phase_item_5_image) )
         {
-            if( !empty($articulating_monitoring_phase_item_5_image) )
-            {
-                $data['articulating_monitoring_phase_item_5_image'] = $articulating_monitoring_phase_item_5_image;
-            }
+            $data['articulating_monitoring_phase_item_5_image'] = $articulating_monitoring_phase_item_5_image;
         }
 
-        $articulating_monitoring_phase_item_6_image = $RS_Row->getMeta('articulating_monitoring_phase_item_6_image');
-        if( $request->hasFile('articulating_monitoring_phase_item_6_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_monitoring_phase_item_6_image'), $request->articulating_monitoring_phase_item_6_title, $articulating_monitoring_phase_item_6_image);
-            $data['articulating_monitoring_phase_item_6_image'] = $image_name;
-        }
-        else
+        $articulating_monitoring_phase_item_6_image = $this->uploadImage($request->file('articulating_monitoring_phase_item_6_image'), $request->articulating_monitoring_phase_item_6_title, $RS_Row->getMeta('articulating_monitoring_phase_item_6_image'));
+        if( !empty($articulating_monitoring_phase_item_6_image) )
         {
-            if( !empty($articulating_monitoring_phase_item_6_image) )
-            {
-                $data['articulating_monitoring_phase_item_6_image'] = $articulating_monitoring_phase_item_6_image;
-            }
+            $data['articulating_monitoring_phase_item_6_image'] = $articulating_monitoring_phase_item_6_image;
         }
 
-        $articulating_monitoring_phase_item_7_image = $RS_Row->getMeta('articulating_monitoring_phase_item_7_image');
-        if( $request->hasFile('articulating_monitoring_phase_item_7_image') )
-        {
-            $image_name = $this->uploadImage($request->file('articulating_monitoring_phase_item_7_image'), $request->articulating_monitoring_phase_item_7_title, $articulating_monitoring_phase_item_7_image);
-            $data['articulating_monitoring_phase_item_7_image'] = $image_name;
-        }
-        else
+        $articulating_monitoring_phase_item_7_image = $this->uploadImage($request->file('articulating_monitoring_phase_item_7_image'), $request->articulating_monitoring_phase_item_7_title, $RS_Row->getMeta('articulating_monitoring_phase_item_7_image'));
+        if( !empty($articulating_monitoring_phase_item_7_image) )
         {
-            if( !empty($articulating_monitoring_phase_item_7_image) )
-            {
-                $data['articulating_monitoring_phase_item_7_image'] = $articulating_monitoring_phase_item_7_image;
-            }
+            $data['articulating_monitoring_phase_item_7_image'] = $articulating_monitoring_phase_item_7_image;
         }
 
-        $marketing_strategy_step_1_image = $RS_Row->getMeta('marketing_strategy_step_1_image');
-        if( $request->hasFile('marketing_strategy_step_1_image') )
-        {
-            $image_name = $this->uploadImage($request->file('marketing_strategy_step_1_image'), $request->marketing_strategy_step_1_title, $marketing_strategy_step_1_image);
-            $data['marketing_strategy_step_1_image'] = $image_name;
-        }
-        else
+        $marketing_strategy_step_1_image = $this->uploadImage($request->file('marketing_strategy_step_1_image'), $request->marketing_strategy_step_1_title, $RS_Row->getMeta('marketing_strategy_step_1_image'));
+        if( !empty($marketing_strategy_step_1_image) )
         {
-            if( !empty($marketing_strategy_step_1_image) )
-            {
-                $data['marketing_strategy_step_1_image'] = $marketing_strategy_step_1_image;
-            }
+            $data['marketing_strategy_step_1_image'] = $marketing_strategy_step_1_image;
         }
 
-        $marketing_strategy_step_2_image = $RS_Row->getMeta('marketing_strategy_step_2_image');
-        if( $request->hasFile('marketing_strategy_step_2_image') )
+        $marketing_strategy_step_2_image = $this->uploadImage($request->file('marketing_strategy_step_2_image'), $request->marketing_strategy_step_2_title, $RS_Row->getMeta('marketing_strategy_step_2_image'));
+        if( !empty($marketing_strategy_step_2_image) )
         {
-            $image_name = $this->uploadImage($request->file('marketing_strategy_step_2_image'), $request->marketing_strategy_step_2_title, $marketing_strategy_step_2_image);
-            $data['marketing_strategy_step_2_image'] = $image_name;
+            $data['marketing_strategy_step_2_image'] = $marketing_strategy_step_2_image;
         }
-        else
-        {
-            if( !empty($marketing_strategy_step_2_image) )
-            {
-                $data['marketing_strategy_step_2_image'] = $marketing_strategy_step_2_image;
-            }
-        }
 
-        $marketing_strategy_step_3_image = $RS_Row->getMeta('marketing_strategy_step_3_image');
-        if( $request->hasFile('marketing_strategy_step_3_image') )
-        {
-            $image_name = $this->uploadImage($request->file('marketing_strategy_step_3_image'), $request->marketing_strategy_step_3_title, $marketing_strategy_step_3_image);
-            $data['marketing_strategy_step_3_image'] = $image_name;
-        }
-        else
+        $marketing_strategy_step_3_image = $this->uploadImage($request->file('marketing_strategy_step_3_image'), $request->marketing_strategy_step_3_title, $RS_Row->getMeta('marketing_strategy_step_3_image'));
+        if( !empty($marketing_strategy_step_3_image) )
         {
-            if( !empty($marketing_strategy_step_3_image) )
-            {
-                $data['marketing_strategy_step_3_image'] = $marketing_strategy_step_3_image;
-            }
+            $data['marketing_strategy_step_3_image'] = $marketing_strategy_step_3_image;
         }
 
-        $marketing_strategy_step_4_image = $RS_Row->getMeta('marketing_strategy_step_4_image');
-        if( $request->hasFile('marketing_strategy_step_4_image') )
-        {
-            $image_name = $this->uploadImage($request->file('marketing_strategy_step_4_image'), $request->marketing_strategy_step_4_title, $marketing_strategy_step_4_image);
-            $data['marketing_strategy_step_4_image'] = $image_name;
-        }
-        else
+        $marketing_strategy_step_4_image = $this->uploadImage($request->file('marketing_strategy_step_4_image'), $request->marketing_strategy_step_4_title, $RS_Row->getMeta('marketing_strategy_step_4_image'));
+        if( !empty($marketing_strategy_step_4_image) )
         {
-            if( !empty($marketing_strategy_step_4_image) )
-            {
-                $data['marketing_strategy_step_4_image'] = $marketing_strategy_step_4_image;
-            }
+            $data['marketing_strategy_step_4_image'] = $marketing_strategy_step_4_image;
         }
 
-        $key_objectives_image = $RS_Row->getMeta('key_objectives_image');
-        if( $request->hasFile('key_objectives_image') )
+        $key_objectives_image = $this->uploadImage($request->file('key_objectives_image'), $request->key_objectives_title, $RS_Row->getMeta('key_objectives_image'));
+        if( !empty($key_objectives_image) )
         {
-            $image_name = $this->uploadImage($request->file('key_objectives_image'), $request->marketing_strategy_step_4_title, $key_objectives_image);
-            $data['key_objectives_image'] = $image_name;
+            $data['key_objectives_image'] = $key_objectives_image;
         }
-        else
-        {
-            if( !empty($key_objectives_image) )
-            {
-                $data['key_objectives_image'] = $key_objectives_image;
-            }
-        }
 
-        $marketing_goals_item_image = $RS_Row->getMeta('marketing_goals_item_image');
-        if( $request->hasFile('marketing_goals_item_image') )
-        {
-            $image_name = $this->uploadImage($request->file('marketing_goals_item_image'), $request->marketing_strategy_step_4_title, $marketing_goals_item_image);
-            $data['marketing_goals_item_image'] = $image_name;
-        }
-        else
+        $marketing_goals_item_image = $this->uploadImage($request->file('marketing_goals_item_image'), $request->marketing_goals_item_title, $RS_Row->getMeta('marketing_goals_item_image'));
+        if( !empty($marketing_goals_item_image) )
         {
-            if( !empty($marketing_goals_item_image) )
-            {
-                $data['marketing_goals_item_image'] = $marketing_goals_item_image;
-            }
+            $data['marketing_goals_item_image'] = $marketing_goals_item_image;
         }
 
-        $what_expect_image = $RS_Row->getMeta('what_expect_image');
-        if( $request->hasFile('what_expect_image') )
+        $what_expect_image = $this->uploadImage($request->file('what_expect_image'), $request->what_expect_title, $RS_Row->getMeta('what_expect_image'));
+        if( !empty($what_expect_image) )
         {
-            $image_name = $this->uploadImage($request->file('what_expect_image'), $request->marketing_strategy_step_4_title, $what_expect_image);
-            $data['what_expect_image'] = $image_name;
+            $data['what_expect_image'] = $what_expect_image;
         }
-        else
-        {
-            if( !empty($what_expect_image) )
-            {
-                $data['what_expect_image'] = $what_expect_image;
-            }
-        }
 
-        $what_expect_item_1_icon = $RS_Row->getMeta('what_expect_item_1_icon');
-        if( $request->hasFile('what_expect_item_1_icon') )
-        {
-            $image_name = $this->uploadImage($request->file('what_expect_item_1_icon'), $request->what_expect_item_1_title, $what_expect_item_1_icon);
-            $data['what_expect_item_1_icon'] = $image_name;
-        }
-        else
+        $what_expect_item_1_image = $this->uploadImage($request->file('what_expect_item_1_image'), $request->what_expect_item_1_title, $RS_Row->getMeta('what_expect_item_1_image'));
+        if( !empty($what_expect_item_1_image) )
         {
-            if( !empty($what_expect_item_1_icon) )
-            {
-                $data['what_expect_item_1_icon'] = $what_expect_item_1_icon;
-            }
+            $data['what_expect_item_1_image'] = $what_expect_item_1_image;
         }
 
-        $what_expect_item_2_icon = $RS_Row->getMeta('what_expect_item_2_icon');
-        if( $request->hasFile('what_expect_item_2_icon') )
-        {
-            $image_name = $this->uploadImage($request->file('what_expect_item_2_icon'), $request->what_expect_item_2_title, $what_expect_item_2_icon);
-            $data['what_expect_item_2_icon'] = $image_name;
-        }
-        else
+        $what_expect_item_2_image = $this->uploadImage($request->file('what_expect_item_2_image'), $request->what_expect_item_2_title, $RS_Row->getMeta('what_expect_item_2_image'));
+        if( !empty($what_expect_item_2_image) )
         {
-            if( !empty($what_expect_item_2_icon) )
-            {
-                $data['what_expect_item_2_icon'] = $what_expect_item_2_icon;
-            }
+            $data['what_expect_item_2_image'] = $what_expect_item_2_image;
         }
 
-        $what_expect_item_3_icon = $RS_Row->getMeta('what_expect_item_3_icon');
-        if( $request->hasFile('what_expect_item_3_icon') )
-        {
-            $image_name = $this->uploadImage($request->file('what_expect_item_3_icon'), $request->what_expect_item_3_title, $what_expect_item_3_icon);
-            $data['what_expect_item_3_icon'] = $image_name;
-        }
-        else
+        $what_expect_item_3_image = $this->uploadImage($request->file('what_expect_item_3_image'), $request->what_expect_item_3_title, $RS_Row->getMeta('what_expect_item_3_image'));
+        if( !empty($what_expect_item_3_image) )
         {
-            if( !empty($what_expect_item_3_icon) )
-            {
-                $data['what_expect_item_3_icon'] = $what_expect_item_3_icon;
-            }
+            $data['what_expect_item_3_image'] = $what_expect_item_3_image;
         }
 
-        $what_expect_item_4_icon = $RS_Row->getMeta('what_expect_item_4_icon');
-        if( $request->hasFile('what_expect_item_4_icon') )
-        {
-            $image_name = $this->uploadImage($request->file('what_expect_item_4_icon'), $request->what_expect_item_4_title, $what_expect_item_4_icon);
-            $data['what_expect_item_4_icon'] = $image_name;
-        }
-        else
+        $what_expect_item_4_image = $this->uploadImage($request->file('what_expect_item_4_image'), $request->what_expect_item_4_title, $RS_Row->getMeta('what_expect_item_4_image'));
+        if( !empty($what_expect_item_4_image) )
         {
-            if( !empty($what_expect_item_4_icon) )
-            {
-                $data['what_expect_item_4_icon'] = $what_expect_item_4_icon;
-            }
+            $data['what_expect_item_4_image'] = $what_expect_item_4_image;
         }
 
-        $what_expect_item_5_icon = $RS_Row->getMeta('what_expect_item_5_icon');
-        if( $request->hasFile('what_expect_item_5_icon') )
+        $what_expect_item_5_image = $this->uploadImage($request->file('what_expect_item_5_image'), $request->what_expect_item_5_title, $RS_Row->getMeta('what_expect_item_5_image'));
+        if( !empty($what_expect_item_5_image) )
         {
-            $image_name = $this->uploadImage($request->file('what_expect_item_5_icon'), $request->what_expect_item_5_title, $what_expect_item_5_icon);
-            $data['what_expect_item_5_icon'] = $image_name;
+            $data['what_expect_item_5_image'] = $what_expect_item_5_image;
         }
-        else
-        {
-            if( !empty($what_expect_item_5_icon) )
-            {
-                $data['what_expect_item_5_icon'] = $what_expect_item_5_icon;
-            }
-        }
 
-        $pitch_image = $RS_Row->getMeta('pitch_image');
-        if( $request->hasFile('pitch_image') )
-        {
-            $image_name = $this->uploadImage($request->file('pitch_image'), $request->what_expect_item_5_title, $pitch_image);
-            $data['pitch_image'] = $image_name;
-        }
-        else
+        $pitch_image = $this->uploadImage($request->file('pitch_image'), $request->pitch_title, $RS_Row->getMeta('pitch_image'));
+        if( !empty($pitch_image) )
         {
-            if( !empty($pitch_image) )
-            {
-                $data['pitch_image'] = $pitch_image;
-            }
+            $data['pitch_image'] = $pitch_image;
         }
 
-        $guide_image = $RS_Row->getMeta('guide_image');
-        if( $request->hasFile('guide_image') )
+        $guide_image = $this->uploadImage($request->file('guide_image'), $request->guide_title, $RS_Row->getMeta('guide_image'));
+        if( !empty($guide_image) )
         {
-            $image_name = $this->uploadImage($request->file('guide_image'), $request->guide_title, $guide_image);
-            $data['guide_image'] = $image_name;
+            $data['guide_image'] = $guide_image;
         }
-        else
-        {
-            if( !empty($guide_image) )
-            {
-                $data['guide_image'] = $guide_image;
-            }
-        }
 
-        $guide_item_1_image = $RS_Row->getMeta('guide_item_1_image');
-        if( $request->hasFile('guide_item_1_image') )
-        {
-            $image_name = $this->uploadImage($request->file('guide_item_1_image'), $request->guide_item_1_title, $guide_item_1_image);
-            $data['guide_item_1_image'] = $image_name;
-        }
-        else
+        $guide_item_1_image = $this->uploadImage($request->file('guide_item_1_image'), $request->guide_item_1_title, $RS_Row->getMeta('guide_item_1_image'));
+        if( !empty($guide_item_1_image) )
         {
-            if( !empty($guide_item_1_image) )
-            {
-                $data['guide_item_1_image'] = $guide_item_1_image;
-            }
+            $data['guide_item_1_image'] = $guide_item_1_image;
         }
 
-        $guide_item_2_image = $RS_Row->getMeta('guide_item_2_image');
-        if( $request->hasFile('guide_item_2_image') )
-        {
-            $image_name = $this->uploadImage($request->file('guide_item_2_image'), $request->guide_item_2_title, $guide_item_2_image);
-            $data['guide_item_2_image'] = $image_name;
-        }
-        else
+        $guide_item_2_image = $this->uploadImage($request->file('guide_item_2_image'), $request->guide_item_2_title, $RS_Row->getMeta('guide_item_2_image'));
+        if( !empty($guide_item_2_image) )
         {
-            if( !empty($guide_item_2_image) )
-            {
-                $data['guide_item_2_image'] = $guide_item_2_image;
-            }
+            $data['guide_item_2_image'] = $guide_item_2_image;
         }
 
-        $guide_item_3_image = $RS_Row->getMeta('guide_item_3_image');
-        if( $request->hasFile('guide_item_3_image') )
+        $guide_item_3_image = $this->uploadImage($request->file('guide_item_3_image'), $request->guide_item_3_title, $RS_Row->getMeta('guide_item_3_image'));
+        if( !empty($guide_item_3_image) )
         {
-            $image_name = $this->uploadImage($request->file('guide_item_3_image'), $request->guide_item_3_title, $guide_item_3_image);
-            $data['guide_item_3_image'] = $image_name;
+            $data['guide_item_3_image'] = $guide_item_3_image;
         }
-        else
-        {
-            if( !empty($guide_item_3_image) )
-            {
-                $data['guide_item_3_image'] = $guide_item_3_image;
-            }
-        }
 
-        $guide_item_4_image = $RS_Row->getMeta('guide_item_4_image');
-        if( $request->hasFile('guide_item_4_image') )
-        {
-            $image_name = $this->uploadImage($request->file('guide_item_4_image'), $request->guide_item_4_title, $guide_item_4_image);
-            $data['guide_item_4_image'] = $image_name;
-        }
-        else
+        $guide_item_4_image = $this->uploadImage($request->file('guide_item_4_image'), $request->guide_item_4_title, $RS_Row->getMeta('guide_item_4_image'));
+        if( !empty($guide_item_4_image) )
         {
-            if( !empty($guide_item_4_image) )
-            {
-                $data['guide_item_4_image'] = $guide_item_4_image;
-            }
+            $data['guide_item_4_image'] = $guide_item_4_image;
         }
 
-        $leverage_model_item_1_image = $RS_Row->getMeta('leverage_model_item_1_image');
-        if( $request->hasFile('leverage_model_item_1_image') )
-        {
-            $image_name = $this->uploadImage($request->file('leverage_model_item_1_image'), $request->leverage_model_item_1_title, $leverage_model_item_1_image);
-            $data['leverage_model_item_1_image'] = $image_name;
-        }
-        else
+        $leverage_model_item_1_image = $this->uploadImage($request->file('leverage_model_item_1_image'), $request->leverage_model_item_1_title, $RS_Row->getMeta('leverage_model_item_1_image'));
+        if( !empty($leverage_model_item_1_image) )
         {
-            if( !empty($leverage_model_item_1_image) )
-            {
-                $data['leverage_model_item_1_image'] = $leverage_model_item_1_image;
-            }
+            $data['leverage_model_item_1_image'] = $leverage_model_item_1_image;
         }
 
-        $leverage_model_item_2_image = $RS_Row->getMeta('leverage_model_item_2_image');
-        if( $request->hasFile('leverage_model_item_2_image') )
-        {
-            $image_name = $this->uploadImage($request->file('leverage_model_item_2_image'), $request->leverage_model_item_2_title, $leverage_model_item_2_image);
-            $data['leverage_model_item_2_image'] = $image_name;
-        }
-        else
+        $leverage_model_item_2_image = $this->uploadImage($request->file('leverage_model_item_2_image'), $request->leverage_model_item_2_title, $RS_Row->getMeta('leverage_model_item_2_image'));
+        if( !empty($leverage_model_item_2_image) )
         {
-            if( !empty($leverage_model_item_2_image) )
-            {
-                $data['leverage_model_item_2_image'] = $leverage_model_item_2_image;
-            }
+            $data['leverage_model_item_2_image'] = $leverage_model_item_2_image;
         }
 
-        $leverage_model_item_3_image = $RS_Row->getMeta('leverage_model_item_3_image');
-        if( $request->hasFile('leverage_model_item_3_image') )
-        {
-            $image_name = $this->uploadImage($request->file('leverage_model_item_3_image'), $request->leverage_model_item_3_title, $leverage_model_item_3_image);
-            $data['leverage_model_item_3_image'] = $image_name;
-        }
-        else
+        $leverage_model_item_3_image = $this->uploadImage($request->file('leverage_model_item_3_image'), $request->leverage_model_item_3_title, $RS_Row->getMeta('leverage_model_item_3_image'));
+        if( !empty($leverage_model_item_3_image) )
         {
-            if( !empty($leverage_model_item_3_image) )
-            {
-                $data['leverage_model_item_3_image'] = $leverage_model_item_3_image;
-            }
+            $data['leverage_model_item_3_image'] = $leverage_model_item_3_image;
         }
 
-        $leverage_model_item_4_image = $RS_Row->getMeta('leverage_model_item_4_image');
-        if( $request->hasFile('leverage_model_item_4_image') )
+        $leverage_model_item_4_image = $this->uploadImage($request->file('leverage_model_item_4_image'), $request->leverage_model_item_4_title, $RS_Row->getMeta('leverage_model_item_4_image'));
+        if( !empty($leverage_model_item_4_image) )
         {
-            $image_name = $this->uploadImage($request->file('leverage_model_item_4_image'), $request->leverage_model_item_4_title, $leverage_model_item_4_image);
-            $data['leverage_model_item_4_image'] = $image_name;
+            $data['leverage_model_item_4_image'] = $leverage_model_item_4_image;
         }
-        else
-        {
-            if( !empty($leverage_model_item_4_image) )
-            {
-                $data['leverage_model_item_4_image'] = $leverage_model_item_4_image;
-            }
-        }
 
-        $lifecycle_image = $RS_Row->getMeta('lifecycle_image');
-        if( $request->hasFile('lifecycle_image') )
-        {
-            $image_name = $this->uploadImage($request->file('lifecycle_image'), $request->lifecycle_title, $lifecycle_image);
-            $data['lifecycle_image'] = $image_name;
-        }
-        else
+        $lifecycle_image = $this->uploadImage($request->file('lifecycle_image'), $request->lifecycle_title, $RS_Row->getMeta('lifecycle_image'));
+        if( !empty($lifecycle_image) )
         {
-            if( !empty($lifecycle_image) )
-            {
-                $data['lifecycle_image'] = $lifecycle_image;
-            }
+            $data['lifecycle_image'] = $lifecycle_image;
         }
 
-        $why_hire_item_1_image = $RS_Row->getMeta('why_hire_item_1_image');
-        if( $request->hasFile('why_hire_item_1_image') )
+        $why_hire_item_1_image = $this->uploadImage($request->file('why_hire_item_1_image'), $request->why_hire_item_1_title, $RS_Row->getMeta('why_hire_item_1_image'));
+        if( !empty($why_hire_item_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('why_hire_item_1_image'), $request->why_hire_item_1_title, $why_hire_item_1_image);
-            $data['why_hire_item_1_image'] = $image_name;
+            $data['why_hire_item_1_image'] = $why_hire_item_1_image;
         }
-        else
-        {
-            if( !empty($why_hire_item_1_image) )
-            {
-                $data['why_hire_item_1_image'] = $why_hire_item_1_image;
-            }
-        }
 
-        $why_hire_item_2_image = $RS_Row->getMeta('why_hire_item_2_image');
-        if( $request->hasFile('why_hire_item_2_image') )
-        {
-            $image_name = $this->uploadImage($request->file('why_hire_item_2_image'), $request->why_hire_item_2_title, $why_hire_item_2_image);
-            $data['why_hire_item_2_image'] = $image_name;
-        }
-        else
+        $why_hire_item_2_image = $this->uploadImage($request->file('why_hire_item_2_image'), $request->why_hire_item_2_title, $RS_Row->getMeta('why_hire_item_2_image'));
+        if( !empty($why_hire_item_2_image) )
         {
-            if( !empty($why_hire_item_2_image) )
-            {
-                $data['why_hire_item_2_image'] = $why_hire_item_2_image;
-            }
+            $data['why_hire_item_2_image'] = $why_hire_item_2_image;
         }
 
-        $why_hire_item_3_image = $RS_Row->getMeta('why_hire_item_3_image');
-        if( $request->hasFile('why_hire_item_3_image') )
-        {
-            $image_name = $this->uploadImage($request->file('why_hire_item_3_image'), $request->why_hire_item_3_title, $why_hire_item_3_image);
-            $data['why_hire_item_3_image'] = $image_name;
-        }
-        else
+        $why_hire_item_3_image = $this->uploadImage($request->file('why_hire_item_3_image'), $request->why_hire_item_3_title, $RS_Row->getMeta('why_hire_item_3_image'));
+        if( !empty($why_hire_item_3_image) )
         {
-            if( !empty($why_hire_item_3_image) )
-            {
-                $data['why_hire_item_3_image'] = $why_hire_item_3_image;
-            }
+            $data['why_hire_item_3_image'] = $why_hire_item_3_image;
         }
 
-        $why_hire_item_4_image = $RS_Row->getMeta('why_hire_item_4_image');
-        if( $request->hasFile('why_hire_item_4_image') )
-        {
-            $image_name = $this->uploadImage($request->file('why_hire_item_4_image'), $request->why_hire_item_4_title, $why_hire_item_4_image);
-            $data['why_hire_item_4_image'] = $image_name;
-        }
-        else
+        $why_hire_item_4_image = $this->uploadImage($request->file('why_hire_item_4_image'), $request->why_hire_item_4_title, $RS_Row->getMeta('why_hire_item_4_image'));
+        if( !empty($why_hire_item_4_image) )
         {
-            if( !empty($why_hire_item_4_image) )
-            {
-                $data['why_hire_item_4_image'] = $why_hire_item_4_image;
-            }
+            $data['why_hire_item_4_image'] = $why_hire_item_4_image;
         }
 
-        $strategic_issues_image = $RS_Row->getMeta('strategic_issues_image');
-        if( $request->hasFile('strategic_issues_image') )
-        {
-            $image_name = $this->uploadImage($request->file('strategic_issues_image'), 'ss', $strategic_issues_image);
-            $data['strategic_issues_image'] = $image_name;
-        }
-        else
+        $strategic_issues_image = $this->uploadImage($request->file('strategic_issues_image'), 'ss', $RS_Row->getMeta('strategic_issues_image'));
+        if( !empty($strategic_issues_image) )
         {
-            if( !empty($strategic_issues_image) )
-            {
-                $data['strategic_issues_image'] = $strategic_issues_image;
-            }
+            $data['strategic_issues_image'] = $strategic_issues_image;
         }
 
-        $methodology_process_audit_item_1_image = $RS_Row->getMeta('methodology_process_audit_item_1_image');
-        if( $request->hasFile('methodology_process_audit_item_1_image') )
+        $methodology_process_audit_item_1_image = $this->uploadImage($request->file('methodology_process_audit_item_1_image'), $request->methodology_process_audit_item_1_title, $RS_Row->getMeta('methodology_process_audit_item_1_image'));
+        if( !empty($methodology_process_audit_item_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_audit_item_1_image'), $request->methodology_process_audit_item_1_title, $methodology_process_audit_item_1_image);
-            $data['methodology_process_audit_item_1_image'] = $image_name;
+            $data['methodology_process_audit_item_1_image'] = $methodology_process_audit_item_1_image;
         }
-        else
-        {
-            if( !empty($methodology_process_audit_item_1_image) )
-            {
-                $data['methodology_process_audit_item_1_image'] = $methodology_process_audit_item_1_image;
-            }
-        }
 
-        $methodology_process_audit_item_2_image = $RS_Row->getMeta('methodology_process_audit_item_2_image');
-        if( $request->hasFile('methodology_process_audit_item_2_image') )
-        {
-            $image_name = $this->uploadImage($request->file('methodology_process_audit_item_2_image'), $request->methodology_process_audit_item_2_title, $methodology_process_audit_item_2_image);
-            $data['methodology_process_audit_item_2_image'] = $image_name;
-        }
-        else
+        $methodology_process_audit_item_2_image = $this->uploadImage($request->file('methodology_process_audit_item_2_image'), $request->methodology_process_audit_item_2_title, $RS_Row->getMeta('methodology_process_audit_item_2_image'));
+        if( !empty($methodology_process_audit_item_2_image) )
         {
-            if( !empty($methodology_process_audit_item_2_image) )
-            {
-                $data['methodology_process_audit_item_2_image'] = $methodology_process_audit_item_2_image;
-            }
+            $data['methodology_process_audit_item_2_image'] = $methodology_process_audit_item_2_image;
         }
 
-        $methodology_process_audit_item_3_image = $RS_Row->getMeta('methodology_process_audit_item_3_image');
-        if( $request->hasFile('methodology_process_audit_item_3_image') )
-        {
-            $image_name = $this->uploadImage($request->file('methodology_process_audit_item_3_image'), $request->methodology_process_audit_item_3_title, $methodology_process_audit_item_3_image);
-            $data['methodology_process_audit_item_3_image'] = $image_name;
-        }
-        else
+        $methodology_process_audit_item_3_image = $this->uploadImage($request->file('methodology_process_audit_item_3_image'), $request->methodology_process_audit_item_3_title, $RS_Row->getMeta('methodology_process_audit_item_3_image'));
+        if( !empty($methodology_process_audit_item_3_image) )
         {
-            if( !empty($methodology_process_audit_item_3_image) )
-            {
-                $data['methodology_process_audit_item_3_image'] = $methodology_process_audit_item_3_image;
-            }
+            $data['methodology_process_audit_item_3_image'] = $methodology_process_audit_item_3_image;
         }
 
-        $methodology_process_audit_item_4_image = $RS_Row->getMeta('methodology_process_audit_item_4_image');
-        if( $request->hasFile('methodology_process_audit_item_4_image') )
+        $methodology_process_audit_item_4_image = $this->uploadImage($request->file('methodology_process_audit_item_4_image'), $request->methodology_process_audit_item_4_title, $RS_Row->getMeta('methodology_process_audit_item_4_image'));
+        if( !empty($methodology_process_audit_item_4_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_audit_item_4_image'), $request->methodology_process_audit_item_4_title, $methodology_process_audit_item_4_image);
-            $data['methodology_process_audit_item_4_image'] = $image_name;
+            $data['methodology_process_audit_item_4_image'] = $methodology_process_audit_item_4_image;
         }
-        else
-        {
-            if( !empty($methodology_process_audit_item_4_image) )
-            {
-                $data['methodology_process_audit_item_4_image'] = $methodology_process_audit_item_4_image;
-            }
-        }
 
-        $methodology_process_vision_item_1_image = $RS_Row->getMeta('methodology_process_vision_item_1_image');
-        if( $request->hasFile('methodology_process_vision_item_1_image') )
-        {
-            $image_name = $this->uploadImage($request->file('methodology_process_vision_item_1_image'), $request->methodology_process_vision_item_1_title, $methodology_process_vision_item_1_image);
-            $data['methodology_process_vision_item_1_image'] = $image_name;
-        }
-        else
+        $methodology_process_vision_item_1_image = $this->uploadImage($request->file('methodology_process_vision_item_1_image'), $request->methodology_process_vision_item_1_title, $RS_Row->getMeta('methodology_process_vision_item_1_image'));
+        if( !empty($methodology_process_vision_item_1_image) )
         {
-            if( !empty($methodology_process_vision_item_1_image) )
-            {
-                $data['methodology_process_vision_item_1_image'] = $methodology_process_vision_item_1_image;
-            }
+            $data['methodology_process_vision_item_1_image'] = $methodology_process_vision_item_1_image;
         }
 
-        $methodology_process_vision_item_2_image = $RS_Row->getMeta('methodology_process_vision_item_2_image');
-        if( $request->hasFile('methodology_process_vision_item_2_image') )
+        $methodology_process_vision_item_2_image = $this->uploadImage($request->file('methodology_process_vision_item_2_image'), $request->methodology_process_vision_item_2_title, $RS_Row->getMeta('methodology_process_vision_item_2_image'));
+        if( !empty($methodology_process_vision_item_2_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_vision_item_2_image'), $request->methodology_process_vision_item_2_title, $methodology_process_vision_item_2_image);
-            $data['methodology_process_vision_item_2_image'] = $image_name;
+            $data['methodology_process_vision_item_2_image'] = $methodology_process_vision_item_2_image;
         }
-        else
+
+        $methodology_process_vision_item_3_image = $this->uploadImage($request->file('methodology_process_vision_item_3_image'), $request->methodology_process_vision_item_3_title, $RS_Row->getMeta('methodology_process_vision_item_3_image'));
+        if( !empty($methodology_process_vision_item_3_image) )
         {
-            if( !empty($methodology_process_vision_item_2_image) )
-            {
-                $data['methodology_process_vision_item_2_image'] = $methodology_process_vision_item_2_image;
-            }
+            $data['methodology_process_vision_item_3_image'] = $methodology_process_vision_item_3_image;
         }
 
-        $methodology_process_vision_item_3_image = $RS_Row->getMeta('methodology_process_vision_item_3_image');
-        if( $request->hasFile('methodology_process_vision_item_3_image') )
+        $methodology_process_strategizing_item_1_image = $this->uploadImage($request->file('methodology_process_strategizing_item_1_image'), $request->methodology_process_strategizing_item_1_title, $RS_Row->getMeta('methodology_process_strategizing_item_1_image'));
+        if( !empty($methodology_process_strategizing_item_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_vision_item_3_image'), $request->methodology_process_vision_item_3_title, $methodology_process_vision_item_3_image);
-            $data['methodology_process_vision_item_3_image'] = $image_name;
+            $data['methodology_process_strategizing_item_1_image'] = $methodology_process_strategizing_item_1_image;
         }
-        else
+
+        $methodology_process_strategizing_item_2_image = $this->uploadImage($request->file('methodology_process_strategizing_item_2_image'), $request->methodology_process_strategizing_item_2_title, $RS_Row->getMeta('methodology_process_strategizing_item_2_image'));
+        if( !empty($methodology_process_strategizing_item_2_image) )
         {
-            if( !empty($methodology_process_vision_item_3_image) )
-            {
-                $data['methodology_process_vision_item_3_image'] = $methodology_process_vision_item_3_image;
-            }
+            $data['methodology_process_strategizing_item_2_image'] = $methodology_process_strategizing_item_2_image;
         }
 
-        $methodology_process_strategizing_item_1_image = $RS_Row->getMeta('methodology_process_strategizing_item_1_image');
-        if( $request->hasFile('methodology_process_strategizing_item_1_image') )
+        $methodology_process_strategizing_item_3_image = $this->uploadImage($request->file('methodology_process_strategizing_item_3_image'), $request->methodology_process_strategizing_item_3_title, $RS_Row->getMeta('methodology_process_strategizing_item_3_image'));
+        if( !empty($methodology_process_strategizing_item_3_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_strategizing_item_1_image'), $request->methodology_process_strategizing_item_1_title, $methodology_process_strategizing_item_1_image);
-            $data['methodology_process_strategizing_item_1_image'] = $image_name;
+            $data['methodology_process_strategizing_item_3_image'] = $methodology_process_strategizing_item_3_image;
         }
-        else
+
+        $methodology_process_strategizing_item_4_image = $this->uploadImage($request->file('methodology_process_strategizing_item_4_image'), $request->methodology_process_strategizing_item_4_title, $RS_Row->getMeta('methodology_process_strategizing_item_4_image'));
+        if( !empty($methodology_process_strategizing_item_4_image) )
         {
-            if( !empty($methodology_process_strategizing_item_1_image) )
-            {
-                $data['methodology_process_strategizing_item_1_image'] = $methodology_process_strategizing_item_1_image;
-            }
+            $data['methodology_process_strategizing_item_4_image'] = $methodology_process_strategizing_item_4_image;
         }
 
-        $methodology_process_strategizing_item_2_image = $RS_Row->getMeta('methodology_process_strategizing_item_2_image');
-        if( $request->hasFile('methodology_process_strategizing_item_2_image') )
+        $methodology_process_task_force_item_1_image = $this->uploadImage($request->file('methodology_process_task_force_item_1_image'), $request->methodology_process_task_force_item_1_title, $RS_Row->getMeta('methodology_process_task_force_item_1_image'));
+        if( !empty($methodology_process_task_force_item_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_strategizing_item_2_image'), $request->methodology_process_strategizing_item_2_title, $methodology_process_strategizing_item_2_image);
-            $data['methodology_process_strategizing_item_2_image'] = $image_name;
+            $data['methodology_process_task_force_item_1_image'] = $methodology_process_task_force_item_1_image;
         }
-        else
+
+        $methodology_process_task_force_item_2_image = $this->uploadImage($request->file('methodology_process_task_force_item_2_image'), $request->methodology_process_task_force_item_2_title, $RS_Row->getMeta('methodology_process_task_force_item_2_image'));
+        if( !empty($methodology_process_task_force_item_2_image) )
         {
-            if( !empty($methodology_process_strategizing_item_2_image) )
-            {
-                $data['methodology_process_strategizing_item_2_image'] = $methodology_process_strategizing_item_2_image;
-            }
+            $data['methodology_process_task_force_item_2_image'] = $methodology_process_task_force_item_2_image;
         }
 
-        $methodology_process_strategizing_item_3_image = $RS_Row->getMeta('methodology_process_strategizing_item_3_image');
-        if( $request->hasFile('methodology_process_strategizing_item_3_image') )
+        $methodology_process_task_force_item_3_image = $this->uploadImage($request->file('methodology_process_task_force_item_3_image'), $request->methodology_process_task_force_item_3_title, $RS_Row->getMeta('methodology_process_task_force_item_3_image'));
+        if( !empty($methodology_process_task_force_item_3_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_strategizing_item_3_image'), $request->methodology_process_strategizing_item_3_title, $methodology_process_strategizing_item_3_image);
-            $data['methodology_process_strategizing_item_3_image'] = $image_name;
+            $data['methodology_process_task_force_item_3_image'] = $methodology_process_task_force_item_3_image;
         }
-        else
+
+        $methodology_process_task_force_item_4_image = $this->uploadImage($request->file('methodology_process_task_force_item_4_image'), $request->methodology_process_task_force_item_4_title, $RS_Row->getMeta('methodology_process_task_force_item_4_image'));
+        if( !empty($methodology_process_task_force_item_4_image) )
         {
-            if( !empty($methodology_process_strategizing_item_3_image) )
-            {
-                $data['methodology_process_strategizing_item_3_image'] = $methodology_process_strategizing_item_3_image;
-            }
+            $data['methodology_process_task_force_item_4_image'] = $methodology_process_task_force_item_4_image;
         }
 
-        $methodology_process_strategizing_item_4_image = $RS_Row->getMeta('methodology_process_strategizing_item_4_image');
-        if( $request->hasFile('methodology_process_strategizing_item_4_image') )
+        $methodology_process_asset_building_item_1_image = $this->uploadImage($request->file('methodology_process_asset_building_item_1_image'), $request->methodology_process_asset_building_item_1_title, $RS_Row->getMeta('methodology_process_asset_building_item_1_image'));
+        if( !empty($methodology_process_asset_building_item_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_strategizing_item_4_image'), $request->methodology_process_strategizing_item_4_title, $methodology_process_strategizing_item_4_image);
-            $data['methodology_process_strategizing_item_4_image'] = $image_name;
+            $data['methodology_process_asset_building_item_1_image'] = $methodology_process_asset_building_item_1_image;
         }
-        else
+
+        $methodology_process_asset_building_item_2_image = $this->uploadImage($request->file('methodology_process_asset_building_item_2_image'), $request->methodology_process_asset_building_item_2_title, $RS_Row->getMeta('methodology_process_asset_building_item_2_image'));
+        if( !empty($methodology_process_asset_building_item_2_image) )
         {
-            if( !empty($methodology_process_strategizing_item_4_image) )
-            {
-                $data['methodology_process_strategizing_item_4_image'] = $methodology_process_strategizing_item_4_image;
-            }
+            $data['methodology_process_asset_building_item_2_image'] = $methodology_process_asset_building_item_2_image;
         }
 
-        $methodology_process_task_force_item_1_image = $RS_Row->getMeta('methodology_process_task_force_item_1_image');
-        if( $request->hasFile('methodology_process_task_force_item_1_image') )
+        $methodology_process_plan_item_1_image = $this->uploadImage($request->file('methodology_process_plan_item_1_image'), $request->methodology_process_plan_item_1_title, $RS_Row->getMeta('methodology_process_plan_item_1_image'));
+        if( !empty($methodology_process_plan_item_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_task_force_item_1_image'), $request->methodology_process_task_force_item_1_title, $methodology_process_task_force_item_1_image);
-            $data['methodology_process_task_force_item_1_image'] = $image_name;
+            $data['methodology_process_plan_item_1_image'] = $methodology_process_plan_item_1_image;
         }
-        else
+
+        $methodology_process_plan_item_2_image = $this->uploadImage($request->file('methodology_process_plan_item_2_image'), $request->methodology_process_plan_item_2_title, $RS_Row->getMeta('methodology_process_plan_item_2_image'));
+        if( !empty($methodology_process_plan_item_2_image) )
         {
-            if( !empty($methodology_process_task_force_item_1_image) )
-            {
-                $data['methodology_process_task_force_item_1_image'] = $methodology_process_task_force_item_1_image;
-            }
+            $data['methodology_process_plan_item_2_image'] = $methodology_process_plan_item_2_image;
         }
 
-        $methodology_process_task_force_item_2_image = $RS_Row->getMeta('methodology_process_task_force_item_2_image');
-        if( $request->hasFile('methodology_process_task_force_item_2_image') )
+        $what_expect_item_1_image = $this->uploadImage($request->file('what_expect_item_1_image'), $request->what_expect_item_1_title, $RS_Row->getMeta('what_expect_item_1_image'));
+        if( !empty($what_expect_item_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_task_force_item_2_image'), $request->methodology_process_task_force_item_2_title, $methodology_process_task_force_item_2_image);
-            $data['methodology_process_task_force_item_2_image'] = $image_name;
+            $data['what_expect_item_1_image'] = $what_expect_item_1_image;
         }
-        else
+
+        $what_expect_item_2_image = $this->uploadImage($request->file('what_expect_item_2_image'), $request->what_expect_item_2_title, $RS_Row->getMeta('what_expect_item_2_image'));
+        if( !empty($what_expect_item_2_image) )
         {
-            if( !empty($methodology_process_task_force_item_2_image) )
-            {
-                $data['methodology_process_task_force_item_2_image'] = $methodology_process_task_force_item_2_image;
-            }
+            $data['what_expect_item_2_image'] = $what_expect_item_2_image;
         }
 
-        $methodology_process_task_force_item_3_image = $RS_Row->getMeta('methodology_process_task_force_item_3_image');
-        if( $request->hasFile('methodology_process_task_force_item_3_image') )
+        $what_expect_item_3_image = $this->uploadImage($request->file('what_expect_item_3_image'), $request->what_expect_item_3_title, $RS_Row->getMeta('what_expect_item_3_image'));
+        if( !empty($what_expect_item_3_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_task_force_item_3_image'), $request->methodology_process_task_force_item_3_title, $methodology_process_task_force_item_3_image);
-            $data['methodology_process_task_force_item_3_image'] = $image_name;
+            $data['what_expect_item_3_image'] = $what_expect_item_3_image;
         }
-        else
+
+        $what_expect_item_4_image = $this->uploadImage($request->file('what_expect_item_4_image'), $request->what_expect_item_4_title, $RS_Row->getMeta('what_expect_item_4_image'));
+        if( !empty($what_expect_item_4_image) )
         {
-            if( !empty($methodology_process_task_force_item_3_image) )
-            {
-                $data['methodology_process_task_force_item_3_image'] = $methodology_process_task_force_item_3_image;
-            }
+            $data['what_expect_item_4_image'] = $what_expect_item_4_image;
         }
 
-        $methodology_process_task_force_item_4_image = $RS_Row->getMeta('methodology_process_task_force_item_4_image');
-        if( $request->hasFile('methodology_process_task_force_item_4_image') )
+        $success_strategy_image = $this->uploadImage($request->file('success_strategy_image'), $request->success_strategy_title, $RS_Row->getMeta('success_strategy_image'));
+        if( !empty($success_strategy_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_task_force_item_4_image'), $request->methodology_process_task_force_item_4_title, $methodology_process_task_force_item_4_image);
-            $data['methodology_process_task_force_item_4_image'] = $image_name;
+            $data['success_strategy_image'] = $success_strategy_image;
         }
-        else
+
+        $our_approach_image = $this->uploadImage($request->file('our_approach_image'), $request->our_approach_title, $RS_Row->getMeta('our_approach_image'));
+        if( !empty($our_approach_image) )
         {
-            if( !empty($methodology_process_task_force_item_4_image) )
-            {
-                $data['methodology_process_task_force_item_4_image'] = $methodology_process_task_force_item_4_image;
-            }
+            $data['our_approach_image'] = $our_approach_image;
         }
 
-        $methodology_process_asset_building_item_1_image = $RS_Row->getMeta('methodology_process_asset_building_item_1_image');
-        if( $request->hasFile('methodology_process_asset_building_item_1_image') )
+        $faq_item_4_box_1_item_image = $this->uploadImage($request->file('faq_item_4_box_1_item_image'), $request->faq_item_4_box_1_title, $RS_Row->getMeta('faq_item_4_box_1_item_image'));
+        if( !empty($faq_item_4_box_1_item_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_asset_building_item_1_image'), $request->methodology_process_asset_building_item_1_title, $methodology_process_asset_building_item_1_image);
-            $data['methodology_process_asset_building_item_1_image'] = $image_name;
+            $data['faq_item_4_box_1_item_image'] = $faq_item_4_box_1_item_image;
         }
-        else
+
+        $faq_item_4_box_2_item_image = $this->uploadImage($request->file('faq_item_4_box_2_item_image'), $request->faq_item_4_box_2_title, $RS_Row->getMeta('faq_item_4_box_2_item_image'));
+        if( !empty($faq_item_4_box_2_item_image) )
         {
-            if( !empty($methodology_process_asset_building_item_1_image) )
-            {
-                $data['methodology_process_asset_building_item_1_image'] = $methodology_process_asset_building_item_1_image;
-            }
+            $data['faq_item_4_box_2_item_image'] = $faq_item_4_box_2_item_image;
         }
 
-        $methodology_process_asset_building_item_2_image = $RS_Row->getMeta('methodology_process_asset_building_item_2_image');
-        if( $request->hasFile('methodology_process_asset_building_item_2_image') )
+        $market_expand_image = $this->uploadImage($request->file('market_expand_image'), $request->market_expand_title, $RS_Row->getMeta('market_expand_image'));
+        if( !empty($market_expand_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_asset_building_item_2_image'), $request->methodology_process_asset_building_item_2_title, $methodology_process_asset_building_item_2_image);
-            $data['methodology_process_asset_building_item_2_image'] = $image_name;
+            $data['market_expand_image'] = $market_expand_image;
         }
-        else
+
+        $product_strategy_image = $this->uploadImage($request->file('product_strategy_image'), $request->product_strategy_title, $RS_Row->getMeta('product_strategy_image'));
+        if( !empty($product_strategy_image) )
         {
-            if( !empty($methodology_process_asset_building_item_2_image) )
-            {
-                $data['methodology_process_asset_building_item_2_image'] = $methodology_process_asset_building_item_2_image;
-            }
+            $data['product_strategy_image'] = $product_strategy_image;
         }
 
-        $methodology_process_plan_item_1_image = $RS_Row->getMeta('methodology_process_plan_item_1_image');
-        if( $request->hasFile('methodology_process_plan_item_1_image') )
+        $you_know_item_1_image = $this->uploadImage($request->file('you_know_item_1_image'), $request->you_know_item_1_title, $RS_Row->getMeta('you_know_item_1_image'));
+        if( !empty($you_know_item_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_plan_item_1_image'), $request->methodology_process_plan_item_1_title, $methodology_process_plan_item_1_image);
-            $data['methodology_process_plan_item_1_image'] = $image_name;
+            $data['you_know_item_1_image'] = $you_know_item_1_image;
         }
-        else
+
+        $you_know_item_2_image = $this->uploadImage($request->file('you_know_item_2_image'), $request->you_know_item_2_title, $RS_Row->getMeta('you_know_item_2_image'));
+        if( !empty($you_know_item_2_image) )
         {
-            if( !empty($methodology_process_plan_item_1_image) )
-            {
-                $data['methodology_process_plan_item_1_image'] = $methodology_process_plan_item_1_image;
-            }
+            $data['you_know_item_2_image'] = $you_know_item_2_image;
         }
 
-        $methodology_process_plan_item_2_image = $RS_Row->getMeta('methodology_process_plan_item_2_image');
-        if( $request->hasFile('methodology_process_plan_item_2_image') )
+        $client_logo_1_image = $this->uploadImage($request->file('client_logo_1_image'), 'cl_1', $RS_Row->getMeta('client_logo_1_image'));
+        if( !empty($client_logo_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('methodology_process_plan_item_2_image'), $request->methodology_process_plan_item_2_title, $methodology_process_plan_item_2_image);
-            $data['methodology_process_plan_item_2_image'] = $image_name;
+            $data['client_logo_1_image'] = $client_logo_1_image;
         }
-        else
+
+        $client_logo_2_image = $this->uploadImage($request->file('client_logo_2_image'), 'cl_2', $RS_Row->getMeta('client_logo_2_image'));
+        if( !empty($client_logo_2_image) )
         {
-            if( !empty($methodology_process_plan_item_2_image) )
-            {
-                $data['methodology_process_plan_item_2_image'] = $methodology_process_plan_item_2_image;
-            }
+            $data['client_logo_2_image'] = $client_logo_2_image;
         }
 
-        $what_expect_item_1_image = $RS_Row->getMeta('what_expect_item_1_image');
-        if( $request->hasFile('what_expect_item_1_image') )
+        $client_logo_3_image = $this->uploadImage($request->file('client_logo_3_image'), 'cl_3', $RS_Row->getMeta('client_logo_3_image'));
+        if( !empty($client_logo_3_image) )
         {
-            $image_name = $this->uploadImage($request->file('what_expect_item_1_image'), $request->what_expect_item_1_title, $what_expect_item_1_image);
-            $data['what_expect_item_1_image'] = $image_name;
+            $data['client_logo_3_image'] = $client_logo_3_image;
         }
-        else
+
+        $client_logo_4_image = $this->uploadImage($request->file('client_logo_4_image'), 'cl_4', $RS_Row->getMeta('client_logo_4_image'));
+        if( !empty($client_logo_4_image) )
         {
-            if( !empty($what_expect_item_1_image) )
-            {
-                $data['what_expect_item_1_image'] = $what_expect_item_1_image;
-            }
+            $data['client_logo_4_image'] = $client_logo_4_image;
         }
 
-        $what_expect_item_2_image = $RS_Row->getMeta('what_expect_item_2_image');
-        if( $request->hasFile('what_expect_item_2_image') )
+        $client_logo_5_image = $this->uploadImage($request->file('client_logo_5_image'), 'cl_5', $RS_Row->getMeta('client_logo_5_image'));
+        if( !empty($client_logo_5_image) )
         {
-            $image_name = $this->uploadImage($request->file('what_expect_item_2_image'), $request->what_expect_item_2_title, $what_expect_item_2_image);
-            $data['what_expect_item_2_image'] = $image_name;
+            $data['client_logo_5_image'] = $client_logo_5_image;
         }
-        else
+
+        $client_logo_6_image = $this->uploadImage($request->file('client_logo_6_image'), 'cl_6', $RS_Row->getMeta('client_logo_6_image'));
+        if( !empty($client_logo_6_image) )
         {
-            if( !empty($what_expect_item_2_image) )
-            {
-                $data['what_expect_item_2_image'] = $what_expect_item_2_image;
-            }
+            $data['client_logo_6_image'] = $client_logo_6_image;
         }
 
-        $what_expect_item_3_image = $RS_Row->getMeta('what_expect_item_3_image');
-        if( $request->hasFile('what_expect_item_3_image') )
+        $client_logo_7_image = $this->uploadImage($request->file('client_logo_7_image'), 'cl_7', $RS_Row->getMeta('client_logo_7_image'));
+        if( !empty($client_logo_7_image) )
         {
-            $image_name = $this->uploadImage($request->file('what_expect_item_3_image'), $request->what_expect_item_3_title, $what_expect_item_3_image);
-            $data['what_expect_item_3_image'] = $image_name;
+            $data['client_logo_7_image'] = $client_logo_7_image;
         }
-        else
+
+        $client_logo_8_image = $this->uploadImage($request->file('client_logo_8_image'), 'cl_8', $RS_Row->getMeta('client_logo_8_image'));
+        if( !empty($client_logo_8_image) )
         {
-            if( !empty($what_expect_item_3_image) )
-            {
-                $data['what_expect_item_3_image'] = $what_expect_item_3_image;
-            }
+            $data['client_logo_8_image'] = $client_logo_8_image;
         }
 
-        $what_expect_item_4_image = $RS_Row->getMeta('what_expect_item_4_image');
-        if( $request->hasFile('what_expect_item_4_image') )
+        $client_logo_9_image = $this->uploadImage($request->file('client_logo_9_image'), 'cl_9', $RS_Row->getMeta('client_logo_9_image'));
+        if( !empty($client_logo_9_image) )
         {
-            $image_name = $this->uploadImage($request->file('what_expect_item_4_image'), $request->what_expect_item_4_title, $what_expect_item_4_image);
-            $data['what_expect_item_4_image'] = $image_name;
+            $data['client_logo_9_image'] = $client_logo_9_image;
         }
-        else
+
+        $client_logo_10_image = $this->uploadImage($request->file('client_logo_10_image'), 'cl_10', $RS_Row->getMeta('client_logo_10_image'));
+        if( !empty($client_logo_10_image) )
         {
-            if( !empty($what_expect_item_4_image) )
-            {
-                $data['what_expect_item_4_image'] = $what_expect_item_4_image;
-            }
+            $data['client_logo_10_image'] = $client_logo_10_image;
         }
 
-        $success_strategy_image = $RS_Row->getMeta('success_strategy_image');
-        if( $request->hasFile('success_strategy_image') )
+        $define_solve_image = $this->uploadImage($request->file('define_solve_image'), $request->define_solve_title, $RS_Row->getMeta('define_solve_image'));
+        if( !empty($define_solve_image) )
         {
-            $image_name = $this->uploadImage($request->file('success_strategy_image'), $request->success_strategy_title, $success_strategy_image);
-            $data['success_strategy_image'] = $image_name;
+            $data['define_solve_image'] = $define_solve_image;
         }
-        else
+
+        $connect_convert_image = $this->uploadImage($request->file('connect_convert_image'), $request->connect_convert_title, $RS_Row->getMeta('connect_convert_image'));
+        if( !empty($connect_convert_image) )
         {
-            if( !empty($success_strategy_image) )
-            {
-                $data['success_strategy_image'] = $success_strategy_image;
-            }
+            $data['connect_convert_image'] = $connect_convert_image;
         }
 
-        $our_approach_image = $RS_Row->getMeta('our_approach_image');
-        if( $request->hasFile('our_approach_image') )
+        $marketing_models_image = $this->uploadImage($request->file('marketing_models_image'), $request->marketing_models_title, $RS_Row->getMeta('marketing_models_image'));
+        if( !empty($marketing_models_image) )
         {
-            $image_name = $this->uploadImage($request->file('our_approach_image'), $request->our_approach_title, $our_approach_image);
-            $data['our_approach_image'] = $image_name;
+            $data['marketing_models_image'] = $marketing_models_image;
         }
-        else
+
+        $priya_title_image = $this->uploadImage($request->file('priya_title_image'), 'priya_t', $RS_Row->getMeta('priya_title_image'));
+        if( !empty($priya_title_image) )
         {
-            if( !empty($our_approach_image) )
-            {
-                $data['our_approach_image'] = $our_approach_image;
-            }
+            $data['priya_title_image'] = $priya_title_image;
         }
 
-        $faq_item_4_box_1_item_image = $RS_Row->getMeta('faq_item_4_box_1_item_image');
-        if( $request->hasFile('faq_item_4_box_1_item_image') )
+        $priya_image = $this->uploadImage($request->file('priya_image'), 'priya', $RS_Row->getMeta('priya_image'));
+        if( !empty($priya_image) )
         {
-            $image_name = $this->uploadImage($request->file('faq_item_4_box_1_item_image'), $request->faq_item_4_box_1_title, $faq_item_4_box_1_item_image);
-            $data['faq_item_4_box_1_item_image'] = $image_name;
+            $data['priya_image'] = $priya_image;
         }
-        else
+
+        $privacy_policy_image = $this->uploadImage($request->file('privacy_policy_image'), $request->privacy_policy_title, $RS_Row->getMeta('privacy_policy_image'));
+        if( !empty($privacy_policy_image) )
         {
-            if( !empty($faq_item_4_box_1_item_image) )
-            {
-                $data['faq_item_4_box_1_item_image'] = $faq_item_4_box_1_item_image;
-            }
+            $data['privacy_policy_image'] = $privacy_policy_image;
         }
 
-        $faq_item_4_box_2_item_image = $RS_Row->getMeta('faq_item_4_box_2_item_image');
-        if( $request->hasFile('faq_item_4_box_2_item_image') )
+        $book_1_image = $this->uploadImage($request->file('book_1_image'), $request->book_1_title, $RS_Row->getMeta('book_1_image'));
+        if( !empty($book_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('faq_item_4_box_2_item_image'), $request->faq_item_4_box_2_title, $faq_item_4_box_2_item_image);
-            $data['faq_item_4_box_2_item_image'] = $image_name;
+            $data['book_1_image'] = $book_1_image;
         }
-        else
+
+        $book_2_image = $this->uploadImage($request->file('book_2_image'), $request->book_2_title, $RS_Row->getMeta('book_2_image'));
+        if( !empty($book_2_image) )
         {
-            if( !empty($faq_item_4_box_2_item_image) )
-            {
-                $data['faq_item_4_box_2_item_image'] = $faq_item_4_box_2_item_image;
-            }
+            $data['book_2_image'] = $book_2_image;
         }
 
-        $market_expand_image = $RS_Row->getMeta('market_expand_image');
-        if( $request->hasFile('market_expand_image') )
+        $book_3_image = $this->uploadImage($request->file('book_3_image'), $request->book_3_title, $RS_Row->getMeta('book_3_image'));
+        if( !empty($book_3_image) )
         {
-            $image_name = $this->uploadImage($request->file('market_expand_image'), $request->market_expand_title, $market_expand_image);
-            $data['market_expand_image'] = $image_name;
+            $data['book_3_image'] = $book_3_image;
         }
-        else
+
+        $book_4_image = $this->uploadImage($request->file('book_4_image'), $request->book_4_title, $RS_Row->getMeta('book_4_image'));
+        if( !empty($book_4_image) )
         {
-            if( !empty($market_expand_image) )
-            {
-                $data['market_expand_image'] = $market_expand_image;
-            }
+            $data['book_4_image'] = $book_4_image;
         }
 
-        $product_strategy_image = $RS_Row->getMeta('product_strategy_image');
-        if( $request->hasFile('product_strategy_image') )
+        $book_5_image = $this->uploadImage($request->file('book_5_image'), $request->book_5_title, $RS_Row->getMeta('book_5_image'));
+        if( !empty($book_5_image) )
         {
-            $image_name = $this->uploadImage($request->file('product_strategy_image'), $request->product_strategy_title, $product_strategy_image);
-            $data['product_strategy_image'] = $image_name;
+            $data['book_5_image'] = $book_5_image;
         }
-        else
+
+        $service_1_image = $this->uploadImage($request->file('service_1_image'), $request->service_1_title, $RS_Row->getMeta('service_1_image'));
+        if( !empty($service_1_image) )
         {
-            if( !empty($product_strategy_image) )
-            {
-                $data['product_strategy_image'] = $product_strategy_image;
-            }
+            $data['service_1_image'] = $service_1_image;
         }
 
-        $you_know_item_1_image = $RS_Row->getMeta('you_know_item_1_image');
-        if( $request->hasFile('you_know_item_1_image') )
+        $service_2_image = $this->uploadImage($request->file('service_2_image'), $request->service_2_title, $RS_Row->getMeta('service_2_image'));
+        if( !empty($service_2_image) )
         {
-            $image_name = $this->uploadImage($request->file('you_know_item_1_image'), $request->you_know_item_1_title, $you_know_item_1_image);
-            $data['you_know_item_1_image'] = $image_name;
+            $data['service_2_image'] = $service_2_image;
         }
-        else
+
+        $service_3_image = $this->uploadImage($request->file('service_3_image'), $request->service_3_title, $RS_Row->getMeta('service_3_image'));
+        if( !empty($service_3_image) )
         {
-            if( !empty($you_know_item_1_image) )
-            {
-                $data['you_know_item_1_image'] = $you_know_item_1_image;
-            }
+            $data['service_3_image'] = $service_3_image;
         }
 
-        $you_know_item_2_image = $RS_Row->getMeta('you_know_item_2_image');
-        if( $request->hasFile('you_know_item_2_image') )
+        $service_4_image = $this->uploadImage($request->file('service_4_image'), $request->service_4_title, $RS_Row->getMeta('service_4_image'));
+        if( !empty($service_4_image) )
         {
-            $image_name = $this->uploadImage($request->file('you_know_item_2_image'), $request->you_know_item_2_title, $you_know_item_2_image);
-            $data['you_know_item_2_image'] = $image_name;
+            $data['service_4_image'] = $service_4_image;
         }
-        else
+
+        $service_5_image = $this->uploadImage($request->file('service_5_image'), $request->service_5_title, $RS_Row->getMeta('service_5_image'));
+        if( !empty($service_5_image) )
         {
-            if( !empty($you_know_item_2_image) )
-            {
-                $data['you_know_item_2_image'] = $you_know_item_2_image;
-            }
+            $data['service_5_image'] = $service_5_image;
         }
 
-        $client_logo_1_image = $RS_Row->getMeta('client_logo_1_image');
-        if( $request->hasFile('client_logo_1_image') )
+        $service_6_image = $this->uploadImage($request->file('service_6_image'), $request->service_6_title, $RS_Row->getMeta('service_6_image'));
+        if( !empty($service_6_image) )
         {
-            $image_name = $this->uploadImage($request->file('client_logo_1_image'), 'cl_1', $client_logo_1_image);
-            $data['client_logo_1_image'] = $image_name;
+            $data['service_6_image'] = $service_6_image;
         }
-        else
+
+        $service_7_image = $this->uploadImage($request->file('service_7_image'), $request->service_7_title, $RS_Row->getMeta('service_7_image'));
+        if( !empty($service_7_image) )
         {
-            if( !empty($client_logo_1_image) )
-            {
-                $data['client_logo_1_image'] = $client_logo_1_image;
-            }
+            $data['service_7_image'] = $service_7_image;
         }
 
-        $client_logo_2_image = $RS_Row->getMeta('client_logo_2_image');
-        if( $request->hasFile('client_logo_2_image') )
+        $client_1_image = $this->uploadImage($request->file('client_1_image'), $request->client_1_name, $RS_Row->getMeta('client_1_image'));
+        if( !empty($client_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('client_logo_2_image'), 'cl_2', $client_logo_2_image);
-            $data['client_logo_2_image'] = $image_name;
+            $data['client_1_image'] = $client_1_image;
         }
-        else
+
+        $client_1_studies_image = $this->uploadImage($request->file('client_1_studies_image'), $request->client_1_studies_subtitle, $RS_Row->getMeta('client_1_studies_image'));
+        if( !empty($client_1_studies_image) )
         {
-            if( !empty($client_logo_2_image) )
-            {
-                $data['client_logo_2_image'] = $client_logo_2_image;
-            }
+            $data['client_1_studies_image'] = $client_1_studies_image;
         }
 
-        $client_logo_3_image = $RS_Row->getMeta('client_logo_3_image');
-        if( $request->hasFile('client_logo_3_image') )
+        $client_2_image = $this->uploadImage($request->file('client_2_image'), $request->client_2_name, $RS_Row->getMeta('client_2_image'));
+        if( !empty($client_2_image) )
         {
-            $image_name = $this->uploadImage($request->file('client_logo_3_image'), 'cl_3', $client_logo_3_image);
-            $data['client_logo_3_image'] = $image_name;
+            $data['client_2_image'] = $client_2_image;
         }
-        else
+
+        $client_2_studies_image = $this->uploadImage($request->file('client_2_studies_image'), $request->client_2_studies_subtitle, $RS_Row->getMeta('client_2_studies_image'));
+        if( !empty($client_2_studies_image) )
         {
-            if( !empty($client_logo_3_image) )
-            {
-                $data['client_logo_3_image'] = $client_logo_3_image;
-            }
+            $data['client_2_studies_image'] = $client_2_studies_image;
         }
 
-        $client_logo_4_image = $RS_Row->getMeta('client_logo_4_image');
-        if( $request->hasFile('client_logo_4_image') )
+        $client_3_image = $this->uploadImage($request->file('client_3_image'), $request->client_3_name, $RS_Row->getMeta('client_3_image'));
+        if( !empty($client_3_image) )
         {
-            $image_name = $this->uploadImage($request->file('client_logo_4_image'), 'cl_4', $client_logo_4_image);
-            $data['client_logo_4_image'] = $image_name;
+            $data['client_3_image'] = $client_3_image;
         }
-        else
+
+        $client_3_studies_image = $this->uploadImage($request->file('client_3_studies_image'), $request->client_3_studies_subtitle, $RS_Row->getMeta('client_3_studies_image'));
+        if( !empty($client_3_studies_image) )
         {
-            if( !empty($client_logo_4_image) )
-            {
-                $data['client_logo_4_image'] = $client_logo_4_image;
-            }
+            $data['client_3_studies_image'] = $client_3_studies_image;
         }
 
-        $client_logo_5_image = $RS_Row->getMeta('client_logo_5_image');
-        if( $request->hasFile('client_logo_5_image') )
+        $client_4_image = $this->uploadImage($request->file('client_4_image'), $request->client_4_name, $RS_Row->getMeta('client_4_image'));
+        if( !empty($client_4_image) )
         {
-            $image_name = $this->uploadImage($request->file('client_logo_5_image'), 'cl_5', $client_logo_5_image);
-            $data['client_logo_5_image'] = $image_name;
+            $data['client_4_image'] = $client_4_image;
         }
-        else
+
+        $client_4_studies_image = $this->uploadImage($request->file('client_4_studies_image'), $request->client_4_studies_subtitle, $RS_Row->getMeta('client_4_studies_image'));
+        if( !empty($client_4_studies_image) )
         {
-            if( !empty($client_logo_5_image) )
-            {
-                $data['client_logo_5_image'] = $client_logo_5_image;
-            }
+            $data['client_4_studies_image'] = $client_4_studies_image;
         }
 
-        $client_logo_6_image = $RS_Row->getMeta('client_logo_6_image');
-        if( $request->hasFile('client_logo_6_image') )
+        $insight_1_image = $this->uploadImage($request->file('insight_1_image'), $request->insight_1_title, $RS_Row->getMeta('insight_1_image'));
+        if( !empty($insight_1_image) )
         {
-            $image_name = $this->uploadImage($request->file('client_logo_6_image'), 'cl_6', $client_logo_6_image);
-            $data['client_logo_6_image'] = $image_name;
+            $data['insight_1_image'] = $insight_1_image;
         }
-        else
+
+        $insight_2_image = $this->uploadImage($request->file('insight_2_image'), $request->insight_2_title, $RS_Row->getMeta('insight_2_image'));
+        if( !empty($insight_2_image) )
         {
-            if( !empty($client_logo_6_image) )
-            {
-                $data['client_logo_6_image'] = $client_logo_6_image;
-            }
+            $data['insight_2_image'] = $insight_2_image;
         }
 
-        $client_logo_7_image = $RS_Row->getMeta('client_logo_7_image');
-        if( $request->hasFile('client_logo_7_image') )
+        $insight_3_image = $this->uploadImage($request->file('insight_3_image'), $request->insight_3_title, $RS_Row->getMeta('insight_3_image'));
+        if( !empty($insight_3_image) )
         {
-            $image_name = $this->uploadImage($request->file('client_logo_7_image'), 'cl_7', $client_logo_7_image);
-            $data['client_logo_7_image'] = $image_name;
+            $data['insight_3_image'] = $insight_3_image;
         }
-        else
+
+        $insight_4_image = $this->uploadImage($request->file('insight_4_image'), $request->insight_4_title, $RS_Row->getMeta('insight_4_image'));
+        if( !empty($insight_4_image) )
         {
-            if( !empty($client_logo_7_image) )
-            {
-                $data['client_logo_7_image'] = $client_logo_7_image;
-            }
+            $data['insight_4_image'] = $insight_4_image;
         }
 
-        $client_logo_8_image = $RS_Row->getMeta('client_logo_8_image');
-        if( $request->hasFile('client_logo_8_image') )
+        $insight_5_image = $this->uploadImage($request->file('insight_5_image'), $request->insight_5_title, $RS_Row->getMeta('insight_5_image'));
+        if( !empty($insight_5_image) )
         {
-            $image_name = $this->uploadImage($request->file('client_logo_8_image'), 'cl_8', $client_logo_8_image);
-            $data['client_logo_8_image'] = $image_name;
+            $data['insight_5_image'] = $insight_5_image;
         }
-        else
+
+        $involved_partner_image = $this->uploadImage($request->file('involved_partner_image'), $request->involved_partner_title, $RS_Row->getMeta('involved_partner_image'));
+        if( !empty($involved_partner_image) )
         {
-            if( !empty($client_logo_8_image) )
-            {
-                $data['client_logo_8_image'] = $client_logo_8_image;
-            }
+            $data['involved_partner_image'] = $involved_partner_image;
         }
 
-        $client_logo_9_image = $RS_Row->getMeta('client_logo_9_image');
-        if( $request->hasFile('client_logo_9_image') )
+        $involved_community_image = $this->uploadImage($request->file('involved_community_image'), $request->involved_community_title, $RS_Row->getMeta('involved_community_image'));
+        if( !empty($involved_community_image) )
         {
-            $image_name = $this->uploadImage($request->file('client_logo_9_image'), 'cl_9', $client_logo_9_image);
-            $data['client_logo_9_image'] = $image_name;
+            $data['involved_community_image'] = $involved_community_image;
         }
-        else
+
+        $event_image = $this->uploadImage($request->file('event_image'), $request->event_title, $RS_Row->getMeta('event_image'));
+        if( !empty($event_image) )
         {
-            if( !empty($client_logo_9_image) )
-            {
-                $data['client_logo_9_image'] = $client_logo_9_image;
-            }
+            $data['event_image'] = $event_image;
         }
 
-        $client_logo_10_image = $RS_Row->getMeta('client_logo_10_image');
-        if( $request->hasFile('client_logo_10_image') )
+        $reach_out_image = $this->uploadImage($request->file('reach_out_image'), $request->reach_out_title, $RS_Row->getMeta('reach_out_image'));
+        if( !empty($reach_out_image) )
         {
-            $image_name = $this->uploadImage($request->file('client_logo_10_image'), 'cl_10', $client_logo_10_image);
-            $data['client_logo_10_image'] = $image_name;
+            $data['reach_out_image'] = $reach_out_image;
         }
-        else
+
+        $we_organize_image = $this->uploadImage($request->file('we_organize_image'), $request->we_organize_title, $RS_Row->getMeta('we_organize_image'));
+        if( !empty($we_organize_image) )
         {
-            if( !empty($client_logo_10_image) )
-            {
-                $data['client_logo_10_image'] = $client_logo_10_image;
-            }
+            $data['we_organize_image'] = $we_organize_image;
         }
 
-        $define_solve_image = $RS_Row->getMeta('define_solve_image');
-        if( $request->hasFile('define_solve_image') )
+        $apple_podcasts_image = $this->uploadImage($request->file('apple_podcasts_image'), 'apple_pod', $RS_Row->getMeta('apple_podcasts_image'));
+        if( !empty($apple_podcasts_image) )
         {
-            $image_name = $this->uploadImage($request->file('define_solve_image'), $request->define_solve_title, $define_solve_image);
-            $data['define_solve_image'] = $image_name;
+            $data['apple_podcasts_image'] = $apple_podcasts_image;
         }
-        else
+
+        $spotify_image = $this->uploadImage($request->file('spotify_image'), 'spotify', $RS_Row->getMeta('spotify_image'));
+        if( !empty($spotify_image) )
         {
-            if( !empty($define_solve_image) )
-            {
-                $data['define_solve_image'] = $define_solve_image;
-            }
+            $data['spotify_image'] = $spotify_image;
         }
 
-        $connect_convert_image = $RS_Row->getMeta('connect_convert_image');
-        if( $request->hasFile('connect_convert_image') )
+        $google_podcasts_image = $this->uploadImage($request->file('google_podcasts_image'), 'google_podcasts', $RS_Row->getMeta('google_podcasts_image'));
+        if( !empty($google_podcasts_image) )
         {
-            $image_name = $this->uploadImage($request->file('connect_convert_image'), $request->connect_convert_title, $connect_convert_image);
-            $data['connect_convert_image'] = $image_name;
+            $data['google_podcasts_image'] = $google_podcasts_image;
         }
-        else
+
+        $youtube_image = $this->uploadImage($request->file('youtube_image'), 'youtube', $RS_Row->getMeta('youtube_image'));
+        if( !empty($youtube_image) )
         {
-            if( !empty($connect_convert_image) )
-            {
-                $data['connect_convert_image'] = $connect_convert_image;
-            }
+            $data['youtube_image'] = $youtube_image;
         }
 
-        $marketing_models_image = $RS_Row->getMeta('marketing_models_image');
-        if( $request->hasFile('marketing_models_image') )
+        $service_insights_event_image = $this->uploadImage($request->file('service_insights_event_image'), 'si_event', $RS_Row->getMeta('service_insights_event_image'));
+        if( !empty($service_insights_event_image) )
         {
-            $image_name = $this->uploadImage($request->file('marketing_models_image'), $request->marketing_models_title, $marketing_models_image);
-            $data['marketing_models_image'] = $image_name;
+            $data['service_insights_event_image'] = $service_insights_event_image;
         }
-        else
+
+        $global_conference_image = $this->uploadImage($request->file('global_conference_image'), 'global_conference', $RS_Row->getMeta('global_conference_image'));
+        if( !empty($global_conference_image) )
         {
-            if( !empty($marketing_models_image) )
-            {
-                $data['marketing_models_image'] = $marketing_models_image;
-            }
+            $data['global_conference_image'] = $global_conference_image;
         }
 
-        $priya_title_image = $RS_Row->getMeta('priya_title_image');
-        if( $request->hasFile('priya_title_image') )
+        $global_conference_bg_image = $this->uploadImage($request->file('global_conference_bg_image'), 'global_conference_bg', $RS_Row->getMeta('global_conference_bg_image'));
+        if( !empty($global_conference_bg_image) )
         {
-            $image_name = $this->uploadImage($request->file('priya_title_image'), 'pt', $priya_title_image);
-            $data['priya_title_image'] = $image_name;
+            $data['global_conference_bg_image'] = $global_conference_bg_image;
         }
-        else
+
+        $book_calendar_image = $this->uploadImage($request->file('book_calendar_image'), $request->book_calendar_title, $RS_Row->getMeta('book_calendar_image'));
+        if( !empty($book_calendar_image) )
         {
-            if( !empty($priya_title_image) )
-            {
-                $data['priya_title_image'] = $priya_title_image;
-            }
+            $data['book_calendar_image'] = $book_calendar_image;
         }
 
-        $priya_image = $RS_Row->getMeta('priya_image');
-        if( $request->hasFile('priya_image') )
+        $ebook_image = $this->uploadImage($request->file('ebook_image'), $request->ebook_title, $RS_Row->getMeta('ebook_image'));
+        if( !empty($ebook_image) )
         {
-            $image_name = $this->uploadImage($request->file('priya_image'), 'p', $priya_image);
-            $data['priya_image'] = $image_name;
+            $data['ebook_image'] = $ebook_image;
         }
-        else
+
+        $research_paper_image = $this->uploadImage($request->file('research_paper_image'), $request->research_paper_title, $RS_Row->getMeta('research_paper_image'));
+        if( !empty($research_paper_image) )
         {
-            if( !empty($priya_image) )
-            {
-                $data['priya_image'] = $priya_image;
-            }
+            $data['research_paper_image'] = $research_paper_image;
         }
 
-        /* $priya_image_1 = $this->uploadImage($request->file('priya_image_1'), 'p_m_1', $RS_Row->getMeta('priya_image_1'));
-        if( !empty($priya_image_1) )
+        $survey_image = $this->uploadImage($request->file('survey_image'), $request->survey_title, $RS_Row->getMeta('survey_image'));
+        if( !empty($survey_image) )
         {
-            $data['priya_image_1'] = $priya_image_1;
-        } */
+            $data['survey_image'] = $survey_image;
+        }
 
         // data save
         $RS_Row->syncMeta($data);

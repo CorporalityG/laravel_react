@@ -19,6 +19,7 @@ class Page extends Model
         'user_id',
         'title',
         'slug',
+        'type',
         'status',
         'meta_title',
         'meta_keywords',
