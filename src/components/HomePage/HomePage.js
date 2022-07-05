@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Services from "./Components/Services";
 // import WhyUs from "./Components/Whyus";
 import EmotionalQuest from "./Components/EmotionalQuest";
@@ -11,23 +11,38 @@ import CareToJoinUs from "./Components/CareToJoinUs";
 import OurIniatives from "./Components/OurIniatives.jsx";
 import AOS from "aos";
 import { Helmet } from "react-helmet";
+import { API_BASE_URL } from '../../config'
 
 function HomePage() {
+
+  const page_slug = 'home';
+
+  const [pageDetail, setPageDetail] = useState([]);
+
   useEffect(() => {
     AOS.init({
       duration: 1500,
       disable: "mobile",
     });
+
+    getPageDetail()
   }, []);
+
+  async function getPageDetail() {
+    let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
+    result = await result.json();
+    setPageDetail(result);
+  }
+
   return (
     <>
       <Helmet>
-        <title>{`Corporality Global |#1 Marketing and Sales company in Sydney| Marketing & Brand Strategist `}</title>
-        <meta name="description" content={`"Corporality Global is a no 1 Marketing and Sales company which helps to promote your business with right strategy. Services in Digital Marketing, Website creation and maintenance."`} />
+        <title>{`${pageDetail.meta_title}`}</title>
+        <meta name="description" content={`${pageDetail.meta_description}`} />
       </Helmet>
 
-      <NewBanner />
-      <Banner2 />
+      <NewBanner {...pageDetail.detail} />
+      <Banner2 {...pageDetail.detail} />
       <NewPortfolio />
       <Services />
       <EmotionalQuest />

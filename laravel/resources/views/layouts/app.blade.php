@@ -442,6 +442,29 @@
 
                         <div class="post"></div>
 
+                        <!-- clients menu start -->
+                        @php
+                          $ClientLinkActive = '';
+                        @endphp
+
+                        @if( request()->routeIs('clients.index') || request()->is('clients/*') )
+                          @php
+                            $ClientLinkActive = 'active';
+                          @endphp
+                        @endif
+                        <li class="nav-item">
+                          <a href="{{ route('clients.index') }}" class="nav-link {{ $ClientLinkActive }}">
+                            <i class="nav-icon fas fa-briefcase"></i>
+                            <p>
+                              {{ __('Client') }}
+                              <i class="right fas fa-angle-left"></i>
+                            </p>
+                          </a>
+                        </li>
+                        <!-- clients menu end -->
+
+                        <div class="post"></div>
+
                         <li class="nav-item">
                           <!-- Authentication -->
                           <form method="POST" action="{{ route('logout') }}">

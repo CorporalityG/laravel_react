@@ -10,6 +10,8 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\IndustrialArticleController;
 use App\Http\Controllers\IndustrialArticleCategoryController;
 
+use App\Http\Controllers\Api\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -63,3 +65,5 @@ Route::get('/single-realted-industrial-article/{slug?}', [IndustrialArticleContr
 Route::get('/latest-in-article', [IndustrialArticleController::class, 'latestInArticle']);
 Route::get('/industrial-article-categories', [IndustrialArticleCategoryController::class, 'getIACategories']);
 Route::get('/industrial-articles', [IndustrialArticleController::class, 'getIndustrialArticles']);
+
+Route::get('/page-detail/{slug?}', [PageController::class, 'getPageDetail']);

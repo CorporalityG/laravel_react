@@ -25,6 +25,8 @@ use App\Http\Controllers\TestimonialController;
 
 use App\Http\Controllers\TeamMemberController;
 
+use App\Http\Controllers\ClientController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -86,4 +88,7 @@ Route::group(['middleware'=>'auth'], function()
     Route::resources(['testimonials' => TestimonialController::class]);
 
     Route::resources(['team-members' => TeamMemberController::class]);
+
+    Route::resources(['clients' => ClientController::class]);
+    Route::get('client-slug', [ClientController::class, 'getSlug'])->name('clients.slug');
 });
