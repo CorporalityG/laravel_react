@@ -7,7 +7,7 @@ import top_rectangle from "./images/top_rectangle.png";
 import threeboxes from "./images/threeboxes.png";
 import { useNavigate } from "react-router";
 
-function WorkParallax() {
+function WorkParallax(pageDetail) {
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
@@ -32,8 +32,7 @@ function WorkParallax() {
               data-aos="zoom-in"
               data-aos-duration="1000"
             >
-              We make marketing truly work for you.
-              <br /> How we work?
+              {`${pageDetail.how_we_work_title}`}
             </div>
 
             <div
@@ -41,10 +40,7 @@ function WorkParallax() {
               data-aos="zoom-in"
               data-aos-duration="1000"
             >
-              The digital era is here and rapid business transformations are
-              essential to keep your pockets full. Our processes are inclined to
-              meet customer expectations and create lasting value while staying
-              scalable and adaptive.
+              {`${pageDetail.how_we_work_description}`}
             </div>
 
             <div
@@ -52,7 +48,7 @@ function WorkParallax() {
               data-aos="zoom-in"
               data-aos-duration="1000"
             >
-              <button onClick={() => { navigate("/go-to-marketing"); topHandle(); }}> Our Services </button>
+              <button onClick={() => { navigate(`/${pageDetail.how_we_work_btn_link}`); topHandle(); }}> {`${pageDetail.how_we_work_btn_text}`} </button>
             </div>
             <div className="box_top">
               <img src={top_rectangle} alt="top_rectangle" />

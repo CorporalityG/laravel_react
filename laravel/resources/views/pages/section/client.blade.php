@@ -75,8 +75,8 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="client_1_studies_btn_link">{{ __('Button Text') }}</label>
-							<input type="text" name="client_1_studies_btn_link" id="client_1_studies_btn_link" value="{{ old('client_1_studies_btn_link', $RS_Meta['client_1_studies_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+							<label for="client_1_studies_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="client_1_studies_btn_link" id="client_1_studies_btn_link" value="{{ old('client_1_studies_btn_link', $RS_Meta['client_1_studies_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 
@@ -127,8 +127,8 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="client_1_offering_btn_link">{{ __('Button Text') }}</label>
-							<input type="text" name="client_1_offering_btn_link" id="client_1_offering_btn_link" value="{{ old('client_1_offering_btn_link', $RS_Meta['client_1_offering_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+							<label for="client_1_offering_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="client_1_offering_btn_link" id="client_1_offering_btn_link" value="{{ old('client_1_offering_btn_link', $RS_Meta['client_1_offering_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 				</div>
@@ -209,8 +209,8 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="client_2_studies_btn_link">{{ __('Button Text') }}</label>
-							<input type="text" name="client_2_studies_btn_link" id="client_2_studies_btn_link" value="{{ old('client_2_studies_btn_link', $RS_Meta['client_2_studies_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+							<label for="client_2_studies_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="client_2_studies_btn_link" id="client_2_studies_btn_link" value="{{ old('client_2_studies_btn_link', $RS_Meta['client_2_studies_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 
@@ -261,8 +261,8 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="client_2_offering_btn_link">{{ __('Button Text') }}</label>
-							<input type="text" name="client_2_offering_btn_link" id="client_2_offering_btn_link" value="{{ old('client_2_offering_btn_link', $RS_Meta['client_2_offering_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+							<label for="client_2_offering_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="client_2_offering_btn_link" id="client_2_offering_btn_link" value="{{ old('client_2_offering_btn_link', $RS_Meta['client_2_offering_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 				</div>
@@ -343,8 +343,8 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="client_3_studies_btn_link">{{ __('Button Text') }}</label>
-							<input type="text" name="client_3_studies_btn_link" id="client_3_studies_btn_link" value="{{ old('client_3_studies_btn_link', $RS_Meta['client_3_studies_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+							<label for="client_3_studies_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="client_3_studies_btn_link" id="client_3_studies_btn_link" value="{{ old('client_3_studies_btn_link', $RS_Meta['client_3_studies_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 
@@ -395,8 +395,8 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="client_3_offering_btn_link">{{ __('Button Text') }}</label>
-							<input type="text" name="client_3_offering_btn_link" id="client_3_offering_btn_link" value="{{ old('client_3_offering_btn_link', $RS_Meta['client_3_offering_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+							<label for="client_3_offering_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="client_3_offering_btn_link" id="client_3_offering_btn_link" value="{{ old('client_3_offering_btn_link', $RS_Meta['client_3_offering_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 				</div>
@@ -477,8 +477,8 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="client_4_studies_btn_link">{{ __('Button Text') }}</label>
-							<input type="text" name="client_4_studies_btn_link" id="client_4_studies_btn_link" value="{{ old('client_4_studies_btn_link', $RS_Meta['client_4_studies_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+							<label for="client_4_studies_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="client_4_studies_btn_link" id="client_4_studies_btn_link" value="{{ old('client_4_studies_btn_link', $RS_Meta['client_4_studies_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 
@@ -529,8 +529,8 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="client_4_offering_btn_link">{{ __('Button Text') }}</label>
-							<input type="text" name="client_4_offering_btn_link" id="client_4_offering_btn_link" value="{{ old('client_4_offering_btn_link', $RS_Meta['client_4_offering_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+							<label for="client_4_offering_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="client_4_offering_btn_link" id="client_4_offering_btn_link" value="{{ old('client_4_offering_btn_link', $RS_Meta['client_4_offering_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 				</div>

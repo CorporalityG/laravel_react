@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import main from "../OurImpetus/main.png";
-import main2 from "../OurImpetus/main2.png";
 import backimg from "../OurImpetus/back.png";
 import wall from "../OurImpetus/wall.png";
 import smallrect from "../OurImpetus/small.png";
@@ -10,8 +8,9 @@ import rect from "../OurImpetus/rect.png";
 import text_rectangle from "../OurImpetus/text_rectangle.png";
 import yellow_back from "../OurImpetus/yellow_back.png";
 import "./First.css";
+import { API_IMG_URL } from '../../../../config';
 
-function FirstNew() {
+function FirstNew(pageDetail) {
   useEffect(() => {
     Aos.init({ duration: 3000 });
     Aos.init({ disable: "mobile" });
@@ -35,14 +34,9 @@ function FirstNew() {
             <div className="impetus_text_box2">
               <img src={text_rectangle} alt="text_rectangle" />
             </div>
-            <h1 className="ourimpetus_textside_heading">Our Impetus</h1>
-            <div className="ourimpetus_textside_description">
-            We crate evangelist for our customers through Human Intelligence and our proprietary framework established in house.
-            </div>
-            <div className="ourimpetus_textside_smalltext">
-              We create long-lasting values while helping you embrace change in
-              quickly altering marketing scenarios
-            </div>
+            <h1 className="ourimpetus_textside_heading">{`${pageDetail.banner_title}`}</h1>
+            <div className="ourimpetus_textside_description">{`${pageDetail.banner_subtitle}`}</div>
+            <div className="ourimpetus_textside_smalltext">{`${pageDetail.banner_description}`}</div>
           </div>
 
           <div
@@ -54,7 +48,7 @@ function FirstNew() {
           >
             <div className="imageside_maincontainer">
               <div className="imagesidecontainer2">
-                <img src={main2} alt="main2" className="impetus_mainimage" />
+                <img src={`${API_IMG_URL}pages/${pageDetail.banner_image}`} alt={`${pageDetail.banner_title}`}  className="impetus_mainimage" />
               </div>
               <div className="impetus_main_backside">
                 <img src={backimg} alt="backimg" />

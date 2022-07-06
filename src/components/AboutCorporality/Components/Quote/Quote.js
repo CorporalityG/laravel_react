@@ -3,10 +3,11 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Quote.css";
 import group_boxes from "../Quote/group_boxes.png";
-import priya_mam from "../Quote/priya_mam.png";
 import quotation_mark from "../Quote/quotation_mark.png";
+import { API_IMG_URL } from '../../../../config';
 
-function Quote() {
+function Quote(pageDetail) {
+  
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
@@ -23,13 +24,10 @@ function Quote() {
             <div className="all_contents">
               <div className="" data-aos="zoom-out" data-aos-duration="1000">
                 <div className="main_upper_text">
-                  Corporality Global practices true agility the way it is
-                  supposed to work. All of us across the organisation work
-                  towards a common goal and identify with the brand as if it
-                  were our very own.
+                  {`${pageDetail.author_bio}`}
                 </div>
                 <div className="main_bottom_text">
-                  - Priya Mishra, CEO, Founder Corporality Global
+                  - {`${pageDetail.author_name}`}, {`${pageDetail.author_designation}`}
                 </div>
               </div>
             </div>
@@ -40,7 +38,7 @@ function Quote() {
               data-aos-easing="ease-out-cubic"
               data-aos-duration="1000"
             >
-              <img src={priya_mam} alt="priya_mam" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.author_image}`} alt={`${pageDetail.author_name}`} />
             </div>
             <div className="quote_image">
               <img src={quotation_mark} alt="quotation_mark" />

@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Plank\Metable\MetableServiceProvider::class,
 
         /*
          * Application Service Providers...

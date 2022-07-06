@@ -10,10 +10,12 @@ import bottom_back from "./back2.png";
 import bottom_rectangle from "./polygon2.png";
 import heading_1_arrow from "./arrow1.png";
 import heading_2_arrow from "./arrow2.png";
+import { API_IMG_URL } from '../../../../config';
 
-function TeamSpiritNew() {
+function TeamSpiritNew(pageDetail) {
+
   useEffect(() => {
-    Aos.init({disable: "mobile"});
+    Aos.init({ disable: "mobile" });
   });
 
   return (
@@ -25,7 +27,7 @@ function TeamSpiritNew() {
         >
           <div className="text_1_invirogating">
             <div className="community_first_heading-Invirogating">
-              <div className="community_first_heading_text-Invirogating">Invigorating the Team spirit</div>
+              <div className="community_first_heading_text-Invirogating">{`${pageDetail.spirit_item_1_title}`}</div>
               <div className="community_first_heading_arrow-Invirogating">
                 <img src={heading_1_arrow} alt="Invigorating the Team spirit" />
               </div>
@@ -33,11 +35,11 @@ function TeamSpiritNew() {
             </div>
 
             <div className="community_first_description-Invirogating">
-              Corporality Global works with true agility to make a difference across every project.
+              {`${pageDetail.spirit_item_1_description}`}
             </div>
           </div>
           <div className="community_top_image-Invirogating">
-            <img src={bottom_image2} alt="Invirogating" className="community_top_image_image-Invirogating" />
+            <img src={`${API_IMG_URL}pages/${pageDetail.spirit_item_1_image}`} alt={`${pageDetail.spirit_item_1_title}`} className="community_top_image_image-Invirogating" />
           </div>
           <div className="community_top_back_image-Invirogating">
             <img src={top_back} alt="Invirogating" />
@@ -52,7 +54,7 @@ function TeamSpiritNew() {
           <div className="text_2_invirogating">
             <div className="community_second_heading-Invirogating">
               <div className="community_second_heading_text-Invirogating">
-                Stepping into the Global Market
+                {`${pageDetail.spirit_item_2_title}`}
               </div>
               <div className="community_second_heading_arrow-Invirogating">
                 <img src={heading_2_arrow} alt="arrow" />
@@ -60,7 +62,7 @@ function TeamSpiritNew() {
 
             </div>
             <div className="community_second_description-Invirogating">
-              Corporality Global has already taken baby steps to enter the North American market as we aim to grow.
+              {`${pageDetail.spirit_item_2_description}`}
 
 
             </div>
@@ -68,8 +70,7 @@ function TeamSpiritNew() {
           <div className="ImageINSecond_Leaderships">
             <div className="community_bottom_image-Invirogating">
               <img
-                src={top_image2}
-                alt="Invirogating"
+                src={`${API_IMG_URL}pages/${pageDetail.spirit_item_2_image}`} alt={`${pageDetail.spirit_item_2_title}`}
                 className="community_bottom_image_image-Invirogating"
               />
             </div>

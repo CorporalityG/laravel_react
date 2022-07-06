@@ -12,6 +12,13 @@
 							<input type="text" name="banner_1_title" id="banner_1_title" value="{{ old('banner_1_title', $RS_Meta['banner_1_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}" autofocus>
 						</div>
 					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="banner_1_subtitle">{{ __('SubTitle 1') }}</label>
+							<input type="text" name="banner_1_subtitle" id="banner_1_subtitle" value="{{ old('banner_1_subtitle', $RS_Meta['banner_1_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('SubTitle') }}" autofocus>
+						</div>
+					</div>
 					
 					<div class="col-md-12">
 						<div class="form-group">
@@ -52,6 +59,22 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
+							<label for="banner_1_bg_image">{{ __('Background Image 1') }}</label>
+							<div class="input-group{{ $errors->has('banner_1_bg_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="banner_1_bg_image" id="banner_1_bg_image" value="{{ old('banner_1_bg_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="banner_1_bg_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['banner_1_bg_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['banner_1_bg_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
 							<label for="banner_1_video_thumbnail">{{ __('Video Thumbnail 1') }}</label>
 							<div class="input-group{{ $errors->has('banner_1_video_thumbnail') ? ' is-invalid' : '' }}">
 								<div class="custom-file">
@@ -65,13 +88,6 @@
 							@endif
 						</div>
 					</div>
-
-					<!-- <div class="col-md-12">
-						<div class="form-group">
-							<label for="banner_1_video_url">{{ __('Vidoe URL 1') }}</label>
-							<input type="text" name="banner_1_video_url" id="banner_1_video_url" value="{{ old('banner_1_video_url', $RS_Meta['banner_1_video_url'] ?? '') }}" class="form-control" placeholder="{{ __('Vidoe URL') }}">
-						</div>
-					</div> -->
 
 					<div class="col-md-12">
 						<div class="form-group">
@@ -100,6 +116,13 @@
 						<div class="form-group">
 							<label for="banner_2_title">{{ __('Title 2') }}</label>
 							<input type="text" name="banner_2_title" id="banner_2_title" value="{{ old('banner_2_title', $RS_Meta['banner_2_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="banner_2_subtitle">{{ __('SubTitle 2') }}</label>
+							<input type="text" name="banner_2_subtitle" id="banner_2_subtitle" value="{{ old('banner_2_subtitle', $RS_Meta['banner_2_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('SubTitle') }}" autofocus>
 						</div>
 					</div>
 					
@@ -136,6 +159,22 @@
 
 							@if( !empty($RS_Meta['banner_2_image']) )
 								<img src="{{ url('uploads/pages/'.$RS_Meta['banner_2_image']) }}" alt="{{ $RS_Meta['banner_subtitle'] ?? 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="banner_2_bg_image">{{ __('Background Image 2') }}</label>
+							<div class="input-group{{ $errors->has('banner_2_bg_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="banner_2_bg_image" id="banner_2_bg_image" value="{{ old('banner_2_bg_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="banner_2_bg_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['banner_2_bg_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['banner_2_bg_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
 							@endif
 						</div>
 					</div>
@@ -185,6 +224,13 @@
 							<input type="text" name="banner_3_title" id="banner_3_title" value="{{ old('banner_3_title', $RS_Meta['banner_3_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
 						</div>
 					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="banner_3_subtitle">{{ __('SubTitle 3') }}</label>
+							<input type="text" name="banner_3_subtitle" id="banner_3_subtitle" value="{{ old('banner_3_subtitle', $RS_Meta['banner_3_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('SubTitle') }}" autofocus>
+						</div>
+					</div>
 					
 					<div class="col-md-12">
 						<div class="form-group">
@@ -219,6 +265,22 @@
 
 							@if( !empty($RS_Meta['banner_3_image']) )
 								<img src="{{ url('uploads/pages/'.$RS_Meta['banner_3_image']) }}" alt="{{ $RS_Meta['banner_subtitle'] ?? 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="banner_3_bg_image">{{ __('Background Image 3') }}</label>
+							<div class="input-group{{ $errors->has('banner_3_bg_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="banner_3_bg_image" id="banner_3_bg_image" value="{{ old('banner_3_bg_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="banner_3_bg_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['banner_3_bg_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['banner_3_bg_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
 							@endif
 						</div>
 					</div>
@@ -873,8 +935,20 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
-							<label for="emotional_quest_video_url">{{ __('Video URL') }}</label>
-							<input type="text" name="emotional_quest_video_url" id="emotional_quest_video_url" value="{{ old('emotional_quest_video_url', $RS_Meta['emotional_quest_video_url'] ?? '') }}" class="form-control" placeholder="{{ __('Video URL') }}">
+							<label for="emotional_quest_video_url">{{ __('Video') }}</label>
+							<div class="input-group{{ $errors->has('emotional_quest_video_url') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="emotional_quest_video_url" id="emotional_quest_video_url" value="{{ old('emotional_quest_video_url') }}" class="custom-file-input" placeholder="Choose image" accept="video/*">
+									<label class="custom-file-label" for="emotional_quest_video_url">Choose video</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['emotional_quest_video_url']) )
+								<video width="320" height="240" controls class="mt-3">
+									<source src="{{ url('uploads/pages/'.$RS_Meta['emotional_quest_video_url']) }}" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							@endif
 						</div>
 					</div>
 				</div>

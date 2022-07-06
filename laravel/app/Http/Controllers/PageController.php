@@ -242,10 +242,16 @@ class PageController extends Controller
 
         $RS_Row = Page::findOrFail($request->page_id);
 
-        $banner_1_image = $this->uploadImage($request->file('banner_1_image'), $request->banner_2_title, $RS_Row->getMeta('banner_1_image'));
+        $banner_1_image = $this->uploadImage($request->file('banner_1_image'), $request->banner_1_title, $RS_Row->getMeta('banner_1_image'));
         if( !empty($banner_1_image) )
         {
             $data['banner_1_image'] = $banner_1_image;
+        }
+
+        $banner_1_bg_image = $this->uploadImage($request->file('banner_1_bg_image'), $request->banner_1_title.'_bg', $RS_Row->getMeta('banner_1_bg_image'));
+        if( !empty($banner_1_bg_image) )
+        {
+            $data['banner_1_bg_image'] = $banner_1_bg_image;
         }
 
         $banner_1_video_thumbnail = $this->uploadImage($request->file('banner_1_video_thumbnail'), $request->banner_2_title.'_vt', $RS_Row->getMeta('banner_1_video_thumbnail'));
@@ -254,7 +260,7 @@ class PageController extends Controller
             $data['banner_1_video_thumbnail'] = $banner_1_video_thumbnail;
         }
 
-        $banner_1_video_url = $this->uploadImage($request->file('banner_1_video_url'), $request->banner_1_title, $RS_Row->getMeta('banner_1_video_url'));
+        $banner_1_video_url = $this->uploadImage($request->file('banner_1_video_url'), $request->banner_1_title.'_v', $RS_Row->getMeta('banner_1_video_url'));
         if( !empty($banner_1_video_url) )
         {
             $data['banner_1_video_url'] = $banner_1_video_url;
@@ -266,13 +272,19 @@ class PageController extends Controller
             $data['banner_2_image'] = $banner_2_image;
         }
 
+        $banner_2_bg_image = $this->uploadImage($request->file('banner_2_bg_image'), $request->banner_2_title.'_bg', $RS_Row->getMeta('banner_2_bg_image'));
+        if( !empty($banner_2_bg_image) )
+        {
+            $data['banner_2_bg_image'] = $banner_2_bg_image;
+        }
+
         $banner_2_video_thumbnail = $this->uploadImage($request->file('banner_2_video_thumbnail'), $request->banner_2_title.'_vt', $RS_Row->getMeta('banner_2_video_thumbnail'));
         if( !empty($banner_2_video_thumbnail) )
         {
             $data['banner_2_video_thumbnail'] = $banner_2_video_thumbnail;
         }
 
-        $banner_2_video_url = $this->uploadImage($request->file('banner_2_video_url'), $request->banner_2_title, $RS_Row->getMeta('banner_2_video_url'));
+        $banner_2_video_url = $this->uploadImage($request->file('banner_2_video_url'), $request->banner_2_title.'_v', $RS_Row->getMeta('banner_2_video_url'));
         if( !empty($banner_2_video_url) )
         {
             $data['banner_2_video_url'] = $banner_2_video_url;
@@ -284,13 +296,19 @@ class PageController extends Controller
             $data['banner_3_image'] = $banner_3_image;
         }
 
+        $banner_3_bg_image = $this->uploadImage($request->file('banner_3_bg_image'), $request->banner_3_title.'_bg', $RS_Row->getMeta('banner_3_bg_image'));
+        if( !empty($banner_3_bg_image) )
+        {
+            $data['banner_3_bg_image'] = $banner_3_bg_image;
+        }
+
         $banner_3_video_thumbnail = $this->uploadImage($request->file('banner_3_video_thumbnail'), $request->banner_3_title.'_vt', $RS_Row->getMeta('banner_3_video_thumbnail'));
         if( !empty($banner_3_video_thumbnail) )
         {
             $data['banner_3_video_thumbnail'] = $banner_3_video_thumbnail;
         }
 
-        $banner_3_video_url = $this->uploadImage($request->file('banner_3_video_url'), $request->banner_3_title, $RS_Row->getMeta('banner_3_video_url'));
+        $banner_3_video_url = $this->uploadImage($request->file('banner_3_video_url'), $request->banner_3_title.'_v', $RS_Row->getMeta('banner_3_video_url'));
         if( !empty($banner_3_video_url) )
         {
             $data['banner_3_video_url'] = $banner_3_video_url;
@@ -318,6 +336,12 @@ class PageController extends Controller
         if( !empty($emotional_quest_video_thumbnail) )
         {
             $data['emotional_quest_video_thumbnail'] = $emotional_quest_video_thumbnail;
+        }
+
+        $emotional_quest_video_url = $this->uploadImage($request->file('emotional_quest_video_url'), $request->emotional_quest_title, $RS_Row->getMeta('emotional_quest_video_url'));
+        if( !empty($emotional_quest_video_url) )
+        {
+            $data['emotional_quest_video_url'] = $emotional_quest_video_url;
         }
 
         $initiatives_1_image = $this->uploadImage($request->file('initiatives_1_image'), $request->initiatives_1_title, $RS_Row->getMeta('initiatives_1_image'));

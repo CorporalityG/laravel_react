@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FirstNew from "./Components/OurImpetus/FirstNew";
 import Quote from "./Components/Quote/Quote";
 import Leadership from "./Components/Leadership/Leadership";
@@ -9,26 +9,42 @@ import WorkParallax from "./Components/MiddleParallax/WorkParallax";
 import WorldMap from "./Components/WorldMap/WorldMap";
 import Caretojoinus from "./Components/CaretojoinUs/Caretojoinus";
 import { Helmet } from "react-helmet";
-import { BASE_URL } from '../../config'
+import { API_BASE_URL, BASE_URL } from '../../config'
 
 function AboutCorporality() {
+
+  const page_slug = 'about-corporality';
+
+  const [pageDetail, setPageDetail] = useState([]);
+
+  useEffect(() => {
+    getPageDetail()
+  }, []);
+
+  async function getPageDetail() {
+    let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
+    result = await result.json();
+    setPageDetail(result);
+  }
+
   return (
     <>
       <Helmet>
-        <title>{`The Best digital marketing firm in Sydney | Corporality`}</title>
-        <meta name="description" content={`Grow your business globally with the experts that offers marketing services to let you promote business using SEO, PPC and SMM.`} />
+        {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+        {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+        {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
         <link rel="canonical" href={`${BASE_URL}/about-corporality/`} />
       </Helmet>
 
-      <FirstNew />
-      <Quote />
-      <ThreeBoxes />
-      <FearlessCreativity />
-      <WorkParallax />
-      <WorldMap />
-      <CommunitySupport />
-      <Leadership />
-      <Caretojoinus />
+      <FirstNew {...pageDetail.detail} />
+      <Quote {...pageDetail.detail} />
+      <ThreeBoxes {...pageDetail.detail} />
+      <FearlessCreativity {...pageDetail.detail} />
+      <WorkParallax {...pageDetail.detail} />
+      <WorldMap {...pageDetail.detail} />
+      <CommunitySupport {...pageDetail.detail} />
+      <Leadership {...pageDetail.detail} />
+      <Caretojoinus {...pageDetail.detail} />
     </>
   );
 }

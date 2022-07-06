@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Caretojoinus.css";
-// import right_image from "./images/right_image.png";
 import right_image2 from "./images/right_image2.png";
 import bottom from "./images/bottom.png";
 import top from "./images/top.png";
@@ -11,8 +10,10 @@ import wall from "./images/wall.png";
 import middle from "./images/middle.png";
 import rectangle from "./images/rectangle.png";
 import { useNavigate } from "react-router";
+import { API_IMG_URL } from '../../../../config';
 
-function Caretojoinus() {
+function Caretojoinus(pageDetail) {
+
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
@@ -37,13 +38,12 @@ function Caretojoinus() {
             data-aos-duration="2000"
             data-aos-easing="ease-in-out"
           >
-            <div className="caretojoinus_heading">Care to Join us?</div>
+            <div className="caretojoinus_heading">{`${pageDetail.join_us_title}`}</div>
             <div className="caretojoinus_description">
-              Join a team of exceptional minds committed to creating brilliance.
-              This is also the right place to experience the best in agility.
+              {`${pageDetail.join_us_description}`}
             </div>
             <div className="caretojoinus_button">
-              <button onClick={() => { navigate("/contact"); topHandle(); }}>Join Us</button>
+              <button onClick={() => { navigate(`/${pageDetail.join_us_btn_link}`); topHandle(); }}>{`${pageDetail.join_us_btn_text}`}</button>
             </div>
           </div>
           <div className="bottom_rectangle">
@@ -67,8 +67,7 @@ function Caretojoinus() {
           >
             <div className="right_image_container">
               <img
-                src={right_image2}
-                alt="right_image2"
+                src={`${API_IMG_URL}pages/${pageDetail.join_us_image}`} alt={`${pageDetail.join_us_title}`}
                 className="caretojoinus_rightimage"
               />
             </div>

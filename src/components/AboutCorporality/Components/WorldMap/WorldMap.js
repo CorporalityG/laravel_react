@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./WorldMap.css";
-import left from "./images/left.png";
-import right from "./images/right.png";
+import { API_IMG_URL } from '../../../../config';
 
-function WorldMap() {
+function WorldMap(pageDetail) {
+
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
@@ -21,7 +21,7 @@ function WorldMap() {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            <img src={left} alt="left" />
+            <img src={`${API_IMG_URL}pages/${pageDetail.world_map_image_1}`} alt="left" />
           </div>
           <div
             className="worldmap_right "
@@ -29,7 +29,7 @@ function WorldMap() {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            <img src={right} alt="right" />
+            <img src={`${API_IMG_URL}pages/${pageDetail.world_map_image_2}`} alt="right" />
           </div>
         </div>
       </div>

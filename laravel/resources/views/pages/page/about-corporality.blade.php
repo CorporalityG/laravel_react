@@ -245,6 +245,22 @@
 							<textarea name="fearless_item_1_description" id="fearless_item_1_description" class="form-control" placeholder="{{ __('Item 1 Description') }}">{{ old('fearless_item_1_description', $RS_Meta['fearless_item_1_description'] ?? '') }}</textarea>
 						</div>
 					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_1_icon">{{ __('Item 1 Icon') }}</label>
+							<div class="input-group{{ $errors->has('fearless_item_1_icon') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="fearless_item_1_icon" id="fearless_item_1_icon" value="{{ old('fearless_item_1_icon') }}" class="custom-file-input" placeholder="Choose icon" accept="image/*">
+									<label class="custom-file-label" for="fearless_item_1_icon">Choose icon</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['fearless_item_1_icon']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['fearless_item_1_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
 				</div>
 
 				<hr >
@@ -263,6 +279,22 @@
 							<textarea name="fearless_item_2_description" id="fearless_item_2_description" class="form-control" placeholder="{{ __('Item 2 Description') }}">{{ old('fearless_item_2_description', $RS_Meta['fearless_item_2_description'] ?? '') }}</textarea>
 						</div>
 					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_2_icon">{{ __('Item 2 Icon') }}</label>
+							<div class="input-group{{ $errors->has('fearless_item_2_icon') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="fearless_item_2_icon" id="fearless_item_2_icon" value="{{ old('fearless_item_2_icon') }}" class="custom-file-input" placeholder="Choose icon" accept="image/*">
+									<label class="custom-file-label" for="fearless_item_2_icon">Choose icon</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['fearless_item_2_icon']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['fearless_item_2_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
 				</div>
 
 				<hr >
@@ -279,6 +311,22 @@
 						<div class="form-group">
 							<label for="fearless_item_3_description">{{ __('Item 3 Description') }}</label>
 							<textarea name="fearless_item_3_description" id="fearless_item_3_description" class="form-control" placeholder="{{ __('Item 3 Description') }}">{{ old('fearless_item_3_description', $RS_Meta['fearless_item_3_description'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="fearless_item_3_icon">{{ __('Item 3 Icon') }}</label>
+							<div class="input-group{{ $errors->has('fearless_item_3_icon') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="fearless_item_3_icon" id="fearless_item_3_icon" value="{{ old('fearless_item_3_icon') }}" class="custom-file-input" placeholder="Choose icon" accept="image/*">
+									<label class="custom-file-label" for="fearless_item_3_icon">Choose icon</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['fearless_item_3_icon']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['fearless_item_3_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
 						</div>
 					</div>
 				</div>
@@ -339,7 +387,7 @@
 							</div>
 
 							@if( !empty($RS_Meta['world_map_image_1']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['world_map_image_1']) }}" alt="{{ $RS_Meta['author_name'] ?? 'Image' }}" class="max-height-150 mt-3">
+								<img src="{{ url('uploads/pages/'.$RS_Meta['world_map_image_1']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
 							@endif
 						</div>
 					</div>
@@ -355,7 +403,7 @@
 							</div>
 
 							@if( !empty($RS_Meta['world_map_image_2']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['world_map_image_2']) }}" alt="{{ $RS_Meta['author_name'] ?? 'Image' }}" class="max-height-150 mt-3">
+								<img src="{{ url('uploads/pages/'.$RS_Meta['world_map_image_2']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
 							@endif
 						</div>
 					</div>

@@ -1,20 +1,21 @@
 import React , {useEffect} from 'react'
 import aos from 'aos'
 import '../FirstComponent/Clients.css'
-import MainClients from '../FirstComponent/mainClients.png'
 import BackClients from '../FirstComponent/BaCKINClients.png'
 import wallClients from '../FirstComponent/wallClients.png'
 import smallrectClients from '../FirstComponent/rectClients.png'
 import rectClients from '../FirstComponent/smallrecClients.png'
 import smallerrectClients from '../FirstComponent/smallerrectClients.png'
 import yellowbackground from './yellowbackground.png'
+import { API_IMG_URL } from '../../../../config';
 
+const Clients = (pageDetail) => {
 
-const Clients = () => {
     useEffect(() => {
         aos.init({ duration: 3000 });
 
     }, [])
+
     return (
         <div className="Clients">
             <div className="navbar-Clients"></div>
@@ -26,9 +27,9 @@ const Clients = () => {
                     <div className="col-lg-6">
                         <div data-aos="fade-right"  className="text-box-1-Clients">
 
-                            <p className='container-1_text-Clients'>Working with our clients</p>
-                            <h1 className='container-2_text-Clients'>Nurturing the customers’ vision to bring it closer to reality. </h1>
-                            <p className='container-3_text-Clients'>We are one of the most powerful sources of business growth and progress. We help our customers unfold their dreams to reality.</p>
+                            <p className='container-1_text-Clients'>{`${pageDetail.banner_title}`}</p>
+                            <h1 className='container-2_text-Clients'>{`${pageDetail.banner_subtitle}`} </h1>
+                            <p className='container-3_text-Clients'>{`${pageDetail.banner_description}`}</p>
                             <div className="small-rect-prev-1-Clients"><img src={ smallerrectClients} alt='smallerrectClients' className='smaller-rect-prev-1' /></div>
                         </div>
                     </div>
@@ -39,7 +40,7 @@ const Clients = () => {
                             <img alt='smallrectClients' className='smallrect-Clients' src={smallrectClients} />
                             <img alt='BackClients' className='backimg-Clients' src={BackClients} />
                             <div className="banner_right_inner-Clients" >
-                                <img className='main-prev1-Clients' src={MainClients} alt="MainClients" />
+                                <img className='main-prev1-Clients' src={`${API_IMG_URL}pages/${pageDetail.banner_image}`} alt={`${pageDetail.banner_title}`} />
                             </div>
                         </div>
                     </div>

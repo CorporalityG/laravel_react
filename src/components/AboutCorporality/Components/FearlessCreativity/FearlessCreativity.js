@@ -2,16 +2,15 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./FearlessCreativity.css";
-import main_image from "./images/main_image.png";
-import point_1 from "./images/point_1.png";
-import point_2 from "./images/point_2.png";
-import point_3 from "./images/point_3.png";
+import { API_IMG_URL } from '../../../../config';
 
-function FearlessCreativity() {
+function FearlessCreativity(pageDetail) {
+
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
   });
+
   return (
     <div className="container fearless_parent">
       <div className="fearlesscreativity_main container">
@@ -22,7 +21,7 @@ function FearlessCreativity() {
         >
           <div className="fearless_image_side">
             <div className="fearless_main_image">
-              <img src={main_image} alt="main_image" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.fearless_image}`} alt={`${pageDetail.fearless_title}`} />
             </div>
           </div>
         </div>
@@ -32,7 +31,7 @@ function FearlessCreativity() {
             data-aos="zoom-in"
             data-aos-duration="1000"
           >
-            Ideation with fearless creativity
+            {`${pageDetail.fearless_title}`}
           </div>
           <div className="fearless_content">
             <div
@@ -42,18 +41,14 @@ function FearlessCreativity() {
             >
               <div className="fearless_content_1">
                 <div className="fearless_content_imageside">
-                  <img src={point_1} alt="point_1" />
+                  <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_1_icon}`} alt={`${pageDetail.fearless_item_1_title}`} />
                 </div>
                 <div className="fearless_content_textside">
                   <div className="textside_heading">
-                    We partner with you to give you true value that lasts
+                    {`${pageDetail.fearless_item_1_title}`}
                   </div>
                   <div className="textside_content">
-                    Corporality Global works on the most practical terms, and
-                    helps clients transform businesses to be as future-ready as
-                    they can. As innovators, we are convinced there’s no single
-                    way to ignite a business to success; we believe in
-                    empowering people with their own
+                    {`${pageDetail.fearless_item_1_description}`}
                   </div>
                 </div>
               </div>
@@ -65,16 +60,12 @@ function FearlessCreativity() {
             >
               <div className="fearless_content_2">
                 <div className="fearless_content_imageside">
-                  <img src={point_2} alt="point_2" />
+                  <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_2_icon}`} alt={`${pageDetail.fearless_item_2_title}`} />
                 </div>
                 <div className="fearless_content_textside">
-                  <div className="textside_heading">Our beliefs</div>
+                  <div className="textside_heading">{`${pageDetail.fearless_item_2_title}`}</div>
                   <div className="textside_content">
-                    We believe in rapid, repeatable growth and success.
-                    Corporality Global is committed to providing real-world
-                    content and digital marketing strategies supported by
-                    tactics that really work. We make an impact right from the
-                    beginning.
+                    {`${pageDetail.fearless_item_2_description}`}
                   </div>
                 </div>
               </div>
@@ -86,14 +77,12 @@ function FearlessCreativity() {
             >
               <div className="fearless_content_3">
                 <div className="fearless_content_imageside">
-                  <img src={point_3} alt="point_3" />
+                  <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_3_icon}`} alt={`${pageDetail.fearless_item_3_title}`} />
                 </div>
                 <div className="fearless_content_textside">
-                  <div className="textside_heading">Inclusivity</div>
+                  <div className="textside_heading">{`${pageDetail.fearless_item_3_title}`}</div>
                   <div className="textside_content">
-                    Corporality Global and inclusion go hand-in-hand. We do not
-                    encourage any discrimination that could be barriers to
-                    communication.
+                    {`${pageDetail.fearless_item_3_description}`}
                   </div>
                 </div>
               </div>

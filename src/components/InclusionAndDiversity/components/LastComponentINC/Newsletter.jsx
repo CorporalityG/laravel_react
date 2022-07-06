@@ -8,11 +8,14 @@ import rect3 from '../LastComponentINC/rect3.png'
 import rect4 from '../LastComponentINC/rect4.png'
 import Main from '../LastComponentINC/main.png'
 import Back from '../LastComponentINC/back.png'
+import { API_IMG_URL } from '../../../../config';
 
-const Newsletter = () => {
+const Newsletter = (pageDetail) => {
+
     useEffect(() => {
         aos.init({});
     }, [])
+
     return (
         <div className="second-Ns">
             <img className='wall-2-2-Ns' src={wall} alt='wall' />
@@ -20,8 +23,7 @@ const Newsletter = () => {
             <div className='container second-container-Ns' >
                 <div className="row interactive_blueprint-row-Ns">
                     <div className="col-lg-6 textndlists-Ns d-flex flex-column  justify-content-center">
-                        <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="500" className='container-2-text-1-Ns'>Our newsletter is more than just information
-                            Subscribe to see the difference
+                        <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="500" className='container-2-text-1-Ns'>{`${pageDetail.newsletter_title}`}
                         </p>
 
                         <form action='https://forms.zohopublic.com.au/corporality/form/SubscribeNewslettersCorporality/formperma/h58Lc8-XG8Ll4jwIvKkFCFA_uwUgipzSLFZVfC_3lZs/htmlRecords/submit' name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' acceptCharset='UTF-8' encType='multipart/form-data' id='form'>
@@ -48,7 +50,7 @@ const Newsletter = () => {
                                 <img className='backimagesecond-fourth-Ns' src={Back} alt='Back' />
                                 <div className="bp_our-newsletter-polygon9-Ns">
                                     <div data-aos="fade-down-left" data-aos-duration="2000" data-aos-delay="1000">
-                                        <img className='main-2-2-Ns' src={Main} alt="Main" />
+                                        <img className='main-2-2-Ns' src={`${API_IMG_URL}pages/${pageDetail.newsletter_image}`} alt={`${pageDetail.newsletter_title}`} />
                                     </div>
                                 </div>
                             </div>

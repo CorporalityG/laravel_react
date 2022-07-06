@@ -67,3 +67,4 @@ Route::get('/industrial-article-categories', [IndustrialArticleCategoryControlle
 Route::get('/industrial-articles', [IndustrialArticleController::class, 'getIndustrialArticles']);
 
 Route::get('/page-detail/{slug?}', [PageController::class, 'getPageDetail']);
+Route::get('/page-section-detail/{slug?}', [PageController::class, 'getPageSectionDetail']);
