@@ -167,6 +167,24 @@
 						</div>
 					</div>
 				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="origin_framework_understand_title">{{ __('Understand Title') }}</label>
+							<input type="text" name="origin_framework_understand_title" id="origin_framework_understand_title" value="{{ old('origin_framework_understand_title', $RS_Meta['origin_framework_understand_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
+						</div>
+					</div>
+					
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="origin_framework_understand_description">{{ __('Understand Description') }}</label>
+							<textarea name="origin_framework_understand_description" id="origin_framework_understand_description" class="form-control" placeholder="{{ __('Description') }}">{{ old('origin_framework_understand_description', $RS_Meta['origin_framework_understand_description'] ?? '') }}</textarea>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -404,6 +422,7 @@ $(function () {
     // Summernote
     $('#banner_description').summernote();
 	$('#factor_driving_description').summernote();
+	$('#origin_framework_understand_description').summernote();
 	$('#origin_framework_description').summernote();
 	$('#why_effective_description').summernote();
 	$('#profitability_description').summernote();

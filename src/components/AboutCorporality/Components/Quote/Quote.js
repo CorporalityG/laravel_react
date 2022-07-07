@@ -7,7 +7,7 @@ import quotation_mark from "../Quote/quotation_mark.png";
 import { API_IMG_URL } from '../../../../config';
 
 function Quote(pageDetail) {
-  
+
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
@@ -16,35 +16,41 @@ function Quote(pageDetail) {
   return (
     <>
       <div className="quote_container_parent">
-        <div className="box_image">
-          <img src={group_boxes} alt="group_boxes" />
-        </div>
-        <div className="container">
-          <div className="quote_container">
-            <div className="all_contents">
-              <div className="" data-aos="zoom-out" data-aos-duration="1000">
-                <div className="main_upper_text">
-                  {`${pageDetail.author_bio}`}
-                </div>
-                <div className="main_bottom_text">
-                  - {`${pageDetail.author_name}`}, {`${pageDetail.author_designation}`}
+        {
+          pageDetail ?
+            <>
+              <div className="box_image">
+                <img src={group_boxes} alt="group_boxes" />
+              </div>
+              <div className="container">
+                <div className="quote_container">
+                  <div className="all_contents">
+                    <div className="" data-aos="zoom-out" data-aos-duration="1000">
+                      <div className="main_upper_text">
+                        {`${pageDetail.author_bio}`}
+                      </div>
+                      <div className="main_bottom_text">
+                        - {`${pageDetail.author_name}`}, {`${pageDetail.author_designation}`}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="image_left "
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000"
+                  >
+                    <img src={`${API_IMG_URL}pages/${pageDetail.author_image}`} alt={`${pageDetail.author_name}`} />
+                  </div>
+                  <div className="quote_image">
+                    <img src={quotation_mark} alt="quotation_mark" />
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div
-              className="image_left "
-              data-aos="flip-left"
-              data-aos-easing="ease-out-cubic"
-              data-aos-duration="1000"
-            >
-              <img src={`${API_IMG_URL}pages/${pageDetail.author_image}`} alt={`${pageDetail.author_name}`} />
-            </div>
-            <div className="quote_image">
-              <img src={quotation_mark} alt="quotation_mark" />
-            </div>
-          </div>
-        </div>
+            </>
+            : null
+        }
       </div>
     </>
   );

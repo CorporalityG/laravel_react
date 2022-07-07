@@ -16,8 +16,7 @@ const Limitless = (pageDetail) => {
 
                     </div>
                     <div className="In_Div_anm_middle_box-Limitless" >
-                        <h1 className="In_Div_anm_container_text-h1-Limitless">{`${pageDetail.author_title}`}
-                        </h1>
+                        <h1 className="In_Div_anm_container_text-h1-Limitless" dangerouslySetInnerHTML={{ __html: pageDetail.author_title }}></h1>
                     </div>
                     <div className="In_Div_anm_lower_box-Limitless">
                         <h3 className="anm-h3-Limitless">{`${pageDetail.author_name}`}</h3>

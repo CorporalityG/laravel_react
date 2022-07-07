@@ -375,7 +375,7 @@
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="faq_item_1_description">{{ __('FAQ 1 Description') }}</label>
-							<textarea name="faq_item_1_description" id="faq_item_1_description" class="form-control" placeholder="{{ __('Description') }}">{{ old('faq_item_1_description', $RS_Meta['faq_item_1_description'] ?? '') }}</textarea>
+							<textarea name="faq_item_1_description" id="faq_item_1_description" class="form-control faq_item_description" placeholder="{{ __('Description') }}">{{ old('faq_item_1_description', $RS_Meta['faq_item_1_description'] ?? '') }}</textarea>
 						</div>
 					</div>
 				</div>
@@ -393,7 +393,7 @@
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="faq_item_2_description">{{ __('FAQ 2 Description') }}</label>
-							<textarea name="faq_item_2_description" id="faq_item_2_description" class="form-control" placeholder="{{ __('Description') }}">{{ old('faq_item_2_description', $RS_Meta['faq_item_2_description'] ?? '') }}</textarea>
+							<textarea name="faq_item_2_description" id="faq_item_2_description" class="form-control faq_item_description" placeholder="{{ __('Description') }}">{{ old('faq_item_2_description', $RS_Meta['faq_item_2_description'] ?? '') }}</textarea>
 						</div>
 					</div>
 				</div>
@@ -411,7 +411,7 @@
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="faq_item_3_description">{{ __('FAQ 3 Description') }}</label>
-							<textarea name="faq_item_3_description" id="faq_item_3_description" class="form-control" placeholder="{{ __('Description') }}">{{ old('faq_item_3_description', $RS_Meta['faq_item_3_description'] ?? '') }}</textarea>
+							<textarea name="faq_item_3_description" id="faq_item_3_description" class="form-control faq_item_description" placeholder="{{ __('Description') }}">{{ old('faq_item_3_description', $RS_Meta['faq_item_3_description'] ?? '') }}</textarea>
 						</div>
 					</div>
 				</div>
@@ -1368,3 +1368,11 @@
 
 	</div>
 </div>
+
+<!-- Page specific script -->
+<script>
+$(function () {
+    // Summernote
+    $('.faq_item_description').summernote();
+});
+</script>

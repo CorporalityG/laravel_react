@@ -1,26 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CaseStudy from './components/CaseStudies/CaseStudy'
 import DigitalSg from './components/DigitalSg/Digital'
 import Global from './components/GlobalAIms/Global'
 import MultiDimensional from './components/MultiDimensional/MultiDimension'
 import OrganisingPrinciple from './components/Organising/OrganisingPrinciple'
 import { Helmet } from "react-helmet";
-import { BASE_URL } from '../../config'
+import { API_BASE_URL, BASE_URL } from '../../config'
 
 const SustainableGrowth = () => {
+
+    const page_slug = 'sustainable-growth';
+
+    const [pageDetail, setPageDetail] = useState([]);
+
+    useEffect(() => {
+        getPageDetail()
+    }, []);
+
+    async function getPageDetail() {
+        let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
+        result = await result.json();
+        setPageDetail(result);
+    }
+
     return (
         <div>
             <Helmet>
-                <title>{`Understanding the Sustainable Growth Rate (SGR)`}</title>
-                <meta name="description" content={`The sustainable growth rate (SGR) is the maximum rate of growth that a company can sustain without raising additional equity or taking on new debt.`} />
+                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
                 <link rel="canonical" href={`${BASE_URL}/sustainable-growth/`} />
             </Helmet>
 
-            <OrganisingPrinciple />
-            <DigitalSg />
-            <MultiDimensional />
-            <Global />
-            <CaseStudy />
+            <OrganisingPrinciple {...pageDetail.detail} />
+            <DigitalSg {...pageDetail.detail} />
+            <MultiDimensional {...pageDetail.detail} />
+            <Global {...pageDetail.detail} />
+            <CaseStudy {...pageDetail.detail} />
         </div>
     )
 }

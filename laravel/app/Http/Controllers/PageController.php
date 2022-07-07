@@ -818,6 +818,12 @@ class PageController extends Controller
             $data['work_mind_image'] = $work_mind_image;
         }
 
+        $conditioned_framework_image = $this->uploadImage($request->file('conditioned_framework_image'), $request->conditioned_framework_title, $RS_Row->getMeta('conditioned_framework_image'));
+        if( !empty($conditioned_framework_image) )
+        {
+            $data['conditioned_framework_image'] = $conditioned_framework_image;
+        }
+
         $work_image = $this->uploadImage($request->file('work_image'), $request->work_title, $RS_Row->getMeta('work_image'));
         if( !empty($work_image) )
         {

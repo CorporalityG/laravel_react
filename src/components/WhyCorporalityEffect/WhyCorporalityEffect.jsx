@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './WhyCorporalityEffect.css'
-import { BASE_URL } from '../../config';
+import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
 import { Link } from 'react-router-dom';
 import { RightForYouItem } from './RightForYouItem';
 import { CommitmentItem } from './CommitmentItem';
@@ -10,6 +10,20 @@ import { Helmet } from "react-helmet";
 
 function WhyCorporalityEffect() {
 
+    const page_slug = 'why-corporality-effect';
+
+    const [pageDetail, setPageDetail] = useState([]);
+
+    useEffect(() => {
+        getPageDetail()
+    }, []);
+
+    async function getPageDetail() {
+        let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
+        result = await result.json();
+        setPageDetail(result);
+    }
+
     const topHandle = () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -18,270 +32,270 @@ function WhyCorporalityEffect() {
     return (
         <>
             <Helmet>
-                <title>{`The Best digital marketing firm in Sydney | Corporality`}</title>
-                <meta name="description" content={`Grow your business globally with the experts that offers marketing services to let you promote business using SEO, PPC and SMM.`} />
+                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
                 <link rel="canonical" href={`${BASE_URL}/why-corporality-effect/`} />
             </Helmet>
 
-            <div className="wce-banner-main">
-                <img src={BASE_URL + '/img/WhyCorporalityEffect/banner.png'} alt="Why Corporality Effect?" className="wce-banner-img" />
-                <img src={BASE_URL + '/img/WhyCorporalityEffect/banner-vector.png'} alt="Vector" className="wce-banner-vector" />
+            {
+                pageDetail.detail ?
+                    <>
+                        <div className="wce-banner-main">
+                            <img src={BASE_URL + '/img/WhyCorporalityEffect/banner.png'} alt="Why Corporality Effect?" className="wce-banner-img" />
+                            <img src={BASE_URL + '/img/WhyCorporalityEffect/banner-vector.png'} alt="Vector" className="wce-banner-vector" />
 
-                <img src={BASE_URL + '/img/WhyCorporalityEffect/rec-1.png'} alt="Rec 1" className="rec-1" />
-                <img src={BASE_URL + '/img/WhyCorporalityEffect/rec-2.png'} alt="Rec 2" className="rec-2" />
+                            <img src={BASE_URL + '/img/WhyCorporalityEffect/rec-1.png'} alt="Rec 1" className="rec-1" />
+                            <img src={BASE_URL + '/img/WhyCorporalityEffect/rec-2.png'} alt="Rec 2" className="rec-2" />
 
-                <div className="wce-banner-social-main">
-                    <div className="wce-banner-social-img">
-                        <img src={BASE_URL + '/img/WhyCorporalityEffect/social.png'} alt="Title" />
-                    </div>
-                    <div className="wce-banner-social-icon-main">
-                        <div className="wce-banner-social-icon" onClick={() => window.open("https://www.facebook.com/CorporalityG/")}>
-                            <i className="fa fa-facebook-f"></i>
-                        </div>
-                        <div className="wce-banner-social-icon" onClick={() => window.open("https://twitter.com/corporalityg/")}>
-                            <i className="fa fa-twitter"></i>
-                        </div>
-                        <div className="wce-banner-social-icon" onClick={() => window.open("https://www.instagram.com/corporalityg/")}>
-                            <i className="fa fa-instagram"></i>
-                        </div>
-                        <div className="wce-banner-social-icon" onClick={() => window.open("https://www.linkedin.com/company/corporalityg/")}>
-                            <i className="fa fa-linkedin"></i>
-                        </div>
-                        <div className="wce-banner-social-icon" onClick={() => window.open("https://in.pinterest.com/CorporalityG/_created/")}>
-                            <i className="fa fa-pinterest"></i>
-                        </div>
-                        <div className="wce-banner-social-icon" onClick={() => window.open("https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg")}>
-                            <i className="fa fa-youtube-play"></i>
-                        </div>
-                    </div>
-                </div>
+                            <div className="wce-banner-social-main">
+                                <div className="wce-banner-social-img">
+                                    <img src={BASE_URL + '/img/WhyCorporalityEffect/social.png'} alt="Title" />
+                                </div>
+                                <div className="wce-banner-social-icon-main">
+                                    <div className="wce-banner-social-icon" onClick={() => window.open("https://www.facebook.com/CorporalityG/")}>
+                                        <i className="fa fa-facebook-f"></i>
+                                    </div>
+                                    <div className="wce-banner-social-icon" onClick={() => window.open("https://twitter.com/corporalityg/")}>
+                                        <i className="fa fa-twitter"></i>
+                                    </div>
+                                    <div className="wce-banner-social-icon" onClick={() => window.open("https://www.instagram.com/corporalityg/")}>
+                                        <i className="fa fa-instagram"></i>
+                                    </div>
+                                    <div className="wce-banner-social-icon" onClick={() => window.open("https://www.linkedin.com/company/corporalityg/")}>
+                                        <i className="fa fa-linkedin"></i>
+                                    </div>
+                                    <div className="wce-banner-social-icon" onClick={() => window.open("https://in.pinterest.com/CorporalityG/_created/")}>
+                                        <i className="fa fa-pinterest"></i>
+                                    </div>
+                                    <div className="wce-banner-social-icon" onClick={() => window.open("https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg")}>
+                                        <i className="fa fa-youtube-play"></i>
+                                    </div>
+                                </div>
+                            </div>
 
-                <div className="container-lg">
-                    <div className="row wce-banner-content-row">
-                        <div className="col-lg-12">
-                            <h1>Why Corporality Effect?</h1>
-                            <p>The world is going through uncertain economic times. Businesses are forced to make tough decisions when it comes to marketing spend. Leaving your sales team to figure out the market and other teams work independently without direction isn’t going to assist your growth vision.</p>
-                            <p>This is not the time to slow your digital marketing effort, and it is definitely not the time to move without any strategic planning and discipline in place.</p>
-                            <p>The Corporality Effect program is designed to assist you with a modern digital sales and marketing framework. It focuses on your brand position with the sustainable content strategy you desire. It is your absolute duty to help your customer make his buying decision easier by staying relevant.</p>
-                            <Link className="wce-banner-btn" to="/contact" onClick={() => { topHandle() }} >Request For Quote</Link>
-                        </div>
+                            <div className="container-lg">
+                                <div className="row wce-banner-content-row">
+                                    <div className="col-lg-12">
+                                        <h1>{`${pageDetail.detail.banner_title}`}</h1>
+                                        <div dangerouslySetInnerHTML={{ __html: pageDetail.detail.banner_description }}></div>
+                                        <Link className="wce-banner-btn" to={`/${pageDetail.detail.banner_btn_link}`} onClick={() => { topHandle() }} >{`${pageDetail.detail.banner_btn_text}`}</Link>
+                                    </div>
 
-                        <div className="wce-banner-phone">
-                            <img src={BASE_URL + '/img/WhyCorporalityEffect/phone-icon.png'} alt="Phone" className="phone-icon" onClick={() => window.open("tel:61283794089", "_self")} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="wce-commitment-section">
-                <div className="container-lg">
-                    <div className="row wce-commitment-title-row">
-                        <div className="col-lg-12">
-                            <div className="wce-commitment-title">
-                                <img src={BASE_URL + '/img/WhyCorporalityEffect/commitment-title.png'} alt="Commitment" />
+                                    <div className="wce-banner-phone">
+                                        <img src={BASE_URL + '/img/WhyCorporalityEffect/phone-icon.png'} alt="Phone" className="phone-icon" onClick={() => window.open("tel:61283794089", "_self")} />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="row wce-commitment-boxes-row">
-                        <CommitmentItem
-                            title={'Insights From a Personalised Audit'}
-                            subtitle={'<p>The most important part of hitting your marketing objective is knowing where to start. Our strategist will pinpoint where your marketing focus is required. Our audit uncovers the most critical issues that can be handled through rapid action to improve your total KPI and ROI. At the end recommendations, goals and milestones will be handed over so your accountability team members can review the findings.</p>'}
-                        />
+                        <div className="wce-commitment-section">
+                            <div className="container-lg">
+                                <div className="row wce-commitment-title-row">
+                                    <div className="col-lg-12">
+                                        <div className="wce-commitment-title">
+                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.commitment_title_image}`} alt="Commitment" />
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <CommitmentItem
-                            title={'Future-proof marketing plan before execution'}
-                            subtitle={'<p>Our regular consultancy will help you design a long-term digital sales and marketing strategy built around the vision projected by your leadership team. We work proactively and plan way ahead to minimise the risk of inconsistency. You’ll realise working with Corporality means being on top of your marketing plan and being up-to-date with shifting market trends. We believe in staying ahead so we focus on predicting the future and keep our eye on the latest research data.</p>'}
-                        />
+                                <div className="row wce-commitment-boxes-row">
+                                    <CommitmentItem
+                                        title={`${pageDetail.detail.commitment_item_1_title}`}
+                                        subtitle={`<p>${pageDetail.detail.commitment_item_1_description}</p>`}
+                                    />
 
-                        <CommitmentItem
-                            title={'Let’s build you up together'}
-                            subtitle={'<p>Don’t get stuck or be preoccupied with constraints if you are setting up for growth and looking to position your brand much higher. If brand reputation is something that matters to you, we at Corporality will deliver. Let’s explore your vision and mission together and we promise you a more established marketing approach with a very structured framework. In the end your staff will be conditioned to follow consistency in digital PR.</p>'}
-                        />
-                    </div>
-                </div>
-            </div>
+                                    <CommitmentItem
+                                        title={`${pageDetail.detail.commitment_item_2_title}`}
+                                        subtitle={`<p>${pageDetail.detail.commitment_item_2_description}</p>`}
+                                    />
 
-            <div className="wce-business-section">
-                <img src={BASE_URL + '/img/WhyCorporalityEffect/business-vector.png'} alt="Vector" className="business-vector" />
-                <img src={BASE_URL + '/img/WhyCorporalityEffect/business-rec-1.png'} alt="Rec 1" className="business-rec-1" />
-                <img src={BASE_URL + '/img/WhyCorporalityEffect/business-rec-2.png'} alt="Rec 2" className="business-rec-2" />
-                <img src={BASE_URL + '/img/WhyCorporalityEffect/business-rec-3.png'} alt="Rec 3" className="business-rec-3" />
-                <img src={BASE_URL + '/img/WhyCorporalityEffect/business-rec-4.png'} alt="Rec 4" className="business-rec-4" />
-
-                <div className="container-lg">
-                    <div className="row wce-business-row">
-                        <div className="col-lg-12">
-                            <h2>Does my business need The Corporality Effect?</h2>
-                            <div className="wce-business-content">
-                                <p>Today, 70% of consumers are convinced of purchasing a product even before making a direct inquiry to the business serving it.</p>
-                                <p>Is your business attracting these consumers?</p>
-                                <p>With Corporality Effect, you could do just that – gravitate your target market towards you. Create loyalty. Satisfy their expectations. And most importantly, make yourself become the answer to their questions.</p>
-                                <p>Customers are thirsty for new innovations, trends, and approaches that your business could very well be a refreshing oasis if you have the Corporality Effect.</p>
+                                    <CommitmentItem
+                                        title={`${pageDetail.detail.commitment_item_3_title}`}
+                                        subtitle={`<p>${pageDetail.detail.commitment_item_3_description}</p>`}
+                                    />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div className="wce-right-section">
-                <div className="container-lg">
-                    <div className="row wce-right-title-row">
-                        <div className="col-lg-12">
-                            <h2>Is this right for you?</h2>
-                            <h3>Maybe you’ve found yourself in these situations…</h3>
+                        <div className="wce-business-section">
+                            <img src={BASE_URL + '/img/WhyCorporalityEffect/business-vector.png'} alt="Vector" className="business-vector" />
+                            <img src={BASE_URL + '/img/WhyCorporalityEffect/business-rec-1.png'} alt="Rec 1" className="business-rec-1" />
+                            <img src={BASE_URL + '/img/WhyCorporalityEffect/business-rec-2.png'} alt="Rec 2" className="business-rec-2" />
+                            <img src={BASE_URL + '/img/WhyCorporalityEffect/business-rec-3.png'} alt="Rec 3" className="business-rec-3" />
+                            <img src={BASE_URL + '/img/WhyCorporalityEffect/business-rec-4.png'} alt="Rec 4" className="business-rec-4" />
+
+                            <div className="container-lg">
+                                <div className="row wce-business-row">
+                                    <div className="col-lg-12">
+                                        <h2>{`${pageDetail.detail.business_need_title}`}</h2>
+                                        <div className="wce-business-content" dangerouslySetInnerHTML={{ __html: pageDetail.detail.business_need_description }}></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="row wce-right-boxes-row">
-                        <RightForYouItem
-                            thumbnail={BASE_URL + '/img/WhyCorporalityEffect/Unpleasant-Past-Experiences.png'}
-                            title={'Unpleasant Past Experiences'}
-                            subtitle={'“I’ve tried Inbound Marketing before, but I didn’t get the results I expected.”'}
-                        />
+                        <div className="wce-right-section">
+                            <div className="container-lg">
+                                <div className="row wce-right-title-row">
+                                    <div className="col-lg-12">
+                                        <h2>{`${pageDetail.detail.right_for_you_title}`}</h2>
+                                        <h3>{`${pageDetail.detail.right_for_you_subtitle}`}</h3>
+                                    </div>
+                                </div>
 
-                        <RightForYouItem
-                            thumbnail={BASE_URL + '/img/WhyCorporalityEffect/Agencies-Unconcerned-With-Your-Goals.png'}
-                            title={'Agencies Unconcerned With Your Goals'}
-                            subtitle={'“Agencies are tiring to work with, they don’t even study my business.”'}
-                        />
+                                <div className="row wce-right-boxes-row">
+                                    <RightForYouItem
+                                        thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.right_for_you_item_1_icon}`}
+                                        title={`${pageDetail.detail.right_for_you_item_1_title}`}
+                                        subtitle={`${pageDetail.detail.right_for_you_item_1_description}`}
+                                    />
 
-                        <RightForYouItem
-                            thumbnail={BASE_URL + '/img/WhyCorporalityEffect/In-Need-Of-Solutions-And-Systems.png'}
-                            title={'In Need Of Solutions And Systems'}
-                            subtitle={'“My priority now is to drive traffic to my website, capture leads, and increase conversions… fast.”'}
-                        />
-                    </div>
-                </div>
-            </div>
+                                    <RightForYouItem
+                                        thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.right_for_you_item_2_icon}`}
+                                        title={`${pageDetail.detail.right_for_you_item_2_title}`}
+                                        subtitle={`${pageDetail.detail.right_for_you_item_2_description}`}
+                                    />
 
-            <div className="wce-work-section">
-                <div className="container-lg">
-                    <div className="row wce-work-title-row">
-                        <div className="col-lg-12">
-                            <h2>How Does It Work?</h2>
-                            <p>Corporality Effect begins with a 2-day Workshop, which your leadership, sales, marketing, and related teams will participate in. Over the course of 52 weeks, you can work with our mentoring and development teams to work on the following:</p>
-                            <Link className="wce-work-btn" to="/" onClick={() => { topHandle() }} >Corporality Culture</Link>
+                                    <RightForYouItem
+                                        thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.right_for_you_item_3_icon}`}
+                                        title={`${pageDetail.detail.right_for_you_item_3_title}`}
+                                        subtitle={`${pageDetail.detail.right_for_you_item_3_description}`}
+                                    />
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="row wce-work-accordion-row">
-                        <div className="col-lg-12">
-                            <Accordion className="wce-work-accordion-main">
-                                <Accordion.Item eventKey="0">
-                                    <Accordion.Header>
-                                        <div className="wce-work-heading">
-                                            <img src={BASE_URL + '/img/WhyCorporalityEffect/work-favicon-1.png'} alt="Workshop" />
-                                            <span>Workshop</span>
-                                        </div>
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        <p>Discovery discussion of goals and current strategies, alignment of marketing processes and positioning, and formulation of tailor-fit strategies and best methods of execution.</p>
-                                    </Accordion.Body>
-                                </Accordion.Item>
+                        <div className="wce-work-section">
+                            <div className="container-lg">
+                                <div className="row wce-work-title-row">
+                                    <div className="col-lg-12">
+                                        <h2>{`${pageDetail.detail.work_title}`}</h2>
+                                        <p>{`${pageDetail.detail.work_description}`}</p>
+                                        <Link className="wce-work-btn" to={`/${pageDetail.detail.work_btn_link}`} onClick={() => { topHandle() }} >{`${pageDetail.detail.work_btn_text}`}</Link>
+                                    </div>
+                                </div>
 
-                                <Accordion.Item eventKey="1">
-                                    <Accordion.Header>
-                                        <div className="wce-work-heading">
-                                            <img src={BASE_URL + '/img/WhyCorporalityEffect/work-favicon-1.png'} alt="Audience empathetic analysis" />
-                                            <span>Audience empathetic analysis</span>
-                                        </div>
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        <p>Through constant monitoring, you’ll know if you need to update your strategy.</p>
-                                    </Accordion.Body>
-                                </Accordion.Item>
+                                <div className="row wce-work-accordion-row">
+                                    <div className="col-lg-12">
+                                        <Accordion className="wce-work-accordion-main">
+                                            <Accordion.Item eventKey="0">
+                                                <Accordion.Header>
+                                                    <div className="wce-work-heading">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.work_item_1_icon}`} alt={`${pageDetail.detail.work_item_1_title}`} />
+                                                        <span>{`${pageDetail.detail.work_item_1_title}`}</span>
+                                                    </div>
+                                                </Accordion.Header>
+                                                <Accordion.Body>
+                                                    <p>{`${pageDetail.detail.work_item_1_description}`}</p>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
 
-                                <Accordion.Item eventKey="2">
-                                    <Accordion.Header>
-                                        <div className="wce-work-heading">
-                                            <img src={BASE_URL + '/img/WhyCorporalityEffect/work-favicon-2.png'} alt="A strategic mind-set" />
-                                            <span>A strategic mind-set</span>
-                                        </div>
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        <p>We make sure your teams know the right action item, monthly marketing objective and content strategy and scheduling process.</p>
-                                    </Accordion.Body>
-                                </Accordion.Item>
+                                            <Accordion.Item eventKey="1">
+                                                <Accordion.Header>
+                                                    <div className="wce-work-heading">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.work_item_2_icon}`} alt={`${pageDetail.detail.work_item_2_title}`} />
+                                                        <span>{`${pageDetail.detail.work_item_2_title}`}</span>
+                                                    </div>
+                                                </Accordion.Header>
+                                                <Accordion.Body>
+                                                    <p>{`${pageDetail.detail.work_item_2_description}`}</p>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
 
-                                <Accordion.Item eventKey="3">
-                                    <Accordion.Header>
-                                        <div className="wce-work-heading">
-                                            <img src={BASE_URL + '/img/WhyCorporalityEffect/work-favicon-2.png'} alt="Futuristic Approach" />
-                                            <span>Futuristic Approach</span>
-                                        </div>
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        <p>You will receive reports and know the numbers on monthly basis.</p>
-                                    </Accordion.Body>
-                                </Accordion.Item>
+                                            <Accordion.Item eventKey="2">
+                                                <Accordion.Header>
+                                                    <div className="wce-work-heading">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.work_item_3_icon}`} alt={`${pageDetail.detail.work_item_3_title}`} />
+                                                        <span>{`${pageDetail.detail.work_item_3_title}`}</span>
+                                                    </div>
+                                                </Accordion.Header>
+                                                <Accordion.Body>
+                                                    <p>{`${pageDetail.detail.work_item_3_description}`}</p>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
 
-                                <Accordion.Item eventKey="4">
-                                    <Accordion.Header>
-                                        <div className="wce-work-heading">
-                                            <img src={BASE_URL + '/img/WhyCorporalityEffect/work-favicon-3.png'} alt="Speed and agility" />
-                                            <span>Speed and agility</span>
-                                        </div>
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        <p>We will also streamline task accountability goals along the way with matrix observation and ROI understanding.</p>
-                                    </Accordion.Body>
-                                </Accordion.Item>
+                                            <Accordion.Item eventKey="3">
+                                                <Accordion.Header>
+                                                    <div className="wce-work-heading">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.work_item_4_icon}`} alt={`${pageDetail.detail.work_item_4_title}`} />
+                                                        <span>{`${pageDetail.detail.work_item_4_title}`}</span>
+                                                    </div>
+                                                </Accordion.Header>
+                                                <Accordion.Body>
+                                                    <p>{`${pageDetail.detail.work_item_4_description}`}</p>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
 
-                                <Accordion.Item eventKey="5">
-                                    <Accordion.Header>
-                                        <div className="wce-work-heading">
-                                            <img src={BASE_URL + '/img/WhyCorporalityEffect/work-favicon-3.png'} alt="Futuristic Approach" />
-                                            <span>Futuristic Approach</span>
-                                        </div>
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                        <p>We’ll help prop you up for even bigger gains in the future.</p>
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                            </Accordion>
+                                            <Accordion.Item eventKey="4">
+                                                <Accordion.Header>
+                                                    <div className="wce-work-heading">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.work_item_5_icon}`} alt={`${pageDetail.detail.work_item_5_title}`} />
+                                                        <span>{`${pageDetail.detail.work_item_5_title}`}</span>
+                                                    </div>
+                                                </Accordion.Header>
+                                                <Accordion.Body>
+                                                    <p>{`${pageDetail.detail.work_item_5_description}`}</p>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+
+                                            <Accordion.Item eventKey="5">
+                                                <Accordion.Header>
+                                                    <div className="wce-work-heading">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.work_item_6_icon}`} alt={`${pageDetail.detail.work_item_6_title}`} />
+                                                        <span>{`${pageDetail.detail.work_item_6_title}`}</span>
+                                                    </div>
+                                                </Accordion.Header>
+                                                <Accordion.Body>
+                                                    <p>{`${pageDetail.detail.work_item_6_description}`}</p>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        </Accordion>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div className="wce-key-elements-section">
-                <div className="container-lg">
-                    <div className="row wce-key-elements-title-row">
-                        <div className="col-lg-12">
-                            <h2>5 Key Elements of the Framework</h2>
-                            <p>Here is how the process looks like</p>
+                        <div className="wce-key-elements-section">
+                            <div className="container-lg">
+                                <div className="row wce-key-elements-title-row">
+                                    <div className="col-lg-12">
+                                        <h2>{`${pageDetail.detail.key_elements_title}`}</h2>
+                                        <p>{`${pageDetail.detail.key_elements_subtitle}`}</p>
+                                    </div>
+                                </div>
+
+                                <div className="row wce-key-elements-boxes-row">
+                                    <KeyElementItem
+                                        title={`${pageDetail.detail.key_elements_item_1_title}`}
+                                        content={`<p>${pageDetail.detail.key_elements_item_1_description}</p>`}
+                                    />
+
+                                    <KeyElementItem
+                                        title={`${pageDetail.detail.key_elements_item_2_title}`}
+                                        content={`<p>${pageDetail.detail.key_elements_item_2_description}</p>`}
+                                    />
+
+                                    <KeyElementItem
+                                        title={`${pageDetail.detail.key_elements_item_3_title}`}
+                                        content={`<p>${pageDetail.detail.key_elements_item_3_description}</p>`}
+                                    />
+
+                                    <KeyElementItem
+                                        title={`${pageDetail.detail.key_elements_item_4_title}`}
+                                        content={`<p>${pageDetail.detail.key_elements_item_4_description}</p>`}
+                                    />
+
+                                    <KeyElementItem
+                                        title={`${pageDetail.detail.key_elements_item_5_title}`}
+                                        content={`<p>${pageDetail.detail.key_elements_item_5_description}</p>`}
+                                    />
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="row wce-key-elements-boxes-row">
-                        <KeyElementItem
-                            title={'Marketing vs. Trust'}
-                            content={'<p>Studies have shown that 81% of consumers trust friends and family more than businesses when it comes to purchasing decisions. Corporality Effect can show you the profound difference between using marketing and trust in sales and which can get you sailing to success or sinking to the bottom.</p>'}
-                        />
-
-                        <KeyElementItem
-                            title={'Business Planning and Vision'}
-                            content={'<p>Businesses are like cars – they need the proper direction and planning to get from point A to B. It is no wonder that businesses who make plans and execute them successfully grow 30% faster than those who don’t and Corporality Effect can help you with that.</p>'}
-                        />
-
-                        <KeyElementItem
-                            title={'Inbound Marketing Strategy'}
-                            content={'<p>The post-digital era opened up the world to various new approaches to marketing, and Inbound is currently the biggest wave to ride. Corporality Effect makes full use of this contemporary approach.</p>'}
-                        />
-
-                        <KeyElementItem
-                            title={'Customer Experience'}
-                            content={'<p>One problem persists with customers in their buyer’s journey: the experience differs in various channels. With Corporality Effect, you can unify these elements to bring one “Omni” effect, everywhere.</p>'}
-                        />
-
-                        <KeyElementItem
-                            title={'Digital Impact'}
-                            content={'<p>Everything today rests on something digital: from the home to industries, all businesses have more or less taken digital platforms for selling. Social networks and websites have become the new home for entrepreneurs, and Corporality Effect can help you maximise your digital presence. ere.</p>'}
-                        />
-                    </div>
-                </div>
-            </div>
+                    </>
+                    : null
+            }
         </>
     )
 }

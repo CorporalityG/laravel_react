@@ -27,8 +27,9 @@ import dd from "./images/4-4.png";
 // import ea from "./images/5-1.png";
 // import eb from "./images/5-2.png";
 // import ec from "./images/5-3.png";
+import { API_IMG_URL } from '../../../config';
 
-function AllCardsNew() {
+function AllCardsNew(pageDetail) {
   useEffect(() => {
     Aos.init();
   });
@@ -49,7 +50,7 @@ function AllCardsNew() {
             </div>
 
             <div className="gotomarketing_cards_top_heading_text ">
-              Planning Phase
+              {`${pageDetail.articulating_planning_phase_title}`}
             </div>
             <div className="gotomarketing_cards_top_heading_joiner">
               <img src={joiner} alt="joiner" />
@@ -63,10 +64,10 @@ function AllCardsNew() {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side1_card1_image">
-              <img src={aa} alt="Brand Audit" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_1_image}`} alt={`${pageDetail.articulating_planning_phase_item_1_title}`} />
             </div>
             <div className="gotomarketing_side1_card1_text">
-              Brand Audit
+              {`${pageDetail.articulating_planning_phase_item_1_title}`}
             </div>
           </div>
 
@@ -77,10 +78,10 @@ function AllCardsNew() {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side1_card2_image">
-              <img src={ab} alt="Master Minding on Perception" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_2_image}`} alt={`${pageDetail.articulating_planning_phase_item_2_title}`} />
             </div>
             <div className="gotomarketing_side1_card2_text">
-              Master Minding on Perception
+              {`${pageDetail.articulating_planning_phase_item_2_title}`}
             </div>
           </div>
 
@@ -91,10 +92,10 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side1_card3_image">
-              <img src={ac} alt="Value Praposition" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_2_image}`} alt={`${pageDetail.articulating_planning_phase_item_2_title}`} />
             </div>
             <div className="gotomarketing_side1_card3_text">
-              Value Praposition
+              {`${pageDetail.articulating_planning_phase_item_2_title}`}
             </div>
           </div>
 
@@ -105,10 +106,10 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side1_card4_image">
-              <img src={ad} alt="Defining the Narrative" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_4_image}`} alt={`${pageDetail.articulating_planning_phase_item_4_title}`} />
             </div>
             <div className="gotomarketing_side1_card4_text">
-              Defining the Narrative
+              {`${pageDetail.articulating_planning_phase_item_4_title}`}
             </div>
           </div>
 
@@ -119,10 +120,10 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side1_card5_image">
-              <img src={ae} alt="Communication Strategy" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_5_image}`} alt={`${pageDetail.articulating_planning_phase_item_5_title}`} />
             </div>
             <div className="gotomarketing_side1_card5_text">
-              Communication Strategy
+              {`${pageDetail.articulating_planning_phase_item_5_title}`}
             </div>
           </div>
 
@@ -137,7 +138,7 @@ function AllCardsNew() {
               <img src={line_horizontal} alt="Prep Phase line" />
             </div>
             <div className="gotomarketing_cards_top_heading_text">
-              Prep Phase
+              {`${pageDetail.articulating_prep_phase_title}`}
             </div>
             <div className="gotomarketing_cards_top_heading_joiner">
               <img src={joiner} alt="Prep Phase" />
@@ -151,10 +152,10 @@ function AllCardsNew() {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side2_card1_image">
-              <img src={ba} alt="Brand Guideline" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_1_image}`} alt={`${pageDetail.articulating_prep_phase_item_1_title}`} />
             </div>
             <div className="gotomarketing_side2_card1_text">
-              Brand Guideline
+              {`${pageDetail.articulating_prep_phase_item_1_title}`}
             </div>
           </div>
 
@@ -165,10 +166,10 @@ function AllCardsNew() {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side2_card2_image">
-              <img src={bb} alt="Designing the Brand" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_2_image}`} alt={`${pageDetail.articulating_prep_phase_item_2_title}`} />
             </div>
             <div className="gotomarketing_side2_card2_text">
-              Designing the Brand
+              {`${pageDetail.articulating_prep_phase_item_2_title}`}
             </div>
           </div>
 
@@ -179,10 +180,10 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side2_card3_image">
-              <img src={bc} alt="Channel Trageting" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_3_image}`} alt={`${pageDetail.articulating_prep_phase_item_3_title}`} />
             </div>
             <div className="gotomarketing_side2_card3_text">
-              Channel Trageting
+              {`${pageDetail.articulating_prep_phase_item_3_title}`}
             </div>
           </div>
           <div
@@ -192,10 +193,10 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side2_card4_image">
-              <img src={bd} alt="Story Writing" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_4_image}`} alt={`${pageDetail.articulating_prep_phase_item_4_title}`} />
             </div>
             <div className="gotomarketing_side2_card4_text">
-              Story Writing
+              {`${pageDetail.articulating_prep_phase_item_4_title}`}
             </div>
           </div>
           <div
@@ -205,10 +206,10 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side2_card5_image">
-              <img src={be} alt="Approch and Evoluation" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_5_image}`} alt={`${pageDetail.articulating_prep_phase_item_5_title}`} />
             </div>
             <div className="gotomarketing_side2_card5_text">
-              Approch and Evoluation
+              {`${pageDetail.articulating_prep_phase_item_5_title}`}
             </div>
           </div>
 
@@ -223,7 +224,7 @@ function AllCardsNew() {
               <img src={line_horizontal} alt="Execution Phase line" />
             </div>
             <div className="gotomarketing_cards_top_heading_text">
-              Execution Phase
+              {`${pageDetail.articulating_execution_phase_title}`}
             </div>
             <div className="gotomarketing_cards_top_heading_joiner">
               <img src={joiner} alt="Execution Phase" />
@@ -237,10 +238,10 @@ function AllCardsNew() {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side3_card1_image">
-              <img src={ca} alt="Implementation of Brand Guideline" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_1_image}`} alt={`${pageDetail.articulating_execution_phase_item_1_title}`} />
             </div>
             <div className="gotomarketing_side3_card1_text">
-              Implementation of Brand Guideline
+              {`${pageDetail.articulating_execution_phase_item_1_title}`}
             </div>
           </div>
 
@@ -251,10 +252,10 @@ function AllCardsNew() {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side3_card2_image">
-              <img src={cb} alt="Content Strategy Implantation" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_2_image}`} alt={`${pageDetail.articulating_execution_phase_item_2_title}`} />
             </div>
             <div className="gotomarketing_side3_card2_text">
-              Content Strategy Implantation
+              {`${pageDetail.articulating_execution_phase_item_2_title}`}
             </div>
           </div>
 
@@ -265,10 +266,10 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side3_card3_image">
-              <img src={cc} alt="Methodology and Framwork implementation" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_3_image}`} alt={`${pageDetail.articulating_execution_phase_item_3_title}`} />
             </div>
             <div className="gotomarketing_side3_card3_text">
-              Methodology and Framwork implementation
+              {`${pageDetail.articulating_execution_phase_item_3_title}`}
             </div>
           </div>
 
@@ -279,10 +280,10 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side3_card4_image">
-              <img src={cd} alt="Conversion Optimization" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_4_image}`} alt={`${pageDetail.articulating_execution_phase_item_4_title}`} />
             </div>
             <div className="gotomarketing_side3_card4_text">
-              Conversion Optimization
+              {`${pageDetail.articulating_execution_phase_item_4_title}`}
             </div>
           </div>
 
@@ -293,10 +294,10 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side3_card5_image">
-              <img src={ce} alt="Growth Strategy" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_5_image}`} alt={`${pageDetail.articulating_execution_phase_item_5_title}`} />
             </div>
             <div className="gotomarketing_side3_card5_text">
-              Growth Strategy
+              {`${pageDetail.articulating_execution_phase_item_5_title}`}
             </div>
           </div>
 
@@ -310,7 +311,7 @@ function AllCardsNew() {
             </div>
 
             <div className="gotomarketing_cards_top_heading_text">
-              Monitoring Phase
+              {`${pageDetail.articulating_monitoring_phase_title}`}
             </div>
             <div className="gotomarketing_cards_top_heading_joiner">
               <img src={joiner} alt="Monitoring Phase" />
@@ -324,10 +325,10 @@ function AllCardsNew() {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side4_card1_image">
-              <img src={da} alt="A/B Testing" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_1_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_1_title}`} />
             </div>
             <div className="gotomarketing_side4_card1_text">
-              A/B Testing
+              {`${pageDetail.articulating_monitoring_phase_item_1_title}`}
             </div>
           </div>
 
@@ -338,10 +339,10 @@ function AllCardsNew() {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side4_card2_image">
-              <img src={db} alt="Evolution and Addressing the Issue" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_2_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_2_title}`} />
             </div>
             <div className="gotomarketing_side4_card2_text">
-              Evolution and Addressing the Issue
+              {`${pageDetail.articulating_monitoring_phase_item_2_title}`}
             </div>
           </div>
 
@@ -352,10 +353,10 @@ function AllCardsNew() {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side4_card3_image">
-              <img src={dc} alt="Maintaining the Consistency" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_3_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_3_title}`} />
             </div>
             <div className="gotomarketing_side4_card3_text">
-              Maintaining the Consistency
+              {`${pageDetail.articulating_monitoring_phase_item_3_title}`}
             </div>
           </div>
 
@@ -366,10 +367,10 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side4_card4_image">
-              <img src={dd} alt="Performance and Bench-marking" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_4_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_4_title}`} />
             </div>
             <div className="gotomarketing_side4_card4_text">
-              Performance and Bench-marking
+              {`${pageDetail.articulating_monitoring_phase_item_4_title}`}
             </div>
           </div>
 
@@ -380,10 +381,10 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side4_card4_image">
-              <img src={dd} alt="Reporting and Feedback" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_5_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_5_title}`} />
             </div>
             <div className="gotomarketing_side4_card4_text">
-              Reporting and Feedback
+              {`${pageDetail.articulating_monitoring_phase_item_5_title}`}
             </div>
           </div>
 
@@ -394,10 +395,10 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side4_card4_image">
-              <img src={dd} alt="ROI Evaluation" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_6_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_6_title}`} />
             </div>
             <div className="gotomarketing_side4_card4_text">
-              ROI Evaluation
+              {`${pageDetail.articulating_monitoring_phase_item_6_title}`}
             </div>
           </div>
 
@@ -408,14 +409,14 @@ function AllCardsNew() {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side4_card4_image">
-              <img src={dd} alt="Maturation Model" />
+              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_7_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_7_title}`} />
             </div>
             <div className="gotomarketing_side4_card4_text">
-              Maturation Model
+              {`${pageDetail.articulating_monitoring_phase_item_7_title}`}
             </div>
           </div>
 
-         
+
 
         </div>
       </div>

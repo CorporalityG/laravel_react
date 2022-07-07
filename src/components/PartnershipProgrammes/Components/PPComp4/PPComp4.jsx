@@ -1,29 +1,32 @@
 import "../PPComp4/PPComp4.css"
-import partner1 from "../images/partner1.png"
-import partner2 from "../images/partner2.png"
-import partner3 from "../images/partner3.png"
-import partner4 from "../images/partner4.png"
-import partner5 from "../images/partner5.png"
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { API_IMG_URL } from '../../../../config';
 
-export default function PPComp4() {
+export default function PPComp4(pageDetail) {
+
     useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, []);
+
     return (
         <div className="ppc4Container">
-            <p data-aos="fade-down" data-aos-duration="1000" className="ppcHeading">STRATEGIC PARTNERSHIP</p><br />
-            <p data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000" className="ppc4Para">Overcome your business fears and widen your resources and expertise, with our strategic partnership programmes. There are several stories and experiences that we share with our partners as well.</p><br />
-            <div className="ppc4Partners">
-                <img data-aos="flip-left" data-aos-duration="1000" className="ppc4PartnerItem1" src={partner1} alt="partner1" />
-                <img data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000" className="ppc4PartnerItem2" src={partner2} alt="partner2" />
-                <img data-aos="flip-left" data-aos-delay="600" data-aos-duration="1000" className="ppc4PartnerItem3" src={partner3} alt="partner3" />
-                {/* <img data-aos="flip-left" data-aos-delay="900" data-aos-duration="1000" className="ppc4PartnerItem4" src={partner4} alt="partner4" /> */}
-                <img data-aos="flip-left" data-aos-delay="1200" data-aos-duration="1000"className="ppc4PartnerItem5" src={partner5} alt="partner5" />
-            </div>
-        </div>       
+            {
+                pageDetail ?
+                    <>
+                        <p data-aos="fade-down" data-aos-duration="1000" className="ppcHeading">{`${pageDetail.partnership_title}`}</p><br />
+                        <p data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000" className="ppc4Para">{`${pageDetail.partnership_description}`}</p><br />
+                        <div className="ppc4Partners">
+                            <img data-aos="flip-left" data-aos-duration="1000" className="ppc4PartnerItem1" src={`${API_IMG_URL}pages/${pageDetail.partnership_logo_1}`} alt="partner1" />
+                            <img data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000" className="ppc4PartnerItem2" src={`${API_IMG_URL}pages/${pageDetail.partnership_logo_2}`}alt="partner2" />
+                            <img data-aos="flip-left" data-aos-delay="600" data-aos-duration="1000" className="ppc4PartnerItem3" src={`${API_IMG_URL}pages/${pageDetail.partnership_logo_3}`} alt="partner3" />
+                            <img data-aos="flip-left" data-aos-delay="1200" data-aos-duration="1000" className="ppc4PartnerItem5" src={`${API_IMG_URL}pages/${pageDetail.partnership_logo_4}`}alt="partner5" />
+                        </div>
+                    </>
+                    : null
+            }
+        </div>
     )
 }

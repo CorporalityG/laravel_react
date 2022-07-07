@@ -33,22 +33,6 @@
 							<input type="text" name="banner_btn_link" id="banner_btn_link" value="{{ old('banner_btn_link', $RS_Meta['banner_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
-
-					<div class="col-md-12">
-						<div class="form-group">
-							<label for="banner_image">{{ __('Image') }}</label>
-							<div class="input-group{{ $errors->has('banner_image') ? ' is-invalid' : '' }}">
-								<div class="custom-file">
-									<input type="file" name="banner_image" id="banner_image" value="{{ old('banner_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
-									<label class="custom-file-label" for="banner_image">Choose image</label>
-								</div>
-							</div>
-
-							@if( !empty($RS_Meta['banner_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['banner_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
-							@endif
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

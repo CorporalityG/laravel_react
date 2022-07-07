@@ -18,7 +18,7 @@ export const CorporalityStrikerItem = (props) => {
                             <div className="corporality-striker-item-description" dangerouslySetInnerHTML={{ __html: props.description }}></div>
                             : null
                     }
-                    <Link to={`/${props.slug}`} className="corporality-striker-item-link">Learn More</Link>
+                    <Link to={`/${props.btnLink}`} className="corporality-striker-item-link">{props.btnText}</Link>
                 </div>
             </div>
             <div className='col-lg-1'></div>
