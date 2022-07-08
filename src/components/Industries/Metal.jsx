@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function Metal() {
@@ -51,7 +51,7 @@ function Metal() {
                                 <div className='industry-banner-content'>
                                     <h1>Metal Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>The steel industry has been the backbone of industralization. Being the essential material for different sectors like automobiles, electronics, manufacturing, and aeronautics, steel has been the symbol of innovation and economic growth.</p>
+                                        <p>The steel industry has been the backbone of industrialization. Being the essential material for different sectors like automobiles, electronics, manufacturing, and aeronautics, steel has been the symbol of innovation and economic growth.</p>
                                         <p>Not only does this add value to production, but also to employment across the globe.</p>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@ function Metal() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

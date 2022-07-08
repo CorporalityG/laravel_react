@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function Construction() {
@@ -51,7 +51,7 @@ function Construction() {
                                 <div className='industry-banner-content'>
                                     <h1>Construction Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>The construction industry is growing, with more innovative and competitive ideas to combat rising costs and labor shortages. Today, new technologies are taking over the construction sites, helping businesses win projects and increase profit margine without sacrificing sagety protocols.</p>
+                                        <p>The construction industry is growing, with more innovative and competitive ideas to combat rising costs and labor shortages. Today, new technologies are taking over the construction sites, helping businesses win projects and increase profit margins without sacrificing safety protocols.</p>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ function Construction() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

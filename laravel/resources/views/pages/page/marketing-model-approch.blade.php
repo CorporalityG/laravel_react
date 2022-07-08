@@ -103,8 +103,8 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
-							<label for="marketing_models_subtitle">{{ __('Button Link') }}</label>
-							<input type="text" name="marketing_models_subtitle" id="marketing_models_subtitle" value="{{ old('marketing_models_subtitle', $RS_Meta['marketing_models_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+							<label for="marketing_models_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="marketing_models_btn_link" id="marketing_models_btn_link" value="{{ old('marketing_models_btn_link', $RS_Meta['marketing_models_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 					
@@ -236,3 +236,11 @@
 
 	</div>
 </div>
+
+<!-- Page specific script -->
+<script>
+$(function () {
+    // Summernote
+	$('#marketing_models_description').summernote();
+});
+</script>

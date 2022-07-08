@@ -103,7 +103,7 @@ function IntractiveBluePrint() {
                       <div className="col-lg-5 col-md-3 col-sm-4 ibp-k-box-col">
                         <div className="ibp-k-box" data-aos="fade-up" data-aos-delay="300">
                           <div className="k-box-img">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.know_item_1_title}`} alt={`${pageDetail.detail.know_item_1_title}`} className="k-box-img" />
+                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.know_item_1_image}`} alt={`${pageDetail.detail.know_item_1_title}`} className="k-box-img" />
                           </div>
                           <div className="k-box-title">{`${pageDetail.detail.know_item_1_title}`}</div>
                         </div>
@@ -112,7 +112,7 @@ function IntractiveBluePrint() {
                       <div className="col-lg-5 col-md-3 col-sm-4 ibp-k-box-col">
                         <div className="ibp-k-box" data-aos="fade-up" data-aos-delay="400">
                           <div className="k-box-img">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.know_item_2_title}`} alt={`${pageDetail.detail.know_item_2_title}`} className="k-box-img" />
+                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.know_item_2_image}`} alt={`${pageDetail.detail.know_item_2_title}`} className="k-box-img" />
                           </div>
                           <div className="k-box-title">{`${pageDetail.detail.know_item_2_title}`}</div>
                         </div>

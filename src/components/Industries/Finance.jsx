@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function Finance() {
@@ -51,9 +51,7 @@ function Finance() {
                                 <div className='industry-banner-content'>
                                     <h1>Finance Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien facilisi augue posuere fringilla. Sit dictum hac viverra ac urna. Accumsan vitae faucibus purus, ultrices consectetur aliquam duis massa arcu. Tellus in morbi massa at a neque, augue sed dapibus. Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
-                                        <p>Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
-                                        <p>Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
+                                        <p>The financial industry has been accelerating in adopting digital technology. This industry is a broad term used to describe the various offerings within the money management and digital banking technology. With a multitude of stakeholders and moving parts within this service industry, consumers now have the power to manage their finances from home using technology and expanding remote services.</p>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +107,7 @@ function Finance() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

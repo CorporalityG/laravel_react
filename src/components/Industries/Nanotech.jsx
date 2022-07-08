@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function Nanotech() {
@@ -52,8 +52,7 @@ function Nanotech() {
                                     <h1>Nanotech Industry</h1>
                                     <div className='industry-banner-desc'>
                                         <p>Rooted in the foundations of nanoscience, nanotechnology has been developed for more than 20 years to considerably improve and revolutionize many technology and industry sectors.</p>
-                                        <p>With nanotechnology, materials can be made stronger, lighter, more durable, more reactive, and more. Many of the commercial products we use on a daily basis already rely on nanoscale materials and processes.
-                                        </p>
+                                        <p>With nanotechnology, materials can be made stronger, lighter, more durable, more reactive, and more. Many of the commercial products we use on a daily basis already rely on nanoscale materials and processes.</p>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +108,7 @@ function Nanotech() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

@@ -94,13 +94,6 @@
 						</div>
 					</div>
 
-                    <div class="col-md-12">
-						<div class="form-group">
-							<label for="book_1_video_url">{{ __('Video URL') }}</label>
-							<input type="text" name="book_1_video_url" id="book_1_video_url" value="{{ old('book_1_video_url', $RS_Meta['book_1_video_url'] ?? '') }}" class="form-control" placeholder="{{ __('Video URL') }}" autofocus>
-						</div>
-					</div>
-
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="book_1_image">{{ __('Image') }}</label>
@@ -113,6 +106,25 @@
 
 							@if( !empty($RS_Meta['book_1_image']) )
 								<img src="{{ url('uploads/pages/'.$RS_Meta['book_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="book_1_video">{{ __('Video') }}</label>
+							<div class="input-group{{ $errors->has('book_1_video') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="book_1_video" id="book_1_video" value="{{ old('book_1_video') }}" class="custom-file-input" placeholder="Choose image" accept="video/*">
+									<label class="custom-file-label" for="book_1_video">Choose video</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['book_1_video']) )
+								<video width="320" height="240" controls class="mt-3">
+									<source src="{{ url('uploads/pages/'.$RS_Meta['book_1_video']) }}" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
 							@endif
 						</div>
 					</div>
@@ -175,13 +187,6 @@
 						</div>
 					</div>
 
-                    <div class="col-md-12">
-						<div class="form-group">
-							<label for="book_2_video_url">{{ __('Video URL') }}</label>
-							<input type="text" name="book_2_video_url" id="book_2_video_url" value="{{ old('book_2_video_url', $RS_Meta['book_2_video_url'] ?? '') }}" class="form-control" placeholder="{{ __('Video URL') }}" autofocus>
-						</div>
-					</div>
-
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="book_2_image">{{ __('Image') }}</label>
@@ -194,6 +199,25 @@
 
 							@if( !empty($RS_Meta['book_2_image']) )
 								<img src="{{ url('uploads/pages/'.$RS_Meta['book_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="book_2_video">{{ __('Video') }}</label>
+							<div class="input-group{{ $errors->has('book_2_video') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="book_2_video" id="book_2_video" value="{{ old('book_2_video') }}" class="custom-file-input" placeholder="Choose image" accept="video/*">
+									<label class="custom-file-label" for="book_2_video">Choose video</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['book_2_video']) )
+								<video width="320" height="240" controls class="mt-3">
+									<source src="{{ url('uploads/pages/'.$RS_Meta['book_2_video']) }}" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
 							@endif
 						</div>
 					</div>
@@ -256,13 +280,6 @@
 						</div>
 					</div>
 
-                    <div class="col-md-12">
-						<div class="form-group">
-							<label for="book_3_video_url">{{ __('Video URL') }}</label>
-							<input type="text" name="book_3_video_url" id="book_3_video_url" value="{{ old('book_3_video_url', $RS_Meta['book_3_video_url'] ?? '') }}" class="form-control" placeholder="{{ __('Video URL') }}" autofocus>
-						</div>
-					</div>
-
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="book_3_image">{{ __('Image') }}</label>
@@ -275,6 +292,25 @@
 
 							@if( !empty($RS_Meta['book_3_image']) )
 								<img src="{{ url('uploads/pages/'.$RS_Meta['book_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="book_3_video">{{ __('Video') }}</label>
+							<div class="input-group{{ $errors->has('book_3_video') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="book_3_video" id="book_3_video" value="{{ old('book_3_video') }}" class="custom-file-input" placeholder="Choose image" accept="video/*">
+									<label class="custom-file-label" for="book_3_video">Choose video</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['book_3_video']) )
+								<video width="320" height="240" controls class="mt-3">
+									<source src="{{ url('uploads/pages/'.$RS_Meta['book_3_video']) }}" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
 							@endif
 						</div>
 					</div>
@@ -337,13 +373,6 @@
 						</div>
 					</div>
 
-                    <div class="col-md-12">
-						<div class="form-group">
-							<label for="book_4_video_url">{{ __('Video URL') }}</label>
-							<input type="text" name="book_4_video_url" id="book_4_video_url" value="{{ old('book_4_video_url', $RS_Meta['book_4_video_url'] ?? '') }}" class="form-control" placeholder="{{ __('Video URL') }}" autofocus>
-						</div>
-					</div>
-
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="book_4_image">{{ __('Image') }}</label>
@@ -356,6 +385,25 @@
 
 							@if( !empty($RS_Meta['book_4_image']) )
 								<img src="{{ url('uploads/pages/'.$RS_Meta['book_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="book_4_video">{{ __('Video') }}</label>
+							<div class="input-group{{ $errors->has('book_4_video') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="book_4_video" id="book_4_video" value="{{ old('book_4_video') }}" class="custom-file-input" placeholder="Choose image" accept="video/*">
+									<label class="custom-file-label" for="book_4_video">Choose video</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['book_4_video']) )
+								<video width="320" height="240" controls class="mt-3">
+									<source src="{{ url('uploads/pages/'.$RS_Meta['book_4_video']) }}" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
 							@endif
 						</div>
 					</div>
@@ -418,13 +466,6 @@
 						</div>
 					</div>
 
-                    <div class="col-md-12">
-						<div class="form-group">
-							<label for="book_5_video_url">{{ __('Video URL') }}</label>
-							<input type="text" name="book_5_video_url" id="book_5_video_url" value="{{ old('book_5_video_url', $RS_Meta['book_5_video_url'] ?? '') }}" class="form-control" placeholder="{{ __('Video URL') }}" autofocus>
-						</div>
-					</div>
-
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="book_5_image">{{ __('Image') }}</label>
@@ -437,6 +478,25 @@
 
 							@if( !empty($RS_Meta['book_5_image']) )
 								<img src="{{ url('uploads/pages/'.$RS_Meta['book_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="book_5_video">{{ __('Video') }}</label>
+							<div class="input-group{{ $errors->has('book_5_video') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="book_5_video" id="book_5_video" value="{{ old('book_5_video') }}" class="custom-file-input" placeholder="Choose image" accept="video/*">
+									<label class="custom-file-label" for="book_5_video">Choose video</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['book_5_video']) )
+								<video width="320" height="240" controls class="mt-3">
+									<source src="{{ url('uploads/pages/'.$RS_Meta['book_5_video']) }}" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
 							@endif
 						</div>
 					</div>

@@ -45,7 +45,7 @@
     content: "";
     display: block;
     position: absolute;
-    border: 3px solid #A06DAF;
+    border-bottom: 5px solid #A06DAF;
     width: 125px;
     bottom: -15px;
 }

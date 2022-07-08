@@ -288,14 +288,14 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="form-group">
-							<label for="faq_item_4_title">{{ __('FAQ 3 Title') }}</label>
+							<label for="faq_item_4_title">{{ __('FAQ 4 Title') }}</label>
 							<input type="text" name="faq_item_4_title" id="faq_item_4_title" value="{{ old('faq_item_4_title', $RS_Meta['faq_item_4_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
 						</div>
 					</div>
 
 					<div class="col-md-12">
 						<div class="form-group">
-							<label for="faq_item_4_description">{{ __('FAQ 3 Description') }}</label>
+							<label for="faq_item_4_description">{{ __('FAQ 4 Description') }}</label>
 							<textarea name="faq_item_4_description" id="faq_item_4_description" class="form-control faq_description" placeholder="{{ __('Description') }}">{{ old('faq_item_4_description', $RS_Meta['faq_item_4_description'] ?? '') }}</textarea>
 						</div>
 					</div>

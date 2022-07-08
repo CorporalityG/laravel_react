@@ -48,7 +48,7 @@ function CorporalityStrikers() {
                                     <div className='col-lg-7'>
                                         <div className='cs-banner-content'>
                                             <h1>{`${pageDetail.detail.banner_title}`}</h1>
-                                            <p>{`${pageDetail.detail.banner_title}`}</p>
+                                            <p>{`${pageDetail.detail.banner_description}`}</p>
                                         </div>
                                     </div>
 

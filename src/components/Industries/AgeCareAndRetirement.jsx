@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function AgeCareAndRetirement() {
@@ -51,9 +51,7 @@ function AgeCareAndRetirement() {
                                 <div className='industry-banner-content'>
                                     <h1>Age Care and retirement Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien facilisi augue posuere fringilla. Sit dictum hac viverra ac urna. Accumsan vitae faucibus purus, ultrices consectetur aliquam duis massa arcu. Tellus in morbi massa at a neque, augue sed dapibus. Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
-                                        <p>Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
-                                        <p>Vitae dolor, commodo sit morbi purus. Porta ullamcorper non tortor mattis praesent mattis rutrum massa facilisis.</p>
+                                        <p>Age care and retirement are among the most under served, but significantly growing industries. The demand for aged care is forecast to increase year-on-year as societal models change. Consequently, new technologies are slowly being introduced to give some spotlight on these industries and connect with their target market.</p>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +107,7 @@ function AgeCareAndRetirement() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function UtilitiesAndEnergy() {
@@ -51,7 +51,7 @@ function UtilitiesAndEnergy() {
                                 <div className='industry-banner-content'>
                                     <h1>Utilities and Energy Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>The renewable energy industry promises new growth paths in combatting climated change. With new technologies, business models, policies, and investments, the industry's resilience over the decades is paying off. Along with the decreasing costs of renewable energy resources, there is an increase in demand as more sectors are gaining access to this market.</p>
+                                        <p>The renewable energy industry promises new growth paths in fighting climate change. With new technologies, business models, policies, and investments, the industry's resilience over the decades is paying off. Along with the decreasing costs of renewable energy resources, there is an increase in demand as more sectors are gaining access to this market.</p>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ function UtilitiesAndEnergy() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function Agriculture() {
@@ -51,7 +51,7 @@ function Agriculture() {
                                 <div className='industry-banner-content'>
                                     <h1>Agriculture Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>By 2050, it is projected that the Earth will need to feed around $9.7 billion people. With the agricultural industy four times more effective in raising the quality of life among the poorer sectors, farming is crucial to not only healthy, sustainable and inclusive food systems, but also to economic growth. With the right tools and strategy, the agriculture sector can also help solve climate change.</p>
+                                        <p>By 2050, it is projected that the Earth will need to feed around $9.7 billion people. With the agricultural industry four times more effective in raising the quality of life among the poorer sectors, farming is crucial to not only healthy, sustainable and inclusive food systems, but also to economic growth. With the right tools and strategy, the agriculture sector can also help solve climate change.</p>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ function Agriculture() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

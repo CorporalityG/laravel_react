@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function InformationTechnology() {
@@ -51,7 +51,7 @@ function InformationTechnology() {
                                 <div className='industry-banner-content'>
                                     <h1>Information Technology Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>The information technology sector encompasses businesses that manufacture software, hardware or semiconductor equipment, and companies that provide internet or related services. With the rise of digital technologies, information technology has contributed to its growth and influence.</p>
+                                        <p>The information technology sector encompasses businesses that manufacture software, hardware or semiconductor equipment, and companies that provide the internet or related services. With the rise of digital technologies, information technology has contributed to its growth and influence.</p>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ function InformationTechnology() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

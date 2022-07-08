@@ -36,8 +36,20 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
-							<label for="banner_video_url">{{ __('Video URL') }}</label>
-							<input type="text" name="banner_video_url" id="banner_video_url" value="{{ old('banner_video_url', $RS_Meta['banner_video_url'] ?? '') }}" class="form-control" placeholder="{{ __('Video URL') }}">
+							<label for="banner_video">{{ __('Video') }}</label>
+							<div class="input-group{{ $errors->has('banner_video') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="banner_video" id="banner_video" value="{{ old('banner_video') }}" class="custom-file-input" placeholder="Choose image" accept="video/*">
+									<label class="custom-file-label" for="banner_video">Choose video</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['banner_video']) )
+								<video width="320" height="240" controls class="mt-3">
+									<source src="{{ url('uploads/pages/'.$RS_Meta['banner_video']) }}" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							@endif
 						</div>
 					</div>
 				</div>

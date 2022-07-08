@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function HighTech() {
@@ -51,7 +51,7 @@ function HighTech() {
                                 <div className='industry-banner-content'>
                                     <h1>High Tech Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>The high technology industry is leading the 21st century into an era of transformation, with a centurys worth of innovation in just one decade. Now, digital-born natives like Amazon, Facebook, and Google are changing the rules of the game for every high technology company. Today, digital platforms are reaching global scales and bypassing competitive barriers.</p>
+                                        <p>The high technology industry is leading the 21st century into an era of transformation, with a century worth of innovation in just one decade. Now, digital-born natives like Amazon, Facebook, and Google are changing the rules of the game for every high technology company. Today, digital platforms are reaching global scales and bypassing competitive barriers.</p>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ function HighTech() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

@@ -42,7 +42,7 @@ export const GetInvolved = () => {
 
                             <GetInvolvedItem
                                 thumbnail={`${API_IMG_URL}pages/${pageSectionDetail.detail.involved_partner_image}`}
-                                title={`${pageSectionDetail.detail.involved_community_image}`}
+                                title={`${pageSectionDetail.detail.involved_community_title}`}
                                 content={`<p>${pageSectionDetail.detail.involved_community_description ?? ''}</p>`}
                                 btnText={`${pageSectionDetail.detail.involved_community_btn_text}`}
                                 btnLink={`/${pageSectionDetail.detail.involved_community_btn_link}`}

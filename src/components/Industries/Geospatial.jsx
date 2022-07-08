@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function Geospatial() {
@@ -51,7 +51,7 @@ function Geospatial() {
                                 <div className='industry-banner-content'>
                                     <h1>Geospatial Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>For many years, geospatial analysis has worked hand in hand with the medical sector to illustrate hotspots for diseases in certain medical crises. Today, with so much data available to us, advanced geospatial analytics is playing a part in archeology, disaster response, urban planning, infrastructure, logistics, retail , transportation and government services.</p>
+                                        <p>For many years, geo spatial analysis has worked hand in hand with the medical sector to illustrate hotspots for diseases in certain medical crises. Today, with so much data available to us, advanced geo spatial analytics is playing a part in archaeology, disaster response, urban planning, infrastructure, logistics, retail , transportation and government services.</p>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ function Geospatial() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

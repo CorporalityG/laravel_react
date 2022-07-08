@@ -380,6 +380,12 @@ class PageController extends Controller
             $data['banner_image'] = $banner_image;
         }
 
+        $banner_video = $this->uploadImage($request->file('banner_video'), $request->banner_title.'_bvt', $RS_Row->getMeta('banner_video'));
+        if( !empty($banner_video) )
+        {
+            $data['banner_video'] = $banner_video;
+        }
+
         $author_image = $this->uploadImage($request->file('author_image'), $request->author_name, $RS_Row->getMeta('author_image'));
         if( !empty($author_image) )
         {
@@ -1424,28 +1430,34 @@ class PageController extends Controller
             $data['methodology_process_plan_item_2_image'] = $methodology_process_plan_item_2_image;
         }
 
-        $what_expect_item_1_image = $this->uploadImage($request->file('what_expect_item_1_image'), $request->what_expect_item_1_title, $RS_Row->getMeta('what_expect_item_1_image'));
-        if( !empty($what_expect_item_1_image) )
+        $what_expect_item_1_icon = $this->uploadImage($request->file('what_expect_item_1_icon'), $request->what_expect_item_1_title, $RS_Row->getMeta('what_expect_item_1_icon'));
+        if( !empty($what_expect_item_1_icon) )
         {
-            $data['what_expect_item_1_image'] = $what_expect_item_1_image;
+            $data['what_expect_item_1_icon'] = $what_expect_item_1_icon;
         }
 
-        $what_expect_item_2_image = $this->uploadImage($request->file('what_expect_item_2_image'), $request->what_expect_item_2_title, $RS_Row->getMeta('what_expect_item_2_image'));
-        if( !empty($what_expect_item_2_image) )
+        $what_expect_item_2_icon = $this->uploadImage($request->file('what_expect_item_2_icon'), $request->what_expect_item_2_title, $RS_Row->getMeta('what_expect_item_2_icon'));
+        if( !empty($what_expect_item_2_icon) )
         {
-            $data['what_expect_item_2_image'] = $what_expect_item_2_image;
+            $data['what_expect_item_2_icon'] = $what_expect_item_2_icon;
         }
 
-        $what_expect_item_3_image = $this->uploadImage($request->file('what_expect_item_3_image'), $request->what_expect_item_3_title, $RS_Row->getMeta('what_expect_item_3_image'));
-        if( !empty($what_expect_item_3_image) )
+        $what_expect_item_3_icon = $this->uploadImage($request->file('what_expect_item_3_icon'), $request->what_expect_item_3_title, $RS_Row->getMeta('what_expect_item_3_icon'));
+        if( !empty($what_expect_item_3_icon) )
         {
-            $data['what_expect_item_3_image'] = $what_expect_item_3_image;
+            $data['what_expect_item_3_icon'] = $what_expect_item_3_icon;
         }
 
-        $what_expect_item_4_image = $this->uploadImage($request->file('what_expect_item_4_image'), $request->what_expect_item_4_title, $RS_Row->getMeta('what_expect_item_4_image'));
-        if( !empty($what_expect_item_4_image) )
+        $what_expect_item_4_icon = $this->uploadImage($request->file('what_expect_item_4_icon'), $request->what_expect_item_4_title, $RS_Row->getMeta('what_expect_item_4_icon'));
+        if( !empty($what_expect_item_4_icon) )
         {
-            $data['what_expect_item_4_image'] = $what_expect_item_4_image;
+            $data['what_expect_item_4_icon'] = $what_expect_item_4_icon;
+        }
+
+        $what_expect_item_5_icon = $this->uploadImage($request->file('what_expect_item_5_icon'), $request->what_expect_item_5_title, $RS_Row->getMeta('what_expect_item_5_icon'));
+        if( !empty($what_expect_item_5_icon) )
+        {
+            $data['what_expect_item_5_icon'] = $what_expect_item_5_icon;
         }
 
         $success_strategy_image = $this->uploadImage($request->file('success_strategy_image'), $request->success_strategy_title, $RS_Row->getMeta('success_strategy_image'));
@@ -1598,10 +1610,22 @@ class PageController extends Controller
             $data['book_1_image'] = $book_1_image;
         }
 
+        $book_1_video = $this->uploadImage($request->file('book_1_video'), $request->book_1_title.'_v_1', $RS_Row->getMeta('book_1_video'));
+        if( !empty($book_1_video) )
+        {
+            $data['book_1_video'] = $book_1_video;
+        }
+
         $book_2_image = $this->uploadImage($request->file('book_2_image'), $request->book_2_title, $RS_Row->getMeta('book_2_image'));
         if( !empty($book_2_image) )
         {
             $data['book_2_image'] = $book_2_image;
+        }
+
+        $book_2_video = $this->uploadImage($request->file('book_2_video'), $request->book_2_title.'_v_2', $RS_Row->getMeta('book_2_video'));
+        if( !empty($book_2_video) )
+        {
+            $data['book_2_video'] = $book_2_video;
         }
 
         $book_3_image = $this->uploadImage($request->file('book_3_image'), $request->book_3_title, $RS_Row->getMeta('book_3_image'));
@@ -1610,16 +1634,34 @@ class PageController extends Controller
             $data['book_3_image'] = $book_3_image;
         }
 
+        $book_3_video = $this->uploadImage($request->file('book_3_video'), $request->book_3_title.'_v_3', $RS_Row->getMeta('book_3_video'));
+        if( !empty($book_3_video) )
+        {
+            $data['book_3_video'] = $book_3_video;
+        }
+
         $book_4_image = $this->uploadImage($request->file('book_4_image'), $request->book_4_title, $RS_Row->getMeta('book_4_image'));
         if( !empty($book_4_image) )
         {
             $data['book_4_image'] = $book_4_image;
         }
 
+        $book_4_video = $this->uploadImage($request->file('book_4_video'), $request->book_4_title.'_v_4', $RS_Row->getMeta('book_4_video'));
+        if( !empty($book_4_video) )
+        {
+            $data['book_4_video'] = $book_4_video;
+        }
+
         $book_5_image = $this->uploadImage($request->file('book_5_image'), $request->book_5_title, $RS_Row->getMeta('book_5_image'));
         if( !empty($book_5_image) )
         {
             $data['book_5_image'] = $book_5_image;
+        }
+
+        $book_5_video = $this->uploadImage($request->file('book_5_video'), $request->book_5_title.'_v_5', $RS_Row->getMeta('book_5_video'));
+        if( !empty($book_5_video) )
+        {
+            $data['book_5_video'] = $book_5_video;
         }
 
         $service_1_image = $this->uploadImage($request->file('service_1_image'), $request->service_1_title, $RS_Row->getMeta('service_1_image'));

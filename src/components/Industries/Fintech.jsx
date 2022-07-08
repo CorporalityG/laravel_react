@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function Fintech() {
@@ -51,7 +51,7 @@ function Fintech() {
                                 <div className='industry-banner-content'>
                                     <h1>Fintech Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>A combination of "financial" and "technology," fintech is empowering consumers to take charge of their financial lives and ecouraging more pronounced financial literacy. Gone are the old silos that have kept consumers from researching, choosing stocks, and seeing their financial transactions. Everyone now has the chance to advance their financial situation through leveraging advanced technology.</p>
+                                        <p>A combination of "financial" and "technology," fintech is empowering consumers to take charge of their financial lives and encouraging more pronounced financial literacy. Gone are the old silos that have kept consumers from researching, choosing stocks, and seeing their financial transactions. Everyone now has the chance to advance their financial situation through leveraging advanced technology.</p>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ function Fintech() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

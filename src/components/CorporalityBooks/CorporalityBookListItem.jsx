@@ -48,7 +48,7 @@ function CorporalityBookListItem(props) {
                                 </div>
                                 <div className="c-book-desc c-book-btn-mian">
                                     <div className="c-book-text">{props.downloadTitle}</div>
-                                    <div className="c-book-button" onClick={() => handleShow(props.btnType) }>{props.btnText}</div>
+                                    <div className="c-book-button" onClick={() => handleShow(props.btnType)}>{props.btnText}</div>
                                 </div>
                             </div>
                         </div>
@@ -57,8 +57,12 @@ function CorporalityBookListItem(props) {
 
                 <div className="col-lg-6">
                     <div className="c-book-video">
-                        {props.video && <video src={props.video} controls={true} autoPlay={false} />}
-                        {props.videoThumbnail && <img src={props.videoThumbnail} alt={props.title} />}
+                        {
+                            props.video ?
+                                <video src={props.video} controls={true} autoPlay={false} />
+                                :
+                                <img src={props.videoThumbnail} alt={props.title} />
+                        }
                     </div>
                 </div>
             </div>

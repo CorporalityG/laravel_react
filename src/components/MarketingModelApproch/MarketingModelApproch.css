@@ -49,8 +49,6 @@
 }
 .mma-banner-section .cmo-b-form {
     margin-top: 30px;
-    display: flex;
-    align-items: center;
 }
 .mma-banner-section .cmo-b-form .cmo-b-form-control {
     background: #FFFFFF;
@@ -88,7 +86,7 @@
     outline: 0;
     border: 1px solid #BFCCD1;
     box-sizing: border-box;
-    margin-left: -50px;
+    margin-left: 0;
     flex: 1 0 auto;
 }
 .mma-banner-section .mma-banner-bg {

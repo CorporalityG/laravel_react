@@ -8,7 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) + '...' : text;
+    return text?.length > size ? text.substr(0, size - 1) : text;
 }
 
 function MedTech() {
@@ -51,7 +51,7 @@ function MedTech() {
                                 <div className='industry-banner-content'>
                                     <h1>Med Tech Industry</h1>
                                     <div className='industry-banner-desc'>
-                                        <p>The medical technology is a diverse and innovative sector, using data to deliver robust healthcare to patients all over the globe. As the pandemic shining a spotlight on how this industry is crucial to society's healthcare infrastructure, we're seeing venture capitalists invest around $9.1 billion in the past two years alone. Learn more industry insights here.</p>
+                                        <p>Medical technologyi is a diverse and innovative sector, using data to deliver robust healthcare to patients all over the globe. As the pandemic shining a spotlight on how this industry is crucial to society's health care infrastructure, we're seeing venture capitalists invest around $9.1 billion in the past two years alone. Explore med tech industry insights here.</p>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@ function MedTech() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null

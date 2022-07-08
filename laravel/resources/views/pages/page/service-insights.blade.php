@@ -22,15 +22,8 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
-							<label for="event_date">{{ __('Date') }}</label>
-							<input type="text" name="event_date" id="event_date" value="{{ old('event_date', $RS_Meta['event_date'] ?? '') }}" class="form-control" placeholder="{{ __('Date') }}">
-						</div>
-					</div>
-
-					<div class="col-md-12">
-						<div class="form-group">
-							<label for="event_location">{{ __('Location') }}</label>
-							<input type="text" name="event_location" id="event_location" value="{{ old('event_location', $RS_Meta['event_location'] ?? '') }}" class="form-control" placeholder="{{ __('Location') }}">
+							<label for="event_date_location">{{ __('Date & Location') }}</label>
+							<input type="text" name="event_date_location" id="event_date_location" value="{{ old('event_date_location', $RS_Meta['event_date_location'] ?? '') }}" class="form-control" placeholder="{{ __('Date & Location') }}">
 						</div>
 					</div>
 

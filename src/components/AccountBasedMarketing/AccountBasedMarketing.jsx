@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './AccountBasedMarketing.css'
-import { BASE_URL } from '../../config'
+import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config'
 import { LogoItem } from './LogoItem'
 import { DefineSolveBannerItem } from './DefineSolveBannerItem';
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
@@ -12,352 +12,358 @@ import { Helmet } from "react-helmet";
 
 function AccountBasedMarketing() {
 
+    const page_slug = 'account-based-marketing';
+
+    const [pageDetail, setPageDetail] = useState([]);
+
     useEffect(() => {
         AOS.init({
             duration: 2000,
         });
+
+        getPageDetail()
     }, []);
+
+    async function getPageDetail() {
+        let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
+        result = await result.json();
+        setPageDetail(result);
+    }
 
     return (
         <>
             <Helmet>
-                <title>{`The Ultimate Guide to Account-Based Marketing (ABM).`}</title>
-                <meta name="description" content={`Learn how to identify and reach high-value customers with the most-effective Account-Based Marketing (ABM) tactics and software.`} />
-                <meta
-                    name="keywords"
-                    content="account based marketing"
-                />
+                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
                 <link rel="canonical" href={`${BASE_URL}/account-based-marketing/`} />
             </Helmet>
 
-            <div className="abm-banner-section">
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-1.png`} alt="Rec 1" className="abm-b-rec-1" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-2.png`} alt="Rec 2" className="abm-b-rec-2" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-3.png`} alt="Rec 3" className="abm-b-rec-3" />
+            {
+                pageDetail.detail ?
+                    <>
+                        <div className="abm-banner-section">
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-1.png`} alt="Rec 1" className="abm-b-rec-1" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-2.png`} alt="Rec 2" className="abm-b-rec-2" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-3.png`} alt="Rec 3" className="abm-b-rec-3" />
 
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-dots.png`} alt="Rec Dot" className="abm-b-rec-dots" data-aos="fade-left" data-aos-delay="300" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-vector.png`} alt="Vector" className="abm-b-vector" data-aos="fade-left" data-aos-delay="400" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-vector-1.png`} alt="Vector 1" className="abm-b-vector-1" data-aos="fade-left" data-aos-delay="500" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-rec-dots.png`} alt="Rec Dot" className="abm-b-rec-dots" data-aos="fade-left" data-aos-delay="300" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-vector.png`} alt="Vector" className="abm-b-vector" data-aos="fade-left" data-aos-delay="400" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/banner-vector-1.png`} alt="Vector 1" className="abm-b-vector-1" data-aos="fade-left" data-aos-delay="500" />
 
-                <div className="container-lg">
-                    <div className="row abm-banner-row">
-                        <div className="col-lg-6">
-                            <div className="abm-banner-content">
-                                <div data-aos="fade-up">
-                                    <h1>Account Based Marketing</h1>
-                                </div>
-                                <div className="abm-banner-subtitle" data-aos="fade-up" data-aos-delay="300">Focusing growth strategy for high value clients</div>
-                                <div data-aos="fade-up" data-aos-delay="300">
-                                    <p>Partnership focused in collaboration of both Marketing and sales team to create personalized buying experiences for a mutually-identified set of high-value accounts in conjunction with Inbound Marketing</p>
-                                </div>
-                                <div className="abm-banner-btn" data-aos="fade-up" data-aos-delay="500">
-                                    <a href="https://zohoadmin-corporality.zohobookings.com.au/#/customer/discoverycall" target="_blank">Schedule a time</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-6">
-                            <div className="abm-banner" data-aos="fade-left">
-                                <img src={`${BASE_URL}/img/AccountBasedMarketing/banner.png`} alt="Account Based Marketing" className="abm-banner-img" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="abm-know-section">
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/know-rec-1.png`} alt="Rec 1" className="abm-k-rec-1" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/know-rec-2.png`} alt="Rec 2" className="abm-k-rec-2" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/know-rec-3.png`} alt="Rec 3" className="abm-k-rec-3" />
-
-                <div className="container-lg">
-                    <div className="row abm-know-title-row">
-                        <div className="col-lg-12">
-                            <div className="abm-kt-content" data-aos="zoom-in">
-                                <h2>Did you know?</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row abm-know-content-row">
-                        <div className="col-lg-6">
-                            <div className="row abm-k-boxes-row">
-                                <div className="col-lg-5 col-md-3 col-sm-4 abm-k-box-col">
-                                    <div className="abm-k-box" data-aos="fade-up" data-aos-delay="300">
-                                        <div className="k-box-img">
-                                            <img src={`${BASE_URL}/img/AccountBasedMarketing/rating.png`} alt="Rating on Google" className="k-box-img" />
-                                            <img src={`${BASE_URL}/img/AccountBasedMarketing/rating-star.png`} alt="Star" className="k-box-star" />
+                            <div className="container-lg">
+                                <div className="row abm-banner-row">
+                                    <div className="col-lg-6">
+                                        <div className="abm-banner-content">
+                                            <div data-aos="fade-up">
+                                                <h1>{`${pageDetail.detail.banner_title}`}</h1>
+                                            </div>
+                                            <div className="abm-banner-subtitle" data-aos="fade-up" data-aos-delay="300">{`${pageDetail.detail.banner_subtitle}`}</div>
+                                            <div data-aos="fade-up" data-aos-delay="300">
+                                                <p>{`${pageDetail.detail.banner_description}`}</p>
+                                            </div>
+                                            <div className="abm-banner-btn" data-aos="fade-up" data-aos-delay="500">
+                                                <a href={`${pageDetail.detail.banner_btn_link}`} target="_blank">{`${pageDetail.detail.banner_btn_text}`}</a>
+                                            </div>
                                         </div>
-                                        <div className="k-box-title">Rating on Google</div>
                                     </div>
-                                </div>
 
-                                <div className="col-lg-5 col-md-3 col-sm-4 abm-k-box-col">
-                                    <div className="abm-k-box" data-aos="fade-up" data-aos-delay="400">
-                                        <div className="k-box-img">
-                                            <img src={`${BASE_URL}/img/AccountBasedMarketing/growth.png`} alt="Growth on LinkedIn" className="k-box-img" />
+                                    <div className="col-lg-6">
+                                        <div className="abm-banner" data-aos="fade-left">
+                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="abm-banner-img" />
                                         </div>
-                                        <div className="k-box-title">Growth on LinkedIn</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="col-lg-6">
-                            <div className="abm-know-title" data-aos="fade-up" data-aos-delay="500">Trusted by 100+ Businessess Accross Industry Vertical, wordwide since 2014</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        <div className="abm-know-section">
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/know-rec-1.png`} alt="Rec 1" className="abm-k-rec-1" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/know-rec-2.png`} alt="Rec 2" className="abm-k-rec-2" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/know-rec-3.png`} alt="Rec 3" className="abm-k-rec-3" />
 
-            <div className="abm-logo-section">
-                <div className="container-lg">
-                    <div className="row abm-logo-row">
-                        <div className="col-lg-12 abm-logo-col">
-                            <div className="abm-logo-carousel" data-aos="flip-up">
-                                <CarouselGrid cols={4} rows={1} gap={30} responsiveLayout={[{ breakpoint: 767, cols: 1, gap: 0, loop: true, autoplay: 2000 }]}>
-                                    <CarouselGrid.Item>
-                                        <LogoItem
-                                            logo={`${BASE_URL}/img/AccountBasedMarketing/klek-services-logo.png`}
-                                            title={`Klek Services`}
-                                        />
-                                    </CarouselGrid.Item>
-
-                                    <CarouselGrid.Item>
-                                        <LogoItem
-                                            logo={`${BASE_URL}/img/AccountBasedMarketing/divine-intercession-logo.png`}
-                                            title={`Divine Intercession`}
-                                        />
-                                    </CarouselGrid.Item>
-
-                                    <CarouselGrid.Item>
-                                        <LogoItem
-                                            logo={`${BASE_URL}/img/AccountBasedMarketing/build-q-logo.png`}
-                                            title={`Build Q`}
-                                        />
-                                    </CarouselGrid.Item>
-
-                                    <CarouselGrid.Item>
-                                        <LogoItem
-                                            logo={`${BASE_URL}/img/AccountBasedMarketing/fastgrow-finance-logo.png`}
-                                            title={`Fastgrow Finance`}
-                                        />
-                                    </CarouselGrid.Item>
-
-                                    <CarouselGrid.Item>
-                                        <LogoItem
-                                            logo={`${BASE_URL}/img/AccountBasedMarketing/tech-consultants-logo.png`}
-                                            title={`Tech Consultants`}
-                                        />
-                                    </CarouselGrid.Item>
-
-                                    <CarouselGrid.Item>
-                                        <LogoItem
-                                            logo={`${BASE_URL}/img/AccountBasedMarketing/meyer-west-ip-logo.png`}
-                                            title={`Meyer West IP`}
-                                        />
-                                    </CarouselGrid.Item>
-
-                                    <CarouselGrid.Item>
-                                        <LogoItem
-                                            logo={`${BASE_URL}/img/AccountBasedMarketing/x-designs-logo.png`}
-                                            title={`XDesigns`}
-                                        />
-                                    </CarouselGrid.Item>
-
-                                    <CarouselGrid.Item>
-                                        <LogoItem
-                                            logo={`${BASE_URL}/img/AccountBasedMarketing/lumoral-logo.png`}
-                                            title={`Lumoral`}
-                                        />
-                                    </CarouselGrid.Item>
-
-                                    <CarouselGrid.Item>
-                                        <LogoItem
-                                            logo={`${BASE_URL}/img/AccountBasedMarketing/liqmet-logo.png`}
-                                            title={`Liqmet`}
-                                        />
-                                    </CarouselGrid.Item>
-
-                                    <CarouselGrid.Item>
-                                        <LogoItem
-                                            logo={`${BASE_URL}/img/AccountBasedMarketing/sk-insure-logo.png`}
-                                            title={`SK Insure`}
-                                        />
-                                    </CarouselGrid.Item>
-                                </CarouselGrid>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="abm-blueprints-section">
-                <div className="container-fulid">
-                    <div className="row abm-blueprints-row">
-                        <div className="col-lg-12 abm-blueprints-col">
-                            <div className="abm-blueprints-content">
-                                <div className="abm-blueprints_img">
-                                    <img src={`${BASE_URL}/img/AccountBasedMarketing/blueprints-impact-businesses-bg.jpg`} alt="blueprints businesses" />
+                            <div className="container-lg">
+                                <div className="row abm-know-title-row">
+                                    <div className="col-lg-12">
+                                        <div className="abm-kt-content" data-aos="zoom-in">
+                                            <h2>{`${pageDetail.detail.you_know_heading}`}</h2>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="abm-blueprints_text">
-                                    <div className="abm-blueprints_upper_box">
+
+                                <div className="row abm-know-content-row">
+                                    <div className="col-lg-6">
+                                        <div className="row abm-k-boxes-row">
+                                            <div className="col-lg-5 col-md-3 col-sm-4 abm-k-box-col">
+                                                <div className="abm-k-box" data-aos="fade-up" data-aos-delay="300">
+                                                    <div className="k-box-img">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.you_know_item_1_image}`} alt={`${pageDetail.detail.you_know_item_1_title}`} className="k-box-img" />
+                                                        {/* <img src={`${BASE_URL}/img/AccountBasedMarketing/rating-star.png`} alt="Star" className="k-box-star" /> */}
+                                                    </div>
+                                                    <div className="k-box-title">{`${pageDetail.detail.you_know_item_1_title}`}</div>
+                                                </div>
+                                            </div>
+
+                                            <div className="col-lg-5 col-md-3 col-sm-4 abm-k-box-col">
+                                                <div className="abm-k-box" data-aos="fade-up" data-aos-delay="400">
+                                                    <div className="k-box-img">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.you_know_item_2_image}`} alt={`${pageDetail.detail.you_know_item_2_title}`} className="k-box-img" />
+                                                    </div>
+                                                    <div className="k-box-title">{`${pageDetail.detail.you_know_item_2_title}`}</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="abm-blueprints_middle_box" >
-                                        <h1 className="abm-blueprints_title">“We create fortified, <span className="abm-blueprints_zoom-in">i</span>nteractive blueprints that impact businesses”</h1>
-                                    </div>
-                                    <div className="abm-blueprints_lower_box">
-                                        <h3 className="anm-blueprints-name">Priya Mishra</h3>
-                                        <p>CEO, Corporality Global</p>
+
+                                    <div className="col-lg-6">
+                                        <div className="abm-know-title" data-aos="fade-up" data-aos-delay="500">{`${pageDetail.detail.you_know_title}`}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div className="abm-high-level-section">
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-vector.png`} alt="vector" className="abm-hl-vector" data-aos="fade-up-left" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-ellipse.png`} alt="ellipse" className="abm-hl-ellipse" data-aos="fade-up-left" data-aos-delay="300" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-rec.png`} alt="rec" className="abm-hl-rec" data-aos="fade-up-left" data-aos-delay="500" />
+                        <div className="abm-logo-section">
+                            <div className="container-lg">
+                                <div className="row abm-logo-row">
+                                    <div className="col-lg-12 abm-logo-col">
+                                        <div className="abm-logo-carousel" data-aos="flip-up">
+                                            <CarouselGrid cols={4} rows={1} gap={30} responsiveLayout={[{ breakpoint: 767, cols: 1, gap: 0, loop: true, autoplay: 2000 }]}>
+                                                <CarouselGrid.Item>
+                                                    <LogoItem
+                                                        logo={`${API_IMG_URL}pages/${pageDetail.detail.client_logo_1_image}`}
+                                                        title={`Logo 1`}
+                                                    />
+                                                </CarouselGrid.Item>
 
-                <div className="container-lg">
-                    <div className="row abm-high-level-row">
-                        <div className="col-lg-12 abm-high-level-col">
-                            <div className="abm-hl-content">
-                                <div data-aos="fade-up">
-                                    <h2>Working on your high-Level vision and turning them into highly-Targeted and efficient resources allocated for your high-Value clients</h2>
-                                </div>
-                                <div data-aos="fade-up" data-aos-delay="300">
-                                    <p>The breath and depth of your expertise allows us to create a tailor-made strategy for account-based marketing. Our approach is to create your ideal customer profile designed not only to increase the leads but also increase user retention, engagement and eventually loyalty.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                                <CarouselGrid.Item>
+                                                    <LogoItem
+                                                        logo={`${API_IMG_URL}pages/${pageDetail.detail.client_logo_2_image}`}
+                                                        title={`Logo 2`}
+                                                    />
+                                                </CarouselGrid.Item>
 
-            <div className="abm-define-solve-section">
-                <div className="container-fluid">
-                    <div className="row abm-define-solve-row">
-                        <div className="col-lg-7">
-                            <div className="abm-ds-banner">
-                                <img src={`${BASE_URL}/img/AccountBasedMarketing/Define-to-solve-banner.png`} alt="Define to solve" className="abm-dsb-img" data-aos="fade-down-right" />
+                                                <CarouselGrid.Item>
+                                                    <LogoItem
+                                                        logo={`${API_IMG_URL}pages/${pageDetail.detail.client_logo_3_image}`}
+                                                        title={`Logo 3`}
+                                                    />
+                                                </CarouselGrid.Item>
 
-                                <div className="abm-dsb-content" data-aos="fade-up" data-aos-delay="300">
-                                    <DefineSolveBannerItem
-                                        title={`Target Prospects`}
-                                        subtitle={`Named accounts, target prospects`}
-                                    />
+                                                <CarouselGrid.Item>
+                                                    <LogoItem
+                                                        logo={`${API_IMG_URL}pages/${pageDetail.detail.client_logo_4_image}`}
+                                                        title={`Logo 4`}
+                                                    />
+                                                </CarouselGrid.Item>
 
-                                    <DefineSolveBannerItem
-                                        title={`ISQLs/Nurture`}
-                                        subtitle={`Identification of needs and pain points`}
-                                    />
+                                                <CarouselGrid.Item>
+                                                    <LogoItem
+                                                        logo={`${API_IMG_URL}pages/${pageDetail.detail.client_logo_5_image}`}
+                                                        title={`Logo 5`}
+                                                    />
+                                                </CarouselGrid.Item>
 
-                                    <DefineSolveBannerItem
-                                        title={`SALs`}
-                                        subtitle={`Early Identification of project requirements and issues`}
-                                    />
+                                                <CarouselGrid.Item>
+                                                    <LogoItem
+                                                        logo={`${API_IMG_URL}pages/${pageDetail.detail.client_logo_6_image}`}
+                                                        title={`Logo 6`}
+                                                    />
+                                                </CarouselGrid.Item>
 
-                                    <DefineSolveBannerItem
-                                        title={`EAQs`}
-                                        subtitle={`Opportunities to participate in the evaluation or build business case`}
-                                    />
+                                                <CarouselGrid.Item>
+                                                    <LogoItem
+                                                        logo={`${API_IMG_URL}pages/${pageDetail.detail.client_logo_7_image}`}
+                                                        title={`Logo 7`}
+                                                    />
+                                                </CarouselGrid.Item>
 
-                                    <DefineSolveBannerItem
-                                        title={`Champions`}
-                                        subtitle={`Help you get a seat at the evaluation table`}
-                                    />
+                                                <CarouselGrid.Item>
+                                                    <LogoItem
+                                                        logo={`${API_IMG_URL}pages/${pageDetail.detail.client_logo_8_image}`}
+                                                        title={`Logo 8`}
+                                                    />
+                                                </CarouselGrid.Item>
 
-                                    <DefineSolveBannerItem
-                                        title={`Expand`}
-                                        subtitle={`Activity and collateral to grow advocacy and expand the base of champions`}
-                                    />
+                                                <CarouselGrid.Item>
+                                                    <LogoItem
+                                                        logo={`${API_IMG_URL}pages/${pageDetail.detail.client_logo_9_image}`}
+                                                        title={`Logo 9`}
+                                                    />
+                                                </CarouselGrid.Item>
 
-                                    <DefineSolveBannerItem
-                                        title={`Advocate`}
-                                        subtitle={`Enable champions to recommend your section`}
-                                    />
-
-                                    <DefineSolveBannerItem
-                                        title={`Purchase`}
-                                        subtitle={`Create a customer by creating business and identifying white spaces.`}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-5">
-                            <div className="abm-ds-content">
-                                <div data-aos="fade-up">
-                                    <h2>Define to solve</h2>
-                                </div>
-                                <div data-aos="fade-up" data-aos-delay="300">
-                                    <p>Benefits to this solution</p>
-                                </div>
-                                <div data-aos="fade-up" data-aos-delay="500">
-                                    <ul>
-                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Business’s relevancy Vs high-value accounts</li>
-                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Customer experiences consistency.</li>
-                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Marketing and Sales alignment.</li>
-                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Process oriented sales cycle.</li>
-                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Measurable Growth and ROI.</li>
-                                        <li><img src={`${BASE_URL}/img/AccountBasedMarketing/list-icon.png`} alt="-" /> Business expansion through targeted account relationships.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="abm-connect-convert-section">
-                <div className="container-lg">
-                    <div className="row abm-connect-convert-row">
-                        <div className="col-lg-6">
-                            <div className="abm-cc-content">
-                                <div data-aos="zoom-in">
-                                    <h2>Connect & Convert</h2>
-                                </div>
-                                <div data-aos="zoom-in-up" data-aos-delay="500">
-                                    <p>Clients connects to your story when you bring emotions, thrill and EQ which resonates with them.</p>
+                                                <CarouselGrid.Item>
+                                                    <LogoItem
+                                                        logo={`${API_IMG_URL}pages/${pageDetail.detail.client_logo_10_image}`}
+                                                        title={`Logo 10`}
+                                                    />
+                                                </CarouselGrid.Item>
+                                            </CarouselGrid>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="col-lg-6">
-                            <div className="abm-cc-banner">
-                                <img src={`${BASE_URL}/img/AccountBasedMarketing/Connect-Convert-banner.png`} alt="Connect & Convert" className="cc-banner" data-aos="zoom-out" />
-                                <img src={`${BASE_URL}/img/AccountBasedMarketing/cc-rec.png`} alt="cc-rec" className="cc-rec" data-aos="zoom-in-left" data-aos-delay="300" />
-                                <img src={`${BASE_URL}/img/AccountBasedMarketing/cc-vector.png`} alt="cc-vector" className="cc-vector" data-aos="zoom-in-up" data-aos-delay="500" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="abm-design-define-section">
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-ellipse.png`} alt="dd-ellipse" className="dd-ellipse" data-aos="fade-right" data-aos-delay="500" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-vector.png`} alt="dd-vector" className="dd-vector" data-aos="fade-right" data-aos-delay="300" />
-                <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-rec.png`} alt="dd-rec" className="dd-rec" data-aos="fade-right" data-aos-delay="400" />
-
-                <div className="container-lg">
-                    <div className="row abm-design-define-row">
-                        <div className="col-lg-12">
-                            <div className="abm-dd-content">
-                                <div data-aos="fade-up">
-                                    <h2>Design and define the solutions that makes your customer go from 'ignorance' to 'Want'</h2>
-                                </div>
-                                <div data-aos="fade-up" data-aos-delay="300">
-                                    <p>Subscribe to our Quarterly reports or white papers</p>
+                        <div className="abm-blueprints-section">
+                            <div className="container-fulid">
+                                <div className="row abm-blueprints-row">
+                                    <div className="col-lg-12 abm-blueprints-col">
+                                        <div className="abm-blueprints-content">
+                                            <div className="abm-blueprints_img">
+                                                <img src={`${API_IMG_URL}pages/${pageDetail.detail.author_image}`} alt={`${pageDetail.detail.author_name}`} />
+                                            </div>
+                                            <div className="abm-blueprints_text">
+                                                <div className="abm-blueprints_upper_box">
+                                                </div>
+                                                <div className="abm-blueprints_middle_box" >
+                                                    <h1 className="abm-blueprints_title" dangerouslySetInnerHTML={{ __html: pageDetail.detail.author_title }}></h1>
+                                                </div>
+                                                <div className="abm-blueprints_lower_box">
+                                                    <h3 className="anm-blueprints-name">{`${pageDetail.detail.author_name}`}</h3>
+                                                    <p>{`${pageDetail.detail.author_designation}`}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+
+                        <div className="abm-high-level-section">
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-vector.png`} alt="vector" className="abm-hl-vector" data-aos="fade-up-left" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-ellipse.png`} alt="ellipse" className="abm-hl-ellipse" data-aos="fade-up-left" data-aos-delay="300" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/high-level-rec.png`} alt="rec" className="abm-hl-rec" data-aos="fade-up-left" data-aos-delay="500" />
+
+                            <div className="container-lg">
+                                <div className="row abm-high-level-row">
+                                    <div className="col-lg-12 abm-high-level-col">
+                                        <div className="abm-hl-content">
+                                            <div data-aos="fade-up">
+                                                <h2>{`${pageDetail.detail.high_value_title}`}</h2>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-delay="300">
+                                                <p>{`${pageDetail.detail.high_value_description}`}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="abm-define-solve-section">
+                            <div className="container-fluid">
+                                <div className="row abm-define-solve-row">
+                                    <div className="col-lg-7">
+                                        <div className="abm-ds-banner">
+                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.define_solve_image}`} alt={`${pageDetail.detail.define_solve_title}`} data-aos="fade-down-right" />
+
+                                            <div className="abm-dsb-content" data-aos="fade-up" data-aos-delay="300">
+                                                <DefineSolveBannerItem
+                                                    title={`${pageDetail.detail.define_solve_item_1_title}`}
+                                                    subtitle={`${pageDetail.detail.define_solve_item_1_subtitle}`}
+                                                />
+
+                                                <DefineSolveBannerItem
+                                                    title={`${pageDetail.detail.define_solve_item_2_title}`}
+                                                    subtitle={`${pageDetail.detail.define_solve_item_2_subtitle}`}
+                                                />
+
+                                                <DefineSolveBannerItem
+                                                    title={`${pageDetail.detail.define_solve_item_3_title}`}
+                                                    subtitle={`${pageDetail.detail.define_solve_item_3_subtitle}`}
+                                                />
+
+                                                <DefineSolveBannerItem
+                                                    title={`${pageDetail.detail.define_solve_item_4_title}`}
+                                                    subtitle={`${pageDetail.detail.define_solve_item_4_subtitle}`}
+                                                />
+
+                                                <DefineSolveBannerItem
+                                                    title={`${pageDetail.detail.define_solve_item_5_title}`}
+                                                    subtitle={`${pageDetail.detail.define_solve_item_5_subtitle}`}
+                                                />
+
+                                                <DefineSolveBannerItem
+                                                    title={`${pageDetail.detail.define_solve_item_6_title}`}
+                                                    subtitle={`${pageDetail.detail.define_solve_item_6_subtitle}`}
+                                                />
+
+                                                <DefineSolveBannerItem
+                                                    title={`${pageDetail.detail.define_solve_item_7_title}`}
+                                                    subtitle={`${pageDetail.detail.define_solve_item_7_subtitle}`}
+                                                />
+
+                                                <DefineSolveBannerItem
+                                                    title={`${pageDetail.detail.define_solve_item_8_title}`}
+                                                    subtitle={`${pageDetail.detail.define_solve_item_8_subtitle}`}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-lg-5">
+                                        <div className="abm-ds-content">
+                                            <div data-aos="fade-up">
+                                                <h2>{`${pageDetail.detail.define_solve_title}`}</h2>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-delay="300">
+                                                <p>{`${pageDetail.detail.define_solve_subtitle}`}</p>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-delay="500" dangerouslySetInnerHTML={{ __html: pageDetail.detail.faq_item_2_description }}></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="abm-connect-convert-section">
+                            <div className="container-lg">
+                                <div className="row abm-connect-convert-row">
+                                    <div className="col-lg-6">
+                                        <div className="abm-cc-content">
+                                            <div data-aos="zoom-in">
+                                                <h2>{`${pageDetail.detail.connect_convert_title}`}</h2>
+                                            </div>
+                                            <div data-aos="zoom-in-up" data-aos-delay="500">
+                                                <p>{`${pageDetail.detail.connect_convert_description}`}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-lg-6">
+                                        <div className="abm-cc-banner">
+                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.connect_convert_image}`} alt={`${pageDetail.detail.connect_convert_title}`} className="cc-banner" data-aos="zoom-out" />
+                                            <img src={`${BASE_URL}/img/AccountBasedMarketing/cc-rec.png`} alt="cc-rec" className="cc-rec" data-aos="zoom-in-left" data-aos-delay="300" />
+                                            <img src={`${BASE_URL}/img/AccountBasedMarketing/cc-vector.png`} alt="cc-vector" className="cc-vector" data-aos="zoom-in-up" data-aos-delay="500" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="abm-design-define-section">
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-ellipse.png`} alt="dd-ellipse" className="dd-ellipse" data-aos="fade-right" data-aos-delay="500" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-vector.png`} alt="dd-vector" className="dd-vector" data-aos="fade-right" data-aos-delay="300" />
+                            <img src={`${BASE_URL}/img/AccountBasedMarketing/dd-rec.png`} alt="dd-rec" className="dd-rec" data-aos="fade-right" data-aos-delay="400" />
+
+                            <div className="container-lg">
+                                <div className="row abm-design-define-row">
+                                    <div className="col-lg-12">
+                                        <div className="abm-dd-content">
+                                            <div data-aos="fade-up">
+                                                <h2>{`${pageDetail.detail.design_define_title}`}</h2>
+                                            </div>
+                                            <div data-aos="fade-up" data-aos-delay="300">
+                                                <p>{`${pageDetail.detail.design_define_subtitle}`}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </>
+                    : null
+            }
 
             <ServicesClients />
 
