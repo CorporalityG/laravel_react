@@ -13,11 +13,17 @@ import { useParams, Link } from 'react-router-dom'
 import { EditPickItem } from './EditPickItem'
 import ServicesClients from '../ServicesClients/ServicesClients'
 import { IdeationCreativity } from './IdeationCreativity'
+import { Helmet } from "react-helmet";
+import { ServiceInsights } from './ServiceInsights'
 
 function CmoInsights() {
 
     const params = useParams();
     const subCategory = 'cmo';
+
+    const page_slug = subCategory + '-insights';
+
+    const [pageDetail, setPageDetail] = useState([]);
 
     const [latestCSuits, setLatestCSuits] = useState([]);
     const [announcements, setAnnouncements] = useState([]);
@@ -33,6 +39,7 @@ function CmoInsights() {
         getAnnouncements()
         getEditPickCSuits()
         getCsuitBlogs()
+        getPageDetail()
     }, [params]);
 
     async function getLatestCSuits() {
@@ -59,8 +66,19 @@ function CmoInsights() {
         setCsuitBlogs(result.data);
     }
 
+    async function getPageDetail() {
+        let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
+        result = await result.json();
+        setPageDetail(result);
+    }
+
     return (
         <div className="csuit-insights">
+            <Helmet>
+                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
+            </Helmet>
 
             <div className='csuit-insights-banner'>
                 <div className='container-lg'>
@@ -133,7 +151,7 @@ function CmoInsights() {
                 </div>
             </div>
 
-            <IdeationCreativity />
+            <IdeationCreativity {...pageDetail.detail} />
 
             <div className='csuit-insights-announcement-slider'>
                 {
@@ -197,23 +215,7 @@ function CmoInsights() {
                 </div>
             </div>
 
-            <div className="csuit-insights-service">
-                <div className='container-lg'>
-                    <div className='row csuit-insights-service-row'>
-                        <div className='col-lg-7 csuit-insights-service-content'>
-                            <h2>Service Insights</h2>
-                            <p>Marketing Communications is often overlooked by business leaders yet it is also a crucial component of any business strategy. How do you communicate with media outlets and other businesses that can partner with you or give you mutual benefits? Gaining good Marcom strength is a key to establishing one’s position in their category.</p>
-                            <Link to={`/service-insights`} className="csuit-insights-service-btn">Check More Insights</Link>
-                        </div>
-
-                        <div className='col-lg-5 csuit-insights-service-img'>
-                            <a href='https://corporality.global/club/corporality-global-event/#Ticket' target="_blank">
-                                <img src={`${BASE_URL}/img/CSuit/Service-Insights.png`} alt={`Service Insights`} />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ServiceInsights {...pageDetail.detail} />
 
             <ServicesClients />
 

@@ -6,9 +6,11 @@ import { OtherIndustryItem } from './OtherIndustryItem'
 import { GetInvolved } from '../ServiceInsights/GetInvolved'
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
+import { Helmet } from "react-helmet";
+import { GlobalConference } from './GlobalConference'
 
 function descLimit(text, size) {
-    return text?.length > size ? text.substr(0, size - 1) : text;
+    return text?.length > size ? text.substr(0, size - 1) + '...' : text + '...';
 }
 
 function Nanotech() {
@@ -18,6 +20,10 @@ function Nanotech() {
     const [latestIndustrialArticle, setLatestIndustrialArticle] = useState([]);
     const [realtedIndustrialArticles, setRealtedIndustrialArticles] = useState([]);
 
+    const page_slug = 'nanotech';
+
+    const [pageDetail, setPageDetail] = useState([]);
+
     useEffect(() => {
         AOS.init({
             duration: 2000,
@@ -25,6 +31,7 @@ function Nanotech() {
 
         getLatestIndustrialArticleData()
         getRealtedIndustrialArticlesData();
+        getPageDetail()
     }, []);
 
     async function getLatestIndustrialArticleData() {
@@ -39,57 +46,79 @@ function Nanotech() {
         setRealtedIndustrialArticles(result);
     }
 
+    async function getPageDetail() {
+        let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
+        result = await result.json();
+        setPageDetail(result);
+    }
+
     return (
         <div className='industry-page nanotech-page'>
+            <Helmet>
+                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
+                <link rel="canonical" href={`${BASE_URL}/brand-positioning/`} />
+            </Helmet>
+
             <div className='industry-banner-section'>
-                <img src={`${BASE_URL}/img/industries/Nanotech-banner.png`} alt={`Nanotech Industry`} className="industry-banner-img" />
+                {
+                    pageDetail.detail ?
+                        <>
+                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="industry-banner-img" />
 
-                <div className='industry-banner-content-main'>
-                    <div className='container-lg'>
-                        <div className='row'>
-                            <div className='col-lg-4'>
-                                <div className='industry-banner-content'>
-                                    <h1>Nanotech Industry</h1>
-                                    <div className='industry-banner-desc'>
-                                        <p>Rooted in the foundations of nanoscience, nanotechnology has been developed for more than 20 years to considerably improve and revolutionize many technology and industry sectors.</p>
-                                        <p>With nanotechnology, materials can be made stronger, lighter, more durable, more reactive, and more. Many of the commercial products we use on a daily basis already rely on nanoscale materials and processes.</p>
+                            <div className='industry-banner-content-main'>
+                                <div className='container-lg'>
+                                    <div className='row'>
+                                        <div className='col-lg-4'>
+                                            <div className='industry-banner-content'>
+                                                <h1>{`${pageDetail.detail.banner_title}`}</h1>
+                                                <div className='industry-banner-desc' dangerouslySetInnerHTML={{ __html: pageDetail.detail.banner_description }}></div>
+                                            </div>
+                                        </div>
+
+                                        <div className='col-lg-8'>
+                                            <div className='row'>
+                                                <div className='col-lg-6 offset-lg-5'>
+                                                    <div className='industry-banner-ebook'>
+                                                        <div className='ib-ebook-ttile'>{`${pageDetail.detail.ebook_title}`}</div>
+
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.ebook_image}`} alt={`${pageDetail.detail.ebook_title}`} className="industry-cs" />
+                                                        <img src={`${BASE_URL}/img/industries/cs-pattern.png`} alt={`cs-pattern`} className="industry-cs-pattern" />
+
+                                                        <Link to={`/${pageDetail.detail.ebook_btn_link ?? ''}`} className='industry-cs-link'>{`${pageDetail.detail.ebook_btn_text}`}</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className='row industry-banner-paper-survey-row'>
+                                                <div className='col-md-6'>
+                                                    <div className='industry-banner-paper-survey-item industry-banner-paper' style={{ backgroundImage: `url(${API_IMG_URL}pages/${pageDetail.detail.research_paper_image})` }}>
+                                                        <div className='paper-survey-item-title'>{`${pageDetail.detail.research_paper_title}`}</div>
+
+                                                        <div className='paper-survey-item-subtitle'>{`${pageDetail.detail.research_paper_subtitle}`}</div>
+
+                                                        <a href={pageDetail.detail.research_paper_pdf ? `${API_IMG_URL}pages/${pageDetail.detail.research_paper_pdf}` : '/'} target="_blank" className='paper-survey-item-link'>{`${pageDetail.detail.research_paper_btn_text}`}</a>
+                                                    </div>
+                                                </div>
+
+                                                <div className='col-md-6'>
+                                                    <div className='industry-banner-paper-survey-item industry-banner-survey'>
+                                                        <div className='ib-s-title'>{`${pageDetail.detail.survey_title}`}</div>
+
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.survey_image}`} alt={`${pageDetail.detail.survey_title}`} className="industry-your-om" />
+
+                                                        <Link to={`/${pageDetail.detail.survey_btn_link ?? ''}`} className='paper-survey-item-link'>{`${pageDetail.detail.survey_btn_text}`}</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div className='col-lg-8'>
-                                <div className='row'>
-                                    <div className='col-lg-6 offset-lg-5'>
-                                        <div className='industry-banner-ebook'>
-                                            <div className='ib-ebook-ttile'>Ebook</div>
-                                            <img src={`${BASE_URL}/img/industries/CORPORALITY-STRIKERS-bg.png`} alt={`CORPORALITY STRIKERS`} className="industry-cs" />
-                                            <img src={`${BASE_URL}/img/industries/cs-pattern.png`} alt={`cs-pattern`} className="industry-cs-pattern" />
-                                            <Link to={`/`} className='industry-cs-link'>Download</Link>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className='row industry-banner-paper-survey-row'>
-                                    <div className='col-md-6'>
-                                        <div className='industry-banner-paper-survey-item industry-banner-paper'>
-                                            <div className='paper-survey-item-title'>Research Paper</div>
-                                            <div className='paper-survey-item-subtitle'>CAN THE MEDTECH INDUSTRY LOOK UP TO MARKETING FOR A SOLUTION?</div>
-                                            <Link to={`/`} className='paper-survey-item-link'>Start Reading</Link>
-                                        </div>
-                                    </div>
-
-                                    <div className='col-md-6'>
-                                        <div className='industry-banner-paper-survey-item industry-banner-survey'>
-                                            <div className='ib-s-title'>Survey</div>
-                                            <img src={`${BASE_URL}/img/industries/your-om.png`} alt={`your-om`} className="industry-your-om" />
-                                            <Link to={`/`} className='paper-survey-item-link'>Get Started</Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </>
+                        : null
+                }
             </div>
 
             <div className='industry-blog-name-section'>
@@ -108,7 +137,7 @@ function Nanotech() {
                                 {
                                     latestIndustrialArticle.title ?
                                         <p>
-                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}>...</span>
+                                            <span dangerouslySetInnerHTML={{ __html: descLimit(latestIndustrialArticle.short_description ?? latestIndustrialArticle.description, 250) }}></span>
                                             <Link to={`/industry/${latestIndustrialArticle.slug}`}>Read More</Link>
                                         </p>
                                         : null
@@ -163,7 +192,7 @@ function Nanotech() {
                             icon={`${BASE_URL}/img/industries/nanotech.png`}
                             hoverIcon={`${BASE_URL}/img/industries/nanotech-hover.png`}
                             category={`Allied`}
-                            slug={`allied-industries`}
+                            slug={`allied`}
                         />
 
                         <OtherIndustryItem
@@ -218,33 +247,7 @@ function Nanotech() {
                 </div>
             </div>
 
-            <div className='industry-global-conference-section'>
-                <img src={`${BASE_URL}/img/industries/global-conference-bg.png`} alt={`Global Conference`} className="industry-global-conference-banner-bg" />
-
-                <div className='industry-global-conference-content-main'>
-                    <div className='container-lg'>
-                        <div className='row'>
-                            <div className='col-lg-6'>
-                                <div className='industry-global-conference-content'>
-                                    <p><span>Corporality Global</span> is organising its yearly conference in Sydney,</p>
-
-                                    <p>For pricing and registration also of the 2022 event, check on </p>
-
-                                    <a href='https://corporality.global/club/corporality-global-event/#Ticket' target="_blank">Register Now</a>
-                                </div>
-                            </div>
-
-                            <div className='col-lg-6'>
-                                <div className='industry-global-conference-img'>
-                                    <a href='https://corporality.global/club/corporality-global-event/#Ticket' target="_blank">
-                                        <img src={`${BASE_URL}/img/industries/global-conference-banner.png`} alt={`Global Conference 2022`} />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <GlobalConference />
 
             <GetInvolved />
 

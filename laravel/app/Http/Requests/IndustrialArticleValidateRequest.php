@@ -28,6 +28,7 @@ class IndustrialArticleValidateRequest extends FormRequest
             'title' => ['required', 'string', Rule::unique('industrial_articles')->ignore($this->segment(2), 'id')],
             'slug' => ['required', 'string', Rule::unique('industrial_articles')->ignore($this->segment(2), 'id')],
             'image' => ['nullable', 'sometimes', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:100000'],
+            'short_description' => ['required', 'string'],
         ];
     }
 }

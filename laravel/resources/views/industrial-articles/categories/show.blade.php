@@ -48,13 +48,13 @@
                                     <ul>
                                         @if( empty($category->parent_id) )
                                             @forelse( $category->industrialArticles as $RS_Row )
-                                                <li class="mb-2"><a href="{{ route('csuit.show', $RS_Row->id) }}" class="text-dark"><i class="fas fa-link mr-2"></i> {{ $RS_Row->title }}</a></li>
+                                                <li class="mb-2"><a href="{{ route('industrial-articles.show', $RS_Row->id) }}" class="text-dark"><i class="fas fa-link mr-2"></i> {{ $RS_Row->title }}</a></li>
                                             @empty
                                                 {{ __('Industrial Article not found') }}
                                             @endforelse
                                         @else
                                             @forelse( $category->subcategoriesIndustrialArticles as $RS_Row )
-                                                <li class="mb-2"><a href="{{ route('csuit.show', $RS_Row->id) }}" class="text-dark"><i class="fas fa-link mr-2"></i> {{ $RS_Row->title }}</a></li>
+                                                <li class="mb-2"><a href="{{ route('industrial-articles.show', $RS_Row->id) }}" class="text-dark"><i class="fas fa-link mr-2"></i> {{ $RS_Row->title }}</a></li>
                                             @empty
                                                 {{ __('Industrial Article not found') }}
                                             @endforelse

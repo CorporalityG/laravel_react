@@ -53,6 +53,7 @@
     background: #33657E;
     box-shadow: 0px 4px 44px rgba(120, 120, 120, 0.25);
     padding: 35px;
+    color: #fff;
 }
 .industry-page .industry-banner-section .industry-banner-desc p {
     font-style: normal;
@@ -144,7 +145,7 @@
 .industry-page .industry-banner-section .industry-banner-paper-survey-item .paper-survey-item-title::after {
     content: "";
     display: block;
-    border: 3px solid #A06DAF;
+    border-bottom: 5px solid #A06DAF;
     width: 50px;
     margin-top: 5px;
 }
@@ -258,7 +259,7 @@
 .industry-page .industry-other-industries-section h2::after {
     content: "";
     display: block;
-    border: 3px solid #A06DAF;
+    border-bottom: 5px solid #A06DAF;
     width: 125px;
     margin-top: 10px;
     position: absolute;
@@ -349,6 +350,7 @@
 .industry-page .industry-global-conference-section .industry-global-conference-banner-bg {
     position: absolute;
     top: 0;
+    width: 100%;
 }
 .industry-page .industry-global-conference-section .industry-global-conference-content {
     background: #FFFFFF;

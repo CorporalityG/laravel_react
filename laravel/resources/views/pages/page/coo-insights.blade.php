@@ -30,7 +30,7 @@
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="ideation_creativity_subscribe_title">{{ __('Subscribe Title') }}</label>
-							<input type="text" name="ideation_creativity_subscribe_title" id="ideation_creativity_subscribe_title" value="{{ old('ideation_creativity_subscribe_title', $RS_Meta['ideation_creativity_title'] ?? '') }}" class="form-control" placeholder="{{ __('Subscribe Title') }}">
+							<input type="text" name="ideation_creativity_subscribe_title" id="ideation_creativity_subscribe_title" value="{{ old('ideation_creativity_subscribe_title', $RS_Meta['ideation_creativity_subscribe_title'] ?? '') }}" class="form-control" placeholder="{{ __('Subscribe Title') }}">
 						</div>
 					</div>
 				</div>

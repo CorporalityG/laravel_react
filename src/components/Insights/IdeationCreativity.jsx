@@ -1,42 +1,65 @@
-import { BASE_URL } from '../../config'
+import { BASE_URL, API_IMG_URL } from '../../config'
 
-export const IdeationCreativity = () => {
+export const IdeationCreativity = (pageDetail) => {
     return (
         <div className="csuit-insights-video">
-            <img src={`${BASE_URL}/img/CSuit/video-heading-bg.png`} alt={`video-heading-bg`} className="video-heading-bg" />
+            {
+                pageDetail ?
+                    <>
+                        <img src={`${BASE_URL}/img/CSuit/video-heading-bg.png`} alt={`video-heading-bg`} className="video-heading-bg" />
 
-            <div className='container-lg'>
-                <div className='row csuit-insights-video-row'>
-                    <div className='col-lg-6'>
-                        <div className="csuit-insights-video-img">
-                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/M3DekVZlxsM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        </div>
-                    </div>
+                        <div className='container-lg'>
+                            <div className='row csuit-insights-video-row'>
+                                <div className='col-lg-6'>
+                                    <div className="csuit-insights-video-img" dangerouslySetInnerHTML={{ __html: pageDetail.ideation_creativity_video_iframe }}></div>
+                                </div>
 
-                    <div className='col-lg-6'>
-                        <div className="csuit-insights-video-content">
-                            <h2>Ideation + Creativity</h2>
-                            <p>At corporality Ideation with fearless creativity is lived by every one in the team. Our podcast series, CEO Priya Mishra talks about Manifestation and success. We also have Global leaders Interview series about Growth, Business & ecological sustainability of business</p>
+                                <div className='col-lg-6'>
+                                    <div className="csuit-insights-video-content">
+                                        <h2>{`${pageDetail.ideation_creativity_title ?? ''}`}</h2>
+                                        <div dangerouslySetInnerHTML={{ __html: pageDetail.ideation_creativity_description }}></div>
 
-                            <div className='csuit-insights-subscribe-title'>Subscribe :</div>
-                            <div className='csuit-insights-subscribe-list'>
-                                <a href='https://podcasts.apple.com/us/podcast/corporality/id1444450693?ign-mpt=uo%3D4&mt=2' target="_blank">
-                                    <img src={`${BASE_URL}/img/CSuit/podcasts-apple.png`} alt={`podcasts-apple`} />
-                                </a>
-                                <a href='https://open.spotify.com/show/1MaGRx67hlU9lyqPjiSQsK' target="_blank">
-                                    <img src={`${BASE_URL}/img/CSuit/spotify.png`} alt={`spotify`} />
-                                </a>
-                                <a href='https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy83ZDMyMzg0L3BvZGNhc3QvcnNz' target="_blank">
-                                    <img src={`${BASE_URL}/img/CSuit/google-podcasts.png`} alt={`google-podcasts`} />
-                                </a>
-                                <a href='https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg' target="_blank">
-                                    <img src={`${BASE_URL}/img/CSuit/youtube.png`} alt={`youtube`} />
-                                </a>
+                                        <div className='csuit-insights-subscribe-title'>{`${pageDetail.ideation_creativity_subscribe_title ?? ''}`}</div>
+                                        <div className='csuit-insights-subscribe-list'>
+                                            {
+                                                pageDetail.apple_podcasts_link ?
+                                                    <a href={`${pageDetail.apple_podcasts_link ?? ''}`} target="_blank">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.apple_podcasts_image}`} alt={`podcasts-apple`} />
+                                                    </a>
+                                                    : null
+                                            }
+
+                                            {
+                                                pageDetail.spotify_link ?
+                                                    <a href={`${pageDetail.spotify_link ?? ''}`} target="_blank">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.spotify_image}`} alt={`spotify`} />
+                                                    </a>
+                                                    : null
+                                            }
+
+                                            {
+                                                pageDetail.google_podcasts_link ?
+                                                    <a href={`${pageDetail.google_podcasts_link ?? ''}`} target="_blank">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.google_podcasts_image}`} alt={`google-podcasts`} />
+                                                    </a>
+                                                    : null
+                                            }
+
+                                            {
+                                                pageDetail.youtube_link ?
+                                                    <a href={`${pageDetail.youtube_link ?? ''}`} target="_blank">
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.youtube_image}`} alt={`youtube`} />
+                                                    </a>
+                                                    : null
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </>
+                    : null
+            }
         </div>
     )
 }

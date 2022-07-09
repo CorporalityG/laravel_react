@@ -75,7 +75,7 @@ import Geospatial from "./components/Industries/Geospatial";
 import Biotech from "./components/Industries/Biotech";
 import Nanotech from "./components/Industries/Nanotech";
 import AgeCareAndRetirement from "./components/Industries/AgeCareAndRetirement";
-import AlliedIndustries from "./components/Industries/AlliedIndustries";
+import Allied from "./components/Industries/Allied";
 import IndustrialEquipment from "./components/Industries/IndustrialEquipment";
 import Metal from "./components/Industries/Metal";
 import Construction from "./components/Industries/Construction";
@@ -193,7 +193,7 @@ function App() {
             <Route path="/biotech" element={<Biotech />} />
             <Route path="/nanotech" element={<Nanotech />} />
             <Route path="/age-care-and-retirement" element={<AgeCareAndRetirement />} />
-            <Route path="/allied-industries" element={<AlliedIndustries />} />
+            <Route path="/allied" element={<Allied />} />
             <Route path="/industrial-equipment" element={<IndustrialEquipment />} />
             <Route path="/metal" element={<Metal />} />
             <Route path="/construction" element={<Construction />} />

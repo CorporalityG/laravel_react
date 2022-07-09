@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+ini_set('max_execution_time', 600); //10 minutes
+
 use App\Models\Page;
 use Illuminate\Http\Request;
 use App\Http\Requests\PageValidateRequest; // use validation
@@ -1872,6 +1874,12 @@ class PageController extends Controller
         if( !empty($research_paper_image) )
         {
             $data['research_paper_image'] = $research_paper_image;
+        }
+
+        $research_paper_pdf = $this->uploadImage($request->file('research_paper_pdf'), $request->research_paper_title.'_pdf', $RS_Row->getMeta('research_paper_pdf'));
+        if( !empty($research_paper_pdf) )
+        {
+            $data['research_paper_pdf'] = $research_paper_pdf;
         }
 
         $survey_image = $this->uploadImage($request->file('survey_image'), $request->survey_title, $RS_Row->getMeta('survey_image'));
