@@ -68,8 +68,8 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
-							<label for="opportunities_subtitle">{{ __('Button Link') }}</label>
-							<input type="text" name="opportunities_subtitle" id="opportunities_subtitle" value="{{ old('opportunities_subtitle', $RS_Meta['opportunities_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+							<label for="opportunities_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="opportunities_btn_link" id="opportunities_btn_link" value="{{ old('opportunities_btn_link', $RS_Meta['opportunities_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 				</div>

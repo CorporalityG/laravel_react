@@ -11,6 +11,10 @@ use App\Http\Controllers\IndustrialArticleController;
 use App\Http\Controllers\IndustrialArticleCategoryController;
 
 use App\Http\Controllers\Api\PageController;
+use App\Http\Controllers\Api\JobController;
+use App\Http\Controllers\Api\TestimonialController;
+use App\Http\Controllers\Api\TeamMemberController;
+use App\Http\Controllers\Api\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,3 +72,13 @@ Route::get('/industrial-articles', [IndustrialArticleController::class, 'getIndu
 
 Route::get('/page-detail/{slug?}', [PageController::class, 'getPageDetail']);
 Route::get('/page-section-detail/{slug?}', [PageController::class, 'getPageSectionDetail']);
+
+Route::get('/jobs', [JobController::class, 'index']);
+
+Route::get('/testimonials', [TestimonialController::class, 'index']);
+
+Route::get('/team-members', [TeamMemberController::class, 'index']);
+
+Route::get('/clients', [ClientController::class, 'index']);
+Route::get('/single-client/{slug}', [ClientController::class, 'getSingle']);
+Route::get('/related-clients/{slug?}', [ClientController::class, 'getRelatedClients']);

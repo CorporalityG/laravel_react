@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../../config';
+import { Link } from 'react-router-dom';
 
 function ClientItem(props) {
 
@@ -14,12 +15,12 @@ function ClientItem(props) {
         <div className="col-lg-4 col-md-6">
             <div className="client-item">
                 <div className="client-item-img">
-                    { props.thumbnail && <img src={props.thumbnail} alt={props.title} /> }
+                    {props.thumbnail && <img src={props.thumbnail} alt={props.title} />}
                 </div>
                 <div className="client-item-content">
                     <div className="client-item-title">{props.title}</div>
                     <div className="client-item-btn">
-                        <div onClick={() => { navigate(`/${props.slug}`); topHandler(); }} className="client-item-explore">Explore <img src={BASE_URL + '/img/right-arrow-blue.png'} alt="->" /></div>
+                        <Link to={`/client/${props.slug}`} onClick={() => { topHandler(); }} className="client-item-explore">Explore <img src={BASE_URL + '/img/right-arrow-blue.png'} alt="->" /></Link>
                     </div>
                 </div>
             </div>

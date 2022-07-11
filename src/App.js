@@ -90,6 +90,7 @@ import IndustryCategory from "./components/Industries/Category/IndustryCategory"
 import Fintech from "./components/Industries/Fintech";
 import Insurtech from "./components/Industries/Insurtech";
 import Edtech from "./components/Industries/Edtech";
+import SingleClient from "./components/CauseStudies/SingleClient";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -145,8 +146,8 @@ function App() {
 
             <Route path="/clients" element={<Clients />} />
 
-            <Route path="/divine-intercession" element={<DivineIntercession />} />
-            <Route path="/build-q" element={<BuildQ />} />
+            {/* <Route path="/divine-intercession" element={<DivineIntercession />} />
+            <Route path="/buildq-group" element={<BuildQ />} />
             <Route path="/fastgrow-finance" element={<FastgrowFinance />} />
             <Route path="/liqmet" element={<Liqmet />} />
             <Route path="/klek-services" element={<KlekServices />} />
@@ -154,7 +155,7 @@ function App() {
             <Route path="/tech-consultants" element={<TechConsultants />} />
             <Route path="/x-designs" element={<XDesign />} />
             <Route path="/meyer-west" element={<MeyerWest />} />
-            <Route path="/lumoral" element={<Lumoral />} />
+            <Route path="/lumoral" element={<Lumoral />} /> */}
 
             <Route path="/corporality-books" element={<CorporalityBooksList />} />
             <Route path="/book/journey-of-perseverance" element={<JourneyOfPerseverance />} />
@@ -216,6 +217,8 @@ function App() {
             <Route path="/category/:category_slug" element={<Blogs />} />
 
             <Route path="/article/:article_slug" element={<SingleArticle />} />
+
+            <Route path="/client/:client_slug" element={<SingleClient />} />
 
             <Route path="/csuit/:csuit_slug" element={<CSuitSingle />} />
 

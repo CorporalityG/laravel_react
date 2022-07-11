@@ -30,10 +30,6 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="col-md-6">
-                            <h6><b>Published:~</b> {{ $RS_Row->getCreatedAt($RS_Row->created_at) }}</h6>
-                            <div class="post"></div>
-                        </div>
                         
                         <div class="col-12">
                             <div class="post"></div><div class="post"></div>
