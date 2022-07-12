@@ -8,11 +8,9 @@ function SingleClient() {
 
     const params = useParams();
     const [singleClient, setSingleClient] = useState([]);
-    // const [relatedClient, setRelatedClient] = useState([]);
 
     useEffect(() => {
         getClient(params.client_slug);
-        // getRelatedClient(params.client_slug);
     }, [params])
 
     async function getClient(slug) {
@@ -20,12 +18,6 @@ function SingleClient() {
         result = await result.json();
         setSingleClient(result);
     }
-
-    /* async function getRelatedClient(slug) {
-        let result = await fetch(`${API_BASE_URL}/related-clients/${slug}`);
-        result = await result.json();
-        setRelatedClient(result);
-    } */
 
     return (
         <div className="cause-studies-container">

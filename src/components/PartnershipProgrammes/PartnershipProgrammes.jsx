@@ -31,12 +31,16 @@ export default function PartnershipProgrammes() {
                 <link rel="canonical" href={`${BASE_URL}/partnership-programmes/`} />
             </Helmet>
 
-            <div className="d-flex flex-column justify-content-center align-items-center">
-                <PPComp1 {...pageDetail.detail} />
-                <PPComp2 {...pageDetail.detail} />
-                <PPComp3 {...pageDetail.detail} />
-                <PPComp4 {...pageDetail.detail} />
-            </div>
+            {
+                pageDetail.detail ?
+                    <div className="d-flex flex-column justify-content-center align-items-center">
+                        <PPComp1 {...pageDetail.detail} />
+                        <PPComp2 {...pageDetail.detail} />
+                        <PPComp3 {...pageDetail.detail} />
+                        <PPComp4 {...pageDetail.detail} />
+                    </div>
+                    : null
+            }
         </>
     )
 }

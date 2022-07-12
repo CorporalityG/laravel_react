@@ -36,18 +36,24 @@ function HomePage() {
     <>
       <Helmet>
         {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
-        {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} /> }
+        {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
         {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
       </Helmet>
 
-      <NewBanner {...pageDetail.detail} />
-      <Banner2 {...pageDetail.detail} />
-      <NewPortfolio />
-      <Services {...pageDetail.detail} />
-      <EmotionalQuest {...pageDetail.detail} />
-      <LatestInsights {...pageDetail.detail} />
-      <OurIniatives {...pageDetail.detail} />
-      <CareToJoinUs {...pageDetail.detail} />
+      {
+        pageDetail.detail ?
+          <>
+            <NewBanner {...pageDetail.detail} />
+            <Banner2 {...pageDetail.detail} />
+            <NewPortfolio />
+            <Services {...pageDetail.detail} />
+            <EmotionalQuest {...pageDetail.detail} />
+            <LatestInsights {...pageDetail.detail} />
+            <OurIniatives {...pageDetail.detail} />
+            <CareToJoinUs {...pageDetail.detail} />
+          </>
+          : null
+      }
     </>
   );
 }

@@ -32,11 +32,17 @@ const SustainableGrowth = () => {
                 <link rel="canonical" href={`${BASE_URL}/sustainable-growth/`} />
             </Helmet>
 
-            <OrganisingPrinciple {...pageDetail.detail} />
-            <DigitalSg {...pageDetail.detail} />
-            <MultiDimensional {...pageDetail.detail} />
-            <Global {...pageDetail.detail} />
-            <CaseStudy {...pageDetail.detail} />
+            {
+                pageDetail.detail ?
+                    <>
+                        <OrganisingPrinciple {...pageDetail.detail} />
+                        <DigitalSg {...pageDetail.detail} />
+                        <MultiDimensional {...pageDetail.detail} />
+                        <Global {...pageDetail.detail} />
+                        <CaseStudy {...pageDetail.detail} />
+                    </>
+                    : null
+            }
         </div>
     )
 }

@@ -36,15 +36,21 @@ function AboutCorporality() {
         <link rel="canonical" href={`${BASE_URL}/about-corporality/`} />
       </Helmet>
 
-      <FirstNew {...pageDetail.detail} />
-      <Quote {...pageDetail.detail} />
-      <ThreeBoxes {...pageDetail.detail} />
-      <FearlessCreativity {...pageDetail.detail} />
-      <WorkParallax {...pageDetail.detail} />
-      <WorldMap {...pageDetail.detail} />
-      <CommunitySupport {...pageDetail.detail} />
-      <Leadership {...pageDetail.detail} />
-      <Caretojoinus {...pageDetail.detail} />
+      {
+        pageDetail.detail ?
+          <>
+            <FirstNew {...pageDetail.detail} />
+            <Quote {...pageDetail.detail} />
+            <ThreeBoxes {...pageDetail.detail} />
+            <FearlessCreativity {...pageDetail.detail} />
+            <WorkParallax {...pageDetail.detail} />
+            <WorldMap {...pageDetail.detail} />
+            <CommunitySupport {...pageDetail.detail} />
+            <Leadership {...pageDetail.detail} />
+            <Caretojoinus {...pageDetail.detail} />
+          </>
+          : null
+      }
     </>
   );
 }

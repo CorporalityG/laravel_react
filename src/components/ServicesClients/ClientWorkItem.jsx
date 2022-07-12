@@ -26,13 +26,13 @@ export const ClientWorkItem = (props) => {
                         <div className="clients-work-box clients-work-box-studies" style={{ backgroundImage: "url("+props.studiesImg+")" }} data-aos="fade-up" data-aos-delay="150">
                             <p className="studies-subtitle">{props.studiesTitle}</p>
                             <p className="studies-title">{props.studiesSubTitle}</p>
-                            <span className="clients-work-link" onClick={() => { navigate(`/${props.studiesBtnLink}`); topHandle(); }}>{props.studiesBtnText} <img src={`${BASE_URL}/img/ServicesClients/right-arrow-blue.png`} alt="->" /></span>
+                            <span className="clients-work-link" onClick={() => { navigate(`/client/${props.studiesBtnLink}`); topHandle(); }}>{props.studiesBtnText} <img src={`${BASE_URL}/img/ServicesClients/right-arrow-blue.png`} alt="->" /></span>
                         </div>
                         <div className="clients-work-box clients-work-box-steps" data-aos="fade-up" data-aos-delay="300">
                             <p className="steps-title">{props.offeringTitle}</p>
                             <div className="steps-content" dangerouslySetInnerHTML={{ __html: props.offeringDescription }}>
                             </div>
-                            <span className="clients-work-link" onClick={() => { navigate(`/${props.offeringBtnLink}`); topHandle(); }}>{props.offeringBtnText} <img src={`${BASE_URL}/img/ServicesClients/right-arrow-blue.png`} alt="->" /></span>
+                            <span className="clients-work-link" onClick={() => { navigate(`/client/${props.offeringBtnLink}`); topHandle(); }}>{props.offeringBtnText} <img src={`${BASE_URL}/img/ServicesClients/right-arrow-blue.png`} alt="->" /></span>
                         </div>
                     </div>
                 </div>

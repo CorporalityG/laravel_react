@@ -1,85 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Carousel from 'react-grid-carousel'
 import CauseStudyItem from './CauseStudyItem';
-import { BASE_URL } from '../../config';
+import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { useParams } from 'react-router-dom'
 
 function RelatedCaseStudyCarousel(props) {
+
+    const params = useParams();
+    const [relatedClient, setRelatedClient] = useState([]);
+
+    useEffect(() => {
+        getRelatedClient(params.client_slug);
+    }, [params])
+
+    async function getRelatedClient(slug) {
+        let result = await fetch(`${API_BASE_URL}/related-clients/${slug}`);
+        result = await result.json();
+        setRelatedClient(result);
+    }
+
     return (
         <div className="related-case-study-carousel">
-            <Carousel cols={3} rows={1} gap={15} arrowLeft={<div className="related-case-study-arrow related-case-study-arrow-prev"><img src={BASE_URL + '/img/case-study-arrow-prev.png'} alt="<-" /></div>} arrowRight={<div className="related-case-study-arrow related-case-study-arrow-next"><img src={BASE_URL + '/img/case-study-arrow-next.png'} alt="->" /></div>} responsiveLayout={[{ breakpoint: 825, cols: 2, rows: 1 }]}>
+            {
+                relatedClient && relatedClient.length > 0 ?
+                    <Carousel cols={3} rows={1} gap={15} arrowLeft={<div className="related-case-study-arrow related-case-study-arrow-prev"><img src={BASE_URL + '/img/case-study-arrow-prev.png'} alt="<-" /></div>} arrowRight={<div className="related-case-study-arrow related-case-study-arrow-next"><img src={BASE_URL + '/img/case-study-arrow-next.png'} alt="->" /></div>} responsiveLayout={[{ breakpoint: 825, cols: 2, rows: 1 }]}>
 
-                {
-                    props.slug !== 'divine-intercession' ?
-                    <Carousel.Item>
-                        <CauseStudyItem
-                            thumbnail={BASE_URL + '/img/Divine-Intercession-Client.png'}
-                            title={'Divine Intercession'}
-                            slug={'divine-intercession'}
-                        />
-                    </Carousel.Item>
+                        {
+                            relatedClient.map((item) =>
+                                <Carousel.Item key={`${item.id}`}>
+                                    <CauseStudyItem
+                                        thumbnail={`${API_IMG_URL}clients/${item.image}`}
+                                        title={`${item.client_name}`}
+                                        slug={`${item.slug}`}
+                                    />
+                                </Carousel.Item>
+                            )
+                        }
+                    </Carousel>
                     : null
-                }
-
-                {
-                    props.slug !== 'build-q' ?
-                    <Carousel.Item>
-                        <CauseStudyItem
-                            thumbnail={BASE_URL + '/img/BuildQ-Client.png'}
-                            title={'BuildQ Group'}
-                            slug={'build-q'}
-                        />
-                    </Carousel.Item>
-                    : null
-                }
-
-                {
-                    props.slug !== 'fastgrow-finance' ?
-                        <Carousel.Item>
-                        <CauseStudyItem
-                            thumbnail={BASE_URL + '/img/Fastgrow-Client.png'}
-                            title={'Fastgrow Finance'}
-                            slug={'fastgrow-finance'}
-                        />
-                    </Carousel.Item>
-                    : null
-                }
-
-                {
-                    props.slug !== 'tech-consultants' ?
-                    <Carousel.Item>
-                        <CauseStudyItem
-                            thumbnail={BASE_URL + '/img/TechConsultants-Client.png'}
-                            title={'Tech Consultants'}
-                            slug={'tech-consultants'}
-                        />
-                    </Carousel.Item>
-                    : null
-                }
-
-                {
-                    props.slug !== 'sk-insurance' ?
-                    <Carousel.Item>
-                        <CauseStudyItem
-                            thumbnail={BASE_URL + '/img/SK-Insurance-Client.png'}
-                            title={'SK Insurance'}
-                            slug={'sk-insurance'}
-                        />
-                    </Carousel.Item>
-                    : null
-                }
-
-                {
-                    props.slug !== 'klek-services' ?
-                    <Carousel.Item>
-                        <CauseStudyItem
-                            thumbnail={BASE_URL + '/img/Klek-Services-Client.png'}
-                            title={'Klek Services'}
-                            slug={'klek-services'}
-                        />
-                    </Carousel.Item>
-                    : null
-                }
-            </Carousel>
+            }
         </div>
     )
 }

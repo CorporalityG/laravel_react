@@ -45,16 +45,14 @@ class ClientController extends Controller
         {
             $RS_Results = array();
 
+            $RS_Qry = Client::latest();
+
             if( !empty($request->slug) )
             {
-                $RS_Qry = Client::latest()
-                            ->where('slug', '!=', $request->slug)->take(9)->get();
-
-                if( !empty($RS_Qry) )
-                {
-                    $RS_Results = $RS_Qry;
-                }
+                $RS_Qry->where('slug', '!=', $request->slug);
             }
+
+            $RS_Results = $RS_Qry->take(9)->get();
 
             return $RS_Results;
         }

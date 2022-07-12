@@ -8,6 +8,7 @@ import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
 import { Helmet } from "react-helmet";
 import { GlobalConference } from './GlobalConference'
+import { ResearchPaperModal } from './ResearchPaperModal'
 
 function descLimit(text, size) {
     return text?.length > size ? text.substr(0, size - 1) + '...' : text + '...';
@@ -50,6 +51,13 @@ function Fintech() {
         let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
         result = await result.json();
         setPageDetail(result);
+    }
+
+    const [show, setShow] = useState(0);
+
+    const handleClose = () => setShow(false);
+    const handleShow = (modalId) => {
+        setShow(modalId);
     }
 
     return (
@@ -98,7 +106,9 @@ function Fintech() {
 
                                                         <div className='paper-survey-item-subtitle'>{`${pageDetail.detail.research_paper_subtitle}`}</div>
 
-                                                        <a href={pageDetail.detail.research_paper_pdf ? `${API_IMG_URL}pages/${pageDetail.detail.research_paper_pdf}` : '/'} target="_blank" className='paper-survey-item-link'>{`${pageDetail.detail.research_paper_btn_text}`}</a>
+                                                        <div className="paper-survey-item-link" onClick={() => handleShow(1)}>{`${pageDetail.detail.research_paper_btn_text}`}</div>
+
+                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/ResearchPaperStartReadingHighTech/formperma/LwepVM8WanRl1JQJQ4JgvCQc_QLwpLr8vskmWOTyxKI`} />
                                                     </div>
                                                 </div>
 
@@ -108,7 +118,7 @@ function Fintech() {
 
                                                         <img src={`${API_IMG_URL}pages/${pageDetail.detail.survey_image}`} alt={`${pageDetail.detail.survey_title}`} className="industry-your-om" />
 
-                                                        <Link to={`/${pageDetail.detail.survey_btn_link ?? ''}`}className='paper-survey-item-link'>{`${pageDetail.detail.survey_btn_text}`}</Link>
+                                                        <Link to={`/${pageDetail.detail.survey_btn_link ?? ''}`} className='paper-survey-item-link'>{`${pageDetail.detail.survey_btn_text}`}</Link>
                                                     </div>
                                                 </div>
                                             </div>
@@ -124,15 +134,13 @@ function Fintech() {
             <div className='industry-blog-name-section'>
                 <div className='container-lg'>
                     <div className='row'>
-                        <div className='col-lg-12'>
+                        <div className='col-lg-6'>
                             {
                                 latestIndustrialArticle ?
                                     <h2>{latestIndustrialArticle.title}</h2>
                                     : null
                             }
-                        </div>
 
-                        <div className='col-lg-6'>
                             <div className='industry-blog-name-desc'>
                                 {
                                     latestIndustrialArticle.title ?

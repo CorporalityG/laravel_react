@@ -124,15 +124,13 @@ function Finance() {
             <div className='industry-blog-name-section'>
                 <div className='container-lg'>
                     <div className='row'>
-                        <div className='col-lg-12'>
+                        <div className='col-lg-6'>
                             {
                                 latestIndustrialArticle ?
                                     <h2>{latestIndustrialArticle.title}</h2>
                                     : null
                             }
-                        </div>
 
-                        <div className='col-lg-6'>
                             <div className='industry-blog-name-desc'>
                                 {
                                     latestIndustrialArticle.title ?

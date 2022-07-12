@@ -37,15 +37,21 @@ const WorkWithClient = () => {
                 <link rel="canonical" href={`${BASE_URL}/work-with-clients/`} />
             </Helmet>
 
-            <Clients {...pageDetail.detail} />
-            <Combating {...pageDetail.detail} />
-            <Ideation {...pageDetail.detail} />
-            <Limitless {...pageDetail.detail} />
-            <Innovation {...pageDetail.detail} />
-            <LogoText {...pageDetail.detail} />
-            <Logos {...pageDetail.detail} />
-            <TeamSpiritNew {...pageDetail.detail} />
-            <NewsLetter {...pageDetail.detail} />
+            {
+                pageDetail.detail ?
+                    <>
+                        <Clients {...pageDetail.detail} />
+                        <Combating {...pageDetail.detail} />
+                        <Ideation {...pageDetail.detail} />
+                        <Limitless {...pageDetail.detail} />
+                        <Innovation {...pageDetail.detail} />
+                        <LogoText {...pageDetail.detail} />
+                        <Logos {...pageDetail.detail} />
+                        <TeamSpiritNew {...pageDetail.detail} />
+                        <NewsLetter {...pageDetail.detail} />
+                    </>
+                    : null
+            }
         </div>
     )
 }

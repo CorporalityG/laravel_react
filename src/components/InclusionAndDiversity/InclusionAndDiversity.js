@@ -34,13 +34,19 @@ const InclusionAndDiversity = () => {
                 <link rel="canonical" href={`${BASE_URL}/inclusion-and-diversity/`} />
             </Helmet>
 
-            <Inclusion {...pageDetail.detail} />
-            <OurFaith {...pageDetail.detail} />
-            <Hover {...pageDetail.detail} />
-            <Duty {...pageDetail.detail} />
-            <Leadership {...pageDetail.detail} />
-            <Career {...pageDetail.detail} />
-            <Newsletter {...pageDetail.detail} />
+            {
+                pageDetail.detail ?
+                    <>
+                        <Inclusion {...pageDetail.detail} />
+                        <OurFaith {...pageDetail.detail} />
+                        <Hover {...pageDetail.detail} />
+                        <Duty {...pageDetail.detail} />
+                        <Leadership {...pageDetail.detail} />
+                        <Career {...pageDetail.detail} />
+                        <Newsletter {...pageDetail.detail} />
+                    </>
+                    : null
+            }
         </div>
     )
 }

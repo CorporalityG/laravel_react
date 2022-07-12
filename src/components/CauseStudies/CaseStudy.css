@@ -391,6 +391,10 @@
     background-color: #fff;
     margin-bottom: 60px;
   }
+  .cause-studies-container .case-study-related-container .related-case-study-carousel .case-study-item .case-study-item-img {
+    height: 300px;
+    overflow-y: auto;
+  }
   .cause-studies-container .case-study-related-container .related-case-study-carousel .case-study-item .case-study-item-img img {
       width: 100%;
   }

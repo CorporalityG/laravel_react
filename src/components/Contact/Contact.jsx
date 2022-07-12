@@ -29,10 +29,14 @@ const Contact = () => {
                 <link rel="canonical" href={`${BASE_URL}/contact/`} />
             </Helmet>
 
-            <div className="d-flex flex-column justify-content-center ">
-                <ConForm {...pageDetail.detail} />
-                <ContactMap {...pageDetail.detail} />
-            </div>
+            {
+                pageDetail.detail ?
+                    <div className="d-flex flex-column justify-content-center ">
+                        <ConForm {...pageDetail.detail} />
+                        <ContactMap {...pageDetail.detail} />
+                    </div>
+                    : null
+            }
         </>
     )
 }

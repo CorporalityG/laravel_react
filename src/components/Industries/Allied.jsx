@@ -108,7 +108,7 @@ function AlliedIndustries() {
 
                                                         <img src={`${API_IMG_URL}pages/${pageDetail.detail.survey_image}`} alt={`${pageDetail.detail.survey_title}`} className="industry-your-om" />
 
-                                                        <Link to={`/${pageDetail.detail.survey_btn_link ?? ''}`}className='paper-survey-item-link'>{`${pageDetail.detail.survey_btn_text}`}</Link>
+                                                        <Link to={`/${pageDetail.detail.survey_btn_link ?? ''}`} className='paper-survey-item-link'>{`${pageDetail.detail.survey_btn_text}`}</Link>
                                                     </div>
                                                 </div>
                                             </div>
@@ -124,15 +124,13 @@ function AlliedIndustries() {
             <div className='industry-blog-name-section'>
                 <div className='container-lg'>
                     <div className='row'>
-                        <div className='col-lg-12'>
+                        <div className='col-lg-6'>
                             {
                                 latestIndustrialArticle ?
                                     <h2>{latestIndustrialArticle.title}</h2>
                                     : null
                             }
-                        </div>
 
-                        <div className='col-lg-6'>
                             <div className='industry-blog-name-desc'>
                                 {
                                     latestIndustrialArticle.title ?
@@ -201,7 +199,7 @@ function AlliedIndustries() {
                             category={`Construction`}
                             slug={`construction`}
                         />
-                        
+
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/nanotech.png`}
                             hoverIcon={`${BASE_URL}/img/industries/nanotech-hover.png`}

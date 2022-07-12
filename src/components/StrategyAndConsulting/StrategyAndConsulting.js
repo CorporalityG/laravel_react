@@ -33,12 +33,18 @@ const StrategyAndConsulting = () => {
                 <link rel="canonical" href={`${BASE_URL}/strategy-and-consulting/`} />
             </Helmet>
 
-            <SACComp1 {...pageDetail.detail} />
-            <SACComp2 {...pageDetail.detail} />
-            <SACComp3 {...pageDetail.detail} />
-            <SACComp4 {...pageDetail.detail} />
-            <SACComp5 {...pageDetail.detail} />
-            <SACComp6 {...pageDetail.detail} />
+            {
+                pageDetail.detail ?
+                    <>
+                        <SACComp1 {...pageDetail.detail} />
+                        <SACComp2 {...pageDetail.detail} />
+                        <SACComp3 {...pageDetail.detail} />
+                        <SACComp4 {...pageDetail.detail} />
+                        <SACComp5 {...pageDetail.detail} />
+                        <SACComp6 {...pageDetail.detail} />
+                    </>
+                    : null
+            }
         </div>
     )
 }
