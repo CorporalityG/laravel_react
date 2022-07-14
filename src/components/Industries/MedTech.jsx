@@ -9,6 +9,8 @@ import AOS from "aos";
 import { Helmet } from "react-helmet";
 import { GlobalConference } from './GlobalConference'
 import { ResearchPaperModal } from './ResearchPaperModal'
+import { EBookModal } from './EBookModal'
+import Modal from 'react-bootstrap/Modal'
 
 function descLimit(text, size) {
     return text?.length > size ? text.substr(0, size - 1) + '...' : text + '...';
@@ -55,7 +57,7 @@ function MedTech() {
 
     const [show, setShow] = useState(0);
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => setShow(0);
     const handleShow = (modalId) => {
         setShow(modalId);
     }
@@ -94,7 +96,9 @@ function MedTech() {
                                                         <img src={`${API_IMG_URL}pages/${pageDetail.detail.ebook_image}`} alt={`${pageDetail.detail.ebook_title}`} className="industry-cs" />
                                                         <img src={`${BASE_URL}/img/industries/cs-pattern.png`} alt={`cs-pattern`} className="industry-cs-pattern" />
 
-                                                        <Link to={`/${pageDetail.detail.ebook_btn_link ?? ''}`} className='industry-cs-link'>{`${pageDetail.detail.ebook_btn_text}`}</Link>
+                                                        <div className="industry-cs-link" onClick={() => handleShow('ebook')}>{`${pageDetail.detail.ebook_btn_text}`}</div>
+
+                                                        <EBookModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/CorporalityStrikerEbookMedTech/formperma/yFTwZcjeslemM01DHDRWuVfSMVxifdAzDA8qPqki8bA`} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -106,11 +110,9 @@ function MedTech() {
 
                                                         <div className='paper-survey-item-subtitle'>{`${pageDetail.detail.research_paper_subtitle}`}</div>
 
-                                                        {/* <a href={pageDetail.detail.research_paper_pdf ? `${API_IMG_URL}pages/${pageDetail.detail.research_paper_pdf}` : '/'} target="_blank" className='paper-survey-item-link'>{`${pageDetail.detail.research_paper_btn_text}`}</a> */}
-
                                                         <div className="paper-survey-item-link" onClick={() => handleShow(1)}>{`${pageDetail.detail.research_paper_btn_text}`}</div>
 
-                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/ResearchPaperStartReadingMetalIndustry/formperma/uZGwZIUoPn35OGnnn9SNkPK9RxhaahN3T2qK-El-ii4`} />
+                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/ResearchPaperStartReading/formperma/zc5zrDlh58eSEjyeO_r_L4nJ_h8ENTBVav_IhAY6Yzc`} />
                                                     </div>
                                                 </div>
 
@@ -166,6 +168,8 @@ function MedTech() {
                                                     )
                                                 }
                                             </ul>
+
+                                            <Link to={`/search/${category}`} className="industry-blog-name-link">Learn More <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
                                         </>
                                         : null
                                 }
@@ -184,6 +188,37 @@ function MedTech() {
                                     </>
                                     : null
                             }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='industry-rp-announcement-section'>
+                <div className='container-lg'>
+                    <div className='row industry-rp-announcement-row'>
+                        <div className='col-lg-3 industry-rp-announcement-img-col'>
+                            <div className='industry-rp-announcement-img'>
+                                <img src={`${BASE_URL}/img/industries/Reseach-Paper-bg.png`} alt="Research Paper" />
+                            </div>
+                        </div>
+
+                        <div className='col-lg-9'>
+                            <div className='industry-rp-announcement-content'>
+                                <div className='rp-announcement-title'>Research Paper</div>
+
+                                <div className='rp-announcement-subtitle'>Can The Health Care Industry Look Up To Marketing For A Solution?</div>
+
+                                <div className='rp-announcement-btn'>
+                                    <div className="rp-announcement-link" onClick={() => handleShow(2)}>Read More <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></div>
+
+                                    <Modal show={show === 2 ? show : ''} onHide={handleClose} className="industry-banner-paper-modal">
+                                        <Modal.Header closeButton></Modal.Header>
+                                        <Modal.Body>
+                                            <iframe src={`https://forms.zohopublic.com.au/corporality/form/ResearchPaperStartReadingHealthcare/formperma/Tu_Jsbdg34d1dJW4bo9IaqKdflXCkdD3brFT6vf-hMg`}></iframe>
+                                        </Modal.Body>
+                                    </Modal>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -222,8 +257,8 @@ function MedTech() {
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/finance.png`}
                             hoverIcon={`${BASE_URL}/img/industries/finance-hover.png`}
-                            category={`Finance`}
-                            slug={`finance`}
+                            category={`Fintech / Finance`}
+                            slug={`fintech`}
                         />
 
                         <OtherIndustryItem
@@ -236,7 +271,7 @@ function MedTech() {
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/agriculture.png`}
                             hoverIcon={`${BASE_URL}/img/industries/agriculture-hover.png`}
-                            category={`Agriculture`}
+                            category={`Agrotech / Agriculture`}
                             slug={`agriculture`}
                         />
 

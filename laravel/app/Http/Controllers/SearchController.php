@@ -31,7 +31,7 @@ class SearchController extends Controller
 
                 $qryCsuit = Csuit::select('id', 'title', 'slug', 'image', 'short_description', 'description', 'created_at', 'updated_at', DB::raw('"csuit" as source'));
 
-                $qryIndustrialArticle = IndustrialArticle::select('id', 'title', 'slug', 'image', 'short_description', 'description', 'created_at', 'updated_at', DB::raw('"industrail-article" as source'));
+                $qryIndustrialArticle = IndustrialArticle::select('id', 'title', 'slug', 'image', 'short_description', 'description', 'created_at', 'updated_at', DB::raw('"industry" as source'));
 
                 if( $request->search_keyword=='articles' || $request->search_keyword=='article' || $request->search_keyword=='service-insights' )
                 {
@@ -106,6 +106,45 @@ class SearchController extends Controller
                     if( !empty($request->filter_category) )
                     {
                         $category = IndustrialArticleCategory::with(['industrialArticles:id', 'subcategoriesIndustrialArticles:id'])->whereIn('category_slug', explode(',', $request->filter_category))->get();
+
+                        if( !empty($category) )
+                        {
+                            $IndustrialArticleIDs = call_user_func_array('array_merge', array_column($category->toArray(), 'industrial_articles'));
+                            $IndustrialArticles = array_column($IndustrialArticleIDs, 'id');
+
+                            $subCatIndustrialArticleIDs = call_user_func_array('array_merge', array_column($category->toArray(), 'subcategories_industrial_articles'));
+                            $subCatIndustrialArticles = array_column($subCatIndustrialArticleIDs, 'id');
+                            
+                            $allIndustrialArticles = array_unique(array_merge($IndustrialArticles, $subCatIndustrialArticles));
+
+                            $qry->whereIn('id', $allIndustrialArticles);
+                        }
+                    }
+                }
+                else if( $request->search_keyword=='medtech' || 
+                    $request->search_keyword=='fintech' || 
+                    $request->search_keyword=='geospatial' || 
+                    $request->search_keyword=='biotech' || 
+                    $request->search_keyword=='health-care' || 
+                    $request->search_keyword=='nanotech' || 
+                    $request->search_keyword=='allied' || 
+                    $request->search_keyword=='edutech' || 
+                    $request->search_keyword=='high-tech' || 
+                    $request->search_keyword=='metal' || 
+                    $request->search_keyword=='construction' || 
+                    $request->search_keyword=='manufacturing' || 
+                    $request->search_keyword=='information-technology' || 
+                    $request->search_keyword=='agriculture' || 
+                    $request->search_keyword=='insurtech' || 
+                    $request->search_keyword=='utilities-and-energy' || 
+                    $request->search_keyword=='age-care-and-retirement' 
+                )
+                {
+                    $qry = $qryIndustrialArticle;
+                    
+                    if( !empty($request->search_keyword) )
+                    {
+                        $category = IndustrialArticleCategory::with(['industrialArticles:id', 'subcategoriesIndustrialArticles:id'])->whereIn('category_slug', explode(',', $request->search_keyword))->get();
 
                         if( !empty($category) )
                         {

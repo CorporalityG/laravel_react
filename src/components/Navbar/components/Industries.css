@@ -5,7 +5,7 @@
     /* to center the container */
     left: 50%;
     transform: translateX(-50%);
-    height: 324px;
+    height: auto;
     box-shadow: 2px 5px 10px #cccccc;
     padding: 20px 0px !important;
     color: #31647C;

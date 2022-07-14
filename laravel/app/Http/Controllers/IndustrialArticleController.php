@@ -346,7 +346,7 @@ class IndustrialArticleController extends Controller
                     $qry = $category->industrialArticles()
                                 ->with(['categories', 'subcategories']);
 
-                    $results = $qry->skip(1)->take(5)->latest()->get();
+                    $results = $qry->skip(1)->take(3)->latest()->get();
                 }
             }
 

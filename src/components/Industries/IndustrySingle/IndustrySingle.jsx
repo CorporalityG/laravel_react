@@ -130,7 +130,7 @@ function IndustrySingle() {
 
                                                     <OtherIndustryItem
                                                         icon={`${BASE_URL}/img/industries/agriculture.png`}
-                                                        category={`Agriculture`}
+                                                        category={`Agrotech / Agriculture`}
                                                         slug={`agriculture`}
                                                     />
 
@@ -148,8 +148,8 @@ function IndustrySingle() {
 
                                                     <OtherIndustryItem
                                                         icon={`${BASE_URL}/img/industries/finance.png`}
-                                                        category={`Finance`}
-                                                        slug={`finance`}
+                                                        category={`Fintech / Finance`}
+                                                        slug={`fintech`}
                                                     />
 
                                                     <OtherIndustryItem

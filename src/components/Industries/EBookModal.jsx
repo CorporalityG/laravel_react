@@ -1,12 +1,12 @@
 import Modal from 'react-bootstrap/Modal'
 
-export const ResearchPaperModal = (props) => {
+export const EBookModal = (props) => {
 
     const { show, handleClose } = props;
 
     return (
         <>
-            <Modal show={show === 1 ? show : ''} onHide={handleClose} className="industry-banner-paper-modal">
+            <Modal show={show === 'ebook' ? show : ''} onHide={handleClose} className="industry-banner-ebook-modal">
                 <Modal.Header closeButton></Modal.Header>
                 <Modal.Body>
                     {props.src && <iframe src={`${props.src}`}></iframe>}

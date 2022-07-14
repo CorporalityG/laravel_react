@@ -135,9 +135,15 @@
                             @include('pages.page.utilities-and-energy')
                         @elseif( $RS_Row->slug=='clients' )
                             @include('pages.page.clients')
+                        @elseif( $RS_Row->slug=='health-care' )
+                            @include('pages.page.health-care')
+                        @elseif( $RS_Row->slug=='age-care-and-retirement' )
+                            @include('pages.page.age-care-and-retirement')
+                        @elseif( $RS_Row->slug=='industrial-equipment' )
+                            @include('pages.page.industrial-equipment')
                         @endif
 
-
+                        
                         @if( $RS_Row->slug=='client-section' )
                             @include('pages.section.client')
                         @elseif( $RS_Row->slug=='our-insights-section' )

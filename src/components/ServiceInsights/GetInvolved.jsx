@@ -38,6 +38,7 @@ export const GetInvolved = () => {
                                 content={`<p>${pageSectionDetail.detail.involved_partner_description ?? ''}</p>`}
                                 btnText={`${pageSectionDetail.detail.involved_partner_btn_text}`}
                                 btnLink={`/${pageSectionDetail.detail.involved_partner_btn_link}`}
+                                btnLinkTarget={``}
                             />
 
                             <GetInvolvedItem
@@ -45,7 +46,8 @@ export const GetInvolved = () => {
                                 title={`${pageSectionDetail.detail.involved_community_title}`}
                                 content={`<p>${pageSectionDetail.detail.involved_community_description ?? ''}</p>`}
                                 btnText={`${pageSectionDetail.detail.involved_community_btn_text}`}
-                                btnLink={`/${pageSectionDetail.detail.involved_community_btn_link}`}
+                                btnLink={`${pageSectionDetail.detail.involved_community_btn_link}`}
+                                btnLinkTarget={`_blank`}
                             />
                         </div>
                     </div>

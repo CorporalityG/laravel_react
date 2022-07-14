@@ -6,6 +6,10 @@ import { OtherIndustryItem } from './OtherIndustryItem'
 import { GetInvolved } from '../ServiceInsights/GetInvolved'
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
+import { Helmet } from "react-helmet";
+import { GlobalConference } from './GlobalConference'
+import { ResearchPaperModal } from './ResearchPaperModal'
+import { EBookModal } from './EBookModal'
 
 function descLimit(text, size) {
     return text?.length > size ? text.substr(0, size - 1) + '...' : text + '...';
@@ -18,6 +22,10 @@ function AgeCareAndRetirement() {
     const [latestIndustrialArticle, setLatestIndustrialArticle] = useState([]);
     const [realtedIndustrialArticles, setRealtedIndustrialArticles] = useState([]);
 
+    const page_slug = 'age-care-and-retirement';
+
+    const [pageDetail, setPageDetail] = useState([]);
+
     useEffect(() => {
         AOS.init({
             duration: 2000,
@@ -25,6 +33,7 @@ function AgeCareAndRetirement() {
 
         getLatestIndustrialArticleData()
         getRealtedIndustrialArticlesData();
+        getPageDetail()
     }, []);
 
     async function getLatestIndustrialArticleData() {
@@ -39,56 +48,90 @@ function AgeCareAndRetirement() {
         setRealtedIndustrialArticles(result);
     }
 
+    async function getPageDetail() {
+        let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
+        result = await result.json();
+        setPageDetail(result);
+    }
+
+    const [show, setShow] = useState(0);
+
+    const handleClose = () => setShow(false);
+    const handleShow = (modalId) => {
+        setShow(modalId);
+    }
+
     return (
         <div className='industry-page age-care-and-retirement-page'>
+            <Helmet>
+                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
+                <link rel="canonical" href={`${BASE_URL}/brand-positioning/`} />
+            </Helmet>
+
             <div className='industry-banner-section'>
-                <img src={`${BASE_URL}/img/industries/industry-banner.png`} alt={`Industry Banner`} className="industry-banner-img" />
+                {
+                    pageDetail.detail ?
+                        <>
+                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="industry-banner-img" />
 
-                <div className='industry-banner-content-main'>
-                    <div className='container-lg'>
-                        <div className='row'>
-                            <div className='col-lg-4'>
-                                <div className='industry-banner-content'>
-                                    <h1>Age Care and retirement Industry</h1>
-                                    <div className='industry-banner-desc'>
-                                        <p>Age care and retirement are among the most under served, but significantly growing industries. The demand for aged care is forecast to increase year-on-year as societal models change. Consequently, new technologies are slowly being introduced to give some spotlight on these industries and connect with their target market.</p>
+                            <div className='industry-banner-content-main'>
+                                <div className='container-lg'>
+                                    <div className='row'>
+                                        <div className='col-lg-4'>
+                                            <div className='industry-banner-content'>
+                                                <h1>{`${pageDetail.detail.banner_title}`}</h1>
+                                                <div className='industry-banner-desc' dangerouslySetInnerHTML={{ __html: pageDetail.detail.banner_description }}></div>
+                                            </div>
+                                        </div>
+
+                                        <div className='col-lg-8'>
+                                            <div className='row'>
+                                                <div className='col-lg-6 offset-lg-5'>
+                                                    <div className='industry-banner-ebook'>
+                                                        <div className='ib-ebook-ttile'>{`${pageDetail.detail.ebook_title}`}</div>
+
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.ebook_image}`} alt={`${pageDetail.detail.ebook_title}`} className="industry-cs" />
+                                                        <img src={`${BASE_URL}/img/industries/cs-pattern.png`} alt={`cs-pattern`} className="industry-cs-pattern" />
+
+                                                        <div className="industry-cs-link" onClick={() => handleShow('ebook')}>{`${pageDetail.detail.ebook_btn_text}`}</div>
+
+                                                        <EBookModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/CorporalityStrikerEbookAgecare/formperma/jgSHqYXJDLzeFIZnyzlvnsUa0Cpw1k_oHzLu-rdSGfw`} />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className='row industry-banner-paper-survey-row'>
+                                                <div className='col-md-6'>
+                                                    <div className='industry-banner-paper-survey-item industry-banner-paper' style={{ backgroundImage: `url(${API_IMG_URL}pages/${pageDetail.detail.research_paper_image})` }}>
+                                                        <div className='paper-survey-item-title'>{`${pageDetail.detail.research_paper_title}`}</div>
+
+                                                        <div className='paper-survey-item-subtitle'>{`${pageDetail.detail.research_paper_subtitle}`}</div>
+
+                                                        <div className="paper-survey-item-link" onClick={() => handleShow(1)}>{`${pageDetail.detail.research_paper_btn_text}`}</div>
+
+                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/ResearchPaperStartReadingAgecare/formperma/n4WLRbkr7vWP1hyGX2ZRFGrMj3hVXblxOAcc8vrdQVQ`} />
+                                                    </div>
+                                                </div>
+
+                                                <div className='col-md-6'>
+                                                    <div className='industry-banner-paper-survey-item industry-banner-survey'>
+                                                        <div className='ib-s-title'>{`${pageDetail.detail.survey_title}`}</div>
+
+                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.survey_image}`} alt={`${pageDetail.detail.survey_title}`} className="industry-your-om" />
+
+                                                        <Link to={`/${pageDetail.detail.survey_btn_link ?? ''}`} className='paper-survey-item-link'>{`${pageDetail.detail.survey_btn_text}`}</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div className='col-lg-8'>
-                                <div className='row'>
-                                    <div className='col-lg-6 offset-lg-5'>
-                                        <div className='industry-banner-ebook'>
-                                            <div className='ib-ebook-ttile'>Ebook</div>
-                                            <img src={`${BASE_URL}/img/industries/CORPORALITY-STRIKERS-bg.png`} alt={`CORPORALITY STRIKERS`} className="industry-cs" />
-                                            <img src={`${BASE_URL}/img/industries/cs-pattern.png`} alt={`cs-pattern`} className="industry-cs-pattern" />
-                                            <Link to={`/`} className='industry-cs-link'>Download</Link>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className='row industry-banner-paper-survey-row'>
-                                    <div className='col-md-6'>
-                                        <div className='industry-banner-paper-survey-item industry-banner-paper'>
-                                            <div className='paper-survey-item-title'>Research Paper</div>
-                                            <div className='paper-survey-item-subtitle'>CAN THE MEDTECH INDUSTRY LOOK UP TO MARKETING FOR A SOLUTION?</div>
-                                            <Link to={`/`} className='paper-survey-item-link'>Start Reading</Link>
-                                        </div>
-                                    </div>
-
-                                    <div className='col-md-6'>
-                                        <div className='industry-banner-paper-survey-item industry-banner-survey'>
-                                            <div className='ib-s-title'>Survey</div>
-                                            <img src={`${BASE_URL}/img/industries/your-om.png`} alt={`your-om`} className="industry-your-om" />
-                                            <Link to={`/`} className='paper-survey-item-link'>Get Started</Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </>
+                        : null
+                }
             </div>
 
             <div className='industry-blog-name-section'>
@@ -124,6 +167,8 @@ function AgeCareAndRetirement() {
                                                     )
                                                 }
                                             </ul>
+
+                                            <Link to={`/search/${category}`} className="industry-blog-name-link">Learn More <svg viewBox="0 0 21 18" focusable="false" aria-hidden="true"><path d="M0.266478 8.99987C0.266478 9.33987 0.40148 9.66486 0.641486 9.90486C0.881493 10.1449 1.20648 10.2799 1.54648 10.2799L15.5852 10.2799L10.3814 15.1311C10.1189 15.3586 9.96136 15.6836 9.94261 16.0311C9.92511 16.3773 10.0489 16.7173 10.2864 16.9711C10.5239 17.2248 10.8538 17.3711 11.2014 17.3773C11.5488 17.3823 11.8839 17.2461 12.1288 16.9998L19.71 9.93741C19.9687 9.69491 20.1162 9.35616 20.1162 9.00115C20.1162 8.64614 19.9687 8.30739 19.71 8.0649L12.1289 0.999936C11.6113 0.51744 10.8014 0.544929 10.3189 1.06244C9.83637 1.57869 9.86511 2.38992 10.3814 2.87242L15.5852 7.71978L1.54648 7.71978C1.20648 7.71978 0.881492 7.85478 0.641492 8.09478C0.401492 8.33479 0.266482 8.65978 0.266482 8.99978L0.266478 8.99987Z"></path></svg></Link>
                                         </>
                                         : null
                                 }
@@ -159,7 +204,7 @@ function AgeCareAndRetirement() {
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/nanotech.png`}
                             hoverIcon={`${BASE_URL}/img/industries/nanotech-hover.png`}
-                            category={`Medtech`}
+                            category={`Medtech / Health Care`}
                             slug={`medtech`}
                         />
 
@@ -180,8 +225,8 @@ function AgeCareAndRetirement() {
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/finance.png`}
                             hoverIcon={`${BASE_URL}/img/industries/finance-hover.png`}
-                            category={`Finance`}
-                            slug={`finance`}
+                            category={`Fintech / Finance`}
+                            slug={`fintech`}
                         />
 
                         <OtherIndustryItem
@@ -194,7 +239,7 @@ function AgeCareAndRetirement() {
                         <OtherIndustryItem
                             icon={`${BASE_URL}/img/industries/agriculture.png`}
                             hoverIcon={`${BASE_URL}/img/industries/agriculture-hover.png`}
-                            category={`Agriculture`}
+                            category={`Agrotech / Agriculture`}
                             slug={`agriculture`}
                         />
 
@@ -215,33 +260,7 @@ function AgeCareAndRetirement() {
                 </div>
             </div>
 
-            <div className='industry-global-conference-section'>
-                <img src={`${BASE_URL}/img/industries/global-conference-bg.png`} alt={`Global Conference`} className="industry-global-conference-banner-bg" />
-
-                <div className='industry-global-conference-content-main'>
-                    <div className='container-lg'>
-                        <div className='row'>
-                            <div className='col-lg-6'>
-                                <div className='industry-global-conference-content'>
-                                    <p><span>Corporality Global</span> is organising its yearly conference in Sydney,</p>
-
-                                    <p>For pricing and registration also of the 2022 event, check on </p>
-
-                                    <a href='https://corporality.global/club/corporality-global-event/#Ticket' target="_blank">Register Now</a>
-                                </div>
-                            </div>
-
-                            <div className='col-lg-6'>
-                                <div className='industry-global-conference-img'>
-                                    <a href='https://corporality.global/club/corporality-global-event/#Ticket' target="_blank">
-                                        <img src={`${BASE_URL}/img/industries/global-conference-banner.png`} alt={`Global Conference 2022`} />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <GlobalConference />
 
             <GetInvolved />
 
