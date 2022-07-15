@@ -97,7 +97,7 @@ function Insurtech() {
 
                                                         <div className="industry-cs-link" onClick={() => handleShow('ebook')}>{`${pageDetail.detail.ebook_btn_text}`}</div>
 
-                                                        <EBookModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/CorporalityStrikerEbookInsureTech/formperma/tvfnoXMySsotZBNU6zdGdT3OvvJXerAms8fnCjfTMPo`} />
+                                                        <EBookModal show={show} handleClose={handleClose} src={`${pageDetail.detail.ebook_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,7 +111,7 @@ function Insurtech() {
 
                                                         <div className="paper-survey-item-link" onClick={() => handleShow(1)}>{`${pageDetail.detail.research_paper_btn_text}`}</div>
 
-                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/ResearchPaperStartReadingInsureTech/formperma/m3YQ-aPSuO-_CMWXJvdEjO4yExJk7TddcgDa_8hgwwc`} />
+                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`${pageDetail.detail.research_paper_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
 

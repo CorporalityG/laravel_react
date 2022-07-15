@@ -51,12 +51,12 @@ const Industries = () => {
                         <h6 className="industries-item-content">Information Technology</h6>
                         <div className="diamond-line"></div>
                     </Link>
-                </div>
-                <div className="industries-section">
                     <Link to="/edtech" onClick={closeOnLink} className="industries-item">
                         <h6 className="industries-item-content">Edtech</h6>
                         <div className="diamond-line"></div>
                     </Link>
+                </div>
+                <div className="industries-section">
                     <Link to="/metal" onClick={closeOnLink} className="industries-item">
                         <h6 className="industries-item-content">Metal Industry</h6>
                         <div className="diamond-line"></div>
@@ -69,8 +69,6 @@ const Industries = () => {
                         <h6 className="industries-item-content">Manufacturing</h6>
                         <div className="diamond-line"></div>
                     </Link>
-                </div>
-                <div className="industries-section">
                     <Link to="/geospatial" onClick={closeOnLink} className="industries-item">
                         <h6 className="industries-item-content">Geospatial</h6>
                         <div className="diamond-line"></div>
@@ -79,12 +77,22 @@ const Industries = () => {
                         <h6 className="industries-item-content">Allied Industries </h6>
                         <div className="diamond-line"></div>
                     </Link>
+                </div>
+                <div className="industries-section">
                     <Link to="/utilities-and-energy" onClick={closeOnLink} className="industries-item">
                         <h6 className="industries-item-content">Utilities and Energy - Solar energy / Renewable</h6>
                         <div className="diamond-line"></div>
                     </Link>
                     <Link to="/age-care-and-retirement" onClick={closeOnLink} className="industries-item">
                         <h6 className="industries-item-content">Age Care And Retirement</h6>
+                        <div className="diamond-line"></div>
+                    </Link>
+                    <Link to="/industrial-equipment" onClick={closeOnLink} className="industries-item">
+                        <h6 className="industries-item-content">Industrial Equipment</h6>
+                        <div className="diamond-line"></div>
+                    </Link>
+                    <Link to="/cruise-and-tourism" onClick={closeOnLink} className="industries-item">
+                        <h6 className="industries-item-content">Cruise & Tourism</h6>
                         <div className="diamond-line"></div>
                     </Link>
                 </div>

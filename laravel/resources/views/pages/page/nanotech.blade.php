@@ -61,8 +61,8 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="ebook_btn_link">{{ __('Button Link') }}</label>
-							<input type="text" name="ebook_btn_link" id="ebook_btn_link" value="{{ old('ebook_btn_link', $RS_Meta['ebook_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+							<label for="ebook_iframe">{{ __('Iframe') }}</label>
+							<textarea name="ebook_iframe" id="ebook_iframe" class="form-control" placeholder="{{ __('Iframe') }}">{{ old('ebook_iframe', $RS_Meta['ebook_iframe'] ?? '') }}</textarea>
 						</div>
 					</div>
 
@@ -114,6 +114,13 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
+							<label for="research_paper_iframe">{{ __('Iframe') }}</label>
+							<textarea name="research_paper_iframe" id="research_paper_iframe" class="form-control" placeholder="{{ __('Iframe') }}">{{ old('research_paper_iframe', $RS_Meta['research_paper_iframe'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
 							<label for="research_paper_image">{{ __('Image') }}</label>
 							<div class="input-group{{ $errors->has('research_paper_image') ? ' is-invalid' : '' }}">
 								<div class="custom-file">
@@ -124,22 +131,6 @@
 
 							@if( !empty($RS_Meta['research_paper_image']) )
 								<img src="{{ url('uploads/pages/'.$RS_Meta['research_paper_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
-							@endif
-						</div>
-					</div>
-
-					<div class="col-md-12">
-						<div class="form-group">
-							<label for="research_paper_pdf">{{ __('PDF') }}</label>
-							<div class="input-group{{ $errors->has('research_paper_pdf') ? ' is-invalid' : '' }}">
-								<div class="custom-file">
-									<input type="file" name="research_paper_pdf" id="research_paper_pdf" value="{{ old('research_paper_pdf') }}" class="custom-file-input" placeholder="Choose image" accept="application/pdf">
-									<label class="custom-file-label" for="research_paper_pdf">Choose PDF</label>
-								</div>
-							</div>
-
-							@if( !empty($RS_Meta['research_paper_pdf']) )
-								<a href="{{ url('uploads/pages/'.$RS_Meta['research_paper_pdf']) }}" target="_blank" class="d-inline-block mt-2">Start Reading</a>
 							@endif
 						</div>
 					</div>

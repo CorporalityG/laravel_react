@@ -91,6 +91,7 @@ import Fintech from "./components/Industries/Fintech";
 import Insurtech from "./components/Industries/Insurtech";
 import Edtech from "./components/Industries/Edtech";
 import SingleClient from "./components/CauseStudies/SingleClient";
+import CruiseAndTourism from "./components/Industries/CruiseAndTourism";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -207,6 +208,7 @@ function App() {
             <Route path="/fintech" element={<Fintech />} />
             <Route path="/insurtech" element={<Insurtech />} />
             <Route path="/edtech" element={<Edtech />} />
+            <Route path="/cruise-and-tourism" element={<CruiseAndTourism />} />
 
             {/* <Route path="/search/:search_string" element={<Blogs />}/> */}
 

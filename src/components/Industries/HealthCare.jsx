@@ -97,7 +97,7 @@ function HealthCare() {
 
                                                         <div className="industry-cs-link" onClick={() => handleShow('ebook')}>{`${pageDetail.detail.ebook_btn_text}`}</div>
 
-                                                        <EBookModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/CorporalityStrikerEbookHealthcare/formperma/h__L2H29yQVN_cZkF18fwhUgJv1g7h0Rpc-AZNp30pc`} />
+                                                        <EBookModal show={show} handleClose={handleClose} src={`${pageDetail.detail.ebook_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,7 +111,7 @@ function HealthCare() {
 
                                                         <div className="paper-survey-item-link" onClick={() => handleShow(1)}>{`${pageDetail.detail.research_paper_btn_text}`}</div>
 
-                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/ResearchPaperStartReadingHealthcare/formperma/Tu_Jsbdg34d1dJW4bo9IaqKdflXCkdD3brFT6vf-hMg`} />
+                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`${pageDetail.detail.research_paper_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
 

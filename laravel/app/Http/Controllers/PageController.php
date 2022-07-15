@@ -1876,6 +1876,12 @@ class PageController extends Controller
             $data['research_paper_image'] = $research_paper_image;
         }
 
+        $health_care_research_paper_image = $this->uploadImage($request->file('health_care_research_paper_image'), $request->health_care_research_paper_title, $RS_Row->getMeta('health_care_research_paper_image'));
+        if( !empty($health_care_research_paper_image) )
+        {
+            $data['health_care_research_paper_image'] = $health_care_research_paper_image;
+        }
+
         $research_paper_pdf = $this->uploadImage($request->file('research_paper_pdf'), $request->research_paper_title.'_pdf', $RS_Row->getMeta('research_paper_pdf'));
         if( !empty($research_paper_pdf) )
         {
@@ -1886,6 +1892,102 @@ class PageController extends Controller
         if( !empty($survey_image) )
         {
             $data['survey_image'] = $survey_image;
+        }
+
+        $subscribe_channel_image = $this->uploadImage($request->file('subscribe_channel_image'), $request->subscribe_channel_title, $RS_Row->getMeta('subscribe_channel_image'));
+        if( !empty($subscribe_channel_image) )
+        {
+            $data['subscribe_channel_image'] = $subscribe_channel_image;
+        }
+
+        $advice_title_image = $this->uploadImage($request->file('advice_title_image'), 'advice_title', $RS_Row->getMeta('advice_title_image'));
+        if( !empty($advice_title_image) )
+        {
+            $data['advice_title_image'] = $advice_title_image;
+        }
+
+        $advice_image = $this->uploadImage($request->file('advice_image'), 'advice_main', $RS_Row->getMeta('advice_image'));
+        if( !empty($advice_image) )
+        {
+            $data['advice_image'] = $advice_image;
+        }
+
+        $business_experience_strategy_step_1_image = $this->uploadImage($request->file('business_experience_strategy_step_1_image'), 'bes_1', $RS_Row->getMeta('business_experience_strategy_step_1_image'));
+        if( !empty($business_experience_strategy_step_1_image) )
+        {
+            $data['business_experience_strategy_step_1_image'] = $business_experience_strategy_step_1_image;
+        }
+
+        $business_experience_strategy_step_2_image = $this->uploadImage($request->file('business_experience_strategy_step_2_image'), 'bes_2', $RS_Row->getMeta('business_experience_strategy_step_2_image'));
+        if( !empty($business_experience_strategy_step_2_image) )
+        {
+            $data['business_experience_strategy_step_2_image'] = $business_experience_strategy_step_2_image;
+        }
+
+        $business_experience_strategy_step_3_image = $this->uploadImage($request->file('business_experience_strategy_step_3_image'), 'bes_3', $RS_Row->getMeta('business_experience_strategy_step_3_image'));
+        if( !empty($business_experience_strategy_step_3_image) )
+        {
+            $data['business_experience_strategy_step_3_image'] = $business_experience_strategy_step_3_image;
+        }
+
+        $business_experience_strategy_step_4_image = $this->uploadImage($request->file('business_experience_strategy_step_4_image'), 'bes_4', $RS_Row->getMeta('business_experience_strategy_step_4_image'));
+        if( !empty($business_experience_strategy_step_4_image) )
+        {
+            $data['business_experience_strategy_step_4_image'] = $business_experience_strategy_step_4_image;
+        }
+
+        $business_experience_strategy_step_5_image = $this->uploadImage($request->file('business_experience_strategy_step_5_image'), 'bes_5', $RS_Row->getMeta('business_experience_strategy_step_5_image'));
+        if( !empty($business_experience_strategy_step_5_image) )
+        {
+            $data['business_experience_strategy_step_5_image'] = $business_experience_strategy_step_5_image;
+        }
+
+        $business_experience_strategy_step_6_image = $this->uploadImage($request->file('business_experience_strategy_step_6_image'), 'bes_6', $RS_Row->getMeta('business_experience_strategy_step_6_image'));
+        if( !empty($business_experience_strategy_step_6_image) )
+        {
+            $data['business_experience_strategy_step_6_image'] = $business_experience_strategy_step_6_image;
+        }
+
+        $business_experience_strategy_step_7_image = $this->uploadImage($request->file('business_experience_strategy_step_7_image'), 'bes_7', $RS_Row->getMeta('business_experience_strategy_step_7_image'));
+        if( !empty($business_experience_strategy_step_7_image) )
+        {
+            $data['business_experience_strategy_step_7_image'] = $business_experience_strategy_step_7_image;
+        }
+
+        $marketing_strategy_experience_1_image = $this->uploadImage($request->file('marketing_strategy_experience_1_image'), 'msce_1', $RS_Row->getMeta('marketing_strategy_experience_1_image'));
+        if( !empty($marketing_strategy_experience_1_image) )
+        {
+            $data['marketing_strategy_experience_1_image'] = $marketing_strategy_experience_1_image;
+        }
+
+        $marketing_strategy_experience_2_image = $this->uploadImage($request->file('marketing_strategy_experience_2_image'), 'msce_2', $RS_Row->getMeta('marketing_strategy_experience_2_image'));
+        if( !empty($marketing_strategy_experience_2_image) )
+        {
+            $data['marketing_strategy_experience_2_image'] = $marketing_strategy_experience_2_image;
+        }
+
+        $marketing_strategy_experience_3_image = $this->uploadImage($request->file('marketing_strategy_experience_3_image'), 'msce_3', $RS_Row->getMeta('marketing_strategy_experience_3_image'));
+        if( !empty($marketing_strategy_experience_3_image) )
+        {
+            $data['marketing_strategy_experience_3_image'] = $marketing_strategy_experience_3_image;
+        }
+
+        $marketing_strategy_experience_4_image = $this->uploadImage($request->file('marketing_strategy_experience_4_image'), 'msce_4', $RS_Row->getMeta('marketing_strategy_experience_4_image'));
+        if( !empty($marketing_strategy_experience_4_image) )
+        {
+            $data['marketing_strategy_experience_4_image'] = $marketing_strategy_experience_4_image;
+        }
+
+        $marketing_strategy_experience_5_image = $this->uploadImage($request->file('marketing_strategy_experience_5_image'), 'msce_5', $RS_Row->getMeta('marketing_strategy_experience_5_image'));
+        if( !empty($marketing_strategy_experience_5_image) )
+        {
+            $data['marketing_strategy_experience_5_image'] = $marketing_strategy_experience_5_image;
+        }
+
+        $faq_image = $this->uploadImage($request->file('faq_image'), $request->faq_title, $RS_Row->getMeta('faq_image'));
+        if( !empty($faq_image) )
+        {
+            $data['faq_image'] = $faq_image;
         }
 
         // data save

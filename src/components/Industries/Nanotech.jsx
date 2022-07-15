@@ -97,7 +97,7 @@ function Nanotech() {
 
                                                         <div className="industry-cs-link" onClick={() => handleShow('ebook')}>{`${pageDetail.detail.ebook_btn_text}`}</div>
 
-                                                        <EBookModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/CorporalityStrikerEbookNanoTech/formperma/GNrDQycrgM6kkMoGKo0FKCrkeeTI-n6lc6ghhPkMdq8`} />
+                                                        <EBookModal show={show} handleClose={handleClose} src={`${pageDetail.detail.ebook_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,7 +111,7 @@ function Nanotech() {
 
                                                         <div className="paper-survey-item-link" onClick={() => handleShow(1)}>{`${pageDetail.detail.research_paper_btn_text}`}</div>
 
-                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/ResearchPaperStartReadingNanoTech/formperma/r3PATh2M9s0Bxxs6W5sBNIMVGjU-XIL7a2qF2mv50UA`} />
+                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`${pageDetail.detail.research_paper_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
 

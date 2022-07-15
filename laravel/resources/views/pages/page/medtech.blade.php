@@ -58,11 +58,11 @@
 							<input type="text" name="ebook_btn_text" id="ebook_btn_text" value="{{ old('ebook_btn_text', $RS_Meta['ebook_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
 						</div>
 					</div>
-
-                    <div class="col-md-12">
+						
+					<div class="col-md-12">
 						<div class="form-group">
-							<label for="ebook_btn_link">{{ __('Button Link') }}</label>
-							<input type="text" name="ebook_btn_link" id="ebook_btn_link" value="{{ old('ebook_btn_link', $RS_Meta['ebook_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+							<label for="ebook_iframe">{{ __('Iframe') }}</label>
+							<textarea name="ebook_iframe" id="ebook_iframe" class="form-control" placeholder="{{ __('Iframe') }}">{{ old('ebook_iframe', $RS_Meta['ebook_iframe'] ?? '') }}</textarea>
 						</div>
 					</div>
 
@@ -114,6 +114,13 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
+							<label for="research_paper_iframe">{{ __('Iframe') }}</label>
+							<textarea name="research_paper_iframe" id="research_paper_iframe" class="form-control" placeholder="{{ __('Iframe') }}">{{ old('research_paper_iframe', $RS_Meta['research_paper_iframe'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
 							<label for="research_paper_image">{{ __('Image') }}</label>
 							<div class="input-group{{ $errors->has('research_paper_image') ? ' is-invalid' : '' }}">
 								<div class="custom-file">
@@ -124,22 +131,6 @@
 
 							@if( !empty($RS_Meta['research_paper_image']) )
 								<img src="{{ url('uploads/pages/'.$RS_Meta['research_paper_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
-							@endif
-						</div>
-					</div>
-
-					<div class="col-md-12">
-						<div class="form-group">
-							<label for="research_paper_pdf">{{ __('PDF') }}</label>
-							<div class="input-group{{ $errors->has('research_paper_pdf') ? ' is-invalid' : '' }}">
-								<div class="custom-file">
-									<input type="file" name="research_paper_pdf" id="research_paper_pdf" value="{{ old('research_paper_pdf') }}" class="custom-file-input" placeholder="Choose image" accept="application/pdf">
-									<label class="custom-file-label" for="research_paper_pdf">Choose PDF</label>
-								</div>
-							</div>
-
-							@if( !empty($RS_Meta['research_paper_pdf']) )
-								<a href="{{ url('uploads/pages/'.$RS_Meta['research_paper_pdf']) }}" target="_blank" class="d-inline-block mt-2">Start Reading</a>
 							@endif
 						</div>
 					</div>
@@ -186,6 +177,59 @@
 
 							@if( !empty($RS_Meta['survey_image']) )
 								<img src="{{ url('uploads/pages/'.$RS_Meta['survey_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+							@endif
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card card-secondary card-outline">
+			<div class="card-header d-flex">
+				<h4 class="card-title text-dark w-100">Health Care Research Paper Detail</h4>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="health_care_research_paper_title">{{ __('Title') }}</label>
+							<input type="text" name="health_care_research_paper_title" id="health_care_research_paper_title" value="{{ old('health_care_research_paper_title', $RS_Meta['health_care_research_paper_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="health_care_research_paper_subtitle">{{ __('SubTitle') }}</label>
+							<input type="text" name="health_care_research_paper_subtitle" id="health_care_research_paper_subtitle" value="{{ old('health_care_research_paper_subtitle', $RS_Meta['health_care_research_paper_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('SubTitle') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="health_care_research_paper_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="health_care_research_paper_btn_text" id="health_care_research_paper_btn_text" value="{{ old('health_care_research_paper_btn_text', $RS_Meta['health_care_research_paper_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+						
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="health_care_research_paper_iframe">{{ __('Iframe') }}</label>
+							<textarea name="health_care_research_paper_iframe" id="health_care_research_paper_iframe" class="form-control" placeholder="{{ __('Iframe') }}">{{ old('health_care_research_paper_iframe', $RS_Meta['health_care_research_paper_iframe'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="health_care_research_paper_image">{{ __('Image') }}</label>
+							<div class="input-group{{ $errors->has('health_care_research_paper_image') ? ' is-invalid' : '' }}">
+								<div class="custom-file">
+									<input type="file" name="health_care_research_paper_image" id="health_care_research_paper_image" value="{{ old('health_care_research_paper_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+									<label class="custom-file-label" for="health_care_research_paper_image">Choose image</label>
+								</div>
+							</div>
+
+							@if( !empty($RS_Meta['health_care_research_paper_image']) )
+								<img src="{{ url('uploads/pages/'.$RS_Meta['health_care_research_paper_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
 							@endif
 						</div>
 					</div>

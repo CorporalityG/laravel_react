@@ -97,7 +97,7 @@ function HighTech() {
 
                                                         <div className="industry-cs-link" onClick={() => handleShow('ebook')}>{`${pageDetail.detail.ebook_btn_text}`}</div>
 
-                                                        <EBookModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/CorporalityStrikerEbookHighTech/formperma/jdzYwnJFpndxfLZZzJvYemdKhibFyGvGDTmF_3WMKso`} />
+                                                        <EBookModal show={show} handleClose={handleClose} src={`${pageDetail.detail.ebook_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,7 +111,7 @@ function HighTech() {
 
                                                         <div className="paper-survey-item-link" onClick={() => handleShow(1)}>{`${pageDetail.detail.research_paper_btn_text}`}</div>
 
-                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/ResearchPaperStartReadingHighTech/formperma/LwepVM8WanRl1JQJQ4JgvCQc_QLwpLr8vskmWOTyxKI`} />
+                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`${pageDetail.detail.research_paper_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
 

@@ -15,14 +15,14 @@ function descLimit(text, size) {
     return text?.length > size ? text.substr(0, size - 1) + '...' : text + '...';
 }
 
-function IndustrialEquipment() {
+function CruiseAndTourism() {
 
-    const category = 'industrial-equipment';
+    const category = 'cruise-and-tourism';
 
     const [latestIndustrialArticle, setLatestIndustrialArticle] = useState([]);
     const [realtedIndustrialArticles, setRealtedIndustrialArticles] = useState([]);
 
-    const page_slug = 'industrial-equipment';
+    const page_slug = 'cruise-and-tourism';
 
     const [pageDetail, setPageDetail] = useState([]);
 
@@ -62,7 +62,7 @@ function IndustrialEquipment() {
     }
 
     return (
-        <div className='industry-page industrial-equipment-page'>
+        <div className='industry-page cruise-and-tourism-page'>
             <Helmet>
                 {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
                 {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
@@ -270,4 +270,4 @@ function IndustrialEquipment() {
     )
 }
 
-export default IndustrialEquipment
+export default CruiseAndTourism

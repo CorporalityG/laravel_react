@@ -97,7 +97,7 @@ function Geospatial() {
 
                                                         <div className="industry-cs-link" onClick={() => handleShow('ebook')}>{`${pageDetail.detail.ebook_btn_text}`}</div>
 
-                                                        <EBookModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/CorporalityStrikerEbookGeospatial/formperma/q3ySJ_8SLKoiVH95-0XkRegdXJCeQmHWE00UDDOaiHo`} />
+                                                        <EBookModal show={show} handleClose={handleClose} src={`${pageDetail.detail.ebook_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,7 +111,7 @@ function Geospatial() {
 
                                                         <div className="paper-survey-item-link" onClick={() => handleShow(1)}>{`${pageDetail.detail.research_paper_btn_text}`}</div>
 
-                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`https://forms.zohopublic.com.au/corporality/form/ResearchPaperStartReadingGeospatial/formperma/Fu_hIdqDd9TPzoZon35YbHk6w-_0psb2IJzrt1xZyuk`} />
+                                                        <ResearchPaperModal show={show} handleClose={handleClose} src={`${pageDetail.detail.research_paper_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
 

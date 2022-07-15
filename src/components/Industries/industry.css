@@ -159,6 +159,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     max-width: 70%;
+    text-transform: uppercase;
 }
 .industry-page .industry-banner-section .industry-banner-paper-survey-item .paper-survey-item-link {
     background: linear-gradient(93.61deg, #E5CD60 0%, #6CA0BC 89.25%);

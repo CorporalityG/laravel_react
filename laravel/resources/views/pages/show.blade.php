@@ -141,6 +141,10 @@
                             @include('pages.page.age-care-and-retirement')
                         @elseif( $RS_Row->slug=='industrial-equipment' )
                             @include('pages.page.industrial-equipment')
+                        @elseif( $RS_Row->slug=='strategic-consultancy' )
+                            @include('pages.page.strategic-consultancy')
+                        @elseif( $RS_Row->slug=='cruise-and-tourism' )
+                            @include('pages.page.cruise-and-tourism')
                         @endif
 
                         
