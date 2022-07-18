@@ -11,6 +11,7 @@ import { GlobalConference } from './GlobalConference'
 import { ResearchPaperModal } from './ResearchPaperModal'
 import { EBookModal } from './EBookModal'
 import Modal from 'react-bootstrap/Modal'
+import { SurveyModal } from './SurveyModal'
 
 function descLimit(text, size) {
     return text?.length > size ? text.substr(0, size - 1) + '...' : text + '...';
@@ -68,7 +69,7 @@ function MedTech() {
                 {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
                 {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
                 {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
-                <link rel="canonical" href={`${BASE_URL}/brand-positioning/`} />
+                <link rel="canonical" href={`${BASE_URL}/${page_slug}/`} />
             </Helmet>
 
             <div className='industry-banner-section'>
@@ -122,7 +123,9 @@ function MedTech() {
 
                                                         <img src={`${API_IMG_URL}pages/${pageDetail.detail.survey_image}`} alt={`${pageDetail.detail.survey_title}`} className="industry-your-om" />
 
-                                                        <Link to={`/${pageDetail.detail.survey_btn_link ?? ''}`} className='paper-survey-item-link'>{`${pageDetail.detail.survey_btn_text}`}</Link>
+                                                        <div className="paper-survey-item-link" onClick={() => handleShow('survey')}>{`${pageDetail.detail.survey_btn_text}`}</div>
+
+                                                        <SurveyModal show={show} handleClose={handleClose} src={`${pageDetail.detail.survey_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -198,13 +201,13 @@ function MedTech() {
                     <div className='industry-rp-announcement-section'>
                         <div className='container-lg'>
                             <div className='row industry-rp-announcement-row'>
-                                <div className='col-lg-3 industry-rp-announcement-img-col'>
+                                <div className='col-lg-3 col-md-3 industry-rp-announcement-img-col'>
                                     <div className='industry-rp-announcement-img'>
                                         <img src={`${API_IMG_URL}pages/${pageDetail.detail.health_care_research_paper_image}`} alt={`${pageDetail.detail.health_care_research_paper_title}`} />
                                     </div>
                                 </div>
 
-                                <div className='col-lg-9'>
+                                <div className='col-lg-9 col-md-9'>
                                     <div className='industry-rp-announcement-content'>
                                         <div className='rp-announcement-title'>{`${pageDetail.detail.health_care_research_paper_title}`}</div>
 

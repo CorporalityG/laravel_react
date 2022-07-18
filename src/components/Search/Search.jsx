@@ -26,7 +26,7 @@ function Search() {
     const params = useParams();
     const navigate = useNavigate();
 
-    const search_keyword = params.search_keyword.replace("-", " ");
+    const search_keyword = params.search_keyword.replaceAll("-", " ");
 
     let prefixSlug = '.';
 

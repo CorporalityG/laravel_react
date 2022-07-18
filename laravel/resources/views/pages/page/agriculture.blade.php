@@ -160,8 +160,8 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="survey_btn_link">{{ __('Button Link') }}</label>
-							<input type="text" name="survey_btn_link" id="survey_btn_link" value="{{ old('survey_btn_link', $RS_Meta['survey_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+							<label for="survey_iframe">{{ __('Iframe') }}</label>
+							<textarea name="survey_iframe" id="survey_iframe" class="form-control" placeholder="{{ __('Iframe') }}">{{ old('survey_iframe', $RS_Meta['survey_iframe'] ?? '') }}</textarea>
 						</div>
 					</div>
 

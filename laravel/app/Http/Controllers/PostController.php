@@ -353,7 +353,19 @@ class PostController extends Controller
         if( $request->is('api/*') )
         {
             // return $request->slug;
-            return Post::with(['categories'])->where('post_slug', $request->slug)->first();
+            $RS_Row = array();
+
+            if( !empty($request->slug) )
+            {
+                $qry = Post::with(['categories'])->where('post_slug', $request->slug)->first();
+
+                if( !empty($qry) )
+                {
+                    $RS_Row = $qry;
+                }
+            }
+
+            return $RS_Row;
         }
     }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./Single.css"
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
 import { SocialShare } from './SocialShare';
 import events from "../Blog/img/sidebarevent.jpg";
@@ -18,6 +18,8 @@ function dateFormat(date) {
 const Single = () => {
 
     const params = useParams();
+    const navigate = useNavigate();
+
     const [singleBlog, setSingleBlog] = useState([]);
     const [relatedBlog, setRelatedBlog] = useState([]);
     const [recentBlog, setRecentBlog] = useState([]);
@@ -32,8 +34,12 @@ const Single = () => {
     async function getBlog(slug) {
         let result = await fetch(API_BASE_URL + "/single-blog/" + slug);
         result = await result.json();
-        // console.log(result);
-        setSingleBlog(result);
+        if (result == "") {
+            navigate("/404", { replace: true });
+        }
+        else {
+            setSingleBlog(result);
+        }
     }
 
     async function getRelatedBlog(slug) {
@@ -60,7 +66,7 @@ const Single = () => {
                             {singleBlog.meta_keywords && <meta name="keywords" content={singleBlog.meta_keywords} />}
                             <link rel="canonical" href={`${BASE_URL}/${singleBlog.post_slug}/`} />
                         </Helmet>
-                        
+
                         <div className="container-lg">
                             <div className="row">
                                 <div className="col-lg-12">

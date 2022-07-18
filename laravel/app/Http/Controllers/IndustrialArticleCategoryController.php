@@ -183,7 +183,7 @@ class IndustrialArticleCategoryController extends Controller
 
         $RS_Save->parent_id = $request->parent_category_id;
         $RS_Save->category_name = $categoryName;
-        $RS_Save->category_slug = Str::slug($categoryName, '-');
+        $RS_Save->category_slug = Str::slug($request->category_slug);
         $RS_Save->description = $request->description;
 
         $result = $RS_Save->save();
@@ -242,5 +242,16 @@ class IndustrialArticleCategoryController extends Controller
                     ->orderby('category_name', 'ASC')
                     ->get();
         }
+    }
+
+
+    /**
+     * return slug.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getSlug(Request $request)
+    {
+        return Str::slug($request->category_name, '-');
     }
 }

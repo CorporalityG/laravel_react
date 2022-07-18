@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet";
 import { GlobalConference } from './GlobalConference'
 import { ResearchPaperModal } from './ResearchPaperModal'
 import { EBookModal } from './EBookModal'
+import { SurveyModal } from './SurveyModal'
 
 function descLimit(text, size) {
     return text?.length > size ? text.substr(0, size - 1) + '...' : text + '...';
@@ -67,7 +68,7 @@ function Finance() {
                 {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
                 {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
                 {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
-                <link rel="canonical" href={`${BASE_URL}/brand-positioning/`} />
+                <link rel="canonical" href={`${BASE_URL}/${page_slug}/`} />
             </Helmet>
 
             <div className='industry-banner-section'>
@@ -121,7 +122,9 @@ function Finance() {
 
                                                         <img src={`${API_IMG_URL}pages/${pageDetail.detail.survey_image}`} alt={`${pageDetail.detail.survey_title}`} className="industry-your-om" />
 
-                                                        <Link to={`/${pageDetail.detail.survey_btn_link ?? ''}`} className='paper-survey-item-link'>{`${pageDetail.detail.survey_btn_text}`}</Link>
+                                                        <div className="paper-survey-item-link" onClick={() => handleShow('survey')}>{`${pageDetail.detail.survey_btn_text}`}</div>
+
+                                                        <SurveyModal show={show} handleClose={handleClose} src={`${pageDetail.detail.survey_iframe ?? ''}`} />
                                                     </div>
                                                 </div>
                                             </div>

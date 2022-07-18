@@ -27,6 +27,7 @@
     width: 55px;
     border: 3px solid #E5CC5C;
     margin-top: 10px;
+    background-color: #E5CC5C;
 }
 .industry-single-page .industry-single-banner h1 {
     font-style: normal;
@@ -113,6 +114,7 @@
     border: 3px solid #E5CC5C;
     width: 55px;
     margin-top: 8px;
+    background-color: #E5CC5C;
 }
 .industry-single-page .industry-single-related-box ul {
     list-style: none;
@@ -180,8 +182,18 @@
 
 
 @media only screen and (min-width: 992px) and (max-width: 1199.99px) {
+    .industry-single-page .container-lg {
+        max-width: 98%;
+    }
     .industry-single-page .industry-single-other-box .col-lg-6 {
         width: 100%;
+    }
+    .industry-single-page .industry-single-banner h1 {
+        font-size: 36px;
+    }
+    .industry-single-page .industry-single-content .industry-single-content-row {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -195,5 +207,78 @@
     }
     .industry-single-page .industry-single-banner h1 {
         margin-bottom: 10px;
+    }
+    .industry-single-page .industry-single-banner .industry-single-banner-img img {
+        margin-top: 20px;
+    }
+    .industry-single-page .industry-single-content .industry-single-content-row {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 30px;
+    }
+    .industry-single-page .industry-single-content .industry-single-desc {
+        margin-bottom: 40px;
+    }
+    .industry-single-page .industry-single-survey-box {
+        box-shadow: 0px 14px 21px 21px rgba(0, 0, 0, 0.05);
+    }
+    .industry-single-page .si-get-involved-section {
+        margin-top: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 767.99px) {
+    .industry-single-page .industry-single-banner h1 {
+        font-size: 36px;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .industry-single-page .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .industry-single-page .industry-single-box {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .industry-single-page .industry-single-related-box ul li a {
+        text-align: left;
+    }
+    .industry-single-page .industry-single-content .industry-single-content-row {
+        padding-left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 480.99px) {
+    .industry-single-page .industry-single-banner h1 {
+        font-size: 32px;
+    }
+}
+
+
+@media only screen and (max-width: 345.99px) {
+    .industry-single-page .industry-single-banner h1 {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .industry-single-page .industry-single-box {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .industry-single-page .industry-single-other-box .is-oi-cat-item-title {
+        font-size: 16px;
+    }
+    .industry-single-page .industry-single-related-box ul li a {
+        font-size: 16px;
+    }
+    .industry-single-page .industry-single-banner h1 {
+        font-size: 24px;
     }
 }

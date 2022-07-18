@@ -302,6 +302,6 @@ $(function () {
         });
     }
     // subcategories end
-})
+});
 </script>
 @endsection

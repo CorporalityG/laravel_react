@@ -39,6 +39,19 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
+                                    <label for="category_slug">{{ __('Category Slug') }}</label>
+                                    <input type="text" name="category_slug" id="category_slug" value="{{ old('category_slug', $category->category_slug ?? '') }}" class="form-control{{ $errors->has('category_slug') ? ' is-invalid' : '' }}" placeholder="{{ __('Category Slug') }}" autofocus>
+
+                                    @if ($errors->has('category_slug'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('category_slug') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
                                     <label for="parent_category_id">{{ __('Parent Category') }}</label>
                                     <div class="select2-purple">
                                         <select name="parent_category_id" id="parent_category_id" class="select2 form-control{{ $errors->has('parent_category_id') ? ' is-invalid' : '' }}" data-placeholder="{{ __('-- Select Category --') }}" data-dropdown-css-class="select2-purple" >
@@ -81,4 +94,42 @@
         </div>
     </div>
 
+    
+<!-- Page specific script -->
+<script>
+$(function () {
+    <?php
+    if( empty($category) )
+    {
+    ?>
+        $("#category_name").on('blur', function (e) {
+            e.preventDefault();
+
+            var category_name = $(this).val();
+
+            $.ajax({
+                url:"<?php echo route('industrial-article-categories.slug'); ?>",
+                cache: false,
+                data: {
+                    category_name: category_name,
+                },
+                beforeSend: function(){
+                    // Show image container
+                    // jQuery("#loader").show();
+                },
+                success: function(response){
+                    // console.log(response);
+                    $('#category_slug').val(response);
+                },
+                complete:function(data){
+                    // Hide image container
+                    // jQuery("#loader").hide();
+                }
+            });
+        });
+    <?php
+    }
+    ?>
+});
+</script>
 @endsection

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export const OtherIndustryItem = (props) => {
     return (
-        <div className='col-lg-6 is-oi-col'>
+        <div className='col-lg-6 col-sm-6 is-oi-col'>
             <Link to={`/${props.slug}`}>
                 <div className='is-oi-cat-item'>
                     <div className='is-oi-cat-item-icon'>

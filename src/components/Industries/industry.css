@@ -554,6 +554,9 @@
     .industry-page .industry-banner-section .industry-banner-content h1 {
         font-size: 34px;
     }
+    .industry-page .industry-rp-announcement-section .industry-rp-announcement-img-col {
+        flex: unset;
+    }
 }
 
 
@@ -591,12 +594,26 @@
     .industry-page .industry-global-conference-section .industry-global-conference-content {
         padding: 40px 25px;
     }
+    .industry-page .industry-rp-announcement-section .industry-rp-announcement-img-col {
+        flex: unset;
+    }
+    .industry-page .industry-rp-announcement-section .industry-rp-announcement-content {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
 
 @media only screen and (max-width: 834.99px) {
     .industry-page .industry-other-industries-section .industry-oi-cat-item-title {
         font-size: 18px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 823.99px) {
+    .industry-page .industry-rp-announcement-section .rp-announcement-subtitle {
+        font-size: 28px;
     }
 }
 
@@ -624,6 +641,15 @@
     .industry-page .industry-other-industries-section .industry-oi-cat-item-title {
         text-align: left;
     }
+    .industry-page .industry-rp-announcement-section .industry-rp-announcement-img-col {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .industry-page .industry-rp-announcement-section .industry-rp-announcement-content {
+        border: 0;
+        padding-left: 0;
+        text-align: center;
+    }
 }
 
 
@@ -634,6 +660,9 @@
     }
     .industry-page .industry-banner-section .industry-banner-content-main {
         padding-top: 20px;
+    }
+    .industry-page .industry-rp-announcement-section .rp-announcement-subtitle {
+        font-size: 28px;
     }
 }
 
@@ -653,6 +682,16 @@
     }
     .industry-page .industry-banner-section .industry-banner-content h1 {
         font-size: 32px;
+    }
+}
+
+
+@media only screen and (max-width: 520.99px) {
+    .industry-page .industry-rp-announcement-section .rp-announcement-subtitle {
+        font-size: 26px;
+    }
+    .industry-page .industry-rp-announcement-section .rp-announcement-link {
+        font-size: 16px;
     }
 }
 
@@ -678,6 +717,9 @@
     }
     .industry-page .industry-banner-section .industry-banner-ebook .industry-cs-pattern {
         height: 130px;
+    }
+    .industry-page .industry-rp-announcement-section .rp-announcement-subtitle {
+        font-size: 24px;
     }
 }
 
@@ -717,6 +759,16 @@
     }
     .industry-page .industry-banner-section .industry-banner-desc p {
         font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 345.99px) {
+    .industry-page .industry-rp-announcement-section .rp-announcement-subtitle {
+        font-size: 22px;
+    }
+    .industry-page .industry-rp-announcement-section .rp-announcement-link {
+        font-size: 15px;
     }
 }
 

@@ -42,7 +42,7 @@ function CxoStrategy() {
         {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
         {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
         {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
-        <link rel="canonical" href={`${BASE_URL}/brand-positioning/`} />
+        <link rel="canonical" href={`${BASE_URL}/cxo-strategy/`} />
       </Helmet>
 
       {

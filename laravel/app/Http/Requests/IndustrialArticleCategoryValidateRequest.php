@@ -26,6 +26,7 @@ class IndustrialArticleCategoryValidateRequest extends FormRequest
     {
         return [
             'category_name' => ['required', 'string', Rule::unique('industrial_article_categories')->ignore($this->segment(2), 'id')],
+            'category_slug' => ['required', 'string', Rule::unique('industrial_article_categories')->ignore($this->segment(2), 'id')],
         ];
     }
 }
