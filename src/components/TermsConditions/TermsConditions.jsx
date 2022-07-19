@@ -41,9 +41,9 @@ function TermsConditions() {
             <img src={`${BASE_URL}/img/TermsConditions/vector.png`} alt="vector" className="vector" />
             <img src={`${BASE_URL}/img/TermsConditions/bottom-vector.png`} alt="bottom-vector" className="bottom-vector" />
 
-            <div className="container">
+            <div className="container-lg">
               <div className="row terms-conditions-row">
-                <div className="col-md-12 px-0">
+                <div className="col-lg-12 px-0 terms-conditions-col">
                   <div className="terms-conditions-heading">
                     <h1>{`${pageDetail.detail.terms_conditions_title}`}</h1>
                     <div className="terms-conditions-modified">
@@ -55,8 +55,8 @@ function TermsConditions() {
                   <div className="terms-conditions-tab-main">
                     <Tab.Container id="terms-conditions-tabs" defaultActiveKey="terms-conditions">
                       <div className="row">
-                        <div className="col-md-3">
-                          <Nav variant="tabs" className="flex-column tc-tab-nav">
+                        <div className="col-lg-3 col-md-4 terms-conditions-tab-nav">
+                          <Nav variant="tabs" className="tc-tab-nav">
                             <Nav.Link eventKey="terms-conditions">{`${pageDetail.detail.terms_use_title}`}</Nav.Link>
                             <Nav.Link eventKey="confidentiality">{`${pageDetail.detail.site_access_title}`}</Nav.Link>
                             <Nav.Link eventKey="disclaimer">{`${pageDetail.detail.hyperlink_title}`}</Nav.Link>
@@ -70,7 +70,7 @@ function TermsConditions() {
                           </Nav>
                         </div>
 
-                        <div className="col-md-9">
+                        <div className="col-lg-9 col-md-8 terms-conditions-tab-content">
                           <Tab.Content>
                             <Tab.Pane eventKey="terms-conditions" className="tc-tab-content">
                               <div dangerouslySetInnerHTML={{ __html: pageDetail.detail.terms_use_description }}></div>

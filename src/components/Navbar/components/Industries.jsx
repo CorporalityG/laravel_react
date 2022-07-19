@@ -51,8 +51,8 @@ const Industries = () => {
                         <h6 className="industries-item-content">Information Technology</h6>
                         <div className="diamond-line"></div>
                     </Link>
-                    <Link to="/edtech" onClick={closeOnLink} className="industries-item">
-                        <h6 className="industries-item-content">Edtech</h6>
+                    <Link to="/edutech" onClick={closeOnLink} className="industries-item">
+                        <h6 className="industries-item-content">Edu Tech</h6>
                         <div className="diamond-line"></div>
                     </Link>
                 </div>

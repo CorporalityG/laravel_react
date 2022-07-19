@@ -89,9 +89,10 @@ import IndustrySingle from "./components/Industries/IndustrySingle/IndustrySingl
 import IndustryCategory from "./components/Industries/Category/IndustryCategory";
 import Fintech from "./components/Industries/Fintech";
 import Insurtech from "./components/Industries/Insurtech";
-import Edtech from "./components/Industries/Edtech";
+import Edutech from "./components/Industries/Edutech";
 import SingleClient from "./components/CauseStudies/SingleClient";
 import CruiseAndTourism from "./components/Industries/CruiseAndTourism";
+import Pricing from "./components/Pricing/Pricing";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -207,8 +208,10 @@ function App() {
             <Route path="/utilities-and-energy" element={<UtilitiesAndEnergy />} />
             <Route path="/fintech" element={<Fintech />} />
             <Route path="/insurtech" element={<Insurtech />} />
-            <Route path="/edtech" element={<Edtech />} />
+            <Route path="/edutech" element={<Edutech />} />
             <Route path="/cruise-and-tourism" element={<CruiseAndTourism />} />
+
+            <Route path="/pricing" element={<Pricing />} />
 
             {/* <Route path="/search/:search_string" element={<Blogs />}/> */}
 

@@ -16,7 +16,7 @@ function descLimit(text, size) {
     return text?.length > size ? text.substr(0, size - 1) + '...' : text + '...';
 }
 
-function Edtech() {
+function Edutech() {
 
     const category = 'edutech';
 
@@ -273,4 +273,4 @@ function Edtech() {
     )
 }
 
-export default Edtech
+export default Edutech

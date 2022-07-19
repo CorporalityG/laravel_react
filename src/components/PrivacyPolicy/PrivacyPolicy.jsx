@@ -39,9 +39,9 @@ function PrivacyPolicy() {
             <img src={`${BASE_URL}/img/PrivacyPolicy/vector.png`} alt="vector" className="vector" />
             <img src={`${BASE_URL}/img/PrivacyPolicy/bottom-vector.png`} alt="bottom-vector" className="bottom-vector" />
 
-            <div className="container">
+            <div className="container-lg">
               <div className="row privacy-policy-row">
-                <div className="col-lg-12 px-0">
+                <div className="col-lg-12 px-lg-0 privacy-policy-col">
                   <div className="row pp-heading-row">
                     <div className="col-lg-8">
                       <div className="pp-heading-content">

@@ -20,6 +20,7 @@
 .sitemap-page .sitemap-link-list-ul {
     list-style: none;
     columns: 3 auto;
+    padding-left: 0;
 }
 .sitemap-page .sitemap-link-list-item {
     display: inline-block;
@@ -41,4 +42,44 @@
 }
 .sitemap-page ul li a:hover {
     color: #23527c;
+}
+
+
+/* responsive start */
+@media only screen and (max-width: 767.99px) {
+    .sitemap-page .sitemap-link-list-ul {
+        columns: 2 auto;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .sitemap-page .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .sitemap-page .sitemap-link-list-ul {
+        columns: 1 auto;
+    }
+}
+
+
+@media only screen and (max-width: 375.99px) {
+    .sitemap-page h1 {
+        font-size: 28px;
+    }
+    .sitemap-page h2 {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .sitemap-page h1 {
+        font-size: 24px;
+    }
 }

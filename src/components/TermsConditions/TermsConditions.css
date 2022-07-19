@@ -39,7 +39,7 @@
     right: 0;
     z-index: -1;
 }
-.terms-conditions-section .terms-conditions-row {
+.terms-conditions-section .terms-conditions-col {
     background: #FFFFFF;
     box-shadow: 0px 10px 30px rgba(21, 19, 36, 0.25);
     border-radius: 20px;
@@ -79,6 +79,7 @@
     border-radius: 0px 0px 0px 20px;
     padding: 40px 30px;
     border-width: 0;
+    flex-direction: column;
 }
 .terms-conditions-section .terms-conditions-tab-main .tc-tab-nav.nav-tabs .nav-link {
     font-style: normal;
@@ -135,4 +136,112 @@
 }
 .terms-conditions-section .terms-conditions-tab-main .tc-tab-content ul li {
     margin-bottom: 10px;
+}
+
+
+/* responsive start */
+@media only screen and (min-width: 992px) and (max-width: 1199.99px) {
+    .terms-conditions-section .container-lg {
+        max-width: 95%;
+    }
+    .terms-conditions-section .terms-conditions-tab-main .terms-conditions-tab-nav {
+        width: 30%;
+    }
+    .terms-conditions-section .terms-conditions-tab-main .terms-conditions-tab-content {
+        width: 70%;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .terms-conditions-section .terms-conditions-col {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 885.99px) {
+    .terms-conditions-section .terms-conditions-tab-main .tc-tab-nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 767.99px) {
+    .terms-conditions-section .terms-conditions-tab-main .tc-tab-nav {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .terms-conditions-section .terms-conditions-tab-main .tc-tab-nav.nav-tabs .nav-link {
+        margin-bottom: 15px;
+    }
+    .terms-conditions-section .terms-conditions-col {
+        padding-bottom: 20px;
+    }
+    .terms-conditions-section .terms-conditions-tab-main .tc-tab-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .terms-conditions-section .terms-conditions-row .terms-conditions-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .terms-conditions-section {
+        padding-top: 60px;
+    }
+    .terms-conditions-section .terms-conditions-tab-main .tc-tab-nav {
+        border-radius: 0;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .terms-conditions-section .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .terms-conditions-section .terms-conditions-col {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+
+@media only screen and (max-width: 449.99px) {
+    .terms-conditions-section .terms-conditions-row .terms-conditions-heading {
+        padding: 20px 15px;
+    }
+    .terms-conditions-section .terms-conditions-tab-main .tc-tab-nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .terms-conditions-section .terms-conditions-tab-main .tc-tab-content {
+        padding-left: 15px;
+        padding-right: 20px;
+    }
+    .terms-conditions-section .terms-conditions-row .terms-conditions-heading h1 {
+        font-size: 28px;
+    }
+}
+
+
+@media only screen and (max-width: 345.99px) {
+    .terms-conditions-section .terms-conditions-row .terms-conditions-heading h1 {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .terms-conditions-section .terms-conditions-row .terms-conditions-heading h1 {
+        font-size: 21px;
+    }
+    .terms-conditions-section .terms-conditions-row .terms-conditions-heading .modified-label {
+        font-size: 14px;
+    }
+    .terms-conditions-section .terms-conditions-row .terms-conditions-heading .modified-date {
+        font-size: 14px;
+    }
 }

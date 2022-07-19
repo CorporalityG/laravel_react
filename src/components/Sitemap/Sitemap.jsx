@@ -160,28 +160,31 @@ function Sitemap() {
                                             <h2>Industries</h2>
                                             <ul>
                                                 <li>
-                                                    <Link to={`/medtech/`}>Med Tech</Link>
+                                                    <Link to={`/medtech/`}>Medtech / Health Care</Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={`/finance/`}>Finance</Link>
-                                                </li>
-                                                <li>
-                                                    <Link to={`/geospatial/`}>Geospatial</Link>
-                                                </li>
-                                                <li>
-                                                    <Link to={`/biotech/`}>Biotech</Link>
+                                                    <Link to={`/fintech/`}>Fintech / Finance</Link>
                                                 </li>
                                                 <li>
                                                     <Link to={`/nanotech/`}>Nanotech</Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={`/age-care-and-retirement/`}>Age Care and retirement</Link>
+                                                    <Link to={`/biotech/`}>Biotech</Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={`/allied-industries/`}>Allied</Link>
+                                                    <Link to={`/high-tech/`}>High Tech</Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={`/industrial-equipment/`}>Industrial Equipment</Link>
+                                                    <Link to={`/insurtech/`}>Insurtech</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/agriculture/`}>Agrotech / Agriculture</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/information-technology/`}>Information Technology</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/edutech/`}>Edu Tech</Link>
                                                 </li>
                                                 <li>
                                                     <Link to={`/metal/`}>Metal</Link>
@@ -193,19 +196,22 @@ function Sitemap() {
                                                     <Link to={`/manufacturing/`}>Manufacturing</Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={`/information-technology/`}>Information Technology</Link>
+                                                    <Link to={`/geospatial/`}>Geospatial</Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={`/high-tech/`}>High Tech</Link>
-                                                </li>
-                                                <li>
-                                                    <Link to={`/agriculture/`}>Agriculture</Link>
-                                                </li>
-                                                <li>
-                                                    <Link to={`/health-care/`}>Health Care</Link>
+                                                    <Link to={`/allied-industries/`}>Allied</Link>
                                                 </li>
                                                 <li>
                                                     <Link to={`/utilities-and-energy/`}>Utilities and Energy</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/age-care-and-retirement/`}>Age Care and retirement</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/industrial-equipment/`}>Industrial Equipment</Link>
+                                                </li>
+                                                <li>
+                                                    <Link to={`/cruise-and-tourism/`}>Cruise & Tourism</Link>
                                                 </li>
                                             </ul>
                                         </div>
