@@ -1,22 +1,87 @@
 import React, { useState } from 'react'
-import { BASE_URL } from '../../config'
+import { API_BASE_URL, BASE_URL } from '../../config'
 import { GetInvolved } from '../ServiceInsights/GetInvolved'
 import './Pricing.css'
 import { useForm } from "react-hook-form"
-import { PriceGradeItem } from './PriceGradeItem'
+import axios from "axios";
 
 function Pricing() {
 
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, resetField, formState: { errors }, handleSubmit } = useForm();
     const [frmStep, setFrmStep] = useState(1)
-    const [isServiceActive, setIsServiceActive] = useState(0);
+    const [isServiceActive, setIsServiceActive] = useState(-1);
     const [isProjectDurationActive, setIsProjectDurationActive] = useState(0);
+    const [isPriceGradeActive, setIsPriceGradeActive] = useState(0);
+    const [isSendEmail, setIsSendEmail] = useState(0);
+    const [isProjectDurationRequired, setIsProjectDurationRequired] = useState(0);
+    const [isProjectGradeRequired, setIsProjectGradeRequired] = useState(0);
+    const [gradeType, setGradeType] = useState('Grade 1');
 
-    const onSubmit = data => {
-        /* console.log(data) */
-        if (data.privacy_policy_agree) {
-            setFrmStep(2);
-            console.log(data)
+    const onSubmit = frmData => {
+        /* console.log(frmData) */
+        if (frmData.privacy_policy_agree) {
+            setFrmStep(2)
+
+            // console.log(frmData.project_duration);
+
+            if (frmData.service_name) {
+                if (frmData.project_duration) {
+                    setIsProjectDurationRequired(0)
+                }
+                else {
+                    setIsProjectDurationRequired(1)
+                }
+
+                if (frmData.project_price) {
+                    setIsProjectGradeRequired(0)
+                }
+                else {
+                    setIsProjectGradeRequired(1)
+                }
+            }
+            else {
+                setIsServiceActive(0)
+            }
+
+            if (frmData.project_duration && frmData.project_price) {
+
+                const data = {
+                    ...frmData,
+                    project_grade_type: gradeType
+                }
+
+                axios.post(`${API_BASE_URL}/pricing-store`, { data })
+                    .then(response => {
+                        // console.log(response.frmData);
+                        setFrmStep(1)
+
+                        resetField('first_name');
+                        resetField('last_name');
+                        resetField('company_name');
+                        resetField('work_email');
+                        resetField('mobile_number');
+                        resetField('privacy_policy_agree');
+                        resetField('service_name');
+                        resetField('project_duration');
+                        resetField('project_price');
+
+                        setIsServiceActive(0)
+                        setIsProjectDurationActive(0)
+                        setIsPriceGradeActive(0)
+                        setIsServiceActive(-1)
+
+                        if (response.data) {
+                            setIsSendEmail(1)
+                        }
+                        else {
+                            setIsSendEmail(2)
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        setIsSendEmail(2)
+                    });
+            }
         }
     }
 
@@ -35,7 +100,7 @@ function Pricing() {
                         </div>
 
                         <div className={`col-lg-10 offset-lg-1 pricing-banner-content-col ${isServiceActive === 0 ? "pbcc-mb" : ""}`}>
-                            <form onSubmit={handleSubmit(onSubmit)}>
+                            <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
                                 <div className={`service-form-step-1 service-form-step ${frmStep === 1 ? "show" : "hide"}`}>
                                     <p>We would be happy to send you our current pricing plans as a PDF document via e-mail.</p>
 
@@ -51,6 +116,9 @@ function Pricing() {
                                             <div className='col-lg-7'>
                                                 <div className='pricing-banner-service-form'>
 
+                                                    <div className={`price_email_msg text-success ${isSendEmail === 1 ? 'show' : 'hide'}`}>Email send successfully.</div>
+                                                    <div className={`price_email_msg text-danger ${isSendEmail === 2 ? 'show' : 'hide'}`}>Something went wrong. Try after sometime...</div>
+
                                                     <div className="form-group">
                                                         <input {...register("first_name", { required: true })} className={`form-control ${errors.first_name?.type === 'required' && "border-danger text-danger"}`} placeholder="First Name" />
                                                         {/* <span className='text-danger'>{errors.first_name?.type === 'required' && "First name is required"}</span> */}
@@ -65,11 +133,11 @@ function Pricing() {
                                                     </div>
 
                                                     <div className="form-group">
-                                                        <input type="email" {...register("work_email", { required: true })} className={`form-control ${errors.work_email?.type === 'required' && "border-danger text-danger"}`} placeholder="Work E-mail" />
+                                                        <input type="email" {...register("work_email", { required: true, pattern: /\S+@\S+\.\S+/ })} className={`form-control ${errors.work_email?.type === 'required' && "border-danger text-danger"}`} placeholder="Work E-mail" />
                                                     </div>
 
                                                     <div className="form-group">
-                                                        <input type="tel" {...register("mobile_number", { required: true })} className={`form-control ${errors.mobile_number?.type === 'required' && "border-danger text-danger"}`} placeholder="Mobile Number" />
+                                                        <input type="tel" {...register("mobile_number", { required: true, pattern: /^[0-9]+$/i })} className={`form-control ${errors.mobile_number?.type === 'required' && "border-danger text-danger"}`} placeholder="Mobile Number" />
                                                     </div>
 
                                                     <div className="form-group form-check">
@@ -85,7 +153,7 @@ function Pricing() {
                                     </div>
                                 </div>
 
-                                <div className={`service-form-step-2 service-form-step ${frmStep === 2 ? "show" : "hide1"}`}>
+                                <div className={`service-form-step-2 service-form-step ${frmStep === 2 ? "show" : "hide"}`}>
                                     <div className='pricing-services-list'>
                                         <div className='pricing-service-title'>I’M INTERESTED IN...</div>
 
@@ -131,7 +199,7 @@ function Pricing() {
                                             </div>
                                         </div>
 
-                                        <div className='project-budget-main'>
+                                        <div className={`project-budget-main ${isServiceActive !== 0 ? "show" : "hide"}`}>
                                             <div className='row project-budget-heading'>
                                                 <div className='col-lg-6'>
                                                     <div className='project-budget-title'>PROJECT BUDGET:</div>
@@ -154,48 +222,101 @@ function Pricing() {
                                                             <label className={`form-check-label ${isProjectDurationActive === 'Yearly' ? 'active' : ''}`} htmlFor="project_duration_yearly" onClick={() => setIsProjectDurationActive('Yearly')}>Yearly</label>
                                                         </div>
                                                     </div>
+
+                                                    <span className={`project_duration_error text-danger ${isProjectDurationRequired === 1 ? 'show' : 'hide'}`}>Select duration</span>
                                                 </div>
                                             </div>
 
                                             <div className='project_currency'>
-                                                <select {...register("project_currency")} >
+                                                <select {...register("project_currency")} id="project_currency" className='project_currency_dd' >
                                                     <option value={`AUD`}>AUD</option>
                                                     <option value={`USD`}>USD</option>
                                                 </select>
                                             </div>
 
                                             <div className='row project_price_main'>
-                                                <PriceGradeItem
-                                                    total={`$1,02,000`}
-                                                    subtotal={`$8,500`}
-                                                    duration={`month`}
-                                                    gradeType={`Grade 1`}
-                                                />
+                                                <div className='col-lg-3 project_price_grade_item_col'>
+                                                    <div className={`project_price_grade_item ${isPriceGradeActive === '8,500' ? 'active' : ''}`}>
+                                                        <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_1" value={`8,500`} />
 
-                                                <PriceGradeItem
-                                                    total={`$1,20,000`}
-                                                    subtotal={`$10,000`}
-                                                    duration={`month`}
-                                                    gradeType={`Grade 2`}
-                                                />
+                                                        <label htmlFor="project_price_grade_1" onClick={() => { setIsPriceGradeActive('8,500'); setGradeType('Grade 1') }}>
+                                                            <div className='price_total'>$1,02,000</div>
+                                                            <div className='price_subtotal'>$8,500</div>
+                                                            <div className='price_per_duration'>Per {
+                                                                isProjectDurationActive === 'Quaterly' ? 'quater'
+                                                                    :
+                                                                    isProjectDurationActive === 'Yearly' ? 'year'
+                                                                        : 'month'
+                                                            }</div>
+                                                            <div className='price_grade_type'>Grade 1</div>
+                                                        </label>
+                                                    </div>
+                                                </div>
 
-                                                <PriceGradeItem
-                                                    total={`$1,50,000`}
-                                                    subtotal={`$12,500`}
-                                                    duration={`month`}
-                                                    gradeType={`Grade 3`}
-                                                />
+                                                <div className='col-lg-3 project_price_grade_item_col'>
+                                                    <div className={`project_price_grade_item ${isPriceGradeActive === '10,000' ? 'active' : ''}`}>
+                                                        <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_2" value={`10,000`} />
 
-                                                <PriceGradeItem
-                                                    total={`$1,80,000`}
-                                                    subtotal={`$15,000`}
-                                                    duration={`month`}
-                                                    gradeType={`Grade 4`}
-                                                />
+                                                        <label htmlFor="project_price_grade_2" onClick={() => { setIsPriceGradeActive('10,000'); setGradeType('Grade 2') }}>
+                                                            <div className='price_total'>$1,20,000</div>
+                                                            <div className='price_subtotal'>$10,000</div>
+                                                            <div className='price_per_duration'>Per {
+                                                                isProjectDurationActive === 'Quaterly' ? 'quater'
+                                                                    :
+                                                                    isProjectDurationActive === 'Yearly' ? 'year'
+                                                                        : 'month'
+                                                            }</div>
+                                                            <div className='price_grade_type'>Grade 2</div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div className='col-lg-3 project_price_grade_item_col'>
+                                                    <div className={`project_price_grade_item ${isPriceGradeActive === '12,500' ? 'active' : ''}`}>
+                                                        <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_3" value={`12,500`} />
+
+                                                        <label htmlFor="project_price_grade_3" onClick={() => { setIsPriceGradeActive('12,500'); setGradeType('Grade 3') }}>
+                                                            <div className='price_total'>$1,50,000</div>
+                                                            <div className='price_subtotal'>$12,500</div>
+                                                            <div className='price_per_duration'>Per {
+                                                                isProjectDurationActive === 'Quaterly' ? 'quater'
+                                                                    :
+                                                                    isProjectDurationActive === 'Yearly' ? 'year'
+                                                                        : 'month'
+                                                            }</div>
+                                                            <div className='price_grade_type'>Grade 3</div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div className='col-lg-3 project_price_grade_item_col'>
+                                                    <div className={`project_price_grade_item ${isPriceGradeActive === '15,000' ? 'active' : ''}`}>
+                                                        <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_4" value={`15,000`} />
+
+                                                        <label htmlFor="project_price_grade_4" onClick={() => { setIsPriceGradeActive('15,000'); setGradeType('Grade 4') }}>
+                                                            <div className='price_total'>$1,80,000</div>
+                                                            <div className='price_subtotal'>$15,000</div>
+                                                            <div className='price_per_duration'>Per {
+                                                                isProjectDurationActive === 'Quaterly' ? 'quater'
+                                                                    :
+                                                                    isProjectDurationActive === 'Yearly' ? 'year'
+                                                                        : 'month'
+                                                            }</div>
+                                                            <div className='price_grade_type'>Grade 4</div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div className='col-lg-12'>
+                                                    <span className={`project_grade_error text-danger ${isProjectGradeRequired === 1 ? 'show' : 'hide'}`}>Select Grade</span>
+                                                </div>
+
+                                            </div>
+
+                                            <div className='btn-service-main'>
+                                                <button type="submit" className="btn-service">Submit</button>
                                             </div>
                                         </div>
-
-                                        {/* <button type="submit" className="btn-service">Submit</button> */}
                                     </div>
                                 </div>
                             </form>

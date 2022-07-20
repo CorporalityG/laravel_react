@@ -15,6 +15,7 @@ use App\Http\Controllers\Api\JobController;
 use App\Http\Controllers\Api\TestimonialController;
 use App\Http\Controllers\Api\TeamMemberController;
 use App\Http\Controllers\Api\ClientController;
+use App\Http\Controllers\Api\PriceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,3 +83,5 @@ Route::get('/team-members', [TeamMemberController::class, 'index']);
 Route::get('/clients', [ClientController::class, 'index']);
 Route::get('/single-client/{slug}', [ClientController::class, 'getSingle']);
 Route::get('/related-clients/{slug?}', [ClientController::class, 'getRelatedClients']);
+
+Route::post('/pricing-store', [PriceController::class, 'store']);

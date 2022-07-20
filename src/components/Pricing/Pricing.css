@@ -144,9 +144,13 @@
     background-color: #33657E;
     color: #FFFFFF;
 }
+.pricing-page .project-budget-main.hide {
+    display: none;
+}
 .pricing-page .project-budget-main .project-budget-heading {
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
 }
 .pricing-page .project-budget-main .project-budget-title {
     font-style: normal;
@@ -180,4 +184,108 @@
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     color: #33657E;
+}
+.pricing-page .project-budget-main .project_duration_error {
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+}
+.pricing-page .project-budget-main .project_duration_error.show {
+    visibility: visible;
+}
+.pricing-page .project-budget-main .project_currency {
+    margin-bottom: 25px;
+}
+.pricing-page .project-budget-main .project_currency_dd {
+    background: #F3F3F3;
+    border: 1px solid #F3F3F3;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #33657E;
+    padding: 3px 5px;
+}
+.pricing-page .project_price_main {
+    margin-bottom: 40px;
+}
+.pricing-page .project_price_main .project_price_grade_item {
+    background-color: #5D3B67;
+    border-radius: 36px;
+    padding: 20px 20px 5px 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.pricing-page .project_price_main .project_price_grade_item.active {
+    background-color: rgba(146, 77, 166, .5);
+}
+.pricing-page .project_price_main .project_price_grade_item .form-check-input {
+    z-index: -1;
+}
+.pricing-page .project_price_main .project_price_grade_item label {
+    cursor: pointer;
+}
+.pricing-page .project_price_main .price_total {
+    background-color: #924DA6;
+    border-radius: 4px 4px 0px 0px;
+    padding: 7px 10px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 27px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+.pricing-page .project_price_main .price_subtotal, 
+.pricing-page .project_price_main .price_per_duration {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.2;
+    text-align: center;
+    color: #FFFFFF;
+}
+.pricing-page .project_price_main .price_grade_type {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 47px;
+    text-align: center;
+    color: #924DA6;
+    opacity: 0.45;
+}
+.pricing-page .project_price_main .project_grade_error {
+    display: none;
+}
+.pricing-page .project_price_main .project_grade_error.show {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.pricing-page .pricing-services-list .btn-service-main {
+    text-align: center;
+}
+.pricing-page .pricing-services-list .btn-service {
+    background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), #FFFFFF;
+    border-radius: 6px;
+    padding: 14px 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    color: #FFFFFF;
+    border-width: 0;
+    margin-top: 20px;
+    width: 240px;
+}
+.pricing-page .price_email_msg {
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.pricing-page .price_email_msg.hide {
+    display: none;
 }

@@ -465,6 +465,29 @@
 
                         <div class="post"></div>
 
+                        <!-- prices menu start -->
+                        @php
+                          $PricesLinkActive = '';
+                        @endphp
+
+                        @if( request()->routeIs('prices.index') || request()->is('prices/*') )
+                          @php
+                            $PricesLinkActive = 'active';
+                          @endphp
+                        @endif
+                        <li class="nav-item">
+                          <a href="{{ route('prices.index') }}" class="nav-link {{ $PricesLinkActive }}">
+                            <i class="nav-icon fas fa-dollar-sign"></i>
+                            <p>
+                              {{ __('Prices') }}
+                              <i class="right fas fa-angle-left"></i>
+                            </p>
+                          </a>
+                        </li>
+                        <!-- prices menu end -->
+
+                        <div class="post"></div>
+
                         <li class="nav-item">
                           <!-- Authentication -->
                           <form method="POST" action="{{ route('logout') }}">

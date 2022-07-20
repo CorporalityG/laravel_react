@@ -27,6 +27,8 @@ use App\Http\Controllers\TeamMemberController;
 
 use App\Http\Controllers\ClientController;
 
+use App\Http\Controllers\PriceController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -92,4 +94,6 @@ Route::group(['middleware'=>'auth'], function()
 
     Route::resources(['clients' => ClientController::class]);
     Route::get('client-slug', [ClientController::class, 'getSlug'])->name('clients.slug');
+
+    Route::resources(['prices' => PriceController::class]);
 });
