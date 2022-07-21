@@ -29,6 +29,8 @@ use App\Http\Controllers\ClientController;
 
 use App\Http\Controllers\PriceController;
 
+use App\Http\Controllers\ProjectBudgetController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -96,4 +98,6 @@ Route::group(['middleware'=>'auth'], function()
     Route::get('client-slug', [ClientController::class, 'getSlug'])->name('clients.slug');
 
     Route::resources(['prices' => PriceController::class]);
+
+    Route::resources(['project-budget' => ProjectBudgetController::class]);
 });

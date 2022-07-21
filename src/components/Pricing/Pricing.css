@@ -193,6 +193,12 @@
 .pricing-page .project-budget-main .project_duration_error.show {
     visibility: visible;
 }
+.pricing-page .project-budget-main .pb-duration-main {
+    display: none;
+}
+.pricing-page .project-budget-main .pb-duration-main.show {
+    display: block;
+}
 .pricing-page .project-budget-main .project_currency {
     margin-bottom: 25px;
 }

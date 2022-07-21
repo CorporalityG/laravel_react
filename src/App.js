@@ -93,6 +93,7 @@ import Edutech from "./components/Industries/Edutech";
 import SingleClient from "./components/CauseStudies/SingleClient";
 import CruiseAndTourism from "./components/Industries/CruiseAndTourism";
 import Pricing from "./components/Pricing/Pricing";
+import CSuitCategory from "./components/Insights/Category/CSuitCategory";
 
 function App() {
   const { user, dispatch } = useContext(Context);
@@ -226,6 +227,7 @@ function App() {
             <Route path="/client/:client_slug" element={<SingleClient />} />
 
             <Route path="/csuit/:csuit_slug" element={<CSuitSingle />} />
+            <Route path="/csuit/category/:category_slug" element={<CSuitCategory />} />
 
             <Route path="/search/:search_keyword" element={<Search />} />
             <Route path="/search/" element={<Search />} />

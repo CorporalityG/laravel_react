@@ -65,55 +65,57 @@ function Services(pageDetail) {
             <div className="main_services_container">
               <div className="services_heading" data-aos="fade-down">Services</div>
               <div className="button_container container-lg" data-aos="fade-up" data-aos-duration="2100">
-                <div className="button_list">
-                  <div
-                    className="button_main button_active"
-                    id="button_main_1"
-                    onClick={(e) => buttonHandler({ ele: e.target, index: 1 })}
-                  >
-                    {`${pageDetail.service_1_tab_title}`}
-                  </div>
-                  <div
-                    className="button_main"
-                    id="button_main_2"
-                    onClick={(e) => buttonHandler({ ele: e.target, index: 2 })}
-                  >
-                    {`${pageDetail.service_2_tab_title}`}
-                  </div>
-                  <div
-                    className="button_main"
-                    id="button_main_3"
-                    onClick={(e) => buttonHandler({ ele: e.target, index: 3 })}
-                  >
-                    {`${pageDetail.service_3_tab_title}`}
-                  </div>
-                  <div
-                    className="button_main"
-                    id="button_main_4"
-                    onClick={(e) => buttonHandler({ ele: e.target, index: 4 })}
-                  >
-                    {`${pageDetail.service_4_tab_title}`}
-                  </div>
-                  <div
-                    className="button_main"
-                    id="button_main_5"
-                    onClick={(e) => buttonHandler({ ele: e.target, index: 5 })}
-                  >
-                    {`${pageDetail.service_5_tab_title}`}
-                  </div>
-                  <div
-                    className="button_main"
-                    id="button_main_6"
-                    onClick={(e) => buttonHandler({ ele: e.target, index: 6 })}
-                  >
-                    {`${pageDetail.service_6_tab_title}`}
-                  </div>
-                  <div
-                    className="button_main"
-                    id="button_main_7"
-                    onClick={(e) => buttonHandler({ ele: e.target, index: 7 })}
-                  >
-                    {`${pageDetail.service_7_tab_title}`}
+                <div className="button_list_main">
+                  <div className="button_list">
+                    <div
+                      className="button_main button_active"
+                      id="button_main_1"
+                      onClick={(e) => buttonHandler({ ele: e.target, index: 1 })}
+                    >
+                      {`${pageDetail.service_1_tab_title}`}
+                    </div>
+                    <div
+                      className="button_main"
+                      id="button_main_2"
+                      onClick={(e) => buttonHandler({ ele: e.target, index: 2 })}
+                    >
+                      {`${pageDetail.service_2_tab_title}`}
+                    </div>
+                    <div
+                      className="button_main"
+                      id="button_main_3"
+                      onClick={(e) => buttonHandler({ ele: e.target, index: 3 })}
+                    >
+                      {`${pageDetail.service_3_tab_title}`}
+                    </div>
+                    <div
+                      className="button_main"
+                      id="button_main_4"
+                      onClick={(e) => buttonHandler({ ele: e.target, index: 4 })}
+                    >
+                      {`${pageDetail.service_4_tab_title}`}
+                    </div>
+                    <div
+                      className="button_main"
+                      id="button_main_5"
+                      onClick={(e) => buttonHandler({ ele: e.target, index: 5 })}
+                    >
+                      {`${pageDetail.service_5_tab_title}`}
+                    </div>
+                    <div
+                      className="button_main"
+                      id="button_main_6"
+                      onClick={(e) => buttonHandler({ ele: e.target, index: 6 })}
+                    >
+                      {`${pageDetail.service_6_tab_title}`}
+                    </div>
+                    <div
+                      className="button_main"
+                      id="button_main_7"
+                      onClick={(e) => buttonHandler({ ele: e.target, index: 7 })}
+                    >
+                      {`${pageDetail.service_7_tab_title}`}
+                    </div>
                   </div>
                 </div>
               </div>

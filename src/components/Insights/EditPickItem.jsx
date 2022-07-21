@@ -15,7 +15,7 @@ export const EditPickItem = (props) => {
 
                 {
                     props.category ?
-                        <Link to={`/category/${props.categorySlug}`} className="insight-item-category">{props.category}</Link>
+                        <Link to={`/csuit/category/${props.categorySlug}`} className="insight-item-category">{props.category}</Link>
                         : null
                 }
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CsuitController;
+use App\Http\Controllers\CsuitCategoryController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\IndustrialArticleController;
 use App\Http\Controllers\IndustrialArticleCategoryController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\Api\TestimonialController;
 use App\Http\Controllers\Api\TeamMemberController;
 use App\Http\Controllers\Api\ClientController;
 use App\Http\Controllers\Api\PriceController;
+use App\Http\Controllers\Api\ProjectBudgetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +61,10 @@ Route::get('/csuits/{category_slug?}', [CsuitController::class, 'categoyCSuits']
 Route::get('/csuits-announcement', [CsuitController::class, 'categoyCSuitsAnnouncement']);
 Route::get('/single-csuit/{slug}', [CsuitController::class, 'getCSuit']);
 
+Route::get('/latest-csuits', [CsuitController::class, 'latestCsuits']);
+Route::get('/csuits-categories', [CsuitCategoryController::class, 'getCsuitsCategories']);
+Route::get('/csuits-insights', [CsuitController::class, 'getCsuits']);
+
 Route::get('/search', [SearchController::class, 'getSearch']);
 Route::get('/search-category/{search_slug?}', [SearchController::class, 'getSearchCategory']);
 
@@ -85,3 +91,5 @@ Route::get('/single-client/{slug}', [ClientController::class, 'getSingle']);
 Route::get('/related-clients/{slug?}', [ClientController::class, 'getRelatedClients']);
 
 Route::post('/pricing-store', [PriceController::class, 'store']);
+
+Route::get('/project-budget', [ProjectBudgetController::class, 'index']);

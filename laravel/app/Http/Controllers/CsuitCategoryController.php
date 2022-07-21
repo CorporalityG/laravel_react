@@ -230,4 +230,17 @@ class CsuitCategoryController extends Controller
         
         return $subcategories;
     }
+
+    /**
+     * get category
+    */
+    public function getCsuitsCategories(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            return CsuitCategory::where('parent_id', 5)
+                    ->orderby('category_name', 'ASC')
+                    ->get();
+        }
+    }
 }

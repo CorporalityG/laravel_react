@@ -1990,6 +1990,12 @@ class PageController extends Controller
             $data['faq_image'] = $faq_image;
         }
 
+        $services_image = $this->uploadImage($request->file('services_image'), $request->services_title, $RS_Row->getMeta('services_image'));
+        if( !empty($services_image) )
+        {
+            $data['services_image'] = $services_image;
+        }
+
         // data save
         $RS_Row->syncMeta($data);
 

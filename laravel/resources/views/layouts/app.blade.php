@@ -488,6 +488,29 @@
 
                         <div class="post"></div>
 
+                        <!-- project-budget menu start -->
+                        @php
+                          $ProjectBudgetLinkActive = '';
+                        @endphp
+
+                        @if( request()->routeIs('project-budget.index') || request()->is('project-budget/*') )
+                          @php
+                            $ProjectBudgetLinkActive = 'active';
+                          @endphp
+                        @endif
+                        <li class="nav-item">
+                          <a href="{{ route('project-budget.index') }}" class="nav-link {{ $ProjectBudgetLinkActive }}">
+                            <i class="nav-icon fas fa-money-bill-alt"></i>
+                            <p>
+                              {{ __('Project Budget') }}
+                              <i class="right fas fa-angle-left"></i>
+                            </p>
+                          </a>
+                        </li>
+                        <!-- project-budget menu end -->
+
+                        <div class="post"></div>
+
                         <li class="nav-item">
                           <!-- Authentication -->
                           <form method="POST" action="{{ route('logout') }}">

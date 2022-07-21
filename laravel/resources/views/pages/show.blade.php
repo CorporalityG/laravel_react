@@ -145,6 +145,8 @@
                             @include('pages.page.strategic-consultancy')
                         @elseif( $RS_Row->slug=='cruise-and-tourism' )
                             @include('pages.page.cruise-and-tourism')
+                        @elseif( $RS_Row->slug=='pricing' )
+                            @include('pages.page.pricing')
                         @endif
 
                         

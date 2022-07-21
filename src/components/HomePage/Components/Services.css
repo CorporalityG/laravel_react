@@ -48,12 +48,12 @@
   left: 35%;
   bottom: -20px;
 }
-
+.button_list_main {
+  overflow-x: scroll;
+  margin-top: 10px;
+}
 .button_list {
   display: flex;
-  margin-top: 10px;
-  margin-bottom: 18px;
-  overflow-x: auto;
 }
 
 .button_main {
