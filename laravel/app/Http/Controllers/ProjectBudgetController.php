@@ -169,10 +169,18 @@ class ProjectBudgetController extends Controller
         $RS_Save->service_name = $request->service_name;
         $RS_Save->duration = $request->duration;
         $RS_Save->currency = $request->currency;
+        $RS_Save->grade_type_1 = $request->grade_type_1;
         $RS_Save->price_grade_1 = $request->price_grade_1;
+        $RS_Save->total_price_grade_1 = $request->total_price_grade_1;
+        $RS_Save->grade_type_2 = $request->grade_type_2;
         $RS_Save->price_grade_2 = $request->price_grade_2;
+        $RS_Save->total_price_grade_2 = $request->total_price_grade_2;
+        $RS_Save->grade_type_3 = $request->grade_type_3;
         $RS_Save->price_grade_3 = $request->price_grade_3;
+        $RS_Save->total_price_grade_3 = $request->total_price_grade_3;
+        $RS_Save->grade_type_4 = $request->grade_type_4;
         $RS_Save->price_grade_4 = $request->price_grade_4;
+        $RS_Save->total_price_grade_4 = $request->total_price_grade_4;
 
         $RS_Save->save();
 

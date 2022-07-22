@@ -69,6 +69,11 @@
                             </tr>
 
                             <tr>
+                                <th width="15%">Total Price</th>
+                                <td width="75%">{{ $RS_Row->project_total_price }}</td>
+                            </tr>
+
+                            <tr>
                                 <th width="15%">Grade Type</th>
                                 <td width="75%">{{ $RS_Row->project_grade_type }}</td>
                             </tr>

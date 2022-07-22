@@ -295,3 +295,63 @@
 .pricing-page .price_email_msg.hide {
     display: none;
 }
+
+
+/* responsive */
+@media only screen and (min-width: 992px) and (max-width: 1399.99px) {
+    .pricing-page .pricing-banner-content-col {
+        width: 100%;
+    }
+    .pricing-page .pricing-banner-content-col.offset-lg-1 {
+        margin-left: 0;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199.99px) {
+    .pricing-page .container-lg {
+        max-width: 97%;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1107.99px) {
+    .pricing-page .pricing-service-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .pricing-page .project_price_main .price_grade_type {
+        font-size: 42px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1011.99px) {
+    .pricing-page .project_price_main .price_grade_type {
+        font-size: 38px;
+    }
+    .pricing-page .project_price_main .price_total {
+        font-size: 25px;
+    }
+}
+
+
+@media only screen and (max-width: 991.99px) {
+    .pricing-page .pricing-banner-content-col {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: fit-content;
+    }
+    .pricing-page .pricing-service-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .pricing-page .project_price_main .project_price_grade_item {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 854.99px) {
+    .pricing-page .pricing-service-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

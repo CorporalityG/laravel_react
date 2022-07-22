@@ -24,6 +24,7 @@ class Price extends Model
         'project_duration',
         'project_currency',
         'project_price',
+        'project_total_price',
         'project_grade_type',
     ];
 

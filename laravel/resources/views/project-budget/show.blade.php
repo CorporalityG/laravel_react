@@ -34,27 +34,32 @@
                     <table class="table table-bordered dataTable">
                         <thead>
                             <tr>
-                                <th width="50%">AUD</th>
-                                <th width="50%">USD</th>
+                                <th width="40%">Grade Type</th>
+                                <th width="30%">AUD</th>
+                                <th width="30%">USD</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td>{{ $RS_Row->grade_type_1 }}</td>
                                 <td>{{ $RS_Row->price_grade_1["AUD"] }}</td>
                                 <td>{{ $RS_Row->price_grade_1["USD"] }}</td>
                             </tr>
 
                             <tr>
+                                <td>{{ $RS_Row->grade_type_2 }}</td>
                                 <td>{{ $RS_Row->price_grade_2["AUD"] }}</td>
                                 <td>{{ $RS_Row->price_grade_2["USD"] }}</td>
                             </tr>
 
                             <tr>
+                                <td>{{ $RS_Row->grade_type_3 }}</td>
                                 <td>{{ $RS_Row->price_grade_3["AUD"] }}</td>
                                 <td>{{ $RS_Row->price_grade_3["USD"] }}</td>
                             </tr>
 
                             <tr>
+                                <td>{{ $RS_Row->grade_type_4 }}</td>
                                 <td>{{ $RS_Row->price_grade_4["AUD"] }}</td>
                                 <td>{{ $RS_Row->price_grade_4["USD"] }}</td>
                             </tr>
