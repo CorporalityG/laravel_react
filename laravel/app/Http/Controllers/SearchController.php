@@ -137,7 +137,9 @@ class SearchController extends Controller
                     $request->search_keyword=='agriculture' || 
                     $request->search_keyword=='insurtech' || 
                     $request->search_keyword=='utilities-and-energy' || 
-                    $request->search_keyword=='age-care-and-retirement' 
+                    $request->search_keyword=='age-care-and-retirement' || 
+                    $request->search_keyword=='cruise-and-tourism' || 
+                    $request->search_keyword=='industrial-equipment' 
                 )
                 {
                     $qry = $qryIndustrialArticle;

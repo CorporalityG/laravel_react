@@ -76,9 +76,16 @@ const NewBanner = (pageDetail) => {
                                     <div className="bgPartBanner">
                                         <div className="mainBannerImg">
                                             <img src={`${API_IMG_URL}pages/${pageDetail.banner_1_image}`} alt={`${pageDetail.banner_1_title}`} className="banner-image" data-aos="fade-down" data-aos-duration="2500" />
-                                            <div onClick={() => window.open("https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg")}>
+                                            <div onClick={() => { handleShow(11); }}>
                                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" data-aos="fade-up" data-aos-duration="2700" />
                                             </div>
+
+                                            <Modal show={show == 11 ? show : ''} onHide={handleClose} size="lg" centered>
+                                                <Modal.Header closeButton></Modal.Header>
+                                                <Modal.Body closeButton>
+                                                    <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_1_youtube_iframe_1 }}></div>
+                                                </Modal.Body>
+                                            </Modal>
                                         </div>
 
                                         <div className="bannerImgs">
@@ -94,12 +101,9 @@ const NewBanner = (pageDetail) => {
                                     </div>
 
                                     <Modal show={show == 1 ? show : ''} onHide={handleClose} size="lg" centered>
-                                        <Modal.Header closeButton>{`${pageDetail.banner_1_title}`}</Modal.Header>
+                                        <Modal.Header closeButton></Modal.Header>
                                         <Modal.Body closeButton>
-                                            <div className="home_banner_modal">
-                                                <video src={`${API_IMG_URL}pages/${pageDetail.banner_1_video_url}`} controls={true} autoPlay={true} />
-                                                {/* <iframe src="https://www.youtube.com/embed/YpymypBc9Hc?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
-                                            </div>
+                                            <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_1_youtube_iframe_2 }}></div>
                                         </Modal.Body>
                                     </Modal>
 
@@ -118,7 +122,7 @@ const NewBanner = (pageDetail) => {
                                             }
                                             <p className="bannerSubtitle">{`${pageDetail.banner_2_description}`}</p>
                                             <div className="bannerBtn">
-                                                <Link to={`${pageDetail.banner_2_btn_link}`} className="learn-more">{`${pageDetail.banner_2_btn_text}`}</Link>
+                                                <a href={`${pageDetail.banner_2_btn_link}`} target="_blank" className="learn-more">{`${pageDetail.banner_2_btn_text}`}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -126,9 +130,16 @@ const NewBanner = (pageDetail) => {
                                     <div className="bgPartBanner">
                                         <div className="mainBannerImg">
                                             <img src={`${API_IMG_URL}pages/${pageDetail.banner_2_image}`} alt={`${pageDetail.banner_2_title}`} className="banner-image" />
-                                            <div onClick={() => window.open("https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg")}>
+                                            <div onClick={() => { handleShow(21); }}>
                                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
                                             </div>
+
+                                            <Modal show={show == 21 ? show : ''} onHide={handleClose} size="lg" centered>
+                                                <Modal.Header closeButton></Modal.Header>
+                                                <Modal.Body closeButton>
+                                                    <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_2_youtube_iframe_1 }}></div>
+                                                </Modal.Body>
+                                            </Modal>
                                         </div>
 
                                         <div className="bannerImgs">
@@ -144,11 +155,9 @@ const NewBanner = (pageDetail) => {
                                     </div>
 
                                     <Modal show={show == 2 ? show : ''} onHide={handleClose} size="lg" centered>
-                                        <Modal.Header closeButton>{`${pageDetail.banner_2_title}`}</Modal.Header>
+                                        <Modal.Header closeButton></Modal.Header>
                                         <Modal.Body closeButton>
-                                            <div className="home_banner_modal">
-                                                <video src={`${API_IMG_URL}pages/${pageDetail.banner_2_video_url}`} controls={true} autoPlay={true} />
-                                            </div>
+                                            <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_2_youtube_iframe_2 }}></div>
                                         </Modal.Body>
                                     </Modal>
                                 </div>
@@ -166,7 +175,7 @@ const NewBanner = (pageDetail) => {
                                             }
                                             <p className="bannerSubtitle">{`${pageDetail.banner_3_description}`}</p>
                                             <div className="bannerBtn">
-                                                <Link to={`${pageDetail.banner_3_btn_link}`} className="learn-more">{`${pageDetail.banner_3_btn_text}`}</Link>
+                                                <a href={`${pageDetail.banner_3_btn_link}`} target="_blank" className="learn-more">{`${pageDetail.banner_3_btn_text}`}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -174,9 +183,16 @@ const NewBanner = (pageDetail) => {
                                     <div className="bgPartBanner">
                                         <div className="mainBannerImg">
                                             <img src={`${API_IMG_URL}pages/${pageDetail.banner_3_image}`} alt={`${pageDetail.banner_3_title}`} className="banner-image" />
-                                            <div onClick={() => window.open("https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg")}>
+                                            <div onClick={() => { handleShow(31); }}>
                                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
                                             </div>
+
+                                            <Modal show={show == 31 ? show : ''} onHide={handleClose} size="lg" centered>
+                                                <Modal.Header closeButton></Modal.Header>
+                                                <Modal.Body closeButton>
+                                                    <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_2_youtube_iframe_1 }}></div>
+                                                </Modal.Body>
+                                            </Modal>
                                         </div>
 
                                         <div className="bannerImgs">
@@ -192,11 +208,9 @@ const NewBanner = (pageDetail) => {
                                     </div>
 
                                     <Modal show={show == 3 ? show : ''} onHide={handleClose} size="lg" centered>
-                                        <Modal.Header closeButton>{`${pageDetail.banner_3_title}`}</Modal.Header>
+                                        <Modal.Header closeButton></Modal.Header>
                                         <Modal.Body closeButton>
-                                            <div className="home_banner_modal">
-                                                <video src={`${API_IMG_URL}pages/${pageDetail.banner_3_video_url}`} controls={true} autoPlay={true} />
-                                            </div>
+                                            <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_3_youtube_iframe_2 }}></div>
                                         </Modal.Body>
                                     </Modal>
                                 </div>

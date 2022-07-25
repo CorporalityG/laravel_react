@@ -9,14 +9,14 @@
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="banner_1_title">{{ __('Title 1') }}</label>
-							<input type="text" name="banner_1_title" id="banner_1_title" value="{{ old('banner_1_title', $RS_Meta['banner_1_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}" autofocus>
+							<input type="text" name="banner_1_title" id="banner_1_title" value="{{ old('banner_1_title', $RS_Meta['banner_1_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
 						</div>
 					</div>
 
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="banner_1_subtitle">{{ __('SubTitle 1') }}</label>
-							<input type="text" name="banner_1_subtitle" id="banner_1_subtitle" value="{{ old('banner_1_subtitle', $RS_Meta['banner_1_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('SubTitle') }}" autofocus>
+							<input type="text" name="banner_1_subtitle" id="banner_1_subtitle" value="{{ old('banner_1_subtitle', $RS_Meta['banner_1_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('SubTitle') }}">
 						</div>
 					</div>
 					
@@ -75,6 +75,13 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
+							<label for="banner_1_youtube_iframe_1">{{ __('YouTube IFrame 1') }}</label>
+							<textarea name="banner_1_youtube_iframe_1" id="banner_1_youtube_iframe_1" class="form-control" placeholder="{{ __('YouTube IFrame') }}">{{ old('banner_1_youtube_iframe_1', $RS_Meta['banner_1_youtube_iframe_1'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
 							<label for="banner_1_video_thumbnail">{{ __('Video Thumbnail 1') }}</label>
 							<div class="input-group{{ $errors->has('banner_1_video_thumbnail') ? ' is-invalid' : '' }}">
 								<div class="custom-file">
@@ -91,6 +98,13 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
+							<label for="banner_1_youtube_iframe_2">{{ __('Thumbnail YouTube IFrame 1') }}</label>
+							<textarea name="banner_1_youtube_iframe_2" id="banner_1_youtube_iframe_2" class="form-control" placeholder="{{ __('Thumbnail YouTube IFrame') }}">{{ old('banner_1_youtube_iframe_2', $RS_Meta['banner_1_youtube_iframe_2'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+					<!-- <div class="col-md-12">
+						<div class="form-group">
 							<label for="banner_1_video_url">{{ __('Video 1') }}</label>
 							<div class="input-group{{ $errors->has('banner_1_video_url') ? ' is-invalid' : '' }}">
 								<div class="custom-file">
@@ -106,7 +120,7 @@
 								</video>
 							@endif
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 				<hr>
@@ -122,7 +136,7 @@
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="banner_2_subtitle">{{ __('SubTitle 2') }}</label>
-							<input type="text" name="banner_2_subtitle" id="banner_2_subtitle" value="{{ old('banner_2_subtitle', $RS_Meta['banner_2_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('SubTitle') }}" autofocus>
+							<input type="text" name="banner_2_subtitle" id="banner_2_subtitle" value="{{ old('banner_2_subtitle', $RS_Meta['banner_2_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('SubTitle') }}">
 						</div>
 					</div>
 					
@@ -181,6 +195,13 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
+							<label for="banner_2_youtube_iframe_1">{{ __('YouTube IFrame 2') }}</label>
+							<textarea name="banner_2_youtube_iframe_1" id="banner_2_youtube_iframe_1" class="form-control" placeholder="{{ __('YouTube IFrame') }}">{{ old('banner_2_youtube_iframe_1', $RS_Meta['banner_2_youtube_iframe_1'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
 							<label for="banner_2_video_thumbnail">{{ __('Video Thumbnail 2') }}</label>
 							<div class="input-group{{ $errors->has('banner_2_video_thumbnail') ? ' is-invalid' : '' }}">
 								<div class="custom-file">
@@ -197,20 +218,8 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
-							<label for="banner_2_video_url">{{ __('Video 2') }}</label>
-							<div class="input-group{{ $errors->has('banner_2_video_url') ? ' is-invalid' : '' }}">
-								<div class="custom-file">
-									<input type="file" name="banner_2_video_url" id="banner_2_video_url" value="{{ old('banner_2_video_url') }}" class="custom-file-input" placeholder="Choose image" accept="video/*">
-									<label class="custom-file-label" for="banner_2_video_url">Choose video</label>
-								</div>
-							</div>
-
-							@if( !empty($RS_Meta['banner_2_video_url']) )
-								<video width="320" height="240" controls class="mt-3">
-									<source src="{{ url('uploads/pages/'.$RS_Meta['banner_2_video_url']) }}" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
-							@endif
+							<label for="banner_2_youtube_iframe_2">{{ __('Thumbnail YouTube IFrame 2') }}</label>
+							<textarea name="banner_2_youtube_iframe_2" id="banner_2_youtube_iframe_2" class="form-control" placeholder="{{ __('Thumbnail YouTube IFrame') }}">{{ old('banner_2_youtube_iframe_2', $RS_Meta['banner_2_youtube_iframe_2'] ?? '') }}</textarea>
 						</div>
 					</div>
 				</div>
@@ -228,7 +237,7 @@
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="banner_3_subtitle">{{ __('SubTitle 3') }}</label>
-							<input type="text" name="banner_3_subtitle" id="banner_3_subtitle" value="{{ old('banner_3_subtitle', $RS_Meta['banner_3_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('SubTitle') }}" autofocus>
+							<input type="text" name="banner_3_subtitle" id="banner_3_subtitle" value="{{ old('banner_3_subtitle', $RS_Meta['banner_3_subtitle'] ?? '') }}" class="form-control" placeholder="{{ __('SubTitle') }}">
 						</div>
 					</div>
 					
@@ -287,6 +296,13 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
+							<label for="banner_3_youtube_iframe_1">{{ __('YouTube IFrame 3') }}</label>
+							<textarea name="banner_3_youtube_iframe_1" id="banner_3_youtube_iframe_1" class="form-control" placeholder="{{ __('YouTube IFrame') }}">{{ old('banner_3_youtube_iframe_1', $RS_Meta['banner_3_youtube_iframe_1'] ?? '') }}</textarea>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="form-group">
 							<label for="banner_3_video_thumbnail">{{ __('Video Thumbnail 3') }}</label>
 							<div class="input-group{{ $errors->has('banner_3_video_thumbnail') ? ' is-invalid' : '' }}">
 								<div class="custom-file">
@@ -303,20 +319,8 @@
 
 					<div class="col-md-12">
 						<div class="form-group">
-							<label for="banner_3_video_url">{{ __('Video 3') }}</label>
-							<div class="input-group{{ $errors->has('banner_3_video_url') ? ' is-invalid' : '' }}">
-								<div class="custom-file">
-									<input type="file" name="banner_3_video_url" id="banner_3_video_url" value="{{ old('banner_3_video_url') }}" class="custom-file-input" placeholder="Choose image" accept="video/*">
-									<label class="custom-file-label" for="banner_3_video_url">Choose video</label>
-								</div>
-							</div>
-
-							@if( !empty($RS_Meta['banner_3_video_url']) )
-								<video width="320" height="240" controls class="mt-3">
-									<source src="{{ url('uploads/pages/'.$RS_Meta['banner_3_video_url']) }}" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
-							@endif
+							<label for="banner_3_youtube_iframe_2">{{ __('Thumbnail YouTube IFrame 3') }}</label>
+							<textarea name="banner_3_youtube_iframe_2" id="banner_3_youtube_iframe_2" class="form-control" placeholder="{{ __('Thumbnail YouTube IFrame') }}">{{ old('banner_3_youtube_iframe_2', $RS_Meta['banner_3_youtube_iframe_2'] ?? '') }}</textarea>
 						</div>
 					</div>
 				</div>

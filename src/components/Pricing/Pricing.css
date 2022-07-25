@@ -347,11 +347,116 @@
     .pricing-page .project_price_main .project_price_grade_item {
         margin-bottom: 20px;
     }
+    .pricing-page .pricing-banner-content-col.pbcc-mb {
+        width: -moz-available;
+        width: -webkit-fill-available;
+    }
 }
 
 
 @media only screen and (max-width: 854.99px) {
     .pricing-page .pricing-service-list {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing-page .pricing-banner-content-col {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .pricing-page .pricing-service-list .form-check-input {
+        margin-left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 767.99px) {
+    .pricing-page .pricing-banner-content-col p {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 600.99px) {
+    .pricing-page .row > * {
+        padding-right: calc(var(--bs-gutter-x) * .5) !important;
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .pricing-page .pricing-banner-content-col {
+        padding: 30px 10px 60px;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .pricing-page .project-budget-main .project_duration {
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+    .pricing-page .project-budget-main .project_duration_error {
+        justify-content: flex-start;
+    }
+}
+
+
+@media only screen and (max-width: 556.99px) {
+    .pricing-page .pricing-service-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media only screen and (max-width: 480.99px) {
+    .pricing-page .pricing-banner-title h1 {
+        font-size: 36px;
+    }
+    .pricing-page .pricing-banner-section {
+        padding-top: 40px;
+    }
+    .pricing-page .pricing-banner-content-col p {
+        font-size: 20px;
+    }
+    .pricing-page .service-form-step .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 360.99px) {
+    .pricing-page .pricing-banner-title h1 {
+        font-size: 32px;
+    }
+    .pricing-page .pricing-banner-content-col p {
+        font-size: 18px;
+    }
+    .pricing-page .pricing-banner-service-cont .service-title {
+        font-size: 48px;
+    }
+    .pricing-page .pricing-banner-service-form .form-check-label {
+        font-size: 15px;
+    }
+    .pricing-page .pricing-banner-content-col {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 320.99px) {
+    .pricing-page .pricing-banner-title h1 {
+        font-size: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 300.99px) {
+    .pricing-page .pricing-banner-title h1 {
+        font-size: 26px;
+    }
+    .pricing-page .pricing-banner-content-col p {
+        font-size: 16px;
+    }
+    .pricing-page .pricing-banner-content-col {
+        margin-left: 2px;
+        margin-right: 2px;
     }
 }

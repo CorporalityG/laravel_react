@@ -246,11 +246,11 @@ function Pricing() {
 
                                                 <div className={`project-budget-main ${isServiceActive !== 0 ? "show" : "hide"}`}>
                                                     <div className='row project-budget-heading'>
-                                                        <div className='col-lg-6 col-md-5'>
+                                                        <div className='col-lg-6 col-sm-5'>
                                                             <div className='project-budget-title'>PROJECT BUDGET:</div>
                                                         </div>
 
-                                                        <div className='col-lg-6 col-md-7 project_duration_col'>
+                                                        <div className='col-lg-6 col-sm-7 project_duration_col'>
                                                             <div className='project_duration'>
                                                                 <div className="form-check">
                                                                     <input className="form-check-input" type="radio" {...register("project_duration")} id="project_duration_monthly" value="Monthly" onClick={(e) => { setIsProjectDurationActive(e.target.value); projectDuration(e.target.value) }} />
@@ -285,15 +285,15 @@ function Pricing() {
                                                                 <div className='row project_price_main'>
                                                                     {
                                                                         projectBudget.price_grade_1 && projectBudget.total_price_grade_1 ?
-                                                                            <div className='col-lg-3 col-md-6 project_price_grade_item_col'>
+                                                                            <div className='col-lg-3 col-sm-6 project_price_grade_item_col'>
                                                                                 {
                                                                                     currency === 'USD' ?
                                                                                         <div className={`project_price_grade_item ${isPriceGradeActive === projectBudget.price_grade_1.USD ? 'active' : ''}`}>
                                                                                             <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_1" value={projectBudget.price_grade_1.USD} onClick={(e) => { setIsPriceGradeActive(e.target.value); setGradeType(projectBudget.grade_type_1 ?? 'Grade 1'); setProjectTotalPrice(projectBudget.total_price_grade_1.USD) }} />
 
                                                                                             <label htmlFor="project_price_grade_1">
-                                                                                                <div className='price_total'>${projectBudget.total_price_grade_1.USD}</div>
-                                                                                                <div className='price_subtotal'>${projectBudget.price_grade_1.USD}</div>
+                                                                                                <div className='price_total'>${parseFloat(projectBudget.total_price_grade_1.USD).toLocaleString()}</div>
+                                                                                                <div className='price_subtotal'>${parseFloat(projectBudget.price_grade_1.USD).toLocaleString()}</div>
                                                                                                 <div className='price_per_duration'>Per {
                                                                                                     isProjectDurationActive === 'Quaterly' ? 'quater'
                                                                                                         :
@@ -308,8 +308,8 @@ function Pricing() {
                                                                                             <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_1" value={projectBudget.price_grade_1.AUD} onClick={(e) => { setIsPriceGradeActive(e.target.value); setGradeType(projectBudget.grade_type_1 ?? 'Grade 1'); setProjectTotalPrice(projectBudget.total_price_grade_1.AUD) }} />
 
                                                                                             <label htmlFor="project_price_grade_1">
-                                                                                                <div className='price_total'>${projectBudget.total_price_grade_1.AUD}</div>
-                                                                                                <div className='price_subtotal'>${projectBudget.price_grade_1.AUD}</div>
+                                                                                                <div className='price_total'>${parseFloat(projectBudget.total_price_grade_1.AUD).toLocaleString()}</div>
+                                                                                                <div className='price_subtotal'>${parseFloat(projectBudget.price_grade_1.AUD).toLocaleString()}</div>
                                                                                                 <div className='price_per_duration'>Per {
                                                                                                     isProjectDurationActive === 'Quaterly' ? 'quater'
                                                                                                         :
@@ -326,15 +326,15 @@ function Pricing() {
 
                                                                     {
                                                                         projectBudget.price_grade_2 && projectBudget.total_price_grade_2 ?
-                                                                            <div className='col-lg-3 col-md-6 project_price_grade_item_col'>
+                                                                            <div className='col-lg-3 col-sm-6 project_price_grade_item_col'>
                                                                                 {
                                                                                     currency === 'USD' ?
                                                                                         <div className={`project_price_grade_item ${isPriceGradeActive === projectBudget.price_grade_2.USD ? 'active' : ''}`}>
                                                                                             <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_2" value={projectBudget.price_grade_2.USD} onClick={(e) => { setIsPriceGradeActive(e.target.value); setGradeType(projectBudget.grade_type_2 ?? 'Grade 2'); setProjectTotalPrice(projectBudget.total_price_grade_2.USD) }} />
 
                                                                                             <label htmlFor="project_price_grade_2">
-                                                                                                <div className='price_total'>${projectBudget.total_price_grade_2.USD}</div>
-                                                                                                <div className='price_subtotal'>${projectBudget.price_grade_2.USD}</div>
+                                                                                                <div className='price_total'>${parseFloat(projectBudget.total_price_grade_2.USD).toLocaleString()}</div>
+                                                                                                <div className='price_subtotal'>${parseFloat(projectBudget.price_grade_2.USD).toLocaleString()}</div>
                                                                                                 <div className='price_per_duration'>Per {
                                                                                                     isProjectDurationActive === 'Quaterly' ? 'quater'
                                                                                                         :
@@ -349,8 +349,8 @@ function Pricing() {
                                                                                             <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_2" value={projectBudget.price_grade_2.AUD} onClick={(e) => { setIsPriceGradeActive(e.target.value); setGradeType(projectBudget.grade_type_2 ?? 'Grade 2'); setProjectTotalPrice(projectBudget.total_price_grade_2.AUD) }} />
 
                                                                                             <label htmlFor="project_price_grade_2">
-                                                                                                <div className='price_total'>${projectBudget.total_price_grade_2.AUD}</div>
-                                                                                                <div className='price_subtotal'>${projectBudget.price_grade_2.AUD}</div>
+                                                                                                <div className='price_total'>${parseFloat(projectBudget.total_price_grade_2.AUD).toLocaleString()}</div>
+                                                                                                <div className='price_subtotal'>${parseFloat(projectBudget.price_grade_2.AUD).toLocaleString()}</div>
                                                                                                 <div className='price_per_duration'>Per {
                                                                                                     isProjectDurationActive === 'Quaterly' ? 'quater'
                                                                                                         :
@@ -367,15 +367,15 @@ function Pricing() {
 
                                                                     {
                                                                         projectBudget.price_grade_3 && projectBudget.total_price_grade_3 ?
-                                                                            <div className='col-lg-3 col-md-6 project_price_grade_item_col'>
+                                                                            <div className='col-lg-3 col-sm-6 project_price_grade_item_col'>
                                                                                 {
                                                                                     currency === 'USD' ?
                                                                                         <div className={`project_price_grade_item ${isPriceGradeActive === projectBudget.price_grade_3.USD ? 'active' : ''}`}>
                                                                                             <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_3" value={projectBudget.price_grade_3.USD} onClick={(e) => { setIsPriceGradeActive(e.target.value); setGradeType(projectBudget.grade_type_3 ?? 'Grade 3'); setProjectTotalPrice(projectBudget.total_price_grade_3.USD) }} />
 
                                                                                             <label htmlFor="project_price_grade_3"x>
-                                                                                                <div className='price_total'>${projectBudget.total_price_grade_3.USD}</div>
-                                                                                                <div className='price_subtotal'>${projectBudget.price_grade_3.USD}</div>
+                                                                                                <div className='price_total'>${parseFloat(projectBudget.total_price_grade_3.USD).toLocaleString()}</div>
+                                                                                                <div className='price_subtotal'>${parseFloat(projectBudget.price_grade_3.USD).toLocaleString()}</div>
                                                                                                 <div className='price_per_duration'>Per {
                                                                                                     isProjectDurationActive === 'Quaterly' ? 'quater'
                                                                                                         :
@@ -390,8 +390,8 @@ function Pricing() {
                                                                                             <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_3" value={projectBudget.price_grade_3.AUD} onClick={(e) => { setIsPriceGradeActive(e.target.value); setGradeType(projectBudget.grade_type_3 ?? 'Grade 3'); setProjectTotalPrice(projectBudget.total_price_grade_3.AUD) }} />
 
                                                                                             <label htmlFor="project_price_grade_3">
-                                                                                                <div className='price_total'>${projectBudget.total_price_grade_3.AUD}</div>
-                                                                                                <div className='price_subtotal'>${projectBudget.price_grade_3.AUD}</div>
+                                                                                                <div className='price_total'>${parseFloat(projectBudget.total_price_grade_3.AUD).toLocaleString()}</div>
+                                                                                                <div className='price_subtotal'>${parseFloat(projectBudget.price_grade_3.AUD).toLocaleString()}</div>
                                                                                                 <div className='price_per_duration'>Per {
                                                                                                     isProjectDurationActive === 'Quaterly' ? 'quater'
                                                                                                         :
@@ -408,15 +408,15 @@ function Pricing() {
 
                                                                     {
                                                                         projectBudget.price_grade_4 && projectBudget.total_price_grade_4 ?
-                                                                            <div className='col-lg-3 col-md-6 project_price_grade_item_col'>
+                                                                            <div className='col-lg-3 col-sm-6 project_price_grade_item_col'>
                                                                                 {
                                                                                     currency === 'USD' ?
                                                                                         <div className={`project_price_grade_item ${isPriceGradeActive === projectBudget.price_grade_4.USD ? 'active' : ''}`}>
                                                                                             <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_4" value={projectBudget.price_grade_4.USD} onClick={(e) => { setIsPriceGradeActive(e.target.value); setGradeType(projectBudget.grade_type_4 ?? 'Grade 4'); setProjectTotalPrice(projectBudget.total_price_grade_4.USD) }} />
 
                                                                                             <label htmlFor="project_price_grade_4">
-                                                                                                <div className='price_total'>${projectBudget.total_price_grade_4.USD}</div>
-                                                                                                <div className='price_subtotal'>${projectBudget.price_grade_4.USD}</div>
+                                                                                                <div className='price_total'>${parseFloat(projectBudget.total_price_grade_4.USD).toLocaleString()}</div>
+                                                                                                <div className='price_subtotal'>${parseFloat(projectBudget.price_grade_4.USD).toLocaleString()}</div>
                                                                                                 <div className='price_per_duration'>Per {
                                                                                                     isProjectDurationActive === 'Quaterly' ? 'quater'
                                                                                                         :
@@ -431,8 +431,8 @@ function Pricing() {
                                                                                             <input className="form-check-input" type="radio" {...register("project_price")} id="project_price_grade_4" value={projectBudget.price_grade_4.AUD} onClick={(e) => { setIsPriceGradeActive(e.target.value); setGradeType(projectBudget.grade_type_4 ?? 'Grade 4'); setProjectTotalPrice(projectBudget.total_price_grade_4.AUD) }} />
 
                                                                                             <label htmlFor="project_price_grade_4">
-                                                                                                <div className='price_total'>${projectBudget.total_price_grade_4.AUD}</div>
-                                                                                                <div className='price_subtotal'>${projectBudget.price_grade_4.AUD}</div>
+                                                                                                <div className='price_total'>${parseFloat(projectBudget.total_price_grade_4.AUD).toLocaleString()}</div>
+                                                                                                <div className='price_subtotal'>${parseFloat(projectBudget.price_grade_4.AUD).toLocaleString()}</div>
                                                                                                 <div className='price_per_duration'>Per {
                                                                                                     isProjectDurationActive === 'Quaterly' ? 'quater'
                                                                                                         :

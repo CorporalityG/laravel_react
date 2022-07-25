@@ -42,26 +42,26 @@
                         <tbody>
                             <tr>
                                 <td>{{ $RS_Row->grade_type_1 }}</td>
-                                <td>{{ $RS_Row->price_grade_1["AUD"] }}</td>
-                                <td>{{ $RS_Row->price_grade_1["USD"] }}</td>
+                                <td>{{ number_format($RS_Row->price_grade_1["AUD"], 2) }}</td>
+                                <td>{{ number_format($RS_Row->price_grade_1["USD"], 2) }}</td>
                             </tr>
 
                             <tr>
                                 <td>{{ $RS_Row->grade_type_2 }}</td>
-                                <td>{{ $RS_Row->price_grade_2["AUD"] }}</td>
-                                <td>{{ $RS_Row->price_grade_2["USD"] }}</td>
+                                <td>{{ number_format($RS_Row->price_grade_2["AUD"], 2) }}</td>
+                                <td>{{ number_format($RS_Row->price_grade_2["USD"], 2) }}</td>
                             </tr>
 
                             <tr>
                                 <td>{{ $RS_Row->grade_type_3 }}</td>
-                                <td>{{ $RS_Row->price_grade_3["AUD"] }}</td>
-                                <td>{{ $RS_Row->price_grade_3["USD"] }}</td>
+                                <td>{{ number_format($RS_Row->price_grade_3["AUD"], 2) }}</td>
+                                <td>{{ number_format($RS_Row->price_grade_3["USD"], 2) }}</td>
                             </tr>
 
                             <tr>
                                 <td>{{ $RS_Row->grade_type_4 }}</td>
-                                <td>{{ $RS_Row->price_grade_4["AUD"] }}</td>
-                                <td>{{ $RS_Row->price_grade_4["USD"] }}</td>
+                                <td>{{ number_format($RS_Row->price_grade_4["AUD"], 2) }}</td>
+                                <td>{{ number_format($RS_Row->price_grade_4["USD"], 2) }}</td>
                             </tr>
                         </tbody>
                     </table>

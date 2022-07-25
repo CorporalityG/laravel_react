@@ -65,12 +65,12 @@
 
                             <tr>
                                 <th width="15%">Price</th>
-                                <td width="75%">{{ $RS_Row->project_price }}</td>
+                                <td width="75%">{{ preg_replace("/(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/i", "$1,", str_replace(',', '', $RS_Row->project_price)) }}</td>
                             </tr>
 
                             <tr>
                                 <th width="15%">Total Price</th>
-                                <td width="75%">{{ $RS_Row->project_total_price }}</td>
+                                <td width="75%">{{ $RS_Row->project_total_price!='' && is_numeric($RS_Row->project_total_price) ? preg_replace("/(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/i", "$1,", str_replace(',', '', $RS_Row->project_total_price)) : 0 }}</td>
                             </tr>
 
                             <tr>
