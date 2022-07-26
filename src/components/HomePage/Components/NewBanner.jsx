@@ -31,9 +31,7 @@ const NewBanner = (pageDetail) => {
                     return 1;
                 }
             });
-        }, 8000);
 
-        setInterval(() => {
             setBannerCount(c => {
                 // console.log(c);
                 if (c < 3) {

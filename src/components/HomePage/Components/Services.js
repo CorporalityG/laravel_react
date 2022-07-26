@@ -116,6 +116,13 @@ function Services(pageDetail) {
                     >
                       {`${pageDetail.service_7_tab_title}`}
                     </div>
+                    <div
+                      className="button_main"
+                      id="button_main_7"
+                      onClick={(e) => buttonHandler({ ele: e.target, index: 8 })}
+                    >
+                      {`${pageDetail.service_8_tab_title}`}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -298,6 +305,32 @@ function Services(pageDetail) {
                         <div className="service-content" dangerouslySetInnerHTML={{ __html: pageDetail.service_7_description }}></div>
                         <div className="service-btn">
                           <Link to={`${pageDetail.service_7_btn_link}`} className="service-view-more">{`${pageDetail.service_7_btn_text}`}</Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="service-main-content" id="service_8">
+                  <div className="service-main">
+                    <div className="service-left">
+                      <img className="services-dots" src={BASE_URL + '/img/HomePage/services/services-dots.png'} alt="services-dots" />
+                      <img className="service-img" src={`${API_IMG_URL}pages/${pageDetail.service_8_image}`} alt={`${pageDetail.service_8_tab_title}`} />
+                      <img className="services-rectangle-1" src={BASE_URL + '/img/HomePage/services/services-rectangle-1.png'} alt="services-rectangle-1" />
+                    </div>
+
+                    <div className="service-right">
+                      <img className="services-vector" src={BASE_URL + '/img/HomePage/services/services-vector.png'} alt="services-vector" />
+                      <img className="services-line" src={BASE_URL + '/img/HomePage/services/services-line.png'} alt="services-line" />
+                      <img className="services-rectangle-2" src={BASE_URL + '/img/HomePage/services/services-rectangle-2.png'} alt="services-rectangle-2" />
+                      <img className="services-rectangle-3" src={BASE_URL + '/img/HomePage/services/services-rectangle-3.png'} alt="services-rectangle-3" />
+                      <img className="corporality-global-icon" src={BASE_URL + '/img/HomePage/services/corporality-global-icon-yellow.png'} alt="corporality-global-icon-yellow" />
+
+                      <div className="service-content-main">
+                        <div className="service-heading">{`${pageDetail.service_8_title}`}</div>
+                        <div className="service-content" dangerouslySetInnerHTML={{ __html: pageDetail.service_8_description }}></div>
+                        <div className="service-btn">
+                          <Link to={`${pageDetail.service_8_btn_link}`} className="service-view-more">{`${pageDetail.service_8_btn_text}`}</Link>
                         </div>
                       </div>
                     </div>

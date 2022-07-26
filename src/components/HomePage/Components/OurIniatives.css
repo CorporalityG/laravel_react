@@ -88,6 +88,7 @@
   transition: .5s ease-in-out;
   max-height: 660px;
   object-fit: cover;
+  object-position: top;
 }
 .our-iniatives-container .our-iniatives-grid-img-effect:hover .our-iniatives-grid-img {
   -webkit-transform: scale(1.1);

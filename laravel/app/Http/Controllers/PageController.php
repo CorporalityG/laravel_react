@@ -1708,6 +1708,12 @@ class PageController extends Controller
             $data['service_7_image'] = $service_7_image;
         }
 
+        $service_8_image = $this->uploadImage($request->file('service_8_image'), $request->service_8_title, $RS_Row->getMeta('service_8_image'));
+        if( !empty($service_8_image) )
+        {
+            $data['service_8_image'] = $service_8_image;
+        }
+
         $client_1_image = $this->uploadImage($request->file('client_1_image'), $request->client_1_name, $RS_Row->getMeta('client_1_image'));
         if( !empty($client_1_image) )
         {
