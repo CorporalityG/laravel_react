@@ -50,7 +50,7 @@ const Newsletter = (pageDetail) => {
                                 <img className='backimagesecond-fourth-Ns' src={Back} alt='Back' />
                                 <div className="bp_our-newsletter-polygon9-Ns">
                                     <div data-aos="fade-down-left" data-aos-duration="2000" data-aos-delay="1000">
-                                        <img className='main-2-2-Ns' src={`${API_IMG_URL}pages/${pageDetail.newsletter_image}`} alt={`${pageDetail.newsletter_title}`} />
+                                        {pageDetail.newsletter_image && <img className='main-2-2-Ns' src={`${API_IMG_URL}pages/${pageDetail.newsletter_image}`} alt={`${pageDetail.newsletter_title}`} />}
                                     </div>
                                 </div>
                             </div>

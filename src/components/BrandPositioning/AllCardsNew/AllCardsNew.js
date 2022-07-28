@@ -64,7 +64,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side1_card1_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_1_image}`} alt={`${pageDetail.articulating_planning_phase_item_1_title}`} />
+              {pageDetail.articulating_planning_phase_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_1_image}`} alt={`${pageDetail.articulating_planning_phase_item_1_title}`} />}
             </div>
             <div className="gotomarketing_side1_card1_text">
               {`${pageDetail.articulating_planning_phase_item_1_title}`}
@@ -78,7 +78,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side1_card2_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_2_image}`} alt={`${pageDetail.articulating_planning_phase_item_2_title}`} />
+              {pageDetail.articulating_planning_phase_item_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_2_image}`} alt={`${pageDetail.articulating_planning_phase_item_2_title}`} />}
             </div>
             <div className="gotomarketing_side1_card2_text">
               {`${pageDetail.articulating_planning_phase_item_2_title}`}
@@ -92,7 +92,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side1_card3_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_2_image}`} alt={`${pageDetail.articulating_planning_phase_item_2_title}`} />
+              {pageDetail.articulating_planning_phase_item_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_2_image}`} alt={`${pageDetail.articulating_planning_phase_item_2_title}`} />}
             </div>
             <div className="gotomarketing_side1_card3_text">
               {`${pageDetail.articulating_planning_phase_item_2_title}`}
@@ -106,7 +106,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side1_card4_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_4_image}`} alt={`${pageDetail.articulating_planning_phase_item_4_title}`} />
+              {pageDetail.articulating_planning_phase_item_4_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_4_image}`} alt={`${pageDetail.articulating_planning_phase_item_4_title}`} />}
             </div>
             <div className="gotomarketing_side1_card4_text">
               {`${pageDetail.articulating_planning_phase_item_4_title}`}
@@ -120,7 +120,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side1_card5_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_5_image}`} alt={`${pageDetail.articulating_planning_phase_item_5_title}`} />
+              {pageDetail.articulating_planning_phase_item_5_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_planning_phase_item_5_image}`} alt={`${pageDetail.articulating_planning_phase_item_5_title}`} />}
             </div>
             <div className="gotomarketing_side1_card5_text">
               {`${pageDetail.articulating_planning_phase_item_5_title}`}
@@ -152,7 +152,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side2_card1_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_1_image}`} alt={`${pageDetail.articulating_prep_phase_item_1_title}`} />
+              {pageDetail.articulating_prep_phase_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_1_image}`} alt={`${pageDetail.articulating_prep_phase_item_1_title}`} />}
             </div>
             <div className="gotomarketing_side2_card1_text">
               {`${pageDetail.articulating_prep_phase_item_1_title}`}
@@ -166,7 +166,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side2_card2_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_2_image}`} alt={`${pageDetail.articulating_prep_phase_item_2_title}`} />
+              {pageDetail.articulating_prep_phase_item_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_2_image}`} alt={`${pageDetail.articulating_prep_phase_item_2_title}`} />}
             </div>
             <div className="gotomarketing_side2_card2_text">
               {`${pageDetail.articulating_prep_phase_item_2_title}`}
@@ -180,7 +180,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side2_card3_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_3_image}`} alt={`${pageDetail.articulating_prep_phase_item_3_title}`} />
+              {pageDetail.articulating_prep_phase_item_3_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_3_image}`} alt={`${pageDetail.articulating_prep_phase_item_3_title}`} />}
             </div>
             <div className="gotomarketing_side2_card3_text">
               {`${pageDetail.articulating_prep_phase_item_3_title}`}
@@ -193,7 +193,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side2_card4_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_4_image}`} alt={`${pageDetail.articulating_prep_phase_item_4_title}`} />
+              {pageDetail.articulating_prep_phase_item_4_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_4_image}`} alt={`${pageDetail.articulating_prep_phase_item_4_title}`} />}
             </div>
             <div className="gotomarketing_side2_card4_text">
               {`${pageDetail.articulating_prep_phase_item_4_title}`}
@@ -206,7 +206,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side2_card5_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_5_image}`} alt={`${pageDetail.articulating_prep_phase_item_5_title}`} />
+              {pageDetail.articulating_prep_phase_item_5_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_prep_phase_item_5_image}`} alt={`${pageDetail.articulating_prep_phase_item_5_title}`} />}
             </div>
             <div className="gotomarketing_side2_card5_text">
               {`${pageDetail.articulating_prep_phase_item_5_title}`}
@@ -238,7 +238,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side3_card1_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_1_image}`} alt={`${pageDetail.articulating_execution_phase_item_1_title}`} />
+              {pageDetail.articulating_execution_phase_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_1_image}`} alt={`${pageDetail.articulating_execution_phase_item_1_title}`} />}
             </div>
             <div className="gotomarketing_side3_card1_text">
               {`${pageDetail.articulating_execution_phase_item_1_title}`}
@@ -252,7 +252,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side3_card2_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_2_image}`} alt={`${pageDetail.articulating_execution_phase_item_2_title}`} />
+              {pageDetail.articulating_execution_phase_item_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_2_image}`} alt={`${pageDetail.articulating_execution_phase_item_2_title}`} />}
             </div>
             <div className="gotomarketing_side3_card2_text">
               {`${pageDetail.articulating_execution_phase_item_2_title}`}
@@ -266,7 +266,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side3_card3_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_3_image}`} alt={`${pageDetail.articulating_execution_phase_item_3_title}`} />
+              {pageDetail.articulating_execution_phase_item_3_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_3_image}`} alt={`${pageDetail.articulating_execution_phase_item_3_title}`} />}
             </div>
             <div className="gotomarketing_side3_card3_text">
               {`${pageDetail.articulating_execution_phase_item_3_title}`}
@@ -280,7 +280,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side3_card4_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_4_image}`} alt={`${pageDetail.articulating_execution_phase_item_4_title}`} />
+              {pageDetail.articulating_execution_phase_item_4_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_4_image}`} alt={`${pageDetail.articulating_execution_phase_item_4_title}`} />}
             </div>
             <div className="gotomarketing_side3_card4_text">
               {`${pageDetail.articulating_execution_phase_item_4_title}`}
@@ -294,7 +294,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side3_card5_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_5_image}`} alt={`${pageDetail.articulating_execution_phase_item_5_title}`} />
+              {pageDetail.articulating_execution_phase_item_5_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_execution_phase_item_5_image}`} alt={`${pageDetail.articulating_execution_phase_item_5_title}`} />}
             </div>
             <div className="gotomarketing_side3_card5_text">
               {`${pageDetail.articulating_execution_phase_item_5_title}`}
@@ -325,7 +325,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="500"
           >
             <div className="gotomarketing_side4_card1_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_1_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_1_title}`} />
+              {pageDetail.articulating_monitoring_phase_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_1_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_1_title}`} />}
             </div>
             <div className="gotomarketing_side4_card1_text">
               {`${pageDetail.articulating_monitoring_phase_item_1_title}`}
@@ -339,7 +339,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="1000"
           >
             <div className="gotomarketing_side4_card2_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_2_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_2_title}`} />
+              {pageDetail.articulating_monitoring_phase_item_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_2_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_2_title}`} />}
             </div>
             <div className="gotomarketing_side4_card2_text">
               {`${pageDetail.articulating_monitoring_phase_item_2_title}`}
@@ -353,7 +353,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="1500"
           >
             <div className="gotomarketing_side4_card3_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_3_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_3_title}`} />
+              {pageDetail.articulating_monitoring_phase_item_3_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_3_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_3_title}`} />}
             </div>
             <div className="gotomarketing_side4_card3_text">
               {`${pageDetail.articulating_monitoring_phase_item_3_title}`}
@@ -367,7 +367,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side4_card4_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_4_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_4_title}`} />
+              {pageDetail.articulating_monitoring_phase_item_4_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_4_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_4_title}`} />}
             </div>
             <div className="gotomarketing_side4_card4_text">
               {`${pageDetail.articulating_monitoring_phase_item_4_title}`}
@@ -381,7 +381,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side4_card4_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_5_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_5_title}`} />
+              {pageDetail.articulating_monitoring_phase_item_5_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_5_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_5_title}`} />}
             </div>
             <div className="gotomarketing_side4_card4_text">
               {`${pageDetail.articulating_monitoring_phase_item_5_title}`}
@@ -395,7 +395,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side4_card4_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_6_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_6_title}`} />
+              {pageDetail.articulating_monitoring_phase_item_6_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_6_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_6_title}`} />}
             </div>
             <div className="gotomarketing_side4_card4_text">
               {`${pageDetail.articulating_monitoring_phase_item_6_title}`}
@@ -409,7 +409,7 @@ function AllCardsNew(pageDetail) {
             data-aos-delay="2000"
           >
             <div className="gotomarketing_side4_card4_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_7_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_7_title}`} />
+              {pageDetail.articulating_monitoring_phase_item_7_image && <img src={`${API_IMG_URL}pages/${pageDetail.articulating_monitoring_phase_item_7_image}`} alt={`${pageDetail.articulating_monitoring_phase_item_7_title}`} />}
             </div>
             <div className="gotomarketing_side4_card4_text">
               {`${pageDetail.articulating_monitoring_phase_item_7_title}`}

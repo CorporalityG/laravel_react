@@ -1,4 +1,4 @@
-import React , {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import aos from "aos"
 import '../Incl/Inclusion.css'
 import Back from '../Incl/backINinclusion.png'
@@ -19,9 +19,9 @@ const Inclusion = (pageDetail) => {
         <div className="Inclusion">
             <div className="navbar-Id"></div>
             <div className="container container-1-Id">
-            <div className="yellowbackground_Inclusion">
-                <img src={yellowbackground} alt='yellowbackground' />
-            </div>
+                <div className="yellowbackground_Inclusion">
+                    <img src={yellowbackground} alt='yellowbackground' />
+                </div>
                 <div className="row first-image-Id">
                     <div className="col-lg-6">
                         <div data-aos="fade-right" data-aos-easing="ease" data-aos-duration="2500" className="text-box-1-Id">
@@ -38,7 +38,7 @@ const Inclusion = (pageDetail) => {
                             <img alt='smallrect' className='smallrect-Id' src={smallrect} />
                             <img alt='Back' className='backimg-Id' src={Back} />
                             <div className="banner_right_inner-Id" >
-                                <img className='main-prev1-Id' src={`${API_IMG_URL}pages/${pageDetail.banner_image}`} alt={`${pageDetail.banner_title}`} />
+                                {pageDetail.banner_image && <img className='main-prev1-Id' src={`${API_IMG_URL}pages/${pageDetail.banner_image}`} alt={`${pageDetail.banner_title}`} />}
                             </div>
                         </div>
                     </div>

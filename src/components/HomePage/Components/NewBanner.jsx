@@ -54,7 +54,7 @@ const NewBanner = (pageDetail) => {
                             <div className="mainBanner">
 
                                 <div className={`mainPartBanner ${indicatorId === 1 ? "" : "bannerTextHide"}`}>
-                                    <img src={`${API_IMG_URL}pages/${pageDetail.banner_1_bg_image}`} alt={`${pageDetail.banner_1_title}`} className="banner-bg-image" />
+                                    {pageDetail.banner_1_bg_image && <img src={`${API_IMG_URL}pages/${pageDetail.banner_1_bg_image}`} alt={`${pageDetail.banner_1_title}`} className="banner-bg-image" />}
 
                                     <div className="leftPartBanner" data-aos="fade-left" data-aos-duration="2500">
                                         <div data-aos="fade-right" className="bannerText">
@@ -73,7 +73,7 @@ const NewBanner = (pageDetail) => {
 
                                     <div className="bgPartBanner">
                                         <div className="mainBannerImg">
-                                            <img src={`${API_IMG_URL}pages/${pageDetail.banner_1_image}`} alt={`${pageDetail.banner_1_title}`} className="banner-image" data-aos="fade-down" data-aos-duration="2500" />
+                                            {pageDetail.banner_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.banner_1_image}`} alt={`${pageDetail.banner_1_title}`} className="banner-image" data-aos="fade-down" data-aos-duration="2500" />}
                                             <div onClick={() => { handleShow(11); }}>
                                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" data-aos="fade-up" data-aos-duration="2700" />
                                             </div>
@@ -95,7 +95,7 @@ const NewBanner = (pageDetail) => {
                                     </div>
 
                                     <div className="rightPartBanner" onClick={() => { handleShow(1); }} data-aos="fade-up" data-aos-duration="2500">
-                                        <img src={`${API_IMG_URL}pages/${pageDetail.banner_1_video_thumbnail}`} alt="Video Thumbnail" />
+                                        {pageDetail.banner_1_video_thumbnail && <img src={`${API_IMG_URL}pages/${pageDetail.banner_1_video_thumbnail}`} alt="Video Thumbnail" />}
                                     </div>
 
                                     <Modal show={show == 1 ? show : ''} onHide={handleClose} size="lg" centered>
@@ -108,7 +108,7 @@ const NewBanner = (pageDetail) => {
                                 </div>
 
                                 <div className={`mainPartBanner ${indicatorId === 2 ? "" : "bannerTextHide"}`}>
-                                    <img src={`${API_IMG_URL}pages/${pageDetail.banner_2_bg_image}`} alt={`${pageDetail.banner_2_title}`} className="banner-bg-image" />
+                                    {pageDetail.banner_2_bg_image && <img src={`${API_IMG_URL}pages/${pageDetail.banner_2_bg_image}`} alt={`${pageDetail.banner_2_title}`} className="banner-bg-image" />}
 
                                     <div className="leftPartBanner">
                                         <div className="bannerText">
@@ -127,7 +127,7 @@ const NewBanner = (pageDetail) => {
 
                                     <div className="bgPartBanner">
                                         <div className="mainBannerImg">
-                                            <img src={`${API_IMG_URL}pages/${pageDetail.banner_2_image}`} alt={`${pageDetail.banner_2_title}`} className="banner-image" />
+                                            {pageDetail.banner_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.banner_2_image}`} alt={`${pageDetail.banner_2_title}`} className="banner-image" />}
                                             <div onClick={() => { handleShow(21); }}>
                                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
                                             </div>
@@ -149,7 +149,7 @@ const NewBanner = (pageDetail) => {
                                     </div>
 
                                     <div className="rightPartBanner" onClick={() => { handleShow(2); }}>
-                                        <img src={`${API_IMG_URL}pages/${pageDetail.banner_2_video_thumbnail}`} alt="Video Thumbnail" />
+                                        {pageDetail.banner_2_video_thumbnail && <img src={`${API_IMG_URL}pages/${pageDetail.banner_2_video_thumbnail}`} alt="Video Thumbnail" />}
                                     </div>
 
                                     <Modal show={show == 2 ? show : ''} onHide={handleClose} size="lg" centered>
@@ -161,7 +161,7 @@ const NewBanner = (pageDetail) => {
                                 </div>
 
                                 <div className={`mainPartBanner ${indicatorId === 3 ? "" : "bannerTextHide"}`}>
-                                    <img src={`${API_IMG_URL}pages/${pageDetail.banner_3_bg_image}`} alt={`${pageDetail.banner_3_title}`} className="banner-bg-image" />
+                                    {pageDetail.banner_3_bg_image && <img src={`${API_IMG_URL}pages/${pageDetail.banner_3_bg_image}`} alt={`${pageDetail.banner_3_title}`} className="banner-bg-image" />}
 
                                     <div className="leftPartBanner">
                                         <div className="bannerText">
@@ -180,7 +180,7 @@ const NewBanner = (pageDetail) => {
 
                                     <div className="bgPartBanner">
                                         <div className="mainBannerImg">
-                                            <img src={`${API_IMG_URL}pages/${pageDetail.banner_3_image}`} alt={`${pageDetail.banner_3_title}`} className="banner-image" />
+                                            {pageDetail.banner_3_image && <img src={`${API_IMG_URL}pages/${pageDetail.banner_3_image}`} alt={`${pageDetail.banner_3_title}`} className="banner-image" />}
                                             <div onClick={() => { handleShow(31); }}>
                                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
                                             </div>
@@ -202,7 +202,7 @@ const NewBanner = (pageDetail) => {
                                     </div>
 
                                     <div className="rightPartBanner" onClick={() => { handleShow(3); }}>
-                                        <img src={`${API_IMG_URL}pages/${pageDetail.banner_3_video_thumbnail}`} alt="Video Thumbnail" />
+                                        {pageDetail.banner_3_video_thumbnail && <img src={`${API_IMG_URL}pages/${pageDetail.banner_3_video_thumbnail}`} alt="Video Thumbnail" />}
                                     </div>
 
                                     <Modal show={show == 3 ? show : ''} onHide={handleClose} size="lg" centered>

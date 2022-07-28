@@ -21,7 +21,7 @@ function WorldMap(pageDetail) {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            <img src={`${API_IMG_URL}pages/${pageDetail.world_map_image_1}`} alt="left" />
+            {pageDetail.world_map_image_1 && <img src={`${API_IMG_URL}pages/${pageDetail.world_map_image_1}`} alt="left" />}
           </div>
           <div
             className="worldmap_right "
@@ -29,7 +29,7 @@ function WorldMap(pageDetail) {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            <img src={`${API_IMG_URL}pages/${pageDetail.world_map_image_2}`} alt="right" />
+            {pageDetail.world_map_image_2 && <img src={`${API_IMG_URL}pages/${pageDetail.world_map_image_2}`} alt="right" />}
           </div>
         </div>
       </div>

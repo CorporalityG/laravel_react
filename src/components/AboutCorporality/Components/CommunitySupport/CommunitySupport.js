@@ -39,10 +39,10 @@ function CommunitySupport(pageDetail) {
               {`${pageDetail.community_item_1_description}`}
             </div>
             <div className="community_top_image">
-              <img
+              {pageDetail.community_item_1_image && <img
                 src={`${API_IMG_URL}pages/${pageDetail.community_item_1_image}`} alt={`${pageDetail.community_item_1_title}`}
                 className="community_top_image_image"
-              />
+              />}
             </div>
             <div className="community_top_back_image">
               <img src={top_back} alt="top_back" />
@@ -69,10 +69,10 @@ function CommunitySupport(pageDetail) {
               {`${pageDetail.community_item_2_description}`}
             </div>
             <div className="community_bottom_image">
-              <img
+              {pageDetail.community_item_2_image && <img
                 src={`${API_IMG_URL}pages/${pageDetail.community_item_2_image}`} alt={`${pageDetail.community_item_2_title}`}
                 className="community_bottom_image_image"
-              />
+              />}
             </div>
             <div className="community_bottom_back_image">
               <img src={bottom_back} alt="bottom_back" />

@@ -8,7 +8,7 @@ const Hover = (pageDetail) => {
         <div>
             <div className="In_Div_anm_container">
                 <div className="In_Div_anm_container_img">
-                    <img src={`${API_IMG_URL}pages/${pageDetail.author_image}`} alt="Inclusivity and diversity" />
+                    {pageDetail.author_image && <img src={`${API_IMG_URL}pages/${pageDetail.author_image}`} alt="Inclusivity and diversity" />}
                 </div>
                 <div className="In_Div_anm_container_text">
                     <div className="In_Div_anm_upper_box">

@@ -26,7 +26,7 @@ const OurFaith = (pageDetail) => {
                                 <div className="img-container-Faith">
                                     <div className="hoverinit-Faith Inc_Div_our-faith-main-img-Faith">
                                         <div alt="main2" data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="1000">
-                                            <img className='main2-Faith ' src={`${API_IMG_URL}pages/${pageDetail.our_faith_image}`} alt={`${pageDetail.our_faith_title}`} />
+                                            {pageDetail.our_faith_image && <img className='main2-Faith ' src={`${API_IMG_URL}pages/${pageDetail.our_faith_image}`} alt={`${pageDetail.our_faith_title}`} />}
                                         </div>
                                     </div>
                                 </div>

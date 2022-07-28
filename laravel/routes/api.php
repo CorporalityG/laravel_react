@@ -11,6 +11,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\IndustrialArticleController;
 use App\Http\Controllers\IndustrialArticleCategoryController;
 
+use App\Http\Controllers\Api\PostController as ApiPostController;
 use App\Http\Controllers\Api\PageController;
 use App\Http\Controllers\Api\JobController;
 use App\Http\Controllers\Api\TestimonialController;
@@ -47,6 +48,9 @@ Route::get('/related-posts-2/{slug}/', [PostController::class, 'getRelatedPosts2
 Route::get('/random-blogs', [PostController::class, 'randomBlogs']);
 Route::get('/category-posts/{slug?}', [PostController::class, 'categoyPosts']);
 Route::get('/csuit-blogs', [PostController::class, 'getCSuitBlogs']);
+Route::get('/home-latest-insights', [ApiPostController::class, 'homeLatestInsights']);
+
+Route::get('/posts', [PostController::class, 'index']);
 
 Route::get('/single-article/{slug}', [ArticleController::class, 'getArticle']);
 

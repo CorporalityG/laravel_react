@@ -26,7 +26,7 @@ export default function Banner2(pageDetail) {
                 <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
                   <div className="purpleD align-items-center"></div>
                   <div className="position-absolute top-50 start-50 translate-middle align-items-center dImg">
-                    <img src={`${API_IMG_URL}pages/${pageDetail.box_1_icon}`} alt={`${pageDetail.box_1_title}`} className="img-fluid" />
+                    {pageDetail.box_1_icon && <img src={`${API_IMG_URL}pages/${pageDetail.box_1_icon}`} alt={`${pageDetail.box_1_title}`} className="img-fluid" />}
                   </div>
                 </div>
                 <div className="box position-relative">
@@ -63,11 +63,11 @@ export default function Banner2(pageDetail) {
                 <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
                   <div className="purpleD align-items-center"></div>
                   <div className="position-absolute top-50 start-50 translate-middle align-items-center dImg">
-                    <img
+                    {pageDetail.box_2_icon && <img
                       src={`${API_IMG_URL}pages/${pageDetail.box_2_icon}`}
                       alt={`${pageDetail.box_2_title}`}
                       className="img-fluid"
-                    />
+                    />}
                   </div>
                 </div>
                 <div className="box">
@@ -101,7 +101,7 @@ export default function Banner2(pageDetail) {
                 <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
                   <div className="purpleD align-items-center"></div>
                   <div className="position-absolute top-50 start-50 translate-middle align-items-center dImg">
-                    <img src={`${API_IMG_URL}pages/${pageDetail.box_3_icon}`} alt={`${pageDetail.box_3_title}`} className="img-fluid" />
+                    {pageDetail.box_3_icon && <img src={`${API_IMG_URL}pages/${pageDetail.box_3_icon}`} alt={`${pageDetail.box_3_title}`} className="img-fluid" />}
                   </div>
                 </div>
                 <div className="box">

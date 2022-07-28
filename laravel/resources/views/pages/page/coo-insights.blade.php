@@ -49,7 +49,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['apple_podcasts_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['apple_podcasts_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['apple_podcasts_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="apple_podcasts_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -76,7 +80,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['spotify_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['spotify_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['spotify_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="spotify_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -103,7 +111,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['google_podcasts_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['google_podcasts_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['google_podcasts_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="google_podcasts_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -130,7 +142,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['youtube_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['youtube_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['youtube_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="youtube_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -190,7 +206,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['service_insights_event_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['service_insights_event_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['service_insights_event_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="service_insights_event_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>

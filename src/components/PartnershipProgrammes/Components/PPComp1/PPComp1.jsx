@@ -51,7 +51,10 @@ export default function PPComp1(pageDetail) {
                                         <img alt='smallrect' className='smallrect-Op' src={smallrect} />
                                         <img alt='Back' className='backimg-Op' src={Back} />
                                         <div className="banner_right_inner-Op" >
-                                            <img className='main-prev1-Op' src={`${API_IMG_URL}pages/${pageDetail.banner_image}`} alt={`${pageDetail.banner_title}`} />
+                                            {
+                                                pageDetail.banner_image &&
+                                                <img className='main-prev1-Op' src={`${API_IMG_URL}pages/${pageDetail.banner_image}`} alt={`${pageDetail.banner_title}`} />
+                                            }
                                         </div>
                                     </div>
                                 </div>

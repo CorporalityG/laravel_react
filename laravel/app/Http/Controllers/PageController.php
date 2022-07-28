@@ -2017,4 +2017,35 @@ class PageController extends Controller
             return redirect::back()->withInput();
         endif;
     }
+
+    
+    public function deleteMetaImg(Request $request)
+    {
+        // dd($request->page_id);
+        $RS_Row = Page::select('id')->findOrFail($request->page_id);
+        
+        if( !empty($RS_Row) )
+        {
+            $metaKey = $request->delete_meta_key;
+
+            if ($RS_Row->hasMeta($metaKey))
+            {
+                $RS_Meta = $RS_Row->getMeta($metaKey);
+                
+                $destinationPath = public_path('/uploads/pages/');
+
+                if( !empty($RS_Meta) && File::exists($destinationPath.$RS_Meta) )
+                {
+                    File::delete($destinationPath.$RS_Meta);
+                }
+
+                $RS_Row->removeMeta($metaKey);
+
+                Session::flash('messageType', 'success');
+                Session::flash('message', 'Image deleted successfully.');
+            }
+        }
+
+        return redirect::back();
+    }
 }

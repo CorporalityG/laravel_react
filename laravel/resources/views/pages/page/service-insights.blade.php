@@ -52,7 +52,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['event_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['event_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['event_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="event_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -149,7 +153,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['reach_out_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['reach_out_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['reach_out_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="reach_out_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -202,7 +210,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['we_organize_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['we_organize_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['we_organize_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="we_organize_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>

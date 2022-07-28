@@ -21,7 +21,7 @@ function FearlessCreativity(pageDetail) {
         >
           <div className="fearless_image_side">
             <div className="fearless_main_image">
-              <img src={`${API_IMG_URL}pages/${pageDetail.fearless_image}`} alt={`${pageDetail.fearless_title}`} />
+              {pageDetail.fearless_image && <img src={`${API_IMG_URL}pages/${pageDetail.fearless_image}`} alt={`${pageDetail.fearless_title}`} />}
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ function FearlessCreativity(pageDetail) {
             >
               <div className="fearless_content_1">
                 <div className="fearless_content_imageside">
-                  <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_1_icon}`} alt={`${pageDetail.fearless_item_1_title}`} />
+                  {pageDetail.fearless_item_1_icon && <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_1_icon}`} alt={`${pageDetail.fearless_item_1_title}`} />}
                 </div>
                 <div className="fearless_content_textside">
                   <div className="textside_heading">
@@ -60,7 +60,7 @@ function FearlessCreativity(pageDetail) {
             >
               <div className="fearless_content_2">
                 <div className="fearless_content_imageside">
-                  <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_2_icon}`} alt={`${pageDetail.fearless_item_2_title}`} />
+                  {pageDetail.fearless_item_2_icon && <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_2_icon}`} alt={`${pageDetail.fearless_item_2_title}`} />}
                 </div>
                 <div className="fearless_content_textside">
                   <div className="textside_heading">{`${pageDetail.fearless_item_2_title}`}</div>
@@ -77,7 +77,7 @@ function FearlessCreativity(pageDetail) {
             >
               <div className="fearless_content_3">
                 <div className="fearless_content_imageside">
-                  <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_3_icon}`} alt={`${pageDetail.fearless_item_3_title}`} />
+                  {pageDetail.fearless_item_3_icon && <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_3_icon}`} alt={`${pageDetail.fearless_item_3_title}`} />}
                 </div>
                 <div className="fearless_content_textside">
                   <div className="textside_heading">{`${pageDetail.fearless_item_3_title}`}</div>

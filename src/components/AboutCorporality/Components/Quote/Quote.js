@@ -41,7 +41,7 @@ function Quote(pageDetail) {
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="1000"
                   >
-                    <img src={`${API_IMG_URL}pages/${pageDetail.author_image}`} alt={`${pageDetail.author_name}`} />
+                    {pageDetail.author_image && <img src={`${API_IMG_URL}pages/${pageDetail.author_image}`} alt={`${pageDetail.author_name}`} />}
                   </div>
                   <div className="quote_image">
                     <img src={quotation_mark} alt="quotation_mark" />

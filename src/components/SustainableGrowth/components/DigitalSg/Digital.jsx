@@ -30,7 +30,7 @@ const DigitalSg = (pageDetail) => {
                                         <div className="img-container-Digital">
                                             <div className="hoverinit-Digital Inc_Div_our-faith-main-img-Digital">
                                                 <div alt="main2DigitalSg" data-aos="fade-up-right" data-aos-duration="2000" data-aos-delay="10">
-                                                    <img className='main2-Digital ' src={`${API_IMG_URL}pages/${pageDetail.sustainability_image}`} alt={`${pageDetail.sustainability_title}`} />
+                                                    {pageDetail.sustainability_image && <img className='main2-Digital ' src={`${API_IMG_URL}pages/${pageDetail.sustainability_image}`} alt={`${pageDetail.sustainability_title}`} />}
                                                 </div>
                                             </div>
                                         </div>

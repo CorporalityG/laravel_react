@@ -42,7 +42,7 @@ const CaseStudy = (pageDetail) => {
                                             <img className='backimagesecond-fourth-Cs' src={Back} alt='Back' />
                                             <div className="bp_our-newsletter-polygon9-Cs">
                                                 <div data-aos="fade-down-left" data-aos-duration="2000">
-                                                    <img className='main-2-2-Cs' src={`${API_IMG_URL}pages/${pageDetail.case_studies_image}`} alt={`${pageDetail.case_studies_title}`} />
+                                                    {pageDetail.case_studies_image && <img className='main-2-2-Cs' src={`${API_IMG_URL}pages/${pageDetail.case_studies_image}`} alt={`${pageDetail.case_studies_title}`} />}
                                                 </div>
                                             </div>
                                         </div>

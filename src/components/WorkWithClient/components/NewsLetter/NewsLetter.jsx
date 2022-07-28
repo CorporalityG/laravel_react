@@ -63,7 +63,7 @@ const NewsLetter = (pageDetail) => {
             <div className="Main_back_NewsLetter">
               <div className="Work-newsletter-polygon9">
                 <div data-aos="fade-left" data-aos-delay="500">
-                  <img src={`${API_IMG_URL}pages/${pageDetail.work_us_image}`} alt={`${pageDetail.work_us_title}`} />
+                  {pageDetail.work_us_image && <img src={`${API_IMG_URL}pages/${pageDetail.work_us_image}`} alt={`${pageDetail.work_us_title}`} />}
                 </div>
               </div>
               <img src={back} className="back_newsLetter" alt="back" />

@@ -42,7 +42,7 @@ function Leadership(pageDetail) {
               data-aos-duration="1000"
             >
               <div className="leadership1_image">
-                <img src={`${API_IMG_URL}pages/${pageDetail.team_member_1_image}`} alt={`${pageDetail.team_member_1_name}`} />
+                {pageDetail.team_member_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.team_member_1_image}`} alt={`${pageDetail.team_member_1_name}`} />}
               </div>
               <div className="leader_card_content_box">
                 <div className="card_content_h1">{`${pageDetail.team_member_1_name}`}</div>
@@ -59,7 +59,7 @@ function Leadership(pageDetail) {
               data-aos-duration="1000"
             >
               <div className="leadership2_image">
-                <img src={`${API_IMG_URL}pages/${pageDetail.team_member_2_image}`} alt={`${pageDetail.team_member_2_name}`} />
+                {pageDetail.team_member_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.team_member_2_image}`} alt={`${pageDetail.team_member_2_name}`} />}
               </div>
 
               <div className="leader_card_content_box">

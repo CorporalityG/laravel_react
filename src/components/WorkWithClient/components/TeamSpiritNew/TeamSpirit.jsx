@@ -39,7 +39,7 @@ function TeamSpiritNew(pageDetail) {
             </div>
           </div>
           <div className="community_top_image-Invirogating">
-            <img src={`${API_IMG_URL}pages/${pageDetail.spirit_item_1_image}`} alt={`${pageDetail.spirit_item_1_title}`} className="community_top_image_image-Invirogating" />
+            {pageDetail.spirit_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.spirit_item_1_image}`} alt={`${pageDetail.spirit_item_1_title}`} className="community_top_image_image-Invirogating" />}
           </div>
           <div className="community_top_back_image-Invirogating">
             <img src={top_back} alt="Invirogating" />
@@ -69,10 +69,10 @@ function TeamSpiritNew(pageDetail) {
           </div>
           <div className="ImageINSecond_Leaderships">
             <div className="community_bottom_image-Invirogating">
-              <img
+              {pageDetail.spirit_item_2_image && <img
                 src={`${API_IMG_URL}pages/${pageDetail.spirit_item_2_image}`} alt={`${pageDetail.spirit_item_2_title}`}
                 className="community_bottom_image_image-Invirogating"
-              />
+              />}
             </div>
             <div className="community_bottom_back_image-Invirogating">
               <img src={bottom_back} alt="Invirogating" />

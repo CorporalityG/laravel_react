@@ -45,11 +45,11 @@ function ServicesClients() {
                                     <Carousel activeIndex={index} onSelect={handleSelect} controls={false} interval={null} fade>
                                         <Carousel.Item>
                                             <ClientWorkItem
-                                                thumbnail={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_1_image}`}
+                                                thumbnail={pageSectionDetail.detail.client_1_image && `${API_IMG_URL}pages/${pageSectionDetail.detail.client_1_image}`}
                                                 clientName={`${pageSectionDetail.detail.client_1_name}`}
                                                 title={`${pageSectionDetail.detail.client_1_title}`}
                                                 subtitle={`<p>${pageSectionDetail.detail.client_1_subtitle ?? ''}</p>`}
-                                                studiesImg={`${API_IMG_URL}/pages/${pageSectionDetail.detail.client_1_studies_image}`}
+                                                studiesImg={pageSectionDetail.detail.client_1_studies_image && `${API_IMG_URL}/pages/${pageSectionDetail.detail.client_1_studies_image}`}
                                                 studiesTitle={`${pageSectionDetail.detail.client_1_studies_title}`}
                                                 studiesSubTitle={`${pageSectionDetail.detail.client_1_studies_subtitle}`}
                                                 studiesBtnText={`${pageSectionDetail.detail.client_1_studies_btn_text}`}
@@ -63,11 +63,11 @@ function ServicesClients() {
 
                                         <Carousel.Item data-aos="zoom-in">
                                             <ClientWorkItem
-                                                thumbnail={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_2_image}`}
+                                                thumbnail={pageSectionDetail.detail.client_2_image && `${API_IMG_URL}pages/${pageSectionDetail.detail.client_2_image}`}
                                                 clientName={`${pageSectionDetail.detail.client_2_name}`}
                                                 title={`${pageSectionDetail.detail.client_2_title}`}
                                                 subtitle={`<p>${pageSectionDetail.detail.client_2_subtitle ?? ''}</p>`}
-                                                studiesImg={`${API_IMG_URL}/pages/${pageSectionDetail.detail.client_2_studies_image}`}
+                                                studiesImg={pageSectionDetail.detail.client_2_studies_image && `${API_IMG_URL}/pages/${pageSectionDetail.detail.client_2_studies_image}`}
                                                 studiesTitle={`${pageSectionDetail.detail.client_2_studies_title}`}
                                                 studiesSubTitle={`${pageSectionDetail.detail.client_2_studies_subtitle}`}
                                                 studiesBtnText={`${pageSectionDetail.detail.client_2_studies_btn_text}`}
@@ -81,11 +81,11 @@ function ServicesClients() {
 
                                         <Carousel.Item data-aos="zoom-in">
                                             <ClientWorkItem
-                                                thumbnail={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_3_image}`}
+                                                thumbnail={pageSectionDetail.detail.client_3_image && `${API_IMG_URL}pages/${pageSectionDetail.detail.client_3_image}`}
                                                 clientName={`${pageSectionDetail.detail.client_3_name}`}
                                                 title={`${pageSectionDetail.detail.client_3_title}`}
                                                 subtitle={`<p>${pageSectionDetail.detail.client_3_subtitle ?? ''}</p>`}
-                                                studiesImg={`${API_IMG_URL}/pages/${pageSectionDetail.detail.client_3_studies_image}`}
+                                                studiesImg={pageSectionDetail.detail.client_3_studies_image && `${API_IMG_URL}/pages/${pageSectionDetail.detail.client_3_studies_image}`}
                                                 studiesTitle={`${pageSectionDetail.detail.client_3_studies_title}`}
                                                 studiesSubTitle={`${pageSectionDetail.detail.client_3_studies_subtitle}`}
                                                 studiesBtnText={`${pageSectionDetail.detail.client_3_studies_btn_text}`}
@@ -99,11 +99,11 @@ function ServicesClients() {
 
                                         <Carousel.Item data-aos="zoom-in">
                                             <ClientWorkItem
-                                                thumbnail={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_4_image}`}
+                                                thumbnail={pageSectionDetail.detail.client_4_image && `${API_IMG_URL}pages/${pageSectionDetail.detail.client_4_image}`}
                                                 clientName={`${pageSectionDetail.detail.client_4_name}`}
                                                 title={`${pageSectionDetail.detail.client_4_title}`}
                                                 subtitle={`<p>${pageSectionDetail.detail.client_4_subtitle ?? ''}</p>`}
-                                                studiesImg={`${API_IMG_URL}/pages/${pageSectionDetail.detail.client_4_studies_image}`}
+                                                studiesImg={pageSectionDetail.detail.client_4_studies_image && `${API_IMG_URL}/pages/${pageSectionDetail.detail.client_4_studies_image}`}
                                                 studiesTitle={`${pageSectionDetail.detail.client_4_studies_title}`}
                                                 studiesSubTitle={`${pageSectionDetail.detail.client_4_studies_subtitle}`}
                                                 studiesBtnText={`${pageSectionDetail.detail.client_4_studies_btn_text}`}

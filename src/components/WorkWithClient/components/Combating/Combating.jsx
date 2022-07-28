@@ -26,7 +26,7 @@ const Combating = (pageDetail) => {
               <div className="MainAndBack_Combating">
                 <div className="Combating_main">
                   <div className="Combating_main_on_div">
-                    <img src={`${API_IMG_URL}pages/${pageDetail.combating_image}`} alt={`${pageDetail.combating_title}`} />
+                    {pageDetail.combating_image && <img src={`${API_IMG_URL}pages/${pageDetail.combating_image}`} alt={`${pageDetail.combating_title}`} />}
                   </div>
                 </div>
                 <img src={backCombating} alt="backCombating" className="Combating_back" />

@@ -14,7 +14,7 @@ function EmotionalQuest(pageDetail) {
               <div className="col-md-6">
                 <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-offset="0">
                   <div className="emotional-video">
-                    <video src={`${API_IMG_URL}pages/${pageDetail.emotional_quest_video_url}`} controls={true} autoPlay={false} poster={`${API_IMG_URL}pages/${pageDetail.emotional_quest_video_thumbnail}`} />
+                    <video src={`${API_IMG_URL}pages/${pageDetail.emotional_quest_video_url}`} controls={true} autoPlay={false} poster={pageDetail.emotional_quest_video_thumbnail && `${API_IMG_URL}pages/${pageDetail.emotional_quest_video_thumbnail}`} />
                   </div>
                 </div>
               </div>

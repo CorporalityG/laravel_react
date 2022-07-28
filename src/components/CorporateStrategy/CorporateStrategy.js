@@ -22,7 +22,7 @@ function CorporateStrategy() {
     });
 
     getPageDetail()
-  });
+  }, []);
 
   async function getPageDetail() {
     let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
@@ -80,9 +80,12 @@ function CorporateStrategy() {
 
                   <div className="col-lg-6">
                     <div className="coo-banner-video">
-                      <video data-aos="fade-left" data-aos-duration="1600" autoPlay={true} muted loop>
-                        <source src={`${API_IMG_URL}pages/${pageDetail.detail.banner_video}`} type="video/mp4" />
-                      </video>
+                      {
+                        pageDetail.detail.banner_video &&
+                        <video data-aos="fade-left" data-aos-duration="1600" autoPlay={true} muted loop>
+                          <source src={`${API_IMG_URL}pages/${pageDetail.detail.banner_video}`} type="video/mp4" />
+                        </video>
+                      }
                     </div>
                   </div>
                 </div>
@@ -105,7 +108,7 @@ function CorporateStrategy() {
                 <div className="row coo-ls-row">
                   <div className="col-lg-6 coo-ls-col">
                     <div className="coo-ls-banner">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.strategic_issues_image}`} alt="Strategic Issues" data-aos="zoom-in-up" />
+                      {pageDetail.detail.strategic_issues_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.strategic_issues_image}`} alt="Strategic Issues" data-aos="zoom-in-up" />}
                     </div>
                   </div>
 
@@ -157,22 +160,22 @@ function CorporateStrategy() {
                   <div className="col-lg-8 coo-mp-items-col">
                     <div className="coo-mp-items">
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_audit_item_1_image}`}
+                        icon={pageDetail.detail.methodology_process_audit_item_1_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_audit_item_1_image}`}
                         title={`${pageDetail.detail.methodology_process_audit_item_1_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_audit_item_2_image}`}
+                        icon={pageDetail.detail.methodology_process_audit_item_2_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_audit_item_2_image}`}
                         title={`${pageDetail.detail.methodology_process_audit_item_2_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_audit_item_3_image}`}
+                        icon={pageDetail.detail.methodology_process_audit_item_3_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_audit_item_3_image}`}
                         title={`${pageDetail.detail.methodology_process_audit_item_3_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_audit_item_4_image}`}
+                        icon={pageDetail.detail.methodology_process_audit_item_4_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_audit_item_4_image}`}
                         title={`${pageDetail.detail.methodology_process_audit_item_4_title}`}
                       />
                     </div>
@@ -216,22 +219,22 @@ function CorporateStrategy() {
                   <div className="col-lg-8 coo-mp-items-col">
                     <div className="coo-mp-items">
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_strategizing_item_1_image}`}
+                        icon={pageDetail.detail.methodology_process_strategizing_item_1_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_strategizing_item_1_image}`}
                         title={`${pageDetail.detail.methodology_process_strategizing_item_1_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_strategizing_item_2_image}`}
+                        icon={pageDetail.detail.methodology_process_strategizing_item_2_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_strategizing_item_2_image}`}
                         title={`${pageDetail.detail.methodology_process_strategizing_item_2_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_strategizing_item_3_image}`}
+                        icon={pageDetail.detail.methodology_process_strategizing_item_3_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_strategizing_item_3_image}`}
                         title={`${pageDetail.detail.methodology_process_strategizing_item_3_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_strategizing_item_4_image}`}
+                        icon={pageDetail.detail.methodology_process_strategizing_item_4_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_strategizing_item_4_image}`}
                         title={`${pageDetail.detail.methodology_process_strategizing_item_4_title}`}
                       />
                     </div>
@@ -248,22 +251,22 @@ function CorporateStrategy() {
                   <div className="col-lg-8 coo-mp-items-col">
                     <div className="coo-mp-items">
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_task_force_item_1_image}`}
+                        icon={pageDetail.detail.methodology_process_task_force_item_1_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_task_force_item_1_image}`}
                         title={`${pageDetail.detail.methodology_process_task_force_item_1_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_task_force_item_2_image}`}
+                        icon={pageDetail.detail.methodology_process_task_force_item_2_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_task_force_item_2_image}`}
                         title={`${pageDetail.detail.methodology_process_task_force_item_2_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_task_force_item_3_image}`}
+                        icon={pageDetail.detail.methodology_process_task_force_item_3_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_task_force_item_3_image}`}
                         title={`${pageDetail.detail.methodology_process_task_force_item_3_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_task_force_item_4_image}`}
+                        icon={pageDetail.detail.methodology_process_task_force_item_4_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_task_force_item_4_image}`}
                         title={`${pageDetail.detail.methodology_process_task_force_item_4_title}`}
                       />
                     </div>
@@ -280,12 +283,12 @@ function CorporateStrategy() {
                   <div className="col-lg-8 coo-mp-items-col">
                     <div className="coo-mp-items">
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_asset_building_item_1_image}`}
+                        icon={pageDetail.detail.methodology_process_asset_building_item_1_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_asset_building_item_1_image}`}
                         title={`${pageDetail.detail.methodology_process_asset_building_item_1_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_asset_building_item_2_image}`}
+                        icon={pageDetail.detail.methodology_process_asset_building_item_2_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_asset_building_item_2_image}`}
                         title={`${pageDetail.detail.methodology_process_asset_building_item_2_title}`}
                       />
                     </div>
@@ -302,12 +305,12 @@ function CorporateStrategy() {
                   <div className="col-lg-8 coo-mp-items-col">
                     <div className="coo-mp-items">
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_plan_item_1_image}`}
+                        icon={pageDetail.detail.methodology_process_plan_item_1_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_plan_item_1_image}`}
                         title={`${pageDetail.detail.methodology_process_plan_item_1_title}`}
                       />
 
                       <MethodologyProcessItem
-                        icon={`${API_IMG_URL}pages/${pageDetail.detail.methodology_process_plan_item_2_image}`}
+                        icon={pageDetail.detail.methodology_process_plan_item_2_image && `${API_IMG_URL}pages/${pageDetail.detail.methodology_process_plan_item_2_image}`}
                         title={`${pageDetail.detail.methodology_process_plan_item_2_title}`}
                       />
                     </div>
@@ -336,7 +339,7 @@ function CorporateStrategy() {
                     <div className="coo-es-items">
                       <div className="coo-es-item coo-es-item-top" data-aos="zoom-in">
                         <div className="es-item-icon">
-                          <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_1_image}`} alt={`${pageDetail.detail.what_expect_item_1_title}`} />
+                          {pageDetail.detail.what_expect_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_1_image}`} alt={`${pageDetail.detail.what_expect_item_1_title}`} />}
                         </div>
                         <div className="es-item-title">{`${pageDetail.detail.what_expect_item_1_title}`}</div>
                       </div>
@@ -344,7 +347,7 @@ function CorporateStrategy() {
                       <div className="coo-es-item-middle">
                         <div className="coo-es-item coo-es-item-right" data-aos="zoom-in">
                           <div className="es-item-icon">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_2_image}`} alt={`${pageDetail.detail.what_expect_item_2_title}`} />
+                            {pageDetail.detail.what_expect_item_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_2_image}`} alt={`${pageDetail.detail.what_expect_item_2_title}`} />}
                           </div>
                           <div className="es-item-title">{`${pageDetail.detail.what_expect_item_2_title}`}</div>
                         </div>
@@ -359,7 +362,7 @@ function CorporateStrategy() {
 
                         <div className="coo-es-item coo-es-item-left" data-aos="zoom-in">
                           <div className="es-item-icon">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_4_image}`} alt={`${pageDetail.detail.what_expect_item_4_title}`} />
+                            {pageDetail.detail.what_expect_item_4_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_4_image}`} alt={`${pageDetail.detail.what_expect_item_4_title}`} />}
                           </div>
                           <div className="es-item-title">{`${pageDetail.detail.what_expect_item_4_title}`}</div>
                         </div>
@@ -367,7 +370,7 @@ function CorporateStrategy() {
 
                       <div className="coo-es-item coo-es-item-bottom" data-aos="zoom-in">
                         <div className="es-item-icon">
-                          <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_3_image}`} alt={`${pageDetail.detail.what_expect_item_3_title}`} />
+                          {pageDetail.detail.what_expect_item_3_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_3_image}`} alt={`${pageDetail.detail.what_expect_item_3_title}`} />}
                         </div>
                         <div className="es-item-title">{`${pageDetail.detail.what_expect_item_3_title}`}</div>
                       </div>
@@ -400,22 +403,22 @@ function CorporateStrategy() {
 
                 <div className="row coo-wh-boxes-row">
                   <WhyHireItem
-                    icon={`${API_IMG_URL}pages/${pageDetail.detail.why_hire_item_1_image}`}
+                    icon={pageDetail.detail.why_hire_item_1_image && `${API_IMG_URL}pages/${pageDetail.detail.why_hire_item_1_image}`}
                     title={`${pageDetail.detail.why_hire_item_1_title}`}
                   />
 
                   <WhyHireItem
-                    icon={`${API_IMG_URL}pages/${pageDetail.detail.why_hire_item_2_image}`}
+                    icon={pageDetail.detail.why_hire_item_2_image && `${API_IMG_URL}pages/${pageDetail.detail.why_hire_item_2_image}`}
                     title={`${pageDetail.detail.why_hire_item_2_title}`}
                   />
 
                   <WhyHireItem
-                    icon={`${API_IMG_URL}pages/${pageDetail.detail.why_hire_item_3_image}`}
+                    icon={pageDetail.detail.why_hire_item_3_image && `${API_IMG_URL}pages/${pageDetail.detail.why_hire_item_3_image}`}
                     title={`${pageDetail.detail.why_hire_item_3_title}`}
                   />
 
                   <WhyHireItem
-                    icon={`${API_IMG_URL}pages/${pageDetail.detail.why_hire_item_4_image}`}
+                    icon={pageDetail.detail.why_hire_item_4_image && `${API_IMG_URL}pages/${pageDetail.detail.why_hire_item_4_image}`}
                     title={`${pageDetail.detail.why_hire_item_4_title}`}
                   />
                 </div>
@@ -438,7 +441,7 @@ function CorporateStrategy() {
 
                   <div className="col-lg-6">
                     <div className="coo-ss-banner">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.success_strategy_image}`} alt={`${pageDetail.detail.success_strategy_title}`} data-aos="zoom-in-up" />
+                      {pageDetail.detail.success_strategy_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.success_strategy_image}`} alt={`${pageDetail.detail.success_strategy_title}`} data-aos="zoom-in-up" />}
                     </div>
                   </div>
                 </div>

@@ -35,7 +35,7 @@ function Leadership(pageDetail) {
 
           <div className="first_leadership_image">
             <div className="community_top_image-Leaderships">
-              <img src={`${API_IMG_URL}pages/${pageDetail.partnerships_item_1_image}`} alt={`${pageDetail.partnerships_item_1_title}`} className="community_top_image_image-Leaderships" />
+              {pageDetail.partnerships_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.partnerships_item_1_image}`} alt={`${pageDetail.partnerships_item_1_title}`} className="community_top_image_image-Leaderships" />}
             </div>
             <div className="community_top_back_image-Leaderships">
               <img src={top_back} alt="top_back" />
@@ -63,10 +63,10 @@ function Leadership(pageDetail) {
           </div>
           <div className="ImageINSecond_Leaderships">
             <div className="community_bottom_image-Leaderships">
-              <img
-                src={`${API_IMG_URL}pages/${pageDetail.partnerships_item_2_image}`} alt={`${pageDetail.partnerships_item_2_title}`} 
+              {pageDetail.partnerships_item_2_image && <img
+                src={`${API_IMG_URL}pages/${pageDetail.partnerships_item_2_image}`} alt={`${pageDetail.partnerships_item_2_title}`}
                 className="community_bottom_image_image-Leaderships"
-              />
+              />}
             </div>
             <div className="community_bottom_back_image-Leaderships">
               <img src={bottom_back} alt="bottom_back" />

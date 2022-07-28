@@ -103,7 +103,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['factor_driving_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['factor_driving_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['factor_driving_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="factor_driving_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -297,7 +301,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['key_elements_item_1_icon']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['key_elements_item_1_icon']) }}" alt="{{ 'Icon' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['key_elements_item_1_icon']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="key_elements_item_1_icon" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -324,7 +332,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['key_elements_item_2_icon']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['key_elements_item_2_icon']) }}" alt="{{ 'Icon' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['key_elements_item_2_icon']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="key_elements_item_2_icon" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -351,7 +363,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['key_elements_item_3_icon']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['key_elements_item_3_icon']) }}" alt="{{ 'Icon' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['key_elements_item_3_icon']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="key_elements_item_3_icon" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -378,7 +394,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['key_elements_item_4_icon']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['key_elements_item_4_icon']) }}" alt="{{ 'Icon' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['key_elements_item_4_icon']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="key_elements_item_4_icon" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -405,7 +425,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['key_elements_item_5_icon']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['key_elements_item_5_icon']) }}" alt="{{ 'Icon' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['key_elements_item_5_icon']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="key_elements_item_5_icon" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>

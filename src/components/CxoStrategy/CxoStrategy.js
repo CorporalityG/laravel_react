@@ -22,7 +22,7 @@ function CxoStrategy() {
     });
 
     getPageDetail()
-  });
+  }, []);
 
   async function getPageDetail() {
     let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
@@ -119,7 +119,7 @@ function CxoStrategy() {
 
                   <div className="col-lg-6">
                     <div className="cxo-lc-boxes">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.guide_image}`} alt={`${pageDetail.detail.guide_title}`} className="lifecycle-favicon" data-aos="zoom-in-down" />
+                      {pageDetail.detail.guide_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.guide_image}`} alt={`${pageDetail.detail.guide_title}`} className="lifecycle-favicon" data-aos="zoom-in-down" />}
 
                       <div className="row">
                         <div className="col-sm-6 cxo-lc-box-col">
@@ -128,7 +128,7 @@ function CxoStrategy() {
                             <div className="lc-box-content">
                               <div className="lc-box-title" data-aos="fade-up">{`${pageDetail.detail.guide_item_1_title}`}</div>
                               <div className="lc-box-icon" data-aos="fade-up">
-                                <img src={`${API_IMG_URL}pages/${pageDetail.detail.guide_item_1_image}`} alt={`${pageDetail.detail.guide_item_1_title}`} />
+                                {pageDetail.detail.guide_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.guide_item_1_image}`} alt={`${pageDetail.detail.guide_item_1_title}`} />}
                               </div>
                             </div>
                           </div>
@@ -140,7 +140,7 @@ function CxoStrategy() {
                             <div className="lc-box-content">
                               <div className="lc-box-title" data-aos="fade-up">{`${pageDetail.detail.guide_item_2_title}`}</div>
                               <div className="lc-box-icon" data-aos="fade-up">
-                                <img src={`${API_IMG_URL}pages/${pageDetail.detail.guide_item_2_image}`} alt={`${pageDetail.detail.guide_item_2_title}`} />
+                                {pageDetail.detail.guide_item_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.guide_item_2_image}`} alt={`${pageDetail.detail.guide_item_2_title}`} />}
                               </div>
                             </div>
                           </div>
@@ -152,7 +152,7 @@ function CxoStrategy() {
                             <div className="lc-box-content">
                               <div className="lc-box-title" data-aos="fade-up">{`${pageDetail.detail.guide_item_3_title}`}</div>
                               <div className="lc-box-icon" data-aos="fade-up">
-                                <img src={`${API_IMG_URL}pages/${pageDetail.detail.guide_item_3_image}`} alt={`${pageDetail.detail.guide_item_3_title}`} />
+                                {pageDetail.detail.guide_item_3_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.guide_item_3_image}`} alt={`${pageDetail.detail.guide_item_3_title}`} />}
                                 {/* <img src={`${BASE_URL}/img/CxoStrategy/Growth-Facilitator-chart.png`} alt="Growth Facilitator Chart" /> */}
                               </div>
                             </div>
@@ -165,7 +165,7 @@ function CxoStrategy() {
                             <div className="lc-box-content">
                               <div className="lc-box-title" data-aos="fade-up">{`${pageDetail.detail.guide_item_4_title}`}</div>
                               <div className="lc-box-icon" data-aos="fade-up">
-                                <img src={`${API_IMG_URL}pages/${pageDetail.detail.guide_item_4_image}`} alt={`${pageDetail.detail.guide_item_4_title}`} />
+                                {pageDetail.detail.guide_item_4_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.guide_item_4_image}`} alt={`${pageDetail.detail.guide_item_4_title}`} />}
                                 {/* <img src={`${BASE_URL}/img/CxoStrategy/Inventor-blub.png`} alt="Inventor Blub" /> */}
                               </div>
                             </div>
@@ -197,7 +197,7 @@ function CxoStrategy() {
                   <div className="col-lg-6 cxo-ec-col">
                     <div className="cxo-expect-banner">
                       <div className='cxo-expect-bg' data-aos="zoom-in-up" data-aos-duration="1500"></div>
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_image}`} alt={`${pageDetail.detail.what_expect_title}`} data-aos="zoom-in-up" />
+                      {pageDetail.detail.what_expect_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_image}`} alt={`${pageDetail.detail.what_expect_title}`} data-aos="zoom-in-up" />}
                       <div className="cxo-eb-title" data-aos="fade-up">{`${pageDetail.detail.what_expect_image_caption}`}</div>
                     </div>
                   </div>
@@ -229,22 +229,22 @@ function CxoStrategy() {
 
                 <div className="row cxo-lm-boxes-row">
                   <LeverageModelItem
-                    icon={`${API_IMG_URL}pages/${pageDetail.detail.leverage_model_item_1_image}`}
+                    icon={pageDetail.detail.leverage_model_item_1_image && `${API_IMG_URL}pages/${pageDetail.detail.leverage_model_item_1_image}`}
                     title={`${pageDetail.detail.leverage_model_item_1_title}`}
                   />
 
                   <LeverageModelItem
-                    icon={`${API_IMG_URL}pages/${pageDetail.detail.leverage_model_item_2_image}`}
+                    icon={pageDetail.detail.leverage_model_item_2_image && `${API_IMG_URL}pages/${pageDetail.detail.leverage_model_item_2_image}`}
                     title={`${pageDetail.detail.leverage_model_item_2_title}`}
                   />
 
                   <LeverageModelItem
-                    icon={`${API_IMG_URL}pages/${pageDetail.detail.leverage_model_item_3_image}`}
+                    icon={pageDetail.detail.leverage_model_item_3_image && `${API_IMG_URL}pages/${pageDetail.detail.leverage_model_item_3_image}`}
                     title={`${pageDetail.detail.leverage_model_item_3_title}`}
                   />
 
                   <LeverageModelItem
-                    icon={`${API_IMG_URL}pages/${pageDetail.detail.leverage_model_item_4_image}`}
+                    icon={pageDetail.detail.leverage_model_item_4_image && `${API_IMG_URL}pages/${pageDetail.detail.leverage_model_item_4_image}`}
                     title={`${pageDetail.detail.leverage_model_item_4_title}`}
                   />
                 </div>

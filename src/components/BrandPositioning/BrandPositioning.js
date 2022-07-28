@@ -22,7 +22,7 @@ export default function BrandPositioning() {
     });
 
     getPageDetail()
-  });
+  }, []);
 
   async function getPageDetail() {
     let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
@@ -77,23 +77,23 @@ export default function BrandPositioning() {
                     </div>
 
                     <div className="bp-banner-ici" data-aos="fade-left" data-aos-offset="500" data-aos-duration="3000" data-aos-anchor="#brand-anchor">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.improved_company_image}`} alt="improved-company-image" />
+                      {pageDetail.detail.improved_company_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.improved_company_image}`} alt="improved-company-image" />}
                     </div>
 
                     <div className="bp-banner-cl" data-aos="fade-left" data-aos-offset="500" data-aos-duration="1500" data-aos-anchor="#brand-anchor">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.customer_loyalty_image}`} alt="customer-loyalty" />
+                      {pageDetail.detail.customer_loyalty_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.customer_loyalty_image}`} alt="customer-loyalty" />}
                     </div>
 
                     <div className="bp-banner-ri" data-aos="fade-left" data-aos-offset="500" data-aos-duration="2000" data-aos-anchor="#brand-anchor">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.relatable_identity_image}`} alt="relatable-identity" />
+                      {pageDetail.detail.relatable_identity_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.relatable_identity_image}`} alt="relatable-identity" />}
                     </div>
 
                     <div className="bp-banner-oeve" data-aos="fade-left" data-aos-offset="500" data-aos-duration="1000" data-aos-anchor="#brand-anchor">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.omni_effect_image}`} alt="omni-effect-vs-experiance" />
+                      {pageDetail.detail.omni_effect_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.omni_effect_image}`} alt="omni-effect-vs-experiance" />}
                     </div>
 
                     <div className="bp-banner-sbs" data-aos="fade-up" data-aos-offset="500" data-aos-duration="2000" data-aos-anchor="#brand-anchor">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.successfull_branding_strategy_image}`} alt="successfull-branding-strategy" />
+                      {pageDetail.detail.successfull_branding_strategy_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.successfull_branding_strategy_image}`} alt="successfull-branding-strategy" />}
                     </div>
 
                   </div>
@@ -176,14 +176,14 @@ export default function BrandPositioning() {
                       <div className="row bp-k-boxes-row">
                         <div className="col-lg-4 col-sm-4 pl-lg-0 bp-k-box-col">
                           <div className="bp-k-box" data-aos="fade-up" data-aos-delay="500">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.framework_methodology_item_1_image}`} alt={`${pageDetail.detail.framework_methodology_item_1_title ?? ''}`} />
+                            {pageDetail.detail.framework_methodology_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.framework_methodology_item_1_image}`} alt={`${pageDetail.detail.framework_methodology_item_1_title ?? ''}`} />}
                             <div className="bp-k-box-title">{`${pageDetail.detail.framework_methodology_item_1_title ?? ''}`}</div>
                           </div>
                         </div>
 
                         <div className="col-lg-4 col-sm-4 bp-k-box-col" data-aos="fade-up" data-aos-delay="550">
                           <div className="bp-k-box">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.framework_methodology_item_2_image}`} alt={`${pageDetail.detail.framework_methodology_item_2_title ?? ''}`} />
+                            {pageDetail.detail.framework_methodology_item_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.framework_methodology_item_2_image}`} alt={`${pageDetail.detail.framework_methodology_item_2_title ?? ''}`} />}
                             <div className="bp-k-box-title">{`${pageDetail.detail.framework_methodology_item_2_title ?? ''}`}</div>
                           </div>
                         </div>
@@ -194,7 +194,7 @@ export default function BrandPositioning() {
                   <div className="col-lg-6 bp-know-col">
                     <div className="bp-know-banner">
                       <div className="bp-kb-img" data-aos="zoom-in">
-                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.framework_methodology_image}`} alt={`${pageDetail.detail.framework_methodology_title}`} />
+                        {pageDetail.detail.framework_methodology_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.framework_methodology_image}`} alt={`${pageDetail.detail.framework_methodology_title}`} />}
                       </div>
                     </div>
                   </div>
@@ -271,7 +271,7 @@ export default function BrandPositioning() {
                       <Accordion.Item eventKey="0" data-aos="fade-up">
                         <Accordion.Header>
                           <div className="bp-ia-heading">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_1_icon}`} alt={`${pageDetail.detail.indomitable_item_1_title}`} />
+                            {pageDetail.detail.indomitable_item_1_icon && <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_1_icon}`} alt={`${pageDetail.detail.indomitable_item_1_title}`} />}
                             <span>{`${pageDetail.detail.indomitable_item_1_title}`}</span>
                           </div>
                         </Accordion.Header>
@@ -279,7 +279,7 @@ export default function BrandPositioning() {
                           <div className="bp-ia-content">
                             <div className="row">
                               <div className="col-md-2 col-sm-3">
-                                <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_1_image}`} alt={`${pageDetail.detail.indomitable_item_1_title}`} className="bp-ia-banner" />
+                                {pageDetail.detail.indomitable_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_1_image}`} alt={`${pageDetail.detail.indomitable_item_1_title}`} className="bp-ia-banner" />}
                               </div>
                               <div className="col-md-10 col-sm-9">
                                 <div className="bp-ia-content">
@@ -294,7 +294,7 @@ export default function BrandPositioning() {
                       <Accordion.Item eventKey="1" data-aos="fade-up">
                         <Accordion.Header>
                           <div className="bp-ia-heading">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_2_icon}`} alt={`${pageDetail.detail.indomitable_item_2_title}`} />
+                            {pageDetail.detail.indomitable_item_2_icon && <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_2_icon}`} alt={`${pageDetail.detail.indomitable_item_2_title}`} />}
                             <span>{`${pageDetail.detail.indomitable_item_2_title}`}</span>
                           </div>
                         </Accordion.Header>
@@ -302,7 +302,7 @@ export default function BrandPositioning() {
                           <div className="bp-ia-content">
                             <div className="row">
                               <div className="col-md-2 col-sm-3">
-                                <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_2_image}`} alt={`${pageDetail.detail.indomitable_item_2_title}`} className="bp-ia-banner" />
+                                {pageDetail.detail.indomitable_item_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_2_image}`} alt={`${pageDetail.detail.indomitable_item_2_title}`} className="bp-ia-banner" />}
                               </div>
                               <div className="col-md-10 col-sm-9">
                                 <div className="bp-ia-content">
@@ -317,7 +317,7 @@ export default function BrandPositioning() {
                       <Accordion.Item eventKey="2" data-aos="fade-up">
                         <Accordion.Header>
                           <div className="bp-ia-heading">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_3_icon}`} alt={`${pageDetail.detail.indomitable_item_3_title}`} />
+                            {pageDetail.detail.indomitable_item_3_icon && <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_3_icon}`} alt={`${pageDetail.detail.indomitable_item_3_title}`} />}
                             <span>{`${pageDetail.detail.indomitable_item_3_title}`}</span>
                           </div>
                         </Accordion.Header>
@@ -325,7 +325,7 @@ export default function BrandPositioning() {
                           <div className="bp-ia-content">
                             <div className="row">
                               <div className="col-md-2 col-sm-3">
-                                <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_3_image}`} alt={`${pageDetail.detail.indomitable_item_3_title}`} className="bp-ia-banner" />
+                                {pageDetail.detail.indomitable_item_3_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_3_image}`} alt={`${pageDetail.detail.indomitable_item_3_title}`} className="bp-ia-banner" />}
                               </div>
                               <div className="col-md-10 col-sm-9">
                                 <div className="bp-ia-content">
@@ -340,7 +340,7 @@ export default function BrandPositioning() {
                       <Accordion.Item eventKey="3" data-aos="fade-up">
                         <Accordion.Header>
                           <div className="bp-ia-heading">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_4_icon}`} alt={`${pageDetail.detail.indomitable_item_4_title}`} />
+                            {pageDetail.detail.indomitable_item_4_icon && <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_4_icon}`} alt={`${pageDetail.detail.indomitable_item_4_title}`} />}
                             <span>{`${pageDetail.detail.indomitable_item_4_title}`}</span>
                           </div>
                         </Accordion.Header>
@@ -348,7 +348,7 @@ export default function BrandPositioning() {
                           <div className="bp-ia-content">
                             <div className="row">
                               <div className="col-md-2 col-sm-3">
-                                <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_4_image}`} alt={`${pageDetail.detail.indomitable_item_4_title}`} className="bp-ia-banner" />
+                                {pageDetail.detail.indomitable_item_4_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_4_image}`} alt={`${pageDetail.detail.indomitable_item_4_title}`} className="bp-ia-banner" />}
                               </div>
                               <div className="col-md-10 col-sm-9">
                                 <div className="bp-ia-content">
@@ -363,7 +363,7 @@ export default function BrandPositioning() {
                       <Accordion.Item eventKey="4" data-aos="fade-up">
                         <Accordion.Header>
                           <div className="bp-ia-heading">
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_5_icon}`} alt={`${pageDetail.detail.indomitable_item_5_title}`} />
+                            {pageDetail.detail.indomitable_item_5_icon && <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_5_icon}`} alt={`${pageDetail.detail.indomitable_item_5_title}`} />}
                             <span>{`${pageDetail.detail.indomitable_item_5_title}`}</span>
                           </div>
                         </Accordion.Header>
@@ -371,7 +371,7 @@ export default function BrandPositioning() {
                           <div className="bp-ia-content">
                             <div className="row">
                               <div className="col-md-2 col-sm-3">
-                                <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_5_image}`} alt={`${pageDetail.detail.indomitable_item_5_title}`} className="bp-ia-banner" />
+                                {pageDetail.detail.indomitable_item_5_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.indomitable_item_5_image}`} alt={`${pageDetail.detail.indomitable_item_5_title}`} className="bp-ia-banner" />}
                               </div>
                               <div className="col-md-10 col-sm-9">
                                 <div className="bp-ia-content">

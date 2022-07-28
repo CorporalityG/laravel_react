@@ -21,7 +21,7 @@ function MarketingModelApproch() {
         });
 
         getPageDetail()
-    });
+    }, []);
 
     async function getPageDetail() {
         let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
@@ -76,7 +76,7 @@ function MarketingModelApproch() {
 
                                     <div className="col-lg-6 pr-0">
                                         <div className="mma-b-img-main">
-                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="mma-b-img" data-aos="zoom-in-up" />
+                                            {pageDetail.detail.banner_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="mma-b-img" data-aos="zoom-in-up" />}
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +113,7 @@ function MarketingModelApproch() {
                                     <div className="col-lg-6 mma-ec-col">
                                         <div className="mma-models-banner">
                                             <div className='mma-models-bg' data-aos="zoom-in-up" data-aos-duration="1500"></div>
-                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.marketing_models_image}`} alt={`${pageDetail.detail.marketing_models_title}`} data-aos="zoom-in-up" />
+                                            {pageDetail.detail.marketing_models_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.marketing_models_image}`} alt={`${pageDetail.detail.marketing_models_title}`} data-aos="zoom-in-up" />}
                                             <div className="mma-eb-title" data-aos="fade-up">{`${pageDetail.detail.marketing_models_image_caption}`}</div>
                                         </div>
                                     </div>

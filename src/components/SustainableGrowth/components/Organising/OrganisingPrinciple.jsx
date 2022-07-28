@@ -40,7 +40,7 @@ const OrganisingPrinciple = (pageDetail) => {
                                         <img alt='smallrectOrganising' className='smallrect-Op' src={smallrectOrganising} />
                                         <img alt='BackOrganising' className='backimg-Op' src={BackOrganising} />
                                         <div className="banner_right_inner-Op" >
-                                            <img className='main-prev1-Op' src={`${API_IMG_URL}pages/${pageDetail.banner_image}`} alt={`${pageDetail.banner_title}`} />
+                                            {pageDetail.banner_image && <img className='main-prev1-Op' src={`${API_IMG_URL}pages/${pageDetail.banner_image}`} alt={`${pageDetail.banner_title}`} />}
                                         </div>
 
                                     </div>

@@ -48,7 +48,7 @@ function FirstNew(pageDetail) {
           >
             <div className="imageside_maincontainer">
               <div className="imagesidecontainer2">
-                <img src={`${API_IMG_URL}pages/${pageDetail.banner_image}`} alt={`${pageDetail.banner_title}`}  className="impetus_mainimage" />
+                {pageDetail.banner_image && <img src={`${API_IMG_URL}pages/${pageDetail.banner_image}`} alt={`${pageDetail.banner_title}`} className="impetus_mainimage" />}
               </div>
               <div className="impetus_main_backside">
                 <img src={backimg} alt="backimg" />

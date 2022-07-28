@@ -9,7 +9,7 @@
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="privacy_policy_title">{{ __('Title') }}</label>
-							<input type="text" name="privacy_policy_title" id="privacy_policy_title" value="{{ old('privacy_policy_title', $RS_Meta['privacy_policy_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}" autofocus>
+							<input type="text" name="privacy_policy_title" id="privacy_policy_title" value="{{ old('privacy_policy_title', $RS_Meta['privacy_policy_title'] ?? '') }}" class="form-control" placeholder="{{ __('Title') }}">
 						</div>
 					</div>
 					
@@ -31,7 +31,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['privacy_policy_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['privacy_policy_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['privacy_policy_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="privacy_policy_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>

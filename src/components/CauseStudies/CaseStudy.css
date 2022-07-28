@@ -20,6 +20,7 @@
 .cause-studies-container .case-study-bottom-line {
     width: 100%;
     border: 3px solid #EDEDED;
+    background-color: #EDEDED;
 }
 .cause-studies-container ul {
     list-style-image: url("./img/cause-studies-list.png");
@@ -74,6 +75,7 @@
 .cause-studies-container .case-study-banner .heading .title-line {
     width: 80px;
     border: 3px solid #A06DAF;
+    background-color: #A06DAF;
 }
 .cause-studies-container .case-study-banner .case-study-logo-main {
     display: flex;

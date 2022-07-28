@@ -138,7 +138,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['book_calendar_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['book_calendar_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['book_calendar_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="book_calendar_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>

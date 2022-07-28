@@ -9,7 +9,7 @@ const Limitless = (pageDetail) => {
             <div className="In_Div_anm_container-Limitless">
 
                 <div className="In_Div_anm_container_img-Limitless">
-                    <img src={`${API_IMG_URL}pages/${pageDetail.author_image}`} alt={`${pageDetail.author_name}`} />
+                    {pageDetail.author_image && <img src={`${API_IMG_URL}pages/${pageDetail.author_image}`} alt={`${pageDetail.author_name}`} />}
                 </div>
                 <div className="In_Div_anm_container_text-Limitless">
                     <div className="In_Div_anm_upper_box-Limitless">

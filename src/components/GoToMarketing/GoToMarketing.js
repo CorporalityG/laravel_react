@@ -23,7 +23,7 @@ export default function GoToMarketing() {
         });
 
         getPageDetail()
-    });
+    }, []);
 
     async function getPageDetail() {
         let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
@@ -81,7 +81,7 @@ export default function GoToMarketing() {
                                 </div>
                             </div>
 
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="gtm-banner" data-aos="zoom-in" data-aos-anchor="#gtm-anchor" />
+                            {pageDetail.detail.banner_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="gtm-banner" data-aos="zoom-in" data-aos-anchor="#gtm-anchor" />}
                         </div>
 
                         <div className="gtm-approach-section">
@@ -101,7 +101,7 @@ export default function GoToMarketing() {
 
                                     <div className="col-lg-4 gtm-a-col gtm-a-col-middle">
                                         <div className="gtm-a-item-middle">
-                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.our_approach_image}`} alt={`${pageDetail.detail.our_approach_title}`} className="gtm-banner" data-aos="zoom-in" />
+                                            {pageDetail.detail.our_approach_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.our_approach_image}`} alt={`${pageDetail.detail.our_approach_title}`} className="gtm-banner" data-aos="zoom-in" />}
                                             <div className="a-item-title-middle" data-aos="zoom-out-up">{`${pageDetail.detail.our_approach_title}`}</div>
                                         </div>
                                     </div>
@@ -186,7 +186,7 @@ export default function GoToMarketing() {
                                                             <div className="col-lg-5 col-md-6">
                                                                 <div className="faq-box-main">
                                                                     <div className="faq-box-img">
-                                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.faq_item_4_box_1_item_image}`} alt={`${pageDetail.detail.faq_item_4_box_1_title}`} />
+                                                                        {pageDetail.detail.faq_item_4_box_1_item_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.faq_item_4_box_1_item_image}`} alt={`${pageDetail.detail.faq_item_4_box_1_title}`} />}
                                                                     </div>
                                                                     <div className="faq-box-content">
                                                                         <div className="faq-box-line">
@@ -200,7 +200,7 @@ export default function GoToMarketing() {
                                                             <div className="col-lg-5 col-md-6">
                                                                 <div className="faq-box-main">
                                                                     <div className="faq-box-img">
-                                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.faq_item_4_box_2_item_image}`} alt={`${pageDetail.detail.faq_item_4_box_2_title}`} />
+                                                                        {pageDetail.detail.faq_item_4_box_2_item_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.faq_item_4_box_2_item_image}`} alt={`${pageDetail.detail.faq_item_4_box_2_title}`} />}
                                                                     </div>
                                                                     <div className="faq-box-content">
                                                                         <div className="faq-box-line">
@@ -229,7 +229,7 @@ export default function GoToMarketing() {
                                 <div className="row gtm-expand-content-row">
                                     <div className="col-lg-6 gtm-expand-content-col">
                                         <div className="gtm-ec-banner">
-                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.market_expand_image}`} alt={`${pageDetail.detail.market_expand_title}`} className="ec-b-img" data-aos="fade-right" />
+                                            {pageDetail.detail.market_expand_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.market_expand_image}`} alt={`${pageDetail.detail.market_expand_title}`} className="ec-b-img" data-aos="fade-right" />}
                                             <img src={`${BASE_URL}/img/GoToMarketing/expand-rec.png`} alt="expand-rec" className="ec-b-rec" data-aos="fade-right" data-aos-delay="300" />
 
                                             <img src={`${BASE_URL}/img/GoToMarketing/expand-vector.png`} alt="expand-vector" className="ec-b-vec" data-aos="fade-right" data-aos-delay="500" />
@@ -282,7 +282,7 @@ export default function GoToMarketing() {
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className="gtm-ps-banner">
-                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.product_strategy_image}`} alt={`${pageDetail.detail.product_strategy_title}`} data-aos="zoom-in-up" />
+                                            {pageDetail.detail.product_strategy_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.product_strategy_image}`} alt={`${pageDetail.detail.product_strategy_title}`} data-aos="zoom-in-up" />}
                                         </div>
                                     </div>
                                 </div>

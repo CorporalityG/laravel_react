@@ -46,7 +46,7 @@ const NewPortfolio = () => {
                                             <div className="row">
                                                 <div className="col-md-4 portfolio-left">
                                                     <div className="portfolio-img-heading">
-                                                        <img className="portfolio-img" src={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_1_image}`} alt={`${pageSectionDetail.detail.client_1_name}`} />
+                                                        {pageSectionDetail.detail.client_1_image && <img className="portfolio-img" src={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_1_image}`} alt={`${pageSectionDetail.detail.client_1_name}`} />}
                                                         <h2 className="portfolio-heading">{`${pageSectionDetail.detail.client_1_name}`}</h2>
                                                     </div>
                                                 </div>
@@ -79,7 +79,7 @@ const NewPortfolio = () => {
                                             <div className="row">
                                                 <div className="col-md-4 portfolio-left">
                                                     <div className="portfolio-img-heading">
-                                                        <img className="portfolio-img" src={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_2_image}`} alt={`${pageSectionDetail.detail.client_2_name}`} />
+                                                        {pageSectionDetail.detail.client_2_image && <img className="portfolio-img" src={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_2_image}`} alt={`${pageSectionDetail.detail.client_2_name}`} />}
                                                         <h2 className="portfolio-heading">{`${pageSectionDetail.detail.client_2_name}`}</h2>
                                                     </div>
                                                 </div>
@@ -112,7 +112,7 @@ const NewPortfolio = () => {
                                             <div className="row">
                                                 <div className="col-md-4 portfolio-left">
                                                     <div className="portfolio-img-heading">
-                                                        <img className="portfolio-img" src={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_3_image}`} alt={`${pageSectionDetail.detail.client_3_name}`} />
+                                                        {pageSectionDetail.detail.client_3_image && <img className="portfolio-img" src={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_3_image}`} alt={`${pageSectionDetail.detail.client_3_name}`} />}
                                                         <h2 className="portfolio-heading">{`${pageSectionDetail.detail.client_3_name}`}</h2>
                                                     </div>
                                                 </div>
@@ -145,7 +145,7 @@ const NewPortfolio = () => {
                                             <div className="row">
                                                 <div className="col-md-4 portfolio-left">
                                                     <div className="portfolio-img-heading">
-                                                        <img className="portfolio-img" src={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_4_image}`} alt={`${pageSectionDetail.detail.client_4_name}`} />
+                                                        {pageSectionDetail.detail.client_4_image && <img className="portfolio-img" src={`${API_IMG_URL}pages/${pageSectionDetail.detail.client_4_image}`} alt={`${pageSectionDetail.detail.client_4_name}`} />}
                                                         <h2 className="portfolio-heading">{`${pageSectionDetail.detail.client_4_name}`}</h2>
                                                     </div>
                                                 </div>

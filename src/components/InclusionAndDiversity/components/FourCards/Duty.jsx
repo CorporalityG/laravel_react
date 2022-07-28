@@ -25,7 +25,7 @@ const Duty = (pageDetail) => {
             <div className="Duty_images_card Duty_image_card_1_top">
               <div className="Inc_Div_duty_card_img">
                 <div className="Inc_Div_duty_card_img_inner">
-                  <img src={`${API_IMG_URL}pages/${pageDetail.boundaries_item_1_image}`} alt={`${pageDetail.boundaries_item_1_title}`} />
+                  {pageDetail.boundaries_item_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.boundaries_item_1_image}`} alt={`${pageDetail.boundaries_item_1_title}`} />}
                 </div>
               </div>
               <div className="Duty_card_text Duty_card_text_1">
@@ -41,7 +41,7 @@ const Duty = (pageDetail) => {
             <div className="Duty_images_card Duty-images-card-2">
               <div className="Inc_Div_duty_card_img">
                 <div className="Inc_Div_duty_card_img_inner">
-                  <img src={`${API_IMG_URL}pages/${pageDetail.boundaries_item_2_image}`} alt={`${pageDetail.boundaries_item_2_title}`} />
+                  {pageDetail.boundaries_item_2_image && <img src={`${API_IMG_URL}pages/${pageDetail.boundaries_item_2_image}`} alt={`${pageDetail.boundaries_item_2_title}`} />}
                 </div>
               </div>
               <div className="Duty_card_text_2">
@@ -60,7 +60,7 @@ const Duty = (pageDetail) => {
             <div className="Duty_images_card Duty-images-card-3">
               <div className="Inc_Div_duty_card_img">
                 <div className="Inc_Div_duty_card_img_inner">
-                  <img src={`${API_IMG_URL}pages/${pageDetail.boundaries_item_3_image}`} alt={`${pageDetail.boundaries_item_3_title}`} />
+                  {pageDetail.boundaries_item_3_image && <img src={`${API_IMG_URL}pages/${pageDetail.boundaries_item_3_image}`} alt={`${pageDetail.boundaries_item_3_title}`} />}
                 </div>
               </div>
               <div className="Duty_card_text_3 ">
@@ -78,7 +78,7 @@ const Duty = (pageDetail) => {
             <div className="Duty_images_card Duty-images-card-4">
               <div className="Inc_Div_duty_card_img">
                 <div className="Inc_Div_duty_card_img_inner">
-                  <img src={`${API_IMG_URL}pages/${pageDetail.boundaries_item_4_image}`} alt={`${pageDetail.boundaries_item_4_title}`} />
+                  {pageDetail.boundaries_item_4_image && <img src={`${API_IMG_URL}pages/${pageDetail.boundaries_item_4_image}`} alt={`${pageDetail.boundaries_item_4_title}`} />}
                 </div>
               </div>
               <div className="Duty_card_text_4 ">

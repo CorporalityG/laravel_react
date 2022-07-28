@@ -27,7 +27,7 @@ const Ideation = (pageDetail) => {
                             <img alt='back3Ideation' className='back3-Ideation' src={back3Ideation} />
                             <div className="images-hover-4-Ideation">
                                 <div className="bp_iwfc_img-Ideation">
-                                    <img className='main3-Ideation' src={`${API_IMG_URL}pages/${pageDetail.fearless_image}`} alt={`${pageDetail.fearless_title}`} />
+                                    {pageDetail.fearless_image && <img className='main3-Ideation' src={`${API_IMG_URL}pages/${pageDetail.fearless_image}`} alt={`${pageDetail.fearless_title}`} />}
                                 </div>
                             </div>
 
@@ -38,7 +38,7 @@ const Ideation = (pageDetail) => {
 
                         <div data-aos="fade-up" data-aos-delay="500" className="textndicon-Ideation">
                             <div /* className="icon-Ideation" */>
-                                <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_1_icon}`} alt={`${pageDetail.fearless_item_1_title}`} className='icon1-Ideation' />
+                                {pageDetail.fearless_item_1_icon && <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_1_icon}`} alt={`${pageDetail.fearless_item_1_title}`} className='icon1-Ideation' />}
                             </div>
                             <div className="text-box-3-Ideation">
                                 <p className='container-3_text-1_heading-Ideation'>{`${pageDetail.fearless_item_1_title}`}</p>
@@ -56,7 +56,7 @@ const Ideation = (pageDetail) => {
                         </div>
                         <div data-aos="fade-up" data-aos-delay="1000" className="textndicon-Ideation">
                             <div /* className="icon-Ideation" */>
-                                <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_2_icon}`} alt={`${pageDetail.fearless_item_2_title}`} className='icon1-Ideation' />
+                                {pageDetail.fearless_item_2_icon && <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_2_icon}`} alt={`${pageDetail.fearless_item_2_title}`} className='icon1-Ideation' />}
                             </div>
                             <div className="text-box-3-Ideation">
                                 <p className='container-3_text-2_heading-Ideation'>{`${pageDetail.fearless_item_2_title}`}</p>
@@ -75,7 +75,7 @@ const Ideation = (pageDetail) => {
                         </div>
                         <div data-aos="fade-up" data-aos-delay="1500" className="textndicon-Ideation">
                             <div>
-                                <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_3_icon}`} alt={`${pageDetail.fearless_item_3_title}`} className='icon1-Ideation' />
+                                {pageDetail.fearless_item_3_icon && <img src={`${API_IMG_URL}pages/${pageDetail.fearless_item_3_icon}`} alt={`${pageDetail.fearless_item_3_title}`} className='icon1-Ideation' />}
                             </div>
                             <div className="text-box-3-Ideation">
                                 <p className='container-3_text-3_heading-Ideation'>{`${pageDetail.fearless_item_3_title}`}</p>

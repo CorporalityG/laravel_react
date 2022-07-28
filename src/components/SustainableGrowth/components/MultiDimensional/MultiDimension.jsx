@@ -33,7 +33,7 @@ const MultiDimensional = (pageDetail) => {
                                     <img alt='back3MultiDimensional' className='back3-Multi' src={back3MultiDimensional} />
                                     <div className="images-hover-4-Multi">
                                         <div className="bp_iwfc_img-Multi">
-                                            <img className='main3-Multi' src={`${API_IMG_URL}pages/${pageDetail.approach_image}`} alt="main3MultiDimensional" />
+                                            {pageDetail.approach_image && <img className='main3-Multi' src={`${API_IMG_URL}pages/${pageDetail.approach_image}`} alt="main3MultiDimensional" />}
                                         </div>
                                     </div>
 
@@ -43,7 +43,7 @@ const MultiDimensional = (pageDetail) => {
 
                                 <div data-aos="fade-up" data-aos-delay="500" className="textndicon-Multi">
                                     <div /* className="icon-Multi" */>
-                                        <img className='icon1-Multi' src={`${API_IMG_URL}pages/${pageDetail.approach_item_1_icon}`} alt={`${pageDetail.approach_item_1_title}`} />
+                                        {pageDetail.approach_item_1_icon && <img className='icon1-Multi' src={`${API_IMG_URL}pages/${pageDetail.approach_item_1_icon}`} alt={`${pageDetail.approach_item_1_title}`} />}
                                     </div>
                                     <div className="text-box-3-Multi">
                                         <p className='container-3_text-1_heading-Multi'>{`${pageDetail.approach_item_1_title}`}</p>
@@ -61,7 +61,7 @@ const MultiDimensional = (pageDetail) => {
                                 </div>
                                 <div data-aos="fade-up" data-aos-delay="1000" className="textndicon-Multi">
                                     <div /* className="icon-Multi" */>
-                                        <img className='icon1-Multi' src={`${API_IMG_URL}pages/${pageDetail.approach_item_2_icon}`} alt={`${pageDetail.approach_item_2_title}`} />
+                                        {pageDetail.approach_item_2_icon && <img className='icon1-Multi' src={`${API_IMG_URL}pages/${pageDetail.approach_item_2_icon}`} alt={`${pageDetail.approach_item_2_title}`} />}
                                     </div>
                                     <div className="text-box-3-Multi">
                                         <p className='container-3_text-2_heading-Multi'>{`${pageDetail.approach_item_2_title}`}</p>
@@ -80,7 +80,7 @@ const MultiDimensional = (pageDetail) => {
                                 </div>
                                 <div data-aos="fade-up" data-aos-delay="1500" className="textndicon-Multi">
                                     <div /* className="icon-Multi" */>
-                                        <img className='icon1-Multi' src={`${API_IMG_URL}pages/${pageDetail.approach_item_3_icon}`} alt={`${pageDetail.approach_item_3_title}`} />
+                                        {pageDetail.approach_item_3_icon && <img className='icon1-Multi' src={`${API_IMG_URL}pages/${pageDetail.approach_item_3_icon}`} alt={`${pageDetail.approach_item_3_title}`} />}
                                     </div>
                                     <div className="text-box-3-Multi">
                                         <p className='container-3_text-3_heading-Multi'>{`${pageDetail.approach_item_3_title}`}</p>
@@ -98,7 +98,7 @@ const MultiDimensional = (pageDetail) => {
                                 </div>
                                 <div data-aos="fade-up" data-aos-delay="2000" className="textndicon-Multi">
                                     <div /* className="icon-Multi" */>
-                                        <img className='icon1-Multi' src={`${API_IMG_URL}pages/${pageDetail.approach_item_4_icon}`} alt={`${pageDetail.approach_item_4_title}`} />
+                                        {pageDetail.approach_item_4_icon && <img className='icon1-Multi' src={`${API_IMG_URL}pages/${pageDetail.approach_item_4_icon}`} alt={`${pageDetail.approach_item_4_title}`} />}
                                     </div>
                                     <div className="text-box-3-Multi">
                                         <p className='container-3_text-3_heading-Multi'>{`${pageDetail.approach_item_4_title}`}</p>

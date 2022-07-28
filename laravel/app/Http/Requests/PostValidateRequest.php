@@ -27,6 +27,7 @@ class PostValidateRequest extends FormRequest
         return [
             'post_title' => ['required', 'string', Rule::unique('posts')->ignore($this->segment(2), 'id')],
             'post_slug' => ['required', 'string', Rule::unique('posts')->ignore($this->segment(2), 'id')],
+            'post_short_description' => ['required'],
             'post_image' => ['nullable', 'sometimes', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:100000'],
         ];
     }

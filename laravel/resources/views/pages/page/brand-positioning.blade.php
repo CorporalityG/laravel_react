@@ -52,7 +52,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['improved_company_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['improved_company_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['improved_company_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="improved_company_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -68,7 +72,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['customer_loyalty_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['customer_loyalty_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['customer_loyalty_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="customer_loyalty_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -84,7 +92,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['relatable_identity_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['relatable_identity_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['relatable_identity_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="relatable_identity_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -100,7 +112,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['omni_effect_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['omni_effect_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['omni_effect_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="omni_effect_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -116,7 +132,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['successfull_branding_strategy_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['successfull_branding_strategy_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['successfull_branding_strategy_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="successfull_branding_strategy_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -279,7 +299,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['framework_methodology_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['framework_methodology_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['framework_methodology_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="framework_methodology_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -306,7 +330,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['framework_methodology_item_1_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['framework_methodology_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['framework_methodology_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="framework_methodology_item_1_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -333,7 +361,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['framework_methodology_item_2_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['framework_methodology_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['framework_methodology_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="framework_methodology_item_2_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -460,7 +492,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['indomitable_item_1_icon']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_1_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_1_icon']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="indomitable_item_1_icon" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -476,7 +512,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['indomitable_item_1_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="indomitable_item_1_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -510,7 +550,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['indomitable_item_2_icon']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_2_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_2_icon']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="indomitable_item_2_icon" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -526,7 +570,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['indomitable_item_2_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="indomitable_item_2_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -560,7 +608,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['indomitable_item_3_icon']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_3_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_3_icon']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="indomitable_item_3_icon" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -576,7 +628,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['indomitable_item_3_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="indomitable_item_3_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -610,7 +666,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['indomitable_item_4_icon']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_4_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_4_icon']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="indomitable_item_4_icon" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -626,7 +686,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['indomitable_item_4_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="indomitable_item_4_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -660,7 +724,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['indomitable_item_5_icon']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_5_icon']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_5_icon']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="indomitable_item_5_icon" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -676,7 +744,11 @@
 							</div>
 
 							@if( !empty($RS_Meta['indomitable_item_5_image']) )
-								<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+								<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['indomitable_item_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="indomitable_item_5_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 							@endif
 						</div>
 					</div>
@@ -740,7 +812,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_planning_phase_item_1_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_planning_phase_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_planning_phase_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+									<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_planning_phase_item_1_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+								</div>
 								@endif
 							</div>
 						</div>
@@ -767,7 +843,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_planning_phase_item_2_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_planning_phase_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_planning_phase_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_planning_phase_item_2_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -794,7 +874,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_planning_phase_item_3_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_planning_phase_item_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_planning_phase_item_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_planning_phase_item_3_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -821,7 +905,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_planning_phase_item_4_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_planning_phase_item_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_planning_phase_item_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_planning_phase_item_4_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -848,7 +936,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_planning_phase_item_5_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_planning_phase_item_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_planning_phase_item_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_planning_phase_item_5_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -891,7 +983,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_prep_phase_item_1_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_prep_phase_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_prep_phase_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_prep_phase_item_1_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -918,7 +1014,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_prep_phase_item_2_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_prep_phase_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_prep_phase_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_prep_phase_item_2_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -945,7 +1045,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_prep_phase_item_3_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_prep_phase_item_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_prep_phase_item_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_prep_phase_item_3_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -972,7 +1076,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_prep_phase_item_4_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_prep_phase_item_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_prep_phase_item_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_prep_phase_item_4_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -999,7 +1107,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_prep_phase_item_5_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_prep_phase_item_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_prep_phase_item_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_prep_phase_item_5_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1042,7 +1154,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_execution_phase_item_1_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_execution_phase_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_execution_phase_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_execution_phase_item_1_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1069,7 +1185,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_execution_phase_item_2_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_execution_phase_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_execution_phase_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_execution_phase_item_2_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1096,7 +1216,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_execution_phase_item_3_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_execution_phase_item_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_execution_phase_item_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_execution_phase_item_3_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1123,7 +1247,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_execution_phase_item_4_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_execution_phase_item_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_execution_phase_item_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_execution_phase_item_4_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1150,7 +1278,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_execution_phase_item_5_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_execution_phase_item_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_execution_phase_item_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_execution_phase_item_5_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1193,7 +1325,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_monitoring_phase_item_1_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_monitoring_phase_item_1_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1220,7 +1356,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_monitoring_phase_item_2_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_monitoring_phase_item_2_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1247,7 +1387,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_monitoring_phase_item_3_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_monitoring_phase_item_3_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1274,7 +1418,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_monitoring_phase_item_4_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_monitoring_phase_item_4_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1301,7 +1449,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_monitoring_phase_item_5_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_monitoring_phase_item_5_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1328,7 +1480,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_monitoring_phase_item_6_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_6_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_6_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_monitoring_phase_item_6_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>
@@ -1355,7 +1511,11 @@
 								</div>
 
 								@if( !empty($RS_Meta['articulating_monitoring_phase_item_7_image']) )
-									<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_7_image']) }}" alt="{{ 'Image' }}" class="max-height-150 mt-3">
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['articulating_monitoring_phase_item_7_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="articulating_monitoring_phase_item_7_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
 								@endif
 							</div>
 						</div>

@@ -53,7 +53,7 @@ function CareToJoinUs(pageDetail) {
 
                     <div className="caretojoinus-image aos-init aos-animate" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease-in-out">
                       <div className="right-image-container">
-                        <img src={`${API_IMG_URL}pages/${pageDetail.join_us_image}`} alt={`${pageDetail.join_us_title}`} className="caretojoinus-rightimage" />
+                        {pageDetail.join_us_image && <img src={`${API_IMG_URL}pages/${pageDetail.join_us_image}`} alt={`${pageDetail.join_us_title}`} className="caretojoinus-rightimage" />}
                       </div>
                       <div className="back-image">
                         <img src={BASE_URL + '/img/HomePage/care-to-join-us/image_back.png'} alt="image_back" />

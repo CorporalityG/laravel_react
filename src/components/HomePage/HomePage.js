@@ -10,6 +10,7 @@ import OurIniatives from "./Components/OurIniatives.jsx";
 import AOS from "aos";
 import { Helmet } from "react-helmet";
 import { API_BASE_URL } from '../../config'
+import axios from "axios";
 
 function HomePage() {
 
@@ -26,10 +27,14 @@ function HomePage() {
     getPageDetail()
   }, []);
 
-  async function getPageDetail() {
-    let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
-    result = await result.json();
-    setPageDetail(result);
+  const getPageDetail = () => {
+    axios.get(`${API_BASE_URL}/page-detail/${page_slug}`)
+      .then(response => {
+        setPageDetail(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   return (

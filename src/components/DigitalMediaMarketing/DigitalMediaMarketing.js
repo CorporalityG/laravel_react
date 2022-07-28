@@ -54,7 +54,7 @@ function DigitalMediaMarketing() {
                 <div className="row dmm-banner-row">
                   <div className="col-lg-6">
                     <div className="dmm-banner-main">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="dmm-banner" data-aos="fade-right" />
+                      {pageDetail.detail.banner_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="dmm-banner" data-aos="fade-right" />}
 
                       <img src={`${BASE_URL}/img/DigitalMediaMarketing/rec-1.png`} alt="Rec 1" className="rec-1" />
                       <img src={`${BASE_URL}/img/DigitalMediaMarketing/rec-2.png`} alt="Rec 2" className="rec-2" />
@@ -106,25 +106,25 @@ function DigitalMediaMarketing() {
                 <div className="row dmm-s-boxes-row">
                   <MarketingStrategyItem
                     number={`01`}
-                    thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.marketing_strategy_step_1_image}`}
+                    thumbnail={pageDetail.detail.marketing_strategy_step_1_image && `${API_IMG_URL}pages/${pageDetail.detail.marketing_strategy_step_1_image}`}
                     title={`${pageDetail.detail.marketing_strategy_step_1_title}`}
                   />
 
                   <MarketingStrategyItem
                     number={`02`}
-                    thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.marketing_strategy_step_2_image}`}
+                    thumbnail={pageDetail.detail.marketing_strategy_step_2_image && `${API_IMG_URL}pages/${pageDetail.detail.marketing_strategy_step_2_image}`}
                     title={`${pageDetail.detail.marketing_strategy_step_2_title}`}
                   />
 
                   <MarketingStrategyItem
                     number={`03`}
-                    thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.marketing_strategy_step_3_image}`}
+                    thumbnail={pageDetail.detail.marketing_strategy_step_3_image && `${API_IMG_URL}pages/${pageDetail.detail.marketing_strategy_step_3_image}`}
                     title={`${pageDetail.detail.marketing_strategy_step_3_title}`}
                   />
 
                   <MarketingStrategyItem
                     number={`04`}
-                    thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.marketing_strategy_step_4_image}`}
+                    thumbnail={pageDetail.detail.marketing_strategy_step_4_image && `${API_IMG_URL}pages/${pageDetail.detail.marketing_strategy_step_4_image}`}
                     title={`${pageDetail.detail.marketing_strategy_step_4_title}`}
                   />
                 </div>
@@ -136,7 +136,7 @@ function DigitalMediaMarketing() {
                 <div className="row dmm-key-objectives-row">
                   <div className="col-lg-6">
                     <div className="dmm-ko-img" data-aos="fade-up-right">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.key_objectives_image}`} alt={`${pageDetail.detail.key_objectives_title}`} />
+                      {pageDetail.detail.key_objectives_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.key_objectives_image}`} alt={`${pageDetail.detail.key_objectives_title}`} />}
                     </div>
                   </div>
 
@@ -181,7 +181,7 @@ function DigitalMediaMarketing() {
 
                   <div className="col-lg-6">
                     <div className="dmm-goals-img" data-aos="fade-up-left">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.marketing_goals_item_image}`} alt="marketing-goals" />
+                      {pageDetail.detail.marketing_goals_item_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.marketing_goals_item_image}`} alt="marketing-goals" />}
                     </div>
                   </div>
                 </div>
@@ -245,31 +245,31 @@ function DigitalMediaMarketing() {
 
                       <div className="dmm-expect-items">
                         <WhattoExpectItem
-                          icon={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_1_icon}`}
+                          icon={pageDetail.detail.what_expect_item_1_icon && `${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_1_icon}`}
                           title={`${pageDetail.detail.what_expect_item_1_title}`}
                           content={`<p>${pageDetail.detail.what_expect_item_1_description}</p>`}
                         />
 
                         <WhattoExpectItem
-                          icon={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_2_icon}`}
+                          icon={pageDetail.detail.what_expect_item_2_icon && `${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_2_icon}`}
                           title={`${pageDetail.detail.what_expect_item_2_title}`}
                           content={`<p>${pageDetail.detail.what_expect_item_2_description}</p>`}
                         />
 
                         <WhattoExpectItem
-                          icon={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_3_icon}`}
+                          icon={pageDetail.detail.what_expect_item_3_icon && `${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_3_icon}`}
                           title={`${pageDetail.detail.what_expect_item_3_title}`}
                           content={`<p>${pageDetail.detail.what_expect_item_3_description}</p>`}
                         />
 
                         <WhattoExpectItem
-                          icon={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_4_icon}`}
+                          icon={pageDetail.detail.what_expect_item_4_icon && `${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_4_icon}`}
                           title={`${pageDetail.detail.what_expect_item_4_title}`}
                           content={`<p>${pageDetail.detail.what_expect_item_4_description}</p>`}
                         />
 
                         <WhattoExpectItem
-                          icon={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_5_icon}`}
+                          icon={pageDetail.detail.what_expect_item_5_icon && `${API_IMG_URL}pages/${pageDetail.detail.what_expect_item_5_icon}`}
                           title={`${pageDetail.detail.what_expect_item_5_title}`}
                           content={`<p>${pageDetail.detail.what_expect_item_5_description}</p>`}
                         />
@@ -279,7 +279,7 @@ function DigitalMediaMarketing() {
 
                   <div className="col-lg-6 pr-0">
                     <div className="dmm-expect-img" data-aos="fade-up-left">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.what_expect_image}`} alt={`${pageDetail.detail.what_expect_title}`} />
+                      <img src={pageDetail.detail.what_expect_image && `${API_IMG_URL}pages/${pageDetail.detail.what_expect_image}`} alt={`${pageDetail.detail.what_expect_title}`} />
                     </div>
                   </div>
                 </div>
@@ -300,7 +300,7 @@ function DigitalMediaMarketing() {
                 <div className="row dmm-ps-img-row">
                   <div className="col-lg-12">
                     <div className="dmm-ps-img" data-aos="zoom-in-down" data-aos-delay="300">
-                      <img src={`${API_IMG_URL}pages/${pageDetail.detail.pitch_image}`} alt={`${pageDetail.detail.pitch_title}`} />
+                      {pageDetail.detail.pitch_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.pitch_image}`} alt={`${pageDetail.detail.pitch_title}`} />}
                     </div>
                   </div>
                 </div>

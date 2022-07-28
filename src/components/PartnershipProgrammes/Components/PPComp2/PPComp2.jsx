@@ -24,7 +24,10 @@ export default function PPComp2(pageDetail) {
                             <div className="col p-0">
                                 <div data-aos="fade-right" data-aos-duration="2000" className="ppc2ImgWrapper">
                                     <div className="ppc2MainImg">
-                                        <img className="ppc2Img2" src={`${API_IMG_URL}pages/${pageDetail.conversation_image}`} alt={`${pageDetail.conversation_title}`} />
+                                        {
+                                            pageDetail.conversation_image &&
+                                            <img className="ppc2Img2" src={`${API_IMG_URL}pages/${pageDetail.conversation_image}`} alt={`${pageDetail.conversation_title}`} />
+                                        }
                                     </div>
                                     <img className="ppc2Wall" src={wall} alt="wall" />
                                     <img className="ppc2Rec8" src={rec8} alt="rec8" />

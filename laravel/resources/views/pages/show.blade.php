@@ -171,4 +171,22 @@
         </div>
     </div>
 
+@include('pages.delete_image_modal')
+
+<!-- Page specific script -->
+<script>
+jQuery(function () {
+    // delete start
+    jQuery(document).on('click', '.deleteImg', function(e) {
+        e.preventDefault();
+        var id = jQuery(this).data('id');
+        var key = jQuery(this).data('key');
+        
+        jQuery('.page_id').val(id);
+        jQuery('.delete_meta_key').val(key);
+        jQuery('#ajaxModelDeleteImg').modal('show');
+    });
+    // delete end
+});
+</script>
 @endsection
