@@ -62,7 +62,7 @@ function ServiceInsights() {
                             <div className='container-lg'>
                                 <div className='row si-a-row'>
                                     <div className='col-lg-3 col-sm-4 si-a-banner'>
-                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.event_image}`} alt={`${pageDetail.detail.event_title}`} />
+                                        {pageDetail.detail.event_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.event_image}`} alt={`${pageDetail.detail.event_title}`} />}
                                     </div>
                                     <div className='col-lg-9 col-sm-8 si-a-content'>
                                         <div className='si-a-desc'>
@@ -108,7 +108,7 @@ function ServiceInsights() {
                                 <div className='row si-cc-row'>
                                     <div className='col-md-6'>
                                         <div className='si-cc-image'>
-                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.reach_out_image}`} alt={`${pageDetail.detail.reach_out_title}`} />
+                                            {pageDetail.detail.reach_out_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.reach_out_image}`} alt={`${pageDetail.detail.reach_out_title}`} />}
                                         </div>
                                     </div>
 
@@ -186,7 +186,7 @@ function ServiceInsights() {
                 {
                     pageDetail.detail ?
                         <>
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.we_organize_image}`} alt={`${pageDetail.detail.we_organize_title}`} className='si-o-bg-main' />
+                            {pageDetail.detail.we_organize_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.we_organize_image}`} alt={`${pageDetail.detail.we_organize_title}`} className='si-o-bg-main' />}
 
                             <div className='si-o-title-section'>
                                 <div className='si-o-title-content'>

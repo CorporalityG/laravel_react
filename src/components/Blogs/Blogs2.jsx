@@ -329,7 +329,7 @@ function Blogs2() {
                                                 <BlogItem
                                                     key={`${item.id}`}
                                                     uniqueKey={`${index + item.id}`}
-                                                    thumbnail={`${API_IMG_URL + item.post_image}`}
+                                                    thumbnail={item.post_image && `${API_IMG_URL + item.post_image}`}
                                                     title={`${item.post_title}`}
                                                     slug={`${item.post_slug}`}
                                                     category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
@@ -477,7 +477,7 @@ function Blogs2() {
                                                     <CovidItem
                                                         key={`${item.id}`}
                                                         uniqueKey={`${item.id + index}-c`}
-                                                        thumbnail={`${API_IMG_URL + item.post_image}`}
+                                                        thumbnail={item.post_image && `${API_IMG_URL + item.post_image}`}
                                                         title={`${item.post_title}`}
                                                         slug={`${item.post_slug}`}
                                                         category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
@@ -497,7 +497,7 @@ function Blogs2() {
                                                     <CovidItem
                                                         key={`${item.id}`}
                                                         uniqueKey={`${item.id + index}-c`}
-                                                        thumbnail={`${API_IMG_URL + item.post_image}`}
+                                                        thumbnail={item.post_image && `${API_IMG_URL + item.post_image}`}
                                                         title={`${item.post_title}`}
                                                         slug={`${item.post_slug}`}
                                                         category={item.categories[0] !== undefined ? item.categories[0].category_name : null}
@@ -517,7 +517,7 @@ function Blogs2() {
                                                     <CovidItem
                                                         key={`${item.id}`}
                                                         uniqueKey={`${item.id + index}-c`}
-                                                        thumbnail={`${API_IMG_URL + item.post_image}`}
+                                                        thumbnail={item.post_image && `${API_IMG_URL + item.post_image}`}
                                                         title={`${item.post_title}`}
                                                         slug={`${item.post_slug}`}
                                                         category={item.categories[0] !== undefined ? item.categories[0].category_name : null}

@@ -15,7 +15,7 @@ const ConForm = (pageDetail) => {
 
     useEffect(() => {
         Aos.init();
-    })
+    }, [])
 
 
     return (

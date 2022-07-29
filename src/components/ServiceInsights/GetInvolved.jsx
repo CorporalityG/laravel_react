@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { GetInvolvedItem } from './GetInvolvedItem';
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config'
+import { API_BASE_URL, API_IMG_URL } from '../../config'
 
 export const GetInvolved = () => {
 
@@ -33,7 +33,7 @@ export const GetInvolved = () => {
 
                         <div className='row si-gi-item-row'>
                             <GetInvolvedItem
-                                thumbnail={`${API_IMG_URL}pages/${pageSectionDetail.detail.involved_partner_image}`}
+                                thumbnail={pageSectionDetail.detail.involved_partner_image && `${API_IMG_URL}pages/${pageSectionDetail.detail.involved_partner_image}`}
                                 title={`${pageSectionDetail.detail.involved_partner_title}`}
                                 content={`<p>${pageSectionDetail.detail.involved_partner_description ?? ''}</p>`}
                                 btnText={`${pageSectionDetail.detail.involved_partner_btn_text}`}
@@ -42,7 +42,7 @@ export const GetInvolved = () => {
                             />
 
                             <GetInvolvedItem
-                                thumbnail={`${API_IMG_URL}pages/${pageSectionDetail.detail.involved_community_image}`}
+                                thumbnail={pageSectionDetail.detail.involved_community_image && `${API_IMG_URL}pages/${pageSectionDetail.detail.involved_community_image}`}
                                 title={`${pageSectionDetail.detail.involved_community_title}`}
                                 content={`<p>${pageSectionDetail.detail.involved_community_description ?? ''}</p>`}
                                 btnText={`${pageSectionDetail.detail.involved_community_btn_text}`}

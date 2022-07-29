@@ -111,7 +111,7 @@ function OurTeam() {
                                             <div className="container-fluid px-0">
                                                 <div className="row ot-l-members-row">
                                                     <LeadershipMember
-                                                        thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.team_member_1_image}`}
+                                                        thumbnail={pageDetail.detail.team_member_1_image && `${API_IMG_URL}pages/${pageDetail.detail.team_member_1_image}`}
                                                         name={`${pageDetail.detail.team_member_1_name}`}
                                                         designation={`${pageDetail.detail.team_member_1_designation}`}
                                                         biography={`<p>${pageDetail.detail.team_member_1_bio}</p>`}
@@ -121,7 +121,7 @@ function OurTeam() {
                                                     />
 
                                                     <LeadershipMember
-                                                        thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.team_member_2_image}`}
+                                                        thumbnail={pageDetail.detail.team_member_2_image && `${API_IMG_URL}pages/${pageDetail.detail.team_member_2_image}`}
                                                         name={`${pageDetail.detail.team_member_2_name}`}
                                                         designation={`${pageDetail.detail.team_member_2_designation}`}
                                                         biography={`<p>${pageDetail.detail.team_member_2_bio}</p>`}
@@ -147,8 +147,8 @@ function OurTeam() {
                             <div className="row ot-tm-title-row">
                                 <div className="col-lg-12">
                                     <div className="ot-tm-content">
-                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.priya_image}`} alt="Priya Mishra" className="pm-avtar" />
-                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.priya_title_image}`} alt="Priya Mishra Name" className="pm-name" />
+                                        {pageDetail.detail.priya_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.priya_image}`} alt="Priya Mishra" className="pm-avtar" />}
+                                        {pageDetail.detail.priya_title_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.priya_title_image}`} alt="Priya Mishra Name" className="pm-name" />}
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@ function OurTeam() {
                                                 teamsData.map((item) =>
                                                     <CarouselGrid.Item key={`${item.id}`}>
                                                         <TeamMember
-                                                            avtar={`${API_IMG_URL}/${item.image}`}
+                                                            avtar={item.image && `${API_IMG_URL}/${item.image}`}
                                                             name={`${item.full_name}`}
                                                             designation={`${item.designation}`}
                                                         />

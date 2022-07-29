@@ -9,7 +9,7 @@ const ContactMap = (pageDetail) => {
 
     useEffect(() => {
         Aos.init();
-    })
+    }, [])
 
     return (
         <>
@@ -29,7 +29,7 @@ const ContactMap = (pageDetail) => {
                                                         <a href={`${pageDetail.book_calendar_btn_link}`} target="_blank" className="btn know_button ">{`${pageDetail.book_calendar_btn_text}`}</a>
                                                     </div>
 
-                                                    <img className="img-fluid mx-5 bookcal-Image" src={`${API_IMG_URL}pages/${pageDetail.book_calendar_image}`} alt={`${pageDetail.book_calendar_title}`} />
+                                                    {pageDetail.book_calendar_image && <img className="img-fluid mx-5 bookcal-Image" src={`${API_IMG_URL}pages/${pageDetail.book_calendar_image}`} alt={`${pageDetail.book_calendar_title}`} />}
                                                 </div>
                                             </div>
                                         </div>

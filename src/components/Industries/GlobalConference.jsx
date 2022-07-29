@@ -21,7 +21,7 @@ export const GlobalConference = () => {
             {
                 pageSectionDetail.detail ?
                     <>
-                        <img src={`${API_IMG_URL}pages/${pageSectionDetail.detail.global_conference_bg_image}`} alt={`Global Conference`} className="industry-global-conference-banner-bg" />
+                        {pageSectionDetail.detail.global_conference_bg_image && <img src={`${API_IMG_URL}pages/${pageSectionDetail.detail.global_conference_bg_image}`} alt={`Global Conference`} className="industry-global-conference-banner-bg" />}
 
                         <div className='industry-global-conference-content-main'>
                             <div className='container-lg'>
@@ -39,7 +39,7 @@ export const GlobalConference = () => {
                                     <div className='col-lg-6'>
                                         <div className='industry-global-conference-img'>
                                             <a href={`${pageSectionDetail.detail.global_conference_btn_link}`} target="_blank">
-                                                <img src={`${API_IMG_URL}pages/${pageSectionDetail.detail.global_conference_image}`} alt={`Global Conference 2022`} />
+                                                {pageSectionDetail.detail.global_conference_image && <img src={`${API_IMG_URL}pages/${pageSectionDetail.detail.global_conference_image}`} alt={`Global Conference 2022`} />}
                                             </a>
                                         </div>
                                     </div>

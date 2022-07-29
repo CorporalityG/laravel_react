@@ -55,7 +55,7 @@ function CorporalityBooksList() {
 
                                     <div className="col-lg-5">
                                         <div className="c-book-list-banner-img">
-                                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} />
+                                            {pageDetail.detail.banner_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} />}
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@ function CorporalityBooksList() {
                                 </div>
                             </div>
 
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.book_1_image}`} alt={`${pageDetail.detail.book_1_title}`} className="book-preview" />
+                            {pageDetail.detail.book_1_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.book_1_image}`} alt={`${pageDetail.detail.book_1_title}`} className="book-preview" />}
                             <img src={`${BASE_URL}/img/CorporalityBook/favicon.png`} alt="favicon" className="favicon" />
 
                             <div className="book-front-btn">
@@ -104,7 +104,10 @@ function CorporalityBooksList() {
                             </div>
 
                             <div className="book-front-video">
-                                <video src={`${API_IMG_URL}pages/${pageDetail.detail.book_1_video}`} controls={true} autoPlay={false} />
+                                {
+                                    pageDetail.detail.book_1_video &&
+                                    <video src={`${API_IMG_URL}pages/${pageDetail.detail.book_1_video}`} controls={true} autoPlay={false} />
+                                }
                             </div>
                         </div>
 
@@ -113,7 +116,7 @@ function CorporalityBooksList() {
                         <div className="c-book-list-container">
                             <div className="container">
                                 <CorporalityBookListItem
-                                    thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.book_2_image}`}
+                                    thumbnail={pageDetail.detail.book_2_image && `${API_IMG_URL}pages/${pageDetail.detail.book_2_image}`}
                                     title={`${pageDetail.detail.book_2_title}`}
                                     subtitle={`${pageDetail.detail.book_2_subtitle}`}
                                     date={`${pageDetail.detail.book_2_date}`}
@@ -127,7 +130,7 @@ function CorporalityBooksList() {
                                 />
 
                                 <CorporalityBookListItem
-                                    thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.book_3_image}`}
+                                    thumbnail={pageDetail.detail.book_3_image && `${API_IMG_URL}pages/${pageDetail.detail.book_3_image}`}
                                     title={`${pageDetail.detail.book_3_title}`}
                                     subtitle={`${pageDetail.detail.book_3_subtitle}`}
                                     date={`${pageDetail.detail.book_3_date}`}
@@ -141,7 +144,7 @@ function CorporalityBooksList() {
                                 />
 
                                 <CorporalityBookListItem
-                                    thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.book_4_image}`}
+                                    thumbnail={pageDetail.detail.book_4_image && `${API_IMG_URL}pages/${pageDetail.detail.book_4_image}`}
                                     title={`${pageDetail.detail.book_4_title}`}
                                     subtitle={`${pageDetail.detail.book_4_subtitle}`}
                                     date={`${pageDetail.detail.book_4_date}`}
@@ -155,7 +158,7 @@ function CorporalityBooksList() {
                                 />
 
                                 <CorporalityBookListItem
-                                    thumbnail={`${API_IMG_URL}pages/${pageDetail.detail.book_5_image}`}
+                                    thumbnail={pageDetail.detail.book_5_image && `${API_IMG_URL}pages/${pageDetail.detail.book_5_image}`}
                                     title={`${pageDetail.detail.book_5_title}`}
                                     subtitle={`${pageDetail.detail.book_5_subtitle}`}
                                     date={`${pageDetail.detail.book_5_date}`}

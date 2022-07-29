@@ -8,11 +8,12 @@ import About2 from './components/About2';
 import { useMediaQuery } from 'react-responsive';
 import OutsideClickHandler from 'react-outside-click-wrapper';
 import { NavbarContext } from './Context/NavbarContext';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Insights from './components/Insights';
 import topHandler from '../../CommonHandler/TopHandler';
 import SayHelloContact from './components/SayHelloContact';
 import Industries from './components/Industries';
+import UpcomingEvent from './UpcomingEvent/UpcomingEvent';
 
 const Navbar = () => {
     const isLargeScreen = useMediaQuery({ query: '(min-width: 1200px)' })
@@ -25,6 +26,7 @@ const Navbar = () => {
     const [showSayHelloContact, setShowSayHelloContact] = useState(false);
     const [menuId, setMenuId] = useState(1);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const providerValue = useMemo(() =>
         ({ isLargeScreen, showAbout, setShowAbout, showAbout2, setShowAbout2, showServices, setShowServices, showIndustries, setShowIndustries, showInsights, setShowInsights, navClicked, setNavClicked, menuId, setMenuId, showSayHelloContact, setShowSayHelloContact })
@@ -32,6 +34,8 @@ const Navbar = () => {
 
     return (
         <>
+            {location.pathname === '/' && <UpcomingEvent />}
+
             <NavbarContext.Provider value={providerValue}>
                 <OutsideClickHandler onOutsideClick={() => setNavClicked(false)}>
                     <div className="navbar-wrapper">

@@ -76,7 +76,7 @@ function MedTech() {
                 {
                     pageDetail.detail ?
                         <>
-                            <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="industry-banner-img" />
+                            {pageDetail.detail.banner_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="industry-banner-img" />}
 
                             <div className='industry-banner-content-main'>
                                 <div className='container-lg'>
@@ -94,7 +94,7 @@ function MedTech() {
                                                     <div className='industry-banner-ebook'>
                                                         <div className='ib-ebook-ttile'>{`${pageDetail.detail.ebook_title}`}</div>
 
-                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.ebook_image}`} alt={`${pageDetail.detail.ebook_title}`} className="industry-cs" />
+                                                        {pageDetail.detail.ebook_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.ebook_image}`} alt={`${pageDetail.detail.ebook_title}`} className="industry-cs" />}
                                                         <img src={`${BASE_URL}/img/industries/cs-pattern.png`} alt={`cs-pattern`} className="industry-cs-pattern" />
 
                                                         <div className="industry-cs-link" onClick={() => handleShow('ebook')}>{`${pageDetail.detail.ebook_btn_text}`}</div>
@@ -121,7 +121,7 @@ function MedTech() {
                                                     <div className='industry-banner-paper-survey-item industry-banner-survey'>
                                                         <div className='ib-s-title'>{`${pageDetail.detail.survey_title}`}</div>
 
-                                                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.survey_image}`} alt={`${pageDetail.detail.survey_title}`} className="industry-your-om" />
+                                                        {pageDetail.detail.survey_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.survey_image}`} alt={`${pageDetail.detail.survey_title}`} className="industry-your-om" />}
 
                                                         <div className="paper-survey-item-link" onClick={() => handleShow('survey')}>{`${pageDetail.detail.survey_btn_text}`}</div>
 

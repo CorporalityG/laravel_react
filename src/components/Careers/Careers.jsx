@@ -20,7 +20,7 @@ function Careers() {
     getPageDetail()
     getJobsData()
     getTestimonialsData()
-  });
+  }, []);
 
   async function getPageDetail() {
     let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
@@ -104,7 +104,7 @@ function Careers() {
             </div>
 
             <div className="career-banner-hiring">
-              <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="hiring-img" />
+              {pageDetail.detail.banner_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="hiring-img" />}
             </div>
           </div>
           : null
@@ -122,7 +122,7 @@ function Careers() {
                         <Accordion.Item eventKey={`${index}`}>
                           <Accordion.Header>
                             <div className="cc-jobs-heading">
-                              <img src={`${API_IMG_URL}/${item.icon}`} alt={`${item.title}`} className="cc-j-h-icon" />
+                              {item.icon && <img src={`${API_IMG_URL}/${item.icon}`} alt={`${item.title}`} className="cc-j-h-icon" />}
                               <span>{`${item.title}`}</span>
                               <div className="cc-jobs-apply" onClick={() => handleShow('apply')}>Apply now</div>
                             </div>
@@ -184,8 +184,8 @@ function Careers() {
                       testimonialsData.map((item, index) =>
                         <Carousel.Item>
                           <TestimonialItem
-                            type={(index+1)%2==0 ? 'even' : 'odd'}
-                            thumbnail={`${API_IMG_URL}/${item.avtar}`}
+                            type={(index + 1) % 2 == 0 ? 'even' : 'odd'}
+                            thumbnail={item.avtar && `${API_IMG_URL}/${item.avtar}`}
                             name={`${item.full_name}`}
                             designation={`${item.designation}`}
                             content={`<p>${item.description}</p>`}

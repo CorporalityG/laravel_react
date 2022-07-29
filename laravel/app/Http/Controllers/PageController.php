@@ -2002,6 +2002,36 @@ class PageController extends Controller
             $data['services_image'] = $services_image;
         }
 
+        $event_1_speaker_1_image = $this->uploadImage($request->file('event_1_speaker_1_image'), $request->event_1_speaker_1_name, $RS_Row->getMeta('event_1_speaker_1_image'));
+        if( !empty($event_1_speaker_1_image) )
+        {
+            $data['event_1_speaker_1_image'] = $event_1_speaker_1_image;
+        }
+
+        $event_1_speaker_2_image = $this->uploadImage($request->file('event_1_speaker_2_image'), $request->event_1_speaker_2_name, $RS_Row->getMeta('event_1_speaker_2_image'));
+        if( !empty($event_1_speaker_2_image) )
+        {
+            $data['event_1_speaker_2_image'] = $event_1_speaker_2_image;
+        }
+
+        $event_1_speaker_3_image = $this->uploadImage($request->file('event_1_speaker_3_image'), $request->event_1_speaker_3_name, $RS_Row->getMeta('event_1_speaker_3_image'));
+        if( !empty($event_1_speaker_3_image) )
+        {
+            $data['event_1_speaker_3_image'] = $event_1_speaker_3_image;
+        }
+
+        $event_1_speaker_4_image = $this->uploadImage($request->file('event_1_speaker_4_image'), $request->event_1_speaker_4_name, $RS_Row->getMeta('event_1_speaker_4_image'));
+        if( !empty($event_1_speaker_4_image) )
+        {
+            $data['event_1_speaker_4_image'] = $event_1_speaker_4_image;
+        }
+        
+        $event_1_speaker_5_image = $this->uploadImage($request->file('event_1_speaker_5_image'), $request->event_1_speaker_5_name, $RS_Row->getMeta('event_1_speaker_5_image'));
+        if( !empty($event_1_speaker_5_image) )
+        {
+            $data['event_1_speaker_5_image'] = $event_1_speaker_5_image;
+        }
+
         // data save
         $RS_Row->syncMeta($data);
 

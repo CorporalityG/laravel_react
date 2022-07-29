@@ -53,7 +53,7 @@ function PrivacyPolicy() {
 
                     <div className="col-lg-4">
                       <div className="pp-heading-img">
-                        <img src={`${API_IMG_URL}pages/${pageDetail.detail.privacy_policy_image}`} alt={`${pageDetail.detail.privacy_policy_title}`} />
+                        {pageDetail.detail.privacy_policy_image && <img src={`${API_IMG_URL}pages/${pageDetail.detail.privacy_policy_image}`} alt={`${pageDetail.detail.privacy_policy_title}`} />}
                       </div>
                     </div>
                   </div>

@@ -1423,6 +1423,354 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="card card-secondary card-outline">
+			<div class="card-header d-flex">
+				<h4 class="card-title text-dark w-100">Up Coming Event</h4>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<h5>Event 1 Detail</h5>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="event_1_title">{{ __('Event Title') }}</label>
+							<input type="text" name="event_1_title" id="event_1_title" value="{{ old('event_1_title', $RS_Meta['event_1_title'] ?? '') }}" class="form-control" placeholder="{{ __('Event Title') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="event_1_heading">{{ __('Heading') }}</label>
+							<input type="text" name="event_1_heading" id="event_1_heading" value="{{ old('event_1_heading', $RS_Meta['event_1_heading'] ?? '') }}" class="form-control" placeholder="{{ __('Heading') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="event_1_subheading">{{ __('Sub Heading') }}</label>
+							<input type="text" name="event_1_subheading" id="event_1_subheading" value="{{ old('event_1_subheading', $RS_Meta['event_1_subheading'] ?? '') }}" class="form-control" placeholder="{{ __('Sub Heading') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="evemt_1_date">{{ __('Event Date') }}</label>
+							<input type="text" name="evemt_1_date" id="evemt_1_date" value="{{ old('evemt_1_date', $RS_Meta['evemt_1_date'] ?? '') }}" class="form-control" placeholder="{{ __('Event Date') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="evemt_1_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="evemt_1_btn_text" id="evemt_1_btn_text" value="{{ old('evemt_1_btn_text', $RS_Meta['evemt_1_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="evemt_1_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="evemt_1_btn_link" id="evemt_1_btn_link" value="{{ old('evemt_1_btn_link', $RS_Meta['evemt_1_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<h5>Event 1 Speaker Detail</h5>
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="event_1_speaker_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="event_1_speaker_btn_text" id="event_1_speaker_btn_text" value="{{ old('event_1_speaker_btn_text', $RS_Meta['event_1_speaker_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="event_1_speaker_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="event_1_speaker_btn_link" id="event_1_speaker_btn_link" value="{{ old('event_1_speaker_btn_link', $RS_Meta['event_1_speaker_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-12">
+							<h6 class="text-bold">Speaker 1 Detail</h6>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_1_name">{{ __('Name') }}</label>
+								<input type="text" name="event_1_speaker_1_name" id="event_1_speaker_1_name" value="{{ old('event_1_speaker_1_name', $RS_Meta['event_1_speaker_1_name'] ?? '') }}" class="form-control" placeholder="{{ __('Name') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_1_designation">{{ __('Designation') }}</label>
+								<input type="text" name="event_1_speaker_1_designation" id="event_1_speaker_1_designation" value="{{ old('event_1_speaker_1_designation', $RS_Meta['event_1_speaker_1_designation'] ?? '') }}" class="form-control" placeholder="{{ __('Designation') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_1_image">{{ __('Image') }}</label>
+								<div class="input-group{{ $errors->has('event_1_speaker_1_image') ? ' is-invalid' : '' }}">
+									<div class="custom-file">
+										<input type="file" name="event_1_speaker_1_image" id="event_1_speaker_1_image" value="{{ old('event_1_speaker_1_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+										<label class="custom-file-label" for="event_1_speaker_1_image">Choose image</label>
+									</div>
+								</div>
+
+								@if( !empty($RS_Meta['event_1_speaker_1_image']) )
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['event_1_speaker_1_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="event_1_speaker_1_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
+								@endif
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<hr>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-12">
+							<h6 class="text-bold">Speaker 2 Detail</h6>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_2_name">{{ __('Name') }}</label>
+								<input type="text" name="event_1_speaker_2_name" id="event_1_speaker_2_name" value="{{ old('event_1_speaker_2_name', $RS_Meta['event_1_speaker_2_name'] ?? '') }}" class="form-control" placeholder="{{ __('Name') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_2_designation">{{ __('Designation') }}</label>
+								<input type="text" name="event_1_speaker_2_designation" id="event_1_speaker_2_designation" value="{{ old('event_1_speaker_2_designation', $RS_Meta['event_1_speaker_2_designation'] ?? '') }}" class="form-control" placeholder="{{ __('Designation') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_2_image">{{ __('Image') }}</label>
+								<div class="input-group{{ $errors->has('event_1_speaker_2_image') ? ' is-invalid' : '' }}">
+									<div class="custom-file">
+										<input type="file" name="event_1_speaker_2_image" id="event_1_speaker_2_image" value="{{ old('event_1_speaker_2_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+										<label class="custom-file-label" for="event_1_speaker_2_image">Choose image</label>
+									</div>
+								</div>
+
+								@if( !empty($RS_Meta['event_1_speaker_2_image']) )
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['event_1_speaker_2_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="event_1_speaker_2_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
+								@endif
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<hr>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-12">
+							<h6 class="text-bold">Speaker 3 Detail</h6>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_3_name">{{ __('Name') }}</label>
+								<input type="text" name="event_1_speaker_3_name" id="event_1_speaker_3_name" value="{{ old('event_1_speaker_3_name', $RS_Meta['event_1_speaker_3_name'] ?? '') }}" class="form-control" placeholder="{{ __('Name') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_3_designation">{{ __('Designation') }}</label>
+								<input type="text" name="event_1_speaker_3_designation" id="event_1_speaker_3_designation" value="{{ old('event_1_speaker_3_designation', $RS_Meta['event_1_speaker_3_designation'] ?? '') }}" class="form-control" placeholder="{{ __('Designation') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_3_image">{{ __('Image') }}</label>
+								<div class="input-group{{ $errors->has('event_1_speaker_3_image') ? ' is-invalid' : '' }}">
+									<div class="custom-file">
+										<input type="file" name="event_1_speaker_3_image" id="event_1_speaker_3_image" value="{{ old('event_1_speaker_3_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+										<label class="custom-file-label" for="event_1_speaker_3_image">Choose image</label>
+									</div>
+								</div>
+
+								@if( !empty($RS_Meta['event_1_speaker_3_image']) )
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['event_1_speaker_3_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="event_1_speaker_3_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
+								@endif
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<hr>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-12">
+							<h6 class="text-bold">Speaker 4 Detail</h6>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_4_name">{{ __('Name') }}</label>
+								<input type="text" name="event_1_speaker_4_name" id="event_1_speaker_4_name" value="{{ old('event_1_speaker_4_name', $RS_Meta['event_1_speaker_4_name'] ?? '') }}" class="form-control" placeholder="{{ __('Name') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_4_designation">{{ __('Designation') }}</label>
+								<input type="text" name="event_1_speaker_4_designation" id="event_1_speaker_4_designation" value="{{ old('event_1_speaker_4_designation', $RS_Meta['event_1_speaker_4_designation'] ?? '') }}" class="form-control" placeholder="{{ __('Designation') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_4_image">{{ __('Image') }}</label>
+								<div class="input-group{{ $errors->has('event_1_speaker_4_image') ? ' is-invalid' : '' }}">
+									<div class="custom-file">
+										<input type="file" name="event_1_speaker_4_image" id="event_1_speaker_4_image" value="{{ old('event_1_speaker_4_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+										<label class="custom-file-label" for="event_1_speaker_4_image">Choose image</label>
+									</div>
+								</div>
+
+								@if( !empty($RS_Meta['event_1_speaker_4_image']) )
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['event_1_speaker_4_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="event_1_speaker_4_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
+								@endif
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<hr>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-12">
+							<h6 class="text-bold">Speaker 5 Detail</h6>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_5_name">{{ __('Name') }}</label>
+								<input type="text" name="event_1_speaker_5_name" id="event_1_speaker_5_name" value="{{ old('event_1_speaker_5_name', $RS_Meta['event_1_speaker_5_name'] ?? '') }}" class="form-control" placeholder="{{ __('Name') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_5_designation">{{ __('Designation') }}</label>
+								<input type="text" name="event_1_speaker_5_designation" id="event_1_speaker_5_designation" value="{{ old('event_1_speaker_5_designation', $RS_Meta['event_1_speaker_5_designation'] ?? '') }}" class="form-control" placeholder="{{ __('Designation') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_5_image">{{ __('Image') }}</label>
+								<div class="input-group{{ $errors->has('event_1_speaker_5_image') ? ' is-invalid' : '' }}">
+									<div class="custom-file">
+										<input type="file" name="event_1_speaker_5_image" id="event_1_speaker_5_image" value="{{ old('event_1_speaker_5_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+										<label class="custom-file-label" for="event_1_speaker_5_image">Choose image</label>
+									</div>
+								</div>
+
+								@if( !empty($RS_Meta['event_1_speaker_5_image']) )
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['event_1_speaker_5_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="event_1_speaker_5_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
+								@endif
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<h5>Event 2 Detail</h5>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="event_2_title">{{ __('Event Title') }}</label>
+							<input type="text" name="event_2_title" id="event_2_title" value="{{ old('event_2_title', $RS_Meta['event_2_title'] ?? '') }}" class="form-control" placeholder="{{ __('Event Title') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="event_2_heading">{{ __('Heading') }}</label>
+							<input type="text" name="event_2_heading" id="event_2_heading" value="{{ old('event_2_heading', $RS_Meta['event_2_heading'] ?? '') }}" class="form-control" placeholder="{{ __('Heading') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="event_2_subheading">{{ __('Sub Heading') }}</label>
+							<input type="text" name="event_2_subheading" id="event_2_subheading" value="{{ old('event_2_subheading', $RS_Meta['event_2_subheading'] ?? '') }}" class="form-control" placeholder="{{ __('Sub Heading') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="evemt_1_date">{{ __('Event Date') }}</label>
+							<input type="text" name="evemt_1_date" id="evemt_1_date" value="{{ old('evemt_1_date', $RS_Meta['evemt_1_date'] ?? '') }}" class="form-control" placeholder="{{ __('Event Date') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="evemt_1_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="evemt_1_btn_text" id="evemt_1_btn_text" value="{{ old('evemt_1_btn_text', $RS_Meta['evemt_1_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+						</div>
+					</div>
+
+                    <div class="col-md-12">
+						<div class="form-group">
+							<label for="evemt_1_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="evemt_1_btn_link" id="evemt_1_btn_link" value="{{ old('evemt_1_btn_link', $RS_Meta['evemt_1_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 <!-- Page specific script -->
