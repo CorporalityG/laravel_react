@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './SingleArticle.css'
-import { API_BASE_URL, API_IMG_URL } from '../../config';
+import { API_BASE_URL } from '../../config';
 import { useParams } from 'react-router-dom'
 import { SocialShare } from './SocialShare';
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
@@ -11,11 +11,43 @@ function SingleArticle() {
     const params = useParams();
     const [singleArticle, setSingleArticle] = useState([]);
 
+    const [colPosition, setColPosition] = useState('relative');
+    const [colTop, setColTop] = useState('0');
+    const [colWidth, setColWidth] = useState('auto');
+
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        const { innerWidth: windowInnerwidth } = window;
+        const bannerHeight = document.getElementById('sa-banner-section').clientHeight;
+        const colSidebarHeight = document.getElementById('sa-sidebar-col').clientHeight
+        const sidebarWidth = document.getElementById('sa-sidebar').clientWidth;
+
+        setColPosition('relative')
+        setColTop('0')
+        setColWidth('auto')
+
+        if (windowInnerwidth > 767) {
+            if (position > (colSidebarHeight + 90)) {
+                setColPosition('relative')
+                setColTop('0')
+                setColWidth('auto')
+            }
+            else if (position > bannerHeight) {
+                setColPosition('fixed')
+                setColTop('90px')
+                setColWidth(sidebarWidth)
+            }
+        }
+    };
+
     useEffect(() => {
         AOS.init({
             duration: 2000,
         });
-        
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', handleScroll, { passive: true });
+
         getArticle(params.article_slug);
     }, [params])
 
@@ -30,7 +62,7 @@ function SingleArticle() {
             {
                 singleArticle ?
                     <>
-                        <div className="sa-banner-section">
+                        <div id='sa-banner-section' className="sa-banner-section">
                             <div className="container-lg">
                                 <div className='row sa-banner-row'>
                                     <div className='col-lg-6'>
@@ -66,7 +98,7 @@ function SingleArticle() {
                             <div className='container-lg'>
                                 <div className='row'>
                                     <div id='sa-sidebar-col' className='col-lg-3 col-md-4'>
-                                        <div id='sa-sidebar' className='sa-sidebar'>
+                                        <div id='sa-sidebar' className='sa-sidebar' style={{ 'position': colPosition, 'top': colTop, 'width': colWidth }}>
                                             {
                                                 singleArticle.sections ?
                                                     <>

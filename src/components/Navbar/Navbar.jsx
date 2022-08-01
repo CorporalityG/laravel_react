@@ -38,7 +38,7 @@ const Navbar = () => {
 
             <NavbarContext.Provider value={providerValue}>
                 <OutsideClickHandler onOutsideClick={() => setNavClicked(false)}>
-                    <div className="navbar-wrapper">
+                    <div className={`navbar-wrapper ${location.pathname === '/' && 'home-navbar-wrapper'}`}>
                         {/* nav hamburger */}
                         <div className="nav-icon" onClick={() => setNavClicked(!navClicked)} >
                             <span className={`nav-icon-line ${navClicked ? "nav-icon-clicked" : ""}`}></span>

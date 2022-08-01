@@ -1458,22 +1458,22 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="evemt_1_date">{{ __('Event Date') }}</label>
-							<input type="text" name="evemt_1_date" id="evemt_1_date" value="{{ old('evemt_1_date', $RS_Meta['evemt_1_date'] ?? '') }}" class="form-control" placeholder="{{ __('Event Date') }}">
+							<label for="event_1_date">{{ __('Event Date') }}</label>
+							<input type="text" name="event_1_date" id="event_1_date" value="{{ old('event_1_date', $RS_Meta['event_1_date'] ?? '') }}" class="form-control" placeholder="{{ __('Event Date') }}">
 						</div>
 					</div>
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="evemt_1_btn_text">{{ __('Button Text') }}</label>
-							<input type="text" name="evemt_1_btn_text" id="evemt_1_btn_text" value="{{ old('evemt_1_btn_text', $RS_Meta['evemt_1_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+							<label for="event_1_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="event_1_btn_text" id="event_1_btn_text" value="{{ old('event_1_btn_text', $RS_Meta['event_1_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
 						</div>
 					</div>
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="evemt_1_btn_link">{{ __('Button Link') }}</label>
-							<input type="text" name="evemt_1_btn_link" id="evemt_1_btn_link" value="{{ old('evemt_1_btn_link', $RS_Meta['evemt_1_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+							<label for="event_1_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="event_1_btn_link" id="event_1_btn_link" value="{{ old('event_1_btn_link', $RS_Meta['event_1_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 				</div>
@@ -1749,22 +1749,22 @@
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="evemt_1_date">{{ __('Event Date') }}</label>
-							<input type="text" name="evemt_1_date" id="evemt_1_date" value="{{ old('evemt_1_date', $RS_Meta['evemt_1_date'] ?? '') }}" class="form-control" placeholder="{{ __('Event Date') }}">
+							<label for="event_1_date">{{ __('Event Date') }}</label>
+							<input type="text" name="event_1_date" id="event_1_date" value="{{ old('event_1_date', $RS_Meta['event_1_date'] ?? '') }}" class="form-control" placeholder="{{ __('Event Date') }}">
 						</div>
 					</div>
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="evemt_1_btn_text">{{ __('Button Text') }}</label>
-							<input type="text" name="evemt_1_btn_text" id="evemt_1_btn_text" value="{{ old('evemt_1_btn_text', $RS_Meta['evemt_1_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
+							<label for="event_1_btn_text">{{ __('Button Text') }}</label>
+							<input type="text" name="event_1_btn_text" id="event_1_btn_text" value="{{ old('event_1_btn_text', $RS_Meta['event_1_btn_text'] ?? '') }}" class="form-control" placeholder="{{ __('Button Text') }}">
 						</div>
 					</div>
 
                     <div class="col-md-12">
 						<div class="form-group">
-							<label for="evemt_1_btn_link">{{ __('Button Link') }}</label>
-							<input type="text" name="evemt_1_btn_link" id="evemt_1_btn_link" value="{{ old('evemt_1_btn_link', $RS_Meta['evemt_1_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
+							<label for="event_1_btn_link">{{ __('Button Link') }}</label>
+							<input type="text" name="event_1_btn_link" id="event_1_btn_link" value="{{ old('event_1_btn_link', $RS_Meta['event_1_btn_link'] ?? '') }}" class="form-control" placeholder="{{ __('Button Link') }}">
 						</div>
 					</div>
 				</div>

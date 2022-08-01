@@ -14,10 +14,44 @@ function IndustrySingle() {
     const [singleIndustry, setSingleIndustry] = useState([]);
     const [singleRelatedIndustry, setSingleRelatedIndustry] = useState([]);
 
+    const [colPosition, setColPosition] = useState('relative');
+    const [colTop, setColTop] = useState('0');
+    const [colWidth, setColWidth] = useState('auto');
+
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        const { innerWidth: windowInnerwidth } = window;
+
+        const colSingleBoxWidth = document.getElementById('industry-single-boxes').clientWidth;
+        const colOffsetTop = document.getElementById( "industry-single-col-boxes" ).offsetTop;
+        const colOffsetHeight = document.getElementById( "industry-single-col-boxes" ).offsetHeight;
+
+        setColPosition('relative')
+        setColTop('0')
+        setColWidth('auto')
+
+        if (windowInnerwidth > 991) {
+            if (position > colOffsetHeight) {
+                console.log('here')
+                setColPosition('relative')
+                setColTop('0')
+                setColWidth('auto')
+            }
+            else if (position > colOffsetTop) {
+                setColPosition('fixed')
+                setColTop('90px')
+                setColWidth(colSingleBoxWidth)
+            }
+        }
+    };
+
     useEffect(() => {
         AOS.init({
             duration: 2000,
         });
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', handleScroll, { passive: true });
 
         getIndustryData(params.industry_slug);
         getRelatedIndustryData(params.industry_slug)
@@ -83,12 +117,12 @@ function IndustrySingle() {
                                         <div className='industry-single-desc' dangerouslySetInnerHTML={{ __html: singleIndustry.description }}></div>
                                     </div>
 
-                                    <div className='col-lg-5 industry-single-col-boxes'>
+                                    <div id="industry-single-col-boxes" className='col-lg-5 industry-single-col-boxes'>
                                         <div className='industry-single-survey-box'>
                                             <div className='survey-title'>Survey</div>
                                         </div>
 
-                                        <div className='industry-single-boxes'>
+                                        <div id="industry-single-boxes" className='industry-single-boxes' style={{ 'position': colPosition, 'top': colTop, 'width': colWidth }}>
                                             {
                                                 singleRelatedIndustry ?
                                                     <div className='industry-single-box industry-single-related-box'>

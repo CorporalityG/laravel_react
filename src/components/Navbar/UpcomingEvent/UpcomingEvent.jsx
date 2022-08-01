@@ -1,80 +1,122 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './UpcomingEvent.css'
 import Marquee from "react-fast-marquee"
 import { SpeakerItem } from './SpeakerItem'
-import { BASE_URL } from '../../../config'
+import { API_BASE_URL, API_IMG_URL } from '../../../config'
+import axios from "axios";
 
 function UpcomingEvent() {
+
+    const page_slug = 'home';
+
+    const [pageDetail, setPageDetail] = useState([]);
+
+    useEffect(() => {
+        getPageDetail()
+    }, []);
+
+    const getPageDetail = () => {
+        axios.get(`${API_BASE_URL}/page-detail/${page_slug}`)
+            .then(response => {
+                setPageDetail(response.data);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
     return (
-        <div className='marquee-section'>
-            <div className='container-lg'>
-                <div className='row'>
-                    <div className='col-lg-12'>
-                        <Marquee speed='80' gradient={false}>
-                            <div className='uce-main'>
-                                <div className='uce-title'>Up Coming Event</div>
-                                <div className='uce-heading-main'>
-                                    <div className='uce-heading'>Corporality: Futuristic Approach</div>
-                                    <div className='uce-subheading'>Invest a day to prepare for 2023</div>
-                                </div>
-                                <div className='uce-date'>[ November 18, 2022, AEST ]</div>
-                                <div className='uce-btn'>
-                                    <a href="https://corporality.global/club/corporality-global-event/#Ticket" target="_blank">Buy Ticket</a>
+        <>
+            {
+                pageDetail.detail ?
+
+                    <div className='marquee-section'>
+                        <div className='container-lg'>
+                            <div className='row'>
+                                <div className='col-lg-12'>
+                                    <Marquee speed='80' gradient={false} delay="1">
+                                        <div className='uce-main'>
+                                            {pageDetail.detail.event_1_title && <div className='uce-title'>{pageDetail.detail.event_1_title}</div>}
+
+                                            <div className='uce-heading-main'>
+                                                {pageDetail.detail.event_1_heading && <div className='uce-heading'>{pageDetail.detail.event_1_heading}</div>}
+                                                {pageDetail.detail.event_1_subheading && <div className='uce-subheading'>{pageDetail.detail.event_1_subheading}</div>}
+                                            </div>
+
+                                            {pageDetail.detail.event_1_date && <div className='uce-date'>{pageDetail.detail.event_1_date}</div>}
+
+                                            {
+                                                pageDetail.detail.event_1_btn_text &&
+                                                <div className='uce-btn'>
+                                                    <a href={`${pageDetail.detail.event_1_btn_link ?? '#'}`} target="_blank">{pageDetail.detail.event_1_btn_text}</a>
+                                                </div>
+                                            }
+                                        </div>
+
+                                        <div className='uce-speaker-main'>
+                                            {
+                                                pageDetail.detail.event_1_speaker_btn_text &&
+                                                <div className='uce-speaker-btn'>
+                                                    <a href={`${pageDetail.detail.event_1_speaker_btn_link ?? '#'}`} target="_blank">{pageDetail.detail.event_1_speaker_btn_text}</a>
+                                                </div>
+                                            }
+
+                                            <SpeakerItem
+                                                avatar={pageDetail.detail.event_1_speaker_1_image ? `${API_IMG_URL}pages/${pageDetail.detail.event_1_speaker_1_image}` : ''}
+                                                name={pageDetail.detail.event_1_speaker_1_name}
+                                                designation={pageDetail.detail.event_1_speaker_1_designation}
+                                            />
+
+                                            <SpeakerItem
+                                                avatar={pageDetail.detail.event_1_speaker_2_image ? `${API_IMG_URL}pages/${pageDetail.detail.event_1_speaker_2_image}` : ''}
+                                                name={pageDetail.detail.event_1_speaker_2_name}
+                                                designation={pageDetail.detail.event_1_speaker_2_designation}
+                                            />
+
+                                            <SpeakerItem
+                                                avatar={pageDetail.detail.event_1_speaker_3_image ? `${API_IMG_URL}pages/${pageDetail.detail.event_1_speaker_3_image}` : ''}
+                                                name={pageDetail.detail.event_1_speaker_3_name}
+                                                designation={pageDetail.detail.event_1_speaker_3_designation}
+                                            />
+
+                                            <SpeakerItem
+                                                avatar={pageDetail.detail.event_1_speaker_4_image ? `${API_IMG_URL}pages/${pageDetail.detail.event_1_speaker_4_image}` : ''}
+                                                name={pageDetail.detail.event_1_speaker_4_name}
+                                                designation={pageDetail.detail.event_1_speaker_4_designation}
+                                            />
+
+                                            <SpeakerItem
+                                                avatar={pageDetail.detail.event_1_speaker_5_image ? `${API_IMG_URL}pages/${pageDetail.detail.event_1_speaker_5_image}` : ''}
+                                                name={pageDetail.detail.event_1_speaker_5_name}
+                                                designation={pageDetail.detail.event_1_speaker_5_designation}
+                                            />
+                                        </div>
+
+                                        <div className='uce-main uce-next-main'>
+                                            {pageDetail.detail.event_2_title && <div className='uce-title'>{pageDetail.detail.event_2_title}</div>}
+
+                                            <div className='uce-heading-main'>
+                                                {pageDetail.detail.event_2_heading && <div className='uce-heading'>{pageDetail.detail.event_2_heading}</div>}
+                                                {pageDetail.detail.event_2_subheading && <div className='uce-subheading'>{pageDetail.detail.event_2_subheading}</div>}
+                                            </div>
+
+                                            {pageDetail.detail.event_2_date && <div className='uce-date'>{pageDetail.detail.event_2_date}</div>}
+
+                                            {
+                                                pageDetail.detail.event_2_btn_text &&
+                                                <div className='uce-btn'>
+                                                    <a href={`${pageDetail.detail.event_2_btn_link ?? '#'}`} target="_blank">{pageDetail.detail.event_2_btn_text}</a>
+                                                </div>
+                                            }
+                                        </div>
+                                    </Marquee>
                                 </div>
                             </div>
-
-                            <div className='uce-speaker-main'>
-                                <div className='uce-speaker-btn'>
-                                    <a href="https://corporality.global/club/our-speakers/" target="_blank">Become a Speaker</a>
-                                </div>
-
-                                <SpeakerItem
-                                    avatar={`${BASE_URL}/img/HomePage/UpcomingEvent/Priyambada-Mishra.png`}
-                                    name={`Priyambada Mishra`}
-                                    designation={`CEO and Founder`}
-                                />
-
-                                <SpeakerItem
-                                    avatar={`${BASE_URL}/img/HomePage/UpcomingEvent/Suzette-Bailey.png`}
-                                    name={`Suzette Bailey`}
-                                    designation={`CEO and Co-Founder`}
-                                />
-
-                                <SpeakerItem
-                                    avatar={`${BASE_URL}/img/HomePage/UpcomingEvent/Alan-Stevens.png`}
-                                    name={`Alan Stevens`}
-                                    designation={`Communications Specialist`}
-                                />
-
-                                <SpeakerItem
-                                    avatar={`${BASE_URL}/img/HomePage/UpcomingEvent/Gunnar-Habitz.png`}
-                                    name={`Gunnar Habitz`}
-                                    designation={`Senior Partner & Alliance Manager APAC`}
-                                />
-
-                                <SpeakerItem
-                                    avatar={`${BASE_URL}/img/HomePage/UpcomingEvent/Allan-Gatenby.png`}
-                                    name={`Allan Gatenby Friedr FRIM CMF JP`}
-                                    designation={`Director`}
-                                />
-                            </div>
-
-                            <div className='uce-main uce-next-main'>
-                                <div className='uce-title'>Up Coming Event</div>
-                                <div className='uce-heading-main'>
-                                    <div className='uce-heading'>Corporality Global Summit 2023</div>
-                                    <div className='uce-subheading'></div>
-                                </div>
-                                <div className='uce-date'>[ 8th of March 2023 ]</div>
-                                <div className='uce-btn'>
-                                    <a href="https://corporality.global/club/corporality-global-event/#Ticket" target="_blank">Buy Ticket</a>
-                                </div>
-                            </div>
-                        </Marquee>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                    : null
+            }
+        </>
     )
 }
 
