@@ -9,7 +9,7 @@ function WorldMap(pageDetail) {
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
-  });
+  }, []);
 
   return (
     <div className="worldmap_parent">

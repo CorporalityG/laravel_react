@@ -40,7 +40,7 @@ function Services(pageDetail) {
     showOneDiv(index);
   };
 
-  const learnMoreHandler = () => {
+  /* const learnMoreHandler = () => {
     switch (learn) {
       case 1: navigate("/goto-market-strategy"); break;
       case 2: navigate("/digital-media-marketing"); break;
@@ -51,7 +51,7 @@ function Services(pageDetail) {
       case 7: navigate("/cxo-strategy"); break;
       default: break;
     }
-  }
+  } */
 
   useEffect(() => {
     Aos.init();

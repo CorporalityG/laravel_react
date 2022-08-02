@@ -5,7 +5,6 @@ import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config'
 import { PopularVideoItem } from './PopularVideoItem'
 import { CovidItem } from './CovidItem'
 import { BlogItem } from './BlogItem'
-// import MetaTags from 'react-meta-tags';
 import { Helmet } from "react-helmet";
 import Moment from 'moment';
 import Carousel from 'react-bootstrap/Carousel'
@@ -14,10 +13,6 @@ import { GetInvolved } from '../ServiceInsights/GetInvolved'
 
 function truncate(text, size) {
     return text?.length > size ? text.substr(0, size - 1) + '...' : text;
-}
-
-function dateFormat(date) {
-    return Moment(date).fromNow();
 }
 
 function Blogs2() {
@@ -100,12 +95,6 @@ function Blogs2() {
 
     return (
         <>
-            {/* <MetaTags>
-                <title>{`Blog | Digital Media Marketing | Corporality`}</title>
-                <meta name="description" content={`Read our blog to get updated about the last news, tools, insights, analysis & opinion on different topics like digital media marketing, advertising and website.`} />
-                <link rel="canonical" href={`${BASE_URL}/blog/`} />
-            </MetaTags> */}
-
             <Helmet>
                 <title>{`What is Corporate Strategy? - Definition | Meaning | Example`}</title>
                 <meta name="description" content={`Corporate strategy encompasses a firm’s corporate actions with the aim to achieve company objectives while achieving a competitive advantage.`} />

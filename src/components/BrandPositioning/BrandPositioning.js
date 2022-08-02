@@ -71,7 +71,7 @@ export default function BrandPositioning() {
                     </div>
                   </div>
 
-                  <div className="col-lg-6">
+                  <div className="col-lg-6 bp-banner-right-col">
                     <div className="bp-banner" data-aos="fade-left">
                       <img src={`${BASE_URL}/img/BrandPositioning/banner-vector.png`} alt="GROWING UP IS AN ADVENTURE" className="bp-banner-img" />
                     </div>

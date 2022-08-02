@@ -5,11 +5,6 @@ import smaller3MultiDimensional from '../MultiDimensional/smallerrectMultiDimens
 import small3MultiDimensional from '../MultiDimensional/smallrectMultiDimensional.png'
 import wall3MultiDimensional from '../MultiDimensional/wallMultiDimensional.png'
 import back3MultiDimensional from '../MultiDimensional/BackMultiDimensional.png'
-import main3MultiDimensional from '../MultiDimensional/MainMultiDimensional.png'
-import favicon0MultiDimensional from '../MultiDimensional/favicon-0MultiDimensional.png'
-import favicon1MultiDimensional from '../MultiDimensional/favicon-1MultiDimensional.png'
-import favicon2MultiDimensional from '../MultiDimensional/favicon-3MultiDimensional.png'
-import favicon3MultiDimensional from '../MultiDimensional/favicon-4MultiDimensional.png'
 import explorerectMultiDimensional from '../MultiDimensional/arrowMultiDimensional.png'
 import explorearrowMultiDimensional from '../MultiDimensional/arrow2MultiDimensional.png'
 import { API_IMG_URL } from '../../../../config';

@@ -3,6 +3,7 @@ import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
 import "./Portfolio.css"
 import Carousel from 'react-bootstrap/Carousel'
 import { useNavigate } from "react-router";
+import axios from "axios";
 
 const NewPortfolio = () => {
 
@@ -27,10 +28,14 @@ const NewPortfolio = () => {
         getPageSectionDetail()
     }, []);
 
-    async function getPageSectionDetail() {
-        let result = await fetch(`${API_BASE_URL}/page-detail/${section_slug}`);
-        result = await result.json();
-        setPageSectionDetail(result);
+    const getPageSectionDetail = () => {
+        axios.get(`${API_BASE_URL}/page-detail/${section_slug}`)
+            .then(response => {
+                setPageSectionDetail(response.data);
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     return (

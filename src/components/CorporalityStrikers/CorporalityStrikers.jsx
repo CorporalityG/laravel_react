@@ -43,7 +43,7 @@ function CorporalityStrikers() {
                             <img src={`${BASE_URL}/img/CorporalityStrikers/banner-vector.png`} alt="Vector" className='cs-banner-vector' />
                             <div className='cs-banner-bg-white'></div>
 
-                            <div className='container-lg'>
+                            <div className='container-lg cs-banner-container'>
                                 <div className='row cs-banner-row'>
                                     <div className='col-lg-7'>
                                         <div className='cs-banner-content'>

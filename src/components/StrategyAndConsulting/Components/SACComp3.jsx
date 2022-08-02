@@ -3,7 +3,6 @@ import wall from "./images/wall.png";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { API_IMG_URL } from '../../../config';
 
 const SACComp3 = (pageDetail) => {
   useEffect(() => {

@@ -40,6 +40,10 @@ function SingleArticle() {
         }
     };
 
+    const linkHandleScroll = (sectionSlug) => {
+        document.getElementById(sectionSlug).style.paddingTop = "90px";
+    }
+
     useEffect(() => {
         AOS.init({
             duration: 2000,
@@ -77,7 +81,7 @@ function SingleArticle() {
                                                     <>
                                                         {
                                                             singleArticle.sections.slice(0, 1).map((item) =>
-                                                                <a key={`${item.id}`} href={`#${item.section_slug}`} data-id={`${item.section_slug}`} className='sa-sidebar-link'>Start Reading</a>
+                                                                <a key={`${item.id}`} href={`#${item.section_slug}`} data-id={`${item.section_slug}`} className='sa-sidebar-link' onClick={()=>linkHandleScroll(item.section_slug)}>Start Reading</a>
                                                             )
                                                         }
                                                     </>
@@ -106,7 +110,7 @@ function SingleArticle() {
                                                         <div className='sa-sidebar-nav'>
                                                             {
                                                                 singleArticle.sections.map((item) =>
-                                                                    <a key={`${item.id}`} href={`#${item.section_slug}`} data-id={`${item.section_slug}`} className='sa-sidebar-link'>{`${item.section_title}`}</a>
+                                                                    <a key={`${item.id}`} href={`#${item.section_slug}`} data-id={`${item.section_slug}`} className='sa-sidebar-link' onClick={()=>linkHandleScroll(item.section_slug)}>{`${item.section_title}`}</a>
                                                                 )
                                                             }
                                                         </div>

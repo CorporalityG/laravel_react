@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 export const GetInvolvedItem = (props) => {
     return (
         <div className='col-lg-6 si-gi-item-col'>

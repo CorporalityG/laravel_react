@@ -207,7 +207,7 @@ function ServiceInsights() {
                             <div className='si-o-content-section'>
                                 <div className='container-lg'>
                                     <div className='row'>
-                                        <div className='col-lg-4'>
+                                        <div className='col-lg-4 si-o-content-right-col'>
                                             <div className='si-o-c-items'>
                                                 <div className='si-o-c-item'>
                                                     <Link to={`/${pageDetail.detail.item_1_link}`} className="si-o-c-item-title">{`${pageDetail.detail.item_1_title}`}</Link>

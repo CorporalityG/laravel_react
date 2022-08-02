@@ -7,7 +7,6 @@ import rect3 from '../CaseStudies/rect4.png'
 import rect4 from '../CaseStudies/rect3.png'
 import wall from '../CaseStudies/wall.png'
 import Back from '../CaseStudies/back.png'
-import Main from '../CaseStudies/main.png'
 import { API_IMG_URL } from '../../../../config';
 
 const CaseStudy = (pageDetail) => {

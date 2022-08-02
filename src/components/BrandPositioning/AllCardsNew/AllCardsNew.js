@@ -5,34 +5,14 @@ import "./AllCardsNew.css";
 import joiner from "./images/joiner.png";
 import line_horizontal from "./images/line_horizontal.png";
 import line_vertical from "./images/line_vertical.png";
-import aa from "./images/1-1.png";
-import ab from "./images/1-2.png";
-import ac from "./images/1-3.png";
-import ad from "./images/1-4.png";
-import ae from "./images/1-5.png";
-import ba from "./images/2-5.png";
-import bb from "./images/2-4.png";
-import bc from "./images/2-3.png";
-import bd from "./images/2-2.png";
-import be from "./images/2-1.png";
-import ca from "./images/3-1.png";
-import cb from "./images/3-2.png";
-import cc from "./images/3-3.png";
-import cd from "./images/3-4.png";
-import ce from "./images/3-5.png";
-import da from "./images/4-1.png";
-import db from "./images/4-2.png";
-import dc from "./images/4-3.png";
-import dd from "./images/4-4.png";
-// import ea from "./images/5-1.png";
-// import eb from "./images/5-2.png";
-// import ec from "./images/5-3.png";
 import { API_IMG_URL } from '../../../config';
 
 function AllCardsNew(pageDetail) {
+
   useEffect(() => {
     Aos.init();
-  });
+  }, []);
+
   return (
     <>
       <div className="container-lg gotomarketing_cards_container">

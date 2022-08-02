@@ -3,13 +3,10 @@ import aos from 'aos'
 import 'aos/dist/aos.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import favicon1Internal from './images/InternalFavicon1.png'
-import favicon0Internal from './images/InternalFavicon2.png'
 import back3Internal from './images/InternalBack.png'
 import small3Internal from './images/internalRect.png'
 import smaller3Internal from './images/internalSmallRect.png'
 import wall3Internal from './images/internalWall.png'
-import img2Internal from "./images/InternalMain.png"
 import readmorearrow from './images/readmorearrowInternal.png'
 import readmoreInternal from './images/readmoreInternal.png'
 import "../Components/SACComp5.css"

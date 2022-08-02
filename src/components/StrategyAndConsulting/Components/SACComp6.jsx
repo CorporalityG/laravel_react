@@ -6,8 +6,6 @@ import top_rectangleExpertise from "./images/poly1Expertise.png";
 import bottom_backExpertise from "./images/back2Expertise.png";
 import bottom_rectangleExpertise from "./images/poly2Expertise.png";
 import heading_1_arrowExpertise from "./images/arrow1Expertise.png";
-import Main1Expertise from "./images/Main1ExpertiseNew.png";
-import Main2Expertise from "./images/Main2Expertise.png";
 import "../Components/SACComp6.css";
 import { API_IMG_URL } from '../../../config';
 

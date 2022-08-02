@@ -1,4 +1,4 @@
-import { BASE_URL, API_IMG_URL } from '../../config'
+import { API_IMG_URL } from '../../config'
 import { Link } from 'react-router-dom'
 
 export const ServiceInsights = (pageDetail) => {

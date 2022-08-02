@@ -14,7 +14,7 @@ function FirstNew(pageDetail) {
   useEffect(() => {
     Aos.init({ duration: 3000 });
     Aos.init({ disable: "mobile" });
-  });
+  }, []);
 
   return (
     <div className="ourimpetus_parent">

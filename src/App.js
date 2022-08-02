@@ -1,5 +1,4 @@
 import "./App.css";
-// import { BrowserRouter as Routes, Route } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useContext } from "react";
 import { Context, ContextProvider } from "./context/Context";
@@ -23,26 +22,11 @@ import Contact from "./components/Contact/Contact";
 import DigitalMediaMarketing from "./components/DigitalMediaMarketing/DigitalMediaMarketing";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-// import Blog from "./components/Blog/Blog.jsx";
 import Write from "./components/Write/Write";
-// import IndustrialResources from "./components/IndustrialResources/IndustrialResources";
-import DivineIntercession from "./components/CauseStudies/DivineIntercession";
-import BuildQ from "./components/CauseStudies/BuildQ";
-import FastgrowFinance from "./components/CauseStudies/FastgrowFinance";
-import Liqmet from "./components/CauseStudies/Liqmet";
-import KlekServices from "./components/CauseStudies/KlekServices";
-import SKInsurance from "./components/CauseStudies/SKInsurance";
-import TechConsultants from "./components/CauseStudies/TechConsultants";
 import Clients from "./components/CauseStudies/Clients";
-import XDesign from "./components/CauseStudies/XDesign";
-import MeyerWest from "./components/CauseStudies/MeyerWest";
-import Lumoral from "./components/CauseStudies/Lumoral";
-
 import CorporalityBooksList from "./components/CorporalityBooks/CorporalityBooksList";
 import JourneyOfPerseverance from "./components/CorporalityBooks/JourneyOfPerseverance";
-
 import ResearchPapers from "./components/ResearchPapers/ResearchPapers";
-
 import WhyCorporalityEffect from "./components/WhyCorporalityEffect/WhyCorporalityEffect";
 import WhatIsCorporalityEffect from "./components/WhatIsCorporalityEffect/WhatIsCorporalityEffect";
 import CulturallyConditioned from "./components/CulturallyConditioned/CulturallyConditioned";
@@ -50,7 +34,6 @@ import InboundShifting from "./components/InboundShifting/InboundShifting";
 import Careers from "./components/Careers/Careers";
 import TermsConditions from "./components/TermsConditions/TermsConditions";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
-
 import AccountBasedMarketing from "./components/AccountBasedMarketing/AccountBasedMarketing";
 import OutsourcedCMO from "./components/OutsourcedCMO/OutsourcedCMO";
 import MarketingModelApproch from "./components/MarketingModelApproch/MarketingModelApproch";
@@ -97,16 +80,16 @@ import CSuitCategory from "./components/Insights/Category/CSuitCategory";
 
 function App() {
   const { user, dispatch } = useContext(Context);
-  // const handleLogout = () => {
-  // dispatch({ type: "LOGOUT" });
-  // };
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
+
   return (
     <>
       <ContextProvider>
-        {/*<BrowserRouter basename="/mern">*/}
         <BrowserRouter>
           <Navbar />
-          {/* {user && <h1 className="logout" onClick={handleLogout}>logout</h1>} */}
+          {user && <h1 className="logout" onClick={handleLogout}>logout</h1>}
           <Routes>
 
             <Route path="/about-corporality" element={<AboutCorporality />} />
@@ -148,17 +131,6 @@ function App() {
             <Route path="/research-papers" element={<ResearchPapers />} />
 
             <Route path="/clients" element={<Clients />} />
-
-            {/* <Route path="/divine-intercession" element={<DivineIntercession />} />
-            <Route path="/buildq-group" element={<BuildQ />} />
-            <Route path="/fastgrow-finance" element={<FastgrowFinance />} />
-            <Route path="/liqmet" element={<Liqmet />} />
-            <Route path="/klek-services" element={<KlekServices />} />
-            <Route path="/sk-insurance" element={<SKInsurance />} />
-            <Route path="/tech-consultants" element={<TechConsultants />} />
-            <Route path="/x-designs" element={<XDesign />} />
-            <Route path="/meyer-west" element={<MeyerWest />} />
-            <Route path="/lumoral" element={<Lumoral />} /> */}
 
             <Route path="/corporality-books" element={<CorporalityBooksList />} />
             <Route path="/book/journey-of-perseverance" element={<JourneyOfPerseverance />} />
@@ -213,10 +185,6 @@ function App() {
             <Route path="/cruise-and-tourism" element={<CruiseAndTourism />} />
 
             <Route path="/pricing" element={<Pricing />} />
-
-            {/* <Route path="/search/:search_string" element={<Blogs />}/> */}
-
-            {/*<Route path="/articles/:article_name" element={<Blog />}/>*/}
 
             <Route path="/:post_slug" exact element={<Single />} />
 

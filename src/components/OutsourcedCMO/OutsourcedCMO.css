@@ -154,6 +154,9 @@
     padding-top: 90px;
     padding-bottom: 90px;
 }
+.cmo-lifecycle-section .cmo-lc-title-container {
+    position: relative;
+}
 .cmo-lifecycle-section .cmo-lc-title-content {
     max-width: 70%;
     margin: 0 auto 30px;
@@ -173,6 +176,9 @@
     font-size: 17px;
     text-align: center;
     color: #757575;
+}
+.cmo-lifecycle-section .cmo-lc-steps-col {
+    position: relative;
 }
 .cmo-lifecycle-section .cmo-lc-steps-content {
     display: flex;

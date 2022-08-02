@@ -11,6 +11,9 @@
     top: 0;
     width: 100%;
 }
+.pricing-page .pricing-banner-container {
+    position: relative;
+}
 .pricing-page .pricing-banner-title h1 {
     font-style: normal;
     font-weight: 700;
@@ -131,6 +134,10 @@
 }
 .pricing-page .pricing-service-list .form-check-input {
     z-index: -1;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .pricing-page .pricing-service-list .form-check-label {
     cursor: pointer;
@@ -230,6 +237,10 @@
 }
 .pricing-page .project_price_main .project_price_grade_item .form-check-input {
     z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .pricing-page .project_price_main .project_price_grade_item label {
     cursor: pointer;

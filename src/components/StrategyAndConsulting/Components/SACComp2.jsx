@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import aos from "aos";
 import "aos/dist/aos.css";
-import main2Organic from "./images/secondMain.png";
 import wall2Organic from "./images/secondWall.png";
 import small2Organic from "./images/secondRect.png";
 import side2Organic from "./images/secondSideRect.png";

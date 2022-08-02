@@ -34,7 +34,7 @@ const Single = () => {
     async function getBlog(slug) {
         let result = await fetch(API_BASE_URL + "/single-blog/" + slug);
         result = await result.json();
-        if (result == "") {
+        if (result === "") {
             navigate("/404", { replace: true });
         }
         else {

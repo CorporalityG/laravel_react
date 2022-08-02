@@ -72,6 +72,9 @@
 .bp-banner-section .bp-banner-row {
     align-items: center;
 }
+.bp-banner-section .bp-banner-row .bp-banner-right-col {
+    position: relative;
+}
 .bp-banner-section .bp-banner-content h1 {
     font-style: normal;
     font-weight: 500;

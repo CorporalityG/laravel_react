@@ -31,6 +31,7 @@
 .industry-page .industry-banner-section .industry-banner-content-main {
     padding-top: 50px;
     width: 100%;
+    position: relative;
 }
 .industry-page .industry-banner-section .industry-banner-content h1 {
     font-style: normal;
@@ -410,6 +411,9 @@
     position: absolute;
     top: 0;
     width: 100%;
+}
+.industry-page .industry-global-conference-section .industry-global-conference-content-main {
+    position: relative;
 }
 .industry-page .industry-global-conference-section .industry-global-conference-content {
     background: #FFFFFF;

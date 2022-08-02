@@ -15,7 +15,7 @@ function CommunitySupport(pageDetail) {
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
-  });
+  }, []);
 
   return (
     <div className="communitysupport_parent">

@@ -10,7 +10,7 @@ function Leadership(pageDetail) {
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
-  });
+  }, []);
 
   return (
     <div className="leadership_parent">

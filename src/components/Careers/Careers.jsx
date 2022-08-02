@@ -184,7 +184,7 @@ function Careers() {
                       testimonialsData.map((item, index) =>
                         <Carousel.Item>
                           <TestimonialItem
-                            type={(index + 1) % 2 == 0 ? 'even' : 'odd'}
+                            type={(index + 1) % 2 === 0 ? 'even' : 'odd'}
                             thumbnail={item.avtar && `${API_IMG_URL}/${item.avtar}`}
                             name={`${item.full_name}`}
                             designation={`${item.designation}`}

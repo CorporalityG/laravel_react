@@ -6,7 +6,6 @@ import wall from '../LastComponentINC/wall.png'
 import rect2 from '../LastComponentINC/rect2.png'
 import rect3 from '../LastComponentINC/rect3.png'
 import rect4 from '../LastComponentINC/rect4.png'
-import Main from '../LastComponentINC/main.png'
 import Back from '../LastComponentINC/back.png'
 import { API_IMG_URL } from '../../../../config';
 
@@ -26,7 +25,7 @@ const Newsletter = (pageDetail) => {
                         <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="500" className='container-2-text-1-Ns'>{`${pageDetail.newsletter_title}`}
                         </p>
 
-                        <form action='https://forms.zohopublic.com.au/corporality/form/SubscribeNewslettersCorporality/formperma/h58Lc8-XG8Ll4jwIvKkFCFA_uwUgipzSLFZVfC_3lZs/htmlRecords/submit' name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();' acceptCharset='UTF-8' encType='multipart/form-data' id='form'>
+                        <form action='https://forms.zohopublic.com.au/corporality/form/SubscribeNewslettersCorporality/formperma/h58Lc8-XG8Ll4jwIvKkFCFA_uwUgipzSLFZVfC_3lZs/htmlRecords/submit' name='form' method='POST' acceptCharset='UTF-8' encType='multipart/form-data' id='form'>
                             <input type="hidden" name="zf_referrer_name" />
                             <input type="hidden" name="zf_redirect_url" />
                             <input type="hidden" name="zc_gad" />

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Caretojoinus.css";
-import right_image2 from "./images/right_image2.png";
 import bottom from "./images/bottom.png";
 import top from "./images/top.png";
 import image_back from "./images/image_back.png";
@@ -17,7 +16,7 @@ function Caretojoinus(pageDetail) {
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
-  });
+  }, []);
 
   const navigate = useNavigate();
   const topHandle = () => {

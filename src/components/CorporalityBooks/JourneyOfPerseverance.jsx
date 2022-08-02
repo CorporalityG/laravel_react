@@ -1,6 +1,6 @@
 import React from 'react'
 import './CorporalityBookSingle.css'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { BASE_URL } from '../../config';
 import Carousel from 'react-bootstrap/Carousel'
 
 function JourneyOfPerseverance() {

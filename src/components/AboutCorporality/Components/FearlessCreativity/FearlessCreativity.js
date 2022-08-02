@@ -9,7 +9,7 @@ function FearlessCreativity(pageDetail) {
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
-  });
+  }, []);
 
   return (
     <div className="container fearless_parent">

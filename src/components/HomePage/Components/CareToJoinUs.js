@@ -4,12 +4,11 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "./CareToJoinUs.css";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
 
 function CareToJoinUs(pageDetail) {
   useEffect(() => {
     Aos.init();
-  });
+  }, []);
 
   const navigate = useNavigate();
   const topHandle = () => {

@@ -433,10 +433,10 @@
     position: absolute;
     right: -69%;
     top: 100px;
-    rotate: 90deg;
+    transform: rotate(90deg);
 }
 .coo-expect-section .coo-es-items .coo-es-item.coo-es-item-right img {
-    rotate: -90deg;
+    transform: rotate(-90deg);
 }
 .coo-expect-section .coo-es-items .coo-es-item.coo-es-item-right .es-item-icon {
     border-color: #E5CC5C;
@@ -461,10 +461,10 @@
     position: absolute;
     left: -69%;
     top: 100px;
-    rotate: -90deg;
+    transform: rotate(-90deg);
 }
 .coo-expect-section .coo-es-items .coo-es-item.coo-es-item-left img {
-    rotate: 90deg;
+    transform: rotate(90deg);
 }
 .coo-expect-section .coo-es-items .coo-es-item.coo-es-item-left .es-item-icon {
     border-color: #A06DAF;

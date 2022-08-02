@@ -3,7 +3,6 @@ import aos from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import mainStrategy from "./images/firstMain.png";
 import backimgStrategy from "./images/firstBack.png";
 import wallStrategy from "./images/firstWall.png";
 import smallrectStrategy from "./images/firstSmallrect.png";

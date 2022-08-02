@@ -196,7 +196,7 @@ function Search() {
                                                             key={`${item.id}`}
                                                             thumbnail={item.image ? `${API_IMG_URL + item.image}` : `${BASE_URL}/img/logo.png`}
                                                             title={`${item.title}`}
-                                                            slug={`${prefixSlug}/${item.source != "" ? item.source + "/" : ""}${item.slug}`}
+                                                            slug={`${prefixSlug}/${item.source !== "" ? item.source + "/" : ""}${item.slug}`}
                                                             shortDescription={item.short_description ?? item.description}
                                                             category={
                                                                 item.categories ?
@@ -224,7 +224,7 @@ function Search() {
                                             searchResults && searchResults.length > 0 ?
                                                 <div className="search-filter-sort">
                                                     <span className="search-filter-sort-by-label">Sort By:</span>
-                                                    <div className={`search-filter-sort-type ${sortBy == "" || sortBy === 'most-relevant' ? 'sort-active' : ''}`} onClick={() => sortByFunc('most-relevant')}>Most Relevant</div> |
+                                                    <div className={`search-filter-sort-type ${sortBy === "" || sortBy === 'most-relevant' ? 'sort-active' : ''}`} onClick={() => sortByFunc('most-relevant')}>Most Relevant</div> |
                                                     <div className={`search-filter-sort-type ${sortBy === 'date' ? 'sort-active' : ''}`} onClick={() => sortByFunc('date')}>Date</div>
                                                 </div>
                                                 : null

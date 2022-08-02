@@ -1066,7 +1066,9 @@
     top: 60px;
     width: 100%;
 }
-
+.si-organize-section .si-o-content-section .si-o-content-right-col {
+    position: relative;
+}
 .si-organize-section .si-o-content-section .si-o-c-items {
     background-color: #fff;
     box-shadow: 0 .13rem .25rem 0 #ccc;

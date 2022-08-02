@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import '../DigitalSg/Digital.css'
 import aos from 'aos'
-import main2DigitalSg from '../DigitalSg/MainDigitalSg.png'
 import wall2DigitalSg from '../DigitalSg/WallDigitalSg.png'
 import small2DigitalSg from '../DigitalSg/smallrectDigitalSg.png'
 import side2DigitalSg from '../DigitalSg/GroupDigitalSg.png'

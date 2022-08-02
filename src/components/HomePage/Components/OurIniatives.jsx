@@ -1,5 +1,5 @@
 import React from 'react'
-import { BASE_URL, API_IMG_URL } from '../../../config';
+import { API_IMG_URL } from '../../../config';
 import "./OurIniatives.css"
 
 const OurIniatives = (pageDetail) => {

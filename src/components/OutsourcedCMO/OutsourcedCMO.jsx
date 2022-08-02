@@ -101,7 +101,7 @@ function OutsourcedCMO() {
                         </div>
 
                         <div className="cmo-lifecycle-section">
-                            <div className="container-lg">
+                            <div className="container-lg cmo-lc-title-container">
                                 <div className="row cmo-lc-title-row">
                                     <div className="col-lg-12">
                                         <div className="cmo-lc-title-content">
@@ -116,7 +116,7 @@ function OutsourcedCMO() {
                                 </div>
 
                                 <div className="row cmo-lc-steps-row">
-                                    <div className="col-lg-12">
+                                    <div className="col-lg-12 cmo-lc-steps-col">
                                         <div className="cmo-lc-steps-content">
                                             <img src={`${API_IMG_URL}pages/${pageDetail.detail.lifecycle_image}`} alt={`${pageDetail.detail.lifecycle_title}`} data-aos="zoom-in-up" className="cmo-lc-steps-banner" />
 

@@ -1,11 +1,9 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../../config';
 import { Link } from 'react-router-dom';
 
 function ClientItem(props) {
 
-    const navigate = useNavigate();
     const topHandler = () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;

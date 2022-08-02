@@ -136,7 +136,7 @@ function Pricing() {
                     <div className='pricing-banner-section'>
                         <img src={`${API_IMG_URL}pages/${pageDetail.detail.banner_image}`} alt={`${pageDetail.detail.banner_title}`} className="pricing-banner-img" />
 
-                        <div className='container-lg'>
+                        <div className='container-lg pricing-banner-container'>
                             <div className='row'>
                                 <div className='col-lg-12'>
                                     <div className='pricing-banner-title'>

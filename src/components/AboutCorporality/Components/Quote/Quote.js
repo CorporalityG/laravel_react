@@ -11,7 +11,7 @@ function Quote(pageDetail) {
   useEffect(() => {
     Aos.init();
     Aos.init({ disable: "mobile" });
-  });
+  }, []);
 
   return (
     <>

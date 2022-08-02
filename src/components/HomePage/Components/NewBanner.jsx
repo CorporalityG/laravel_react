@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { BASE_URL, API_IMG_URL } from '../../../config';
 import "./NewBanner.css"
 import Modal from 'react-bootstrap/Modal'
-import { Link } from "react-router-dom";
 
 const NewBanner = (pageDetail) => {
 
@@ -78,7 +77,7 @@ const NewBanner = (pageDetail) => {
                                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" data-aos="fade-up" data-aos-duration="2700" />
                                             </div>
 
-                                            <Modal show={show == 11 ? show : ''} onHide={handleClose} size="lg" centered>
+                                            <Modal show={show === 11 ? show : ''} onHide={handleClose} size="lg" centered>
                                                 <Modal.Header closeButton></Modal.Header>
                                                 <Modal.Body closeButton>
                                                     <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_1_youtube_iframe_1 }}></div>
@@ -98,7 +97,7 @@ const NewBanner = (pageDetail) => {
                                         {pageDetail.banner_1_video_thumbnail && <img src={`${API_IMG_URL}pages/${pageDetail.banner_1_video_thumbnail}`} alt="Video Thumbnail" />}
                                     </div>
 
-                                    <Modal show={show == 1 ? show : ''} onHide={handleClose} size="lg" centered>
+                                    <Modal show={show === 1 ? show : ''} onHide={handleClose} size="lg" centered>
                                         <Modal.Header closeButton></Modal.Header>
                                         <Modal.Body closeButton>
                                             <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_1_youtube_iframe_2 }}></div>
@@ -132,7 +131,7 @@ const NewBanner = (pageDetail) => {
                                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
                                             </div>
 
-                                            <Modal show={show == 21 ? show : ''} onHide={handleClose} size="lg" centered>
+                                            <Modal show={show === 21 ? show : ''} onHide={handleClose} size="lg" centered>
                                                 <Modal.Header closeButton></Modal.Header>
                                                 <Modal.Body closeButton>
                                                     <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_2_youtube_iframe_1 }}></div>
@@ -152,7 +151,7 @@ const NewBanner = (pageDetail) => {
                                         {pageDetail.banner_2_video_thumbnail && <img src={`${API_IMG_URL}pages/${pageDetail.banner_2_video_thumbnail}`} alt="Video Thumbnail" />}
                                     </div>
 
-                                    <Modal show={show == 2 ? show : ''} onHide={handleClose} size="lg" centered>
+                                    <Modal show={show === 2 ? show : ''} onHide={handleClose} size="lg" centered>
                                         <Modal.Header closeButton></Modal.Header>
                                         <Modal.Body closeButton>
                                             <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_2_youtube_iframe_2 }}></div>
@@ -185,7 +184,7 @@ const NewBanner = (pageDetail) => {
                                                 <img src={BASE_URL + '/img/HomePage/media/video-icon.png'} alt="video-icon" className="video-icon" />
                                             </div>
 
-                                            <Modal show={show == 31 ? show : ''} onHide={handleClose} size="lg" centered>
+                                            <Modal show={show === 31 ? show : ''} onHide={handleClose} size="lg" centered>
                                                 <Modal.Header closeButton></Modal.Header>
                                                 <Modal.Body closeButton>
                                                     <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_2_youtube_iframe_1 }}></div>
@@ -205,7 +204,7 @@ const NewBanner = (pageDetail) => {
                                         {pageDetail.banner_3_video_thumbnail && <img src={`${API_IMG_URL}pages/${pageDetail.banner_3_video_thumbnail}`} alt="Video Thumbnail" />}
                                     </div>
 
-                                    <Modal show={show == 3 ? show : ''} onHide={handleClose} size="lg" centered>
+                                    <Modal show={show === 3 ? show : ''} onHide={handleClose} size="lg" centered>
                                         <Modal.Header closeButton></Modal.Header>
                                         <Modal.Body closeButton>
                                             <div className="home_banner_modal" dangerouslySetInnerHTML={{ __html: pageDetail.banner_3_youtube_iframe_2 }}></div>

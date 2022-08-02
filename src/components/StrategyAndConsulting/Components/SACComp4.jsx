@@ -4,7 +4,6 @@ import arrow from "./images/arrow.png";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { API_IMG_URL } from '../../../config';
 
 export default function SACComp4(pageDetail) {
   useEffect(() => {
