@@ -4,7 +4,7 @@ import "./Blog.css"
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom'
 import InView from 'react-intersection-observer';
-import { CKEditor } from 'ckeditor4-react';
+// import { CKEditor } from 'ckeditor4-react';
 import { Context } from "../../context/Context";
 
 if(!localStorage.getItem('liked')){
@@ -147,18 +147,18 @@ const Blog = () => {
                     </div>
                     {updateMode ? (
 
-                        <CKEditor
-                            activeClass="editor singlearticleDescInput"
-                            onChange={e => setDesc(e.editor.getData())}
+                        //<CKEditor
+                            //activeClass="editor singlearticleDescInput"
+                            //onChange={e => setDesc(e.editor.getData())}
                             // content={desc}
                             // value={desc}
-                            initData={blog.description}
+                            //initData={blog.description}
+                        ///>
+                        <textarea
+                           className="singlearticleDescInput"
+                           value={desc}
+                           onChange={(e) => setDesc(e.target.value)}
                         />
-                        // <textarea
-                        //   className="singlearticleDescInput"
-                        //   value={desc}
-                        //   onChange={(e) => setDesc(e.target.value)}
-                        // />
                     ) : (
                         <InView onChange={setShare} ref={blogContent} className='blogContent' dangerouslySetInnerHTML={{ __html: blog.description }}></InView>
                         // <p className="singlearticleDesc">{desc}</p>

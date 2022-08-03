@@ -18,12 +18,16 @@
     margin-bottom: 1rem;
 }
 .services-quote-section .form-control {
-    padding: 20px 15px;
+    padding: 10px 15px;
     outline: 0;
     box-shadow: unset;
     border: 1px solid #e1e2e2;
     border-radius: 10px;
     font-size: 16px;
+}
+.services-quote-section .form-control:focus {
+    box-shadow: unset;
+    border-color: #e1e2e2;
 }
 .services-quote-section .quote-btn {
     background: linear-gradient(95.12deg, #4F8CAD 0%, #EED979 100%);

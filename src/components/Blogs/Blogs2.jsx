@@ -6,7 +6,6 @@ import { PopularVideoItem } from './PopularVideoItem'
 import { CovidItem } from './CovidItem'
 import { BlogItem } from './BlogItem'
 import { Helmet } from "react-helmet";
-import Moment from 'moment';
 import Carousel from 'react-bootstrap/Carousel'
 import { AnnouncementItem } from './AnnouncementItem';
 import { GetInvolved } from '../ServiceInsights/GetInvolved'

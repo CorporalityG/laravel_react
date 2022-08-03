@@ -119,7 +119,7 @@ function Careers() {
                   <Accordion className="cc-jobs-accordion-main">
                     {
                       jobsData.map((item, index) =>
-                        <Accordion.Item eventKey={`${index}`}>
+                        <Accordion.Item key={index} eventKey={`${index}`}>
                           <Accordion.Header>
                             <div className="cc-jobs-heading">
                               {item.icon && <img src={`${API_IMG_URL}/${item.icon}`} alt={`${item.title}`} className="cc-j-h-icon" />}
@@ -182,7 +182,7 @@ function Careers() {
                   <Carousel indicators={false} interval={null} prevIcon={<div className="career-t-arrow career-t-arrow-prev"><img src={`${BASE_URL}/img/Careers/prev-arrow.png`} alt="<" /></div>} nextIcon={<div className="career-t-arrow career-t-arrow-next"><img src={`${BASE_URL}/img/Careers/next-arrow.png`} alt=">" /></div>}>
                     {
                       testimonialsData.map((item, index) =>
-                        <Carousel.Item>
+                        <Carousel.Item key={index}>
                           <TestimonialItem
                             type={(index + 1) % 2 === 0 ? 'even' : 'odd'}
                             thumbnail={item.avtar && `${API_IMG_URL}/${item.avtar}`}

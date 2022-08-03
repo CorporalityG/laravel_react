@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { CKEditor } from 'ckeditor4-react';
+// import { CKEditor } from 'ckeditor4-react';
 import "./write.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -70,10 +70,10 @@ export default function Write() {
                     </div>
                 </div>
                 <div className="writeFormGroup">
-                    <CKEditor
+                    {/* <CKEditor
                         activeClass="editor writeInput writeText"
                         content={desc}
-                        onChange={e => setDesc(e.editor.getData())} />
+                        onChange={e => setDesc(e.editor.getData())} /> */}
                 </div>
                 <button type="submit" className="philosophySubmitButton d-flex align-items-center justify-content-center mt-3">
                     Submit

@@ -23,7 +23,7 @@ export const IdeationCreativity = (pageDetail) => {
                                         <div className='csuit-insights-subscribe-list'>
                                             {
                                                 pageDetail.apple_podcasts_link ?
-                                                    <a href={`${pageDetail.apple_podcasts_link ?? ''}`} target="_blank">
+                                                    <a href={`${pageDetail.apple_podcasts_link ?? ''}`} target="_blank" rel="noreferrer">
                                                         {pageDetail.apple_podcasts_image && <img src={`${API_IMG_URL}pages/${pageDetail.apple_podcasts_image}`} alt={`podcasts-apple`} />}
                                                     </a>
                                                     : null
@@ -31,7 +31,7 @@ export const IdeationCreativity = (pageDetail) => {
 
                                             {
                                                 pageDetail.spotify_link ?
-                                                    <a href={`${pageDetail.spotify_link ?? ''}`} target="_blank">
+                                                    <a href={`${pageDetail.spotify_link ?? ''}`} target="_blank" rel="noreferrer">
                                                         {pageDetail.spotify_image && <img src={`${API_IMG_URL}pages/${pageDetail.spotify_image}`} alt={`spotify`} />}
                                                     </a>
                                                     : null
@@ -39,7 +39,7 @@ export const IdeationCreativity = (pageDetail) => {
 
                                             {
                                                 pageDetail.google_podcasts_link ?
-                                                    <a href={`${pageDetail.google_podcasts_link ?? ''}`} target="_blank">
+                                                    <a href={`${pageDetail.google_podcasts_link ?? ''}`} target="_blank" rel="noreferrer">
                                                         {pageDetail.google_podcasts_image && <img src={`${API_IMG_URL}pages/${pageDetail.google_podcasts_image}`} alt={`google-podcasts`} />}
                                                     </a>
                                                     : null
@@ -47,7 +47,7 @@ export const IdeationCreativity = (pageDetail) => {
 
                                             {
                                                 pageDetail.youtube_link ?
-                                                    <a href={`${pageDetail.youtube_link ?? ''}`} target="_blank">
+                                                    <a href={`${pageDetail.youtube_link ?? ''}`} target="_blank" rel="noreferrer">
                                                         {pageDetail.youtube_image && <img src={`${API_IMG_URL}pages/${pageDetail.youtube_image}`} alt={`youtube`} />}
                                                     </a>
                                                     : null

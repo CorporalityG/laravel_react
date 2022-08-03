@@ -65,7 +65,7 @@ const NewBanner = (pageDetail) => {
                                             }
                                             <p className="bannerSubtitle" data-aos="fade-left" data-aos-duration="3000">{`${pageDetail.banner_1_description}`}</p>
                                             <div className="bannerBtn">
-                                                <a href={`${pageDetail.banner_1_btn_link}`} target="_blank">{`${pageDetail.banner_1_btn_text}`}</a>
+                                                <a href={`${pageDetail.banner_1_btn_link}`} target="_blank" rel="noreferrer">{`${pageDetail.banner_1_btn_text}`}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@ const NewBanner = (pageDetail) => {
                                             }
                                             <p className="bannerSubtitle">{`${pageDetail.banner_2_description}`}</p>
                                             <div className="bannerBtn">
-                                                <a href={`${pageDetail.banner_2_btn_link}`} target="_blank" className="learn-more">{`${pageDetail.banner_2_btn_text}`}</a>
+                                                <a href={`${pageDetail.banner_2_btn_link}`} target="_blank" rel="noreferrer" className="learn-more">{`${pageDetail.banner_2_btn_text}`}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@ const NewBanner = (pageDetail) => {
                                             }
                                             <p className="bannerSubtitle">{`${pageDetail.banner_3_description}`}</p>
                                             <div className="bannerBtn">
-                                                <a href={`${pageDetail.banner_3_btn_link}`} target="_blank" className="learn-more">{`${pageDetail.banner_3_btn_text}`}</a>
+                                                <a href={`${pageDetail.banner_3_btn_link}`} target="_blank" rel="noreferrer" className="learn-more">{`${pageDetail.banner_3_btn_text}`}</a>
                                             </div>
                                         </div>
                                     </div>

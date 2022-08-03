@@ -206,7 +206,7 @@ function CSuitCategory() {
 
                     <div className="cs-marketing-content">
                         <div className="cs-marketing-title">Do you want me to do your marketing for you?</div>
-                        <a className="cs-marketing-btn">Yes, I want</a>
+                        <div className="cs-marketing-btn">Yes, I want</div>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,6 @@ import Tab from 'react-bootstrap/Tab'
 // import TabContent from 'react-bootstrap/TabContent'
 // import TabPane from 'react-bootstrap/TabPane'
 import Nav from 'react-bootstrap/Nav'
-// import MetaTags from 'react-meta-tags';
 // import RelatedPost from './components/RelatedPost'
 import { Helmet } from "react-helmet";
 

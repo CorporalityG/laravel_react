@@ -72,7 +72,7 @@ function CxoStrategy() {
                         <p>{`${pageDetail.detail.banner_description}`}</p>
                       </div>
                       <div className="cxo-banner-btn" data-aos="fade-up" data-aos-delay="500">
-                        <a href={`${pageDetail.detail.banner_btn_link}`} target="_blank">{`${pageDetail.detail.banner_btn_text}`}</a>
+                        <a href={`${pageDetail.detail.banner_btn_link}`} target="_blank"  rel="noreferrer">{`${pageDetail.detail.banner_btn_text}`}</a>
                       </div>
                     </div>
                   </div>
@@ -93,12 +93,12 @@ function CxoStrategy() {
 
               <div className="cxo-social-section">
                 <div className="cxo-social-row" data-aos="fade-right" data-aos-delay="400">
-                  <a href='https://www.facebook.com/CorporalityG' target="_blank"><i className="fa fa-facebook-f"></i></a>
-                  <a href='https://twitter.com/corporalityg' target="_blank"><i className="fa fa-twitter"></i></a>
-                  <a href='https://www.instagram.com/corporalityg/' target="_blank"><i className="fa fa-instagram"></i></a>
-                  <a href='https://www.linkedin.com/company/corporality/' target="_blank"><i className="fa fa-linkedin"></i></a>
-                  <a href='https://in.pinterest.com/CorporalityG/' target="_blank"><i className="fa fa-pinterest"></i></a>
-                  <a href='https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg' target="_blank"><i className="fa fa-youtube-play"></i></a>
+                  <a href='https://www.facebook.com/CorporalityG' target="_blank" rel="noreferrer"><i className="fa fa-facebook-f"></i></a>
+                  <a href='https://twitter.com/corporalityg' target="_blank" rel="noreferrer"><i className="fa fa-twitter"></i></a>
+                  <a href='https://www.instagram.com/corporalityg/' target="_blank" rel="noreferrer"><i className="fa fa-instagram"></i></a>
+                  <a href='https://www.linkedin.com/company/corporality/' target="_blank" rel="noreferrer"><i className="fa fa-linkedin"></i></a>
+                  <a href='https://in.pinterest.com/CorporalityG/' target="_blank" rel="noreferrer"><i className="fa fa-pinterest"></i></a>
+                  <a href='https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg' target="_blank" rel="noreferrer"><i className="fa fa-youtube-play"></i></a>
                 </div>
               </div>
             </div>

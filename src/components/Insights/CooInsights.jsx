@@ -9,7 +9,7 @@ import { CSuitAllItem } from './CSuitAllItem'
 import { GetInvolved } from '../ServiceInsights/GetInvolved'
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import AOS from "aos";
-import { useParams, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { EditPickItem } from './EditPickItem'
 import ServicesClients from '../ServicesClients/ServicesClients'
 import { IdeationCreativity } from './IdeationCreativity'
@@ -18,7 +18,6 @@ import { ServiceInsights } from './ServiceInsights'
 
 function CooInsights() {
 
-    const params = useParams();
     const subCategory = 'coo';
 
     const page_slug = subCategory + '-insights';
@@ -40,7 +39,7 @@ function CooInsights() {
         getEditPickCSuits()
         getCsuitBlogs()
         getPageDetail()
-    }, [params]);
+    }, []);
 
     async function getLatestCSuits() {
         let result = await fetch(`${API_BASE_URL}/csuits/${subCategory}`);

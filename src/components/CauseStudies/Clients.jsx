@@ -14,7 +14,7 @@ function Clients() {
     useEffect(() => {
         getPageDetail()
         getClientsData()
-    });
+    }, []);
 
     async function getPageDetail() {
         let result = await fetch(`${API_BASE_URL}/page-detail/${page_slug}`);
