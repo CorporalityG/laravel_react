@@ -19,8 +19,10 @@ export default function Banner2(pageDetail) {
                   <p className="text-wrap text-center mt-2">
                     {`${pageDetail.box_1_description}`}
                   </p>
-                  <Link to={`${pageDetail.box_1_btn_link}`} className="learn-more">{`${pageDetail.box_1_btn_text}`}
-                    <img src={BASE_URL + '/img/HomePage/media/right-arrow.png'} alt="Arrow" />
+                  <Link to={`${pageDetail.box_1_btn_link}`} className="learn-more">
+                    <span className="learn-more-text">{`${pageDetail.box_1_btn_text}`}
+                      <span className="learn-more-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow.png)" }}></span>
+                    </span>
                   </Link>
                 </div>
                 <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
@@ -31,18 +33,10 @@ export default function Banner2(pageDetail) {
                 </div>
                 <div className="box position-relative">
                   <div className="position-absolute start-50 top-0 translate-middle-x my-4">
-                    <img
-                      src={BASE_URL + '/img/HomePage/media/polygon-23.png'}
-                      alt="polygon"
-                      className="img-fluid dd1"
-                    />
+                    <div className="dd1 ddy" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-23.png)" }}></div>
                   </div>
                   <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
-                    <img
-                      src={BASE_URL + '/img/HomePage/media/polygon-24.png'}
-                      alt="polygon"
-                      className="img-fluid dd1"
-                    />
+                    <div className="dd1 ddb" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-24.png)" }}></div>
                   </div>
                 </div>
               </div>
@@ -56,8 +50,9 @@ export default function Banner2(pageDetail) {
                     {`${pageDetail.box_2_description}`}
                   </p>
                   <Link to={`${pageDetail.box_2_btn_link}`} className="learn-more">
-                    {`${pageDetail.box_2_btn_text}`}
-                    <img src={BASE_URL + '/img/HomePage/media/right-arrow.png'} alt="Arrow" />
+                    <span className="learn-more-text">{`${pageDetail.box_2_btn_text}`}
+                      <span className="learn-more-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow.png)" }}></span>
+                    </span>
                   </Link>
                 </div>
                 <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
@@ -72,18 +67,10 @@ export default function Banner2(pageDetail) {
                 </div>
                 <div className="box">
                   <div className="position-absolute start-50 top-0 translate-middle-x my-4">
-                    <img
-                      src={BASE_URL + '/img/HomePage/media/polygon-23.png'}
-                      alt="polygon"
-                      className="img-fluid dd1"
-                    />
+                    <div className="dd1 ddy" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-23.png)" }}></div>
                   </div>
                   <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
-                    <img
-                      src={BASE_URL + '/img/HomePage/media/polygon-24.png'}
-                      alt="polygon"
-                      className="img-fluid dd1"
-                    />
+                    <div className="dd1 ddb" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-24.png)" }}></div>
                   </div>
                 </div>
               </div>
@@ -94,8 +81,10 @@ export default function Banner2(pageDetail) {
                   <p className="text-wrap text-center mt-2">
                     {`${pageDetail.box_3_description}`}
                   </p>
-                  <Link to={`${pageDetail.box_3_btn_link}`} className="learn-more">{`${pageDetail.box_3_btn_text}`}
-                    <img src={BASE_URL + '/img/HomePage/media/right-arrow.png'} alt="Arrow" />
+                  <Link to={`${pageDetail.box_3_btn_link}`} className="learn-more">
+                    <span className="learn-more-text">{`${pageDetail.box_3_btn_text}`}
+                      <span className="learn-more-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow.png)" }}></span>
+                    </span>
                   </Link>
                 </div>
                 <div className="littleD align-items-center position-absolute top-0 start-50 translate-middle-x">
@@ -106,18 +95,10 @@ export default function Banner2(pageDetail) {
                 </div>
                 <div className="box">
                   <div className="position-absolute start-50 top-0 translate-middle-x my-4">
-                    <img
-                      src={BASE_URL + '/img/HomePage/media/polygon-23.png'}
-                      alt="polygon"
-                      className="img-fluid dd1"
-                    />
+                    <div className="dd1 ddy" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-23.png)" }}></div>
                   </div>
                   <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
-                    <img
-                      src={BASE_URL + '/img/HomePage/media/polygon-24.png'}
-                      alt="polygon"
-                      className="img-fluid dd1"
-                    />
+                    <div className="dd1 ddb" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-24.png)" }}></div>
                   </div>
                 </div>
               </div>

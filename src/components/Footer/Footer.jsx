@@ -15,8 +15,6 @@ export default function Footer() {
 
   return (
     <>
-      {/* footer */}
-
       <div className=" footerContainer">
         <div className="container">
           <div className="row footerRow">
@@ -164,24 +162,19 @@ export default function Footer() {
 
             {/* col-5 */}
             <div className="arrow-icon-container">
-              <div onClick={topHandle} className="arrow-icon-wrapper d-flex justify-content-center align-items-center">
-                <img src={upArrow} alt="Up" />
-              </div>
+              <div onClick={topHandle} className="arrow-icon-wrapper d-flex1 justify-content-center1 align-items-center1" style={{ backgroundImage: "url(" + upArrow + ")" }}></div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* <hr ></hr> */}
-
-      {/* 2nd last lower section with 3 links */}
       <div className="footerContainer">
         <div className="row1">
           <Link to="/privacy-policy" onClick={() => { topHandle() }} className="footer-text">Privacy Policy</Link>
           <Link to="/terms-and-conditions" onClick={() => { topHandle() }} className="footer-text">Terms and Conditions</Link>
           <Link to="/sitemap" onClick={() => { topHandle() }} className="footer-text">Sitemap</Link>
         </div>
-        <div className="row2">Copyright © 2014–2022, The Corporaltiy Global</div>
+        <div className="row2">Copyright © 2014-2022, The Corporaltiy Global</div>
       </div>
     </>
   );

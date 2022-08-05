@@ -3454,9 +3454,9 @@
     "lodash.uniq" "^4.5.0"
 
 "caniuse-lite@^1.0.0", "caniuse-lite@^1.0.30001272", "caniuse-lite@^1.0.30001286", "caniuse-lite@^1.0.30001287":
-  "integrity" "sha512-4udbs9bc0hfNrcje++AxBuc6PfLNHwh3PO9kbwnfCQWyqtlzg3py0YgFu8jyRTTo85VAz4U+VLxSlID09vNtWA=="
-  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001287.tgz"
-  "version" "1.0.30001287"
+  "integrity" "sha512-mWvzatRx3w+j5wx/mpFN5v5twlPrabG8NqX2c6e45LCpymdoGqNvRkRutFUqpRTXKFQFNQJasvK0YT7suW6/Hw=="
+  "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001374.tgz"
+  "version" "1.0.30001374"
 
 "case-sensitive-paths-webpack-plugin@^2.4.0":
   "integrity" "sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw=="
@@ -8597,13 +8597,13 @@
     "warning" "^4.0.0"
 
 "prop-types@^15.5.4", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
-  "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
-  "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
-  "version" "15.7.2"
+  "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
+  "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
+  "version" "15.8.1"
   dependencies:
     "loose-envify" "^1.4.0"
     "object-assign" "^4.1.1"
-    "react-is" "^16.8.1"
+    "react-is" "^16.13.1"
 
 "proxy-addr@~2.0.7":
   "integrity" "sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg=="
@@ -8831,7 +8831,7 @@
   "resolved" "https://registry.npmjs.org/react-intersection-observer/-/react-intersection-observer-8.33.1.tgz"
   "version" "8.33.1"
 
-"react-is@^16.13.1", "react-is@^16.3.2", "react-is@^16.6.0", "react-is@^16.8.1":
+"react-is@^16.13.1", "react-is@^16.3.2", "react-is@^16.6.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"

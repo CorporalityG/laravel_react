@@ -93,29 +93,20 @@
   margin-right: 10px;
 }
 .bannerContainer .activeIndicatorCircle {
-  /*width: 14px !important;
-  height: 14px !important;*/
   background-color: #6EA0BD;
   border-color: #6EA0BD;
 }
 
 .bannerContainer .rightPartBanner {
-  /*-webkit-box-flex: 87%;
-  -ms-flex: 87%;
-  flex: 87%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 0px 7% 3% 0px !important;
-  overflow: hidden !important;*/
   position: absolute;
   right: 0;
   bottom: 0;
   cursor: pointer;
+  width: 272px;
+  height: 167px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .bannerContainer .bannerText {
@@ -197,7 +188,6 @@
   -ms-flex-direction: row;
   flex-direction: row;
   margin-top: auto;
-  /* min-width: 40%; */
   -ms-flex-item-align: end;
   align-self: flex-end;
   position: absolute;
@@ -207,6 +197,11 @@
 }
 .bannerContainer .bannerSocialLinksContainer .bannerSocialImg {
   margin-right: 10px;
+  height: 200px;
+  width: 55px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .bannerContainer .bannerSocialLinksContainer .bannerSocialImg img {
   max-height: 200px;
@@ -461,6 +456,11 @@
   position: absolute;
   max-height: 750px;
   right: 0;
+  height: 750px;
+  width: 100%;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .bannerContainer .mainBannerImg {
   position: relative;
@@ -477,6 +477,11 @@
 .bannerContainer .mainBannerImg .banner-image {
   z-index: 9;
   max-height: 420px;
+  height: 420px;
+  width: 420px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .bannerContainer .mainBannerImg .video-icon {
   position: absolute;
@@ -484,30 +489,44 @@
   top: 230px;
   left: 25px;
   cursor: pointer;
+  width: 100px;
+  height: 100px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .bannerContainer .bannerImgs {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.bannerContainer .bannerImgs img {
-  position: relative;
+.bannerContainer .bannerImgs img, 
+.bannerContainer .bannerImgs .bannerImgsRectangle {
+  position: absolute;
 }
 .bannerContainer .bannerImgs .rectangle-1 {
   top: 25%;
   left: 10%;
+  width: 78px;
+  height: 78px;
 }
 .bannerContainer .bannerImgs .rectangle-2 {
   top: 25%;
   left: 35%;
+  width: 29px;
+  height: 29px;
 }
 .bannerContainer .bannerImgs .rectangle-3 {
   top: 10%;
   left: 43%;
+  width: 50px;
+  height: 50px;
 }
 .bannerContainer .bannerImgs .rectangle-4 {
   top: 120%;
   left: 35%;
+  width: 36px;
+  height: 36px;
 }
 .bannerContainer .bannerImgs .banner-image-1 {
   top: 100%;

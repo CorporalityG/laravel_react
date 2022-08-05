@@ -63,26 +63,51 @@
   top: 60px;
   left: 0;
   z-index: 2;
+  width: 210px;
+  height: 220px;
+  background-position: left;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 .bottom-rectangle {
   position: absolute;
   bottom: 0;
   left: 30%;
+  width: 114px;
+  height: 71px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .center-rectangle {
   position: absolute;
   top: 60%;
   left: 50%;
+  width: 98px;
+  height: 97px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .middle-rectangle {
   position: absolute;
   top: 30px;
   right: -20px;
+  width: 70px;
+  height: 70px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .top-rectangle {
   position: absolute;
   top: 0;
   left: 55%;
+  width: 160px;
+  height: 120px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .caretojoinus-image {
   position: relative;
@@ -104,6 +129,11 @@
   top: 0;
   right: 0;
   z-index: -1;
+  width: 351px;
+  height: 352px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 @media only screen and (max-width: 1180px) {

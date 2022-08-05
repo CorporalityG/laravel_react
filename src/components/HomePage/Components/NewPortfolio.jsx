@@ -61,17 +61,22 @@ const NewPortfolio = () => {
                                                         <p>{`${pageSectionDetail.detail.client_1_subtitle ?? ''}`}</p>
                                                     </div>
                                                     <div className="portfolio-boxes">
-                                                        <div className="portfolio-box portfolio-box-studies" style={{ backgroundImage: "url(" + API_IMG_URL + "pages/" + pageSectionDetail.detail.client_1_studies_image }}>
+                                                        <div className="portfolio-box portfolio-box-studies" style={{ backgroundImage: "url(" + API_IMG_URL + "pages/" + pageSectionDetail.detail.client_1_studies_image + ")" }}>
                                                             <p className="studies-subtitle">{`${pageSectionDetail.detail.client_1_studies_title}`}</p>
                                                             <p className="studies-title">{`${pageSectionDetail.detail.client_1_studies_subtitle}`}</p>
-                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_1_studies_btn_link}`); topHandle(); }}>{`${pageSectionDetail.detail.client_1_studies_btn_text}`} <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
+                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_1_studies_btn_link}`); topHandle(); }}>
+                                                                {`${pageSectionDetail.detail.client_1_studies_btn_text}`} <span className="portfolio-link-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow-blue.png)" }}></span>
+                                                            </span>
                                                         </div>
                                                         <div className="portfolio-box portfolio-box-steps">
                                                             <p className="steps-title">{`${pageSectionDetail.detail.client_1_offering_title}`}</p>
                                                             <div className="steps-content">
                                                                 <p>{`${pageSectionDetail.detail.client_1_offering_description}`}</p>
                                                             </div>
-                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_1_offering_btn_link}`); topHandle(); }}>{`${pageSectionDetail.detail.client_1_offering_btn_text}`} <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
+                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_1_offering_btn_link}`); topHandle(); }}>
+                                                                {`${pageSectionDetail.detail.client_1_offering_btn_text}`}
+                                                                <span className="portfolio-link-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow-blue.png)" }}></span>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -94,17 +99,21 @@ const NewPortfolio = () => {
                                                         <p>{`${pageSectionDetail.detail.client_2_subtitle ?? ''}`}</p>
                                                     </div>
                                                     <div className="portfolio-boxes">
-                                                        <div className="portfolio-box portfolio-box-studies" style={{ backgroundImage: "url(" + API_IMG_URL + "pages/" + pageSectionDetail.detail.client_2_studies_image }}>
+                                                        <div className="portfolio-box portfolio-box-studies" style={{ backgroundImage: "url(" + API_IMG_URL + "pages/" + pageSectionDetail.detail.client_2_studies_image + ")" }}>
                                                             <p className="studies-subtitle">{`${pageSectionDetail.detail.client_2_studies_title}`}</p>
                                                             <p className="studies-title">{`${pageSectionDetail.detail.client_2_studies_subtitle}`}</p>
-                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_2_studies_btn_link}`); topHandle(); }}>{`${pageSectionDetail.detail.client_2_studies_btn_text}`} <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
+                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_2_studies_btn_link}`); topHandle(); }}>
+                                                                {`${pageSectionDetail.detail.client_2_studies_btn_text}`} <span className="portfolio-link-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow-blue.png)" }}></span>
+                                                            </span>
                                                         </div>
                                                         <div className="portfolio-box portfolio-box-steps">
                                                             <p className="steps-title">{`${pageSectionDetail.detail.client_2_offering_title}`}</p>
                                                             <div className="steps-content">
                                                                 <p>{`${pageSectionDetail.detail.client_2_offering_description}`}</p>
                                                             </div>
-                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_2_offering_btn_link}`); topHandle(); }}>{`${pageSectionDetail.detail.client_2_offering_btn_text}`} <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
+                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_2_offering_btn_link}`); topHandle(); }}>
+                                                                {`${pageSectionDetail.detail.client_2_offering_btn_text}`} <span className="portfolio-link-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow-blue.png)" }}></span>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -127,17 +136,21 @@ const NewPortfolio = () => {
                                                         <p>{`${pageSectionDetail.detail.client_3_subtitle ?? ''}`}</p>
                                                     </div>
                                                     <div className="portfolio-boxes">
-                                                        <div className="portfolio-box portfolio-box-studies" style={{ backgroundImage: "url(" + API_IMG_URL + "pages/" + pageSectionDetail.detail.client_3_studies_image }}>
+                                                        <div className="portfolio-box portfolio-box-studies" style={{ backgroundImage: "url(" + API_IMG_URL + "pages/" + pageSectionDetail.detail.client_3_studies_image + ")" }}>
                                                             <p className="studies-subtitle">{`${pageSectionDetail.detail.client_3_studies_title}`}</p>
                                                             <p className="studies-title">{`${pageSectionDetail.detail.client_3_studies_subtitle}`}</p>
-                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_3_studies_btn_link}`); topHandle(); }}>{`${pageSectionDetail.detail.client_3_studies_btn_text}`} <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
+                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_3_studies_btn_link}`); topHandle(); }}>
+                                                                {`${pageSectionDetail.detail.client_3_studies_btn_text}`} <span className="portfolio-link-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow-blue.png)" }}></span>
+                                                            </span>
                                                         </div>
                                                         <div className="portfolio-box portfolio-box-steps">
                                                             <p className="steps-title">{`${pageSectionDetail.detail.client_3_offering_title}`}</p>
                                                             <div className="steps-content">
                                                                 <p>{`${pageSectionDetail.detail.client_3_offering_description}`}</p>
                                                             </div>
-                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_3_offering_btn_link}`); topHandle(); }}>{`${pageSectionDetail.detail.client_3_offering_btn_text}`} <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
+                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_3_offering_btn_link}`); topHandle(); }}>
+                                                                {`${pageSectionDetail.detail.client_3_offering_btn_text}`} <span className="portfolio-link-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow-blue.png)" }}></span>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -160,17 +173,21 @@ const NewPortfolio = () => {
                                                         <p>{`${pageSectionDetail.detail.client_4_subtitle ?? ''}`}</p>
                                                     </div>
                                                     <div className="portfolio-boxes">
-                                                        <div className="portfolio-box portfolio-box-studies" style={{ backgroundImage: "url(" + API_IMG_URL + "pages/" + pageSectionDetail.detail.client_4_studies_image }}>
+                                                        <div className="portfolio-box portfolio-box-studies" style={{ backgroundImage: "url(" + API_IMG_URL + "pages/" + pageSectionDetail.detail.client_4_studies_image + ")" }}>
                                                             <p className="studies-subtitle">{`${pageSectionDetail.detail.client_4_studies_title}`}</p>
                                                             <p className="studies-title">{`${pageSectionDetail.detail.client_4_studies_subtitle}`}</p>
-                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_4_studies_btn_link}`); topHandle(); }}>{`${pageSectionDetail.detail.client_4_studies_btn_text}`} <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
+                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_4_studies_btn_link}`); topHandle(); }}>
+                                                                {`${pageSectionDetail.detail.client_4_studies_btn_text}`} <span className="portfolio-link-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow-blue.png)" }}></span>
+                                                            </span>
                                                         </div>
                                                         <div className="portfolio-box portfolio-box-steps">
                                                             <p className="steps-title">{`${pageSectionDetail.detail.client_4_offering_title}`}</p>
                                                             <div className="steps-content">
                                                                 <p>{`${pageSectionDetail.detail.client_4_offering_description}`}</p>
                                                             </div>
-                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_4_offering_btn_link}`); topHandle(); }}>{`${pageSectionDetail.detail.client_4_offering_btn_text}`} <img src={BASE_URL + '/img/HomePage/media/right-arrow-blue.png'} alt="Arrow" /></span>
+                                                            <span className="portfolio-link" onClick={() => { navigate(`/client/${pageSectionDetail.detail.client_4_offering_btn_link}`); topHandle(); }}>
+                                                                {`${pageSectionDetail.detail.client_4_offering_btn_text}`} <span className="portfolio-link-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow-blue.png)" }}></span>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -89,6 +89,14 @@
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+.dbanner .ddy {
+  width: 24px;
+  height: 24px;
+}
+.dbanner .ddb {
+  width: 15px;
+  height: 15px;
+}
 
 .dbanner .componentText {
   color: #33657e;
@@ -131,6 +139,16 @@
   padding: 0px 10px !important;
   -webkit-animation: arrowSidewise 1s linear infinite;
           animation: arrowSidewise 1s linear infinite;
+}
+.dbanner .learn-more .learn-more-text {
+  display: flex;
+}
+.dbanner .learn-more .learn-more-arrow {
+  padding: 0px 12px;
+  -webkit-animation: arrowSidewise 1s linear infinite;
+          animation: arrowSidewise 1s linear infinite;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @-webkit-keyframes arrowSidewise {

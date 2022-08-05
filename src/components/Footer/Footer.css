@@ -687,8 +687,10 @@
   cursor: pointer;
   position: absolute;
   right: 0px;
-  -webkit-animation: upDownArrow 1s infinite !important;
-  animation: upDownArrow 1s infinite !important;
+  -webkit-animation: upDownArrow 1s infinite;
+  animation: upDownArrow 1s infinite;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @-webkit-keyframes upDownArrow {

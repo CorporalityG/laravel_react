@@ -282,10 +282,20 @@
   font-size: 16px;
   color: #33657E;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 .portfolio-container .portfolio-right .portfolio-link > img {
   padding-left: 5px;
   animation: arrowSidewise 1s linear infinite;
+}
+.portfolio-container .portfolio-right .portfolio-link .portfolio-link-arrow {
+  margin-left: 5px;
+  animation: arrowSidewise 1s linear infinite;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 8px;
+  width: 8px;
 }
 .portfolio-container .portfolio-right .portfolio-box-steps {
   background-color: #FFF;

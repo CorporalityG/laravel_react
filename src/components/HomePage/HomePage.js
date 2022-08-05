@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import Services from "./Components/Services";
 import EmotionalQuest from "./Components/EmotionalQuest";
 import LatestInsights from "./Components/LatestInsights";
-import NewBanner from "./Components/NewBanner.jsx";
-import Banner2 from "./Components/Banner2.jsx";
+import NewBanner from "./Components/NewBanner";
+import Banner2 from "./Components/Banner2";
 import NewPortfolio from "./Components/NewPortfolio";
 import CareToJoinUs from "./Components/CareToJoinUs";
-import OurIniatives from "./Components/OurIniatives.jsx";
+import OurIniatives from "./Components/OurIniatives";
 import AOS from "aos";
 import { Helmet } from "react-helmet";
 import { API_BASE_URL } from '../../config'
