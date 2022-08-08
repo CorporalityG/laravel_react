@@ -88,6 +88,18 @@ function UpcomingEvent() {
                                             name={pageDetail.detail.event_1_speaker_5_name}
                                             designation={pageDetail.detail.event_1_speaker_5_designation}
                                         />
+
+                                        <SpeakerItem
+                                            avatar={pageDetail.detail.event_1_speaker_6_image ? `${API_IMG_URL}pages/${pageDetail.detail.event_1_speaker_6_image}` : ''}
+                                            name={pageDetail.detail.event_1_speaker_6_name}
+                                            designation={pageDetail.detail.event_1_speaker_6_designation}
+                                        />
+
+                                        <SpeakerItem
+                                            avatar={pageDetail.detail.event_1_speaker_7_image ? `${API_IMG_URL}pages/${pageDetail.detail.event_1_speaker_7_image}` : ''}
+                                            name={pageDetail.detail.event_1_speaker_7_name}
+                                            designation={pageDetail.detail.event_1_speaker_7_designation}
+                                        />
                                     </div>
 
                                     <div className='uce-main uce-next-main'>

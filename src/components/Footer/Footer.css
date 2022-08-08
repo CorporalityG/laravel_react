@@ -627,9 +627,13 @@
   line-height: 22px;
   color: #33657e;
   cursor: pointer;
-  padding: 5px 0px !important;
-  min-width: 250px !important;
-  margin: 0px 0px !important;
+  padding: 5px 0px 5px 20px;
+  min-width: 250px;
+  margin: 0;
+  background-image: url('./img/polygon.png');
+  background-repeat: no-repeat;
+  background-size: unset;
+  background-position: left center;
 }
 
 .footerContainer .text-links:hover {
@@ -691,6 +695,7 @@
   animation: upDownArrow 1s infinite;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url('./img/upArrow.png');
 }
 
 @-webkit-keyframes upDownArrow {

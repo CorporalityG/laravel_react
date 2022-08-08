@@ -1,13 +1,10 @@
 import React from "react";
 import "./Footer.css";
-import upArrow from "./img/upArrow.png";
-import polygon from "./img/polygon.png";
 import logo from "./img/logo.png";
-import { useNavigate } from "react-router";
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const navigate = useNavigate();
+
   const topHandle = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -82,87 +79,39 @@ export default function Footer() {
             <div className="column2">
               <h1 className="footer-heading">Who we are</h1>
               <hr className="line-below-footer-heading" />
-              <p className="text-links" onClick={() => { navigate("/about-corporality"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                About Corporality
-              </p>
-              <p className="text-links" onClick={() => { navigate("/work-with-clients"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                How We Work with Clients
-              </p>
-              <p className="text-links" onClick={() => { navigate("/inclusion-and-diversity"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                Inclusion and Diversity
-              </p>
-              <p className="text-links" onClick={() => { navigate("/partnership-programmes"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                Partnership Programmes
-              </p>
-              <p className="text-links" onClick={() => { navigate("/sustainable-growth"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                Sustainable Growth
-              </p>
+              <Link to="/about-corporality" onClick={() => { topHandle() }} className="text-links">About Corporality</Link>
+              <Link to="/work-with-clients" onClick={() => { topHandle() }} className="text-links">How We Work with Clients</Link>
+              <Link to="/inclusion-and-diversity" onClick={() => { topHandle() }} className="text-links">Inclusion and Diversity</Link>
+              <Link to="/partnership-programmes" onClick={() => { topHandle() }} className="text-links">Partnership Programmes</Link>
+              <Link to="/sustainable-growth" onClick={() => { topHandle() }} className="text-links">Sustainable Growth</Link>
             </div>
 
             {/* col-3 */}
             <div className="column3">
               <h1 className="footer-heading">Our Service</h1>
               <hr size="5" className="line-below-footer-heading" />
-              <p className="text-links" onClick={() => { navigate("/goto-market-strategy"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                Go-to-Marketing
-              </p>
-              <p className="text-links" onClick={() => { navigate("/digital-media-marketing"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                Digital Media Marketing
-              </p>
-              <p className="text-links" onClick={() => { navigate("/strategic-consultancy"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                Strategic Consulting
-              </p>
-              <p className="text-links" onClick={() => { navigate("/corporate-strategy"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                Corporate Level Strategy
-              </p>
-              <p className="text-links" onClick={() => { navigate("/sustainable-growth"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                Product Strategy
-              </p>
-              <p className="text-links" onClick={() => { navigate("/brand-positioning"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                Brand Positioning
-              </p>
-              <p className="text-links" onClick={() => { navigate("/cxo-strategy"); topHandle(); }}>
-                <img className="poligon-image" src={polygon} alt="*" />
-                Outsourced CXO
-              </p>
+              <Link to="/goto-market-strategy" onClick={() => { topHandle() }} className="text-links">Go-to-Marketing</Link>
+              <Link to="/digital-media-marketing" onClick={() => { topHandle() }} className="text-links">Digital Media Marketing</Link>
+              <Link to="/strategic-consultancy" onClick={() => { topHandle() }} className="text-links">Strategic Consulting</Link>
+              <Link to="/corporate-strategy" onClick={() => { topHandle() }} className="text-links">Corporate Level Strategy</Link>
+              <Link to="/sustainable-growth" onClick={() => { topHandle() }} className="text-links">Product Strategy</Link>
+              <Link to="/brand-positioning" onClick={() => { topHandle() }} className="text-links">Brand Positioning</Link>
+              <Link to="/cxo-strategy" onClick={() => { topHandle() }} className="text-links">Outsourced CXO</Link>
             </div>
 
             {/* col-4 */}
             <div className="column4">
               <h1 className="footer-heading">Insights</h1>
               <hr size="5" className="line-below-footer-heading" />
-              <Link to="/about-corporality" onClick={() => { topHandle() }} className="text-links">
-                <img className="poligon-image" src={polygon} alt="*" />
-                Corporality Citizenship
-              </Link>
-              <Link to="/our-team" onClick={() => { topHandle() }} className="text-links">
-                <img className="poligon-image" src={polygon} alt="*" />
-                Our Team
-              </Link>
-              <Link to="/careers" onClick={() => { topHandle() }} className="text-links">
-                <img className="poligon-image" src={polygon} alt="*" />
-                Careers
-              </Link>
-              <Link to="/blog" onClick={() => { topHandle() }} className="text-links">
-                <img className="poligon-image" src={polygon} alt="*" />
-                Insights
-              </Link>
+              <Link to="/about-corporality" onClick={() => { topHandle() }} className="text-links">Corporality Citizenship</Link>
+              <Link to="/our-team" onClick={() => { topHandle() }} className="text-links">Our Team</Link>
+              <Link to="/careers" onClick={() => { topHandle() }} className="text-links">Careers</Link>
+              <Link to="/blog" onClick={() => { topHandle() }} className="text-links">Insights</Link>
             </div>
 
             {/* col-5 */}
             <div className="arrow-icon-container">
-              <div onClick={topHandle} className="arrow-icon-wrapper d-flex1 justify-content-center1 align-items-center1" style={{ backgroundImage: "url(" + upArrow + ")" }}></div>
+              <div onClick={topHandle} className="arrow-icon-wrapper"></div>
             </div>
           </div>
         </div>

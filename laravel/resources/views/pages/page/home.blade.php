@@ -1716,6 +1716,95 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="col-md-12">
+						<hr>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-12">
+							<h6 class="text-bold">Speaker 6 Detail</h6>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_6_name">{{ __('Name') }}</label>
+								<input type="text" name="event_1_speaker_6_name" id="event_1_speaker_6_name" value="{{ old('event_1_speaker_6_name', $RS_Meta['event_1_speaker_6_name'] ?? '') }}" class="form-control" placeholder="{{ __('Name') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_6_designation">{{ __('Designation') }}</label>
+								<input type="text" name="event_1_speaker_6_designation" id="event_1_speaker_6_designation" value="{{ old('event_1_speaker_6_designation', $RS_Meta['event_1_speaker_6_designation'] ?? '') }}" class="form-control" placeholder="{{ __('Designation') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_6_image">{{ __('Image') }}</label>
+								<div class="input-group{{ $errors->has('event_1_speaker_6_image') ? ' is-invalid' : '' }}">
+									<div class="custom-file">
+										<input type="file" name="event_1_speaker_6_image" id="event_1_speaker_6_image" value="{{ old('event_1_speaker_6_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+										<label class="custom-file-label" for="event_1_speaker_6_image">Choose image</label>
+									</div>
+								</div>
+
+								@if( !empty($RS_Meta['event_1_speaker_6_image']) )
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['event_1_speaker_6_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="event_1_speaker_6_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
+								@endif
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+						<hr>
+					</div>
+
+					<div class="col-md-12">
+						<div class="col-md-12">
+							<h6 class="text-bold">Speaker 7 Detail</h6>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_7_name">{{ __('Name') }}</label>
+								<input type="text" name="event_1_speaker_7_name" id="event_1_speaker_7_name" value="{{ old('event_1_speaker_7_name', $RS_Meta['event_1_speaker_7_name'] ?? '') }}" class="form-control" placeholder="{{ __('Name') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_7_designation">{{ __('Designation') }}</label>
+								<input type="text" name="event_1_speaker_7_designation" id="event_1_speaker_7_designation" value="{{ old('event_1_speaker_7_designation', $RS_Meta['event_1_speaker_7_designation'] ?? '') }}" class="form-control" placeholder="{{ __('Designation') }}">
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="event_1_speaker_7_image">{{ __('Image') }}</label>
+								<div class="input-group{{ $errors->has('event_1_speaker_7_image') ? ' is-invalid' : '' }}">
+									<div class="custom-file">
+										<input type="file" name="event_1_speaker_7_image" id="event_1_speaker_7_image" value="{{ old('event_1_speaker_7_image') }}" class="custom-file-input" placeholder="Choose image" accept="image/*">
+										<label class="custom-file-label" for="event_1_speaker_7_image">Choose image</label>
+									</div>
+								</div>
+
+								@if( !empty($RS_Meta['event_1_speaker_7_image']) )
+									<div class="d-flex align-items-start mt-3">
+										<img src="{{ url('uploads/pages/'.$RS_Meta['event_1_speaker_7_image']) }}" alt="{{ 'Image' }}" class="max-height-150">
+
+										<a href="javascript:;" data-id="{{ $RS_Row->id }}" data-key="event_1_speaker_7_image" class="btn btn-sm btn-danger mx-2 deleteImg"><i class="fas fa-trash"></i></a>
+									</div>
+								@endif
+							</div>
+						</div>
+					</div>
+
 				</div>
 
 				<hr>

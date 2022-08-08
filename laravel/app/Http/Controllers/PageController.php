@@ -2031,6 +2031,18 @@ class PageController extends Controller
         {
             $data['event_1_speaker_5_image'] = $event_1_speaker_5_image;
         }
+        
+        $event_1_speaker_6_image = $this->uploadImage($request->file('event_1_speaker_6_image'), $request->event_1_speaker_6_name, $RS_Row->getMeta('event_1_speaker_6_image'));
+        if( !empty($event_1_speaker_6_image) )
+        {
+            $data['event_1_speaker_6_image'] = $event_1_speaker_6_image;
+        }
+        
+        $event_1_speaker_7_image = $this->uploadImage($request->file('event_1_speaker_7_image'), $request->event_1_speaker_7_name, $RS_Row->getMeta('event_1_speaker_7_image'));
+        if( !empty($event_1_speaker_7_image) )
+        {
+            $data['event_1_speaker_7_image'] = $event_1_speaker_7_image;
+        }
 
         // data save
         $RS_Row->syncMeta($data);
