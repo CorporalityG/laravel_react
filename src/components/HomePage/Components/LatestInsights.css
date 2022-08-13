@@ -93,8 +93,13 @@
   padding-right: 10px;
   margin-right: 12px;
 }
-.blogs-container .blog-content .blog-date-comment-main .blog-date-comment img {
+.blogs-container .blog-content .blog-date-comment-main .blog-date-comment .date-icon {
   margin-right: 5px;
+  background-image: url(./images/date-icon.png);
+  background-size: contain;
+  background-repeat: repeat;
+  width: 14px;
+  height: 14px;
 }
 .blogs-container .blog-btn {
   border-image: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%);
@@ -133,6 +138,9 @@
   font-size: 16px;
   color: #757575;
   margin-bottom: 10px;
+}
+.blogs-container .blog-item-left .blog-item-box-main a {
+  text-decoration: none;
 }
 .blogs-container .blog-item-left .blog-item-box-main .blog-item-box-title {
   font-style: normal;

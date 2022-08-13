@@ -241,6 +241,7 @@
 .industry-page .industry-blog-name-section p a {
     color: #33657E;
     font-weight: bold;
+    text-decoration: none;
 }
 .industry-page .industry-blog-name-section .industry-blog-name-related {
     margin-top: 20px;
@@ -277,6 +278,7 @@
     display: inline-block;
     position: relative;
     text-transform: capitalize;
+    text-decoration: none;
 }
 .industry-page .industry-blog-name-section .industry-blog-name-link svg {
     fill: #3c708e;
@@ -358,6 +360,9 @@
 }
 .industry-page .industry-other-industries-section .industry-oi-col {
     margin-bottom: 30px;
+}
+.industry-page .industry-other-industries-section .industry-oi-col a {
+    text-decoration: none;
 }
 .industry-page .industry-other-industries-section .industry-oi-cat-item {
     background: #E9EBF7;
@@ -454,6 +459,7 @@
     text-transform: capitalize;
     color: #FFFFFF;
     margin-top: 30px;
+    text-decoration: none;
 }
 .industry-page .industry-global-conference-section .industry-global-conference-img {
     text-align: center;

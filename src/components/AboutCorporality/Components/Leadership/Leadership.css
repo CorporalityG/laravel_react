@@ -125,10 +125,12 @@
   line-height: 16px;
   text-align: center;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .leadership_button:hover {
   background: linear-gradient(95.12deg, #6ca0bc 0%, #e5cd60 83.42%);
+  color: #fff;
 }
 
 @media only screen and (max-width: 1100px) {

@@ -6,7 +6,7 @@ import { OtherIndustryItem } from './OtherIndustryItem'
 import { GetInvolved } from '../../ServiceInsights/GetInvolved'
 import { ServicesAskQuote } from '../../ServicesAskQuote/ServicesAskQuote'
 import AOS from "aos"
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function IndustrySingle() {
 
@@ -23,8 +23,8 @@ function IndustrySingle() {
         const { innerWidth: windowInnerwidth } = window;
 
         const colSingleBoxWidth = document.getElementById('industry-single-boxes').clientWidth;
-        const colOffsetTop = document.getElementById( "industry-single-col-boxes" ).offsetTop;
-        const colOffsetHeight = document.getElementById( "industry-single-col-boxes" ).offsetHeight;
+        const colOffsetTop = document.getElementById("industry-single-col-boxes").offsetTop;
+        const colOffsetHeight = document.getElementById("industry-single-col-boxes").offsetHeight;
 
         setColPosition('relative')
         setColTop('0')
@@ -71,140 +71,142 @@ function IndustrySingle() {
 
     return (
         <div className='industry-single-page'>
-            {
-                singleIndustry ?
-                    <>
-                        <Helmet>
-                            <title>{singleIndustry.meta_title ?? singleIndustry.title}</title>
-                            {singleIndustry.meta_description && <meta name="description" content={singleIndustry.meta_description} />}
-                            {singleIndustry.meta_keywords && <meta name="keywords" content={singleIndustry.meta_keywords} />}
-                            <link rel="canonical" href={`${BASE_URL}/${singleIndustry.slug}/`} />
-                        </Helmet>
+            <HelmetProvider>
+                {
+                    singleIndustry ?
+                        <>
+                            <Helmet>
+                                <title>{singleIndustry.meta_title ?? singleIndustry.title}</title>
+                                {singleIndustry.meta_description && <meta name="description" content={singleIndustry.meta_description} />}
+                                {singleIndustry.meta_keywords && <meta name="keywords" content={singleIndustry.meta_keywords} />}
+                                <link rel="canonical" href={`${BASE_URL}/${singleIndustry.slug}/`} />
+                            </Helmet>
 
-                        <div className='industry-single-banner'>
-                            <div className='container-lg'>
-                                <div className='row industry-single-banner-row'>
-                                    <div className='col-lg-6'>
-                                        <div className='industry-single-banner-content'>
-                                            {
-                                                singleIndustry.categories ?
-                                                    <div className='industry-single-banner-cat'>
-                                                        {
-                                                            singleIndustry.categories.map((item) =>
-                                                                <span key={`${item.id}`}>{item.category_name} Industry</span>
-                                                            )
-                                                        }</div>
-                                                    : null
-                                            }
-                                            <h1>{singleIndustry.title}</h1>
-                                            <div className='industry-single-banner-date'>{singleIndustry.date_created_at}</div>
+                            <div className='industry-single-banner'>
+                                <div className='container-lg'>
+                                    <div className='row industry-single-banner-row'>
+                                        <div className='col-lg-6'>
+                                            <div className='industry-single-banner-content'>
+                                                {
+                                                    singleIndustry.categories ?
+                                                        <div className='industry-single-banner-cat'>
+                                                            {
+                                                                singleIndustry.categories.map((item) =>
+                                                                    <span key={`${item.id}`}>{item.category_name} Industry</span>
+                                                                )
+                                                            }</div>
+                                                        : null
+                                                }
+                                                <h1>{singleIndustry.title}</h1>
+                                                <div className='industry-single-banner-date'>{singleIndustry.date_created_at}</div>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div className='col-lg-6'>
-                                        <div className='industry-single-banner-img'>
-                                            {singleIndustry.image && <img src={`${API_IMG_URL + singleIndustry.image}`} alt={`${singleIndustry.title}`} />}
+                                        <div className='col-lg-6'>
+                                            <div className='industry-single-banner-img'>
+                                                {singleIndustry.image && <img src={`${API_IMG_URL + singleIndustry.image}`} alt={`${singleIndustry.title}`} />}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className='industry-single-content'>
-                            <div className='container-lg'>
-                                <div className='row industry-single-content-row'>
-                                    <div className='col-lg-7'>
-                                        <div className='industry-single-desc' dangerouslySetInnerHTML={{ __html: singleIndustry.description }}></div>
-                                    </div>
-
-                                    <div id="industry-single-col-boxes" className='col-lg-5 industry-single-col-boxes'>
-                                        <div className='industry-single-survey-box'>
-                                            <div className='survey-title'>Survey</div>
+                            <div className='industry-single-content'>
+                                <div className='container-lg'>
+                                    <div className='row industry-single-content-row'>
+                                        <div className='col-lg-7'>
+                                            <div className='industry-single-desc' dangerouslySetInnerHTML={{ __html: singleIndustry.description }}></div>
                                         </div>
 
-                                        <div id="industry-single-boxes" className='industry-single-boxes' style={{ 'position': colPosition, 'top': colTop, 'width': colWidth }}>
-                                            {
-                                                singleRelatedIndustry ?
-                                                    <div className='industry-single-box industry-single-related-box'>
-                                                        <div className='is-box-title'>Read the related blog</div>
-                                                        <ul>
-                                                            {
-                                                                singleRelatedIndustry.map((item) =>
-                                                                    <li key={`${item.id}`}>
-                                                                        <Link to={`/industry/${item.slug}`}>{item.title}</Link>
-                                                                    </li>
-                                                                )
-                                                            }
-                                                        </ul>
+                                        <div id="industry-single-col-boxes" className='col-lg-5 industry-single-col-boxes'>
+                                            <div className='industry-single-survey-box'>
+                                                <div className='survey-title'>Survey</div>
+                                            </div>
+
+                                            <div id="industry-single-boxes" className='industry-single-boxes' style={{ 'position': colPosition, 'top': colTop, 'width': colWidth }}>
+                                                {
+                                                    singleRelatedIndustry ?
+                                                        <div className='industry-single-box industry-single-related-box'>
+                                                            <div className='is-box-title'>Read the related blog</div>
+                                                            <ul>
+                                                                {
+                                                                    singleRelatedIndustry.map((item) =>
+                                                                        <li key={`${item.id}`}>
+                                                                            <Link to={`/industry/${item.slug}`}>{item.title}</Link>
+                                                                        </li>
+                                                                    )
+                                                                }
+                                                            </ul>
+                                                        </div>
+                                                        : null
+                                                }
+
+                                                <div className='industry-single-box industry-single-other-box'>
+                                                    <div className='is-box-title'>Other Industries</div>
+
+                                                    <div className='row industry-single-other-industries-row'>
+                                                        <OtherIndustryItem
+                                                            icon={`${BASE_URL}/img/industries/nanotech.png`}
+                                                            category={`Nanotech`}
+                                                            slug={`nanotech`}
+                                                        />
+
+                                                        <OtherIndustryItem
+                                                            icon={`${BASE_URL}/img/industries/construction.png`}
+                                                            category={`Construction`}
+                                                            slug={`construction`}
+                                                        />
+
+                                                        <OtherIndustryItem
+                                                            icon={`${BASE_URL}/img/industries/metal-industry.png`}
+                                                            category={`Metal Industry`}
+                                                            slug={`metal`}
+                                                        />
+
+                                                        <OtherIndustryItem
+                                                            icon={`${BASE_URL}/img/industries/agriculture.png`}
+                                                            category={`Agrotech / Agriculture`}
+                                                            slug={`agriculture`}
+                                                        />
+
+                                                        <OtherIndustryItem
+                                                            icon={`${BASE_URL}/img/industries/hightech.png`}
+                                                            category={`Hightech`}
+                                                            slug={`high-tech`}
+                                                        />
+
+                                                        <OtherIndustryItem
+                                                            icon={`${BASE_URL}/img/industries/geospatial.png`}
+                                                            category={`Geospatial`}
+                                                            slug={`geospatial`}
+                                                        />
+
+                                                        <OtherIndustryItem
+                                                            icon={`${BASE_URL}/img/industries/finance.png`}
+                                                            category={`Fintech / Finance`}
+                                                            slug={`fintech`}
+                                                        />
+
+                                                        <OtherIndustryItem
+                                                            icon={`${BASE_URL}/img/industries/manufacturing.png`}
+                                                            category={`Manufacturing`}
+                                                            slug={`manufacturing`}
+                                                        />
                                                     </div>
-                                                    : null
-                                            }
-
-                                            <div className='industry-single-box industry-single-other-box'>
-                                                <div className='is-box-title'>Other Industries</div>
-
-                                                <div className='row industry-single-other-industries-row'>
-                                                    <OtherIndustryItem
-                                                        icon={`${BASE_URL}/img/industries/nanotech.png`}
-                                                        category={`Nanotech`}
-                                                        slug={`nanotech`}
-                                                    />
-
-                                                    <OtherIndustryItem
-                                                        icon={`${BASE_URL}/img/industries/construction.png`}
-                                                        category={`Construction`}
-                                                        slug={`construction`}
-                                                    />
-
-                                                    <OtherIndustryItem
-                                                        icon={`${BASE_URL}/img/industries/metal-industry.png`}
-                                                        category={`Metal Industry`}
-                                                        slug={`metal`}
-                                                    />
-
-                                                    <OtherIndustryItem
-                                                        icon={`${BASE_URL}/img/industries/agriculture.png`}
-                                                        category={`Agrotech / Agriculture`}
-                                                        slug={`agriculture`}
-                                                    />
-
-                                                    <OtherIndustryItem
-                                                        icon={`${BASE_URL}/img/industries/hightech.png`}
-                                                        category={`Hightech`}
-                                                        slug={`high-tech`}
-                                                    />
-
-                                                    <OtherIndustryItem
-                                                        icon={`${BASE_URL}/img/industries/geospatial.png`}
-                                                        category={`Geospatial`}
-                                                        slug={`geospatial`}
-                                                    />
-
-                                                    <OtherIndustryItem
-                                                        icon={`${BASE_URL}/img/industries/finance.png`}
-                                                        category={`Fintech / Finance`}
-                                                        slug={`fintech`}
-                                                    />
-
-                                                    <OtherIndustryItem
-                                                        icon={`${BASE_URL}/img/industries/manufacturing.png`}
-                                                        category={`Manufacturing`}
-                                                        slug={`manufacturing`}
-                                                    />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </>
-                    : null
-            }
+                        </>
+                        : null
+                }
 
-            <GetInvolved />
+                <GetInvolved />
 
-            <ServicesAskQuote />
+                <ServicesAskQuote />
+            </HelmetProvider>
         </div>
     )
 }

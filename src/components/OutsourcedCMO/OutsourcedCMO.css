@@ -111,6 +111,7 @@
     color: #FFFFFF;
     padding: 10px 17px;
     display: inline-block;
+    text-decoration: none;
 }
 .cmo-banner-section .cmo-banner {
     position: relative;
@@ -338,6 +339,7 @@
     padding: 10px 20px;
     display: inline-block;
     margin-top: 25px;
+    text-decoration: none;
 }
 /* expect end */
 

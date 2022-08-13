@@ -1,7 +1,9 @@
 .search-page {
     margin-top: 80px;
 }
-
+.search-page a {
+    text-decoration: none;
+}
 .search-page .search-form-section {
     padding-top: 70px;
     padding-bottom: 70px;

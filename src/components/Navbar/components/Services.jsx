@@ -94,7 +94,7 @@ const Services = () => {
                                 </ul>
                                 <div className="services-img-btn">Know More</div>
                             </div>
-                            <img src={servicesImage} alt="Services Menu" className="services-img" />
+                            <span className="services-img"></span>
                         </Link>
                     </div>
                 </div>

@@ -133,6 +133,7 @@
   border-style: solid;
   padding: 5px 10px;
   display: inline-block;
+  text-decoration: none;
 }
 
 .dbanner .learn-more > img {

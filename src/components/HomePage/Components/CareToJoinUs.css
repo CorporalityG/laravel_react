@@ -65,6 +65,7 @@
   z-index: 2;
   width: 210px;
   height: 220px;
+  background-image: url('./images/wall.png');
   background-position: left;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -75,6 +76,7 @@
   left: 30%;
   width: 114px;
   height: 71px;
+  background-image: url('./images/bottom.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -85,6 +87,7 @@
   left: 50%;
   width: 98px;
   height: 97px;
+  background-image: url('./images/middle.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -95,6 +98,7 @@
   right: -20px;
   width: 70px;
   height: 70px;
+  background-image: url('./images/rectangle.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -105,6 +109,7 @@
   left: 55%;
   width: 160px;
   height: 120px;
+  background-image: url('./images/top.png');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -113,13 +118,13 @@
   position: relative;
   z-index: 2;
 }
-/*.right-image-container {
-  transform: rotate(45deg);
-  overflow: hidden;
-}*/
 .caretojoinus-rightimage {
   transition: all 0.5s ease-in-out;
   margin-right: 40px;
+  width: 350px;
+  height: 350px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .right-image-container:hover > img {
   transform: scale(1.03);
@@ -131,6 +136,7 @@
   z-index: -1;
   width: 351px;
   height: 352px;
+  background-image: url('./images/image_back.png');
   background-position: right center;
   background-repeat: no-repeat;
   background-size: 100%;

@@ -22,6 +22,7 @@
 }
 .single-blog-page-2 .sb-categories li a {
     color: #31647c;
+    text-decoration: none;
 }
 .single-blog-page-2 .sb-categories li a:hover {
     color: #a06db0;
@@ -182,7 +183,7 @@
 .single-blog-page-2 .recent-events .recent-events-imgs {
     width: 100%;
 }
-#recent-blogs{width: 100%;display: inline-block;margin-bottom: 10px;font-size: 25px;}
+#recent-blogs{width: 100%;display: inline-block;margin-bottom: 10px;font-size: 25px;color: #31647c; text-decoration: none;}
 .youtube-video img{width: 100%;margin-left: -20px;}
 .subsribetitle{font-weight: 500;font-size: 20px;margin-bottom: 10px;}
 .btn-subscribe .blog-poll-youtube-btn a{color: #fff;}
@@ -303,6 +304,7 @@
 }
 .single-blog-page-2 .sb-related-item a {
     color: #fff;
+    text-decoration: none;
 }
 .single-blog-page-2 .sb-related-item .sb-related-blog-img {
     position: relative;
@@ -383,6 +385,7 @@
     font-weight: 500;
     margin-top: 10px;
     color: #212529;
+    text-decoration: none;
 }
 .single-blog-page-2 .sb-recent-blog-item:hover .sb-recent-blog-title {
     color: #31647c;

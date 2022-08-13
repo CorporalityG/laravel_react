@@ -105,7 +105,7 @@ const About = () => {
             <div className="about-section-main about-section-right">
                 <div className="careers-img-menu">
                     <Link to="/careers" onClick={() => {setShowAbout(false); topHandler()}} >
-                        <img src={careersImg} alt="careers" className="careers-img" />
+                        <span className="careers-img"></span>
                         <div className="careers-title">Gather the true experience of agile. Join us for a highly fulfilling career</div>
                         <div className="careers-btn">Careers</div>
                     </Link>

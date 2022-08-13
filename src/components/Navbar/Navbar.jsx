@@ -3,7 +3,6 @@ import './Navbar.css';
 import logo from './assets/logo.png';
 import About from './components/About';
 import Services from './components/Services';
-// import Industries from './components/Industries';
 import About2 from './components/About2';
 import { useMediaQuery } from 'react-responsive';
 import OutsideClickHandler from 'react-outside-click-wrapper';
@@ -39,7 +38,6 @@ const Navbar = () => {
             <NavbarContext.Provider value={providerValue}>
                 <OutsideClickHandler onOutsideClick={() => setNavClicked(false)}>
                     <div className={`navbar-wrapper ${location.pathname === '/' && 'home-navbar-wrapper'}`}>
-                        {/* nav hamburger */}
                         <div className="nav-icon" onClick={() => setNavClicked(!navClicked)} >
                             <span className={`nav-icon-line ${navClicked ? "nav-icon-clicked" : ""}`}></span>
                             <span className={`nav-icon-line ${navClicked ? "nav-icon-clicked" : ""}`}></span>
@@ -71,9 +69,6 @@ const Navbar = () => {
                                     <div className="nav-item contact" onClick={() => { navigate("/contact"); topHandler() }}>
                                         <div className="contact-a">CONTACT</div>
                                     </div>
-                                    {/* <div className="nav-item contact-no" onClick={() => window.open("tel:+61 2 83794089", "_self")}>
-                                        <div className="contact-no-a">+61 2 83794089</div>
-                                    </div> */}
 
                                     <div className={`nav-item contact-no ${(showSayHelloContact && isLargeScreen) ? "nav-item-hover" : ""}`} onClick={() => { console.log("set industries"); setShowSayHelloContact(!showSayHelloContact) }} onMouseOver={() => { if (isLargeScreen) setShowSayHelloContact(true) }} onMouseLeave={() => { if (isLargeScreen) setShowSayHelloContact(false) }}>
                                         <div className="contact-no-a">Say Hello</div>

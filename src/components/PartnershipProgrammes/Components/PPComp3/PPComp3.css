@@ -21,7 +21,10 @@
     width: 60%;
     text-align: center;
 }
-
+.know_button {
+    text-decoration: none;
+    color: #33657e;
+}
 .ppc3Button{
     width: 155px;
     height: 42px;

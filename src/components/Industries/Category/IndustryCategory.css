@@ -64,6 +64,7 @@
     border-style: solid;
     padding: 8px 25px;
     display: inline-block;
+    text-decoration: none;
 }
 .in-cat-page .latest-in .latest-in-item .latest-in-btn:hover {
     border-image-source: linear-gradient(to left, rgb(229, 205, 96), rgb(108, 160, 188));
@@ -190,6 +191,7 @@
     color: #31647C;
     padding: 14px 30px;
     display: inline-block;
+    text-decoration: none;
 }
 
 .in-cat-page .in-cat-list-container .in-item-main {
@@ -226,6 +228,7 @@
 }
 .in-cat-page .in-cat-list-container .in-item .in-content .in-read-more {
   color: #6CA0BC;
+  text-decoration: none;
 }
 .in-cat-page .in-cat-list-container .in-item .in-content .in-date-comment-main {
   display: flex;
@@ -304,6 +307,7 @@
     color: #232323;
     padding: 10px 30px;
     display: inline-block;
+    text-decoration: none;
 }
 
 .in-cat-page .in-poll-youtube {

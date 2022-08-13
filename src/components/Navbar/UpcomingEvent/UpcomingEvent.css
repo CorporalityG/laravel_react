@@ -81,6 +81,7 @@
     font-weight: 800;
     font-size: 18px;
     color: #FFFFFF;
+    text-decoration: none;
 }
 .marquee-section .uce-speaker-main {
     display: flex;
@@ -98,6 +99,7 @@
     font-weight: 600;
     font-size: 18px;
     color: #FFFFFF;
+    text-decoration: none;
 }
 .marquee-section .uce-speaker-item {
     display: flex;

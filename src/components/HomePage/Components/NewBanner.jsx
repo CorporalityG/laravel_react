@@ -219,7 +219,7 @@ const NewBanner = (pageDetail) => {
                         </div>
 
                         <div className="bannerSocialLinksContainer" data-aos="fade-right" data-aos-duration="2500">
-                            <div className="bannerSocialImg" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/social.png)" }}></div>
+                            <div className="bannerSocialImg"></div>
                             <div className="socialIconsContainer">
                                 <div className="socialIcon" onClick={() => window.open("https://www.facebook.com/CorporalityG/")}>
                                     <i className="fa fa-facebook-f"></i>

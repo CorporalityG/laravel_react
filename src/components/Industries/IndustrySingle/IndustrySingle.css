@@ -134,7 +134,9 @@
     width: 100%;
     display: inline-block;
 }
-
+.industry-single-page .industry-single-other-box a {
+    text-decoration: none;
+}
 .industry-single-page .industry-single-other-box .is-oi-cat-item {
     display: flex;
     align-items: center;

@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 import { EditPickItem } from './EditPickItem'
 import ServicesClients from '../ServicesClients/ServicesClients'
 import { IdeationCreativity } from './IdeationCreativity'
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { ServiceInsights } from './ServiceInsights'
 
 function CmoInsights() {
@@ -73,155 +73,156 @@ function CmoInsights() {
 
     return (
         <div className="csuit-insights">
-            <Helmet>
-                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
-                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
-                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
-            </Helmet>
+            <HelmetProvider>
+                <Helmet>
+                    {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                    {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                    {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
+                </Helmet>
 
-            <div className='csuit-insights-banner'>
-                <div className='container-lg'>
-                    <div className='row csuit-insights-banner-row'>
-                        <div className='col-lg-6'>
-                            <div className='csuit-insights-banner-title'>
-                                <h1>CMO Insights</h1>
+                <div className='csuit-insights-banner'>
+                    <div className='container-lg'>
+                        <div className='row csuit-insights-banner-row'>
+                            <div className='col-lg-6'>
+                                <div className='csuit-insights-banner-title'>
+                                    <h1>CMO Insights</h1>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className='col-lg-6'>
-                            <div className='csuit-insights-banner-content'>
-                                <h2 className='csuit-insights-banner-latest-title'>Latest Article</h2>
-                                {
-                                    latestCSuits ?
-                                        <div className='row'>
-                                            {
-                                                latestCSuits.slice(0, 1).map((item) =>
-                                                    <CSuitLatestItem
-                                                        key={`${item.id}`}
-                                                        thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
-                                                        title={`${item.title}`}
-                                                        slug={`csuit/${item.slug}`}
-                                                        category={item.subcategories[0] !== undefined ? item.subcategories[0].category_name : null}
-                                                        categorySlug={item.subcategories[0] !== undefined ? item.subcategories[0].category_slug : null}
-                                                    />
-                                                )
-                                            }
-                                        </div>
-                                        : null
-                                }
+                            <div className='col-lg-6'>
+                                <div className='csuit-insights-banner-content'>
+                                    <h2 className='csuit-insights-banner-latest-title'>Latest Article</h2>
+                                    {
+                                        latestCSuits ?
+                                            <div className='row'>
+                                                {
+                                                    latestCSuits.slice(0, 1).map((item) =>
+                                                        <CSuitLatestItem
+                                                            key={`${item.id}`}
+                                                            thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
+                                                            title={`${item.title}`}
+                                                            slug={`csuit/${item.slug}`}
+                                                            category={item.subcategories[0] !== undefined ? item.subcategories[0].category_name : null}
+                                                            categorySlug={item.subcategories[0] !== undefined ? item.subcategories[0].category_slug : null}
+                                                        />
+                                                    )
+                                                }
+                                            </div>
+                                            : null
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="csuit-insights-latest">
-                <div className='container-lg'>
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='csuit-insights-latest-title'>
-                                <h2 className='csuit-insights-title'>Editor's Pick</h2>
+                <div className="csuit-insights-latest">
+                    <div className='container-lg'>
+                        <div className='row'>
+                            <div className='col-lg-12'>
+                                <div className='csuit-insights-latest-title'>
+                                    <h2 className='csuit-insights-title'>Editor's Pick</h2>
+                                </div>
                             </div>
-                        </div>
 
-                        {
-                            editPicks ?
-                                <>
-                                    {
-                                        editPicks.slice(0, 2).map((item) =>
-                                            <EditPickItem
-                                                key={`${item.id}`}
+                            {
+                                editPicks ?
+                                    <>
+                                        {
+                                            editPicks.slice(0, 2).map((item) =>
+                                                <EditPickItem
+                                                    key={`${item.id}`}
+                                                    thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
+                                                    title={`${item.title}`}
+                                                    slug={`csuit/${item.slug}`}
+                                                    category={item.subcategories[0] !== undefined ? item.subcategories[0].category_name : null}
+                                                    categorySlug={item.subcategories[0] !== undefined ? item.subcategories[0].category_slug : null}
+                                                />
+                                            )
+                                        }
+
+                                        <div className='csuit-insights-more-link'>
+                                            <Link to={`/search/articles`}>All Articles</Link>
+                                        </div>
+                                    </>
+                                    : null
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <IdeationCreativity {...pageDetail.detail} />
+
+                <div className='csuit-insights-announcement-slider'>
+                    {
+                        announcements ?
+                            <Carousel indicators={false} controls={false} interval={5000}>
+                                {
+                                    announcements.map((item) =>
+                                        <Carousel.Item key={`${item.id}`}>
+                                            <AnnouncementItem
                                                 thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
                                                 title={`${item.title}`}
                                                 slug={`csuit/${item.slug}`}
                                                 category={item.subcategories[0] !== undefined ? item.subcategories[0].category_name : null}
-                                                categorySlug={item.subcategories[0] !== undefined ? item.subcategories[0].category_slug : null}
                                             />
-                                        )
-                                    }
-
-                                    <div className='csuit-insights-more-link'>
-                                        <Link to={`/search/articles`}>All Articles</Link>
-                                    </div>
-                                </>
-                                : null
-                        }
-                    </div>
-                </div>
-            </div>
-
-            <IdeationCreativity {...pageDetail.detail} />
-
-            <div className='csuit-insights-announcement-slider'>
-                {
-                    announcements ?
-                        <Carousel indicators={false} controls={false} interval={5000}>
-                            {
-                                announcements.map((item) =>
-                                    <Carousel.Item key={`${item.id}`}>
-                                        <AnnouncementItem
-                                            thumbnail={`${item.image ? API_IMG_URL + item.image : ''}`}
-                                            title={`${item.title}`}
-                                            slug={`csuit/${item.slug}`}
-                                            category={item.subcategories[0] !== undefined ? item.subcategories[0].category_name : null}
-                                        />
-                                    </Carousel.Item>
-                                )
-                            }
-                        </Carousel>
-                        : null
-                }
-            </div>
-
-            <div className="csuit-insights-all">
-                <div className='container-lg'>
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='csuit-insights-all-title'>
-                                <h2 className='csuit-insights-title'>Blog</h2>
-                                <p>Read industry news and blogs that are crucial to your business. Explore the world of management consulting, marketing and sales and how they can add value to help achieve your company's goals.</p>
-                            </div>
-                        </div>
-
-                        <div className='col-lg-12'>
-                            <div className="csuit-insights-all-slider">
-                                {
-                                    csuitBlogs ?
-                                        <CarouselGrid cols={3} rows={1} gap={0} responsiveLayout={[{ breakpoint: 1024, cols: 2 }, { breakpoint: 767, cols: 1, gap: 0, loop: true, autoplay: 4000 }]}>
-                                            {
-                                                csuitBlogs.map((item) =>
-                                                    <CarouselGrid.Item key={`${item.id}`}>
-                                                        <CSuitAllItem
-                                                            thumbnail={`${item.post_image ? API_IMG_URL + item.post_image : ''}`}
-                                                            title={`${item.post_title}`}
-                                                            slug={`${item.post_slug}`}
-                                                            category={item.subcategories[0] !== undefined ? item.subcategories[0].category_name : (item.categories[0] !== undefined ? item.categories[0].category_name : null)}
-                                                            categorySlug={item.subcategories[0] !== undefined ? item.subcategories[0].category_slug : (item.categories[0] !== undefined ? item.categories[0].category_slug : null)}
-                                                        />
-                                                    </CarouselGrid.Item>
-                                                )
-                                            }
-                                        </CarouselGrid>
-                                        : null
+                                        </Carousel.Item>
+                                    )
                                 }
+                            </Carousel>
+                            : null
+                    }
+                </div>
+
+                <div className="csuit-insights-all">
+                    <div className='container-lg'>
+                        <div className='row'>
+                            <div className='col-lg-12'>
+                                <div className='csuit-insights-all-title'>
+                                    <h2 className='csuit-insights-title'>Blog</h2>
+                                    <p>Read industry news and blogs that are crucial to your business. Explore the world of management consulting, marketing and sales and how they can add value to help achieve your company's goals.</p>
+                                </div>
                             </div>
 
-                            <div className='csuit-insights-more-link'>
-                                <Link to={`/blog`}>View All Blogs</Link>
+                            <div className='col-lg-12'>
+                                <div className="csuit-insights-all-slider">
+                                    {
+                                        csuitBlogs ?
+                                            <CarouselGrid cols={3} rows={1} gap={0} responsiveLayout={[{ breakpoint: 1024, cols: 2 }, { breakpoint: 767, cols: 1, gap: 0, loop: true, autoplay: 4000 }]}>
+                                                {
+                                                    csuitBlogs.map((item) =>
+                                                        <CarouselGrid.Item key={`${item.id}`}>
+                                                            <CSuitAllItem
+                                                                thumbnail={`${item.post_image ? API_IMG_URL + item.post_image : ''}`}
+                                                                title={`${item.post_title}`}
+                                                                slug={`${item.post_slug}`}
+                                                                category={item.subcategories[0] !== undefined ? item.subcategories[0].category_name : (item.categories[0] !== undefined ? item.categories[0].category_name : null)}
+                                                                categorySlug={item.subcategories[0] !== undefined ? item.subcategories[0].category_slug : (item.categories[0] !== undefined ? item.categories[0].category_slug : null)}
+                                                            />
+                                                        </CarouselGrid.Item>
+                                                    )
+                                                }
+                                            </CarouselGrid>
+                                            : null
+                                    }
+                                </div>
+
+                                <div className='csuit-insights-more-link'>
+                                    <Link to={`/blog`}>View All Blogs</Link>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <ServiceInsights {...pageDetail.detail} />
+                <ServiceInsights {...pageDetail.detail} />
 
-            <ServicesClients />
+                <ServicesClients />
 
-            <GetInvolved />
+                <GetInvolved />
 
-            <ServicesAskQuote />
-
+                <ServicesAskQuote />
+            </HelmetProvider>
         </div>
     )
 }

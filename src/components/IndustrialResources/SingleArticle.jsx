@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './SingleArticle.css'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config';
+import { API_BASE_URL, API_IMG_URL } from '../../config';
 import { useParams } from 'react-router-dom'
 import { SocialShare } from './SocialShare';
 

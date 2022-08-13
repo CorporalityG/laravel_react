@@ -88,6 +88,7 @@
     box-sizing: border-box;
     margin-left: 0;
     flex: 1 0 auto;
+    text-decoration: none;
 }
 .mma-banner-section .mma-banner-bg {
     position: absolute;
@@ -318,6 +319,7 @@
     padding: 10px 20px;
     display: inline-block;
     margin-top: 30px;
+    text-decoration: none;
 }
 /* models end */
 

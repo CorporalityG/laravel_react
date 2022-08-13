@@ -199,7 +199,8 @@
   margin-right: 10px;
   height: 200px;
   width: 55px;
-  background-size: 100%;
+  background-image: url('./images/social.png');
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -603,6 +604,7 @@
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #FFFFFF;
+  text-decoration: none;
 }
 .bannerContainer .bannerBtn a:hover {
   background: linear-gradient(93.61deg, #6CA0BC 0%, #E5CD60 89.25%);
@@ -983,13 +985,6 @@
 }
 .dbanner .sbox:not(:last-child) .boxContent {
     border-right: solid rgb(243 194 194 / 0%);
-}
-.row>* {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-left: 30px!important;
-    padding-right: 30px!important;
 }
 .start-50 {
     left: 50%!important;

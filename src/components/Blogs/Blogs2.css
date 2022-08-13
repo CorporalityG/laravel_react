@@ -23,6 +23,7 @@
     font-weight: 500;
     text-transform: uppercase;
     width: 100%;
+    text-decoration: none;
 }
 .blog2 .blog-item .blog-item-title {
     color: rgb(31, 31, 31);
@@ -30,6 +31,7 @@
     font-weight: 500;
     width: 100%;
     display: inline-block;
+    text-decoration: none;
 }
 
 .blog2-heading-main {
@@ -64,6 +66,7 @@
     color: rgb(31, 31, 31);
     font-size: 24px;
     font-weight: 500;
+    text-decoration: none;
 }
 .blog2-heading a:hover {
     color: #31647c;
@@ -112,6 +115,7 @@
     font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
+    text-decoration: none;
 }
 .blog2-latest-section .category:hover {
     color: #fff;
@@ -122,6 +126,7 @@
 }
 .blog2-latest-section .title-first a {
     color: #fff;
+    text-decoration: none;
 }
 .blog2-latest-section .blog-content-first p {
     color: #fff;
@@ -186,6 +191,7 @@
     font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
+    text-decoration: none;
 }
 .blog2-corporate-strategy-section .blog-item {
     overflow: hidden;
@@ -253,6 +259,7 @@
     font-size: 24px;
     margin-bottom: 15px;
     display: inline-block;
+    text-decoration: none;
 }
 
 .blog2-podcasts-section {
@@ -291,6 +298,7 @@
     padding: 15px 25px;
     margin-top: 15px;
     display: inline-block;
+    text-decoration: none;
 }
 
 .blog2-video-section {
@@ -371,6 +379,7 @@
 }
 .blog2-video-section .v-title-first a {
     color: rgb(31, 31, 31);
+    text-decoration: none;
 }
 .blog2-video-section .v-content-first {
     padding-left: 50px;
@@ -491,6 +500,7 @@
     font-weight: 500;
     text-transform: uppercase;
     width: 100%;
+    text-decoration: none;
 }
 .blog2-covid-explore-section .covid-item-title {
     font-size: 17px;
@@ -498,6 +508,7 @@
     color: rgb(31, 31, 31);
     width: 100%;
     display: inline-block;
+    text-decoration: none;
 }
 .blog2-covid-explore-section .explore-list a {
     color: rgb(31, 31, 31);
@@ -506,6 +517,7 @@
     margin-bottom: 20px;
     font-weight: 500;
     width: 100%;
+    text-decoration: none;
 }
 .blog2-covid-explore-section .blog2-ce-subscribe {
     background: #6ca0bc;
@@ -628,6 +640,7 @@
     color: #fff;
     padding: 12px 15px;
     width: auto;
+    text-decoration: none;
 }
 .blog2 .know_more_blogs.blogs_btn svg {
     color: #fff;
@@ -725,6 +738,7 @@
     margin-bottom: 1em;
     position: relative;
     text-transform: uppercase;
+    text-decoration: none;
 }
 .blog2 .b-announcement-slider-section .b-link::before {
     display: block;

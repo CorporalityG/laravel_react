@@ -4,7 +4,7 @@ import DigitalSg from './components/DigitalSg/Digital'
 import Global from './components/GlobalAIms/Global'
 import MultiDimensional from './components/MultiDimensional/MultiDimension'
 import OrganisingPrinciple from './components/Organising/OrganisingPrinciple'
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { API_BASE_URL, BASE_URL } from '../../config'
 
 const SustainableGrowth = () => {
@@ -24,26 +24,28 @@ const SustainableGrowth = () => {
     }
 
     return (
-        <div>
-            <Helmet>
-                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
-                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
-                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
-                <link rel="canonical" href={`${BASE_URL}/sustainable-growth/`} />
-            </Helmet>
+        <>
+            <HelmetProvider>
+                <Helmet>
+                    {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                    {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                    {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
+                    <link rel="canonical" href={`${BASE_URL}/sustainable-growth/`} />
+                </Helmet>
 
-            {
-                pageDetail.detail ?
-                    <>
-                        <OrganisingPrinciple {...pageDetail.detail} />
-                        <DigitalSg {...pageDetail.detail} />
-                        <MultiDimensional {...pageDetail.detail} />
-                        <Global {...pageDetail.detail} />
-                        <CaseStudy {...pageDetail.detail} />
-                    </>
-                    : null
-            }
-        </div>
+                {
+                    pageDetail.detail ?
+                        <>
+                            <OrganisingPrinciple {...pageDetail.detail} />
+                            <DigitalSg {...pageDetail.detail} />
+                            <MultiDimensional {...pageDetail.detail} />
+                            <Global {...pageDetail.detail} />
+                            <CaseStudy {...pageDetail.detail} />
+                        </>
+                        : null
+                }
+            </HelmetProvider>
+        </>
     )
 }
 

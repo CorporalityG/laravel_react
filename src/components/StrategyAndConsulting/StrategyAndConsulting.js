@@ -5,7 +5,7 @@ import SACComp3 from './Components/SACComp3'
 import SACComp5 from './Components/SACComp5'
 import SACComp4 from './Components/SACComp4'
 import SACComp6 from './Components/SACComp6'
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { API_BASE_URL, BASE_URL } from '../../config'
 
 const StrategyAndConsulting = () => {
@@ -25,27 +25,29 @@ const StrategyAndConsulting = () => {
     }
 
     return (
-        <div>
-            <Helmet>
-                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
-                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
-                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
-                <link rel="canonical" href={`${BASE_URL}/strategy-and-consulting/`} />
-            </Helmet>
+        <>
+            <HelmetProvider>
+                <Helmet>
+                    {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                    {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                    {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
+                    <link rel="canonical" href={`${BASE_URL}/strategy-and-consulting/`} />
+                </Helmet>
 
-            {
-                pageDetail.detail ?
-                    <>
-                        <SACComp1 {...pageDetail.detail} />
-                        <SACComp2 {...pageDetail.detail} />
-                        <SACComp3 {...pageDetail.detail} />
-                        <SACComp4 {...pageDetail.detail} />
-                        <SACComp5 {...pageDetail.detail} />
-                        <SACComp6 {...pageDetail.detail} />
-                    </>
-                    : null
-            }
-        </div>
+                {
+                    pageDetail.detail ?
+                        <>
+                            <SACComp1 {...pageDetail.detail} />
+                            <SACComp2 {...pageDetail.detail} />
+                            <SACComp3 {...pageDetail.detail} />
+                            <SACComp4 {...pageDetail.detail} />
+                            <SACComp5 {...pageDetail.detail} />
+                            <SACComp6 {...pageDetail.detail} />
+                        </>
+                        : null
+                }
+            </HelmetProvider>
+        </>
     )
 }
 

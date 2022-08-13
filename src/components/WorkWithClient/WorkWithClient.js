@@ -10,7 +10,7 @@ import NewsLetter from './components/NewsLetter/NewsLetter'
 import TeamSpiritNew from './components/TeamSpiritNew/TeamSpirit'
 import Ideation from './components/ThirdComponent/Ideation'
 import { API_BASE_URL, BASE_URL } from '../../config'
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const WorkWithClient = () => {
 
@@ -29,30 +29,32 @@ const WorkWithClient = () => {
     }
 
     return (
-        <div>
-            <Helmet>
-                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
-                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
-                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
-                <link rel="canonical" href={`${BASE_URL}/work-with-clients/`} />
-            </Helmet>
+        <>
+            <HelmetProvider>
+                <Helmet>
+                    {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                    {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                    {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
+                    <link rel="canonical" href={`${BASE_URL}/work-with-clients/`} />
+                </Helmet>
 
-            {
-                pageDetail.detail ?
-                    <>
-                        <Clients {...pageDetail.detail} />
-                        <Combating {...pageDetail.detail} />
-                        <Ideation {...pageDetail.detail} />
-                        <Limitless {...pageDetail.detail} />
-                        <Innovation {...pageDetail.detail} />
-                        <LogoText {...pageDetail.detail} />
-                        <Logos {...pageDetail.detail} />
-                        <TeamSpiritNew {...pageDetail.detail} />
-                        <NewsLetter {...pageDetail.detail} />
-                    </>
-                    : null
-            }
-        </div>
+                {
+                    pageDetail.detail ?
+                        <>
+                            <Clients {...pageDetail.detail} />
+                            <Combating {...pageDetail.detail} />
+                            <Ideation {...pageDetail.detail} />
+                            <Limitless {...pageDetail.detail} />
+                            <Innovation {...pageDetail.detail} />
+                            <LogoText {...pageDetail.detail} />
+                            <Logos {...pageDetail.detail} />
+                            <TeamSpiritNew {...pageDetail.detail} />
+                            <NewsLetter {...pageDetail.detail} />
+                        </>
+                        : null
+                }
+            </HelmetProvider>
+        </>
     )
 }
 

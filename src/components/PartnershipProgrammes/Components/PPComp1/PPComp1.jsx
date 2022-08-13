@@ -1,4 +1,5 @@
 import "../PPComp1/PPComp1.css";
+import "../PPComp1/Organisingprinciple.css";
 import React, { useEffect } from "react";
 import Back from './Back.png'
 import smallrect from './Smallrect.png'

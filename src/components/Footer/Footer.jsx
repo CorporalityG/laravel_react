@@ -123,7 +123,7 @@ export default function Footer() {
           <Link to="/terms-and-conditions" onClick={() => { topHandle() }} className="footer-text">Terms and Conditions</Link>
           <Link to="/sitemap" onClick={() => { topHandle() }} className="footer-text">Sitemap</Link>
         </div>
-        <div className="row2">Copyright © 2014-2022, The Corporaltiy Global</div>
+        <div className="row2"><p>Copyright © 2014-2022, The Corporaltiy Global</p></div>
       </div>
     </>
   );

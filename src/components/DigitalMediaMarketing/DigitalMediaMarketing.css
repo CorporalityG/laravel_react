@@ -77,6 +77,7 @@
     text-transform: none;
     color: #FFFFFF;
     padding: 13px 23px;
+    text-decoration: none;
 }
 .dmm-banner-section .dmm-banner-content-main .dmm-banner-btn:hover {
     background: linear-gradient(95.12deg, #6CA0BC 0%, #E2C53F 83.42%);

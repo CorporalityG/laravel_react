@@ -1,0 +1,342 @@
+ .container-1-Op{
+    display: flex  ;
+    align-items: center  ;
+
+}
+.text-box-1-Op{
+    position: relative  ;
+    display: flex  ;
+    flex-direction: column  ;
+    justify-content: center  ;
+    padding-top: 150px  ;
+    left: 4%  ;
+    margin-right: 130px  ;
+ 
+}
+.yellow_Org{
+    position: absolute  ;
+    left:60%  ;
+}
+.OrganisingPrinciple{
+    margin-bottom: -250px;
+}
+
+.container-1_text-Op{
+    font-weight: 500;
+    font-size: 32px  ;
+    line-height: 42px  ;
+/* identical to box height, or 125% */
+
+    text-transform: capitalize  ;
+
+    color: #33657E  ;
+} 
+
+.container-2_text-Op{
+    font-weight: normal  ;
+    font-size: 16px  ;
+    line-height: 24px  ;
+    /* identical to box height, or 150% */
+    width: 110% !important;
+    
+    color: #232323  ;
+/*     margin-right: 300px  ; */
+
+}
+.container-3_text-Op{
+    font-weight: normal  ;
+    font-size: 16px  ;
+    line-height: 26px  ;
+    /* or 150% */
+
+
+    color: #232323  ;
+}
+.wall-Op{
+    position: absolute  ;
+    top: 35%  ;
+    left: 12%  ;
+}
+.smallrect-Op{
+    position: absolute  ;
+    top: 50%  ;
+    left: 43%  ;
+}
+.image-first-Op{
+    margin-left: 80px  ;
+}
+
+
+ .yellowbackground_Op {
+    position: absolute;
+    right: 0;
+    top: 100px;
+  }
+
+.navbar-Op{
+    margin-bottom: 100px  ;
+}
+.image-first-Op{
+    position: relative  ;
+}
+.rect-Op{
+    position: absolute  ;
+    top: 50px  ;
+    left: -50px  ;
+}
+.backimg-Op{
+    position: relative  ;
+    left: 20%  ;
+    
+}
+.blue_print_overlay{
+    position: relative  ;
+    height: 80%  ;
+    width: 477px  ;
+    margin-top: 140px  ;
+    bottom: -40%  ;
+    margin-left: -300px  ;
+    z-index: -1  ;
+    background: #fff  ;
+   }
+   .blue_print_ellipse-1 {
+    position: absolute  ;
+    width: 477px  ;
+    left: 290%  ;
+    bottom: 350px  ;
+    height: 466px  ;
+   z-index: 10  ;
+    background: rgba(255, 239, 165, 0.3)  ;
+    filter: blur(100px)  ; 
+   }
+
+   .smaller-rect-prev-1-Op{
+       position: absolute  ;
+       left: 74%  ;
+       top: 92%  ;
+   }
+
+   .first-image-Op{
+       position: relative  ;
+        left: -5%  ;
+        
+   }
+
+.banner_right_inner-Op{
+    position: relative  ;
+    width: 350px  ;
+    height: 350.8px  ;
+    top: -50%  ;
+    left: 30%  ;
+    transform: rotate(45deg)  ;
+    overflow: hidden  ;
+   
+   }
+   .banner_right_inner-Op .main-prev1-Op{
+    width: 510px  ;
+    height: 512.19px  ;
+    margin-top: -80px  ;
+    margin-left: -80px  ;
+    transform: rotate(-45deg)  ;
+    transition: all 0.8s ease  ;
+    /* z-index: 100  ; */
+   }
+   .banner_right_inner-Op:hover .main-prev1-Op {
+    transform: scale(1.03) rotate(-45deg)  ;
+   }
+   @media (max-width:1539px){
+     .blue_print_overlay{
+         display: none  ;
+     }
+}
+
+@media(max-width:1500px){
+    .yellow_Org{
+        display: none  ;
+    }
+}
+
+@media (max-width: 1428px){
+    .text-box-1-Op{
+        left: 10%;
+    }
+    .smallrect-Op{
+        left: 48%;
+    }
+}
+@media (max-width:1300px){
+    .image-first-Op{
+        position: relative  ;
+        left: -100px  ;
+    }
+}
+
+@media(max-width:1200px){
+    .image-first-Op{
+        left: -30%  ;
+    }
+}
+
+@media (max-width:1144px){
+
+}
+@media (max-width:991.84168px){
+    .banner_right_inner-Op{
+        position: relative  ;
+        width: 330px  ;
+        height: 332.8px  ;
+        bottom: 410px  ;
+        left: 35%  ;
+    }
+    .OrganisingPrinciple{
+        margin-bottom: -5px;
+    }
+    
+    .backimg-Op{
+        width: 480px  ;
+        height: 482.8px  ;
+        left: 20%  ;
+        top: 2%  ;
+    }
+    .image-first-Op{
+        left: -10%  ;
+    }
+    .first-image-Op{
+        flex-direction: column-reverse  ;
+    }
+    .text-box-1-Op{
+        padding-top: 0px  ;
+        bottom: 200px  ;
+        left: 5%  ;
+    }
+    .wall-Op{
+        left: 20%  ;
+    }
+    .rect-Op{
+        left: 20%  ;
+    }
+    .container-1_text-Op{
+        font-size: 16px  ;
+        line-height: 20px  ;
+    }
+    .container-2_text-Op{
+        font-size: 16px  ;
+    }
+
+}
+@media (max-width:767.85126px){
+    .banner_right_inner-Op{
+        width: 330px  ;
+        height: 332.8px  ;
+        left: 15%  ;
+    }
+    .backimg-Op{
+        width: 480px  ;
+        height: 482.8px  ;
+        left: 5%  ;
+        top: -5px  ;
+    }
+    .image-first-Op{
+        left: -10%  ;
+    }
+    .wall-Op{
+        position: absolute  ;
+        top: 35%  ;
+        left: 0%  ;
+    }
+    .smallrect-Op{
+        position: absolute  ;
+        top: 50%  ;
+        left: 27%  ;
+    }
+    .text-box-1-Op{
+        margin-right: 10px  ;
+    }
+    .container-1_text-Op{
+        font-size: 12px  ;
+        line-height: 20px  ;
+    }
+    .container-2_text-Op{
+        font-size: 10px  ;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width:654px){
+    .banner_right_inner-Op{
+        width: 220px  ;
+        height: 222.8px  ;
+        left: 20%  ;
+        bottom: 270px  ;
+    }
+    .main-prev1-Op{
+        width: 430px !important  ;
+        height: 432.19px !important  ;
+    }
+    .backimg-Op{
+        width: 320px  ;
+        height: 322.8px  ;
+        left: 2%  ;
+        top: 2%  ;
+    }
+    .image-first-Op{
+        left: 0%  ;
+    }
+    .wall-Op{
+        position: absolute  ;
+        top: 35%  ;
+        left: 7%  ;
+        width: 20%  ;
+    }
+    .smallrect-Op{
+        position: absolute  ;
+        top: 50%  ;
+        left: 30%  ;
+        width: 9%  ;
+    }
+}
+
+@media(max-width:576px){
+    .text-box-1-Op{
+        margin-left: 10px;
+        padding-right: 30px !important;
+    }
+    .container-2_text-Op{
+        font-size: 12px  ;
+        padding-right: 20px !important;
+    }
+    .OrganisingPrinciple{
+        margin-bottom: -150px !important;
+    }
+}
+
+@media (max-width:448px){
+    .banner_right_inner-Op{
+        left: 10%  ;
+    }
+    .backimg-Op{
+        left: 0%  ;
+    }
+    .wall-Op{
+        left: -5%;
+    }
+    .smallrect-Op{
+        left: 26%;
+    }
+    .rect-Op{
+        left: -10%;
+    }
+}
+@media (max-width:428px) {
+    .image-first-Op{
+        left: -6%  ;
+    }
+    .text-box-1-Op{
+        margin-right: 50px  ;
+    }
+}
+@media (max-width:380px) {
+    .text-box-1-Op{
+        margin-right: 50px  ;
+    }
+}

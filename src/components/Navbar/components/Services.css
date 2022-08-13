@@ -1,8 +1,6 @@
 .services-container{
     position: fixed;
     background-color: #fff !important;
-    /* left: 55px;
-    right: 55px; */
     left: 50%;
     transform: translateX(-50%);
     /*height: 228px;*/
@@ -10,14 +8,11 @@
     padding: 20px 0px !important;
     color: #31647C;
     transition: all 0.5s ease-in-out;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important; */
     background: url(../assets/r-vector.png) right bottom no-repeat, url(../assets/l-vector.png) left top no-repeat;
     background-origin: content-box;
     background-size: 85px 85px ;
     display: flex;
     flex-direction: row;
-    /* width: calc(100vw - 120px); */
     min-width: 1266px;
 }
 .services-container .services-section-inner {
@@ -108,13 +103,6 @@
     position: relative;
 }
 
-/* .strategic-consultancy{
-    position: relative;
-    height: 250px;
-    top: 0;
-    right: 35px;
-} */
-
 .services-section-right .services-img-menu {
     background-color: #F7F7F7;
     padding: 20px;
@@ -124,12 +112,19 @@
     cursor: pointer;
     height: 100%;
 }
+.services-section-right .services-img-menu a {
+    text-decoration: none;
+}
 .services-section-right .services-img-menu .services-img {
     max-width: 100%;
     width: 130px;
+    height: 125px;
     position: absolute;
     bottom: 10px;
     right: 10px;
+    background-image: url('../assets/services-img-menu.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .services-section-right .services-img-menu .services-img-title {
     width: 100%;
@@ -166,7 +161,6 @@
     .services-container{
         all : unset;
         flex-direction: column;
-        /* position: absolute; */
         top: 54px;
         left: 0px;
         transform: translate(0%);
@@ -175,31 +169,23 @@
         height: auto;
         margin: 0px !important;
         padding: 0px !important;
-        /* margin-bottom: 100px; */
-        /* background-color: red; */
     }
     .services-container .services-section{
         flex-direction: column;
         margin: 0px !important;
         padding: 0px !important;
-        /* border-top: 1px solid #e1e2e2; */
-        /* border-bottom: 1px solid #e1e2e2; */
     }
     .services-container .diamond-line{
-        /* display: none; */
         width: 100%;
     }
     .services-section-items:hover::after{
-        /* display: none; */
         display: block;
     }
     .services-section-items::after{
-        /* display: none; */
         right: 1px !important;
         height: 7px;
         width: 7px;
         bottom: -3px;
-        /* border-bottom: 1px solid #e1e2e2; */
     }
     .services-section-items h6{
         color: #31647c;

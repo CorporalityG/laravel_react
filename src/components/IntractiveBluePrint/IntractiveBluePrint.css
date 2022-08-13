@@ -90,6 +90,7 @@
     color: #FFFFFF;
     padding: 13px 23px;
     display: inline-block;
+    text-decoration: none;
 }
 .ibp-banner-section .ibp-banner {
     position: relative;

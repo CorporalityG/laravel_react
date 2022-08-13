@@ -111,6 +111,7 @@
     color: #FFFFFF;
     padding: 13px 23px;
     display: inline-block;
+    text-decoration: none;
 }
 .cxo-banner-section .cxo-banner {
     position: relative;
@@ -311,6 +312,7 @@
     padding: 10px 20px;
     display: inline-block;
     margin-top: 35px;
+    text-decoration: none;
 }
 /* expect end */
 

@@ -64,6 +64,7 @@
     border-style: solid;
     padding: 8px 25px;
     display: inline-block;
+    text-decoration: none;
 }
 .blogs-page .latest-blog .latest-blog-item .latest-blog-btn:hover {
     border-image-source: linear-gradient(to left, rgb(229, 205, 96), rgb(108, 160, 188));
@@ -190,6 +191,7 @@
     color: #31647C;
     padding: 14px 30px;
     display: inline-block;
+    text-decoration: none;
 }
 
 .blogs-page .blog-list-container .blog-item-main {
@@ -226,6 +228,7 @@
 }
 .blogs-page .blog-list-container .blog-item .blog-content .blog-read-more {
   color: #6CA0BC;
+  text-decoration: none;
 }
 .blogs-page .blog-list-container .blog-item .blog-content .blog-date-comment-main {
   display: flex;
@@ -304,6 +307,7 @@
     color: #232323;
     padding: 10px 30px;
     display: inline-block;
+    text-decoration: none;
 }
 
 .blogs-page .blog-poll-youtube {

@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BASE_URL, API_IMG_URL } from '../../../config';
 import Aos from "aos";
-import "aos/dist/aos.css";
 import "./Services.css";
-import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
 function Services(pageDetail) {
   const [learn, setLearn] = useState(1);
-  const navigate = useNavigate();
 
   const showOneButton = (ele) => {
     const buttons = document.querySelectorAll(".button_main");
@@ -39,19 +36,6 @@ function Services(pageDetail) {
     showOneButton(ele);
     showOneDiv(index);
   };
-
-  /* const learnMoreHandler = () => {
-    switch (learn) {
-      case 1: navigate("/goto-market-strategy"); break;
-      case 2: navigate("/digital-media-marketing"); break;
-      case 3: navigate("/strategic-consultancy"); break;
-      case 4: navigate("/corporate-strategy"); break;
-      case 5: navigate("/sustainable-growth"); break;
-      case 6: navigate("/brand-positioning"); break;
-      case 7: navigate("/cxo-strategy"); break;
-      default: break;
-    }
-  } */
 
   useEffect(() => {
     Aos.init();
@@ -132,17 +116,17 @@ function Services(pageDetail) {
                 <div className="service-main-content" id="service_1">
                   <div className="service-main">
                     <div className="service-left aos-init" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-offset="0">
-                      <img className="services-dots" src={BASE_URL + '/img/HomePage/services/services-dots.png'} alt="services-dots" />
+                      <span className="services-dots"></span>
                       {pageDetail.service_1_image && <img className="service-img" src={`${API_IMG_URL}pages/${pageDetail.service_1_image}`} alt={`${pageDetail.service_1_tab_title}`} />}
-                      <img className="services-rectangle-1" src={BASE_URL + '/img/HomePage/services/services-rectangle-1.png'} alt="services-rectangle-1" />
+                      <span className="services-rectangle-1"></span>
                     </div>
 
                     <div className="service-right aos-init" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-offset="0">
-                      <img className="services-vector" src={BASE_URL + '/img/HomePage/services/services-vector.png'} alt="services-vector" />
-                      <img className="services-line" src={BASE_URL + '/img/HomePage/services/services-line.png'} alt="services-line" />
-                      <img className="services-rectangle-2" src={BASE_URL + '/img/HomePage/services/services-rectangle-2.png'} alt="services-rectangle-2" />
-                      <img className="services-rectangle-3" src={BASE_URL + '/img/HomePage/services/services-rectangle-3.png'} alt="services-rectangle-3" />
-                      <img className="corporality-global-icon" src={BASE_URL + '/img/HomePage/services/corporality-global-icon-yellow.png'} alt="corporality-global-icon-yellow" />
+                      <span className="services-vector"></span>
+                      <span className="services-line"></span>
+                      <span className="services-rectangle-2"></span>
+                      <span className="services-rectangle-3"></span>
+                      <span className="corporality-global-icon"></span>
 
                       <div className="service-content-main">
                         <div className="service-heading">{`${pageDetail.service_1_title}`}</div>
@@ -158,17 +142,17 @@ function Services(pageDetail) {
                 <div className="service-main-content" id="service_2">
                   <div className="service-main">
                     <div className="service-left">
-                      <img className="services-dots" src={BASE_URL + '/img/HomePage/services/services-dots.png'} alt="services-dots" />
+                      <span className="services-dots"></span>
                       {pageDetail.service_2_image && <img className="service-img" src={`${API_IMG_URL}pages/${pageDetail.service_2_image}`} alt={`${pageDetail.service_2_tab_title}`} />}
-                      <img className="services-rectangle-1" src={BASE_URL + '/img/HomePage/services/services-rectangle-1.png'} alt="services-rectangle-1" />
+                      <span className="services-rectangle-1"></span>
                     </div>
 
                     <div className="service-right">
-                      <img className="services-vector" src={BASE_URL + '/img/HomePage/services/services-vector.png'} alt="services-vector" />
-                      <img className="services-line" src={BASE_URL + '/img/HomePage/services/services-line.png'} alt="services-line" />
-                      <img className="services-rectangle-2" src={BASE_URL + '/img/HomePage/services/services-rectangle-2.png'} alt="services-rectangle-2" />
-                      <img className="services-rectangle-3" src={BASE_URL + '/img/HomePage/services/services-rectangle-3.png'} alt="services-rectangle-3" />
-                      <img className="corporality-global-icon" src={BASE_URL + '/img/HomePage/services/corporality-global-icon-yellow.png'} alt="corporality-global-icon-yellow" />
+                      <span className="services-vector"></span>
+                      <span className="services-line"></span>
+                      <span className="services-rectangle-2"></span>
+                      <span className="services-rectangle-3"></span>
+                      <span className="corporality-global-icon"></span>
 
                       <div className="service-content-main">
                         <div className="service-heading">{`${pageDetail.service_2_title}`}</div>
@@ -184,17 +168,17 @@ function Services(pageDetail) {
                 <div className="service-main-content" id="service_3">
                   <div className="service-main">
                     <div className="service-left">
-                      <img className="services-dots" src={BASE_URL + '/img/HomePage/services/services-dots.png'} alt="services-dots" />
+                      <span className="services-dots"></span>
                       {pageDetail.service_3_image && <img className="service-img" src={`${API_IMG_URL}pages/${pageDetail.service_3_image}`} alt={`${pageDetail.service_3_tab_title}`} />}
-                      <img className="services-rectangle-1" src={BASE_URL + '/img/HomePage/services/services-rectangle-1.png'} alt="services-rectangle-1" />
+                      <span className="services-rectangle-1"></span>
                     </div>
 
                     <div className="service-right">
-                      <img className="services-vector" src={BASE_URL + '/img/HomePage/services/services-vector.png'} alt="services-vector" />
-                      <img className="services-line" src={BASE_URL + '/img/HomePage/services/services-line.png'} alt="services-line" />
-                      <img className="services-rectangle-2" src={BASE_URL + '/img/HomePage/services/services-rectangle-2.png'} alt="services-rectangle-2" />
-                      <img className="services-rectangle-3" src={BASE_URL + '/img/HomePage/services/services-rectangle-3.png'} alt="services-rectangle-3" />
-                      <img className="corporality-global-icon" src={BASE_URL + '/img/HomePage/services/corporality-global-icon-yellow.png'} alt="corporality-global-icon-yellow" />
+                      <span className="services-vector"></span>
+                      <span className="services-line"></span>
+                      <span className="services-rectangle-2"></span>
+                      <span className="services-rectangle-3"></span>
+                      <span className="corporality-global-icon"></span>
 
                       <div className="service-content-main">
                         <div className="service-heading">{`${pageDetail.service_3_title}`}</div>
@@ -210,17 +194,17 @@ function Services(pageDetail) {
                 <div className="service-main-content" id="service_4">
                   <div className="service-main">
                     <div className="service-left">
-                      <img className="services-dots" src={BASE_URL + '/img/HomePage/services/services-dots.png'} alt="services-dots" />
+                      <span className="services-dots"></span>
                       {pageDetail.service_4_image && <img className="service-img" src={`${API_IMG_URL}pages/${pageDetail.service_4_image}`} alt={`${pageDetail.service_4_tab_title}`} />}
-                      <img className="services-rectangle-1" src={BASE_URL + '/img/HomePage/services/services-rectangle-1.png'} alt="services-rectangle-1" />
+                      <span className="services-rectangle-1"></span>
                     </div>
 
                     <div className="service-right">
-                      <img className="services-vector" src={BASE_URL + '/img/HomePage/services/services-vector.png'} alt="services-vector" />
-                      <img className="services-line" src={BASE_URL + '/img/HomePage/services/services-line.png'} alt="services-line" />
-                      <img className="services-rectangle-2" src={BASE_URL + '/img/HomePage/services/services-rectangle-2.png'} alt="services-rectangle-2" />
-                      <img className="services-rectangle-3" src={BASE_URL + '/img/HomePage/services/services-rectangle-3.png'} alt="services-rectangle-3" />
-                      <img className="corporality-global-icon" src={BASE_URL + '/img/HomePage/services/corporality-global-icon-yellow.png'} alt="corporality-global-icon-yellow" />
+                      <span className="services-vector"></span>
+                      <span className="services-line"></span>
+                      <span className="services-rectangle-2"></span>
+                      <span className="services-rectangle-3"></span>
+                      <span className="corporality-global-icon"></span>
 
                       <div className="service-content-main">
                         <div className="service-heading">{`${pageDetail.service_4_title}`}</div>
@@ -236,17 +220,17 @@ function Services(pageDetail) {
                 <div className="service-main-content" id="service_5">
                   <div className="service-main">
                     <div className="service-left">
-                      <img className="services-dots" src={BASE_URL + '/img/HomePage/services/services-dots.png'} alt="services-dots" />
+                      <span className="services-dots"></span>
                       {pageDetail.service_5_image && <img className="service-img" src={`${API_IMG_URL}pages/${pageDetail.service_5_image}`} alt={`${pageDetail.service_5_tab_title}`} />}
-                      <img className="services-rectangle-1" src={BASE_URL + '/img/HomePage/services/services-rectangle-1.png'} alt="services-rectangle-1" />
+                      <span className="services-rectangle-1"></span>
                     </div>
 
                     <div className="service-right">
-                      <img className="services-vector" src={BASE_URL + '/img/HomePage/services/services-vector.png'} alt="services-vector" />
-                      <img className="services-line" src={BASE_URL + '/img/HomePage/services/services-line.png'} alt="services-line" />
-                      <img className="services-rectangle-2" src={BASE_URL + '/img/HomePage/services/services-rectangle-2.png'} alt="services-rectangle-2" />
-                      <img className="services-rectangle-3" src={BASE_URL + '/img/HomePage/services/services-rectangle-3.png'} alt="services-rectangle-3" />
-                      <img className="corporality-global-icon" src={BASE_URL + '/img/HomePage/services/corporality-global-icon-yellow.png'} alt="corporality-global-icon-yellow" />
+                      <span className="services-vector"></span>
+                      <span className="services-line"></span>
+                      <span className="services-rectangle-2"></span>
+                      <span className="services-rectangle-3"></span>
+                      <span className="corporality-global-icon"></span>
 
                       <div className="service-content-main">
                         <div className="service-heading">{`${pageDetail.service_5_title}`}</div>
@@ -262,17 +246,17 @@ function Services(pageDetail) {
                 <div className="service-main-content" id="service_6">
                   <div className="service-main">
                     <div className="service-left">
-                      <img className="services-dots" src={BASE_URL + '/img/HomePage/services/services-dots.png'} alt="services-dots" />
+                      <span className="services-dots"></span>
                       {pageDetail.service_6_image && <img className="service-img" src={`${API_IMG_URL}pages/${pageDetail.service_6_image}`} alt={`${pageDetail.service_6_tab_title}`} />}
-                      <img className="services-rectangle-1" src={BASE_URL + '/img/HomePage/services/services-rectangle-1.png'} alt="services-rectangle-1" />
+                      <span className="services-rectangle-1"></span>
                     </div>
 
                     <div className="service-right">
-                      <img className="services-vector" src={BASE_URL + '/img/HomePage/services/services-vector.png'} alt="services-vector" />
-                      <img className="services-line" src={BASE_URL + '/img/HomePage/services/services-line.png'} alt="services-line" />
-                      <img className="services-rectangle-2" src={BASE_URL + '/img/HomePage/services/services-rectangle-2.png'} alt="services-rectangle-2" />
-                      <img className="services-rectangle-3" src={BASE_URL + '/img/HomePage/services/services-rectangle-3.png'} alt="services-rectangle-3" />
-                      <img className="corporality-global-icon" src={BASE_URL + '/img/HomePage/services/corporality-global-icon-yellow.png'} alt="corporality-global-icon-yellow" />
+                      <span className="services-vector"></span>
+                      <span className="services-line"></span>
+                      <span className="services-rectangle-2"></span>
+                      <span className="services-rectangle-3"></span>
+                      <span className="corporality-global-icon"></span>
 
                       <div className="service-content-main">
                         <div className="service-heading">{`${pageDetail.service_6_title}`}</div>
@@ -288,17 +272,17 @@ function Services(pageDetail) {
                 <div className="service-main-content" id="service_7">
                   <div className="service-main">
                     <div className="service-left">
-                      <img className="services-dots" src={BASE_URL + '/img/HomePage/services/services-dots.png'} alt="services-dots" />
+                      <span className="services-dots"></span>
                       {pageDetail.service_7_image && <img className="service-img" src={`${API_IMG_URL}pages/${pageDetail.service_7_image}`} alt={`${pageDetail.service_7_tab_title}`} />}
-                      <img className="services-rectangle-1" src={BASE_URL + '/img/HomePage/services/services-rectangle-1.png'} alt="services-rectangle-1" />
+                      <span className="services-rectangle-1"></span>
                     </div>
 
                     <div className="service-right">
-                      <img className="services-vector" src={BASE_URL + '/img/HomePage/services/services-vector.png'} alt="services-vector" />
-                      <img className="services-line" src={BASE_URL + '/img/HomePage/services/services-line.png'} alt="services-line" />
-                      <img className="services-rectangle-2" src={BASE_URL + '/img/HomePage/services/services-rectangle-2.png'} alt="services-rectangle-2" />
-                      <img className="services-rectangle-3" src={BASE_URL + '/img/HomePage/services/services-rectangle-3.png'} alt="services-rectangle-3" />
-                      <img className="corporality-global-icon" src={BASE_URL + '/img/HomePage/services/corporality-global-icon-yellow.png'} alt="corporality-global-icon-yellow" />
+                      <span className="services-vector"></span>
+                      <span className="services-line"></span>
+                      <span className="services-rectangle-2"></span>
+                      <span className="services-rectangle-3"></span>
+                      <span className="corporality-global-icon"></span>
 
                       <div className="service-content-main">
                         <div className="service-heading">{`${pageDetail.service_7_title}`}</div>
@@ -314,17 +298,17 @@ function Services(pageDetail) {
                 <div className="service-main-content" id="service_8">
                   <div className="service-main">
                     <div className="service-left">
-                      <img className="services-dots" src={BASE_URL + '/img/HomePage/services/services-dots.png'} alt="services-dots" />
+                      <span className="services-dots"></span>
                       {pageDetail.service_8_image && <img className="service-img" src={`${API_IMG_URL}pages/${pageDetail.service_8_image}`} alt={`${pageDetail.service_8_tab_title}`} />}
-                      <img className="services-rectangle-1" src={BASE_URL + '/img/HomePage/services/services-rectangle-1.png'} alt="services-rectangle-1" />
+                      <span className="services-rectangle-1"></span>
                     </div>
 
                     <div className="service-right">
-                      <img className="services-vector" src={BASE_URL + '/img/HomePage/services/services-vector.png'} alt="services-vector" />
-                      <img className="services-line" src={BASE_URL + '/img/HomePage/services/services-line.png'} alt="services-line" />
-                      <img className="services-rectangle-2" src={BASE_URL + '/img/HomePage/services/services-rectangle-2.png'} alt="services-rectangle-2" />
-                      <img className="services-rectangle-3" src={BASE_URL + '/img/HomePage/services/services-rectangle-3.png'} alt="services-rectangle-3" />
-                      <img className="corporality-global-icon" src={BASE_URL + '/img/HomePage/services/corporality-global-icon-yellow.png'} alt="corporality-global-icon-yellow" />
+                      <span className="services-vector"></span>
+                      <span className="services-line"></span>
+                      <span className="services-rectangle-2"></span>
+                      <span className="services-rectangle-3"></span>
+                      <span className="corporality-global-icon"></span>
 
                       <div className="service-content-main">
                         <div className="service-heading">{`${pageDetail.service_8_title}`}</div>

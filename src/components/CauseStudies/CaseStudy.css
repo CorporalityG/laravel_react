@@ -425,6 +425,7 @@
     font-size: 16px;
     color: #33657E;
     cursor: pointer;
+    text-decoration: none;
   }
   .cause-studies-container .case-study-related-container .related-case-study-carousel .case-study-item .case-study-item-explore img {
       margin-left: 5px;

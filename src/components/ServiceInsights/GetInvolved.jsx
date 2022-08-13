@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import './ServiceInsights'
 import { GetInvolvedItem } from './GetInvolvedItem';
 import { API_BASE_URL, API_IMG_URL } from '../../config'
 

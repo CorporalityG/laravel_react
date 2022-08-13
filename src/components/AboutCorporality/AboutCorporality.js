@@ -8,7 +8,7 @@ import FearlessCreativity from "./Components/FearlessCreativity/FearlessCreativi
 import WorkParallax from "./Components/MiddleParallax/WorkParallax";
 import WorldMap from "./Components/WorldMap/WorldMap";
 import Caretojoinus from "./Components/CaretojoinUs/Caretojoinus";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { API_BASE_URL, BASE_URL } from '../../config'
 
 function AboutCorporality() {
@@ -29,28 +29,30 @@ function AboutCorporality() {
 
   return (
     <>
-      <Helmet>
-        {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
-        {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
-        {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
-        <link rel="canonical" href={`${BASE_URL}/about-corporality/`} />
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+          {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+          {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
+          <link rel="canonical" href={`${BASE_URL}/about-corporality/`} />
+        </Helmet>
 
-      {
-        pageDetail.detail ?
-          <>
-            <FirstNew {...pageDetail.detail} />
-            <Quote {...pageDetail.detail} />
-            <ThreeBoxes {...pageDetail.detail} />
-            <FearlessCreativity {...pageDetail.detail} />
-            <WorkParallax {...pageDetail.detail} />
-            <WorldMap {...pageDetail.detail} />
-            <CommunitySupport {...pageDetail.detail} />
-            <Leadership {...pageDetail.detail} />
-            <Caretojoinus {...pageDetail.detail} />
-          </>
-          : null
-      }
+        {
+          pageDetail.detail ?
+            <>
+              <FirstNew {...pageDetail.detail} />
+              <Quote {...pageDetail.detail} />
+              <ThreeBoxes {...pageDetail.detail} />
+              <FearlessCreativity {...pageDetail.detail} />
+              <WorkParallax {...pageDetail.detail} />
+              <WorldMap {...pageDetail.detail} />
+              <CommunitySupport {...pageDetail.detail} />
+              <Leadership {...pageDetail.detail} />
+              <Caretojoinus {...pageDetail.detail} />
+            </>
+            : null
+        }
+      </HelmetProvider>
     </>
   );
 }

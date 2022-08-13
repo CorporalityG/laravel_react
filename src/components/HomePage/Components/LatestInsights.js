@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./LatestInsights.css";
 import { useNavigate, Link } from "react-router-dom";
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
+import { API_BASE_URL, API_IMG_URL } from '../../../config';
 import axios from "axios";
 
 function truncate(text, size) {
@@ -47,7 +47,7 @@ function LatestInsights(pageDetail) {
             <div className="row">
               {
                 latestBlogs ?
-                  latestBlogs.slice(0, 1).map((blogItem, index) =>
+                  latestBlogs.slice(0, 1).map((blogItem) =>
                     <div key={blogItem.id} className="col-md-6 blog-item">
                       <div data-aos="fade-down">
                         {blogItem.post_image && <img src={API_IMG_URL + blogItem.post_image} alt={blogItem.post_title} className="blog-img" />}
@@ -59,13 +59,9 @@ function LatestInsights(pageDetail) {
                         </div>
                         <div className="blog-date-comment-main" data-aos="fade-up" data-aos-duration="2300">
                           <div className="blog-date-comment">
-                            <img src={BASE_URL + '/img/HomePage/blog/date-icon.png'} alt="Date" />
+                            <span className="date-icon"></span>
                             <span>{dateFormat(blogItem.created_at)}</span>
                           </div>
-                          {/* <div className="blog-date-comment">
-                        <img src={BASE_URL + '/img/HomePage/blog/comment-icon.png'} alt="Comment" />
-                        <span>(0) Comments</span>
-                      </div> */}
                         </div>
 
                         <div className="blog-btn" onClick={() => navigate("/blog")} data-aos="fade-up">More Blogs</div>
@@ -78,8 +74,8 @@ function LatestInsights(pageDetail) {
               <div className="col-md-6 blog-item-left">
                 {
                   latestBlogs ?
-                    latestBlogs.slice(1, 3).map((blogItem, index) =>
-                      <div className="blog-item-box-main" key={blogItem.id}>
+                    latestBlogs.slice(1, 3).map((blogItem) =>
+                      <div className="blog-item-box-main" key={blogItem.id} data-aos="fade-up">
                         {blogItem.post_image && <img src={API_IMG_URL + blogItem.post_image} alt={blogItem.post_title} className="blog-item-box-img" />}
                         <div className="blog-item-box-content">
                           <div className="blog-item-box-subtitle">{blogItem.categories ? blogItem.categories[0].category_name : null}</div>
@@ -92,7 +88,7 @@ function LatestInsights(pageDetail) {
                     : null
                 }
 
-                <div className="blog-item-box-main-spotify" dangerouslySetInnerHTML={{ __html: pageDetail.latest_insights_spotify_iframe }}></div>
+                <div className="blog-item-box-main-spotify" data-aos="fade-up" data-aos-duration="2100" dangerouslySetInnerHTML={{ __html: pageDetail.latest_insights_spotify_iframe }}></div>
               </div>
             </div>
 

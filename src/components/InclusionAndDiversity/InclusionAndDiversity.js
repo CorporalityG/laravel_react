@@ -6,7 +6,7 @@ import Duty from './components/FourCards/Duty';
 import Newsletter from './components/LastComponentINC/Newsletter';
 import Leadership from './components/LeaderShip/Leadership';
 import Career from './components/CareerImage/Career';
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { API_BASE_URL, BASE_URL } from '../../config'
 
 const InclusionAndDiversity = () => {
@@ -26,28 +26,30 @@ const InclusionAndDiversity = () => {
     }
 
     return (
-        <div>
-            <Helmet>
-                {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
-                {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
-                {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
-                <link rel="canonical" href={`${BASE_URL}/inclusion-and-diversity/`} />
-            </Helmet>
+        <>
+            <HelmetProvider>
+                <Helmet>
+                    {pageDetail.meta_title && <title>{`${pageDetail.meta_title}`}</title>}
+                    {pageDetail.meta_description && <meta name="description" content={`${pageDetail.meta_description}`} />}
+                    {pageDetail.meta_keywords && <meta name="keywords" content={pageDetail.meta_keywords} />}
+                    <link rel="canonical" href={`${BASE_URL}/inclusion-and-diversity/`} />
+                </Helmet>
 
-            {
-                pageDetail.detail ?
-                    <>
-                        <Inclusion {...pageDetail.detail} />
-                        <OurFaith {...pageDetail.detail} />
-                        <Hover {...pageDetail.detail} />
-                        <Duty {...pageDetail.detail} />
-                        <Leadership {...pageDetail.detail} />
-                        <Career {...pageDetail.detail} />
-                        <Newsletter {...pageDetail.detail} />
-                    </>
-                    : null
-            }
-        </div>
+                {
+                    pageDetail.detail ?
+                        <>
+                            <Inclusion {...pageDetail.detail} />
+                            <OurFaith {...pageDetail.detail} />
+                            <Hover {...pageDetail.detail} />
+                            <Duty {...pageDetail.detail} />
+                            <Leadership {...pageDetail.detail} />
+                            <Career {...pageDetail.detail} />
+                            <Newsletter {...pageDetail.detail} />
+                        </>
+                        : null
+                }
+            </HelmetProvider>
+        </>
     )
 }
 
