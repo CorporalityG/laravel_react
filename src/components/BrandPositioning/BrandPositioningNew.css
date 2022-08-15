@@ -112,6 +112,7 @@
     color: #FFFFFF;
     padding: 13px 23px;
     display: inline-block;
+    text-decoration: none;
 }
 .bp-banner-section .bp-banner {
     position: relative;
@@ -972,13 +973,6 @@
     }
     .bp-banner-section .bp-banner-sbs {
         bottom: -140px;
-    }
-    .bp-banner-section .row > *, 
-    .bp-know-section .row > *, 
-    .bp-indomitable-section .row > *, 
-    .bp-faqs-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
     }
     .bp-faqs-section .bp-faqs-title-row {
         padding-left: 10px;

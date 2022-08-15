@@ -22,31 +22,31 @@ export default function Footer() {
               <div className="foot-c">
                 <nav className="menu">
                   <input type="checkbox" href="#" className="menu-open" name="menu-open" id="menu-open" />
-                  <label className="menu-open-button" style={{ backgroundColor: "#f2f2f2", color: "#31647c" }} htmlFor="menu-open">
-                    <i className="fa fa-share-alt" style={{ marginTop: "-9.2px", marginLeft: "-13.5px", fontSize: "large", top: "50%", }} />
+                  <label className="menu-open-button" htmlFor="menu-open">
+                    <i className="fa fa-share-alt" />
                   </label>
                   <a href="https://www.instagram.com/corporalityg/" className="menu-item instagram">
                     {" "}
-                    <i className="fa fa-instagram" style={{ marginTop: "-12px", marginLeft: "-12.5px" }} />
+                    <i className="fa fa-instagram" />
                   </a>
                   <a href="https://www.facebook.com/CorporalityG/" className="menu-item facebook">
                     {" "}
-                    <i className="fa fa-facebook-f" style={{ marginTop: "-12px", marginLeft: "-13px" }} />
+                    <i className="fa fa-facebook-f" />
                   </a>
                   <a href="https://in.pinterest.com/CorporalityG/" className="menu-item pinterest">
                     {" "}
-                    <i className="fa fa-pinterest" style={{ marginTop: "-12px", marginLeft: "-12.5px" }} />
+                    <i className="fa fa-pinterest" />
                   </a>
                   <a href="https://twitter.com/corporalityg/" className="menu-item twitter">
                     {" "}
-                    <i className="fa fa-twitter" style={{ marginTop: "-12px", marginLeft: "-12.5px" }} />
+                    <i className="fa fa-twitter" />
                   </a>
                   <a href="https://www.linkedin.com/company/corporality/" className="menu-item linkedin">
-                    <i className="fa fa-linkedin" style={{ marginTop: "-12px", marginLeft: "-12.5px" }} />
+                    <i className="fa fa-linkedin" />
                   </a>
                   <a href="https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg/" className="menu-item youtube">
                     {" "}
-                    <i className="fa fa-youtube-play" style={{ marginTop: "-12px", marginLeft: "-14.5px" }} />
+                    <i className="fa fa-youtube-play" />
                     {" "}
                   </a>
                 </nav>

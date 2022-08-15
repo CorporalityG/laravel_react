@@ -61,7 +61,6 @@
   cursor: pointer;
 }
 .sacc3Button:hover {
-  /* background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), #C4C4C4; */
   background: rgb(34, 193, 195);
   background: linear-gradient(95.12deg, #eed979 0%, #6ca0bc 83.42%);
   border: none;

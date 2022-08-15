@@ -109,9 +109,6 @@ const MultiDimensional = (pageDetail) => {
                                         </a>
                                     </div>
                                 </div>
-                                {/*        <div data-aos-delay="2500" data-aos="fade-right" className="button-4-Multi">
-                            <a className='button-link-Multi' href="#">Learn More</a>
-                        </div> */}
                             </div>
                         </div>
                     </div>

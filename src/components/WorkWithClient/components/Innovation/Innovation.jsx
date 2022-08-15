@@ -28,7 +28,7 @@ const Innovation = (pageDetail) => {
             </p>
             <img src={small2Innovation} className="small2-5-Innovation" alt="Innovation" />
             <img src={smallInnovation} className="small-5-Innovation" alt="Innovation" />
-            <a href={`${pageDetail.innovation_btn_link}`}>
+            <a href={`${pageDetail.innovation_btn_link ?? '#'}`} className="linkinnovation">
               <div className="link-Innovation">
                 <div className="button-4-Innovation">
                   <div className="button-link-Innovation" href="#">

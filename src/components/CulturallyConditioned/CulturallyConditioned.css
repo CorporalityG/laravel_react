@@ -669,15 +669,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .cc-banner-section .row > *, 
-    .cc-work-mind-section .row > *, 
-    .cc-major-problem-section .row > *, 
-    .cc-top-elements-section .row > *, 
-    .cc-work-section .row > *, 
-    .cc-process-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .cc-top-elements-section .cc-te-content-row .cc-te-title h2 {
         font-size: 22px;
     }

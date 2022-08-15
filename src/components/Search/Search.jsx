@@ -50,7 +50,6 @@ function Search() {
     }, [params]);
 
     async function getSearchResultsData(searchKeyword, pageLink = '', filterCategoryList = '', sortByVal = '') {
-        // console.log(sortByVal)
         let searchSlug = `search_keyword=${searchKeyword}&filter_category=${filterCategoryList}&sort_by=${sortByVal}`;
 
         let apiLink = (pageLink === '' ?

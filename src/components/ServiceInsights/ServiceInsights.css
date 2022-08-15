@@ -433,11 +433,6 @@
     margin-bottom: 40px;
 }
 
-/* .si-capabilities-section .si-c-title {
-    max-width: 67%;
-    margin-bottom: 40px;
-} */
-
 .si-capabilities-section .si-c-title h2 {
     font-size: 3rem;
     margin-bottom: 15px;
@@ -1538,10 +1533,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .service-insights-page .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .si-announcement-section .si-a-content h1 {
         font-size: 26px;
     }

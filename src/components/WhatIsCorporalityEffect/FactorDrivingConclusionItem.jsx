@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const FactorDrivingConclusionItem = (props) => {
   return (
     <div className="col-md-6 wice-factor-box-col">

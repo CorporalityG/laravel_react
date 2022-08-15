@@ -1,4 +1,3 @@
-import React from "react";
 import './VideoClients.css'
 import video from './mainImage.png'
 

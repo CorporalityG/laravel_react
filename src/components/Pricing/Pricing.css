@@ -54,9 +54,6 @@
 .pricing-page .pricing-banner-service-cont .service-img {
     width: 100%;
 }
-/* .pricing-page .service-form-step.show {
-    margin-bottom: 50px;
-} */
 .pricing-page .service-form-step.hide {
     display: none;
 }
@@ -387,10 +384,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .pricing-page .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .pricing-page .pricing-banner-content-col {
         padding: 30px 10px 60px;
     }

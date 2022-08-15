@@ -71,14 +71,6 @@
 }
 
 
-@media only screen and (max-width: 600.99px) {
-    .services-quote-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
-}
-
-
 @media only screen and (max-width: 430px) {
     .services-quote-section .services-quote-row {
         padding: 30px 10px;

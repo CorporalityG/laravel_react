@@ -63,6 +63,7 @@
 }
 .button-seventh a {
   color: #fff;
+  text-decoration: none;
 }
 
 .emailinput {
@@ -161,7 +162,6 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  /* left: 1350.88px; */
   right: 150px;
 }
 
@@ -178,13 +178,6 @@
 }
 
 @media (max-width: 991.46841648px) {
-
-  /* .text_NewsLetter {
-    padding-top: 400px;
-  }
-  .logo_newsletter {
-    top: 200px;
-  } */
   .learnmore_newsletter{
     left: 400px;
     top: -380px;
@@ -281,9 +274,6 @@
     height: 290px;
     top: 15px;
   }
-/*   .learnmore_newsletter{
-    left: 230px;
-  } */
   .logo_newsletter{
     top: 290px;
   }

@@ -39,10 +39,8 @@
 }
 
 .Consultancypage-3-diamond {
-  /* position: absolute; */
   width: 130px;
   height: 130px;
-
   background: linear-gradient(271.1deg, #33657e -6.21%, #6ca0bc 96.12%);
   border: 5px solid #ffffff;
   box-sizing: border-box;
@@ -55,7 +53,6 @@
   background: linear-gradient(0deg, #ffffff, #ffffff);
   box-shadow: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  /* transform: rotate(45deg); */
 }
 
 .model-para {
@@ -73,8 +70,6 @@
   font-weight: 500;
   font-size: 28px;
   line-height: 37px;
-  /* or 132% */
-
   text-transform: none;
 
   color: #33657e;
@@ -85,49 +80,14 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  /* or 150% */
-
   color: #757575;
 }
-
-/* .Consultancydia{
-  animation: skew 2s infinite;
-  transform: skew(26deg);
-  animation-direction: alternate;
-
-  
-}
-@keyframes skew {
-  0% {
-    transform: rotate(20deg);
-  }
-  50%{
-    transform: rotate(-20deg);
-  }
-  100% {
-    transform: rotate(20deg);
-  }
-} */
-
-
-/* @keyframes shimmy {
-  0% {
-    transform: translate(0, 0);    
-  }
-  100% {
-    transform: translate(20px, 50px);
-  }
-} */
-
-
 
 .Consultancydia > p {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  /* or 137% */
-
   text-align: center;
 
   color: #ffffff;

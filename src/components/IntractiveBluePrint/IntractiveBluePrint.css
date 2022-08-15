@@ -910,15 +910,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .ibp-banner-section .row > *, 
-    .ibp-know-section .row > *, 
-    .ibp-working-section .row > *, 
-    .ibp-innovate-educate-section .row > *, 
-    .ibp-strategy-solutions-section .row > *, 
-    .ibp-write-us-modal .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .ibp-banner-section .ibp-b-rec-2 {
         left: initial;
         right: 20%;

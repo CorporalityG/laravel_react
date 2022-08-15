@@ -8,7 +8,6 @@
   font-weight: normal !important;
   font-size: 16px !important;
   line-height: 22px !important;
-  /* or 157% */
   margin-right: 40px;
   position: relative;
   left: 7%;
@@ -21,8 +20,6 @@
   font-weight: 500 !important;
   font-size: 32px !important;
   line-height: 40px !important;
-  /* identical to box height, or 125% */
-
   text-align: center !important;
   text-transform: uppercase !important;
 

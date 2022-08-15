@@ -1,12 +1,10 @@
 .ppc3Container{
     position: relative;
     min-height: 378px;
-    /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)) ,     url(../images/img3.jpg); */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;   
-
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +37,6 @@
 }
 
 .ppc3Button:hover{
-    /* background: linear-gradient(95.12deg, #EED979 0%, #6CA0BC 83.42%), #C4C4C4; */
     background: rgb(34, 193, 195);
     background: linear-gradient(38deg,rgba(34, 193, 195, 1) 0%,rgba(253, 187, 45, 1) 100%);
     border: none;

@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const CommitmentItem = (props) => {
     return (
         <div className="col-lg-4">

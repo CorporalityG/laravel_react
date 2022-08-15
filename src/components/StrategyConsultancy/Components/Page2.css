@@ -19,10 +19,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 32px;
 line-height: 37px;
-/* identical to box height, or 116% */
-
 text-transform: none;
-
 color: #33657E;
 }
 
@@ -35,8 +32,6 @@ font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 22px;
-/* or 150% */
-
 text-align: center;
 
 color: #757575;
@@ -45,14 +40,9 @@ color: #757575;
 
 .consultancygradbox{
     transform: translate(-470%,100%);
-    /* display: flex; */
-    /* position: relative;
-    left: 0%; */
-
 }
 
 .start-Box-fl{
-    /* align-items: center; */
     margin: auto;
 }
 
@@ -68,8 +58,6 @@ color: #757575;
 }
 
 .consultancybox-2{
-    /* position: relative; */
-    /* transform: translate(-90px,0px); */
     z-index: 0;
 }
 

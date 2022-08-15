@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const KeyElementItem = (props) => {
     return (
         <div className="col-lg-4 col-sm-6 wice-ke-box-col">

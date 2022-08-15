@@ -5,7 +5,7 @@ import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config'
 import { ServicesAskQuote } from '../ServicesAskQuote/ServicesAskQuote';
 import ServicesClients from "../ServicesClients/ServicesClients";
 import ServicesInsights from "../ServicesInsights/ServicesInsights";
-import { LeverageModelItem } from "./Components/LeverageModelItem";
+import { LeverageModelItem } from "./LeverageModelItem";
 import Accordion from 'react-bootstrap/Accordion'
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

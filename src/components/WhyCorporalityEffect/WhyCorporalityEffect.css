@@ -81,6 +81,7 @@
     display: inline-block;
     margin-top: 30px;
     cursor: pointer;
+    text-decoration: none;
 }
 .wce-banner-main .wce-banner-content-row .wce-banner-phone {
     position: absolute;
@@ -474,15 +475,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .wce-banner-main .row > *, 
-    .wce-commitment-section .row > *, 
-    .wce-business-section .row > *, 
-    .wce-right-section .row > *, 
-    .wce-work-section .row > *, 
-    .wce-key-elements-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .wce-banner-main .wce-banner-content-row {
         padding-left: 10px;
         padding-right: 10px;

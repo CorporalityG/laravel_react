@@ -5,16 +5,12 @@
 }
 
 .circle-container2 {
-  /* border-radius: 51%; */
-
   filter: drop-shadow(0px 21px 30px rgba(0, 0, 0, 0.05));
   width: 500px;
 }
 
 .Consultpolygon {
   position: absolute;
-  /* width: 200px; */
-  /* height: 250px; */
 }
 
 .circle-container2 > div {
@@ -54,10 +50,7 @@
   font-weight: 500;
   font-size: 28px;
   line-height: 37px;
-  /* or 132% */
-
   text-transform: none;
-
   color: #33657e;
 }
 
@@ -66,8 +59,6 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  /* or 150% */
-
   color: #757575;
 }
 
@@ -130,22 +121,6 @@
     padding: 100px 0 !important;
   }
 
-  /* .Consultancypage-4-cont {
-    width: 90%;
-    margin-left: 0px !important;
-    margin-top: 100% !important;
-  } */
-
-  /* .head2 {
-    margin-top: 130px !important;
-  } */
-
-  /* .center > img {
-    width: 70%;
-    margin-top: -18% !important;
-    margin-left: 18% !important;
-  } */
-
   .circle-container2 > .Consultpolygon {
     width: 50%;
     margin-left: 0px !important;
@@ -185,8 +160,6 @@ font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 16px;
-/* identical to box height, or 100% */
-
 text-align: center;
 
 color: #6CA0BC;

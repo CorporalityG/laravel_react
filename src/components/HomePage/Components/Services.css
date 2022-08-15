@@ -519,17 +519,6 @@
     margin-left: 2px !important;
   }
 
-  /* .services_heading {
-    font-size: 16px;
-  }
-
-  .services_heading:after {
-    width: 25px;
-    height: 4px;
-    left: 30%;
-    bottom: -2px;
-  } */
-
   .right_content_heading {
     font-size: 12px;
     line-height: 18px;
@@ -541,7 +530,6 @@
   }
 
   .button_main {
-    /* font-size: 12px; */
     padding: 10px 30px;
   }
 
@@ -589,14 +577,6 @@
 
 
 @media only screen and (max-width: 600px) {
-/* .service-main .service-right .service-content-main {
-    position: relative;
-    padding-top: 360px;
-} */
-/* .service-main .service-left {
-    position: absolute;
-
-} */
 .portfolio-container .portfolio-right .portfolio-title {
     font-style: normal;
     font-weight: 500;

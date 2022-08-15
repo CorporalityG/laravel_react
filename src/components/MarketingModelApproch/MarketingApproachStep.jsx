@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const MarketingApproachStep = (props) => {
   return (
     <div className={`mma-ma-step ma-step-${props.number}`} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="500">

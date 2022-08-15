@@ -595,7 +595,6 @@
     border: 1px solid #DCDCDC;
     box-sizing: border-box;
     border-radius: 0;
-    padding: 12px 14px;
     font-size: 18px;
 }
 .gtm-write-us-modal .gtm-wu-form .form-control::placeholder {
@@ -1000,15 +999,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .gtm-banner-section .row > *, 
-    .gtm-finding-ways-section .row > *, 
-    .gtm-faqs-section .row > *, 
-    .gtm-expand-section .row > *, 
-    .gtm-product-strategy-section .row > *, 
-    .gtm-write-us-modal .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .gtm-faqs-section .gtm-faqs-title-row {
         padding-left: 10px;
         padding-right: 10px;

@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const RightForYouItem = (props) => {
     return (
         <div className="col-lg-4 wce-right-box-col">

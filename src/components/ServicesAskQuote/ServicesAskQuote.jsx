@@ -1,4 +1,3 @@
-import React from 'react'
 import './ServicesAskQuote.css'
 
 export const ServicesAskQuote = (props) => {

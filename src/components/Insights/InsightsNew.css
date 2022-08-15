@@ -540,10 +540,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .csuit-insights .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .csuit-insights .csuit-insights-all .insight-item {
         margin: 10px 5px;
     }

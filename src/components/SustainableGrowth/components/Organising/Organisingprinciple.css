@@ -25,32 +25,23 @@
     font-weight: 500;
     font-size: 32px  ;
     line-height: 42px  ;
-/* identical to box height, or 125% */
-
     text-transform: capitalize  ;
-
     color: #33657E  ;
 } 
 
 .container-2_text-Op{
-    font-weight: normal  ;
-    font-size: 16px  ;
-    line-height: 24px  ;
-    /* identical to box height, or 150% */
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
     width: 110% !important;
-    
-    color: #232323  ;
-/*     margin-right: 300px  ; */
+    color: #232323;
 
 }
 .container-3_text-Op{
-    font-weight: normal  ;
-    font-size: 16px  ;
-    line-height: 26px  ;
-    /* or 150% */
-
-
-    color: #232323  ;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #232323;
 }
 .wall-Op{
     position: absolute  ;
@@ -139,7 +130,6 @@
     margin-left: -80px  ;
     transform: rotate(-45deg)  ;
     transition: all 0.8s ease  ;
-    /* z-index: 100  ; */
    }
    .banner_right_inner-Op:hover .main-prev1-Op {
     transform: scale(1.03) rotate(-45deg)  ;

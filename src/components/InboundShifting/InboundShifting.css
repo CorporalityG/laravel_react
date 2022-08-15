@@ -495,20 +495,6 @@
 }
 
 
-@media only screen and (max-width: 600.99px) {
-    .is-banner-section .row > *, 
-    .is-commitment-section .row > *, 
-    .is-shifting-section .row > *, 
-    .is-curious-section .row > *, 
-    .is-problems-section .row > *, 
-    .is-work-section .row > *, 
-    .is-model-assessment-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
-}
-
-
 @media only screen and (max-width: 575.99px) {
     .is-banner-section .is-banner-content-row h1 {
         font-size: 22px;

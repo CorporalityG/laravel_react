@@ -91,12 +91,8 @@
 }
 
 .sacc4DiamondCard {
-  /* width: 282.8px;
-    height: 282.8px; */
   width: 300px;
   height: 300px;
-  /* width: 18.4vw;
-    height: 18.4vw; */
   transform: rotate(45deg);
   background: #ffffff;
   border: 1px solid #e8e8e8;
@@ -112,7 +108,6 @@
 
 .sacc4D1 .sacc4DCContent{
   padding-top: 38px;
-  /* border: 1px solid red; */
 }
 
 .sacc4D3 .sacc4DCContent{
@@ -152,15 +147,6 @@
     margin-right: -35px;
   }
 }
-/* @media(max-width:1300px){
-  .sacc4D1{
-
-    margin-left: -50px;
-  }
-  .sacc4D2{
-    margin-left: 10px;
-  }
-} */
 
 @media(max-width:767.846526px){
   .sacc4Container{

@@ -715,12 +715,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .mma-banner-section .row > *, 
-    .mma-models-section .row > *, 
-    .mma-marketing-approach-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .mma-banner-section .mma-b-dot {
         animation-name: none;
         top: 50%;

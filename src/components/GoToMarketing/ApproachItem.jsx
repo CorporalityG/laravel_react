@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const ApproachItem = (props) => {
     return (
         <div className={`col-lg-2 col-sm-6 gtm-a-col gtm-a-col-${props.number}`}>

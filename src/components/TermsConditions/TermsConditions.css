@@ -198,10 +198,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .terms-conditions-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .terms-conditions-section .terms-conditions-col {
         padding-left: 0 !important;
         padding-right: 0 !important;

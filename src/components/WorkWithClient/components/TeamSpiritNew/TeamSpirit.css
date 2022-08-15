@@ -167,11 +167,6 @@
   .text_1_invirogating{
     left: -7% !important;
   }
-  /* .community_first_heading_arrow-Invirogating{
-    position: absolute !important;
-    left: 20% !important;
-    top: 40px !important;
-  } */
   .community_second_heading_arrow-Invirogating{
     position: absolute !important;
     left: 101% !important;
@@ -531,29 +526,6 @@
 }
 
 @media only screen and (max-width: 502px) {
-/*   .community_second_heading_text-Invirogating {
-    font-size: 18px !important;
-    line-height: 18px !important;
-  }
-  .community_first_description-Invirogating {
-    margin-right: 30px !important;
-  }
-
-  .community_second_description-Invirogating {
-    font-size: 16px !important;
-    line-height: 17px !important;
-  }
-
-  .community_first_heading_text-Invirogating {
-    font-size: 18px !important;
-    line-height: 18px !important;
-  }
-
-  .community_first_description-Invirogating {
-    font-size: 16px !important;
-    line-height: 17px !important;
-  } */
-
   .community_top_image-Invirogating {
     top: -85px !important;
     right: 40px !important;

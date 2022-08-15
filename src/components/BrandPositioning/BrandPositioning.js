@@ -128,38 +128,38 @@ export default function BrandPositioning() {
                   <div className="row bp-p-boxes-row">
                     <ProcessItem
                       number={`01`}
-                      title={`${pageDetail.detail.process_step_1_title}`}
-                      subtitle={`${pageDetail.detail.process_step_1_subtitle}`}
+                      title={`${pageDetail.detail.process_step_1_title ?? ''}`}
+                      subtitle={`${pageDetail.detail.process_step_1_subtitle ?? ''}`}
                     />
 
                     <ProcessItem
                       number={`02`}
-                      title={`${pageDetail.detail.process_step_2_title}`}
-                      subtitle={`${pageDetail.detail.process_step_2_subtitle}`}
+                      title={`${pageDetail.detail.process_step_2_title ?? ''}`}
+                      subtitle={`${pageDetail.detail.process_step_2_subtitle ?? ''}`}
                     />
 
                     <ProcessItem
                       number={`03`}
-                      title={`${pageDetail.detail.process_step_3_title}`}
-                      subtitle={`${pageDetail.detail.process_step_3_subtitle}`}
+                      title={`${pageDetail.detail.process_step_3_title ?? ''}`}
+                      subtitle={`${pageDetail.detail.process_step_3_subtitle ?? ''}`}
                     />
 
                     <ProcessItem
                       number={`04`}
-                      title={`${pageDetail.detail.process_step_4_title}`}
-                      subtitle={`${pageDetail.detail.process_step_4_subtitle}`}
+                      title={`${pageDetail.detail.process_step_4_title ?? ''}`}
+                      subtitle={`${pageDetail.detail.process_step_4_subtitle ?? ''}`}
                     />
 
                     <ProcessItem
                       number={`05`}
-                      title={`${pageDetail.detail.process_step_5_title}`}
-                      subtitle={`${pageDetail.detail.process_step_5_subtitle}`}
+                      title={`${pageDetail.detail.process_step_5_title ?? ''}`}
+                      subtitle={`${pageDetail.detail.process_step_5_subtitle ?? ''}`}
                     />
 
                     <ProcessItem
                       number={`06`}
-                      title={`${pageDetail.detail.process_step_6_title}`}
-                      subtitle={`${pageDetail.detail.process_step_6_subtitle}`}
+                      title={`${pageDetail.detail.process_step_6_title ?? ''}`}
+                      subtitle={`${pageDetail.detail.process_step_6_subtitle ?? ''}`}
                     />
                   </div>
                 </div>

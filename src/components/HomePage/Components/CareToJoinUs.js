@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BASE_URL, API_IMG_URL } from '../../../config';
+import { API_IMG_URL } from '../../../config';
 import Aos from "aos";
 import "./CareToJoinUs.css";
 import { useNavigate } from "react-router";

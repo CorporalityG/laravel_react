@@ -554,12 +554,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .ot-banner-section .row > *, 
-    .ot-leadership-section .row > *, 
-    .ot-team-members-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .ot-team-members-section .ot-tm-row {
         margin-top: -50px;
     }

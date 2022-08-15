@@ -26,15 +26,12 @@
   color: #757575;
 }
 
-/*.bookcal-Image{
-   width: 100%; 
-}*/
-
 .conmap-detail-head > button{
   margin: 2% !important;
 }
 .know_button a {
   color: #000;
+  text-decoration: none;
 }
 
 .SpeakerBooking {

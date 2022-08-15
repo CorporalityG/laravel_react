@@ -699,14 +699,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .cxo-banner-section .row > *, 
-    .cxo-lifecycle-section .row > *, 
-    .cxo-expect-section .row > *, 
-    .cxo-leverage-model-section .row > *, 
-    .cxo-faqs-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .cxo-banner-section .cxo-social-section {
         left: 20px;
     }

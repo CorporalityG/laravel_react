@@ -149,10 +149,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .privacy-policy-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .privacy-policy-section .pp-heading-row {
         padding-left: 10px;
         padding-right: 10px;

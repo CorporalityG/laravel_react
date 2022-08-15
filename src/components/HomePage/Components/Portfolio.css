@@ -487,10 +487,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-  .portfolio-container .row > * {
-    padding-right: calc(var(--bs-gutter-x) * .5) !important;
-    padding-left: calc(var(--bs-gutter-x) * .5) !important;
-  }
   .portfolio-container .portfolio-boxes .portfolio-box:not(:last-child) {
     margin-bottom: 30px;
   }

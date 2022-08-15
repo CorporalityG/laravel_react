@@ -3,7 +3,7 @@ import './IntractiveBluePrint.css'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config'
 import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
 import AOS from "aos";
-import WriteToUsModal from "./components/WriteToUsModal";
+import WriteToUsModal from "./WriteToUsModal";
 import ServicesClients from "../ServicesClients/ServicesClients";
 import ServicesInsights from "../ServicesInsights/ServicesInsights";
 import { Helmet, HelmetProvider } from 'react-helmet-async';

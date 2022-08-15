@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const LifeCycleStepItem = (props) => {
     return (
         <div className={`cmo-lc-step cmo-lc-step-${props.step}`}>

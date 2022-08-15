@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const WhyHireItem = (props) => {
     return (
         <div className="col-lg-3 col-sm-6 coo-wh-box-col">

@@ -1,6 +1,4 @@
 .ppc2RowContainer{
-    /* height: calc(100vh - 80px); 
-    margin: 0 74px 0 74px !important; */
     margin: 100px;
 }
 
@@ -22,13 +20,6 @@
     height: 356px;
     transform: translate(10%, 150%);
 }
-/* .ppc2Img2 {
-    position: relative;
-    width: 448.04px;
-    height: 450px;
-    left: 0%;
-    transform: translateX(15%) !important;
-} */
 .ppc2MainImg{
     position: relative;
     width: 320px;
@@ -107,7 +98,6 @@
         top: 200%;
         left: 30%;
         transform: translate(-50%, -104%);
-        /* display: none; */
     }
    
     .ppc2MainImg{
@@ -152,8 +142,7 @@
 }
 @media (min-width: 769px) and (max-width: 1199.98px){
     .ppc2RowContainer{ 
-        margin: 0px 20px 0 20px !important; 
-        /* margin-bottom: 50px !important; */
+        margin: 0px 20px 0 20px !important;
     }
     .ppc2Img2back {
         width: 116px;

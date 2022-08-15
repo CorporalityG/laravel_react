@@ -787,14 +787,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .cmo-banner-section .row > *, 
-    .cmo-lifecycle-section .row > *, 
-    .cmo-expect-section .row > *, 
-    .cmo-why-hire-section .row > *, 
-    .cmo-faqs-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .cmo-banner-section .cmo-social-section {
         left: 20px;
     }

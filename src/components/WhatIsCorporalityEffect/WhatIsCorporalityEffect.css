@@ -89,6 +89,7 @@
     padding: 10px 35px;
     margin-top: 30px;
     cursor: pointer;
+    text-decoration: none;
 }
 .wice-banner-main .wice-banner-content-row .wice-banner-btn:not(:last-child) {
     margin-right: 15px;
@@ -510,15 +511,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .wice-banner-main .row > *, 
-    .wice-factor-section .row > *, 
-    .wice-origin-section .row > *, 
-    .wice-effective-section .row > *, 
-    .wice-marketing-section .row > *, 
-    .wice-key-elements-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .wice-banner-main .wice-banner-social-main .wice-banner-social-img {
         display: none;
     }

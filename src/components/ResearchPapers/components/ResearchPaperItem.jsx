@@ -1,5 +1,4 @@
 import { BASE_URL } from '../../../config';
-import React from 'react';
 import "./ResearchPaperItem.css";
 import { Link } from 'react-router-dom';
 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import './DigitalMediaMarketing.css'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../config'
-import { MarketingStrategyItem } from "./Components/MarketingStrategyItem";
-import { MarketingGoalsItem } from "./Components/MarketingGoalsItem";
+import { MarketingStrategyItem } from "./MarketingStrategyItem";
+import { MarketingGoalsItem } from "./MarketingGoalsItem";
 import Accordion from 'react-bootstrap/Accordion'
-import { WhattoExpectItem } from "./Components/WhattoExpectItem";
+import { WhattoExpectItem } from "./WhattoExpectItem";
 import Aos from "aos";
 import { ServicesAskQuote } from "../ServicesAskQuote/ServicesAskQuote";
 import ServicesClients from "../ServicesClients/ServicesClients";

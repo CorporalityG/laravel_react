@@ -862,16 +862,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .coo-banner-section .row > *, 
-    .coo-level-strategy-section .row > *, 
-    .coo-methodology-process-section .row > *, 
-    .coo-expect-section .row > *, 
-    .coo-why-hire-section .row > *, 
-    .coo-success-strategy-section .row > *, 
-    .coo-faqs-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .coo-banner-section .coo-social-section {
         left: 20px;
     }

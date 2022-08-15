@@ -1,12 +1,4 @@
 import React, { useEffect, useState, Suspense } from "react";
-/* import Services from "./Components/Services";
-import EmotionalQuest from "./Components/EmotionalQuest";
-import LatestInsights from "./Components/LatestInsights";
-import NewBanner from "./Components/NewBanner";
-import Banner2 from "./Components/Banner2";
-import NewPortfolio from "./Components/NewPortfolio";
-import CareToJoinUs from "./Components/CareToJoinUs";
-import OurIniatives from "./Components/OurIniatives"; */
 import AOS from "aos";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { API_BASE_URL } from '../../config'
@@ -28,8 +20,7 @@ function HomePage() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1500,
-      disable: "mobile",
+      duration: 2000
     });
 
     getPageDetail()

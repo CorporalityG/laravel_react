@@ -1,4 +1,3 @@
-
 import './Page3.css'
 import React, { useEffect } from 'react';
 import Aos from 'aos';

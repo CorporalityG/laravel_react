@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const ProcessItem = (props) => {
     return (
         <div className="col-lg-4 col-md-6 cc-process-box-col">

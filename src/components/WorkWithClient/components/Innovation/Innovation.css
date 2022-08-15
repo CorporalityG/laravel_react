@@ -35,10 +35,12 @@
   margin-left: 300px;
   margin-bottom: -30px;
 }
-
+.linkinnovation {
+  text-decoration: none;
+}
 .button-4-Innovation {
   width: 180px;
-  height: 60px;
+  height: 50px;
   display: flex;
   margin-left: 0px;
   margin-bottom: 0px;
@@ -51,13 +53,11 @@
 }
 
 .button-4-Innovation .button-link-Innovation {
-  margin-top: -10px;
   text-decoration: none;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 16px;
-  text-align: center;
   text-align: center;
   color: #232323;
 }
@@ -67,9 +67,9 @@
 }
 
 .button-4-Innovation:hover .button-link-Innovation {
-  text-decoration: none !important;
-  color: white !important;
-  transition: none !important;
+  text-decoration: none;
+  color: white;
+  transition: none;
 }
 
 .cont-5-text-3-Innovation {
@@ -133,12 +133,6 @@
   top: 40px;
   margin-top: 50px !important;
 }
-/* @media (min-width:1500px){
-  .cont-5-text-2-Innovation{
-    margin-right: 400px !important;
-    margin-left : 400px !important;
-  }
-} */
 
 @media(max-width:1399.811654px){
   .cont-5-text-2-Innovation {
@@ -159,9 +153,6 @@
   }
 }
 @media (max-width: 992px) {
-  /* .group5-Innovation {
-    top: 3850px;
-  } */
   .cont-5-text-1-Innovation {
     font-size: 16px;
     line-height: 20px;
@@ -193,15 +184,6 @@
     font-size: 12px;
     line-height: 20px;
   }
-  /* .group5-Innovation {
-    top: 3800px;
-  } */
-}
-
-@media (max-width: 725px) {
-  /* .group5-Innovation {
-    display: none;
-  } */
 }
 
 @media (max-width: 612px) {

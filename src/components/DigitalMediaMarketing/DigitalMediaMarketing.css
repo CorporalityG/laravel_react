@@ -280,9 +280,6 @@
 }
 .dmm-goals-section .marketing-goals-arrow {
     position: absolute;
-    /* left: 55%;
-    transform: translate(-55%, 0);
-    bottom: 125px; */
     animation: x-motion 3s ease-in-out 0s infinite alternate;
 }
 @keyframes x-motion {
@@ -732,16 +729,6 @@
 
 
 @media only screen and (max-width: 600.99px) {
-    .dmm-banner-section .row > *, 
-    .dmm-strategy-section .row > *, 
-    .dmm-key-objectives-section .row > *, 
-    .dmm-goals-section .row > *, 
-    .dmm-faqs-section .row > *, 
-    .dmm-expect-section .row > *, 
-    .dmm-perfect-scenario-section .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .dmm-faqs-section .dmm-faqs-title-row {
         padding-left: 10px;
         padding-right: 10px;

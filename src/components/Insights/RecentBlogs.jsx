@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { API_BASE_URL } from '../../config'
 import { RecentBlogItem } from './RecentBlogItem';
 import { Link } from 'react-router-dom'
