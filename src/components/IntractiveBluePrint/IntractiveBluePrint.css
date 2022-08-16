@@ -437,7 +437,6 @@
     border: 1px solid #DCDCDC;
     box-sizing: border-box;
     border-radius: 0;
-    padding: 12px 14px;
     font-size: 18px;
 }
 .ibp-write-us-modal .ibp-wu-form .form-control::placeholder {

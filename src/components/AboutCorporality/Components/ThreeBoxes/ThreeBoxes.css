@@ -52,7 +52,6 @@
 
 .first_heading,
 .second_heading {
-  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
@@ -64,7 +63,6 @@
 .first_description,
 .second_description,
 .third_box_text {
-  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

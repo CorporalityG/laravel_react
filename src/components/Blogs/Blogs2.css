@@ -253,6 +253,7 @@
     font-size: 14px;
     font-weight: 500;
     color: rgb(31, 31, 31);
+    text-decoration: none;
 }
 .blog2-corporate-strategy-section .title-first a {
     color: #31647c;
@@ -327,6 +328,7 @@
     color: rgb(31, 31, 31);
     font-size: 22px;
     font-weight: 500;
+    text-decoration: none;
 }
 .blog2-video-section .blog2-v-title svg {
     vertical-align: middle;

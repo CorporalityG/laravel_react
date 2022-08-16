@@ -1,9 +1,8 @@
 import "./App.css";
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"
-import "aos/dist/aos.css";
 
+const Styling = lazy(() => import("./StylingComponent"));
 const Navbar = lazy(() => import("./components/Navbar/Navbar"));
 const Footer = lazy(() => import("./components/Footer/Footer.jsx"));
 const HomePage = lazy(() => import("./components/HomePage/HomePage"));
@@ -81,6 +80,7 @@ function App() {
   return (
     <>
       <Suspense fallback={``}>
+        <Styling />
         <BrowserRouter>
           <Navbar />
 

@@ -15,7 +15,6 @@
 }
 
 .fearless_heading {
-  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -37,7 +36,6 @@
 }
 
 .textside_heading {
-  font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -47,7 +45,6 @@
 }
 
 .textside_content {
-  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

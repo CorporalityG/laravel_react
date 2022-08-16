@@ -55,7 +55,6 @@
   display: block;
   position: relative;
   letter-spacing: 1px;
-  font-family: "Roboto",sans-serif;
 }
 .research-papers-main .research-papers-widget .widget_content ul li a:hover {
   color: #a16bb8;

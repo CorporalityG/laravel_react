@@ -47,6 +47,7 @@
 }
 .csuit-single-page .csuit-single-banner .csuit-single-breadcrumbs ul li a {
     color: #fff;
+    text-decoration: none;
 }
 .csuit-single-page .csuit-single-banner .csuit-single-banner-content h1 {
     text-align: center;
@@ -124,6 +125,7 @@
     align-items: center;
     justify-content: center;
     color: #31647c;
+    text-decoration: none;
 }
 
 
