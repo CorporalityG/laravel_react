@@ -5,7 +5,6 @@ import topHandler from '../../../CommonHandler/TopHandler';
 import { NavbarContext } from '../Context/NavbarContext';
 import "./Insights.css"
 
-
 const Insights = () => {
     const navigate = useNavigate();
     const {setShowInsights, showInsights, isLargeScreen, setNavClicked} = useContext(NavbarContext);
@@ -24,19 +23,14 @@ const Insights = () => {
                                 <h6>Corporality - Books</h6>
                                 <div className="diamond-line"></div>
                             </div>
-                            
                             <div className="insights-container-body-section" onClick={() => {closeOnLink(); window.open("https://corporality.global/club", "_blank");}}>
                                 <h6>Corporality - Club</h6>
                                 <div className="diamond-line"></div>
                             </div>
-
-                            
                             <div className="insights-container-body-section" onClick={() => {closeOnLink(); window.open("https://corporality.global/businessmagazine", "_blank");}}>
                                 <h6>Corporality - Magazine</h6>
                                 <div className="diamond-line"></div>
                             </div>
-
-                            
                             <div className="insights-container-body-section" onClick={() => {closeOnLink(); window.open("http://corporality.global/talk/", "_blank");}}>
                                 <h6>Corporality - Talk</h6>
                                 <div className="diamond-line"></div>

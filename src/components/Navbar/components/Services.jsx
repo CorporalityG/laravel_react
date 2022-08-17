@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import './Services.css'
-import servicesImage from '../assets/services-img-menu.png'
 import OutsideClickHandler from 'react-outside-click-wrapper';
 import { Link } from 'react-router-dom';
 import { NavbarContext } from '../Context/NavbarContext';
@@ -27,7 +26,6 @@ const Services = () => {
                                 <h6>Brand Positioning</h6>
                                 <div className="diamond-line"></div>
                             </Link>
-
                             <Link to="/digital-media-marketing" onClick={closeOnLink} className="services-section-items">
                                 <h6>Digital Media Marketing</h6>
                                 <div className="diamond-line"></div>
@@ -45,12 +43,10 @@ const Services = () => {
                                 <h6>Outsourced CXO</h6>
                                 <div className="diamond-line"></div>
                             </Link>
-
                             <Link to="/outsourced-cmo" onClick={closeOnLink} className="services-section-items">
                                 <h6>Outsourced CMO</h6>
                                 <div className="diamond-line"></div>
                             </Link>
-
                             <Link to="/corporate-strategy" onClick={closeOnLink} className="services-section-items">
                                 <h6>Outsourced COO</h6>
                                 <div className="diamond-line"></div>
@@ -68,12 +64,10 @@ const Services = () => {
                                 <h6>Go to Marketing Strategy</h6>
                                 <div className="diamond-line"></div>
                             </Link>
-
                             <Link to="/account-based-marketing" onClick={closeOnLink} className="services-section-items">
                                 <h6>Account Based Marketing</h6>
                                 <div className="diamond-line"></div>
                             </Link>
-
                             <Link to="/interactive-blueprint" onClick={closeOnLink} className="services-section-items">
                                 <h6>Interactive Blueprint</h6>
                                 <div className="diamond-line"></div>

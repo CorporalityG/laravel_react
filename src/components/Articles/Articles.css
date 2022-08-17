@@ -1,3 +1,6 @@
+.articles  a {
+    text-decoration: none;
+}
 .articles .article-item {
     overflow: hidden;
     margin-bottom: 30px;
@@ -64,8 +67,6 @@
     display: inline-block;
     color: #31647c;
 }
-
-
 .articles-latest-section {
     margin-top: 80px;
     padding-top: 30px;
@@ -122,8 +123,6 @@
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-
-
 .articles-constructions-section {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -427,7 +426,6 @@
 .articles-fintech-section .latest-article-item .posted-date .date {
     font-weight: 500;
 }
-
 .articles-meditech-explore-section {
     padding-top: 40px;
     padding-bottom: 40px;

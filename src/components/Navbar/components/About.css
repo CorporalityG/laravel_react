@@ -17,14 +17,12 @@
 .about-section{
     margin-bottom: 30px;
 }
-
 .about-section-head{
     display: flex;
     flex-direction: row;
     align-items: center;
     color: #31647c;
 }
-
 .about-section-head h3{
     font-size: 16px;
     font-weight: 700;
@@ -43,26 +41,20 @@
     flex-wrap: wrap;
     padding: 0px !important;
 }
-
 .about-container .section-list-items{
     margin-top: 5px;
     position: relative;
     text-decoration: none;
     margin-right: 30px;
 }
-
-
 .about-container .section-list-items:hover .diamond-line{
     background-color: #a06db0 ;
     color: #fff;
 }
-
-
 .about-container .section-list-items:hover::after{
     background-color: #a06db0 ;
     color: #fff;
 }
-
 .about-container .section-list-items h6{
     font-size: 16px;
     padding: 15px 15px !important;
@@ -70,11 +62,9 @@
     margin: 0px !important;
     color: #31647C;
 }
-
 .about-container .section-list-items:hover h6{
     font-weight: 600;
 }
-
 .about-container .diamond-line{
     width: 225px;
     height: 1px;
@@ -132,7 +122,6 @@
     text-align: center;
     color: #FFFFFF;
 }
-
 .about-container .about-section-left {
     width: 75%;
     padding-left: 80px;

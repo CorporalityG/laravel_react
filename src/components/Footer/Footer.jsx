@@ -25,29 +25,23 @@ export default function Footer() {
                   <label className="menu-open-button" htmlFor="menu-open">
                     <i className="fa fa-share-alt" />
                   </label>
-                  <a href="https://www.instagram.com/corporalityg/" className="menu-item instagram">
-                    {" "}
+                  <a href="https://www.instagram.com/corporalityg/" className="menu-item instagram" aria-label={`instagram`}>
                     <i className="fa fa-instagram" />
                   </a>
-                  <a href="https://www.facebook.com/CorporalityG/" className="menu-item facebook">
-                    {" "}
+                  <a href="https://www.facebook.com/CorporalityG/" className="menu-item facebook" aria-label={`facebook`}>
                     <i className="fa fa-facebook-f" />
                   </a>
-                  <a href="https://in.pinterest.com/CorporalityG/" className="menu-item pinterest">
-                    {" "}
+                  <a href="https://in.pinterest.com/CorporalityG/" className="menu-item pinterest" aria-label={`pinterest`}>
                     <i className="fa fa-pinterest" />
                   </a>
-                  <a href="https://twitter.com/corporalityg/" className="menu-item twitter">
-                    {" "}
+                  <a href="https://twitter.com/corporalityg/" className="menu-item twitter" aria-label={`twitter`}>
                     <i className="fa fa-twitter" />
                   </a>
-                  <a href="https://www.linkedin.com/company/corporality/" className="menu-item linkedin">
+                  <a href="https://www.linkedin.com/company/corporality/" className="menu-item linkedin" aria-label={`linkedin`}>
                     <i className="fa fa-linkedin" />
                   </a>
-                  <a href="https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg/" className="menu-item youtube">
-                    {" "}
+                  <a href="https://www.youtube.com/channel/UC4EISt8kHI4zzpmbIBMIBbg/" className="menu-item youtube" aria-label={`youtube`}>
                     <i className="fa fa-youtube-play" />
-                    {" "}
                   </a>
                 </nav>
               </div>
@@ -63,10 +57,10 @@ export default function Footer() {
 
                   <div className="checkBox">
                     <input className="form-check-input" type="checkbox" id="flexCheckIndeterminate" />
-                    <p className="text-above-button">
+                    <label htmlFor="flexCheckIndeterminate" className="text-above-button">
                       I agree to have my personal data stored, processed and
                       analysed by Corporality as outlined in this Privacy Policy.*
-                    </p>
+                    </label>
                   </div>
                   <div className="footer-button-wrapper">
                     <button className="zf-submitColor footerButton">Subscribe</button>

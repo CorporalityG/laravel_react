@@ -509,24 +509,36 @@
   left: 10%;
   width: 78px;
   height: 78px;
+  background-image: url('./images/rectangle-1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .bannerContainer .bannerImgs .rectangle-2 {
   top: 25%;
   left: 35%;
   width: 29px;
   height: 29px;
+  background-image: url('./images/rectangle-2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .bannerContainer .bannerImgs .rectangle-3 {
   top: 10%;
   left: 43%;
   width: 50px;
   height: 50px;
+  background-image: url('./images/rectangle-3.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .bannerContainer .bannerImgs .rectangle-4 {
   top: 120%;
   left: 35%;
   width: 36px;
   height: 36px;
+  background-image: url('./images/rectangle-4.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .bannerContainer .bannerImgs .banner-image-1 {
   top: 100%;

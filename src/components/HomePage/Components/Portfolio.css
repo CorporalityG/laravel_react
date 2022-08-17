@@ -292,6 +292,7 @@
 .portfolio-container .portfolio-right .portfolio-link .portfolio-link-arrow {
   margin-left: 5px;
   animation: arrowSidewise 1s linear infinite;
+  background-image: url('./images/right-arrow-blue.png');
   background-repeat: no-repeat;
   background-position: center;
   height: 8px;

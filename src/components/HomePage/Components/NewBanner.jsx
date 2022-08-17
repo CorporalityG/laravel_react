@@ -83,13 +83,13 @@ const NewBanner = (pageDetail) => {
                                         </div>
 
                                         <div className="bannerImgs">
-                                            <div className='bannerImgsRectangle rectangle-1' data-aos="fade-right" data-aos-duration="3000" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-1.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-1' data-aos="fade-right" data-aos-duration="3000"></div>
 
-                                            <div className='bannerImgsRectangle rectangle-2' data-aos="fade-down" data-aos-duration="3000" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-2.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-2' data-aos="fade-down" data-aos-duration="3000"></div>
 
-                                            <div className='bannerImgsRectangle rectangle-3' data-aos="fade-left" data-aos-duration="3000" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-3.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-3' data-aos="fade-left" data-aos-duration="3000"></div>
 
-                                            <div className='bannerImgsRectangle rectangle-4' data-aos="fade-up" data-aos-duration="3000" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-4.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-4' data-aos="fade-up" data-aos-duration="3000"></div>
                                         </div>
                                     </div>
 
@@ -137,13 +137,13 @@ const NewBanner = (pageDetail) => {
                                         </div>
 
                                         <div className="bannerImgs">
-                                            <div className='bannerImgsRectangle rectangle-1' style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-1.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-1'></div>
 
-                                            <div className='bannerImgsRectangle rectangle-2' style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-2.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-2'></div>
 
-                                            <div className='bannerImgsRectangle rectangle-3' style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-3.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-3'></div>
 
-                                            <div className='bannerImgsRectangle rectangle-4' style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-4.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-4'></div>
                                         </div>
                                     </div>
 
@@ -190,13 +190,13 @@ const NewBanner = (pageDetail) => {
                                         </div>
 
                                         <div className="bannerImgs">
-                                            <div className='bannerImgsRectangle rectangle-1' style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-1.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-1'></div>
 
-                                            <div className='bannerImgsRectangle rectangle-2' style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-2.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-2'></div>
 
-                                            <div className='bannerImgsRectangle rectangle-3' style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-3.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-3'></div>
 
-                                            <div className='bannerImgsRectangle rectangle-4' style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/rectangle-4.png)" }}></div>
+                                            <div className='bannerImgsRectangle rectangle-4'></div>
                                         </div>
                                     </div>
 

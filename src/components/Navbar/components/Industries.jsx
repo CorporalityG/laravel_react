@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { NavbarContext } from '../Context/NavbarContext';
 import topHandler from '../../../CommonHandler/TopHandler';
 
-
 const Industries = () => {
     const { showIndustries, setShowIndustries, isLargeScreen, setNavClicked } = useContext(NavbarContext);
     const closeOnLink = () => {

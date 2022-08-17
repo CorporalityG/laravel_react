@@ -16,7 +16,6 @@
     justify-content: space-around;
     min-width: 1266px;
 }
-
 .industries-section{
     display: flex;
     flex-direction: column;
@@ -25,22 +24,18 @@
     margin-top: 24px !important;
     margin-left: 50px !important;
 }
-
 .industries-section:first-child{
     margin-left: 90px !important;
 }
-
 .industries-section:last-child{
     margin-right: 90px !important;
 }
-
 .industries-section .industries-item{
     position: relative;
     color: #31647C;
     text-decoration: none !important;
     margin-bottom: 5px;
 }
-
 .industries-item::after{
     bottom: -4px;
     position: absolute;
@@ -52,7 +47,6 @@
     background-color: #e1e2e2;
     transform: rotate(45deg);
 }
-
 .industries-item-content{
     font-weight: 400;
     font-size: 16px;
@@ -60,19 +54,15 @@
     margin: 0px !important;
     width: 225px;
 }
-
 .industries-item:hover .industries-item-content{
     font-weight: 600;
 }
-
 .industries-item:hover .diamond-line{
     background-color: #a06db0;
 }
-
 .industries-item:hover::after{
     background-color: #a06db0;
 }
-
 .industries-item .diamond-line{
     width: 100%;
     height: 1px;

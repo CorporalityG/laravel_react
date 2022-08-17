@@ -1,5 +1,4 @@
 .back-btn{
-    /* background-color: red; */
     height: 100%;
     width: 40px;
     padding: 5px !important;
@@ -91,22 +90,12 @@
 
 @media only screen and (max-width: 768px) {
     .about-sub-menu{
-        /* left: 0px; */
-        /* opacity: 0; */
-        /* transform: translateY(calc(-50% + 20px)); */
-        /* top: calc(-50% - 80px); */
-        /* width: 100%; */
-        /* z-index: -9999999; */
         width: 100%;
         transform: translateX(calc(-65%));
     }
     .about-sub-menu-show{
         transform: translateX(0%);
         left: 0px;
-        /* left: 0px; */
-        /* all: unset; */
         opacity: 1 !important;
-        /* top: calc(50% + 25px); */
-        /* transform: translateX(0%) translateY(calc(50% + 80px)); */
     }
 }

@@ -1,12 +1,9 @@
 import React, { useContext } from 'react'
 import './About.css'
-import careersImg from '../assets/careers.png';
 import OutsideClickHandler from 'react-outside-click-wrapper';
 import { Link } from 'react-router-dom';
 import { NavbarContext } from '../Context/NavbarContext';
 import topHandler from "../../../CommonHandler/TopHandler"
-// import {withRouter} from 'react-router';
-
 
 const About = () => {
     const {setShowAbout, showAbout, setShowAbout2, setMenuId, isLargeScreen} = useContext(NavbarContext);
@@ -26,7 +23,7 @@ const About = () => {
 
     return (
         <OutsideClickHandler className="outside-handler" onOutsideClick={()=> setShowAbout(false)} >
-        <div className={`about-container ${showAbout? "" : "hidden"}`} onMouseOver={() => {/*console.log("over about");*/if(isLargeScreen)setShowAbout(true)}} onMouseLeave={() => {if(isLargeScreen)setShowAbout(false)}} >
+        <div className={`about-container ${showAbout? "" : "hidden"}`} onMouseOver={() => {if(isLargeScreen)setShowAbout(true)}} onMouseLeave={() => {if(isLargeScreen)setShowAbout(false)}} >
             <div className="about-section-main about-section-left">
                 <div className="about-section who-we-are">
                     <div className="about-section-head" onClick={() => { if(!isLargeScreen)show1()}}>
@@ -117,4 +114,3 @@ const About = () => {
 }
 
 export default About
-// export default withRouter(About)

@@ -1,5 +1,5 @@
 import React from "react";
-import { BASE_URL, API_IMG_URL } from '../../../config';
+import { API_IMG_URL } from '../../../config';
 import "./Banner2.css";
 import { Link } from "react-router-dom";
 
@@ -19,9 +19,9 @@ export default function Banner2(pageDetail) {
                   <p className="text-wrap text-center mt-2">
                     {`${pageDetail.box_1_description}`}
                   </p>
-                  <Link to={`${pageDetail.box_1_btn_link}`} className="learn-more">
+                  <Link to={`${pageDetail.box_1_btn_link}`} className="learn-more" aria-label={`${pageDetail.box_1_title}`}>
                     <span className="learn-more-text">{`${pageDetail.box_1_btn_text}`}
-                      <span className="learn-more-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow.png)" }}></span>
+                      <span className="learn-more-arrow"></span>
                     </span>
                   </Link>
                 </div>
@@ -33,10 +33,10 @@ export default function Banner2(pageDetail) {
                 </div>
                 <div className="box position-relative">
                   <div className="position-absolute start-50 top-0 translate-middle-x my-4">
-                    <div className="dd1 ddy" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-23.png)" }}></div>
+                    <div className="dd1 ddy"></div>
                   </div>
                   <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
-                    <div className="dd1 ddb" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-24.png)" }}></div>
+                    <div className="dd1 ddb"></div>
                   </div>
                 </div>
               </div>
@@ -49,9 +49,9 @@ export default function Banner2(pageDetail) {
                   <p className="text-wrap text-center mt-2">
                     {`${pageDetail.box_2_description}`}
                   </p>
-                  <Link to={`${pageDetail.box_2_btn_link}`} className="learn-more">
+                  <Link to={`${pageDetail.box_2_btn_link}`} className="learn-more" aria-label={`${pageDetail.box_2_title}`}>
                     <span className="learn-more-text">{`${pageDetail.box_2_btn_text}`}
-                      <span className="learn-more-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow.png)" }}></span>
+                      <span className="learn-more-arrow"></span>
                     </span>
                   </Link>
                 </div>
@@ -67,10 +67,10 @@ export default function Banner2(pageDetail) {
                 </div>
                 <div className="box">
                   <div className="position-absolute start-50 top-0 translate-middle-x my-4">
-                    <div className="dd1 ddy" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-23.png)" }}></div>
+                    <div className="dd1 ddy"></div>
                   </div>
                   <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
-                    <div className="dd1 ddb" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-24.png)" }}></div>
+                    <div className="dd1 ddb"></div>
                   </div>
                 </div>
               </div>
@@ -81,9 +81,9 @@ export default function Banner2(pageDetail) {
                   <p className="text-wrap text-center mt-2">
                     {`${pageDetail.box_3_description}`}
                   </p>
-                  <Link to={`${pageDetail.box_3_btn_link}`} className="learn-more">
+                  <Link to={`${pageDetail.box_3_btn_link}`} className="learn-more" aria-label={`${pageDetail.box_3_title}`}>
                     <span className="learn-more-text">{`${pageDetail.box_3_btn_text}`}
-                      <span className="learn-more-arrow" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/right-arrow.png)" }}></span>
+                      <span className="learn-more-arrow"></span>
                     </span>
                   </Link>
                 </div>
@@ -95,10 +95,10 @@ export default function Banner2(pageDetail) {
                 </div>
                 <div className="box">
                   <div className="position-absolute start-50 top-0 translate-middle-x my-4">
-                    <div className="dd1 ddy" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-23.png)" }}></div>
+                    <div className="dd1 ddy"></div>
                   </div>
                   <div className="position-absolute start-0 bottom-0 translate-middle-x mx-4 my-5">
-                    <div className="dd1 ddb" style={{ backgroundImage: "url(" + BASE_URL + "/img/HomePage/media/polygon-24.png)" }}></div>
+                    <div className="dd1 ddb"></div>
                   </div>
                 </div>
               </div>

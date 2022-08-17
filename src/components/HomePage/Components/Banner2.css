@@ -88,12 +88,18 @@
   transform: rotate(45deg);
 }
 .dbanner .ddy {
+  background-image: url('./images/polygon-23.png');
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 24px;
   height: 24px;
 }
 .dbanner .ddb {
   width: 15px;
   height: 15px;
+  background-image: url('./images/polygon-24.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .dbanner .componentText {
@@ -143,6 +149,7 @@
   padding: 0px 12px;
   -webkit-animation: arrowSidewise 1s linear infinite;
           animation: arrowSidewise 1s linear infinite;
+  background-image: url('./images/right-arrow.png');
   background-repeat: no-repeat;
   background-position: center;
 }
