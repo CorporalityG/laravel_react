@@ -43,7 +43,7 @@ const Ideation = (pageDetail) => {
                             <div className="text-box-3-Ideation">
                                 <p className='container-3_text-1_heading-Ideation'>{`${pageDetail.fearless_item_1_title}`}</p>
                                 <p className='container-3_text-1-Ideation'>{`${pageDetail.fearless_item_1_description}`}</p>
-                                <a className='exploreinit-Ideation' href={`${pageDetail.fearless_item_1_btn_link}`}>
+                                <a className='exploreinit-Ideation' href={`${pageDetail.fearless_item_1_btn_link ?? '#'}`}>
                                     <div className="explore-4-Ideation">
                                         <div className="explore-link-Ideation">
                                             <img src={explorerectIdeation} alt='explorerectIdeation' className='explore-rect-Ideation' />
@@ -61,7 +61,7 @@ const Ideation = (pageDetail) => {
                             <div className="text-box-3-Ideation">
                                 <p className='container-3_text-2_heading-Ideation'>{`${pageDetail.fearless_item_2_title}`}</p>
                                 <p className='container-3_text-2-Ideation'>{`${pageDetail.fearless_item_2_description}`}</p>
-                                <a className='exploreinit-Ideation' href={`${pageDetail.fearless_item_2_btn_link}`}>
+                                <a className='exploreinit-Ideation' href={`${pageDetail.fearless_item_2_btn_link ?? '#'}`}>
                                     <div className="explore-4-Ideation">
                                         <div className="explore-link-Ideation">
                                             <img src={explorerectIdeation} alt='explorerectIdeation' className='explore-rect-Ideation' />
@@ -80,7 +80,7 @@ const Ideation = (pageDetail) => {
                             <div className="text-box-3-Ideation">
                                 <p className='container-3_text-3_heading-Ideation'>{`${pageDetail.fearless_item_3_title}`}</p>
                                 <p className='container-3_text-3-Ideation'>{`${pageDetail.fearless_item_3_description}`}</p>
-                                <a className='exploreinit-Ideation' href={`${pageDetail.fearless_item_3_btn_link}`}>
+                                <a className='exploreinit-Ideation' href={`${pageDetail.fearless_item_3_btn_link ?? '#'}`}>
                                     <div className="explore-4-Ideation">
                                         <div className="explore-link-Ideation">
                                             <img src={explorerectIdeation} alt='explorerectIdeation' className='explore-rect-Ideation' />

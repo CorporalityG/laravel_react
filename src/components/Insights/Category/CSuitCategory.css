@@ -1,7 +1,9 @@
 .cs-cat-page {
     margin-top: 80px;
 }
-
+.cs-cat-page a {
+    text-decoration: none;
+}
 .cs-cat-page .latest-cs .latest-cs-item {
     position: relative;
     padding-top: 70px;

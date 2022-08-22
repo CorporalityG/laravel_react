@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BASE_URL, API_IMG_URL } from '../../../config';
+import { API_IMG_URL } from '../../../config';
 import Aos from "aos";
 import "./Services.css";
 import { Link } from "react-router-dom";
