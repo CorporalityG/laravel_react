@@ -12,7 +12,7 @@ import Insights from './components/Insights';
 import topHandler from '../../CommonHandler/TopHandler';
 import SayHelloContact from './components/SayHelloContact';
 import Industries from './components/Industries';
-import UpcomingEvent from './UpcomingEvent/UpcomingEvent';
+// import UpcomingEvent from './UpcomingEvent/UpcomingEvent';
 
 const Navbar = () => {
     const isLargeScreen = useMediaQuery({ query: '(min-width: 1200px)' })
@@ -33,7 +33,7 @@ const Navbar = () => {
 
     return (
         <>
-            {location.pathname === '/' && <UpcomingEvent />}
+            {/* {location.pathname === '/' && <UpcomingEvent />} */}
 
             <NavbarContext.Provider value={providerValue}>
                 <OutsideClickHandler onOutsideClick={() => setNavClicked(false)}>

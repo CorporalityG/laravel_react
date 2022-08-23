@@ -3,6 +3,7 @@ import AOS from "aos";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { API_BASE_URL } from '../../config'
 import axios from "axios";
+const UpcomingEvent = React.lazy(() => import("../Navbar/UpcomingEvent/UpcomingEvent"));
 const Services = React.lazy(() => import("./Components/Services"));
 const EmotionalQuest = React.lazy(() => import("./Components/EmotionalQuest"));
 const LatestInsights = React.lazy(() => import("./Components/LatestInsights"));
@@ -49,6 +50,7 @@ function HomePage() {
           {
             pageDetail.detail ?
               <>
+                <UpcomingEvent {...pageDetail.detail} />
                 <NewBanner {...pageDetail.detail} />
                 <Banner2 {...pageDetail.detail} />
                 <NewPortfolio />
