@@ -1,29 +1,9 @@
-import React, { useEffect, useState } from 'react'
 import './UpcomingEvent.css'
 import Marquee from "react-fast-marquee"
 import { SpeakerItem } from './SpeakerItem'
-import { API_BASE_URL, API_IMG_URL } from '../../../config'
-import axios from "axios";
+import { API_IMG_URL } from '../../../config'
 
 function UpcomingEvent(pageDetail) {
-
-    /* const page_slug = 'home';
-
-    const [pageDetail, setPageDetail] = useState([]);
-
-    useEffect(() => {
-        getPageDetail()
-    }, []);
-
-    const getPageDetail = () => {
-        axios.get(`${API_BASE_URL}/page-detail/${page_slug}`)
-            .then(response => {
-                setPageDetail(response.data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    } */
 
     return (
         <div className='marquee-section'>

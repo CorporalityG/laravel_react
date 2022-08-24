@@ -3,7 +3,6 @@ import './SayHelloContact.css'
 import OutsideClickHandler from 'react-outside-click-wrapper';
 import { NavbarContext } from '../Context/NavbarContext';
 import topHandler from '../../../CommonHandler/TopHandler';
-import { BASE_URL } from '../../../config';
 
 function SayHelloContact() {
 

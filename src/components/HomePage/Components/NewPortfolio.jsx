@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config';
+import { API_BASE_URL, API_IMG_URL } from '../../../config';
 import "./Portfolio.css"
 import Carousel from 'react-bootstrap/Carousel'
 import { useNavigate } from "react-router";

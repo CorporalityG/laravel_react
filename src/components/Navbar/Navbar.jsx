@@ -33,8 +33,6 @@ const Navbar = () => {
 
     return (
         <>
-            {/* {location.pathname === '/' && <UpcomingEvent />} */}
-
             <NavbarContext.Provider value={providerValue}>
                 <OutsideClickHandler onOutsideClick={() => setNavClicked(false)}>
                     <div className={`navbar-wrapper ${location.pathname === '/' && 'home-navbar-wrapper'}`}>
