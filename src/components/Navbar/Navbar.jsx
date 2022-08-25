@@ -1,18 +1,19 @@
 import React, { useMemo, useState } from 'react';
 import './Navbar.css';
 import logo from './assets/logo.png';
-import About from './components/About';
-import Services from './components/Services';
-import About2 from './components/About2';
 import { useMediaQuery } from 'react-responsive';
 import OutsideClickHandler from 'react-outside-click-wrapper';
 import { NavbarContext } from './Context/NavbarContext';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import Insights from './components/Insights';
-import topHandler from '../../CommonHandler/TopHandler';
-import SayHelloContact from './components/SayHelloContact';
-import Industries from './components/Industries';
-// import UpcomingEvent from './UpcomingEvent/UpcomingEvent';
+import loadable from '@loadable/component'
+
+const About = loadable(() => import('./components/About'));
+const Services = loadable(() => import('./components/Services'));
+const About2 = loadable(() => import('./components/About2'));
+const Insights = loadable(() => import('./components/Insights'));
+const topHandler = loadable(() => import('../../CommonHandler/TopHandler'));
+const SayHelloContact = loadable(() => import('./components/SayHelloContact'));
+const Industries = loadable(() => import('./components/Industries'));
 
 const Navbar = () => {
     const isLargeScreen = useMediaQuery({ query: '(min-width: 1200px)' })

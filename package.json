@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ausiweb.com.au",
   "dependencies": {
+    "@loadable/component": "^5.15.2",
     "@popperjs/core": "^2.11.0",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
