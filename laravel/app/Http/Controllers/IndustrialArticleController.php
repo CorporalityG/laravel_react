@@ -8,6 +8,8 @@ use App\Models\IndustrialArticleCategory;
 use App\Http\Requests\IndustrialArticleValidateRequest; // use validation
 use Illuminate\Support\Str;
 use Auth, Session, Redirect, DataTables, File;
+use App\Models\Article;
+use App\Models\Post;
 
 class IndustrialArticleController extends Controller
 {
@@ -438,6 +440,34 @@ class IndustrialArticleController extends Controller
             $results = $qry->with(['categories', 'subcategories'])->paginate(6);
 
             return $results;
+        }
+    }
+    
+    /**
+     * Display a listing of the services.
+     */
+    public function getServices(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $RS_Results = Article::select('article_title AS title', 'article_slug AS slug')
+                        ->latest()->take(5)->get();
+
+            return $RS_Results;
+        }
+    }
+    
+    /**
+     * Display a listing of the insights.
+     */
+    public function getInsights(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $RS_Results = Post::select('post_title AS title', 'post_slug AS slug')
+                        ->latest()->take(5)->get();
+
+            return $RS_Results;
         }
     }
 }

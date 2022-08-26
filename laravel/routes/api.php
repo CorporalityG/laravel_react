@@ -76,6 +76,8 @@ Route::get('/latest-industrial-article/{category_slug?}', [IndustrialArticleCont
 Route::get('/realted-industrial-articles/{category_slug?}', [IndustrialArticleController::class, 'relatedIndustrialCategoyArticles']);
 Route::get('/single-industry-article/{slug}', [IndustrialArticleController::class, 'getIndustryArticle']);
 Route::get('/single-realted-industrial-article/{slug?}', [IndustrialArticleController::class, 'singleRelatedIndustrialArticles']);
+Route::get('/single-industry-services', [IndustrialArticleController::class, 'getServices']);
+Route::get('/single-industry-insights', [IndustrialArticleController::class, 'getInsights']);
 
 Route::get('/latest-in-article', [IndustrialArticleController::class, 'latestInArticle']);
 Route::get('/industrial-article-categories', [IndustrialArticleCategoryController::class, 'getIACategories']);

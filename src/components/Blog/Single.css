@@ -186,7 +186,7 @@
 #recent-blogs{width: 100%;display: inline-block;margin-bottom: 10px;font-size: 25px;color: #31647c; text-decoration: none;}
 .youtube-video img{width: 100%;margin-left: -20px;}
 .subsribetitle{font-weight: 500;font-size: 20px;margin-bottom: 10px;}
-.btn-subscribe .blog-poll-youtube-btn a{color: #fff;}
+.btn-subscribe .blog-poll-youtube-btn a{color: #fff; text-decoration: none;}
 .live-poll-question {
   font-style: normal;
   font-weight: 500;

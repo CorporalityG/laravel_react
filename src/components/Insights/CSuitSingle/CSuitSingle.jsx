@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './CSuitSingle.css'
 import { API_BASE_URL, BASE_URL, API_IMG_URL } from '../../../config'
 import { useParams, Link } from 'react-router-dom'
+import { ServicesAskQuote } from '../../ServicesAskQuote/ServicesAskQuote';
+import AOS from "aos"
 
 function CSuitSingle() {
 
@@ -9,6 +11,10 @@ function CSuitSingle() {
     const [singleCSuit, setSingleCSuit] = useState([]);
 
     useEffect(() => {
+        AOS.init({
+            duration: 2000,
+        });
+
         getCSuit(params.csuit_slug);
     }, [params])
 
@@ -49,7 +55,7 @@ function CSuitSingle() {
 
                                             <h1>{singleCSuit.title}</h1>
 
-                                            <div className='csuit-single-date'>{`${singleCSuit.date_created_at}`}</div>
+                                            {singleCSuit.date_created_at && <div className='csuit-single-date'>{`${singleCSuit.date_created_at}`}</div>}
                                         </div>
                                     </div>
                                 </div>
@@ -91,6 +97,8 @@ function CSuitSingle() {
                     </>
                     : null
             }
+
+            <ServicesAskQuote />
         </div>
     )
 }

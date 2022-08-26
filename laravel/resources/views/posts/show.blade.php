@@ -70,14 +70,23 @@
                             <div class="post"></div><div class="post"></div>
                         </div>
 
-                        @if( !empty($post->post_description) )
-                            <div class="col-12">
-                                <h6><b>Description:~</b></h6>
+                        <div class="col-12">
+                            <h6><b>Description:~</b></h6>
+                            @if( $post->listItems->count() > 0 )
+                                <ul>
+                                    @foreach( $post->listItems as $item )
+                                        <li>{{ $item->list_item }}</li>
+                                    @endforeach
+                                </ul>
+                            @endif
+
+                            @if( !empty($post->post_description) )
                                 <div class="post">
                                     {!! $post->post_description !!}
                                 </div>
-                            </div>
-                        @endif
+                            @endif
+                        </div>
+                        
                     </div>
                 </div>
             </div>

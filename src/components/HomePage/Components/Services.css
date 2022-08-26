@@ -327,7 +327,7 @@
 .service-main .service-right .service-content ul li {
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 16px;
   color: #232323;
   margin-bottom: 30px;
 }
@@ -493,9 +493,6 @@
     font-size: 22px !important;
     line-height: 26px !important;
   }
-  .service-main .service-right .service-content ul li {
-    font-size: 20px;
-  }
   .service-main .service-right .services-rectangle-2 {
     left: 45%;
   }
@@ -561,9 +558,6 @@
   .service-main .service-right .service-heading {
     font-size: 20px !important;
     line-height: 24px !important;
-  }
-  .service-main .service-right .service-content ul li {
-    font-size: 18px;
   }
   .service-main .service-right .services-rectangle-2 {
     max-height: 70px;

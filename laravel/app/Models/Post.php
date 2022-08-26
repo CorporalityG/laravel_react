@@ -73,4 +73,12 @@ class Post extends Model
     {
         return $this->belongsToMany(Category::class, 'subcategory_post', 'post_id', 'category_id');
     }
+
+    /**
+     * Get the comments for the blog post.
+     */
+    public function listItems()
+    {
+        return $this->hasMany(PostListItem::class);
+    }
 }

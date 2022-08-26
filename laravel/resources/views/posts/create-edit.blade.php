@@ -103,6 +103,30 @@
                             </div>
 
                             <div class="col-md-12">
+                                <div class="form-group mb-0">
+                                    <label for="list_item">{{ __('List Items') }}</label>
+                                </div>
+                                @if( !empty($post) && $post->listItems->count() > 0 )
+                                    @foreach( $post->listItems as $item )
+                                        <div class="form-group post-list-item">
+                                            <input type="text" name="list_item[]" class="form-control" value="{{ $item->list_item }}" placeholder="{{ __('Item') }}">
+                                            <button id="removeItem" type="button" class="btn btn-danger">X</button>
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <div class="form-group post-list-item">
+                                        <input type="text" name="list_item[]" class="form-control" placeholder="{{ __('Item') }}">
+                                    </div>
+                                @endif
+
+                                <div id="addNewItem"></div>
+
+                                <div class="form-group mb-4">
+                                    <button id="addItem" type="button" class="btn btn-info btn-sm">Add Item</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="post_description">{{ __('Description') }}</label>
                                     <textarea name="post_description" id="post_description" class="form-control{{ $errors->has('post_description') ? ' is-invalid' : '' }}" placeholder="{{ __('Description') }}" rows="10">{{ old('post_description', $post->post_description ?? '') }}</textarea>
@@ -292,6 +316,25 @@ $(function () {
         });
     }
     // subcategories end
+
+    // add item start
+    $("#addItem").click(function () {
+        var html = '';
+
+        html += '<div class="form-group post-list-item">';
+            html += '<input type="text" name="list_item[]" class="form-control" placeholder="Item">';
+            html += '<button id="removeItem" type="button" class="btn btn-danger">X</button>';
+        html += '</div>';
+
+        $('#addNewItem').append(html);
+    });
+    // add item end
+
+    // remove item start
+    $(document).on('click', '#removeItem', function () {
+        $(this).closest('.form-group').remove();
+    });
+    // remove item end
 })
 </script>
 @endsection

@@ -157,6 +157,17 @@ const Single = () => {
 
                                     <div className="col-lg-8">
                                         <div className="sb-description">
+                                            {
+                                                singleBlog.list_items && singleBlog.list_items.length > 0 ?
+                                                    <ul>
+                                                        {
+                                                            singleBlog.list_items.map((item, index) =>
+                                                                <li key={`${index}`}>{item.list_item}</li>
+                                                            )
+                                                        }
+                                                    </ul>
+                                                    : null
+                                            }
                                             <div className="sb-content" dangerouslySetInnerHTML={{ __html: singleBlog.post_description }}></div>
 
                                             <div className='sb-desc-share'>

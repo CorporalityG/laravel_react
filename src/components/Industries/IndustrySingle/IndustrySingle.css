@@ -4,7 +4,6 @@
 }
 
 .industry-single-page .industry-single-banner {
-    background-image: url(./img/industry-single-banner-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left center;
@@ -13,6 +12,10 @@
 }
 .industry-single-page .industry-single-banner .industry-single-banner-row {
     align-items: center;
+}
+.industry-single-page .industry-single-banner .industry-single-banner-content {
+    padding-left: 2%;
+    padding-right: 2%;
 }
 .industry-single-page .industry-single-banner .industry-single-banner-cat {
     font-style: normal;
@@ -49,7 +52,43 @@
 
 .industry-single-page .industry-single-content .industry-single-content-row {
     background: #FFFFFF;
-    padding: 35px 20px 70px;
+    padding: 35px 20px;
+}
+.industry-single-page .industry-single-social {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+.industry-single-page .industry-single-social .industry-single-social-title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.industry-single-page .industry-single-social ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin-bottom: 0;
+}
+.industry-single-page .industry-single-social li a {
+    font-size: 16px;
+    border: 1px solid #31647c;
+    border-radius: 100%;
+    color: #31647c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    height: 35px;
+    width: 35px;
+    text-decoration: none;
+}
+.industry-single-page .industry-single-social li a:hover {
+    background-color: #31647c;
+    color: #fff;
 }
 .industry-single-page .industry-single-content p {
     font-style: normal;
@@ -77,6 +116,14 @@
     margin-top: 15px;
     display: inline-block;
     width: 100%;
+}
+
+.industry-single-page .industry-single-copyright {
+    margin-top: 80px;
+}
+.industry-single-page .industry-single-copyright p {
+    font-size: 14px;
+    font-style: italic;
 }
 
 .industry-single-page .industry-single-survey-box {
@@ -128,11 +175,13 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 24px;
-    text-align: justify;
-    text-decoration-line: underline !important;
-    color: #6CA0BC;
+    color: #31647c;
     width: 100%;
     display: inline-block;
+    text-decoration: none;
+}
+.industry-single-page .industry-single-related-box ul li a:hover {
+    color: #6CA0BC;
 }
 .industry-single-page .industry-single-other-box a {
     text-decoration: none;

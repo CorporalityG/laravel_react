@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\CategoryPost;
+use App\Models\PostListItem;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostValidateRequest; // use validation
 use Illuminate\Support\Str;
@@ -147,7 +148,7 @@ class PostController extends Controller
             Session::flash('messageType', 'success');
             Session::flash('message', 'New post created successfully.');
 
-            return redirect::route('posts.index');
+            return redirect::route('posts.edit', $response);
         else:
             Session::flash('messageType', 'error');
             Session::flash('message', 'Can\'t create post.');
@@ -234,7 +235,7 @@ class PostController extends Controller
             Session::flash('messageType', 'success');
             Session::flash('message', 'Post updated successfully.');
 
-            return redirect::route('posts.index');
+            return redirect::route('posts.edit', $response);
         else:
             Session::flash('messageType', 'error');
             Session::flash('message', 'Can\'t update post.');
@@ -305,12 +306,31 @@ class PostController extends Controller
             $RS_Save->post_image = $image_name;
         }
 
-        $result = $RS_Save->save();
+        $RS_Save->save();
 
         $RS_Save->categories()->sync($request->categories_id);
         $RS_Save->subcategories()->sync($request->subcategories_id);
 
-        return $result;
+        if( !empty($RS_Save->id) )
+        {
+            $RS_Save->listItems()->delete();
+            
+            if( !empty($request->list_item) && is_array($request->list_item) )
+            {
+                foreach( $request->list_item as $item)
+                {
+                    if( !empty($item) )
+                    {
+                        $RS_Save_Item = new PostListItem();
+                        $RS_Save_Item->list_item = $item;
+
+                        $RS_Save->listItems()->save($RS_Save_Item);
+                    }
+                }
+            }
+        }
+
+        return $RS_Save->id;
     }
 
 
@@ -357,7 +377,7 @@ class PostController extends Controller
 
             if( !empty($request->slug) )
             {
-                $qry = Post::with(['categories'])->where('post_slug', $request->slug)->first();
+                $qry = Post::with(['categories', 'listItems'])->where('post_slug', $request->slug)->first();
 
                 if( !empty($qry) )
                 {
