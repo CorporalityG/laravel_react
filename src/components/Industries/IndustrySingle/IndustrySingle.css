@@ -219,6 +219,70 @@
     margin-bottom: 30px;
 }
 
+.related-random-industry {
+    padding: 20px 0;
+    margin: 20px 0;
+    border-top: 1px solid #E5CC5C;
+    border-bottom: 1px solid #E5CC5C;
+}
+.related-random-industry .related-random-industry-row {
+    align-items: center;
+}
+.related-random-industry a {
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+}
+.related-random-industry .related-random-industry-img {
+    width: 100%;
+}
+.related-random-industry .related-random-industry-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.3;
+    color: #333;
+    margin-bottom: 10px;
+}
+.related-random-industry .related-random-industry-title:hover {
+    color: #33657E;
+}
+
+.related-random-industry .related-random-industry-read-more svg {
+    height: 15px;
+    fill: #3c708e;
+    margin-left: 5px;
+}
+.related-random-industry .related-random-industry-read-more {
+    color: #33657e;
+    display: inline;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 1em;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.related-random-industry .related-random-industry-read-more::before {
+    display: block;
+    position: absolute;
+    content: "";
+    height: .08125em;
+    max-width: calc(100% - 2rem);
+    width: 0%;
+    -webkit-transition: width 300ms ease;
+    -moz-transition: width 300ms ease;
+    -o-transition: width 300ms ease;
+    transition: width 300ms ease;
+    left: 0;
+    bottom: -6px;
+    background: #3c708e;
+}
+.related-random-industry .related-random-industry-read-more:hover::before {
+    width: 100%;
+}
+
 
 /* responsive start */
 @media only screen and (min-width: 1200px) and (max-width: 1399.99px) {
@@ -283,14 +347,13 @@
     .industry-single-page .industry-single-banner h1 {
         font-size: 36px;
     }
+    .related-random-industry .related-random-industry-title {
+        font-size: 20px;
+    }
 }
 
 
 @media only screen and (max-width: 600.99px) {
-    .industry-single-page .row > * {
-        padding-right: calc(var(--bs-gutter-x) * .5) !important;
-        padding-left: calc(var(--bs-gutter-x) * .5) !important;
-    }
     .industry-single-page .industry-single-box {
         padding-left: 15px;
         padding-right: 15px;
@@ -300,6 +363,13 @@
     }
     .industry-single-page .industry-single-content .industry-single-content-row {
         padding-left: 0;
+    }
+}
+
+
+@media only screen and (max-width: 575.99px) {
+    .related-random-industry .related-random-industry-img {
+        margin-bottom: 20px;
     }
 }
 

@@ -470,4 +470,18 @@ class IndustrialArticleController extends Controller
             return $RS_Results;
         }
     }
+
+    public function singleRelatedRandomIndustrialArticles(Request $request)
+    {
+        if( $request->is('api/*') )
+        {
+            $relatedPost = IndustrialArticle::select('title', 'slug', 'image')
+                            ->inRandomOrder()
+                            ->take(2)
+                            ->where('slug', '!=', $request->slug) // So you won't fetch same post
+                            ->get();
+
+            return $relatedPost;
+        }
+    }
 }

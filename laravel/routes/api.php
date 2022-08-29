@@ -78,6 +78,7 @@ Route::get('/single-industry-article/{slug}', [IndustrialArticleController::clas
 Route::get('/single-realted-industrial-article/{slug?}', [IndustrialArticleController::class, 'singleRelatedIndustrialArticles']);
 Route::get('/single-industry-services', [IndustrialArticleController::class, 'getServices']);
 Route::get('/single-industry-insights', [IndustrialArticleController::class, 'getInsights']);
+Route::get('/single-realted-random-industrial-article/{slug?}', [IndustrialArticleController::class, 'singleRelatedRandomIndustrialArticles']);
 
 Route::get('/latest-in-article', [IndustrialArticleController::class, 'latestInArticle']);
 Route::get('/industrial-article-categories', [IndustrialArticleCategoryController::class, 'getIACategories']);
