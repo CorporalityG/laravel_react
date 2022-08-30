@@ -283,6 +283,23 @@
     width: 100%;
 }
 
+.industry-single-page .fancy-section {
+    border-image: linear-gradient(to bottom,#6CA0BC 0%,#A06DAF 100%) 1 100%;
+    border-left: 4px solid;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.industry-single-page .fancy-section .fancy-title {
+    font-size: 32px;
+    line-height: 1.3;
+    color: #333;
+    padding-left: 20px;
+}
+
 
 /* responsive start */
 @media only screen and (min-width: 1200px) and (max-width: 1399.99px) {
